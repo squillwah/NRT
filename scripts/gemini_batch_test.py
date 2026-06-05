@@ -1,6 +1,6 @@
 
 from google import genai
-from google.genai.errors import ClientError
+#from google.genai.errors import ClientError
 import time
 
 client = genai.Client()
@@ -16,7 +16,7 @@ free_models = []
 timeout_occured = False
 for m in models:
     try: responses.append(client.models.generate_content(model=m, contents="Is your API free? Response Y or N."))
-    except ClientError as e:
+    except Exception as e:
         # If timeout, wait and retry. 
         # successive_timeouts = -1
         # while e.code == 429:
