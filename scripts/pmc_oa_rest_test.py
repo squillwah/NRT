@@ -24,13 +24,18 @@ def xml_extract_first(delims, xml):
     value = None
     value_start = xml.find(delims[0]) + len(delims[0])
     value_end = xml.find(delims[1], value_start)
-    if value_end > value_start and value_start >= len(delims[0]) : value = xml[value_start:value_end]
+    if value_end > value_start and value_start >= len(delims[0]): value = xml[value_start:value_end]
     return value
 
 def download_pmc_ftp(url, filename):
     insert_deprecated = url.find("pmc/")+4  # PMC moved all rearranged their FTP files into a "/deprecated/" subfolder. Without updating the database URLs :)
     url = url[0:insert_deprecated]+"deprecated/"+url[insert_deprecated:]
     urllib.request.urlretrieve(url, filename)
+
+def parse_oa_file_url(file_type, article_info_xml):
+    url = xml_extract_first((f"<link format=\"{file_type}\"", "/>"), response.text)
+    if url != None: url = url[url.find("href=")+5:].strip()[1:-1]
+    return url
 
 search_term = str(input("Enter search term: "))
 print(f"Searching PMC database for OA papers on {search_term}...")
@@ -85,11 +90,17 @@ payload = {"id":article_id} # Does not support json :(
 response = requests.get(PMC["OA"], params=payload)
 fail_check((response.status_code != 200), f"! Failed to GET {response.url} with code {response.status_code}")
 print(response.text)
-if (pdf_url := xml_extract_first(('<link format="pdf"', "/>"), response.text)) != None:
-    pdf_url = pdf_url[pdf_url.find("href=")+5:].strip()[1:-1]
+
+if (pdf_url := parse_oa_file_url("pdf", response.text)) != None:
     print(f"\nPDF: {pdf_url}")
     if input("Download? (y/n): ").strip().lower() == "y":
         print("...")
         download_pmc_ftp(pdf_url, article_id+".pdf")
+        print("Done!")
+if (tar_url := parse_oa_file_url("tgz", response.text)) != None:
+    print(f"\nTGZ: {tar_url}")
+    if input("Download? (y/n): ").strip().lower() == "y":
+        print("...")
+        download_pmc_ftp(tar_url, article_id+".tar.gz")
         print("Done!")
 
