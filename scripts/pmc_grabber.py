@@ -9,7 +9,7 @@ import json
 import xml.etree.ElementTree as ET
 
 JOURNAL = "Nature"
-ARTICLES = 10
+ARTICLE_COUNT = 10
 TARGET_DIR = "./pmc_grabber/"
 
 API = {"SEARCH":"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
@@ -44,36 +44,48 @@ def rset_bioc_request(rstate, article):
 
 rs = RequestState()
 response = None
-article_list = None
+articles = {"PMCID":[None]*ARTICLE_COUNT,     # The article ID
+            "PMCINFO":[None]*ARTICLE_COUNT,   # Info about article in PMC OA FTP database (XML ElementTree)
+            "FULLTEXT":[None]*ARTICLE_COUNT}  # Full text of the article, in BioC formatted JSON
 
 # --------
 # Get article ID list
 # --------
-rset_search_request(rs, JOURNAL, ARTICLES)
+rset_search_request(rs, JOURNAL, ARTICLE_COUNT)
 response = rget(rs)
-article_list = ["PMC"+ID for ID in response.json()["esearchresult"]["idlist"]] # Prefix each ID with "PMC" to make PMCIDs.
-print(f"{ARTICLES} latest OA articles in {JOURNAL}: {"\n- ".join(article_list)}")
+articles["PMCID"] = ["PMC"+ID for ID in response.json()["esearchresult"]["idlist"]] # Prefix each ID with "PMC" to make PMCIDs.
+print(f"{ARTICLE_COUNT} latest OA articles in {JOURNAL}: {"\n- ".join(articles["PMCID"])}")
 
 # --------
-# Grab article JSON and OA file info
+# Grab article JSON and OA file info 
 # --------
-for article in article_list:
+for i in range(0, ARTICLE_COUNT):
+    print(f"Grabbing {articles["PMCID"][i]}...")
+
     # OA file info XML 
-    rset_paper_request(rs, article)
+    rset_paper_request(rs, articles["PMCID"][i])
     response = rget(rs)
-    info_xml = ET.ElementTree(ET.fromstring(response.text))
-    ET.indent(info_xml, space="  ") # Human formatting in file.
+    articles["PMCINFO"][i] = ET.ElementTree(ET.fromstring(response.text))
+
     # Full text BioC JSON
-    rset_bioc_request(rs, article)
+    rset_bioc_request(rs, articles["PMCID"][i])
     response = rget(rs)
-    bioc_json = response.json()
-    # Write to file
-    with open(f"{TARGET_DIR}/{article}_info.xml", "wb") as file:
-        info_xml.write(file, encoding="utf-8", xml_declaration=True)
-    with open(f"{TARGET_DIR}/{article}.json", "w") as file:
-        json.dump(bioc_json, file, indent=2)
+    articles["FULLTEXT"][i] = response.json()
 
 # --------
 # Parse citations ...
 # --------
+
+# --------
+# Write to file
+# --------
+
+for i in range(0, ARTICLE_COUNT):
+    print(f"Writing {articles["PMCID"][i]} to file...")
+
+    with open(f"{TARGET_DIR}/{articles["PMCID"][i]}_info.xml", "wb") as file:
+        ET.indent(articles["PMCINFO"][i], space="  ") # Indent for human xml formatting.
+        articles["PMCINFO"][i].write(file, encoding="utf-8", xml_declaration=True)
+    with open(f"{TARGET_DIR}/{articles["PMCID"][i]}.json", "w") as file:
+        json.dump(articles["FULLTEXT"][i], file, indent=2)
 
