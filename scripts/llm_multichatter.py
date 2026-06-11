@@ -4,8 +4,7 @@ from pmc_grabber import grab_articles
 
 # Export your keys in corresponding environment vars 
 # (or just replace environ[key] in this dict)
-KEYS = {"OPENAI": environ["OPEN_AI_KEY"],
-        "GEMINI": environ["GEMINI_API_KEY"]}
+KEYS = {"GEMINI": "", "OPENAI":""}
 
 #articles = grab_articles("Nature", 5)
 #print(articles)
@@ -81,10 +80,10 @@ class Gemini(ChatbotAPI):
 
 # Prompting:
 
-response = OpenAI.send_prompt("gpt-5", input("Enter your GPT-5 prompt: "))
-print("\nThe response is: \n\n", OpenAI.parse_response(response))
-print()
+#response = OpenAI.send_prompt("gpt-5", input("Enter your GPT-5 prompt: "))
+#print("\nThe response is: \n\n", OpenAI.parse_response(response))
+#()
 
-response = Gemini.send_prompt("gemini-2.5-flash", input("Enter your Gemini-2.5-flash prompt: "))
-print("\nThe response is: \n\n", Gemini.parse_response(response))
-print()
+#response = Gemini.send_prompt("gemini-2.5-flash", input("Enter your Gemini-2.5-flash prompt: "))
+#print("\nThe response is: \n\n", Gemini.parse_response(response))
+#print()
