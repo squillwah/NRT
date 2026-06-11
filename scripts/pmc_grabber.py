@@ -79,11 +79,6 @@ def write_articles_to_file(articles, target_dir):
         with open(f"{target_dir}/{ID}.json", "w") as file:
             json.dump(articles[ID]["FULLTEXT"], file, indent=2)
 
-#articles = {"PMCID":[None]*ARTICLE_COUNT,     # The article ID
-#            "PMCINFO":[None]*ARTICLE_COUNT,   # Info about article in PMC OA FTP database (XML ElementTree)
-#            "FULLTEXT":[None]*ARTICLE_COUNT}  # Full text of the article, in BioC formatted JSON
-
-
 if __name__ == "__main__":
     JOURNAL = "Nature"
     ARTICLE_COUNT = 10
@@ -92,49 +87,8 @@ if __name__ == "__main__":
     print("Grabbing articles... ")
     articles = grab_articles(JOURNAL, ARTICLE_COUNT)
     for ID in articles.keys(): print(f"- {ID}")
+
     print("Writing to file... ")
     write_articles_to_file(articles, TARGET_DIR)
     for ID in articles.keys(): print(f"- {TARGET_DIR}/{ID}.json \n- {TARGET_DIR}/{ID}_info.xml")
 
-"""
-# --------
-# Get article ID list
-# --------
-rset_search_request(rs, JOURNAL, ARTICLE_COUNT)
-response = rget(rs)
-articles["PMCID"] = ["PMC"+ID for ID in response.json()["esearchresult"]["idlist"]] # Prefix each ID with "PMC" to make PMCIDs.
-print(f"{ARTICLE_COUNT} latest OA articles in {JOURNAL}: {"\n- ".join(articles["PMCID"])}")
-
-# --------
-# Grab article JSON and OA file info 
-# --------
-for i in range(0, ARTICLE_COUNT):
-    print(f"Grabbing {articles["PMCID"][i]}...")
-
-    # OA file info XML 
-    rset_paper_request(rs, articles["PMCID"][i])
-    response = rget(rs)
-    articles["PMCINFO"][i] = ET.ElementTree(ET.fromstring(response.text))
-
-    # Full text BioC JSON
-    rset_bioc_request(rs, articles["PMCID"][i])
-    response = rget(rs)
-    articles["FULLTEXT"][i] = response.json()
-
-# --------
-# Parse citations ...
-# --------
-
-# --------
-# Write to file
-# --------
-
-for i in range(0, ARTICLE_COUNT):
-    print(f"Writing {articles["PMCID"][i]} to file...")
-
-    with open(f"{TARGET_DIR}/{articles["PMCID"][i]}_info.xml", "wb") as file:
-        ET.indent(articles["PMCINFO"][i], space="  ") # Indent for human xml formatting.
-        articles["PMCINFO"][i].write(file, encoding="utf-8", xml_declaration=True)
-    with open(f"{TARGET_DIR}/{articles["PMCID"][i]}.json", "w") as file:
-        json.dump(articles["FULLTEXT"][i], file, indent=2)
-"""
