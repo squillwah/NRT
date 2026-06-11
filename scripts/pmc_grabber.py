@@ -69,29 +69,29 @@ def grab_articles(journal, num_articles):
         response = rget(rs)
         articles[ID]["FULLTEXT"] = response.json() # Structure as JSON object
 
-        passages = articles[ID]["FULLTEXT"][0]["documents"][0]["passages"]
+        #passages = articles[ID]["FULLTEXT"][0]["documents"][0]["passages"]
 
         # Parse all references directly into clean dicts
-        parsed_refs = []
+        #parsed_refs = []
 
-        for p in passages:
-            if p["infons"].get("section_type") == "REF" and p["infons"].get("type") == "ref":
-                info = p["infons"]
-                parsed_refs.append({
-                    "title": p["text"],
-                    "doi": info.get("pub-id_doi"),
-                    "pmid": info.get("pub-id_pmid"),
-                    "year": info.get("year"),
-                    "journal": info.get("source"),
-                    "volume": info.get("volume"),
-                    "fpage": info.get("fpage"),
-                    "lpage": info.get("lpage"),
-                    "citation": info.get("citation-alternatives")
-                })
+        #for p in passages:
+            #if p["infons"].get("section_type") == "REF" and p["infons"].get("type") == "ref":
+                #info = p["infons"]
+                #parsed_refs.append({
+                    #"title": p["text"],
+                   # "doi": info.get("pub-id_doi"),
+                   # "pmid": info.get("pub-id_pmid"),
+                   # "year": info.get("year"),
+                   # "journal": info.get("source"),
+                   # "volume": info.get("volume"),
+                   # "fpage": info.get("fpage"),
+                    #"lpage": info.get("lpage"),
+                   # "citation": info.get("citation-alternatives")
+                #})
 
         # View results
-        for r in parsed_refs:
-            print(r)
+        #for r in parsed_refs:
+            #print(r)
     return articles
 
 def write_articles_to_file(articles, target_dir):
@@ -104,7 +104,7 @@ def write_articles_to_file(articles, target_dir):
 
 if __name__ == "__main__":
     JOURNAL = "Nature"
-    ARTICLE_COUNT = 1
+    ARTICLE_COUNT = 5
     TARGET_DIR = "./pmc_grabber/"
 
     print("Grabbing articles... ")
