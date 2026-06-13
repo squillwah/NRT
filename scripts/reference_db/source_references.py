@@ -51,13 +51,10 @@ def get_papers_range(count, start, end):
 # Returns a JSON/dict of nested dicts containing all formal citation formats for each given paper.
 def extract_reference_formats(*pmids):
     # May have some maximum, it is unclear.
-    refs = kindly_get(ENDPOINT_CITATIONS, params={"format":"citation", "id":pmids}).json() #JSON of AMA, APA, MLA, & NLM for each PMCID
+    refs = kindly_get(ENDPOINT_CITATIONS, params={"format":"citation", "id":pmids}).json() # JSON of AMA, APA, MLA, & NLM for each PMCID
+    riss = [ris+"ER  - \r\n" for ris in kindly_get(ENDPOINT_CITATIONS, params={"format":"ris", "id":pmids}).text.split("ER  - ")] # List of RIS metadata text
+    for paper_refs, paper_ris in zip(refs, riss): paper_refs["ris"] = paper_ris # Include RIS as entry within refs JSON
     return refs
-
-#    (None) * len(pmcids)
-#    for index, ID in enumerate(pmcids):
-#        refs[index] = {"FORMAL": 
-#
 
 #print(json.dumps(all_ids("PMC1193645", "PMC1134901"), indent=2))
 #print(json.dumps(all_ids("PMC1134901", "PMC1193645"), indent=2))
@@ -66,6 +63,5 @@ paper_IDs = all_ids(*get_papers_range(2, "2026-01-01", "2026-04-01"))
 paper_refs = extract_reference_formats(*[ID["pmid"] for ID in paper_IDs])
 print(json.dumps(paper_IDs, indent=2))
 print(json.dumps(paper_refs, indent=2))
-
 
 
