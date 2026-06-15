@@ -5,7 +5,7 @@
 # Searches PMC for articles, downloads BioC JSON full test and PMC OA database file info XML
 
 # ! There is no error handling in any of this. It will break if something goes wrong.
-
+'''
 import requests
 import json
 import xml.etree.ElementTree as ET
@@ -91,3 +91,4 @@ if __name__ == "__main__":
     print("Writing to file... ")
     write_articles_to_file(articles, TARGET_DIR)
     for ID in articles.keys(): print(f"- {TARGET_DIR}/{ID}.json \n- {TARGET_DIR}/{ID}_info.xml")
+'''
