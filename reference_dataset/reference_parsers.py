@@ -34,6 +34,8 @@ def decompose_ama(ref):
     #   "doi": ""}
     # The tricky part is deciding on a structure which works for all formats, so we don't need to write multiple procedures for each one permutation.
 
+    # Could we use RegEx?
+
 def compose_ama(ref): pass
     # The reverse of decompose
 
@@ -47,5 +49,21 @@ def decompose_nlm(ref): pass
 def compose_nlm(ref): pass
 
 
+#jref = decompose_ama(the_string)
+ref = decompose_apa(the_string)
 
+def swap_authors(ref):
+    swap(ref["authors"])
+    return ref
+
+apa = compose_apa(ref)
+
+def mangle_title(ref, settings):
+    for i in range(times):
+        introduce_typo(ref["title"], random_point, random_type)
+main():
+    # 200 single
+    for i in 200:
+        random_mutation(ref)
+    # 300 multi
 
