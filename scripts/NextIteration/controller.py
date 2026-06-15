@@ -4,7 +4,7 @@ from prompt_writer import generate_prompt
 from openRouter_accessor import openrouter_accessor
 
 def printToFile(list, i):
-    with open(list[i]["id"]+".json", "w") as f:
+    with open("./container/" + list[i]["id"]+".json", "w") as f:
         json.dump(results, f, indent=4)
 
 parsed_refs = {}
