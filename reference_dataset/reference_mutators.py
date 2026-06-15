@@ -16,19 +16,12 @@
 import random
 
 def typo_fatfinger(word, index):
-    QWERTY = ["qwertyuiop", "asdfghjkl;", "zxcvbnmn,."]
+    QWERTY = ["qwertyuiop",
+              "asdfghjkl;",
+              "zxcvbnmn,."]
     typo = None
     for ri, row in enumerate(QWERTY):
         if (li := row.find(word[index])) != -1:
-            #row_shift = random.randint(-1*(li!=0), 1*(li!=len(QWERTY)-1))
-            #row_shift = random.choice(tuple(set([-1*(ri>0), 0, 1*(ri<len(QWERTY)-1)])))
-            #let_shift = random.choice(tuple(set([-1*(li>0), 0*(row_shift!=0), 1*(li<len(QWERTY)-1)])))
-            #if ri > 0: r.append(-1)
-            #ri.append(0)
-            #if ri < len(QWERTY)-1: r.append(1)
-            #if li > 0: l.append(-1)
-            #if row_shift == 0: l.append(0)
-            #if li < len(row)-1: l.append(1)
             row_shift = [0]
             if ri > 0: row_shift.append(-1)         # Stupid. Will break easy if row or letter counts change.
             if ri < 2: row_shift.append(1)
@@ -40,11 +33,24 @@ def typo_fatfinger(word, index):
             let_shift = random.choice(let_shift)
             typo = word[:index]+QWERTY[ri+row_shift][li+let_shift]+word[index+1:]
             break
+    print(f"{i*" "}{i}\n{typo}")
     return typo
 
-def typo_swapletter(word, index): pass
+def typo_swapletter(word, index):
+    right = (index == 0 or (random.random()>.5 and index < len(word)-1))
+    if right:
+        word = word[0:index]+word[index+1]+word[index]+word[index+2:]
+    else:
+        word = word[0:index-1]+word[index]+word[index-1]+word[index+1:]
+    print(f"{i*" "}{i}{int(right)*"-"}\n{word}")
+    return word
+
 def typo_autocorrect(word): pass
+
 #def 
 
 for i in range(8):
-    print(typo_fatfinger("medicine", i))
+    word = typo_fatfinger("medicine", i)
+print()
+for i in range(8):
+    word = typo_swapletter("medicine", i)
