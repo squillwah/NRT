@@ -11,6 +11,7 @@ parsed_refs = {}
 
 name = input("Please enter the json file name with the .json extension: ")
 
+print("Loading from File . . .")
 with open(name, 'r') as file:
     parsed_refs = json.load(file)
 
