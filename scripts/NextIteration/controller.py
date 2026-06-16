@@ -1,10 +1,10 @@
 import json
-
+import time
 from prompt_writer import generate_prompt
 from openRouter_accessor import openrouter_accessor
 
-def printToFile(list, i):
-    with open("./container/" + list[i]["id"]+".json", "w") as f:
+def printToFile(results, id):
+    with open("./container/" + id+ ".json", "w") as f:
         json.dump(results, f, indent=4)
 
 parsed_refs = {}
@@ -15,25 +15,30 @@ with open(name, 'r') as file:
     parsed_refs = json.load(file)
 
 header_prompt = generate_prompt()
-
-print("done")
-for i in parsed_refs:
+print("Started API Requests")
+for i, ref in enumerate(parsed_refs):
     results = []
-    jsonObject = openrouter_accessor(header_prompt, parsed_refs[i]["ama"]["format"])
+    jsonObject = openrouter_accessor(header_prompt, ref["ama"]["format"])
     results.append(jsonObject)
+    time.sleep(1)
 
-    jsonObject = openrouter_accessor(header_prompt, parsed_refs[i]["apa"]["format"])
+    jsonObject = openrouter_accessor(header_prompt, ref["apa"]["format"])
     results.append(jsonObject)
-
-    jsonObject = openrouter_accessor(header_prompt, parsed_refs[i]["mla"]["format"])
+    time.sleep(1)
+    
+    jsonObject = openrouter_accessor(header_prompt, ref["mla"]["format"])
     results.append(jsonObject)
-
-    jsonObject = openrouter_accessor(header_prompt, parsed_refs[i]["nlm"]["format"])
+    time.sleep(1)
+    
+    jsonObject = openrouter_accessor(header_prompt, ref["nlm"]["format"])
     results.append(jsonObject)
-
-    jsonObject = openrouter_accessor(header_prompt, parsed_refs[i]["ris"]["format"])
+    time.sleep(1)
+    
+    jsonObject = openrouter_accessor(header_prompt, ref["ris"])
     results.append(jsonObject)
+    time.sleep(1)
+    
+    printToFile(results, ref["id"].replace(":", "_"))
 
-    printToFile(results, i)
 
 print("done!")

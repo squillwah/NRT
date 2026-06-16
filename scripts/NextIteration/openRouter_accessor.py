@@ -22,7 +22,7 @@ def openrouter_accessor(header, citation):
   response = requests.post(
    url="https://openrouter.ai/api/v1/chat/completions",
    headers = {
-    "Authorization": "Bearer <API_KEY_HERE>",
+    "Authorization": "Bearer <ADD_OPENROUTER_API_KEY_HERE>",
     "Content-Type": "application/json"
    },
    json={
@@ -30,8 +30,7 @@ def openrouter_accessor(header, citation):
     "messages": [
       {
        "role": "user",
-       "content": header + "\n" + next(iter(citation.values()), "")
-      }
+        "content": header + "\n" + (citation if isinstance(citation, str) else next(iter(citation.values()), ""))      }
     ],
        "response_format": response_schema
    }
@@ -47,7 +46,12 @@ def openrouter_accessor(header, citation):
       print(f"API Error Response: {api_data}")
       raise RuntimeError(f"Failed to extract text from API response: {e}")
 
-  response_dict = json.loads(raw_content)
+  try:
+      response_dict = json.loads(raw_content)
+  except json.JSONDecodeError:
+      print("WARNING: Response was not valid JSON, returning raw text")
+      response_dict = {"model": api_data["model"], "message": raw_content}
+
   return response_dict
 
 if __name__ == "__main__":
