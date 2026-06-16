@@ -38,12 +38,13 @@ def typo_fatfinger(word, index):
 
 def typo_swapletter(word, index):
     right = (index == 0 or (random.random()>.5 and index < len(word)-1))
+    typo = None
     if right:
-        word = word[0:index]+word[index+1]+word[index]+word[index+2:]
+        typo = word[0:index]+word[index+1]+word[index]+word[index+2:]
     else:
-        word = word[0:index-1]+word[index]+word[index-1]+word[index+1:]
-    print(f"{i*" "}{i}{int(right)*"-"}\n{word}")
-    return word
+        typo = word[0:index-1]+word[index]+word[index-1]+word[index+1:]
+    #print(f"{index*" "}{index}{int(right)*"-"}\n{typo}")
+    return typo
 
 def typo_autocorrect(word): pass
 
@@ -54,3 +55,11 @@ for i in range(8):
 print()
 for i in range(8):
     word = typo_swapletter("medicine", i)
+print()
+
+typer = "bartender"
+print(typer)
+for i in range(10):
+    for i in range(len(typer)):
+        typer = typo_swapletter(typer, i)
+    print(typer)
