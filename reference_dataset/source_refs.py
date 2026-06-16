@@ -63,8 +63,10 @@ def get_papers_range(count, start, end):
 def extract_reference_formats(*pmcids, translate_IDs=False):
     #if translate_IDs: pmids = [ID["pmid"] for ID in all_ids(*pmids)]
     # ! Requests may have some maximum, documentation is unclear.
+    RIS_DELIM = "ER - \r\n"
     refs = kindly_get(ENDPOINT_CITATIONS, params={"format":"citation", "id":pmcids}).json() # JSON of AMA, APA, MLA, & NLM for each PMCID
-    riss = [ris+"ER  - \r\n" for ris in kindly_get(ENDPOINT_CITATIONS, params={"format":"ris", "id":pmcids}).text.split("ER  - ")] # List of RIS metadata text
+    riss = [ris+RIS_DELIM for ris in kindly_get(ENDPOINT_CITATIONS, params={"format":"ris", "id":pmcids}).text.split(RIS_DELIM)] # List of RIS metadata text
+    #with open("fart.txt", "w") as fart: fart.write(kindly_get(ENDPOINT_CITATIONS, params={"format":"ris", "id":pmcids}).text)
     for paper_refs, paper_ris in zip(refs, riss): paper_refs["ris"] = paper_ris # Include RIS as entry within refs JSON
     return refs
 
@@ -72,7 +74,7 @@ def extract_reference_formats(*pmcids, translate_IDs=False):
 
 if __name__ == "__main__":
     print("Searching papers.")
-    paper_pmcids = get_papers_filter(100, "BMJ[Journal]") # Could do multiple journals in a search, or grab an exact amount from each in seperate calls for equal ratios. And more.
+    paper_pmcids = get_papers_filter(100, "Nature[Journal]") # Could do multiple journals in a search, or grab an exact amount from each in seperate calls for equal ratios. And more.
     print(paper_pmcids)
 
     print("Mapping IDs")
@@ -86,7 +88,7 @@ if __name__ == "__main__":
 
     print("Writing to file")
     try:
-        with open("references.json", "x") as file: json.dump(paper_references, file, indent=2)
+        with open("references2.json", "x") as file: json.dump(paper_references, file, indent=2)
         print("Saved to 'references.json'")
     except FileExistsError:
         if input("! 'references.json' already exists, overwrite? [y/n]: ").strip().lower() == "y":
