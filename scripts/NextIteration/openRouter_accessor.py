@@ -1,6 +1,7 @@
 import requests
 from prompt_writer import generate_prompt
 import json
+import time
 
 response_schema = {
     "type": "json_schema",
@@ -18,15 +19,49 @@ response_schema = {
     }
 }
 
-def openrouter_accessor(header, citation):
+def openrouter_all_call(header_prompt, citation):
+
+    print("Starting API Requests")
+    time.sleep(1)
+
+    results = []
+    jsonObject = openrouter_accessor(header_prompt, citation, "google/gemma-4-26b-a4b-it:free")
+    results.append(jsonObject)
+    time.sleep(1)
+
+    jsonObject = openrouter_accessor(header_prompt, citation, "nex-agi/nex-n2-pro:free")
+    results.append(jsonObject)
+    time.sleep(1)
+
+    jsonObject = openrouter_accessor(header_prompt, citation, "openrouter/owl-alpha")
+    results.append(jsonObject)
+    time.sleep(1)
+
+    jsonObject = openrouter_accessor(header_prompt, citation, "nvidia/nemotron-3-super-120b-a12b:free")
+    results.append(jsonObject)
+    time.sleep(1)
+
+    jsonObject = openrouter_accessor(header_prompt, citation, "openai/gpt-oss-20b:free")
+    results.append(jsonObject)
+    time.sleep(1)
+
+    jsonObject = openrouter_accessor(header_prompt, citation, "cognitivecomputations/dolphin-mistral-24b-venice-edition:free")
+    results.append(jsonObject)
+    time.sleep(1)
+
+    return results
+
+
+
+def openrouter_accessor(header, citation, model):
   response = requests.post(
-   url="https://openrouter.ai/api/v1/chat/completions",
+   url="https://openrouter.ai/api/v1/chat/completions", # To use a BYOK model, simply change the chat/completions to byok/<api-model-key>
    headers = {
     "Authorization": "Bearer <ADD_OPENROUTER_API_KEY_HERE>",
     "Content-Type": "application/json"
    },
    json={
-    "model": "google/gemma-4-26b-a4b-it:free",
+    "model": model,
     "messages": [
       {
        "role": "user",
