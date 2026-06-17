@@ -1,4 +1,118 @@
 
+import json
+
+# brealdowm
+#  restircit refs to articles only X
+#  create refdata format 
+#  pull apart ris into that
+#  store puzzlepiece set
+
+# Parse RIS into dictionary representation
+# https://en.wikipedia.org/wiki/RIS_(file_format)
+def parse_ris(ris):
+    refdata = {
+        "authors": [],
+        "title": "",
+        "journal": { "fullname": "", "abreviated": "", "year": "", "volume": "", "page": "" },
+        "doi": "",
+        "epub": { "y": "", "m": "", "d": "" }, # For NLM format. 
+        "pmid": "",                                     #
+        "pmcid": ""                                     #
+    }
+                                                                           # Split leaves a trailing '', could slice final index instead.
+    for tag, value in [(line[0:2], line[6:]) for line in ris.split("\r\n") if len(line) != 0]:
+        match tag:
+            case "AU": refdata["authors"].append(value)
+            case "T1": refdata["title"] = value
+            case "Y1": refdata["journal"]["year"] = value[0:4] # All formats only include publication year.
+            case "ET": refdata["epub"]["y"], refdata["epub"]["m"], refdata["epub"]["d"] = value.split("/") # Only NLM includes epub.
+            case "DO": pass
+            case "VL": pass
+            case "SP": pass
+            case "J2": pass
+            case "JF": pass
+            case "AN": pass
+            case "U2": pass
+            #case _:
+            #    print(f"! unknown RIS tag: {(tag, value)}")
+
+        #if tag == "AU":
+        #    ris_data["authors"].append(value)
+        #elif tag == "T1":
+        #    ris_data["title"] = value.rstrip(".")
+        #elif tag == "Y1":
+        #    date_parts = value.split('/')
+        #    if len(date_parts) >= 1: ris_data["year"] = date_parts[0]
+        #    if len(date_parts) >= 2: ris_data["month"] = date_parts[1]
+        #    if len(date_parts) >= 3: ris_data["day"] = date_parts[2]
+        #elif tag == "DO":
+        #    ris_data["doi"] = value
+        #elif tag == "VL":
+        #    ris_data["volume"] = value
+        #elif tag == "SP":
+        #    ris_data["pages"] = value
+        #elif tag == "J2":
+        #    ris_data["journal_short"] = value
+        #elif tag == "JF":
+        #    ris_data["journal_full"] = value
+        #elif tag == "AN":
+        #    ris_data["pmid"] = value
+        #elif tag == "U2":
+        #    pmcid_match = re.search(r'(PMC\d+)', value)
+        #    if pmcid_match:
+        #        ris_data["pmcid"] = pmcid_match.group(1)
+
+    return refdata
+
+    #ris_data = {
+    #    "authors": [], "title": "", "year": "", "month": "", "day": "",
+    #    "doi": "", "pmid": "", "pmcid": "", "journal_short": "", "journal_full": "",
+    #    "volume": "", "pages": ""
+    #}
+
+# Tests
+if __name__ == "__main__":
+    FILE = "./references.json"
+
+    refs = None
+    with open(FILE, "r") as file:
+        refs = json.load(file)
+
+    data = parse_ris(refs[0]["ris"])
+    print(data["authors"])
+
+    print(json.dumps(data, indent=4))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # There is the choice between eight functions or two with some format specific argument.
 # If the logic overlaps a lot, just two would be more concise.
@@ -15,7 +129,7 @@
 
 # Which parts are irrecoverably different?
 # - Et al vs full list
-
+"""
 def decompose_ama(ref):
     # Patterns of AMA:
     # - "Authors. Title. Journal. JournalYear;Volume:Page/Elocator. Published Year Mon Da. doi"
@@ -66,4 +180,4 @@ main():
     for i in 200:
         random_mutation(ref)
     # 300 multi
-
+"""
