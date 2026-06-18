@@ -3,9 +3,9 @@ import json
 
 # brealdowm
 #  restircit refs to articles only X
-#  create refdata format 
-#  pull apart ris into that
-#  store puzzlepiece set
+#  create refdata format  X
+#  pull apart ris into that X
+#  store puzzlepiece set X
 
 # Parse RIS into dictionary representation
 # https://en.wikipedia.org/wiki/RIS_(file_format)
@@ -33,40 +33,35 @@ def parse_ris(ris):
             case "AN": refdata["pmid"] = value
             case "U2": refdata["pmcid"] = value[:-7] # Slice off trailing ...[pmcid]
             #case _: print(f"! unknown RIS tag: {(tag, value)}")
-
-        #if tag == "AU":
-        #    ris_data["authors"].append(value)
-        #elif tag == "T1":
-        #    ris_data["title"] = value.rstrip(".")
-        #elif tag == "Y1":
-        #    date_parts = value.split('/')
-        #    if len(date_parts) >= 1: ris_data["year"] = date_parts[0]
-        #    if len(date_parts) >= 2: ris_data["month"] = date_parts[1]
-        #    if len(date_parts) >= 3: ris_data["day"] = date_parts[2]
-        #elif tag == "DO":
-        #    ris_data["doi"] = value
-        #elif tag == "VL":
-        #    ris_data["volume"] = value
-        #elif tag == "SP":
-        #    ris_data["pages"] = value
-        #elif tag == "J2":
-        #    ris_data["journal_short"] = value
-        #elif tag == "JF":
-        #    ris_data["journal_full"] = value
-        #elif tag == "AN":
-        #    ris_data["pmid"] = value
-        #elif tag == "U2":
-        #    pmcid_match = re.search(r'(PMC\d+)', value)
-        #    if pmcid_match:
-        #        ris_data["pmcid"] = pmcid_match.group(1)
-
     return refdata
 
-    #ris_data = {
-    #    "authors": [], "title": "", "year": "", "month": "", "day": "",
-    #    "doi": "", "pmid": "", "pmcid": "", "journal_short": "", "journal_full": "",
-    #    "volume": "", "pages": ""
-    #}
+# Return reference component set from multiple reference data dicts
+def component_set(*refdata):
+    compset = {
+        "authors": { "single": [], "groups": [] },
+        "titles": [],
+        "journals": { "names": { "full": [], "short": [] }, "years": [], "volumes": [], "pages": [] },
+        "dois": [],
+        "epubs": { "ys": [], "ms": [], "ds": [] },
+        "pmids": [],
+        "pmcids": []
+    }
+    for rd in refdata:
+        compset["authors"]["single"].extend(rd["authors"])
+        compset["authors"]["groups"].append(rd["authors"])
+        compset["titles"].append(rd["title"])
+        compset["journals"]["names"]["full"].append(rd["journal"]["name"]["full"])
+        compset["journals"]["names"]["short"].append(rd["journal"]["name"]["short"])
+        compset["journals"]["years"].append(rd["journal"]["year"])
+        compset["journals"]["volumes"].append(rd["journal"]["volume"])
+        compset["journals"]["pages"].append(rd["journal"]["page"])
+        compset["dois"].append(rd["doi"])
+        compset["epubs"]["ys"].append(rd["epub"]["y"])
+        compset["epubs"]["ms"].append(rd["epub"]["m"])
+        compset["epubs"]["ds"].append(rd["epub"]["d"])
+        compset["pmids"].append(rd["pmid"])
+        compset["pmcids"].append(rd["pmcid"])
+    return compset
 
 # Tests
 if __name__ == "__main__":
@@ -77,17 +72,32 @@ if __name__ == "__main__":
         refs = json.load(file)
 
     data = parse_ris(refs[0]["ris"])
-    print(data["authors"])
+    #print(data["authors"])
 
-    print(json.dumps(refs[0], indent=4))
-    print(json.dumps(data, indent=4))
+    #print(json.dumps(refs[0], indent=4))
+    #print(json.dumps(data, indent=4))
 
     #formatted = [{ "id": ref["id"], "data": parse_ris(ref["ris"]) } for ref in refs]
     formatted = [parse_ris(ref["ris"]) for ref in refs]
-    print(json.dumps(formatted, indent=4))
+    #print(json.dumps(formatted, indent=4))
+    compset = component_set(*formatted)
+    print(json.dumps(compset, indent=4))
 
-
-
+    # Checking, all should be 100
+    #print(len(compset["authors"]["single"]))
+    print(len(compset["authors"]["groups"]))
+    print(len(compset["titles"]))
+    print(len(compset["journals"]["names"]["full"]))
+    print(len(compset["journals"]["names"]["short"]))
+    print(len(compset["journals"]["years"]))
+    print(len(compset["journals"]["volumes"]))
+    print(len(compset["journals"]["pages"]))
+    print(len(compset["dois"]))
+    print(len(compset["epubs"]["ys"]))
+    print(len(compset["epubs"]["ms"]))
+    print(len(compset["epubs"]["ds"]))
+    print(len(compset["pmids"]))
+    print(len(compset["pmcids"]))
 
 
 
