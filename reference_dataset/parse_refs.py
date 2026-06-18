@@ -13,28 +13,26 @@ def parse_ris(ris):
     refdata = {
         "authors": [],
         "title": "",
-        "journal": { "fullname": "", "abreviated": "", "year": "", "volume": "", "page": "" },
+        "journal": { "name": {"full": "", "short": ""}, "year": "", "volume": "", "page": "" },
         "doi": "",
         "epub": { "y": "", "m": "", "d": "" }, # For NLM format. 
         "pmid": "",                                     #
         "pmcid": ""                                     #
     }
-                                                                           # Split leaves a trailing '', could slice final index instead.
-    for tag, value in [(line[0:2], line[6:]) for line in ris.split("\r\n") if len(line) != 0]:
+    for tag, value in [(line[0:2], line[6:]) for line in ris.split("\r\n") if len(line) != 0]: # Split leaves a trailing '', could slice final index instead of condition.
         match tag:
             case "AU": refdata["authors"].append(value)
             case "T1": refdata["title"] = value
+            case "JF": refdata["journal"]["name"]["full"] = value
+            case "J2": refdata["journal"]["name"]["short"] = value
             case "Y1": refdata["journal"]["year"] = value[0:4] # All formats only include publication year.
+            case "VL": refdata["journal"]["volume"] = value
+            case "SP": refdata["journal"]["page"] = value
+            case "DO": refdata["doi"] = value
             case "ET": refdata["epub"]["y"], refdata["epub"]["m"], refdata["epub"]["d"] = value.split("/") # Only NLM includes epub.
-            case "DO": pass
-            case "VL": pass
-            case "SP": pass
-            case "J2": pass
-            case "JF": pass
-            case "AN": pass
-            case "U2": pass
-            #case _:
-            #    print(f"! unknown RIS tag: {(tag, value)}")
+            case "AN": refdata["pmid"] = value
+            case "U2": refdata["pmcid"] = value[:-7] # Slice off trailing ...[pmcid]
+            #case _: print(f"! unknown RIS tag: {(tag, value)}")
 
         #if tag == "AU":
         #    ris_data["authors"].append(value)
@@ -81,7 +79,13 @@ if __name__ == "__main__":
     data = parse_ris(refs[0]["ris"])
     print(data["authors"])
 
+    print(json.dumps(refs[0], indent=4))
     print(json.dumps(data, indent=4))
+
+    #formatted = [{ "id": ref["id"], "data": parse_ris(ref["ris"]) } for ref in refs]
+    formatted = [parse_ris(ref["ris"]) for ref in refs]
+    print(json.dumps(formatted, indent=4))
+
 
 
 
