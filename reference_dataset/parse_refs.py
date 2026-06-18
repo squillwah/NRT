@@ -7,13 +7,18 @@ import json
 #  pull apart ris into that X
 #  store puzzlepiece set X
 
+_MONTHMAP = {"01": "Jan", "02": "Feb", "03": "Mar",
+             "04": "Apr", "05": "May", "06": "Jun",
+             "07": "Jul", "08": "Aug", "09": "Sep",
+             "10": "Oct", "11": "Nov", "12": "Dec"}
+
 # Parse RIS into dictionary representation
 # https://en.wikipedia.org/wiki/RIS_(file_format)
 def parse_ris(ris):
     refdata = {
         "authors": [],
-        "title": "",
-        "journal": { "name": {"full": "", "short": ""}, "year": "", "volume": "", "page": "" },
+        "title": "",    # All reference formats use the abreviation, is storing the full needed? It could be useful for adding error. !! Have a "minor quirks" subset, where the reference is real but some of the formatting is off.
+        "journal": { "name": { "full": "", "short": "" }, "year": "", "volume": "", "issue": "":, "page": { "start": "", "end": "" }},
         "doi": "",
         "epub": { "y": "", "m": "", "d": "" }, # For NLM format. 
         "pmid": "",                                     #
@@ -63,6 +68,26 @@ def component_set(*refdata):
         compset["pmcids"].append(rd["pmcid"])
     return compset
 
+# Construct AMA reference string from refdata
+def build_ama(data):
+    formatted_authors = []
+    for author in data["authors"]:
+        if "," in author:
+            last, first = author.split(",", 1)
+            initials = "".join([i[0] for i in first.strip().split()])
+            formatted_authors.append(f"{last.strip()} {initials}")
+        else:
+            formatted_authors.append(author)
+    if len(formatted_authors) >= 7: # because ama really wants to get specific. 
+        author_str = ", ".join(formatted_authors[:3]) + ", et al"
+    else:
+        author_str = ", ".join(formatted_authors)
+    month_lbl = ""#get_month_abbr(data["month"])
+    day_lbl = ""#data["day"].lstrip('0') if data["day"] else ""
+    return f"{author_str}. {data['title']}. {data['journal']['name']['short']}. {data['journal']['year']};{data['journal']['volume']}:{data['journal']['page']}. Published {data['journal']['year']} {month_lbl} {day_lbl}. doi:{data['doi']}"
+
+
+
 # Tests
 if __name__ == "__main__":
     FILE = "./references.json"
@@ -78,9 +103,9 @@ if __name__ == "__main__":
     #print(json.dumps(data, indent=4))
 
     #formatted = [{ "id": ref["id"], "data": parse_ris(ref["ris"]) } for ref in refs]
-    formatted = [parse_ris(ref["ris"]) for ref in refs]
+    refdata = [parse_ris(ref["ris"]) for ref in refs]
     #print(json.dumps(formatted, indent=4))
-    compset = component_set(*formatted)
+    compset = component_set(*refdata)
     print(json.dumps(compset, indent=4))
 
     # Checking, all should be 100
@@ -99,7 +124,10 @@ if __name__ == "__main__":
     print(len(compset["pmids"]))
     print(len(compset["pmcids"]))
 
-
+    print()
+    print(build_ama(refdata[0]))
+    print()
+    print(refs[0]["ama"]["orig"])
 
 
 
