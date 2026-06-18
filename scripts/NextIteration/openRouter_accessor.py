@@ -28,26 +28,30 @@ def openrouter_all_call(header_prompt, citation):
     jsonObject = openrouter_accessor(header_prompt, citation, "google/gemma-4-26b-a4b-it:free")
     results.append(jsonObject)
     time.sleep(1)
-
+    print("1 Done")
     jsonObject = openrouter_accessor(header_prompt, citation, "nex-agi/nex-n2-pro:free")
     results.append(jsonObject)
     time.sleep(1)
+    print("2 Done")
 
     jsonObject = openrouter_accessor(header_prompt, citation, "openrouter/owl-alpha")
     results.append(jsonObject)
     time.sleep(1)
+    print("3 Done")
 
     jsonObject = openrouter_accessor(header_prompt, citation, "nvidia/nemotron-3-super-120b-a12b:free")
     results.append(jsonObject)
     time.sleep(1)
+    print("4 Done")
 
     jsonObject = openrouter_accessor(header_prompt, citation, "openai/gpt-oss-20b:free")
     results.append(jsonObject)
     time.sleep(1)
+    print("5 Done")
 
-    jsonObject = openrouter_accessor(header_prompt, citation, "cognitivecomputations/dolphin-mistral-24b-venice-edition:free")
+    '''jsonObject = openrouter_accessor(header_prompt, citation, "cognitivecomputations/dolphin-mistral-24b-venice-edition:free")
     results.append(jsonObject)
-    time.sleep(1)
+    time.sleep(1)'''
 
     return results
 
@@ -57,7 +61,7 @@ def openrouter_accessor(header, citation, model):
   response = requests.post(
    url="https://openrouter.ai/api/v1/chat/completions", # To use a BYOK model, simply change the chat/completions to byok/<api-model-key>
    headers = {
-    "Authorization": "Bearer <ADD_OPENROUTER_API_KEY_HERE>",
+    "Authorization": "Bearer <API_KEY_HERE>",
     "Content-Type": "application/json"
    },
    json={

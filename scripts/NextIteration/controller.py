@@ -1,7 +1,8 @@
 import json
 import time
 from prompt_writer import generate_prompt
-from openRouter_accessor import openrouter_accessor
+from openRouter_accessor import openrouter_accessor, openrouter_all_call
+
 
 def printToFile(results, id):
     with open("./container/" + id+ ".json", "w") as f:
@@ -16,30 +17,45 @@ with open(name, 'r') as file:
     parsed_refs = json.load(file)
 
 header_prompt = generate_prompt()
-print("Started API Requests")
 for i, ref in enumerate(parsed_refs):
     results = []
-    jsonObject = openrouter_accessor(header_prompt, ref["ama"]["format"])
-    results.append(jsonObject)
+    ama_responses = openrouter_all_call(header_prompt, ref["ama"]["format"])
+    results.append({
+        "Citation_Type": "ama",
+        "responses": ama_responses
+    })
     time.sleep(1)
 
-    jsonObject = openrouter_accessor(header_prompt, ref["apa"]["format"])
-    results.append(jsonObject)
+    apa_responses = openrouter_all_call(header_prompt, ref["apa"]["format"])
+    results.append({
+        "Citation_Type": "apa",
+        "responses": apa_responses
+    })
     time.sleep(1)
-    
-    jsonObject = openrouter_accessor(header_prompt, ref["mla"]["format"])
-    results.append(jsonObject)
+
+    mla_responses = openrouter_all_call(header_prompt, ref["mla"]["format"])
+    results.append({
+        "Citation_Type": "mla",
+        "responses": mla_responses
+    })
     time.sleep(1)
-    
-    jsonObject = openrouter_accessor(header_prompt, ref["nlm"]["format"])
-    results.append(jsonObject)
+
+    nlm_responses = openrouter_all_call(header_prompt, ref["nlm"]["format"])
+    results.append({
+        "Citation_Type": "nlm",
+        "responses": nlm_responses
+    })
     time.sleep(1)
-    
-    jsonObject = openrouter_accessor(header_prompt, ref["ris"])
-    results.append(jsonObject)
+
+    ris_responses = openrouter_all_call(header_prompt, ref["ris"])
+    results.append({
+        "Citation_Type": "ris",
+        "responses": ris_responses
+    })
     time.sleep(1)
-    
+
     printToFile(results, ref["id"].replace(":", "_"))
+
 
 
 print("done!")
