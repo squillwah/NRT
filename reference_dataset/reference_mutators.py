@@ -48,7 +48,7 @@ def typo_swapletter(word, index):
 
 def typo_autocorrect(word): pass
 
-#def 
+# def test
 
 for i in range(8):
     word = typo_fatfinger("medicine", i)
