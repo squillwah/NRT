@@ -72,32 +72,27 @@ def component_set(*refdata):
 
 # Reference builders
 def build_ref_authors(author_list, style):
-    lfsp = "!" # Last / first spacing
-    isp = "!" # Initial spacing
-    ipe = "!" # Initial periods
-    eat = 1 # Et al threshold
-    eac = 1 # Et al count
+    # Initial spacing, initial period, last/first spacing, et al threshold, et al count, et al spacing, initialize firsts, list ampersand.
+    isp, ipe, lfsp, eat, eac, easp, initials, ampersand = "!", "!", "!", 1, 1, "!", False, False
     match style:
-        case "ama": isp, ipe, lfsp, eat, eac  = "", "", " ", 7, 3
-        case "apa": isp, ipe, lfsp, eat, eac = " ", ".", ", ", 0, 0
-        case "mla": isp, ipe, lfsp, eat, eac = "", "", "", 2, 1
-        case "nlm": isp, ipe, lfsp, eat, eac = "", "", "", 0, 0
-
-
+        case "ama": isp, ipe, lfsp, eat, eac, easp, initials, ampersand = "",    "",    " ",    7,      3,      ", ",   True,   False
+        case "apa": isp, ipe, lfsp, eat, eac, easp, initials, ampersand = " ",   ".",   ", ",   None,   None,   None,   True,   True
+        case "mla": isp, ipe, lfsp, eat, eac, easp, initials, ampersand = "",    "",    ", ",   2,      1,      " ",    False,  False
+        case "nlm": isp, ipe, lfsp, eat, eac, easp, initials, ampersand = "",    "",    " ",    None,   None,   None,   True,   False
     author_string = ""
     formatted_names = []
     for auth in author_list:
         last, firsts = (a := auth.split(", ", 1)) + [""]*(2-len(a))
-        firsts = isp.join([c+ipe for c in firsts if c.isupper()])
+        if initials: firsts = isp.join([c+ipe for c in firsts if c.isupper()])
         formatted_names.append(lfsp.join((last, firsts)).strip())
-    if len(author_list) < eathresh :
+    if not eat or len(author_list) < eat:
+        if ampersand: formatted_names[-1] = "& " + formatted_names[-1]
         author_string = ", ".join(formatted_names)
-    else: 
-        author_string = ", ".join(formatted_names[0:eathresh]) + ", et al"
+    else: author_string = ", ".join(formatted_names[0:eac]) + easp + "et al"
     return author_string
 
 def build_ref(refdata, style):
-    authors = build_ama_authors(refdata["authors"], style)
+    authors = build_ref_authors(refdata["authors"], style)
     title = refdata["title"]
     jname = refdata["journal"]["name"]["short"]
     jyear = refdata["journal"]["year"]
@@ -107,10 +102,10 @@ def build_ref(refdata, style):
 
     return f"{authors}. {title}. {jname}. {jyear};{jissue}:{jpages}. doi:{doi}"
 
-"orig": "Vignando M, Ffytche D, Mazibuko N, et al. Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis. Nat Ment Health. 2026;4(6):994-1009. doi:10.1038/s44220-026-00669-7",
-"orig": "Vignando, M., Ffytche, D., Mazibuko, N., Palma, G., Bhat, A., Montagnese, M., Dave, S., Tai, Y. F., Batzu, L., Leta, V., Chaudhuri, K. R., Williams Gray, C. H., & Mehta, M. A. (2026). Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis. Nature. Mental health, 4(6), 994\u20131009. https://doi.org/10.1038/s44220-026-00669-7",
-"orig": "Vignando, Miriam et al. \u201cDeviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis.\u201d Nature. Mental health vol. 4,6 (2026): 994-1009. doi:10.1038/s44220-026-00669-7",
-"orig": "Vignando M, Ffytche D, Mazibuko N, Palma G, Bhat A, Montagnese M, Dave S, Tai YF, Batzu L, Leta V, Chaudhuri KR, Williams Gray CH, Mehta MA. Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis. Nat Ment Health. 2026;4(6):994-1009. doi: 10.1038/s44220-026-00669-7. Epub 2026 Jun 10. PMID: 42291779; PMCID: PMC13259922.",
+"Vignando M, Ffytche D, Mazibuko N, et al. Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis. Nat Ment Health. 2026;4(6):994-1009. doi:10.1038/s44220-026-00669-7",
+"Vignando, M., Ffytche, D., Mazibuko, N., Palma, G., Bhat, A., Montagnese, M., Dave, S., Tai, Y. F., Batzu, L., Leta, V., Chaudhuri, K. R., Williams Gray, C. H., & Mehta, M. A. (2026). Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis. Nature. Mental health, 4(6), 994\u20131009. https://doi.org/10.1038/s44220-026-00669-7",
+"Vignando, Miriam et al. \u201cDeviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis.\u201d Nature. Mental health vol. 4,6 (2026): 994-1009. doi:10.1038/s44220-026-00669-7",
+"Vignando M, Ffytche D, Mazibuko N, Palma G, Bhat A, Montagnese M, Dave S, Tai YF, Batzu L, Leta V, Chaudhuri KR, Williams Gray CH, Mehta MA. Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis. Nat Ment Health. 2026;4(6):994-1009. doi: 10.1038/s44220-026-00669-7. Epub 2026 Jun 10. PMID: 42291779; PMCID: PMC13259922.",
 
 # Construct AMA reference string from refdata
 def build_ama_old(data):
@@ -189,6 +184,18 @@ if __name__ == "__main__":
         print()
         #print(build_ama_authors(d["authors"]))
 
+    print("\n\n\n\n")
+    print((a := refs[0]["ama"]["orig"])[0:a.find("Deviations")])
+    print(build_ref_authors(refdata[0]["authors"], "ama"))
+    print()
+    print((a := refs[0]["apa"]["orig"])[0:a.find("Deviations")])
+    print(build_ref_authors(refdata[0]["authors"], "apa"))
+    print()
+    print((a := refs[0]["mla"]["orig"])[0:a.find("Deviations")])
+    print(build_ref_authors(refdata[0]["authors"], "mla"))
+    print()
+    print((a := refs[0]["nlm"]["orig"])[0:a.find("Deviations")])
+    print(build_ref_authors(refdata[0]["authors"], "nlm"))
 
 
 
