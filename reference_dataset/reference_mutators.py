@@ -14,6 +14,7 @@
 # A general constructor, with per component formatting, would allow for format metagarbling too.
 
 import random
+import copy
 
 def typo_fatfinger(word, index):
     QWERTY = ["qwertyuiop",
@@ -48,7 +49,51 @@ def typo_swapletter(word, index):
 
 def typo_autocorrect(word): pass
 
-# def test
+# Gabe code :D
+# do keep in mind that this is only hypothetical, and once we have the go-ahead, we can then begin to actually implement
+# this.
+def mutate_authors_refinement(authors_list: list) -> tuple: # do note that this is merely temporary and will be
+    # adjusted as we implement it back into a more centralized code
+
+    # sets mutated_authors equal to a deep copy of the authors_list
+    mutated_authors = copy.deepcopy(authors_list)
+    actions_logged = []
+    if not mutated_authors:
+        return mutated_authors, actions_logged
+
+    # portion of code that swaps any two authors by X amount of indexes, and not just first two
+    if len(mutated_authors) >= 2:
+        # authors are within an array, so this will examine said positions across the list array.
+        idx1, idx2 = random.sample(range(len(mutated_authors)), k=2)
+        mutated_authors[idx1], mutated_authors[idx2] = mutated_authors[idx2], mutated_authors[idx1]
+        actions_logged.append(f"author_position_swap_(idx{idx1}_with_idx{idx2})")
+
+        # Calls back to Ravi's functions regarding either swapping a random letter or a typo.
+        # first part picks a random author index from the live array pool to sabotage
+        target_author_idx = random.randint(0, len(mutated_authors) - 1)
+        target_name_string = mutated_authors[target_author_idx]
+
+        if len(target_name_string) >= 2:
+            # picks an index inside the chosen author's name string
+            random_char_index = random.randint(0, len(target_name_string) - 1)
+
+            # randomly picks which of Ravi's functions to push the string through
+            chosen_typo_tool = random.choice(["fatfinger", "swapletter"])
+
+            if chosen_typo_tool == "fatfinger":
+                mutated_name = typo_fatfinger(target_name_string, random_char_index)
+                actions_logged.append(
+                    f"called_typo_fatfinger_(author_idx_{target_author_idx}_char_idx_{random_char_index})")
+
+            else:
+                mutated_name = typo_swapletter(target_name_string, random_char_index)
+                actions_logged.append(
+                    f"called_typo_swapletter_(author_idx_{target_author_idx}_char_idx_{random_char_index})")
+            # rewrites the mutated_authors name back into the array
+            mutated_authors[target_author_idx] = mutated_name
+        return mutated_authors, actions_logged
+
+
 
 for i in range(8):
     word = typo_fatfinger("medicine", i)
