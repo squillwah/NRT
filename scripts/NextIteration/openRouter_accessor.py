@@ -14,7 +14,8 @@ response_schema = {
                 "model": {"type": "string"},
                 "message": {"type": "string"}
             },
-            "required": ["model", "message"]
+            "required": ["model", "message"],
+            "additionalProperties": False
         }
     }
 }

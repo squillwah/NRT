@@ -5,7 +5,7 @@ use_internet = "You may use the internet. "
 dont_use_internet = "DO NOT USE INTERNET. "
 internet_query = "Did you use the internet? "
 
-general_prompt = "Analyze this citation and tell me if its real or not. "
+general_prompt = "Analyze this citation and tell me if its real or not. In the response use the words \"not real\" if the citation is in not real, and use the words \" is real\" if the citation is real."
 
 percentage_confidence = "What percentage confidence do you think this citation is real? Then explain how you came up with that number. "
 accuracy_prompt_simple = "Is this citation accurate? Yes or No "
