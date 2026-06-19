@@ -18,7 +18,7 @@ def parse_ris(ris):
     refdata = {
         "authors": [],
         "title": "",    # All reference formats use the abreviation, is storing the full needed? It could be useful for adding error. !! Have a "minor quirks" subset, where the reference is real but some of the formatting is off.
-        "journal": { "name": { "full": "", "short": "" }, "year": "", "volume": "", "issue": "", "page": { "start": "", "end": "" }},
+        "journal": { "name": { "full": "", "short": "" }, "year": "", "volume": "", "issue": "", "pages": { "start": "", "end": "" }},
         "doi": "",
         "epub": { "y": "", "m": "", "d": "" }, # For NLM format. 
         "pmid": "",                                     #
@@ -32,7 +32,9 @@ def parse_ris(ris):
             case "J2": refdata["journal"]["name"]["short"] = value
             case "Y1": refdata["journal"]["year"] = value[0:4] # All formats only include publication year.
             case "VL": refdata["journal"]["volume"] = value
-            case "SP": refdata["journal"]["page"] = value
+            case "IS": refdata["journal"]["issue"] = value
+            case "SP": refdata["journal"]["pages"]["start"] = value
+            case "EP": refdata["journal"]["pages"]["end"] = value
             case "DO": refdata["doi"] = value
             case "ET": refdata["epub"]["y"], refdata["epub"]["m"], refdata["epub"]["d"] = value.split("/") # Only NLM includes epub.
             case "AN": refdata["pmid"] = value
@@ -59,7 +61,7 @@ def component_set(*refdata):
         compset["journals"]["names"]["short"].append(rd["journal"]["name"]["short"])
         compset["journals"]["years"].append(rd["journal"]["year"])
         compset["journals"]["volumes"].append(rd["journal"]["volume"])
-        compset["journals"]["pages"].append(rd["journal"]["page"])
+        compset["journals"]["pages"].append(rd["journal"]["pages"])
         compset["dois"].append(rd["doi"])
         compset["epubs"]["ys"].append(rd["epub"]["y"])
         compset["epubs"]["ms"].append(rd["epub"]["m"])
@@ -76,21 +78,25 @@ def build_ama_authors(author_list):
     for auth in author_list:
         last, firsts = (a := auth.split(", ", 1)) + [""]*(2-len(a))
         firsts = "".join([c for c in firsts if c.isupper()])
-        formatted_names.append(f"{last} {firsts}")
+        formatted_names.append(" ".join((last, firsts)).strip())
     if len(author_list) < 7: author_string = ", ".join(formatted_names)
     else: author_string = ", ".join(formatted_names[0:3]) + ", et al"
     return author_string
 
-#def build_ama(refdata):
-#    # Authors
-#    for auth in 
-#        last, firsts = 
-#    if len(refdata["authors"]) < 6:
-#        authors = refdata["authors"]
+def build_ref(refdata, style):
+    authors = build_ama_authors(refdata["authors"])
+    title = refdata["title"]
+    jname = refdata["journal"]["name"]["short"]
+    jyear = refdata["journal"]["year"]
+    jissue = f"{refdata["journal"]["volume"]}({refdata["journal"]["issue"]})"
+    jpages = f"{refdata["journal"]["pages"]["start"]}-{refdata["journal"]["pages"]["end"]}"
+    doi = refdata["doi"]
+
+    return f"{authors}. {title}. {jname}. {jyear};{jissue}:{jpages}. doi:{doi}"
 
 
 # Construct AMA reference string from refdata
-def build_ama(data):
+def build_ama_old(data):
     formatted_authors = []
     for author in data["authors"]:
         if "," in author:
@@ -146,14 +152,25 @@ if __name__ == "__main__":
     print(len(compset["pmcids"]))
 
     print()
-    print(build_ama(refdata[0]))
+    #print(build_ama_old(refdata[0]))
     print()
     print(refs[0]["ama"]["orig"])
 
     print()
+    bads = []
     for r, d in zip(refs, refdata):
-        print(r["ama"]["orig"])
-        print(build_ama_authors(d["authors"]))
+        orig = r["ama"]["orig"]
+        reco = build_ref(d, "ama")
+        print(orig)
+        print(reco)
+        print(orig == reco)
+        if (orig != reco): bads.append((orig, reco))
+    print("---")
+    for o, r in bads:
+        print(o)
+        print(r)
+        print()
+        #print(build_ama_authors(d["authors"]))
 
 
 
