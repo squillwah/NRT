@@ -18,7 +18,7 @@ def parse_ris(ris):
     refdata = {
         "authors": [],
         "title": "",    # All reference formats use the abreviation, is storing the full needed? It could be useful for adding error. !! Have a "minor quirks" subset, where the reference is real but some of the formatting is off.
-        "journal": { "name": { "full": "", "short": "" }, "year": "", "volume": "", "issue": "":, "page": { "start": "", "end": "" }},
+        "journal": { "name": { "full": "", "short": "" }, "year": "", "volume": "", "issue": "", "page": { "start": "", "end": "" }},
         "doi": "",
         "epub": { "y": "", "m": "", "d": "" }, # For NLM format. 
         "pmid": "",                                     #
@@ -67,6 +67,27 @@ def component_set(*refdata):
         compset["pmids"].append(rd["pmid"])
         compset["pmcids"].append(rd["pmcid"])
     return compset
+
+# Reference builders
+"Vignando M, Ffytche D, Mazibuko N, et al. Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis. Nat Ment Health. 2026;4(6):994-1009. doi:10.1038/s44220-026-00669-7",
+def build_ama_authors(author_list):
+    author_string = ""
+    formatted_names = []
+    for auth in author_list:
+        last, firsts = (a := auth.split(", ", 1)) + [""]*(2-len(a))
+        firsts = "".join([c for c in firsts if c.isupper()])
+        formatted_names.append(f"{last} {firsts}")
+    if len(author_list) < 7: author_string = ", ".join(formatted_names)
+    else: author_string = ", ".join(formatted_names[0:3]) + ", et al"
+    return author_string
+
+#def build_ama(refdata):
+#    # Authors
+#    for auth in 
+#        last, firsts = 
+#    if len(refdata["authors"]) < 6:
+#        authors = refdata["authors"]
+
 
 # Construct AMA reference string from refdata
 def build_ama(data):
@@ -128,6 +149,11 @@ if __name__ == "__main__":
     print(build_ama(refdata[0]))
     print()
     print(refs[0]["ama"]["orig"])
+
+    print()
+    for r, d in zip(refs, refdata):
+        print(r["ama"]["orig"])
+        print(build_ama_authors(d["authors"]))
 
 
 
