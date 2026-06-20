@@ -7,11 +7,6 @@ import json
 #  pull apart ris into that X
 #  store puzzlepiece set X
 
-_MONTHMAP = {"01": "Jan", "02": "Feb", "03": "Mar",
-             "04": "Apr", "05": "May", "06": "Jun",
-             "07": "Jul", "08": "Aug", "09": "Sep",
-             "10": "Oct", "11": "Nov", "12": "Dec"}
-
 # Parse RIS into dictionary representation
 # https://en.wikipedia.org/wiki/RIS_(file_format)
 def parse_ris(ris):
@@ -42,12 +37,13 @@ def parse_ris(ris):
             #case _: print(f"! unknown RIS tag: {(tag, value)}")
     return refdata
 
-# Return reference component set from multiple reference data dicts
+# Create flat reference component set from multiple reference datas
 def component_set(*refdata):
+    # Could have the structure mirror 1-1 (of course with lists instead of single strings), would be easier to expand that way.
     compset = {
         "authors": { "single": [], "groups": [] },
         "titles": [],
-        "journals": { "names": { "full": [], "short": [] }, "years": [], "volumes": [], "pages": [] },
+        "journals": { "names": { "full": [], "short": [] }, "years": [], "volumes": [], "issues": [], "pages": [] },
         "dois": [],
         "epubs": { "ys": [], "ms": [], "ds": [] },
         "pmids": [],
@@ -70,63 +66,6 @@ def component_set(*refdata):
         compset["pmcids"].append(rd["pmcid"])
     return compset
 
-# Reference builders
-def build_ref_authors(author_list, style):
-    # Initial spacing, initial period, last/first spacing, et al threshold, et al count, et al spacing, initialize firsts, list ampersand.
-    isp, ipe, lfsp, eat, eac, easp, initials, ampersand = "!", "!", "!", 1, 1, "!", False, False
-    match style:
-        case "ama": isp, ipe, lfsp, eat, eac, easp, initials, ampersand = "",    "",    " ",    7,      3,      ", ",   True,   False
-        case "apa": isp, ipe, lfsp, eat, eac, easp, initials, ampersand = " ",   ".",   ", ",   None,   None,   None,   True,   True
-        case "mla": isp, ipe, lfsp, eat, eac, easp, initials, ampersand = "",    "",    ", ",   2,      1,      " ",    False,  False
-        case "nlm": isp, ipe, lfsp, eat, eac, easp, initials, ampersand = "",    "",    " ",    None,   None,   None,   True,   False
-    author_string = ""
-    formatted_names = []
-    for auth in author_list:
-        last, firsts = (a := auth.split(", ", 1)) + [""]*(2-len(a))
-        if initials: firsts = isp.join([c+ipe for c in firsts if c.isupper()])
-        formatted_names.append(lfsp.join((last, firsts)).strip())
-    if not eat or len(author_list) < eat:
-        if ampersand: formatted_names[-1] = "& " + formatted_names[-1]
-        author_string = ", ".join(formatted_names)
-    else: author_string = ", ".join(formatted_names[0:eac]) + easp + "et al"
-    return author_string
-
-def build_ref(refdata, style):
-    authors = build_ref_authors(refdata["authors"], style)
-    title = refdata["title"]
-    jname = refdata["journal"]["name"]["short"]
-    jyear = refdata["journal"]["year"]
-    jissue = f"{refdata["journal"]["volume"]}({refdata["journal"]["issue"]})"
-    jpages = f"{refdata["journal"]["pages"]["start"]}-{refdata["journal"]["pages"]["end"]}"
-    doi = refdata["doi"]
-
-    return f"{authors}. {title}. {jname}. {jyear};{jissue}:{jpages}. doi:{doi}"
-
-"Vignando M, Ffytche D, Mazibuko N, et al. Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis. Nat Ment Health. 2026;4(6):994-1009. doi:10.1038/s44220-026-00669-7",
-"Vignando, M., Ffytche, D., Mazibuko, N., Palma, G., Bhat, A., Montagnese, M., Dave, S., Tai, Y. F., Batzu, L., Leta, V., Chaudhuri, K. R., Williams Gray, C. H., & Mehta, M. A. (2026). Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis. Nature. Mental health, 4(6), 994\u20131009. https://doi.org/10.1038/s44220-026-00669-7",
-"Vignando, Miriam et al. \u201cDeviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis.\u201d Nature. Mental health vol. 4,6 (2026): 994-1009. doi:10.1038/s44220-026-00669-7",
-"Vignando M, Ffytche D, Mazibuko N, Palma G, Bhat A, Montagnese M, Dave S, Tai YF, Batzu L, Leta V, Chaudhuri KR, Williams Gray CH, Mehta MA. Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis. Nat Ment Health. 2026;4(6):994-1009. doi: 10.1038/s44220-026-00669-7. Epub 2026 Jun 10. PMID: 42291779; PMCID: PMC13259922.",
-
-# Construct AMA reference string from refdata
-def build_ama_old(data):
-    formatted_authors = []
-    for author in data["authors"]:
-        if "," in author:
-            last, first = author.split(",", 1)
-            initials = "".join([i[0] for i in first.strip().split()])
-            formatted_authors.append(f"{last.strip()} {initials}")
-        else:
-            formatted_authors.append(author)
-    if len(formatted_authors) >= 7: # because ama really wants to get specific. 
-        author_str = ", ".join(formatted_authors[:3]) + ", et al"
-    else:
-        author_str = ", ".join(formatted_authors)
-    month_lbl = ""#get_month_abbr(data["month"])
-    day_lbl = ""#data["day"].lstrip('0') if data["day"] else ""
-    return f"{author_str}. {data['title']}. {data['journal']['name']['short']}. {data['journal']['year']};{data['journal']['volume']}:{data['journal']['page']}. Published {data['journal']['year']} {month_lbl} {day_lbl}. doi:{data['doi']}"
-
-
-
 # Tests
 if __name__ == "__main__":
     FILE = "./references.json"
@@ -135,19 +74,11 @@ if __name__ == "__main__":
     with open(FILE, "r") as file:
         refs = json.load(file)
 
-    data = parse_ris(refs[0]["ris"])
-    #print(data["authors"])
-
-    #print(json.dumps(refs[0], indent=4))
-    #print(json.dumps(data, indent=4))
-
-    #formatted = [{ "id": ref["id"], "data": parse_ris(ref["ris"]) } for ref in refs]
     refdata = [parse_ris(ref["ris"]) for ref in refs]
-    #print(json.dumps(formatted, indent=4))
     compset = component_set(*refdata)
-    print(json.dumps(compset, indent=4))
 
     # Checking, all should be 100
+    print(json.dumps(compset, indent=4))
     #print(len(compset["authors"]["single"]))
     print(len(compset["authors"]["groups"]))
     print(len(compset["titles"]))
@@ -163,130 +94,3 @@ if __name__ == "__main__":
     print(len(compset["pmids"]))
     print(len(compset["pmcids"]))
 
-    print()
-    #print(build_ama_old(refdata[0]))
-    print()
-    print(refs[0]["ama"]["orig"])
-
-    print()
-    bads = []
-    for r, d in zip(refs, refdata):
-        orig = r["ama"]["orig"]
-        reco = build_ref(d, "ama")
-        print(orig)
-        print(reco)
-        print(orig == reco)
-        if (orig != reco): bads.append((orig, reco))
-    print("---")
-    for o, r in bads:
-        print(o)
-        print(r)
-        print()
-        #print(build_ama_authors(d["authors"]))
-
-    print("\n\n\n\n")
-    print((a := refs[0]["ama"]["orig"])[0:a.find("Deviations")])
-    print(build_ref_authors(refdata[0]["authors"], "ama"))
-    print()
-    print((a := refs[0]["apa"]["orig"])[0:a.find("Deviations")])
-    print(build_ref_authors(refdata[0]["authors"], "apa"))
-    print()
-    print((a := refs[0]["mla"]["orig"])[0:a.find("Deviations")])
-    print(build_ref_authors(refdata[0]["authors"], "mla"))
-    print()
-    print((a := refs[0]["nlm"]["orig"])[0:a.find("Deviations")])
-    print(build_ref_authors(refdata[0]["authors"], "nlm"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# There is the choice between eight functions or two with some format specific argument.
-# If the logic overlaps a lot, just two would be more concise.
-
-
-# Takes reference string and returns some standard representation for versitile mangling.
-# Compose does the reverse.
-
-# Alternatively, we could try to use the RIS shit as our standard format, and just build each format from scratch with that.
-# We would probably make some subtle mistakes and it'd be hard to match 100% with the real references completely. 
-
-# Global patterns:
-# - Authors always first.
-
-# Which parts are irrecoverably different?
-# - Et al vs full list
-"""
-def decompose_ama(ref):
-    # Patterns of AMA:
-    # - "Authors. Title. Journal. JournalYear;Volume:Page/Elocator. Published Year Mon Da. doi"
-    # - All author names listed
-    #   - last[full]+SPACE+first[initial]+(COMMA+SPACE+repeat)+PERIOD
-    #   - no periods on initials, no spacing between multiple initials
-    # 
-
-    # The standard format should be a map something like:
-    # {"authors": ["", "", ""], # What to do for et al? A single element list or break convention with a plain string?
-    #   "title": "",
-    #   "published": "", # Could be broken down further, into month day year
-    #   "journal": "",   # Would there be a seperate journal date from publishing date?
-    #   "volume": "",
-    #   "page": "",
-    #   "doi": ""}
-    # The tricky part is deciding on a structure which works for all formats, so we don't need to write multiple procedures for each one permutation.
-
-    # Could we use RegEx?
-
-def compose_ama(ref): pass
-    # The reverse of decompose
-
-def decompose_apa(ref): pass
-def compose_apa(ref): pass
-
-def decompose_mla(ref): pass
-def compose_mla(ref): pass
-
-def decompose_nlm(ref): pass
-def compose_nlm(ref): pass
-
-
-#jref = decompose_ama(the_string)
-ref = decompose_apa(the_string)
-
-def swap_authors(ref):
-    swap(ref["authors"])
-    return ref
-
-apa = compose_apa(ref)
-
-def mangle_title(ref, settings):
-    for i in range(times):
-        introduce_typo(ref["title"], random_point, random_type)
-main():
-    # 200 single
-    for i in 200:
-        random_mutation(ref)
-    # 300 multi
-"""
