@@ -12,9 +12,45 @@ response_schema = {
             "type": "object",
             "properties": {
                 "model": {"type": "string"},
-                "message": {"type": "string"}
+
+                "overall": {
+                    "type" : "string",
+                    "description" : "Yes or no; real citation"
+                },
+
+                "author": {
+                    "type": "string",
+                    "description" : "Yes or no; real author"
+                },
+
+                "journal": {
+                    "type" : "string",
+                    "description" : "Yes or no; real journal"
+                },
+
+                "publish_date": {
+                    "type" : "string",
+                    "description" : "Yes or no; correct publish date"
+                },
+
+                "author_order": {
+                    "type" : "string",
+                    "description" : "Yes or no; correct author order"
+                },
+
+                "publisher": {
+                    "type" : "string",
+                    "description" : "Yes or no; correct publisher"
+                },
+
+                "percentage_of_confidence": {
+                    "type" : "number",
+                    "description" : "percentage of confidence"
+                }
+
+
             },
-            "required": ["model", "message"],
+            "required": ["model", "overall", "author", "journal", "publish_date", "author_order", "publisher", "percentage_of_confidence"],
             "additionalProperties": False
         }
     }
@@ -30,10 +66,11 @@ def openrouter_all_call(header_prompt, citation):
     results.append(jsonObject)
     time.sleep(1)
     print("1 Done")
-    jsonObject = openrouter_accessor(header_prompt, citation, "nex-agi/nex-n2-pro:free")
-    results.append(jsonObject)
-    time.sleep(1)
-    print("2 Done")
+
+    # jsonObject = openrouter_accessor(header_prompt, citation, "nex-agi/nex-n2-pro:free")
+    # results.append(jsonObject)
+    # time.sleep(1)
+    # print("2 Done")
 
     jsonObject = openrouter_accessor(header_prompt, citation, "openrouter/owl-alpha")
     results.append(jsonObject)
@@ -72,7 +109,11 @@ def openrouter_accessor(header, citation, model):
        "role": "user",
         "content": header + "\n" + (citation if isinstance(citation, str) else next(iter(citation.values()), ""))      }
     ],
-       "response_format": response_schema
+       "response_format": response_schema,
+
+       "tools" : [
+           {"type": "openrouter:datetime"}
+       ]
    }
   )
 
@@ -97,4 +138,4 @@ def openrouter_accessor(header, citation, model):
 if __name__ == "__main__":
  input_header = generate_prompt()
  input_citation = {"citation1": "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562"}
- print(openrouter_accessor(input_header, input_citation))
+ print(openrouter_all_call(input_header, input_citation))
