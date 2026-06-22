@@ -8,61 +8,63 @@ import json
 
 # Again, no error handling in any of this. Will break if it breaks.
 
-JOURNALS = {"BMJ": 25,
-            "Nature": 25,
-            "Lancet": 25,
-            "NEJM": 25}
 
+# Create a set entry from reference data
 def ds_entry(rd):
     return { "id": rd["pmcid"],        # Should we use PMID, PMCID, or some internal thing (just in index?).
              "errors": 0b00000000,
              "data": deepcopy(rd),
              "format": {} }
 
-# 1 Search for article IDs
+# Create a set of set entries from a list of reference data
+def create_dataset(ref_data_list, *, v=False):
+    if v: print(f"Creating dataset from {len(ref_data_list)} references...")
+    dataset = [ds_entry(ref) for ref in ref_data_list]
+    return dataset
 
-pmcids = []
-for j in JOURNALS:
-    #print(f"Fetching {JOURNALS[j]} articles from {j}...")
-    pmcids.extend(get_papers_filter(JOURNALS[j], f"{j}[Journal]"))  # Grabs most recent. Can add sort functionality later depending on goals.
+# Takes dict of {journal : count}, returns list of refdata dicts.
+def get_reference_data(journals, *, v=False):
+    pmcids = []
+    for j in journals:
+        if v: print(f"Fetching {journals[j]} articles from {j}...")
+        pmcids.extend(get_papers_filter(journals[j], f"{j}[Journal]"))  # Grabs most recent. Can add sort functionality later depending on goals.
+    if v: print(f"Total source pmcids: {len(pmcids)}")
 
-#print(json.dumps(pmcids, indent=2))
-#print(len(pmcids))
+    if v: print("Fetching RIS data...")
+    raw_ris = get_ris(*pmcids)
+    if v: print(*raw_ris)
 
-# 2 Get RIS data and formalize
+    if v: print(f"Formalizing {len(raw_ris)} RIS entries...")
+    ref_data = [parse_ris(ris) for ris in raw_ris]
+    if v: print(json.dumps(ref_data, indent=2))
 
-raw_ris = get_ris(*pmcids)
-ref_data = [parse_ris(ris) for ris in raw_ris]
+    return ref_data
 
-# 3 Create dataset and internal component set
+# Returns dict of {reference style : reference string}
+def bake_formats(ref_data, *, v=False):
+    if v: print(f"Baking {len(RB.FORMATS)} reference formats for {ref_data["pmcid"]}...")
+    formats = {f: RB.build_ref(ref_data, f) for f in RB.FORMATS}
+    return formats
 
-dataset = [ds_entry(ref) for ref in ref_data]
-#componentset = component_set(ref_data)
+if __name__ == "__main__":
+    # Journals and their count in the set
+    JOURNALS = {"BMJ": 25,
+                "Nature": 25,
+                "Lancet": 25,
+                "NEJM": 25}
 
-# 4 Mutate refs and add to data set
+    ref_data = get_reference_data(JOURNALS, v=True)
 
-# ... placeholder ...
-mutated_dataset = []
-for ref in ref_data:
-    mref = ds_entry(ref)
+    source_ds = create_dataset(ref_data, v=True)
+    mauth_ds = create_dataset(ref_data, v=True)
+    for entry in mauth_ds:
+        entry["errors"] = entry["errors"] | 2 # RM.M_AUTHSWAP code placeholder
+        entry["data"]["authors"] = ["bob", "billy", "joe"]
 
-    # do mutations ...
-    # badify_auths(mref) # Will | error code accordingly
+    complete_ds = source_ds + mauth_ds
+    for entry in complete_ds:
+        entry["format"] = bake_formats(entry["data"])
 
-    mutated_dataset.append(mref)
-    break
-
-dataset.extend(mutated_dataset)
-
-# Bake reference formats
-for ref in dataset:
-    for f in RB.FORMATS:
-        ref["format"][f] = RB.build_ref(ref["data"], f)
-    break
-
-print(json.dumps(dataset[0], indent=2))
-
-
-
+    print(json.dumps(complete_ds, indent=2))
 
 

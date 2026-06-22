@@ -68,7 +68,7 @@ def get_ref(*pmcids):
     return kindly_get(ENDPOINT_CITATIONS, params={"format":"citation", "id":pmcids}).json() # JSON of AMA, APA, MLA, & NLM for each PMCID
 def get_ris(*pmcids):
     RIS_DELIM = "ER  - \r\n"
-    return [ris+RIS_DELIM for ris in kindly_get(ENDPOINT_CITATIONS, params={"format":"ris", "id":pmcids}).text.split(RIS_DELIM)] # List of RIS metadata text
+    return [ris+RIS_DELIM for ris in kindly_get(ENDPOINT_CITATIONS, params={"format":"ris", "id":pmcids}).text.split(RIS_DELIM)[:-1]] # List of RIS metadata text. ! Slice off last element, for split leaves it empty (due to trailing /r/n)
 def extract_reference_formats(*pmcids): #(*pmids, translate_IDs=False):
     #if translate_IDs: pmids = [ID["pmid"] for ID in all_ids(*pmids)]
     # ! Requests may have some maximum, documentation is unclear.
