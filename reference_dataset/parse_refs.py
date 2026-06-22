@@ -12,26 +12,34 @@ import json
 def parse_ris(ris):
     refdata = {
         "authors": [],
-        "title": "",    # All reference formats use the abreviation, is storing the full needed? It could be useful for adding error. !! Have a "minor quirks" subset, where the reference is real but some of the formatting is off.
-        "journal": { "name": { "full": "", "short": "" }, "year": "", "volume": "", "issue": "", "pages": { "start": "", "end": "" }},
+        "title": "",
+        "journal": {
+            "name_full": "", # All reference formats use the abreviation, is storing the full needed? It could be useful for adding error. !! Have a "minor quirks" subset, where the reference is real but some of the formatting is off.
+            "name_short": "",
+            "volume": "",
+            "issue": "",
+            "page_start": "",
+            "page_end": ""
+        },
+        "pub": { "y": "", "m": "", "d": "" },   # Date published (in journal)
+        "epub": { "y": "", "m": "", "d": "" },  # Date published (digitally)
         "doi": "",
-        "epub": { "y": "", "m": "", "d": "" }, # For NLM format. 
-        "pmid": "",                                     #
-        "pmcid": ""                                     #
+        "pmid": "",
+        "pmcid": ""
     }
     for tag, value in [(line[0:2], line[6:]) for line in ris.split("\r\n") if len(line) != 0]: # Split leaves a trailing '', could slice final index instead of condition.
         match tag:
             case "AU": refdata["authors"].append(value)
             case "T1": refdata["title"] = value
-            case "JF": refdata["journal"]["name"]["full"] = value
-            case "J2": refdata["journal"]["name"]["short"] = value
-            case "Y1": refdata["journal"]["year"] = value[0:4] # All formats only include publication year.
+            case "JF": refdata["journal"]["name_full"] = value
+            case "J2": refdata["journal"]["name_short"] = value
             case "VL": refdata["journal"]["volume"] = value
             case "IS": refdata["journal"]["issue"] = value
-            case "SP": refdata["journal"]["pages"]["start"] = value
-            case "EP": refdata["journal"]["pages"]["end"] = value
+            case "SP": refdata["journal"]["page_start"] = value
+            case "EP": refdata["journal"]["page_end"] = value
+            case "Y1": refdata["pub"]["y"], refdata["pub"]["m"], refdata["pub"]["d"] = (x := value.split("/")) + [""]*(3-len(x)) # Publication date is not always precise.
+            case "ET": refdata["epub"]["y"], refdata["epub"]["m"], refdata["epub"]["d"] = value.split("/")
             case "DO": refdata["doi"] = value
-            case "ET": refdata["epub"]["y"], refdata["epub"]["m"], refdata["epub"]["d"] = value.split("/") # Only NLM includes epub.
             case "AN": refdata["pmid"] = value
             case "U2": refdata["pmcid"] = value[:-7] # Slice off trailing ...[pmcid]
             #case _: print(f"! unknown RIS tag: {(tag, value)}")
