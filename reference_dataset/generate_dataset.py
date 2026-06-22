@@ -1,6 +1,6 @@
 
-from source_refs import get_papers_filter, get_ris#extract_reference_formats
-from parse_refs import parse_ris, component_set
+#from ref_api_tools import get_papers_filter, get_ris#extract_reference_formats
+#from ris_parser import parse_ris, component_set
 from copy import deepcopy
 import ref_mutators as RM
 import ref_builders as RB
@@ -9,32 +9,7 @@ import random
 
 # Builds datasets from a source reference file.
 # Uses ref_mutators to create bad references/datasets.
-
 # Again, no error handling in any of this. Will break if it breaks.
-
-# Takes dict of {journal : count}, returns list of refdata dicts.
-def get_reference_data(journals, *, v=False):
-    pmcids = []
-    for j in journals:
-        if v: print(f"Fetching {journals[j]} articles from {j}...")
-        pmcids.extend(get_papers_filter(journals[j], f"{j}[Journal]"))  # Grabs most recent. Can add sort functionality later depending on goals.
-    if v: print(f"Total source pmcids: {len(pmcids)}")
-
-    if v: print("Fetching RIS data...")
-    raw_ris = get_ris(*pmcids)
-    if v: print(*raw_ris)
-
-    if v: print(f"Formalizing {len(raw_ris)} RIS entries...")
-    ref_data = [parse_ris(ris) for ris in raw_ris]
-    if v: print(json.dumps(ref_data, indent=2))
-
-    return ref_data
-
-# Returns dict of {reference style : reference string}
-def bake_formats(ref_data, *, v=False):
-    if v: print(f"Baking {len(RB.FORMATS)} reference formats for {ref_data["pmcid"]}...")
-    formats = {f: RB.build_ref(ref_data, f) for f in RB.FORMATS}
-    return formats
 
 # Create a set entry from reference data
 def ds_entry(rd):
@@ -49,51 +24,66 @@ def create_dataset(ref_data_list, *, v=False):
     dataset = [ds_entry(ref) for ref in ref_data_list]
     return dataset
 
-# Making mistakes on ds entries with reference mutators
-LLM_TITLES = None
-COMPONENTS = None   # Initialized in main (requires reference data)
+# Class of methods to mutate dataset entries using ref_mutator functions.
+class EntryMutator:
+    def __init__(self, *, component_f, title_f):
+        ## Real reference data (to be mutated)
+        #self._SOURCE_REFS = None
+        #with open(reference_f, "r") as f:
+        #    self._SOURCE_REFS = json.load(f)
 
-M_FLAGS = { "title_hallucinate": 0b0001,    # Some errors are not combinable.
-            "title_mismatch":    0b0010 }
-def m_flag(ds_entry, flag): ds_entry["errors"] = ds_entry["errors"] | M_FLAGS[flag]
+        # Extra stuff for mismatch / hallucination errors.
+        # Component set
+        self._COMPONENT_SET = None
+        with open(component_f, "r") as f:
+            self._COMPONENT_SET = json.load(f)
+        # Hallucinated titles
+        self._FAKE_TITLES = None
+        with open(title_f, "r") as f:
+            self._FAKE_TITLES = [line.strip() for line in f if line.strip()]
 
-def m_title_hallucinate(ds_entry):
-    RM.set_title(ds_entry["data"], random.choice(LLM_TITLES))
-    m_flag(ds_entry, "title_hallucinate")
-    return ds_entry     # Note: returns reference for convenience. It is not a copy.
+        self._M_FLAGS = { "title_hallucinate": 0b0001,    # Some errors are not combinable.
+                     "title_mismatch":    0b0010 }
 
-def m_title_mismatch(ds_entry):
-    RM.set_title(ds_entry["data"], random.choice(COMPONENTS["title"]))
-    m_flag(ds_entry, "title_mismatch")
-    return ds_entry
+    def _flag(self, ds_entry, flag): ds_entry["errors"] = ds_entry["errors"] | self._M_FLAGS[flag]
 
+    def title_hallucinate(self, ds_entry):
+        RM.set_title(ds_entry["data"], random.choice(self._FAKE_TITLES))
+        self._flag(ds_entry, "title_hallucinate")
+        return ds_entry     # Note: returns reference for convenience. It is not a copy.
+
+    def title_mismatch(self, ds_entry):
+        COMPONENTS = {"title": ["one", "two", "ASS!"]} #component_set(ref_data) placeholder until component_set is fixed
+        RM.set_title(ds_entry["data"], random.choice(COMPONENTS["title"]))
+        self._flag(ds_entry, "title_mismatch")
+        return ds_entry
+
+# Creating datasets from reference_data.json, mutating references with EntryMutator.
 if __name__ == "__main__":
-    # Journals and their count in the set
-    JOURNALS = {"BMJ": 25,
-                "Nature": 25,
-                "Lancet": 25,
-                "NEJM": 25}
-
-    ref_data = get_reference_data(JOURNALS, v=True)
-
     # Init internal modifier function data sets     @todo: Make generating ref_data files a seperate step (different file), have generaet_dataset only do the generating not the grabbing.
-    with open("./fake_titles.txt", "r") as tits:
-        LLM_TITLES = [line.strip() for line in tits if line.strip()]
-    COMPONENTS = {"title": ["one", "two", "ASS!"]} #component_set(ref_data)
+    #with open("./data/fake_titles.txt", "r") as tits:
+    #    LLM_TITLES = [line.strip() for line in tits if line.strip()]
+    #COMPONENTS = {"title": ["one", "two", "ASS!"]} #component_set(ref_data)
 
+
+    ref_data = None
+    with open("./data/reference_data.json", "r") as f:
+        ref_data = json.load(f)
+    M = EntryMutator(title_f="./data/fake_titles.txt", component_f="./data/component_set.json")
+
+    # Create set of ds_entries for source references.
     source_ds = create_dataset(ref_data, v=True)
-    #for entry in mauth_ds:
-    #    entry["errors"] = entry["errors"] | 2 # RM.M_AUTHSWAP code placeholder
-    #    entry["data"]["authors"] = ["bob", "billy", "joe"]
 
-    # Applying some title mutations to two quarter copies of the source dataset.
-    title_hallucinate_ds = [m_title_hallucinate(entry) for entry in create_dataset(ref_data[0:25], v=True)]
-    title_mismatch_ds = [m_title_mismatch(entry) for entry in create_dataset(ref_data[25:50], v=True)]
+    # Creating two quarter copies of the source dataset and applying some title mutations.
+    title_hallucinate_ds = create_dataset(ref_data[0:25], v=True)
+    for entry in title_hallucinate_ds: M.title_hallucinate(entry)
+    title_mismatch_ds = create_dataset(ref_data[25:50], v=True)
+    for entry in title_mismatch_ds: M.title_mismatch(entry)
 
     # Combining datasets, baking reference formats.
     complete_ds = source_ds + title_hallucinate_ds + title_mismatch_ds
     for entry in complete_ds:
-        entry["format"] = bake_formats(entry["data"])
+        entry["format"] = RB.bake_formats(entry["data"])
 
     print(json.dumps(complete_ds, indent=2))
 

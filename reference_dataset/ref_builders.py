@@ -49,6 +49,14 @@ def build_ref(refdata, style):
         case "nlm": reference = f"{authors}. {title}. {jname}. {jyear};{jissue}:{jpages}. doi:{doi}"
     return reference
 
+# Builds reference in all styles, returning dict of {reference style : reference string}. 
+def bake_formats(ref_data, *, v=False):
+    if v: print(f"Baking {len(FORMATS)} reference formats for {ref_data["pmcid"]}...")
+    formats = {f: build_ref(ref_data, f) for f in FORMATS}
+    return formats
+
+
+
 
 
 #    print(refs[0]["ama"]["orig"])
