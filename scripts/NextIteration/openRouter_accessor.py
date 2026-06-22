@@ -14,7 +14,6 @@ response_schema = {
         "schema": {
             "type": "object",
             "properties": {
-                "model": {"type": "string"},
 
                 "overall": {
                     "type" : "string",
@@ -53,7 +52,7 @@ response_schema = {
 
 
             },
-            "required": ["model", "overall", "author", "journal", "publish_date", "author_order", "publisher", "percentage_of_confidence"],
+            "required": ["overall", "author", "journal", "publish_date", "author_order", "publisher", "percentage_of_confidence"],
             "additionalProperties": False
         }
     }
@@ -65,20 +64,20 @@ def openrouter_all_call(header_prompt, citation):
     time.sleep(1)
 
     results = []
-    jsonObject = openrouter_accessor(header_prompt, citation, "google/gemma-4-26b-a4b-it:free")
-    results.append(jsonObject)
-    time.sleep(1)
-    print("1 Done")
+    # jsonObject = openrouter_accessor(header_prompt, citation, "google/gemma-4-26b-a4b-it:free")
+    # results.append(jsonObject)
+    # time.sleep(1)
+    # print("1 Done")
 
     # jsonObject = openrouter_accessor(header_prompt, citation, "nex-agi/nex-n2-pro:free")
     # results.append(jsonObject)
     # time.sleep(1)
     # print("2 Done")
 
-    jsonObject = openrouter_accessor(header_prompt, citation, "openrouter/owl-alpha")
-    results.append(jsonObject)
-    time.sleep(1)
-    print("3 Done")
+    # jsonObject = openrouter_accessor(header_prompt, citation, "openrouter/owl-alpha")
+    # results.append(jsonObject)
+    # time.sleep(1)
+    # print("3 Done")
 
     jsonObject = openrouter_accessor(header_prompt, citation, "nvidia/nemotron-3-super-120b-a12b:free")
     results.append(jsonObject)
@@ -118,9 +117,6 @@ def openrouter_accessor(header, citation, model):
             ],
             "response_format": response_schema,
 
-            "tools": [
-                {"type": "openrouter:datetime"}
-            ]
         }
     )
 
@@ -136,6 +132,7 @@ def openrouter_accessor(header, citation, model):
 
     try:
         response_dict = json.loads(raw_content)
+        response_dict["model"] = api_data["model"]
     except json.JSONDecodeError:
         print("WARNING: Response was not valid JSON, returning raw text")
         response_dict = {"model": api_data["model"], "message": raw_content}
