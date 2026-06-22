@@ -5,22 +5,12 @@ from copy import deepcopy
 import ref_mutators as RM
 import ref_builders as RB
 import json
+import random
+
+# Builds datasets from a source reference file.
+# Uses ref_mutators to create bad references/datasets.
 
 # Again, no error handling in any of this. Will break if it breaks.
-
-
-# Create a set entry from reference data
-def ds_entry(rd):
-    return { "id": rd["pmcid"],        # Should we use PMID, PMCID, or some internal thing (just in index?).
-             "errors": 0b00000000,
-             "data": deepcopy(rd),
-             "format": {} }
-
-# Create a set of set entries from a list of reference data
-def create_dataset(ref_data_list, *, v=False):
-    if v: print(f"Creating dataset from {len(ref_data_list)} references...")
-    dataset = [ds_entry(ref) for ref in ref_data_list]
-    return dataset
 
 # Takes dict of {journal : count}, returns list of refdata dicts.
 def get_reference_data(journals, *, v=False):
@@ -46,6 +36,37 @@ def bake_formats(ref_data, *, v=False):
     formats = {f: RB.build_ref(ref_data, f) for f in RB.FORMATS}
     return formats
 
+# Create a set entry from reference data
+def ds_entry(rd):
+    return { "id": rd["pmcid"],        # Should we use PMID, PMCID, or some internal thing (just in index?).
+             "errors": 0b00000000,
+             "data": deepcopy(rd),
+             "format": {} }
+
+# Create a set of set entries from a list of reference data
+def create_dataset(ref_data_list, *, v=False):
+    if v: print(f"Creating dataset from {len(ref_data_list)} references...")
+    dataset = [ds_entry(ref) for ref in ref_data_list]
+    return dataset
+
+# Making mistakes on ds entries with reference mutators
+LLM_TITLES = None
+COMPONENTS = None   # Initialized in main (requires reference data)
+
+M_FLAGS = { "title_hallucinate": 0b0001,    # Some errors are not combinable.
+            "title_mismatch":    0b0010 }
+def m_flag(ds_entry, flag): ds_entry["errors"] = ds_entry["errors"] | M_FLAGS[flag]
+
+def m_title_hallucinate(ds_entry):
+    RM.set_title(ds_entry["data"], random.choice(LLM_TITLES))
+    m_flag(ds_entry, "title_hallucinate")
+    return ds_entry     # Note: returns reference for convenience. It is not a copy.
+
+def m_title_mismatch(ds_entry):
+    RM.set_title(ds_entry["data"], random.choice(COMPONENTS["title"]))
+    m_flag(ds_entry, "title_mismatch")
+    return ds_entry
+
 if __name__ == "__main__":
     # Journals and their count in the set
     JOURNALS = {"BMJ": 25,
@@ -55,13 +76,22 @@ if __name__ == "__main__":
 
     ref_data = get_reference_data(JOURNALS, v=True)
 
-    source_ds = create_dataset(ref_data, v=True)
-    mauth_ds = create_dataset(ref_data, v=True)
-    for entry in mauth_ds:
-        entry["errors"] = entry["errors"] | 2 # RM.M_AUTHSWAP code placeholder
-        entry["data"]["authors"] = ["bob", "billy", "joe"]
+    # Init internal modifier function data sets     @todo: Make generating ref_data files a seperate step (different file), have generaet_dataset only do the generating not the grabbing.
+    with open("./fake_titles.txt", "r") as tits:
+        LLM_TITLES = [line.strip() for line in tits if line.strip()]
+    COMPONENTS = {"title": ["one", "two", "ASS!"]} #component_set(ref_data)
 
-    complete_ds = source_ds + mauth_ds
+    source_ds = create_dataset(ref_data, v=True)
+    #for entry in mauth_ds:
+    #    entry["errors"] = entry["errors"] | 2 # RM.M_AUTHSWAP code placeholder
+    #    entry["data"]["authors"] = ["bob", "billy", "joe"]
+
+    # Applying some title mutations to two quarter copies of the source dataset.
+    title_hallucinate_ds = [m_title_hallucinate(entry) for entry in create_dataset(ref_data[0:25], v=True)]
+    title_mismatch_ds = [m_title_mismatch(entry) for entry in create_dataset(ref_data[25:50], v=True)]
+
+    # Combining datasets, baking reference formats.
+    complete_ds = source_ds + title_hallucinate_ds + title_mismatch_ds
     for entry in complete_ds:
         entry["format"] = bake_formats(entry["data"])
 
