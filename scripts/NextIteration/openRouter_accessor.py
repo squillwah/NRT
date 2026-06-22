@@ -2,7 +2,10 @@ import requests
 from prompt_writer import generate_prompt
 import json
 import time
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 response_schema = {
     "type": "json_schema",
     "json_schema": {
@@ -96,44 +99,48 @@ def openrouter_all_call(header_prompt, citation):
 
 
 def openrouter_accessor(header, citation, model):
-  response = requests.post(
-   url="https://openrouter.ai/api/v1/chat/completions", # To use a BYOK model, simply change the chat/completions to byok/<api-model-key>
-   headers = {
-    "Authorization": "Bearer <API_KEY_HERE>",
-    "Content-Type": "application/json"
-   },
-   json={
-    "model": model,
-    "messages": [
-      {
-       "role": "user",
-        "content": header + "\n" + (citation if isinstance(citation, str) else next(iter(citation.values()), ""))      }
-    ],
-       "response_format": response_schema,
+    api_key = os.getenv("OPENROUTER_API_KEY")
 
-       "tools" : [
-           {"type": "openrouter:datetime"}
-       ]
-   }
-  )
+    response = requests.post(
+        url="https://openrouter.ai/api/v1/chat/completions",
+        # To use a BYOK model, simply change the chat/completions to byok/<api-model-key>
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        },
+        json={
+            "model": model,
+            "messages": [
+                {
+                    "role": "user",
+                    "content": header + "\n" + (
+                        citation if isinstance(citation, str) else next(iter(citation.values()), ""))}
+            ],
+            "response_format": response_schema,
+
+            "tools": [
+                {"type": "openrouter:datetime"}
+            ]
+        }
+    )
 
   # 1. Convert the raw API HTTP response into a Python dictionary
-  api_data = response.json()
+    api_data = response.json()
 
   # 2. Extract the stringified content out of the nested dictionary structure
-  try:
-      raw_content = api_data["choices"][0]["message"]["content"]
-  except (KeyError, IndexError) as e:
-      print(f"API Error Response: {api_data}")
-      raise RuntimeError(f"Failed to extract text from API response: {e}")
+    try:
+        raw_content = api_data["choices"][0]["message"]["content"]
+    except (KeyError, IndexError) as e:
+        print(f"API Error Response: {api_data}")
+        raise RuntimeError(f"Failed to extract text from API response: {e}")
 
-  try:
-      response_dict = json.loads(raw_content)
-  except json.JSONDecodeError:
-      print("WARNING: Response was not valid JSON, returning raw text")
-      response_dict = {"model": api_data["model"], "message": raw_content}
+    try:
+        response_dict = json.loads(raw_content)
+    except json.JSONDecodeError:
+        print("WARNING: Response was not valid JSON, returning raw text")
+        response_dict = {"model": api_data["model"], "message": raw_content}
 
-  return response_dict
+    return response_dict
 
 if __name__ == "__main__":
  input_header = generate_prompt()
