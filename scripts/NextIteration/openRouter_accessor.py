@@ -18,22 +18,22 @@ response_schema = {
 
                 "overall": {
                     "type" : "string",
-                    "description" : "Yes or no; real citation"
+                    "description" : "Fake or Real; real citation"
                 },
 
                 "author": {
                     "type": "string",
-                    "description" : "Yes or no; real author"
+                    "description" : "Fake or Real; real author"
                 },
 
                 "journal": {
                     "type" : "string",
-                    "description" : "Yes or no; real journal"
+                    "description" : "Fake or Real; real journal"
                 },
 
                 "publish_date": {
                     "type" : "string",
-                    "description" : "Yes or no; correct publish date"
+                    "description" : "Fake or Real; correct publish date"
                 },
 
                 "author_order": {
@@ -43,7 +43,7 @@ response_schema = {
 
                 "publisher": {
                     "type" : "string",
-                    "description" : "Yes or no; correct publisher"
+                    "description" : "Fake or Real; correct publisher"
                 },
 
                 "percentage_of_confidence": {
