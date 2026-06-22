@@ -64,12 +64,16 @@ def get_papers_filter(count, terms):
 # Returns a JSON/dict of nested dicts containing all formal citation formats for each given paper.
 # ! Note: needs PMIDs, not PMCIDS. Set the flag to attempt auto translation via all_ids(). ! Note: no longer true
 # ----
+def get_ref(*pmcids):
+    return kindly_get(ENDPOINT_CITATIONS, params={"format":"citation", "id":pmcids}).json() # JSON of AMA, APA, MLA, & NLM for each PMCID
+def get_ris(*pmcids):
+    RIS_DELIM = "ER  - \r\n"
+    return [ris+RIS_DELIM for ris in kindly_get(ENDPOINT_CITATIONS, params={"format":"ris", "id":pmcids}).text.split(RIS_DELIM)] # List of RIS metadata text
 def extract_reference_formats(*pmcids): #(*pmids, translate_IDs=False):
     #if translate_IDs: pmids = [ID["pmid"] for ID in all_ids(*pmids)]
     # ! Requests may have some maximum, documentation is unclear.
-    RIS_DELIM = "ER  - \r\n"
-    refs = kindly_get(ENDPOINT_CITATIONS, params={"format":"citation", "id":pmcids}).json() # JSON of AMA, APA, MLA, & NLM for each PMCID
-    riss = [ris+RIS_DELIM for ris in kindly_get(ENDPOINT_CITATIONS, params={"format":"ris", "id":pmcids}).text.split(RIS_DELIM)] # List of RIS metadata text
+    refs = get_ref(pmcids)
+    riss = get_ris(pmcids)
     for paper_refs, paper_ris in zip(refs, riss): paper_refs["ris"] = paper_ris # Include RIS as entry within refs JSON
     return refs
 

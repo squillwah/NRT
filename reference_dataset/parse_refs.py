@@ -58,8 +58,8 @@ def component_set(*refdata):
         "pmcids": []
     }
     for rd in refdata:
-        compset["authors"]["single"].extend(rd["authors"])
-        compset["authors"]["groups"].append(rd["authors"])
+        compset["authors"]["single"].extend(rd["authors"].copy())   # Make sure to copy the objs.
+        compset["authors"]["groups"].append(rd["authors"].copy())
         compset["titles"].append(rd["title"])
         compset["journals"]["names"]["full"].append(rd["journal"]["name"]["full"])
         compset["journals"]["names"]["short"].append(rd["journal"]["name"]["short"])

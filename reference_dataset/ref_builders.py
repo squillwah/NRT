@@ -5,6 +5,7 @@ _MONTHMAP = {"01": "Jan", "02": "Feb", "03": "Mar",
              "04": "Apr", "05": "May", "06": "Jun",
              "07": "Jul", "08": "Aug", "09": "Sep",
              "10": "Oct", "11": "Nov", "12": "Dec"}
+FORMATS = ("ama", "apa", "mla", "nlm") # @todo: Add more. Journal specific ones.
 
 # Create the author string, formatted in ama, apa, mla, or nlm.
 #  Could break this down further into pieces like 'initialize last' and 'etalize' or whatever
@@ -33,11 +34,11 @@ def build_ref_authors(author_list, style):
 def build_ref(refdata, style):
     authors = build_ref_authors(refdata["authors"], style)
     title = refdata["title"]
-    jname = refdata["journal"]["name"]["short"]
-    jnamef = refdata["journal"]["name"]["short"]
-    jyear = refdata["journal"]["year"]
+    jname = refdata["journal"]["name_short"]
+    jnamef = refdata["journal"]["name_short"]
+    jyear = refdata["pub"]["y"]
     jissue = f"{refdata["journal"]["volume"]}({refdata["journal"]["issue"]})"
-    jpages = f"{refdata["journal"]["pages"]["start"]}-{refdata["journal"]["pages"]["end"]}"
+    jpages = f"{refdata["journal"]["page_start"]}-{refdata["journal"]["page_end"]}"
     doi = refdata["doi"]
 
     reference = ""

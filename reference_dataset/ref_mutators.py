@@ -119,14 +119,12 @@ def set_doi_prefix(refdict, prefix):
     set_doi(refdict, prefix + "/" + refdict["doi"].split("/")[1])
 
 # AUTHORS
-def 
+#def 
 
 
 # @Note: Make sure to use DEEPCOPY when copying refdicts for mutation.
 
 
-from parse_refs import parse_ris
-import json
 
 
 
@@ -144,6 +142,9 @@ if __name__ == "__main__":
         for i in range(len(typer)):
             typer = typo_swapletter(typer, i)
         print(typer)
+
+    from parse_refs import parse_ris
+    import json
 
     FILE = "./references.json"
 
