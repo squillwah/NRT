@@ -46,7 +46,7 @@ def build_ref(refdata, style):
         case "ama": reference = f"{authors}. {title}. {jname}. {jyear};{jissue}:{jpages}. doi:{doi}"
         case "apa": reference = f"{authors}. ({jyear}). {title}. {jnamef}, {jissue}:{jpages}. https://doi.org/{doi}"
         case "mla": reference = f"{authors}. {title}. {jnamef} vol. {jyear};{jissue}:{jpages}. doi:{doi}"
-        case "nlm": reference = f"{authors}. {title}. {jname}. {jyear};{jissue}:{jpages}. doi:{doi}"
+        case "nlm": reference = f"{authors}. {title}. {jname}. {jyear};{jissue}:{jpages}. doi:{doi}"                    # !!! NOTE: Not all RIS data comes with Epub data. In that case, don't incldue it. Do always include both Pub and EPub in nls though.
     return reference
 
 # Builds reference in all styles, returning dict of {reference style : reference string}. 
