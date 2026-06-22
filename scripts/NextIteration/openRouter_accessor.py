@@ -16,40 +16,45 @@ response_schema = {
             "properties": {
 
                 "overall": {
-                    "type" : "string",
-                    "description" : "Fake or Real; real citation"
+                    "type": "string",
+                    "enum": ["Real", "Fake"],
+                    "description": "Is the overall citation real or fake? Answer: Real or Fake"
                 },
 
                 "author": {
                     "type": "string",
-                    "description" : "Fake or Real; real author"
+                    "enum": ["Real", "Fake"],
+                    "description": "Are the authors real and correctly attributed? Answer: Real or Fake"
                 },
 
                 "journal": {
-                    "type" : "string",
-                    "description" : "Fake or Real; real journal"
+                    "type": "string",
+                    "enum": ["Real", "Fake"],
+                    "description": "Is the journal real and correctly named? Answer: Real or Fake"
                 },
 
                 "publish_date": {
-                    "type" : "string",
-                    "description" : "Fake or Real; correct publish date"
+                    "type": "string",
+                    "enum": ["Real", "Fake"],
+                    "description": "Is the publish date accurate? Answer: Real or Fake"
                 },
 
                 "author_order": {
-                    "type" : "string",
-                    "description" : "Yes or no; correct author order"
+                    "type": "string",
+                    "enum": ["Yes", "No"],
+                    "description": "Is the author order correct? Answer: Yes or No"
                 },
 
                 "publisher": {
-                    "type" : "string",
-                    "description" : "Fake or Real; correct publisher"
+                    "type": "string",
+                    "enum": ["Real", "Fake"],
+                    "description": "Is the publisher real and correctly named? Answer: Real or Fake"
                 },
 
                 "percentage_of_confidence": {
-                    "type" : "number",
-                    "description" : "percentage of confidence"
+                    "type": "number",
+                    "description": "Confidence percentage (0-100) in the overall assessment"
                 }
-
 
             },
             "required": ["overall", "author", "journal", "publish_date", "author_order", "publisher", "percentage_of_confidence"],
