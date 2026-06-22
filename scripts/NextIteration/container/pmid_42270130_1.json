@@ -1,0 +1,22 @@
+[
+    {
+        "overall": "Real",
+        "author": "Real",
+        "journal": "Real",
+        "publish_date": "Real",
+        "author_order": "No",
+        "publisher": "Real",
+        "percentage_of_confidence": 92,
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311:free"
+    },
+    {
+        "overall": "Fake",
+        "author": "Fake",
+        "author_order": "No",
+        "journal": "Real",
+        "publisher": "Real",
+        "publish_date": "Fake",
+        "percentage_of_confidence": 70,
+        "model": "openai/gpt-oss-20b:free"
+    }
+]
