@@ -2,7 +2,7 @@ import json
 import time
 from prompt_writer import generate_prompt
 from openRouter_accessor import openrouter_all_call
-
+# from tests.CSV_Testing import write_csv
 
 def printToFile(results, id):
     with open("./container/" + id+ ".json", "w") as f:
@@ -19,12 +19,14 @@ with open(name, 'r') as file:
 ids = []
 header_prompt = generate_prompt()
 for i, ref in enumerate(parsed_refs):
-    ama_responses = openrouter_all_call(header_prompt, ref["ama"]["format"])
+    ama_responses = openrouter_all_call(header_prompt, ref["format"]["ama"])
     time.sleep(1)
 
     ids.append(ref["id"].replace(":", "_"))
-    printToFile(ama_responses, ref["id"].replace(":", "_"))
-    print(ids)
+    #printToFile(ama_responses, ref["id"].replace(":", "_"))
+
+    # write_csv(ama_responses)
+
 
 
 
