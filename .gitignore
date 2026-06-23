@@ -1,1 +1,4 @@
 .venv/
+zunk/
+.zunk/
+__pycache__/
