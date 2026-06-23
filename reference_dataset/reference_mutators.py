@@ -94,6 +94,84 @@ def mutate_authors_refinement(authors_list: list) -> tuple: # do note that this 
         return mutated_authors, actions_logged
 
 
+# second function by Gabe. basically takes the doi_str parameter (defined from the ripping of the RIS) and
+# corrupts it through these means: the duplication or deletion of slash "/", prefix swapping, or protocol
+# deletion, such as changing https to http, or outright deleting the doi
+def mutate_doi_refinement(doi_str: str) -> tuple:
+    # fallback if citation has no doi whatsoever
+    if not doi_str:
+        return "", ["doi_skipped_due_to_missing_field"]
+
+    mutated_doi = doi_str
+    actions_logged = []
+
+    # allows for random choice of the vector that will affect the doi. this is done through the import of
+    # random to allow for the selection of either one of these three mutations.
+    corruption_options = ["slash_error", "prefix_swap", "protocol_or_delete"]
+    chosen_vector = random.choice(corruption_options)
+
+    # portion of code that defines the slash error.
+    # NOTE: for next tuesday (or friday), I intend to add more randomness to it instead of just set parameters.
+    if chosen_vector == "slash_error":
+        slash_sub_type = random.choice(["remove", "duplicate"])
+
+        if slash_sub_type == "remove":
+            # strips out the divider entirely.
+            mutated_doi = doi_str.replace("/", "")  # might add random clause here later
+            actions_logged.append("doi_slash_divider_removed")
+        else:
+            # finds first single slash and duplicates the separator
+            mutated_doi = doi_str.replace("/", "//", 1)
+            actions_logged.append("doi_slash_divider_duplicated")
+
+    # portion of code that defines the prefix swap mutation.
+    # NOTE: for next tuesday (or friday), I intend to add more randomness to it instead of just set parameters.
+    elif chosen_vector == "prefix_swap":
+        # portion that ensures if it contains standard directory layout
+        if "/" in doi_str:
+            prefix, suffix = doi_str.split("/", 1)
+            # lists common prefixes that can be swapped to:
+            # Elsevier, Wiley, NEJM Group respectively
+            alternative_prefixes = ["10.1016", "10.1002", "10.1056"]
+            # filter out already existing prefix
+            clean_prefix = prefix.replace("https://doi.org/", "").replace("http://doi.org/", "")
+            filtered_alternatives = [p for p in alternative_prefixes if p not in clean_prefix]
+            new_prefix = random.choice(filtered_alternatives)
+            # reconstructs the doi with the fake publisher prefix.
+            # keeps genuine suffix
+            if doi_str.startswith("https://"):
+                mutated_doi = f"https://doi.org/{new_prefix}/{suffix}"
+            elif doi_str.startswith("http://"):
+                mutated_doi = f"http://doi.org/{new_prefix}/{suffix}"
+            else:
+                mutated_doi = f"{new_prefix}/{suffix}"
+            actions_logged.append(f"doi_prefix_swapped_with_{new_prefix}")
+        else:
+            # fallback to suffix corruption if string contains no slash to split on
+            mutated_doi = doi_str[:-3] + "999"
+            actions_logged.append("doi_prefix_swap_failed_fallback_to_suffix_corruption")
+
+    # portion of code that tampers with protocol and deletes the protocol or doi entirely.
+    # no randomness needed here (i think)
+    elif chosen_vector == "protocol_or_delete":
+        protocol_sub_type = random.choice(["drop_s", "strip_protocol", "delete_all"])
+        if protocol_sub_type == "drop_s":
+            # downgrades https to http, security vulnerability (https:// -> http://)
+            if doi_str.startswith("https://"):
+                mutated_doi = doi_str.replace("https://", "http://", 1)
+                actions_logged.append("doi_protocol_downgraded_to_http")
+            else:
+                actions_logged.append("doi_drop_s_skipped_no_https_found")
+        elif protocol_sub_type == "strip_protocol":
+            # yeets the prefix
+            mutated_doi = doi_str.replace("https://", "").replace("http://", "")
+            actions_logged.append("doi_protocol_stripped_completely")
+        elif protocol_sub_type == "delete_all":
+            # just nukes the damn thing
+            mutated_doi = ""
+            actions_logged.append("doi_field_deleted_completely")
+
+    return mutated_doi, actions_logged
 
 for i in range(8):
     word = typo_fatfinger("medicine", i)
