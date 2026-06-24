@@ -1,6 +1,7 @@
 
 import reftools.ref_formatters as RB
 import reftools.ref_mutators as RM
+import random
 from copy import deepcopy
 
 # Create a set entry from reference data
@@ -22,19 +23,21 @@ def bake_formats(dataset):
 
 # Class of methods to mutate dataset entries using ref_mutator functions.
 class EntryMutator:
-    def __init__(self, *, component_f, title_f):
-        # For use in some error types
-        #  Component set
-        self._COMPONENT_SET = None
-        with open(component_f, "r") as f:
-            self._COMPONENT_SET = json.load(f)
-        #  Hallucinated titles
-        self._FAKE_TITLES = None
-        with open(title_f, "r") as f:
-            self._FAKE_TITLES = [line.strip() for line in f if line.strip()]
-        # Error code flags
+    def __init__(self, *, component_set, fake_titles, fake_authors, fake_journals):
+        # Mutation flags
         self._M_FLAGS = { "title_hallucinate": 0b0001,    # Some errors are not combinable.
                           "title_mismatch":    0b0010 }
+
+        # Resources for hallucination and mismatch mutations
+        self._COMPONENTS = component_set
+        self._FAKE_TITLES = fake_titles
+        self._FAKE_AUTHORS = fake_authors
+        self._FAKE_JOURNALS = fake_journals
+
+        # Alternatively, if we think a hallucination sample for every component is a good idea:
+        # self._REAL_COMPONENTS
+        # self._FAKE_COMPONENTS
+        # The issue is, how fake can a date, DOI, or PMCID get? Fake enough to warrant that?
 
     def _flag(self, ds_entry, flag):
         ds_entry["errors"] = ds_entry["errors"] | self._M_FLAGS[flag]
@@ -44,11 +47,11 @@ class EntryMutator:
     # TITLES
 
     def title_typo(self, ds_entry):
-        RM.set_title
+        #RM.set_title
+        pass
 
     def title_mismatch(self, ds_entry):
-        COMPONENTS = {"title": ["one", "two", "ASS!", "the wrong title"]}  # Placeholder until component_set is fixed
-        RM.set_title(ds_entry["data"], random.choice(COMPONENTS["title"])) # self._COMPONENT_SET["title"]
+        RM.set_title(ds_entry["data"], random.choice(self._COMPONENTS["title"]))
         self._flag(ds_entry, "title_mismatch")
         return ds_entry
 
@@ -69,6 +72,7 @@ class EntryMutator:
     # DOI
 
     # PMIDS / PMCIDS
+
 
 
 

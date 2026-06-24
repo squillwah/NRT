@@ -1,6 +1,6 @@
 
 from reftools.api import get_papers_filter, get_ris, get_ref
-from reftools.ris import parse_ris
+from reftools.refdata import ristoref, component_set
 import json
 
 # Takes dict of {journal : count}, returns list of refdata dicts.
@@ -21,7 +21,7 @@ def get_reference_data(journals, *, v=False, saveall=True):
         _json_filer(get_ref(*pmcids), f"{DIRECTORY}/reference_formatted.json")
 
     if v: print(f"Formalizing {len(raw_ris)} RIS entries...")
-    ref_data = [parse_ris(ris) for ris in raw_ris]
+    ref_data = [ristoref(ris) for ris in raw_ris]
     if v: print(json.dumps(ref_data, indent=2))
 
     return ref_data
@@ -49,7 +49,7 @@ if __name__ == "__main__":
     _json_filer(ref_data, f"{DIRECTORY}/reference_data.json")
 
     if input("Save component set too? [y/n]: ").strip().lower() == "y":
-        #_json_filer(component_set(ref_data), f"{DIRECTORY}/component_set.json") @todo fix component_set
+        _json_filer(component_set(*ref_data), f"{DIRECTORY}/component_set.json")
         pass
 
 
