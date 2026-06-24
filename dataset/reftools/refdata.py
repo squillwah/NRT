@@ -10,7 +10,7 @@ from copy import deepcopy
 
 def make_ref():
     return {
-        "authors": [],
+        "authors": [],  # @todo: split author names into first and last
         "title": "",
         "journal": {
             "name_full": "", # All reference formats use the abreviation, is storing the full needed? It could be useful for adding error. !! Have a "minor quirks" subset, where the reference is real but some of the formatting is off.
@@ -34,7 +34,8 @@ def ristoref(ris):
     risitems = [(line[0:2], line[6:]) for line in ris.split("\r\n") if len(line) != 0] # Split leaves a trailing '', could slice final index instead of condition.
     for tag, value in risitems:
         match tag:
-            case "AU": refdata["authors"].append(value)
+            #case "AU": refdata["authors"].append(value)
+            case "AU": refdata["authors"].append(dict(zip(["l", "f"], (names := value.split(", "))+[""]*(2-len(names))))) # Split authors into dicts of {'l': "last", 'f': "first"} 
             case "T1": refdata["title"] = value
             case "JF": refdata["journal"]["name_full"] = value
             case "J2": refdata["journal"]["name_short"] = value
@@ -71,6 +72,7 @@ if __name__ == "__main__":
     compset = component_set(*refdata)
 
     # Checking, all should be 100
+    print(json.dumps(refdata, indent=4))
     print(json.dumps(compset, indent=4))
     for key in compset:
         print(len(compset[key]))

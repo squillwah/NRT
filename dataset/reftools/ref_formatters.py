@@ -20,7 +20,8 @@ def build_ref_authors(author_list, style):
     author_string = ""
     formatted_names = []
     for auth in author_list:
-        last, firsts = (a := auth.split(", ", 1)) + [""]*(2-len(a))
+        #last, firsts = (a := auth.split(", ", 1)) + [""]*(2-len(a))    @ FIX cause we split authors at RIS parse now
+        last, firsts = auth["l"], auth["f"]
         if initials: firsts = isp.join([c+ipe for c in firsts if c.isupper()])
         formatted_names.append(lfsp.join((last, firsts)).strip())
     if not eat or len(author_list) < eat:
