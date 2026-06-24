@@ -1,6 +1,6 @@
 
-from api_tools import get_papers_filter, get_ris, get_ref
-from ris_parser import parse_ris
+from reftools.api import get_papers_filter, get_ris, get_ref
+from reftools.ris import parse_ris
 import json
 
 # Takes dict of {journal : count}, returns list of refdata dicts.
@@ -42,7 +42,7 @@ if __name__ == "__main__":
                 "Nature": 25,
                 "Lancet": 25,
                 "NEJM": 25}
-    DIRECTORY = "./data"
+    DIRECTORY = "./data2"
 
     ref_data = get_reference_data(JOURNALS, v=True)
     print("Writing reference data to file...")

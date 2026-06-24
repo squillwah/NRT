@@ -1,9 +1,9 @@
 
 from copy import deepcopy
-import ref_mutators as RM
-import ref_builders as RB
-import json
+import reftools.ref_mutators as RM
+import reftools.ref_formatters as RB
 import random
+import json
 
 # Builds datasets from a source reference file.
 # Uses ref_mutators to create bad references/datasets.
@@ -23,7 +23,7 @@ def create_dataset(ref_data_list, *, v=False):
     return dataset
 
 # Class of methods to mutate dataset entries using ref_mutator functions.
-class EntryMutator:
+class DSEntryMutator:
     def __init__(self, *, component_f, title_f):
         # For use in some error types
         #  Component set
@@ -65,7 +65,7 @@ if __name__ == "__main__":
     title_mismatch_ds = create_dataset(ref_data[25:50], v=True)
 
     # Applying title mutations.
-    M = EntryMutator(title_f="./data/fake_titles.txt", component_f="./data/component_set.json")
+    M = DSEntryMutator(title_f="./data/fake_titles.txt", component_f="./data/component_set.json")
     for entry in title_hallucinate_ds:
         M.title_hallucinate(entry)
     for entry in title_mismatch_ds:
