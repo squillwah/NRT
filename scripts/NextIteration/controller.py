@@ -2,8 +2,7 @@ import json
 import time
 from prompt_writer import generate_prompt
 from openRouter_accessor import openrouter_all_call
-
-
+from tests.CSV_Testing import write_xlsx
 
 
 # This method writes the output generated per paper's citation and dumps all the responses from the LLMs into one JSON File
@@ -23,13 +22,20 @@ def main():
 
     header_prompt = generate_prompt() # this calls the prompt_writer.py function to set up the header portion of the API call.
 
+    responses_for_CSV = []
+    list_of_ids = []
+
     # this loops through every ama citation style in the parsed references and makes the call to openrouter_all_call, for which will go through every LLM and finally return a dictionary which will get dumped to the json file.
     for i, ref in enumerate(parsed_refs):
         ama_responses = openrouter_all_call(header_prompt, ref["format"]["ama"])
         time.sleep(1)
 
+        responses_for_CSV.append(ama_responses)
+        list_of_ids.append(ref["id"].replace(":", "_"))
+
         printToFile(ama_responses, ref["id"].replace(":", "_"))
 
+    write_xlsx(responses_for_CSV, list_of_ids)
     print("done!")
 
 
