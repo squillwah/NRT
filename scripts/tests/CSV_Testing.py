@@ -28,25 +28,30 @@ def write_xlsx(inputted_data):
     wb.remove(default_sheet)
 
     # 2. Iterate through the list of dictionaries
-    for index, inputted_dict in enumerate(inputted_data):
-        # Dynamically name each sheet (e.g., Sheet_1, Sheet_2)
-        sheet_name = f"Model_{index + 1}"
-        ws = wb.create_sheet(title=sheet_name)
+    for i, dict_list in enumerate(inputted_data):
 
-        # 3. Extract headers and values for THIS dictionary specifically
-        headers = list(inputted_dict.keys())
-        values = [inputted_dict[key] for key in headers]
+        ws = wb.create_sheet(title="Citation" + str(i + 1))
 
-        # 4. Append the headers as row 1, and values as row 2
+        headers = list(dict_list[0].keys())
         ws.append(headers)
-        ws.append(values)
+        for inputted_dict in dict_list:
+
+            # Extract headers and values for THIS dictionary specifically
+
+            values = [inputted_dict[key] for key in headers]
+
+            # Append the headers as row 1, and values as row 2
+
+            ws.append(values)
 
     wb.save(filename="output.xlsx")
 
 
 data = [
-    {"Overall": "Fake", "Author": "Real", "Journal": "Real", "Publish Date": "Fake", "Author Order": "Real", "Publisher": "Real", "Percentage of Confidence": 95.00001, "Model": "Chat-GPT"},
-    {"Overall": "Fake", "Author": "Real", "Journal": "Real", "Publish Date": "Fake", "Author Order": "Real", "Publisher": "Real", "Percentage of Confidence": 95.00001, "Model": "Gemini"}
+    [{"Overall": "Fake", "Author": "Real", "Journal": "Real", "Publish Date": "Fake", "Author Order": "Real", "Publisher": "Real", "Percentage of Confidence": 95.00001, "Model": "Chat-GPT"},
+    {"Overall": "Fake", "Author": "Real", "Journal": "Real", "Publish Date": "Fake", "Author Order": "Real", "Publisher": "Real", "Percentage of Confidence": 95.00001, "Model": "Gemini"}],
+    [{"Overall": "Real", "Author": "Real", "Journal": "Real", "Publish Date": "Fake", "Author Order": "Real", "Publisher": "Real", "Percentage of Confidence": 95.00001, "Model": "Chat-GPT"},
+    {"Overall": "Fake", "Author": "Real", "Journal": "Real", "Publish Date": "Fake", "Author Order": "Real", "Publisher": "Real", "Percentage of Confidence": 95.00001, "Model": "Gemini"}]
 ]
 
 if __name__ == "__main__":
