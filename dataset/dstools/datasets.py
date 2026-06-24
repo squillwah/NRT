@@ -25,19 +25,20 @@ def bake_dataset(dataset):
 class EntryMutator:
     def __init__(self, *, component_set, h_titles, h_authors, h_journals):
         # Mutation flags
-        self._M_FLAGS = { "title_hallucinate": 0b0001,    # Some errors are not combinable.
-                          "title_mismatch":    0b0010 }
+        self._M_FLAGS = { "author_typo":        0b00000000000000000000000000000001,
+                          "author_mismatch":    0b00000000000000000000000000000010,
+                          "author_hallucinate": 0b00000000000000000000000000000100,
+                          "author_mismatch":    0b00000000000000000000000000001000,
+
+                          "title_typo":         0b00000000000000000000000000010000,
+                          "title_mismatch":     0b00000000000000000000000000100000,     # Some errors are not combinable.
+                          "title_hallucinate":  0b00000000000000000000000001000000 }
 
         # Resources for hallucination and mismatch mutations
-        self._COMPONENTS = component_set
-        self._FAKE_TITLES = h_titles
-        self._FAKE_AUTHORS = h_authors
-        self._FAKE_JOURNALS = h_journals
-
-        # Alternatively, if we think a hallucination sample for every component is a good idea:
-        # self._REAL_COMPONENTS
-        # self._FAKE_COMPONENTS
-        # The issue is, how fake can a date, DOI, or PMCID get? Fake enough to warrant that?
+        self._COMPONENTS = component_set            # Alternatively, if we think a hallucination sample for every component is a good idea:
+        self._FAKE_TITLES = h_titles                # self._REAL_COMPONENTS
+        self._FAKE_AUTHORS = h_authors              # self._FAKE_COMPONENTS
+        self._FAKE_JOURNALS = h_journals            # The issue is, how fake can a date, DOI, or PMCID get? Fake enough to warrant that?
 
     def _flag(self, ds_entry, flag):
         ds_entry["errors"] = ds_entry["errors"] | self._M_FLAGS[flag]
@@ -51,10 +52,9 @@ class EntryMutator:
         #  - Some considerations are made for appearing in the final formats:
         #    - Typos are added to both the last and first names simultaneously.
         #    - The first three authors are guaranteed to have at least one typo.
-        #    - * When a typo appears, it appears in both the first and last name (many formats may abbreviate away first name typos)
-        #  - Compounding typo's follow the halving of the probability (2: 1/8, 3: 1/16, so on)
+        #  - Compounding typo's follow the natural halving of the probability (2: 1/8, 3: 1/16, so on)
         #  - Fatfingers are twice as likely as swaps.
-        TYPO_CHANCE = 1/4
+        TYPO_CHANCE = 1/3
         FATSWAP_RATIO = 2/3
         authors = ds_entry["data"]["authors"]
         for author_i, name in enumerate(authors):
@@ -62,19 +62,10 @@ class EntryMutator:
             while random.random() <= TYPO_CHANCE or not first_three_guarantee:
                 for part in name:
                     if name[part]: # Skip over empty names.
-                        #print(name, part)
                         letter_i = random.choice([i for i, letter in enumerate(name[part]) if letter.isalpha()])
                         name[part] = RM.typo_fatfinger(name[part], letter_i) if random.random() <= FATSWAP_RATIO else RM.typo_swapletter(name[part], letter_i)
                 first_three_guarantee = True
-                #chance = chance * 1/2 # Or we could just leave it the same. ! Actually the probability naturally halves, because of the loop.
-                #print(f"[{name}], [{authors[author_i]}]")
-            #print()
-
-
-                #randint(0, len(author)-1)
-                #while (not author[letter_i].isalpha()): letter_i = random.randint(0, len(author)-1)
-
-
+        self._flag(ds_entry, "author_typo")
         return ds_entry
 
     def author_shuffle(self, ds_entry): pass
@@ -83,7 +74,10 @@ class EntryMutator:
 
     # TITLES
     def title_typo(self, ds_entry):
-        pass    #RM.set_title
+        # Another arbitrary definition of typos
+        #  - There is 1 typo per every 10 characters in the title.
+        #  - Fatfingers are twice as likely as swaps.
+        pass
     def title_mismatch(self, ds_entry):
         RM.set_title(ds_entry["data"], random.choice(self._COMPONENTS["title"]))
         self._flag(ds_entry, "title_mismatch")
