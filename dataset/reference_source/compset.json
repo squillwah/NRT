@@ -1,0 +1,4038 @@
+{
+  "authors": [
+    [
+      "Kearney, Patricia M",
+      "McCarthy, Megan",
+      "Rengarajan, Sandhya",
+      "O'Keeffe, Linda M",
+      "Avery, Kerry",
+      "Chan, An-Wen",
+      "Devane, Declan",
+      "Davies, Gwyneth",
+      "Gale, Chris",
+      "Hemkens, Lars G",
+      "Juszczak, Edmund",
+      "Kwakkenbos, Linda",
+      "Langan, Sin\u00e9ad M",
+      "Lugg-Widger, Fiona",
+      "Moher, David",
+      "Schmidt, Morten",
+      "Thabane, Lehana",
+      "Thombs, Brett D",
+      "Toader, Alice-Maria",
+      "Watkins, Alan",
+      "Farrin, Amanda J",
+      "Zwarenstein, Merrick",
+      "Sydes, Matthew R",
+      "Williamson, Paula R",
+      "Markham, Sarah"
+    ],
+    [
+      "Volk, Robert J",
+      "Lewis, Krystina B",
+      "Smith, Maureen",
+      "Carley, Meg",
+      "Barry, Michael J",
+      "Bekker, Hilary L",
+      "H\u00e4rter, Martin",
+      "Hoffmann, Tammy",
+      "McCaffery, Kirsten",
+      "Pignone, Michael",
+      "Steffensen, Karina Dahl",
+      "Sepucha, Karen",
+      "Thompson, Rachel",
+      "Trevena, Lyndal",
+      "van der Weijden, Trudy",
+      "Witteman, Holly O",
+      "Stacey, Dawn"
+    ],
+    [
+      "Azuara-Blanco, Augusto",
+      "Logan, Nicola S",
+      "McConnell, Emma",
+      "Kearney, Stephanie",
+      "Kirk, Gaynor",
+      "Jones, Susie",
+      "McDowell, Cliona",
+      "Murphy, Lynn",
+      "O'Hanlon, Gerard",
+      "McFarland, Margaret",
+      "Painter, Sally",
+      "Muthusamy, Brinda",
+      "Nabili, Shariar",
+      "Preston, Jennifer",
+      "Flitcroft, Ian",
+      "Loughman, James",
+      "Mackey, David",
+      "Lee, Samantha",
+      "Dahlmann-Noor, Annegret",
+      "Congdon, Nathan",
+      "Hogg, Ruth E",
+      "Hammond, Chris J",
+      "Saunders, Kathryn",
+      "Allen, Peter M",
+      "Strang, Niall",
+      "Clarke, Mike"
+    ],
+    [
+      "Penner, Melanie",
+      "Zwaigenbaum, Lonnie",
+      "Piroddi, Nicholas",
+      "Park, Saebom",
+      "Minhas, Ripudaman Singh",
+      "Singal, Deepa"
+    ],
+    [
+      "Sharrow, David",
+      "Hug, Lucia",
+      "Liu, Yang",
+      "Fell, Graeme Wilson",
+      "You, Danzhen"
+    ],
+    [
+      "Eilerts-Spinelli, Hallie",
+      "Villavicencio, Francisco",
+      "Perin, Jamie",
+      "Prieto-Merino, David",
+      "Wahi, Astha",
+      "Hug, Lucia",
+      "Strong, Kathleen L",
+      "Black, Robert E",
+      "Liu, Li"
+    ],
+    [
+      "Perin, Jamie",
+      "Prieto-Merino, David",
+      "Wahi, Astha",
+      "Pramanik, Sandipan",
+      "Eilerts-Spinelli, Hallie",
+      "Villavicencio, Francisco",
+      "McCormick, Tyler H",
+      "You, Danzhen",
+      "Datta, Abhirup",
+      "Strong, Kathleen L",
+      "Black, Robert E",
+      "Liu, Li"
+    ],
+    [
+      "Song, Zexing",
+      "Jespersen, Cecilie",
+      "Hr\u00f3bjartsson, Asbj\u00f8rn",
+      "Kim, S Joseph",
+      "Fowler, Rob",
+      "Austin, Peter C",
+      "Chan, An-Wen"
+    ],
+    [
+      "Batson, Sarah",
+      "Hackshaw, Allan",
+      "Mackie, Anne",
+      "Richards, Mike",
+      "Given-Wilson, Rosalind",
+      "Atakpa, Emma",
+      "Njagi, Edmund Njeru",
+      "Shinkins, Bethany",
+      "Callender, Tom",
+      "Hyde, Chris",
+      "Visintin, Cristina",
+      "Thompson, David",
+      "Cozens, Eleanor",
+      "Evans, D Gareth",
+      "Hemming, Karla",
+      "Payne, Katherine",
+      "Halligan, Steve",
+      "Taylor-Phillips, Sian"
+    ],
+    [
+      "Batson, Sarah",
+      "Taylor-Phillips, Sian",
+      "Mackie, Anne",
+      "Given-Wilson, Rosalind",
+      "Halligan, Steve",
+      "Hackshaw, Allan",
+      "Callender, Tom",
+      "Hyde, Chris",
+      "Payne, Katherine",
+      "Visintin, Cristina",
+      "Thompson, David",
+      "Evans, D Gareth",
+      "Richards, Mike",
+      "Shinkins, Bethany"
+    ],
+    [
+      "Kahan, Brennan C",
+      "Bretz, Frank",
+      "Copas, Andrew",
+      "Harhay, Michael O",
+      "Collins, Gary S",
+      "Bahti, Melanie",
+      "Bi, Dongquan",
+      "Campbell, Marion K",
+      "Courtright, Katherine R",
+      "Feeney, Timothy",
+      "Forbes, Andrew B",
+      "Garg, Amit X",
+      "Halpern, Scott D",
+      "Heagerty, Patrick J",
+      "Hemming, Karla",
+      "Hopewell, Sally",
+      "Hughes, James P",
+      "Murray, David M",
+      "Ross, Joseph S",
+      "Stewart, Derek",
+      "Taljaard, Monica",
+      "Ukoumunne, Obioha C",
+      "Auriemma, Catherine L",
+      "Li, Fan"
+    ],
+    [
+      "Mass\u00e9, Olivier",
+      "Mercurio, Claudia Mei",
+      "Dupuis, S\u00e9bastien",
+      "Al Sahwi, Maya",
+      "Arruda, Alexandra",
+      "Dallaire, Gabriel",
+      "Desforges, Katherine",
+      "Dugr\u00e9, Nicolas",
+      "Williamson, David"
+    ],
+    [
+      "Wang, Canlong",
+      "Tang, Dongfeng",
+      "von Dadelszen, Peter",
+      "Ju, Chengsheng",
+      "Liu, Lu",
+      "Wang, Yanzhong",
+      "Magee, Laura A"
+    ],
+    [
+      "Alderwick, Hugh",
+      "Dunn, Phoebe",
+      "Gardner, Tim"
+    ],
+    [
+      "Veroniki, Areti Angeliki",
+      "Wolfe, Dianna M",
+      "Hutton, Brian",
+      "Schwarzer, Guido",
+      "McIsaac, Daniel I",
+      "Straus, Sharon E",
+      "Jackson, Dan",
+      "Tricco, Andrea C"
+    ],
+    [
+      "Zhang, Lizi",
+      "Bi, Shilei",
+      "Chen, Lian",
+      "Du, Lili",
+      "He, Fang",
+      "Qiao, Yuan",
+      "Li, Zhongjun",
+      "Zeng, Wanjiang",
+      "Zhao, Xianlan",
+      "Chen, Xu",
+      "Li, Xiaotian",
+      "Ding, Guifeng",
+      "Zhou, Wei",
+      "Sun, Bo",
+      "Guo, Qing",
+      "Guo, Xiaoling",
+      "Jin, Fengmei",
+      "Wang, Xietong",
+      "Zhu, Qiying",
+      "Sun, Qiang",
+      "Jiang, Shaoqing",
+      "Wang, Xinghe",
+      "Cai, Fenge",
+      "Jiang, Yurong",
+      "Gao, Jinsong",
+      "Wang, Zhijian",
+      "Wang, Zilian",
+      "Zhang, Lanzhen",
+      "Liu, Jian-Meng",
+      "Huang, Liping",
+      "Yu, Lin",
+      "Chen, Jingsi",
+      "Zhang, Shuang",
+      "Poon, Liona C",
+      "Li, Hong-Tian",
+      "Chen, Dunjin",
+      "study\u2019s collaborator group"
+    ],
+    [
+      "Yuan, Xin",
+      "Li, Jingkuo",
+      "Lei, Lubi",
+      "Zhang, Lihua",
+      "Chen, Kai",
+      "Chu, Qing",
+      "Feng, Wei",
+      "Wang, Xianqiang",
+      "Wang, Xin",
+      "Xu, Fei",
+      "Liu, Sheng",
+      "Yang, Yan",
+      "Wang, Xiaoqi",
+      "Wang, Huishan",
+      "Dong, Aiqiang",
+      "Cheng, Zhaoyun",
+      "Guo, Huiming",
+      "Zhou, Tingwen",
+      "Chen, Xin",
+      "Ge, Jianjun",
+      "Zhang, Liang",
+      "Liu, Su",
+      "Shen, Zhenya",
+      "Wang, Jue",
+      "Wang, Yang",
+      "Li, Wei",
+      "Hu, Shengshou",
+      "TOP-CABG Collaborative Group"
+    ],
+    [
+      "Doyon-Plourde, Pamela",
+      "Chong, Jeffrey",
+      "Abrams, Elissa M",
+      "Pless, Robert",
+      "Young, Kelsey",
+      "Tunis, Matthew",
+      "Zafack, Joseline"
+    ],
+    [
+      "Toro-Tobon, David",
+      "Ponte, Oscar Ponce",
+      "Montori, Victor M",
+      "Brito, Juan P"
+    ],
+    [
+      "Tan, Hangyu",
+      "Ren, Tai",
+      "Cao, Aihua",
+      "Fang, Shuanfeng",
+      "Deng, Lin",
+      "Hu, Bo",
+      "Wang, Mei",
+      "Cheng, Ye",
+      "Zhang, Xi",
+      "Li, Yawen",
+      "Zhang, Yixia",
+      "Zhang, Lingli",
+      "Chen, Luan",
+      "Zhou, Wei",
+      "Zhang, Qianlong",
+      "Li, Jiong",
+      "Zhou, Xin",
+      "Langley, Christelle",
+      "Luo, Qiang",
+      "Zhang, Jun",
+      "Sahakian, Barbara J",
+      "Yuan, Ti-Fei",
+      "Li, Fei"
+    ],
+    [
+      "Cho, Yongtai",
+      "Choi, Ahhyung",
+      "Woo, Jieun",
+      "Han, Jung Yeol",
+      "Kim, Jae-Won",
+      "Shin, Ju-Young"
+    ],
+    [
+      "Lala, Rizwana",
+      "Jamieson, Lisa M",
+      "Saxena, Sonia"
+    ],
+    [
+      "Liao, Zhenxin",
+      "Zhou, Mengping",
+      "Brikell, Isabell",
+      "Chang, Zheng",
+      "Kuja-Halkola, Ralf",
+      "D'Onofrio, Brian M",
+      "Larsson, Henrik",
+      "Lichtenstein, Paul",
+      "Pettersson, Erik"
+    ],
+    [
+      "Davies, Sarah R",
+      "Davies, Annabel L",
+      "Higgins, Julian P T",
+      "Caldwell, Deborah M",
+      "Thornton, Zak A",
+      "Aiton, Elisabeth",
+      "Ali, Ifra",
+      "Dawson, Sarah",
+      "McGrath, Carmel",
+      "Parkhouse, Thomas",
+      "Yardley, Lucy",
+      "Yates, Julie",
+      "Letley, Louise",
+      "Ismail, Sharif A",
+      "Christensen, Hannah",
+      "French, Clare E"
+    ],
+    [
+      "Friedrich, Sabine",
+      "Huybrechts, Krista F",
+      "Straub, Loreen",
+      "Hernandez-Diaz, Sonia",
+      "Zhu, Yanmin",
+      "Hahn, Georg",
+      "Mogun, Helen",
+      "Jones, Hendr\u00e9e E",
+      "Connery, Hilary S",
+      "Davis, Jonathan M",
+      "Gray, Kathryn J",
+      "Lester, Barry",
+      "Terplan, Mishka",
+      "Bateman, Brian T"
+    ],
+    [
+      "Macleod, Ruairidh",
+      "Seersholm, Frederik V",
+      "De Sanctis, Bianca",
+      "Lieverse, Angela",
+      "Timpson, Adrian",
+      "Schulting, Rick",
+      "Stenderup, Jesper T",
+      "Gaunitz, Charleen",
+      "Vinner, Lasse",
+      "Goriunova, Olga Ivanovna",
+      "Bazaliiskii, Vladimir Ivanovich",
+      "Vasilyev, Sergei V",
+      "Jessup, Erin",
+      "Wang, Yucheng",
+      "Ramsey, Christopher Bronk",
+      "Thomas, Mark G",
+      "Corbett-Detig, Russell",
+      "Iversen, Astrid K N",
+      "Weber, Andrzej W",
+      "Sikora, Martin",
+      "Willerslev, Eske"
+    ],
+    [
+      "Baynham, C F A",
+      "Hobson, R",
+      "Buchm\u00fcller, O",
+      "Evans, D",
+      "Hawkins, L",
+      "Iannizzotto Venezze, L",
+      "Josset, A",
+      "Lee, D",
+      "Pasatembou, E",
+      "Sauer, B E",
+      "Tarbutt, M R",
+      "Walker, T",
+      "Ennis, O",
+      "Chauhan, U",
+      "Brzakalik, A",
+      "Dey, S",
+      "Hedges, S",
+      "Stray, B",
+      "Langlois, M",
+      "Bongs, K",
+      "Hird, T",
+      "Lellouch, S",
+      "Holynski, M",
+      "Bostwick, B",
+      "Chen, J",
+      "Eyler, Z",
+      "Gibson, V",
+      "Harte, T L",
+      "Hsu, C C",
+      "Karzazi, M",
+      "Lu, C",
+      "Millward, B",
+      "Mitchell, J",
+      "Mouelle, N",
+      "Panchumarthi, B",
+      "Scheper, J",
+      "Schneider, U",
+      "Su, X",
+      "Tang, Y",
+      "Tkal\u010dec, K",
+      "Zeuner, M",
+      "Zhang, S",
+      "Zhi, Y",
+      "Badurina, L",
+      "Beniwal, A",
+      "Blas, D",
+      "Carlton, J",
+      "Ellis, J",
+      "McCabe, C",
+      "Parish, G",
+      "Govardhan, D Pathak",
+      "Vaskonen, V",
+      "Bowcock, T",
+      "Bridges, K",
+      "Carroll, A",
+      "Coleman, J",
+      "Elertas, G",
+      "Hindley, S",
+      "Metelko, C",
+      "Throssell, H",
+      "Tinsley, J N",
+      "Bentine, E",
+      "Booth, M",
+      "Bortoletto, D",
+      "Callaghan, N",
+      "Foot, C",
+      "G\u00f3mez-Monedero, C",
+      "Hughes, K",
+      "James, A",
+      "Leese, T",
+      "Lowe, A",
+      "March-Russell, J",
+      "Sander, J",
+      "Schelfhout, J",
+      "Shipsey, I",
+      "Weatherill, D",
+      "Wood, D",
+      "Balashov, S N",
+      "Bason, M G",
+      "Hussain, K",
+      "Labiad, H",
+      "Majewski, P",
+      "Marchant, A L",
+      "Newbold, D",
+      "Pan, Z",
+      "Tam, Z",
+      "Thornton, T C",
+      "Valenzuela, T",
+      "van der Grinten, M G D",
+      "Wilmut, I",
+      "Clarke, K",
+      "Vick, A",
+      "AION Collaboration"
+    ],
+    [
+      "Vignando, Miriam",
+      "Ffytche, Dominic",
+      "Mazibuko, Ndabezinhle",
+      "Palma, Giulio",
+      "Bhat, Anjali",
+      "Montagnese, Marcella",
+      "Dave, Sonali",
+      "Tai, Yen F",
+      "Batzu, Lucia",
+      "Leta, Valentina",
+      "Chaudhuri, K Ray",
+      "Williams Gray, Caroline H",
+      "Mehta, Mitul A"
+    ],
+    [
+      "Wei, Qi",
+      "Peter, Jonah S",
+      "Ren, Hui",
+      "Wang, Weizhen",
+      "Zhou, Luwei",
+      "Liu, Qi",
+      "Ostermann, Stefan",
+      "Yin, Jun",
+      "Cai, Songhua",
+      "Yelin, Susanne F",
+      "Li, Mingjie"
+    ],
+    [
+      "Schmuck, Alexandra",
+      "Bel\u00e9, Tiago G A",
+      "Withoeck, Dani\u00ebl",
+      "Van Geem, Kevin M",
+      "Ragaert, Kim",
+      "De Meester, Steven"
+    ],
+    [
+      "Zhang, Jianhao",
+      "Gristey, Jake J",
+      "Feingold, Graham"
+    ],
+    [
+      "Gilbert, Pupa U P A",
+      "Green, Daniel R",
+      "Mahoney, Patrick",
+      "Guatelli-Steinberg, Debbie",
+      "Scott McGraw, W",
+      "Lagan, Emma",
+      "Manthi, Fredrick Kyalo",
+      "Muteti, Samuel",
+      "Ndiema, Emmanuel",
+      "Ramirez Rozzi, Fernando",
+      "Stifler, Cayla A",
+      "Schmidt, Connor A",
+      "Achinuq, Barat Q",
+      "Scholl, Andreas",
+      "Gilbert, Benjamin",
+      "O'Hara, Mackie C"
+    ],
+    [
+      "Raptis, Savvas",
+      "Turner, Drew L",
+      "Caprioli, Damiano",
+      "Szalay, Jamey R",
+      "Clark, George",
+      "Haggerty, Colby C"
+    ],
+    [
+      "Eshetu, Aphrodite",
+      "Ghai, Saloni",
+      "Corbett, Anne",
+      "Ballard, Clive",
+      "Hampshire, Adam",
+      "O'Nions, Elizabeth",
+      "Mandy, William",
+      "Stott, Joshua",
+      "John, Amber",
+      "Stewart, Gavin R"
+    ],
+    [
+      "Ilioska, Iva",
+      "Oldehinkel, Marianne",
+      "Llera, Alberto",
+      "Rovn\u00fd, Maro\u0161",
+      "Mei, Ting",
+      "Kia, Seyed Mostafa",
+      "Floris, Dorothea L",
+      "Tillmann, Julian",
+      "Holt, Rosemary J",
+      "Loth, Eva",
+      "Charman, Tony",
+      "Murphy, Declan G M",
+      "Ecker, Christine",
+      "Banaschewski, Tobias",
+      "Mennes, Maarten",
+      "Beckmann, Christian F",
+      "Marquand, Andre",
+      "Buitelaar, Jan K",
+      "Fornito, Alex"
+    ],
+    [
+      "Juod\u017ebalis, Ignas",
+      "Marconcini, Cosimo",
+      "D'Eugenio, Francesco",
+      "Maiolino, Roberto",
+      "Marconi, Alessandro",
+      "\u00dcbler, Hannah",
+      "Scholtz, Jan",
+      "Ji, Xihan",
+      "Jones, Gareth C",
+      "Perna, Michele",
+      "Arribas, Santiago",
+      "Bennett, Jake S",
+      "Bromm, Volker",
+      "Bunker, Andrew J",
+      "Carniani, Stefano",
+      "Charlot, St\u00e9phane",
+      "Cresci, Giovanni",
+      "Dayal, Pratika",
+      "Egami, Eiichi",
+      "Fabian, Andrew",
+      "Inayoshi, Kohei",
+      "Isobe, Yuki",
+      "Ivey, Lucy R",
+      "Koudmani, Sophie",
+      "Laporte, Nicolas",
+      "Liu, Boyuan",
+      "Lyu, Jianwei",
+      "Mazzolari, Giovanni",
+      "Monty, Stephanie",
+      "Parlanti, Eleonora",
+      "P\u00e9rez-Gonz\u00e1lez, Pablo G",
+      "Robertson, Brant",
+      "Schneider, Raffaella",
+      "Sijacki, Debora",
+      "Tacchella, Sandro",
+      "Trinca, Alessandro",
+      "Valiante, Rosa",
+      "Volonteri, Marta",
+      "Witstok, Joris",
+      "Zhang, Saiyang"
+    ],
+    [
+      "Akbari, R",
+      "de Araujo Azevedo, L O",
+      "Baker, C J",
+      "Bertsche, W",
+      "Bhatt, N M",
+      "Bonomi, G",
+      "Capra, A",
+      "Carli, I",
+      "L Cesar, C",
+      "Charlton, M",
+      "Cridland Mathad, A",
+      "Del Vincio, A",
+      "Duque Quiceno, D",
+      "Eriksson, S",
+      "Evans, A",
+      "Fajans, J",
+      "Friesen, T",
+      "Fujiwara, M C",
+      "Golino, L M",
+      "Gomes Gon\u00e7alves, M B",
+      "Hangst, J S",
+      "Hayden, M E",
+      "Heidari, P",
+      "Hodgkinson, D",
+      "Isaac, C A",
+      "Jones, S A",
+      "Jonsell, S",
+      "Madsen, N",
+      "Marshall, V R",
+      "McKenna, J T K",
+      "Momose, T",
+      "Nauta, J",
+      "Oliveira, A N",
+      "Powell, A",
+      "Rasmussen, C \u00d8",
+      "Robertson-Brown, T",
+      "Robicheaux, F",
+      "Sacramento, R L",
+      "Sarid, E",
+      "Schoonwater, J",
+      "Silveira, D M",
+      "Singh, J",
+      "Smith, G",
+      "So, C",
+      "Stracka, S",
+      "Suh, J",
+      "Swadling, A G",
+      "Tharp, T D",
+      "Thompson, K A",
+      "Thompson, R I",
+      "Thorpe-Woods, E",
+      "Uribe Jimenez, A J",
+      "Urioni, M",
+      "van de Werf, D P",
+      "Wilson, S G",
+      "Woosaree, P",
+      "Wurtele, J S",
+      "ALPHA Collaboration"
+    ],
+    [
+      "Tyshkovskiy, Alexander",
+      "Kholdina, Daria",
+      "Davitadze, Maria",
+      "Moli\u00e8re, Adrian",
+      "Moldakozhayev, Alibek",
+      "Tongu, Yoshiyasu",
+      "Kasahara, Tomoko",
+      "Glubokov, Dmitrii",
+      "Eames, Alec",
+      "Kats, Leonid M",
+      "Vladimirova, Anastasiya",
+      "Ying, Kejun",
+      "Liu, Hanna",
+      "Zhang, Bohan",
+      "Khasanova, Uma",
+      "Moqri, Mahdi",
+      "Van Raamsdonk, Jeremy M",
+      "Harrison, David E",
+      "Strong, Randy",
+      "Abe, Takaaki",
+      "Dmitriev, Sergey E",
+      "Gladyshev, Vadim N"
+    ],
+    [
+      "He, Yue",
+      "Riahi, Keywan",
+      "Gidden, Matthew J",
+      "Piao, Shilong",
+      "Wang, Tao",
+      "Gasser, Thomas"
+    ],
+    [
+      "Canepa, Jacob",
+      "Ruiz-Arroyo, Victor M",
+      "Schlamowitz, Netanya S",
+      "Nam, Yunsun"
+    ],
+    [
+      "Ghai, Sakshi",
+      "Vuorre, Matti",
+      "Kardefelt-Winther, Daniel",
+      "Ferguson, Amanda M",
+      "Kurten, Sebastian",
+      "Livingstone, Sonia",
+      "Przybylski, Andrew K",
+      "Orben, Amy"
+    ],
+    [
+      "Sui, Xinxin",
+      "Nielsen-Gammon, John",
+      "Yang, Zong-Liang",
+      "Niyogi, Dev"
+    ],
+    [
+      "Jiang, Zhejun",
+      "Pan, Shengzhe",
+      "Chen, Jianqi",
+      "Zhu, Mingyu",
+      "Zhao, Chenhao",
+      "Wang, Yiwen",
+      "Zhang, Ru",
+      "Lu, Jianshi",
+      "Han, Lulu",
+      "Xiong, Suwen",
+      "Wu, Dian",
+      "Li, Wenxue",
+      "Jiang, Shicheng",
+      "Ni, Hongcheng",
+      "Wu, Jian"
+    ],
+    [
+      "Tian, Lucas Y",
+      "Garz\u00f3n Gupta, Kedar",
+      "Hanuska, Daniel J",
+      "Rouse, Adam G",
+      "Eldridge, Mark A G",
+      "Schieber, Marc H",
+      "Wang, Xiao-Jing",
+      "Tenenbaum, Joshua B",
+      "Freiwald, Winrich A"
+    ],
+    [
+      "O'Chan, Jennifer C",
+      "Di Salvo, Giuseppina",
+      "Cunningham, Ashley M",
+      "Dutta, Sohini",
+      "Brindley, Elizabeth",
+      "Weekley, Benjamin H",
+      "Chen, Winnie",
+      "Iyer, Rasika R",
+      "Wan, Ethan",
+      "Zhang, Cindy",
+      "Mechawar, Naguib",
+      "Turecki, Gustavo",
+      "Maze, Ian"
+    ],
+    [
+      "Zhang, Sen",
+      "Xiao, Dingbang",
+      "Wang, Fei",
+      "Huang, Ran",
+      "Yu, Lei",
+      "Zhou, Ning",
+      "He, Kaixuan",
+      "Wu, Xuezhong",
+      "Nori, Franco",
+      "Jing, Hui",
+      "Zhou, Xin"
+    ],
+    [
+      "Yang, Tinghuan",
+      "Zhao, Erxin",
+      "Wu, Nan",
+      "Chang, Xiaoming",
+      "Tian, Chenqing",
+      "Wang, Hai-Long",
+      "Zhang, Lu",
+      "Gu, Nannan",
+      "Nie, Ting",
+      "Yang, Ye",
+      "Zhang, Zheng",
+      "Xu, Tianfei",
+      "Chen, Xin",
+      "Wang, Shuang",
+      "Niu, Tianqi",
+      "Xu, Niansheng",
+      "Ma, Chuang",
+      "Li, Haojin",
+      "Yan, Buyi",
+      "Ding, Zicheng",
+      "Liu, Shengzhong Frank",
+      "Gao, Feng",
+      "Zhao, Kui"
+    ],
+    [
+      "Huang, Chenyan",
+      "Sun, Amanda",
+      "Reyes, Jojo",
+      "Ribeiro de Souza, Jessica",
+      "Cafiero, Thomas R",
+      "Antunes Fernandes, Krist H",
+      "Oliveira, Fabricio Marcus Silva",
+      "Qiao, Yujie",
+      "Gazzinelli-Guimaraes, Pedro",
+      "Pritykin, Yuri",
+      "Lim, Ai Ing"
+    ],
+    [
+      "Ou, Dequan",
+      "Hagenaars, Jesse J",
+      "Jankowski, Maciej R",
+      "Firlefyn, Michiel V M",
+      "De Wagter, Christophe",
+      "Muijres, Florian T",
+      "Degen, Jacqueline",
+      "de Croon, Guido C H E"
+    ],
+    [
+      "NCD Risk Factor Collaboration (NCD-RisC)"
+    ],
+    [
+      "Steinhardt, Laura C",
+      "Kwambai, Titus K",
+      "Oneko, Martina",
+      "Ouma, Eunice",
+      "Njoroge, Ruth",
+      "Callier, Viviane",
+      "Hu, Zonghui",
+      "Gutman, Julie R",
+      "Yego, Reuben",
+      "Otieno, Kephas",
+      "Onoka, Kelvin",
+      "Otieno, Lilian",
+      "Oduol, Kennedy",
+      "Serebryannyy, Leonid",
+      "Lin, Bob C",
+      "Adams, Will",
+      "Hickman, Somia",
+      "Preston, Anne C",
+      "Carlton, Kevin",
+      "Holdsworth, Michael",
+      "Xiao, Yan",
+      "O Ter Kuile, Feiko",
+      "Odongo, Wycliffe",
+      "Murphy, Sean C",
+      "Tran, Tuan M",
+      "Kariuki, Simon",
+      "Crompton, Peter D",
+      "Seder, Robert A",
+      "Kenya Malaria mAb Trials Team"
+    ],
+    [
+      "Nyberg, Solja T",
+      "Frank, Philipp",
+      "Ahmadi-Abhari, Sara",
+      "Pentti, Jaana",
+      "Vahtera, Jussi",
+      "Ervasti, Jenni",
+      "Suominen, Sakari B",
+      "Strandberg, Timo E",
+      "Sipil\u00e4, Pyry N",
+      "Meri, Seppo",
+      "Sattar, Naveed",
+      "Kivim\u00e4ki, Mika"
+    ],
+    [
+      "Cholesterol Treatment Trialists' (CTT) Collaboration. Electronic address: ctt@ndph.ox.ac.uk",
+      "Cholesterol Treatment Trialists' (CTT) Collaboration"
+    ],
+    [
+      "Vakaniaki, Emmanuel Hasivirwe",
+      "Barhishindi, Isaac",
+      "Mubiala, Ange",
+      "Malembaka, Espoir Bwenge",
+      "Braunack-Mayer, Lydia",
+      "Nganga, Bruce",
+      "Sabiti Nundu, Sabin",
+      "Brosius, Isabel",
+      "Bracke, Stefanie",
+      "Bangwen, Eugene",
+      "De Vos, Elise",
+      "Colebunders, Robert",
+      "Ngale, Mireille",
+      "Kayembe, Gabriel",
+      "Tshongo, Christian",
+      "Dilu, Ali",
+      "Tshimanga, Celestin",
+      "Biampata, Jean-Luc",
+      "Bugeme, Patrick Musole",
+      "Ntamabyaliro, Nsengi",
+      "Kirenga, Bruce",
+      "Wayengera, Misaki",
+      "Siewe Fodjo, Joseph Nelson",
+      "Lupande Mwenebitu, David",
+      "Rimoin, Anne W",
+      "Wawina-Bokalanga, Tony",
+      "Vercauteren, Koen",
+      "Mukadi-Bamuleka, Daniel",
+      "Muyembe-Tamfum, Jean-Jacques",
+      "Krasemann, Susanne",
+      "Kindrachuk, Jason",
+      "Azman, Andrew S",
+      "Nussenblatt, Veronique",
+      "Crozier, Ian",
+      "Dodd, Lori E",
+      "Tshiani-Mbaya, Olivier",
+      "MBOTE-SK Consortium",
+      "PREGMPOX Consortium",
+      "PALM007 Consortium",
+      "Uvira Study Group",
+      "Low, Nicola",
+      "Katoto, Patrick D M C",
+      "Mbala-Kingebeni, Placide",
+      "Liesenborghs, Laurens"
+    ],
+    [
+      "Luckey, Alison",
+      "Balasegaram, Manica",
+      "Barbee, Lindley A",
+      "Batteiger, Teresa A",
+      "Broadhurst, Helen",
+      "Cohen, Stephanie E",
+      "Delany-Moretlwe, Sinead",
+      "de Vries, Henry J C",
+      "Dionne, Jodie A",
+      "Gill, Katherine",
+      "Kenyon, Chris",
+      "Kittiyaowamarn, Rossaphorn",
+      "Lewis, Drew",
+      "Mueller, John P",
+      "Naicker, Vimla",
+      "O'Brien, Seamus",
+      "O'Donnell, John P",
+      "Phanuphak, Nittaya",
+      "Spooner, Elizabeth",
+      "Srinivasan, Subasree",
+      "Taylor, Stephanie N",
+      "Unemo, Magnus",
+      "Zwane, Zinhle",
+      "Hook, Edward W, 3rd",
+      "Zoliflodacin Phase 3 Study Group"
+    ],
+    [
+      "GBD 2023 Intimate Partner Violence and Sexual Violence against Children Collaborators"
+    ],
+    [
+      "GBD 2023 Causes of Death Collaborators"
+    ],
+    [
+      "GBD 2023 Demographics Collaborators"
+    ],
+    [
+      "GBD 2023 Disease and Injury and Risk Factor Collaborators"
+    ],
+    [
+      "Gallos, Ioannis",
+      "Williams, Caitlin R",
+      "Price, Malcolm J",
+      "Tobias, Aurelio",
+      "Devall, Adam",
+      "Allotey, John",
+      "Althabe, Fernando",
+      "Cresswell, Jenny A",
+      "Durocher, Jill",
+      "Metin G\u00fclmezoglu, A",
+      "Haslinger, Christian",
+      "Pacagnella, Rodolfo C",
+      "Sentilhes, Lo\u00efc",
+      "Sobhy, Soha",
+      "Yunas, Idnan",
+      "Deeks, Jonathan J",
+      "Coomarasamy, Arri",
+      "Oladapo, Olufemi T",
+      "WHO Consortium on Postpartum Haemorrhage Definition"
+    ],
+    [
+      "Lewis, David J",
+      "Jerkeman, Mats",
+      "Sorrell, Lexy",
+      "Wright, David",
+      "Glimelius, Ingrid",
+      "Poulsen, Christian B",
+      "Pasanen, Annika",
+      "Rawstron, Andrew",
+      "Wader, Karin F",
+      "Morley, Nick",
+      "Burton, Catherine",
+      "Davies, Andrew J",
+      "Lagerl\u00f6f, Ingemar",
+      "Dalal, Surita",
+      "De Tute, Ruth",
+      "McNamara, Chris",
+      "Crosbie, Nicola",
+      "Toldbod, Helle Erbs",
+      "Sanders, Jeanette",
+      "Allgar, Victoria",
+      "Aroori, Sree",
+      "Warner, Mark",
+      "Scully, Claire",
+      "Wainman, Brian",
+      "Christensen, Jacob Haaber",
+      "Riise, Jon",
+      "Sonnevi, Kristina",
+      "Bishton, Mark J",
+      "Eyre, Toby A",
+      "Rule, Simon",
+      "ENRICH investigators"
+    ],
+    [
+      "GBD 2023 Cancer Collaborators"
+    ],
+    [
+      "NCD Countdown 2030 Collaborators"
+    ],
+    [
+      "Chang, Angela Y",
+      "Bolongaita, Sarah",
+      "Cao, Bochen",
+      "Castro, Marcia C",
+      "Karlsson, Omar",
+      "Mao, Wenhui",
+      "Norheim, Ole F",
+      "Ogbuoji, Osondu",
+      "Jamison, Dean T"
+    ],
+    [
+      "Apeagyei, Angela E",
+      "Bisignano, Catherine",
+      "Elliott, Hans",
+      "Hay, Simon I",
+      "Lidral-Porter, Brendan",
+      "Nam, Seong",
+      "Shyong, Carolyn",
+      "Tsakalos, Golsum",
+      "Zlavog, Bianca S",
+      "Bar\u0131\u015f, Enis",
+      "Murray, Christopher J L",
+      "Dieleman, Joseph L"
+    ],
+    [
+      "Dugdale, Caitlin M",
+      "Ufio, Ogochukwu",
+      "Giardina, John",
+      "Shebl, Fatma",
+      "Coskun, Elif",
+      "Pletner, Eden",
+      "Torola, Pamela R",
+      "Cosar, Duru",
+      "Shapiro, Roger",
+      "Kim, Maria",
+      "Mofenson, Lynne",
+      "Ciaranello, Andrea L"
+    ],
+    [
+      "Cavalcanti, Daniella Medeiros",
+      "de Oliveira Ferreira de Sales, Lucas",
+      "da Silva, Andrea Ferreira",
+      "Basterra, Elisa Landin",
+      "Pena, Daiana",
+      "Monti, Caterina",
+      "Barreix, Gonzalo",
+      "Silva, Natanael J",
+      "Vaz, Paula",
+      "Saute, Francisco",
+      "Fanjul, Gonzalo",
+      "Bassat, Quique",
+      "Naniche, Denise",
+      "Macinko, James",
+      "Rasella, Davide"
+    ],
+    [
+      "GBD 2023 Vaccine Coverage Collaborators"
+    ],
+    [
+      "Habtamu, Esmael",
+      "Harding-Esch, Emma M",
+      "Greenland, Katie",
+      "Wamyil-Mshelia, Teyil",
+      "Talero, Sandra L",
+      "Mishra, Sailesh Kumar",
+      "Lietman, Thomas M",
+      "Solomon, Anthony W",
+      "Burton, Matthew J"
+    ],
+    [
+      "Cagney, Jack",
+      "Spencer, Cory",
+      "Flor, Luisa",
+      "Herbert, Molly",
+      "Khalil, Mariam",
+      "O'Connell, Erin",
+      "Mullany, Erin",
+      "Bustreo, Flavia",
+      "Singh Chandan, Joht",
+      "Metheny, Nicholas",
+      "Knaul, Felicia",
+      "Gakidou, Emmanuela"
+    ],
+    [
+      "Rodin, Judith",
+      "Bratburd, Jennifer R",
+      "Duff, Noah",
+      "Patz, Jonathan A",
+      "Frumkin, Howard",
+      "Woteki, Catherine E",
+      "Whitmee, Sarah",
+      "Toplitz, Michele",
+      "Dzau, Victor J",
+      "Haines, Andy"
+    ],
+    [
+      "Arundel, Catherine",
+      "Mandefield, Laura",
+      "Fairhurst, Caroline",
+      "Baird, Kalpita",
+      "Gkekas, Athanasios",
+      "Saramago, Pedro",
+      "Chetter, Ian",
+      "SWHSI-2 Trial Investigators"
+    ],
+    [
+      "Carel, Havi"
+    ],
+    [
+      "GBD 2021 HAP Collaborators"
+    ],
+    [
+      "Singh, Bhagteshwar",
+      "Lipunga, Gareth D",
+      "Thangavelu, Premkumar",
+      "Dhar, Shalley",
+      "Ferreira Cronemberger, Lorena",
+      "Abhilash, Kundavaram Paul Prabhakar",
+      "Abraham, Asha Mary",
+      "de Brito, Carlos Alexandre Antunes",
+      "Brito Ferreira, Maria L\u00facia",
+      "Chandrashekar, Nagarathna",
+      "Duarte, Rui",
+      "Fajardo Modol, Anna",
+      "Ghale, Ben Chirag",
+      "Kang, Gagandeep",
+      "Gowda, Vykuntaraju K",
+      "Kuriakose, Kevin",
+      "Lant, Suzannah",
+      "Mallewa, Macpherson",
+      "Mbale, Emmie",
+      "Moore, Shona C",
+      "Mwangalika, Gloria",
+      "Kamath, Prasanna B T",
+      "Navvuga, Patricia",
+      "Nyondo-Mipando, Alinane Linda",
+      "Phiri, Tamara J",
+      "Pimentel Lopes de Melo, Camila",
+      "Pradeep, B S",
+      "Rawlinson, Rebecca",
+      "Sheha, Irene",
+      "Thomas, Priya Treesa",
+      "Newton, Charles R",
+      "de Sequeira, Patricia Carvalho",
+      "Sejvar, James J",
+      "Dua, Tarun",
+      "Turtle, Lance",
+      "Verghese, Valsan Philip",
+      "Arraes, Luciano Wagner de Melo Santiago",
+      "Desmond, Nicola",
+      "Easton, Ava",
+      "Jones, Jessica Anne",
+      "Lilford, Richard J",
+      "Netravathi, M",
+      "McGill, Fiona",
+      "Michael, Benedict D",
+      "Mwapasa, Victor",
+      "Griffiths, Michael J",
+      "Parry, Christopher M",
+      "Ravi, Vasanthapuram",
+      "Burnside, Girvan",
+      "Brain Infections Global Intervention Study Group",
+      "Cornick, Jennifer",
+      "Fran\u00e7a, Rafael Freitas de Oliveira",
+      "Desai, Anita S",
+      "Rupali, Priscilla",
+      "Solomon, Tom"
+    ],
+    [
+      "Bhoj, Vijay G",
+      "Kaminski, Mary",
+      "Zhao, Huiwu",
+      "Jackson, Kyle",
+      "Wang, Wei",
+      "Liu, Chengyang",
+      "Montgomery, Robert A",
+      "Ali, Nicole",
+      "Mangiola, Massimo",
+      "Spitzer, Thomas R",
+      "Safa, Kassem",
+      "Pattanayak, Vikram",
+      "Taj, Raeda",
+      "Chiu, Joy",
+      "Bui, Thanh-Mai",
+      "Sonnenberg, Elizabeth M",
+      "Markmann, James F",
+      "Milone, Michael C",
+      "June, Carl H",
+      "Siegel, Don L",
+      "Fraietta, Joseph A",
+      "Gonzalez, Vanessa",
+      "Locci, Michela",
+      "Palmer, Matthew",
+      "Monos, Dimitri",
+      "Hwang, Wei-Ting",
+      "Sledge, Tina",
+      "Bridges, Nancy D",
+      "Goldstein, Julia S",
+      "Odim, Jonah",
+      "Sweet, Stuart C",
+      "Besharatian, Behdad D",
+      "Hussain, Sabiha M",
+      "Brown, Nicholas K",
+      "Kamoun, Malek",
+      "Garfall, Alfred L",
+      "Naji, Ali"
+    ],
+    [
+      "Serman, Emily A",
+      "Witrick, Brian",
+      "Rennert, Lior"
+    ],
+    [
+      "Denninghoff, Kurt R",
+      "Casper, T Charles",
+      "Zorc, Joseph J",
+      "Ruddy, Richard M",
+      "Satola, Sarah",
+      "Wendt, Wendi-Jo",
+      "Morris, Claudia R",
+      "Tavarez, Melissa M",
+      "Lipshaw, Matthew J",
+      "Kwok, Maria Y",
+      "Nesiama, Jo-Ann O",
+      "Nelson, Kyle A",
+      "Webb, Michael",
+      "Martinez, Fernando D",
+      "PECARN AZ-SWED Trial Study Group"
+    ],
+    [
+      "Francis, Jasmine H",
+      "Mendelsohn, Robin B",
+      "Canestraro, Julia",
+      "Koenig, Lisa R",
+      "Weseley, Peter E",
+      "Abramson, David H",
+      "Falchi, Lorenzo"
+    ],
+    [
+      "Yerlikaya, Seda",
+      "Chirwa, Masuzyo",
+      "Ajide, Bukola",
+      "Castro, Maria Del Mar",
+      "Ha, Huy",
+      "Kato-Maeda, Midori",
+      "Kisakye, Esther",
+      "Marcelo, Danaida",
+      "Mochizuki, Tessa",
+      "Rockman, Loren",
+      "Steadman, Amy",
+      "Thangakunam, Balamugesh",
+      "Bimba, John Samson",
+      "Christopher, Devasahayam J",
+      "Muyoyeta, Monde",
+      "Phan, Ha",
+      "Theron, Grant",
+      "Yu, Charles",
+      "Kremer, Kristin",
+      "Phillips, Patrick P J",
+      "Nahid, Payam",
+      "Denkinger, Claudia M",
+      "Cattamanchi, Adithya",
+      "Andama, Alfred",
+      "R2D2 TB Network and SMART4TB Consortia"
+    ],
+    [
+      "Balamuth, Fran",
+      "Weiss, Scott L",
+      "Long, Elliot",
+      "Thompson, Graham C",
+      "Artis, Amanda S",
+      "Campos, Atzael B",
+      "Borland, Meredith L",
+      "Dalziel, Stuart R",
+      "Yock-Corrales, Adriana",
+      "Singh, Ruchi",
+      "Williams, Amanda",
+      "Mickiewicz, Beata",
+      "Hickey, Christopher P",
+      "Fitzgerald, Julie C",
+      "Laskin, Benjamin L",
+      "Hickey, Robert W",
+      "Eckerle, Michelle",
+      "Alqurashi, Waleed",
+      "Alpern, Elizabeth",
+      "Ambroggio, Lilliam",
+      "Badawy, Mohamed",
+      "Baumer-Mouradian, Shannon",
+      "Berthelot, Simon",
+      "Clukies, Lindsay D",
+      "Craig, Simon",
+      "Curtis, Sarah J",
+      "Davis, Adrienne L",
+      "Duffy, Susan",
+      "Eisenberg, Matthew A",
+      "Emsley, Jason G",
+      "Festekjian, Ara",
+      "George, Shane",
+      "Green, Rebecca",
+      "Gripp, Karen E",
+      "Jain, Priya G",
+      "Jani, Shefali",
+      "Joubert, Gary I",
+      "Judge, Pavan",
+      "Kam, April",
+      "Kochar, Amit",
+      "Koutroulis, Ioannis",
+      "Kwok, Maria Y",
+      "Lane, Roni D",
+      "Lithgow, Anna",
+      "Lloyd, Julia",
+      "Mansour, Karim",
+      "McManemy, Julie K",
+      "Morris, Claudia",
+      "Phillips, Natalie",
+      "Rao, Arjun",
+      "Rogers, Alexander",
+      "Sehgal, Anupam",
+      "Shayan, Yasaman",
+      "Silverman, Jonathan",
+      "Tan, Eunicia",
+      "Uspal, Neil G",
+      "Vance, Cheryl",
+      "Whyte, Emma",
+      "Huang, Jing",
+      "Freedman, Stephen B",
+      "Babl, Franz E",
+      "Kuppermann, Nathan",
+      "PRoMPT BOLUS Investigators of the PECARN, PERC, and PREDICT Networks"
+    ],
+    [
+      "Butler, Christopher C",
+      "Pinto, Andrew D",
+      "Harris, Victoria",
+      "Holmes, Jane",
+      "Rahman, Najib M",
+      "Cureton, Lucy",
+      "Hayward, Gail",
+      "Richards, Duncan B",
+      "Lowe, David M",
+      "Standing, Joseph F",
+      "Breuer, Judith",
+      "Hood, Kerenza",
+      "Png, May Ee",
+      "Petrou, Stavros",
+      "Dorward, Jienchi",
+      "Patel, Mahendra G",
+      "Thomas, Nicholas P B",
+      "Evans, Philip",
+      "Hart, Nigel D",
+      "Jani, Bhautesh D",
+      "Hosseini, Banafshe",
+      "Murthy, Srinivas",
+      "McBrien, Kerry",
+      "Condon, Amanda",
+      "McDonald, Emily G",
+      "Daley, Peter",
+      "Greiver, Michelle",
+      "da Costa, Bruno R",
+      "Selby, Peter",
+      "J\u00fcni, Peter",
+      "Lee, Todd C",
+      "Shi, Haolun",
+      "Detry, Michelle A",
+      "Saunders, Christina T",
+      "Fitzgerald, Mark",
+      "Berry, Nicholas S",
+      "Saville, Benjamin R",
+      "Khoo, Saye H",
+      "Nguyen-Van-Tam, Jonathan S",
+      "Hobbs, F D Richard",
+      "Yu, Ly-Mee",
+      "Little, Paul",
+      "PANORAMIC Trial and CanTreatCOVID Trial Collaborative Groups"
+    ],
+    [
+      "Cerqueira-Silva, Thiago",
+      "Paix\u00e3o, Enny",
+      "Fran\u00e7a, Giovanny V A",
+      "Ten\u00f3rio, Luiza X S",
+      "Amaral, Mateus C",
+      "Santos, Nubia M",
+      "Pearce, Neil",
+      "Boaventura, Viviane S",
+      "Barral-Netto, Manoel"
+    ],
+    [
+      "Vedantham, Suresh",
+      "Kahn, Susan R",
+      "Marston, William A",
+      "Weinberg, Ido",
+      "Sista, Akhilesh K",
+      "Magnuson, Elizabeth A",
+      "Cohen, David J",
+      "Wasan, Suman M",
+      "Razavi, Mahmood K",
+      "Goldhaber, Samuel Z",
+      "Sanfilippo, Kristen M",
+      "Comerota, Anthony J",
+      "Azene, Ezana M",
+      "Chaar, Cassius Iyad Ochoa",
+      "Leung, Daniel A",
+      "Kolli, K Pallav",
+      "Kalva, Sanjeeva P",
+      "Rostambeigi, Nassir",
+      "Desai, Ajinkya",
+      "Desai, Kush R",
+      "Tafur, Alfonso J",
+      "Khalsa, Bhavraj",
+      "Majerus, Elaine",
+      "Wang, Borong",
+      "Wang, Yang",
+      "Nieters, Patricia",
+      "Derfler, Mary Clare",
+      "Oliver, Angela",
+      "Hardy, Cassandra",
+      "Bashir, Riyaz",
+      "Winokur, Ronald",
+      "Weger, Natalie",
+      "Khaja, Minhaj S",
+      "Sharma, Aditya",
+      "Mani, Naganathan",
+      "Kavali, Pavan",
+      "Thukral, Siddhant",
+      "Lake, Leslie L",
+      "Mikkelsen, Kathryn",
+      "Parpia, Sameer",
+      "C-TRACT Trial Investigators"
+    ],
+    [
+      "Fang, Michael",
+      "Xu, Yunwen",
+      "Selvin, Elizabeth",
+      "Shin, Jung-Im"
+    ],
+    [
+      "Mills, Katherine T",
+      "Krousel-Wood, Marie",
+      "Peacock, Erin M",
+      "Chen, Jing",
+      "Allouch, Farah",
+      "Carreras, Amy K",
+      "Geng, Siyi",
+      "Cyprian, Alecia",
+      "Davis, Gerrelda",
+      "Fuqua, Sonja R",
+      "Gilliam, Darie",
+      "Greer, Angelique",
+      "Mitchell, Tammy",
+      "Gray-Winfrey, Wylea",
+      "Williams, Shondra",
+      "Wiltz, Gary M",
+      "Winfrey, Keith L",
+      "He, Hua",
+      "Whelton, Paul K",
+      "He, Jiang"
+    ],
+    [
+      "Chrispin, Jonathan",
+      "Prakosa, Adityo",
+      "Kholmovski, Eugene",
+      "Kolandaivelu, Aravindan",
+      "Barcelon, Amanda",
+      "Aronis, Konstantinos N",
+      "Berger, Ronald D",
+      "Calkins, Hugh",
+      "Trayanova, Natalia"
+    ],
+    [
+      "Sinicrope, Frank A",
+      "Ou, Fang-Shu",
+      "Arnold, Dirk",
+      "Peters, Walter R",
+      "Behrens, Robert J",
+      "Lieu, Christopher H",
+      "Matin, Khalid",
+      "Cohen, Deirdre J",
+      "Potter, Samara L",
+      "Nixon, Andrew B",
+      "Kottschade, Lisa A",
+      "Kathol, Emily",
+      "Frankel, Wendy L",
+      "Shergill, Ardaman",
+      "Hsu, Dennis",
+      "Reinacher-Schick, Anke",
+      "Mehan, Paul",
+      "Gold, Philip J",
+      "Khalil, Maged F",
+      "Zemla, Tyler",
+      "Gatten, Clare",
+      "O'Reilly, Eileen M",
+      "Meyerhardt, Jeffrey A"
+    ],
+    [
+      "Smith, Jonathan P",
+      "O'Connor, Stephanie",
+      "Date, Anand",
+      "Moonan, Patrick K"
+    ],
+    [
+      "Pieren, Michel",
+      "Dale, Glenn E",
+      "Gitzinger, Marc",
+      "Tiberi, Simon",
+      "Penman, Sophie L",
+      "Remui\u00f1\u00e1n, Modesto J",
+      "Dubbelboer, Ilse R",
+      "Simonsson, Ulrika S H",
+      "Upton, Caryn M",
+      "Mabuka, Thabo",
+      "Diacon, Andreas H"
+    ],
+    [
+      "Rana, Aadia I",
+      "Zheng, Lu",
+      "Castillo-Mancilla, Jose",
+      "Bao, Yajing",
+      "Sieczkarski, Sara",
+      "Brooks, Kristina M",
+      "Lake, Jordan E",
+      "Fichtenbaum, Carl",
+      "Heath, Sonya L",
+      "Belaunzaran-Zamudio, Pablo F",
+      "Klingman, Karin",
+      "Fox, Lawrence",
+      "Morton, Tia",
+      "Stirratt, Michael",
+      "Li, Jonathan Z",
+      "Acosta, Edward P",
+      "Venuto, Charles",
+      "Gal\u00e1rraga, Omar",
+      "Shoptaw, Steven",
+      "Wohl, David",
+      "Green, Madison",
+      "Beijer, Ceora",
+      "Ferbas, Kathie",
+      "Jennings, Cheryl",
+      "Shin, Katherine",
+      "Collahua, Romina",
+      "Dorosh, Michael",
+      "Wannamaker, Paul",
+      "D'Amico, Ronald",
+      "Smith, Kimberly",
+      "Spreen, William",
+      "Vandermeulen, Kati",
+      "Van Solingen-Ristea, Rodica",
+      "Wimbish, Chanelle",
+      "Tashima, Karen T",
+      "Landovitz, Raphael J",
+      "ACTG A5359 LATITUDE Trial Team"
+    ],
+    [
+      "Wang, Jing Jing",
+      "Sch\u00f6nborn, Linda",
+      "Warkentin, Theodore E",
+      "M\u00fcller, Luisa",
+      "Thiele, Thomas",
+      "Ulm, Lena",
+      "V\u00f6lker, Uwe",
+      "Ameling, Sabine",
+      "Franzenburg, S\u00f6ren",
+      "Kaderali, Lars",
+      "Tzvetkova, Ana",
+      "Colella, Alex",
+      "Chataway, Tim",
+      "Tan, Chee Wee",
+      "Armour, Bridie",
+      "Troelnikov, Alexander",
+      "Rutten, Lucy",
+      "McCluskey, James",
+      "Zahn, Roland",
+      "Gordon, Tom P",
+      "Greinacher, Andreas"
+    ],
+    [
+      "Lewis, Connor J",
+      "D'Souza, Precilla",
+      "Johnston, Jean M",
+      "Acosta, Maria T",
+      "Farmer, Cristan",
+      "Baker, Eva H",
+      "Crowell, Anna",
+      "Mojica, Yoliann",
+      "Ashraf, Sumaiya",
+      "Joseph, Lisa",
+      "V\u00e9zina, Gilbert",
+      "Quezado, Zenaide",
+      "Yousef, Muhammad H",
+      "Vardar, Zeynep",
+      "Shazeeb, Mohammed Salman",
+      "Corti, Manuela",
+      "Blackwood, Meghan",
+      "Coleman, Kirsten",
+      "Batista, Rita",
+      "Thurm, Audrey",
+      "De Boever, Erika",
+      "Gahl, William A",
+      "Byrne, Barry J",
+      "Flotte, Terence R",
+      "Jiang, Xuntian",
+      "Gross, Amanda L",
+      "Keeler, Allison M",
+      "Gray-Edwards, Heather",
+      "Martin, Douglas R",
+      "Sena-Esteves, Miguel",
+      "Tifft, Cynthia J"
+    ],
+    [
+      "Schutzer, Steven E",
+      "Wellins, Anna-Marie",
+      "Dattwyler, Raymond J"
+    ],
+    [
+      "Howie, Rebecca L",
+      "Sharma, Shalabh",
+      "Kyle, Jennifer L",
+      "Rubis, Amy B"
+    ],
+    [
+      "Meya, David B",
+      "Cresswell, Fiona V",
+      "Dai, Biyue",
+      "Engen, Nicole",
+      "Naidoo, Kogieleum",
+      "Ganiem, Ahmad Rizal",
+      "Imran, Darma",
+      "Kabahubya, Mable",
+      "Lessells, Richard J",
+      "Yunivita, Vycke",
+      "Estiasari, Riwanti",
+      "Tugume, Lillian",
+      "Hlabisa, Bongeka",
+      "Kurniawati, Media Yuni",
+      "Sagita, Noveline",
+      "Kagimu, Enock",
+      "Maharani, Kartika",
+      "Gakuru, Jane",
+      "Gaharu, Maula N",
+      "Mugabi, Timothy",
+      "Kimuda, Sarah",
+      "Namombwe, Suzan",
+      "Te Brake, Lindsey",
+      "Aarnoutse, Rob",
+      "Svensson, Elin M",
+      "Bangdiwala, Ananta S",
+      "Namanda, Sylvia",
+      "Bahr, Nathan C",
+      "Musubire, Abdu K",
+      "Moosa, Mahomed Yunus Suleman",
+      "Hamers, Raph L",
+      "Marais, Suzaan",
+      "Boulware, David R",
+      "van Crevel, Reinout",
+      "Ruslami, Rovina",
+      "HARVEST Trial Team"
+    ],
+    [
+      "Wang, Yuxuan",
+      "Li, Howard L",
+      "Bettegowda, Chetan",
+      "Kinzler, Kenneth W",
+      "Papadopoulos, Nickolas",
+      "Yarchoan, Mark",
+      "Vogelstein, Bert"
+    ],
+    [
+      "Costa, Luciano J",
+      "Bahlis, Nizar J",
+      "Perrot, Aurore",
+      "Nooka, Ajay K",
+      "Lu, Jin",
+      "Pawlyn, Charlotte",
+      "Mina, Roberto",
+      "Caeiro, Gaston",
+      "Kentos, Alain",
+      "Hungria, Vania",
+      "Reece, Donna",
+      "Niu, Ting",
+      "Mylin, Anne K",
+      "Hansen, Charlotte T",
+      "Teipel, Raphael",
+      "Besemer, Britta",
+      "Dimopoulos, Meletios A",
+      "Zamagni, Elena",
+      "Yoshihara, Satoshi",
+      "Kim, Kihyun",
+      "Min, Chang Ki",
+      "Geerts, Paul",
+      "Van Leeuwen-Segarceanu, Elena",
+      "Tyczynska, Agata",
+      "Reguera, Juan Luis",
+      "Johansson, Magnus",
+      "Hansson, Markus",
+      "Turgut, Mehmet",
+      "Grey, Mark",
+      "Sidana, Surbhi",
+      "Rodriguez-Otero, Paula",
+      "Martinez-Lopez, Joaquin",
+      "Hashmi, Hamza",
+      "Carson, Robin",
+      "Kobos, Rachel",
+      "Sun, Weili",
+      "Lantz, Kristen",
+      "Seifert, Anne",
+      "Briseno-Toomey, Deborah",
+      "O'Rourke, Lisa",
+      "Rubin, Maria",
+      "Vieyra, Diego",
+      "Kang, Lijuan",
+      "Mateos, Maria Victoria",
+      "MajesTEC-3 Trial Investigators"
+    ],
+    [
+      "\u00c5rstad, Erik",
+      "Sander, Kerstin",
+      "Kurzawinski, Tom R",
+      "Anderson, Cameron",
+      "Buhidma, Yazead",
+      "Awais, Ramla O",
+      "Sirindil, Fatih",
+      "Shortman, Robert",
+      "Dickinson, Louise",
+      "O'Keeffe, Aidan G",
+      "Dickson, John",
+      "Chung, Teng-Teng",
+      "Brown, Morris J",
+      "Williams, Bryan"
+    ],
+    [
+      "Durbin, Anna P",
+      "Van Wesenbeeck, Liesbeth",
+      "Pierce, Kristen K",
+      "Herrera-Taracena, Guillermo",
+      "Ebone, Laura",
+      "Buelens, Annemie",
+      "Lutton, Patricia",
+      "Sabundayo, Beulah P",
+      "Van Eygen, Veerle",
+      "De Clerck, Kim",
+      "Fetter, Isabel",
+      "Voge, Natalia V",
+      "Fang, Xi",
+      "Goeyvaerts, Nele",
+      "Vandendijck, Yannick",
+      "Mayfield, Jeffrey",
+      "Lenz, Oliver",
+      "De Meyer, Sandra",
+      "Kakuda, Thomas N",
+      "He, Huili",
+      "Amaro-Carambot, Em\u00e9rito",
+      "Akli, Ruxandra Draghia",
+      "Carmolli, Marya",
+      "De Marez, Tine",
+      "Whitehead, Stephen S",
+      "Van Loock, Marnix",
+      "Rasschaert, Freya"
+    ]
+  ],
+  "title": [
+    "Reporting of Cohort and Routinely Collected Data in Randomised Controlled Trial Protocols (SPIRIT-ROUTINE): extension checklist with explanation and elaboration",
+    "Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process",
+    "Low concentration atropine eye drops and progression of myopia in children: multicentre placebo controlled, double masked, randomised trial in the UK (CHAMP-UK)",
+    "Advances in supporting development in autistic children and youth",
+    "Global, regional, and national levels and trends in under 5, infant, and neonatal mortality during 1990-2024 with scenario based projections to 2030: modelling study",
+    "Estimates of global causes of death for children and adolescents aged 5-19 in 2000-24: secondary data analysis using bayesian multinomial logistic regression",
+    "Systematic estimates of global causes of neonatal and under 5 mortality in 2000-24: secondary data analysis using bayesian multinomial logistic regression",
+    "Outcome switching in cohort studies of interventions: meta-epidemiological study",
+    "UK National Screening Committee position statement on surrogate outcomes in cancer screening trials",
+    "UK National Screening Committee position statement on evidence required for multicancer detection tests",
+    "CRT-Estimands Framework: consensus based extension of the ICH E9(R1) addendum for cluster randomised trials",
+    "Calcium, vitamin D, or combined supplementation to prevent fractures and falls: systematic review and meta-analysis",
+    "Concordance between target trial emulation and randomised controlled trials: systematic review and meta-analysis",
+    "Health Bill brings NHS management back into government",
+    "Analysing complex interventions using component network meta-analysis",
+    "Prophylactic tranexamic acid for the prevention of postpartum haemorrhage in women with placenta praevia: multicentre, double blind, randomised, placebo controlled, phase 3 trial",
+    "Efficacy of dual antiplatelet therapy for three months versus 12 months after coronary artery bypass grafting: multicentre, double blinded, randomised controlled trial",
+    "Aluminium adjuvants in vaccines and potential health effects: systematic review",
+    "Clinician in the loop: a flawed solution for AI oversight",
+    "Accelerated continuous theta burst stimulation targeting left primary motor cortex for children with autism spectrum disorder: multicentre randomised sham controlled trial",
+    "Benzodiazepine or Z-hypnotic use during pregnancy and risk of psychiatric disorders in children: population based cohort study",
+    "Overcommercialisation of dental practice in England and decline in oral health",
+    "Home environment conditions during childhood and psychosocial outcomes across three generations in Sweden: population based adoption-discordant sibling comparison study",
+    "Effectiveness of interventions to increase vaccine uptake: component network meta-analysis",
+    "Prenatal exposure to buprenorphine or methadone and adverse neurodevelopmental outcomes: population based cohort study",
+    "Lethal plague outbreaks in Lake Baikal hunter-gatherers 5,500 years ago",
+    "A prototype differential atom interferometer for fundamental physics",
+    "Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis",
+    "Chiral superfluorescence from perovskite superlattices at room temperature",
+    "Analysis of trade-offs of post-sorting plastic packaging",
+    "Earth's east-west albedo symmetry",
+    "Enamel nanocrystal misorientation increased with meat-eating and agriculture",
+    "Relativistic electron acceleration at the bow shock of Jupiter and beyond",
+    "The association between autistic traits and trajectories of anxiety in middle-aged and older adults: an 8-year growth mixture model analysis",
+    "Multiscale heterogeneity of atypical functional connectivity in autism",
+    "A direct black-hole mass measurement in a little red dot at high redshift",
+    "Four ppm measurement of the antihydrogen ground-state hyperfine splitting",
+    "Universal transcriptomic hallmarks of mammalian ageing and mortality",
+    "Temporary carbon dioxide removal to offset short-lived climate forcers",
+    "Substrate selectivity of the human RNA m(5)C methyltransferase NSUN2",
+    "Technology mediation in child sexual exploitation and abuse in Africa and Asia",
+    "Divergent urban storm response to convective, frontal and tropical systems",
+    "Nonlinear atomic tunnelling boosted by bright squeezed vacuum",
+    "Neural representation of action symbols in primate frontal cortex",
+    "Dopamine drives persistent remodelling of the maternal brain",
+    "Cusp-singularity-enhanced Coriolis effect for sensitive chip-scale gyroscopes",
+    "Stereoelectronic manipulation of ligands for perovskite solar cells",
+    "Eosinophils drive intestinal remodelling and innate defence in reproduction",
+    "Efficient robot navigation inspired by honeybee learning flights",
+    "Obesity rise plateaus in developed nations and accelerates in developing nations",
+    "Safety and efficacy of the monoclonal antibody L9LS for malaria prevention in children exposed to perennial malaria transmission in Kenya: a randomised, double-blind, placebo-controlled, phase 2 trial",
+    "Adult obesity and risk of severe infections: a multicohort study with global burden estimates",
+    "Assessment of adverse effects attributed to statin therapy in product labels: a meta-analysis of double-blind randomised controlled trials",
+    "Maternal and neonatal outcomes after infection with monkeypox virus clade I during pregnancy in DR Congo: a pooled, prospective cohort study",
+    "Zoliflodacin versus ceftriaxone plus azithromycin for treatment of uncomplicated urogenital gonorrhoea: an international, randomised, controlled, open-label, phase 3, non-inferiority clinical trial",
+    "Disease burden attributable to intimate partner violence against females and sexual violence against children in 204 countries and territories, 1990-2023: a systematic analysis for the Global Burden of Disease Study 2023",
+    "Global burden of 292 causes of death in 204 countries and territories and 660 subnational locations, 1990-2023: a systematic analysis for the Global Burden of Disease Study 2023",
+    "Global age-sex-specific all-cause mortality and life expectancy estimates for 204 countries and territories and 660 subnational locations, 1950-2023: a demographic analysis for the Global Burden of Disease Study 2023",
+    "Burden of 375 diseases and injuries, risk-attributable burden of 88 risk factors, and healthy life expectancy in 204 countries and territories, including 660 subnational locations, 1990-2023: a systematic analysis for the Global Burden of Disease Study 2023",
+    "Prognostic accuracy of clinical markers of postpartum bleeding in predicting maternal mortality or severe morbidity: a WHO individual participant data meta-analysis",
+    "Ibrutinib and rituximab versus immunochemotherapy in patients with previously untreated mantle cell lymphoma (ENRICH): a randomised, open-label, phase 2/3 superiority trial",
+    "The global, regional, and national burden of cancer, 1990-2023, with forecasts to 2050: a systematic analysis for the Global Burden of Disease Study 2023",
+    "Benchmarking progress in non-communicable diseases: a global analysis of cause-specific mortality from 2001 to 2019",
+    "Epidemiological and demographic trends and projections in global health from 1970 to 2050: a descriptive analysis from the third Lancet Commission on Investing in Health, Global Health 2050",
+    "Tracking development assistance for health, 1990-2030: historical trends, recent cuts, and outlook",
+    "Estimating the effect of maternal viral load on perinatal and postnatal HIV transmission: a systematic review and meta-analysis",
+    "Evaluating the impact of two decades of USAID interventions and projecting the effects of defunding on mortality up to 2030: a retrospective impact evaluation and forecasting analysis",
+    "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: a systematic analysis for the Global Burden of Disease Study 2023",
+    "Trachoma",
+    "Prevalence of sexual violence against children and age at first exposure: a global analysis by location, age, and sex (1990-2023)",
+    "Charting a path to health for all at net-zero emissions",
+    "Negative pressure wound therapy versus usual care in patients with surgical wound healing by secondary intention in the UK (SWHSI-2): an open-label, multicentre, parallel-group, randomised controlled trial",
+    "A taste of your own medicine: the experience of a transplant",
+    "Global, regional, and national burden of household air pollution, 1990-2021: a systematic analysis for the Global Burden of Disease Study 2021",
+    "A multifaceted intervention to improve diagnosis and early management of hospitalised patients with suspected acute brain infections in Brazil, India, and Malawi: an international multicentre intervention study",
+    "Kidney Transplantation in Two Highly Sensitized Candidates after CAR T-Cell Therapy",
+    "Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina",
+    "Azithromycin for Preschoolers with Wheezing in the Emergency Department",
+    "Dulaglutide-Associated Choroidal Lymphoid Hyperplasia",
+    "Pulmonary Tuberculosis Detection with MiniDock MTB Using Swab Samples",
+    "Balanced Fluid or 0.9% Saline in Children Treated for Septic Shock",
+    "Oral Nirmatrelvir-Ritonavir for Covid-19 in Higher-Risk Outpatients",
+    "Risk of Guillain-Barr\u00e9 Syndrome after Laboratory-Confirmed Dengue Infection",
+    "Endovascular Therapy for Post-Thrombotic Syndrome - A Randomized Trial",
+    "Trends in Youth-Onset Type 2 Diabetes, 2013-2024",
+    "Multifaceted Strategies for Hypertension Control in Low-Income Patients",
+    "Digital Twin-Guided Ablation for Ventricular Tachycardia",
+    "Atezolizumab plus FOLFOX for Stage III Mismatch Repair-Deficient Colon Cancer",
+    "Tuberculosis Cases and Deaths Averted by PEPFAR",
+    "Revival of Ethionamide by Alpibectir",
+    "Cabotegravir plus Rilpivirine for Persons with HIV and Adherence Challenges",
+    "Adenoviral Inciting Antigen and Somatic Hypermutation in VITT",
+    "AAV9 Gene Therapy in Type II GM1 Gangliosidosis - A Phase 1-2 Trial",
+    "Borrelia burgdorferi Infection and Erythema Migrans",
+    "Serogroup Switching in Neisseria meningitidis with Dual Antibiotic Resistance",
+    "Trial of High-Dose Oral Rifampin in Adults with Tuberculous Meningitis",
+    "Molecular Evidence of Multiorgan Damage in Patients with Immune-Related Adverse Events",
+    "Teclistamab plus Daratumumab in Relapsed or Refractory Multiple Myeloma",
+    "Adrenal Aldosterone Synthase Expression Imaging in Primary Aldosteronism",
+    "Daily Mosnodenvir as Dengue Prophylaxis in a Controlled Human Infection Model"
+  ],
+  "journal": [
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e087095",
+      "page_end": "e087095"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e088116",
+      "page_end": "e088116"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e086698",
+      "page_end": "e086698"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e086562",
+      "page_end": "e086562"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e088684",
+      "page_end": "e088684"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e088687",
+      "page_end": "e088687"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e088686",
+      "page_end": "e088686"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e087975",
+      "page_end": "e087975"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e629407",
+      "page_end": "e629407"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e089868",
+      "page_end": "e089868"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e089050",
+      "page_end": "e089050"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e088050",
+      "page_end": "e088050"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e086810",
+      "page_end": "e086810"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "s958",
+      "page_end": "s958"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e083075",
+      "page_end": "e083075"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e089636",
+      "page_end": "e089636"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e088939",
+      "page_end": "e088939"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e088921",
+      "page_end": "e088921"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e089213",
+      "page_end": "e089213"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e086295",
+      "page_end": "e086295"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e088671",
+      "page_end": "e088671"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e088509",
+      "page_end": "e088509"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e087844",
+      "page_end": "e087844"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e087578",
+      "page_end": "e087578"
+    },
+    {
+      "name_full": "BMJ (Clinical research ed.)",
+      "name_short": "BMJ",
+      "volume": "393",
+      "issue": "",
+      "page_start": "e087321",
+      "page_end": "e087321"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8119",
+      "page_start": "697",
+      "page_end": "705"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8119",
+      "page_start": "622",
+      "page_end": "628"
+    },
+    {
+      "name_full": "Nature. Mental health",
+      "name_short": "Nat Ment Health",
+      "volume": "4",
+      "issue": "6",
+      "page_start": "994",
+      "page_end": "1009"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8118",
+      "page_start": "369",
+      "page_end": "374"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8118",
+      "page_start": "383",
+      "page_end": "390"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8119",
+      "page_start": "676",
+      "page_end": "682"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8117",
+      "page_start": "76",
+      "page_end": "84"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8117",
+      "page_start": "47",
+      "page_end": "51"
+    },
+    {
+      "name_full": "Nature. Mental health",
+      "name_short": "Nat Ment Health",
+      "volume": "4",
+      "issue": "6",
+      "page_start": "971",
+      "page_end": "977"
+    },
+    {
+      "name_full": "Nature. Mental health",
+      "name_short": "Nat Ment Health",
+      "volume": "4",
+      "issue": "6",
+      "page_start": "1010",
+      "page_end": "1020"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "653",
+      "issue": "8116",
+      "page_start": "1017",
+      "page_end": "1021"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "653",
+      "issue": "8116",
+      "page_start": "1022",
+      "page_end": "1026"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8117",
+      "page_start": "173",
+      "page_end": "188"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8118",
+      "page_start": "391",
+      "page_end": "397"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "",
+      "issue": "",
+      "page_start": "10.1038/s41586-026-10582-9",
+      "page_end": ""
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8118",
+      "page_start": "408",
+      "page_end": "418"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "653",
+      "issue": "8116",
+      "page_start": "1078",
+      "page_end": "1084"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8118",
+      "page_start": "356",
+      "page_end": "360"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8117",
+      "page_start": "152",
+      "page_end": "162"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8118",
+      "page_start": "465",
+      "page_end": "475"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "653",
+      "issue": "8115",
+      "page_start": "700",
+      "page_end": "706"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8119",
+      "page_start": "660",
+      "page_end": "667"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "654",
+      "issue": "8117",
+      "page_start": "209",
+      "page_end": "218"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "653",
+      "issue": "8116",
+      "page_start": "1039",
+      "page_end": "1046"
+    },
+    {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "653",
+      "issue": "8114",
+      "page_start": "510",
+      "page_end": "518"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "407",
+      "issue": "10539",
+      "page_start": "1614",
+      "page_end": "1625"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "407",
+      "issue": "10532",
+      "page_start": "951",
+      "page_end": "962"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "407",
+      "issue": "10529",
+      "page_start": "689",
+      "page_end": "703"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "407",
+      "issue": "10525",
+      "page_start": "256",
+      "page_end": "266"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "407",
+      "issue": "10524",
+      "page_start": "147",
+      "page_end": "160"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "407",
+      "issue": "10523",
+      "page_start": "31",
+      "page_end": "52"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "406",
+      "issue": "10513",
+      "page_start": "1811",
+      "page_end": "1872"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "406",
+      "issue": "10513",
+      "page_start": "1731",
+      "page_end": "1810"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "406",
+      "issue": "10513",
+      "page_start": "1873",
+      "page_end": "1922"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "406",
+      "issue": "10514",
+      "page_start": "1969",
+      "page_end": "1982"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "406",
+      "issue": "10514",
+      "page_start": "1953",
+      "page_end": "1968"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "406",
+      "issue": "10512",
+      "page_start": "1565",
+      "page_end": "1586"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "406",
+      "issue": "10509",
+      "page_start": "1255",
+      "page_end": "1282"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "406",
+      "issue": "10506",
+      "page_start": "940",
+      "page_end": "949"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "406",
+      "issue": "10501",
+      "page_start": "337",
+      "page_end": "348"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "406",
+      "issue": "10501",
+      "page_start": "349",
+      "page_end": "357"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "406",
+      "issue": "10500",
+      "page_start": "283",
+      "page_end": "294"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "406",
+      "issue": "10500",
+      "page_start": "235",
+      "page_end": "260"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "405",
+      "issue": "10492",
+      "page_start": "1865",
+      "page_end": "1878"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "405",
+      "issue": "10492",
+      "page_start": "1817",
+      "page_end": "1836"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "",
+      "issue": "",
+      "page_start": "S0140-6736(25)00813-X",
+      "page_end": ""
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "405",
+      "issue": "10490",
+      "page_start": "1689",
+      "page_end": "1699"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "405",
+      "issue": "10486",
+      "page_start": "1220",
+      "page_end": "1221"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "405",
+      "issue": "10485",
+      "page_start": "1167",
+      "page_end": "1181"
+    },
+    {
+      "name_full": "Lancet (London, England)",
+      "name_short": "Lancet",
+      "volume": "405",
+      "issue": "10483",
+      "page_start": "991",
+      "page_end": "1003"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "21",
+      "page_start": "2117",
+      "page_end": "2125"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "",
+      "issue": "",
+      "page_start": "10.1056/NEJMc2604004",
+      "page_end": ""
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "",
+      "issue": "",
+      "page_start": "10.1056/NEJMoa2516505",
+      "page_end": ""
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "19",
+      "page_start": "1959",
+      "page_end": "1961"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "17",
+      "page_start": "1710",
+      "page_end": "1722"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "",
+      "issue": "",
+      "page_start": "10.1056/NEJMoa2601969",
+      "page_end": ""
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "16",
+      "page_start": "1583",
+      "page_end": "1594"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "15",
+      "page_start": "1546",
+      "page_end": "1548"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "23",
+      "page_start": "2293",
+      "page_end": "2304"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "14",
+      "page_start": "1451",
+      "page_end": "1453"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "14",
+      "page_start": "1376",
+      "page_end": "1387"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "13",
+      "page_start": "1345",
+      "page_end": "1347"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "12",
+      "page_start": "1155",
+      "page_end": "1166"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "16",
+      "page_start": "1655",
+      "page_end": "1656"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "8",
+      "page_start": "818",
+      "page_end": "819"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "9",
+      "page_start": "858",
+      "page_end": "871"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "7",
+      "page_start": "669",
+      "page_end": "683"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "12",
+      "page_start": "1184",
+      "page_end": "1194"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "3",
+      "page_start": "302",
+      "page_end": "303"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "2",
+      "page_start": "199",
+      "page_end": "201"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "393",
+      "issue": "24",
+      "page_start": "2434",
+      "page_end": "2446"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "393",
+      "issue": "23",
+      "page_start": "2377",
+      "page_end": "2379"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "8",
+      "page_start": "739",
+      "page_end": "752"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "393",
+      "issue": "21",
+      "page_start": "2168",
+      "page_end": "2170"
+    },
+    {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "393",
+      "issue": "21",
+      "page_start": "2107",
+      "page_end": "2118"
+    }
+  ],
+  "pub": [
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "12"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "12"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "11"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "10"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "04"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "04"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "04"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "27"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "25"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "25"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "21"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "20"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "19"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "15"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "14"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "13"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "12"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "06"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "05"
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "29"
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "29"
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "28"
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "22"
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "15"
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "15"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "27"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "25"
+    },
+    {
+      "y": "2026",
+      "m": "03",
+      "d": "07"
+    },
+    {
+      "y": "2026",
+      "m": "02",
+      "d": "14"
+    },
+    {
+      "y": "2026",
+      "m": "01",
+      "d": "17"
+    },
+    {
+      "y": "2026",
+      "m": "01",
+      "d": "10"
+    },
+    {
+      "y": "2026",
+      "m": "01",
+      "d": "03"
+    },
+    {
+      "y": "2025",
+      "m": "10",
+      "d": "18"
+    },
+    {
+      "y": "2025",
+      "m": "10",
+      "d": "18"
+    },
+    {
+      "y": "2025",
+      "m": "10",
+      "d": "18"
+    },
+    {
+      "y": "2025",
+      "m": "10",
+      "d": "25"
+    },
+    {
+      "y": "2025",
+      "m": "10",
+      "d": "25"
+    },
+    {
+      "y": "2025",
+      "m": "10",
+      "d": "11"
+    },
+    {
+      "y": "2025",
+      "m": "09",
+      "d": "20"
+    },
+    {
+      "y": "2025",
+      "m": "08",
+      "d": "30"
+    },
+    {
+      "y": "2025",
+      "m": "07",
+      "d": "26"
+    },
+    {
+      "y": "2025",
+      "m": "07",
+      "d": "26"
+    },
+    {
+      "y": "2025",
+      "m": "07",
+      "d": "19"
+    },
+    {
+      "y": "2025",
+      "m": "07",
+      "d": "19"
+    },
+    {
+      "y": "2025",
+      "m": "05",
+      "d": "24"
+    },
+    {
+      "y": "2025",
+      "m": "05",
+      "d": "24"
+    },
+    {
+      "y": "2025",
+      "m": "04",
+      "d": "25"
+    },
+    {
+      "y": "2025",
+      "m": "05",
+      "d": "10"
+    },
+    {
+      "y": "2025",
+      "m": "04",
+      "d": "12"
+    },
+    {
+      "y": "2025",
+      "m": "04",
+      "d": "05"
+    },
+    {
+      "y": "2025",
+      "m": "03",
+      "d": "22"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "04"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "20"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "18"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "14"
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "30"
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "24"
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "23"
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "16"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "18"
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "09"
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "09"
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "02"
+    },
+    {
+      "y": "2026",
+      "m": "03",
+      "d": "26"
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "23"
+    },
+    {
+      "y": "2026",
+      "m": "02",
+      "d": "19"
+    },
+    {
+      "y": "2026",
+      "m": "02",
+      "d": "26"
+    },
+    {
+      "y": "2026",
+      "m": "02",
+      "d": "12"
+    },
+    {
+      "y": "2026",
+      "m": "03",
+      "d": "26"
+    },
+    {
+      "y": "2026",
+      "m": "01",
+      "d": "15"
+    },
+    {
+      "y": "2026",
+      "m": "01",
+      "d": "08"
+    },
+    {
+      "y": "2025",
+      "m": "12",
+      "d": "18"
+    },
+    {
+      "y": "2025",
+      "m": "12",
+      "d": "11"
+    },
+    {
+      "y": "2026",
+      "m": "02",
+      "d": "19"
+    },
+    {
+      "y": "2025",
+      "m": "11",
+      "d": "27"
+    },
+    {
+      "y": "2025",
+      "m": "11",
+      "d": "27"
+    }
+  ],
+  "epub": [
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "17"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "17"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "10"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "03"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "03"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "03"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "03"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "03"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "01"
+    },
+    {
+      "y": "2026",
+      "m": "06",
+      "d": "01"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "27"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "27"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "27"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "27"
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "27"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "20"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "20"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "20"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "20"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "20"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "13"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "13"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "13"
+    },
+    {
+      "y": "2026",
+      "m": "05",
+      "d": "13"
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "02",
+      "d": "09"
+    },
+    {
+      "y": "2026",
+      "m": "02",
+      "d": "05"
+    },
+    {
+      "y": "2025",
+      "m": "12",
+      "d": "19"
+    },
+    {
+      "y": "2025",
+      "m": "12",
+      "d": "11"
+    },
+    {
+      "y": "2025",
+      "m": "12",
+      "d": "09"
+    },
+    {
+      "y": "2025",
+      "m": "10",
+      "d": "12"
+    },
+    {
+      "y": "2025",
+      "m": "10",
+      "d": "12"
+    },
+    {
+      "y": "2025",
+      "m": "10",
+      "d": "12"
+    },
+    {
+      "y": "2025",
+      "m": "10",
+      "d": "04"
+    },
+    {
+      "y": "2025",
+      "m": "10",
+      "d": "03"
+    },
+    {
+      "y": "2025",
+      "m": "09",
+      "d": "24"
+    },
+    {
+      "y": "2025",
+      "m": "09",
+      "d": "10"
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2025",
+      "m": "07",
+      "d": "15"
+    },
+    {
+      "y": "2025",
+      "m": "07",
+      "d": "10"
+    },
+    {
+      "y": "2025",
+      "m": "06",
+      "d": "30"
+    },
+    {
+      "y": "2025",
+      "m": "06",
+      "d": "24"
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2025",
+      "m": "05",
+      "d": "08"
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2025",
+      "m": "04",
+      "d": "15"
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2025",
+      "m": "03",
+      "d": "18"
+    },
+    {
+      "y": "2025",
+      "m": "03",
+      "d": "10"
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "04",
+      "d": "13"
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "03",
+      "d": "24"
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "02",
+      "d": "18"
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2026",
+      "m": "02",
+      "d": "06"
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "2025",
+      "m": "12",
+      "d": "09"
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    {
+      "y": "",
+      "m": "",
+      "d": ""
+    }
+  ],
+  "doi": [
+    "10.1136/bmj-2025-087095",
+    "10.1136/bmj-2025-088116",
+    "10.1136/bmj-2025-086698",
+    "10.1136/bmj-2025-086562",
+    "10.1136/bmj-2025-088684",
+    "10.1136/bmj-2025-088687",
+    "10.1136/bmj-2025-088686",
+    "10.1136/bmj-2025-087975",
+    "10.1136/bmj-2026-629407",
+    "10.1136/bmj-2026-089868",
+    "10.1136/bmj-2025-089050",
+    "10.1136/bmj-2025-088050",
+    "10.1136/bmj-2025-086810",
+    "10.1136/bmj.s958",
+    "10.1136/bmj-2024-083075",
+    "10.1136/bmj-2026-089636",
+    "10.1136/bmj-2025-088939",
+    "10.1136/bmj-2025-088921",
+    "10.1136/bmj-2025-089213",
+    "10.1136/bmj-2025-086295",
+    "10.1136/bmj-2025-088671",
+    "10.1136/bmj-2025-088509",
+    "10.1136/bmj-2025-087844",
+    "10.1136/bmj-2025-087578",
+    "10.1136/bmj-2025-087321",
+    "10.1038/s41586-026-10540-5",
+    "10.1038/s41586-026-10617-1",
+    "10.1038/s44220-026-00669-7",
+    "10.1038/s41586-026-10637-x",
+    "10.1038/s41586-026-10606-4",
+    "10.1038/s41586-026-10624-2",
+    "10.1038/s41586-026-10583-8",
+    "10.1038/s41586-026-10473-z",
+    "10.1038/s44220-026-00654-0",
+    "10.1038/s44220-026-00656-y",
+    "10.1038/s41586-026-10579-4",
+    "10.1038/s41586-026-10556-x",
+    "10.1038/s41586-026-10542-3",
+    "10.1038/s41586-026-10607-3",
+    "10.1038/s41586-026-10582-9",
+    "10.1038/s41586-026-10525-4",
+    "10.1038/s41586-026-10479-7",
+    "10.1038/s41586-026-10485-9",
+    "10.1038/s41586-026-10297-x",
+    "10.1038/s41586-026-10509-4",
+    "10.1038/s41586-026-10565-w",
+    "10.1038/s41586-026-10626-0",
+    "10.1038/s41586-026-10531-6",
+    "10.1038/s41586-026-10461-3",
+    "10.1038/s41586-026-10383-0",
+    "10.1016/S0140-6736(26)00258-8",
+    "10.1016/S0140-6736(25)02474-2",
+    "10.1016/S0140-6736(25)01578-8",
+    "10.1016/S0140-6736(25)02309-8",
+    "10.1016/S0140-6736(25)01953-1",
+    "10.1016/S0140-6736(25)02503-6",
+    "10.1016/S0140-6736(25)01917-8",
+    "10.1016/S0140-6736(25)01330-3",
+    "10.1016/S0140-6736(25)01637-X",
+    "10.1016/S0140-6736(25)01639-3",
+    "10.1016/S0140-6736(25)01432-1",
+    "10.1016/S0140-6736(25)01635-6",
+    "10.1016/S0140-6736(25)01388-1",
+    "10.1016/S0140-6736(25)00902-X",
+    "10.1016/S0140-6736(25)01240-1",
+    "10.1016/S0140-6736(25)00765-2",
+    "10.1016/S0140-6736(25)01186-9",
+    "10.1016/S0140-6736(25)01037-2",
+    "10.1016/S0140-6736(25)00551-3",
+    "10.1016/S0140-6736(25)00311-3",
+    "10.1016/S0140-6736(25)00813-X",
+    "10.1016/S0140-6736(25)00143-6",
+    "10.1016/S0140-6736(25)00691-9",
+    "10.1016/S0140-6736(24)02840-X",
+    "10.1016/S0140-6736(25)00263-6",
+    "10.1056/NEJMoa2513428",
+    "10.1056/NEJMc2604004",
+    "10.1056/NEJMoa2516505",
+    "10.1056/NEJMc2600397",
+    "10.1056/NEJMoa2509761",
+    "10.1056/NEJMoa2601969",
+    "10.1056/NEJMoa2502457",
+    "10.1056/NEJMc2519008",
+    "10.1056/NEJMoa2519001",
+    "10.1056/NEJMc2507615",
+    "10.1056/NEJMoa2504068",
+    "10.1056/NEJMc2517822",
+    "10.1056/NEJMoa2507874",
+    "10.1056/NEJMc2506284",
+    "10.1056/NEJMc2504287",
+    "10.1056/NEJMoa2508228",
+    "10.1056/NEJMoa2514824",
+    "10.1056/NEJMoa2510935",
+    "10.1056/NEJMc2508805",
+    "10.1056/NEJMc2507652",
+    "10.1056/NEJMoa2502866",
+    "10.1056/NEJMc2513984",
+    "10.1056/NEJMoa2514663",
+    "10.1056/NEJMc2507481",
+    "10.1056/NEJMoa2500179"
+  ],
+  "pmid": [
+    "42285568",
+    "42285563",
+    "42276557",
+    "42270130",
+    "42242779",
+    "42242773",
+    "42242770",
+    "42203255",
+    "42185047",
+    "42185045",
+    "42167774",
+    "42161415",
+    "42156120",
+    "42140629",
+    "42134863",
+    "42128454",
+    "42120081",
+    "42091164",
+    "42086290",
+    "42055586",
+    "42055584",
+    "42049318",
+    "42019989",
+    "41985976",
+    "41985931",
+    "42310115",
+    "42310113",
+    "42291779",
+    "42236939",
+    "42236936",
+    "42236934",
+    "42236563",
+    "42236560",
+    "42291777",
+    "42291776",
+    "42203931",
+    "42203929",
+    "42203874",
+    "42203873",
+    "42203868",
+    "42203864",
+    "42162433",
+    "42162427",
+    "42162420",
+    "42162419",
+    "42162388",
+    "42129568",
+    "42129565",
+    "42129549",
+    "42129527",
+    "42035777",
+    "41679324",
+    "41655587",
+    "41429130",
+    "41391465",
+    "41386261",
+    "41092928",
+    "41092927",
+    "41092926",
+    "41056961",
+    "41052510",
+    "41015051",
+    "40945529",
+    "40885585",
+    "40680759",
+    "40652949",
+    "40609560",
+    "40578370",
+    "40412861",
+    "40347967",
+    "40294615",
+    "40250455",
+    "40221153",
+    "40118081",
+    "40081400",
+    "42235014",
+    "42160720",
+    "42149992",
+    "42127399",
+    "42054680",
+    "42028918",
+    "42019019",
+    "41985140",
+    "41972998",
+    "41950480",
+    "41950472",
+    "41931055",
+    "41880612",
+    "41874342",
+    "41707147",
+    "41707171",
+    "41671482",
+    "41665410",
+    "41534048",
+    "41499737",
+    "41406445",
+    "41370805",
+    "41363801",
+    "41297012",
+    "41297006"
+  ],
+  "pmcid": [
+    "PMC13261399",
+    "PMC13261503",
+    "PMC13274572",
+    "PMC13250720",
+    "PMC13235747",
+    "PMC13235748",
+    "PMC13235706",
+    "PMC13213652",
+    "PMC13224044",
+    "PMC13224043",
+    "PMC13191442",
+    "PMC13188451",
+    "PMC13184834",
+    "PMC13178420",
+    "PMC13173695",
+    "PMC13170071",
+    "PMC13162091",
+    "PMC13147496",
+    "PMC13140781",
+    "PMC13126859",
+    "PMC13126849",
+    "PMC7619201",
+    "PMC13101412",
+    "PMC13081225",
+    "PMC13081224",
+    "PMC13275307",
+    "PMC13275304",
+    "PMC13259922",
+    "PMC13253322",
+    "PMC13253328",
+    "PMC13275288",
+    "PMC13233625",
+    "PMC13233311",
+    "PMC13259919",
+    "PMC13259941",
+    "PMC13215880",
+    "PMC13216062",
+    "PMC13233323",
+    "PMC13253319",
+    "PMC13289585",
+    "PMC13253325",
+    "PMC13216064",
+    "PMC13253329",
+    "PMC13233313",
+    "PMC13253353",
+    "PMC13190237",
+    "PMC13275290",
+    "PMC13233317",
+    "PMC13216067",
+    "PMC13171639",
+    "PMC13266303",
+    "PMC12979006",
+    "PMC7619005",
+    "PMC12823291",
+    "PMC12784215",
+    "PMC12775558",
+    "PMC12535838",
+    "PMC12535839",
+    "PMC12535840",
+    "PMC12549477",
+    "PMC12549478",
+    "PMC12687902",
+    "PMC7618237",
+    "PMC12394659",
+    "PMC12439094",
+    "PMC12262163",
+    "PMC12274115",
+    "PMC12338332",
+    "PMC7618282",
+    "PMC12100463",
+    "PMC7618538",
+    "PMC12062190",
+    "PMC7618581",
+    "PMC11971481",
+    "PMC7618301",
+    "PMC13240644",
+    "PMC13235145",
+    "PMC13186117",
+    "PMC13215208",
+    "PMC13132025",
+    "PMC13134814",
+    "PMC7619176",
+    "PMC7619180",
+    "PMC13078690",
+    "PMC13108512",
+    "PMC13124202",
+    "PMC13052048",
+    "PMC13020640",
+    "PMC13289147",
+    "PMC7618782",
+    "PMC12919640",
+    "PMC12900036",
+    "PMC13215599",
+    "PMC12810860",
+    "PMC12922507",
+    "PMC7618564",
+    "PMC12698112",
+    "PMC13218738",
+    "PMC7618428",
+    "PMC12662413"
+  ]
+}

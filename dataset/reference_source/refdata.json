@@ -1676,6 +1676,36 @@
   },
   {
     "authors": [
+      "Canepa, Jacob",
+      "Ruiz-Arroyo, Victor M",
+      "Schlamowitz, Netanya S",
+      "Nam, Yunsun"
+    ],
+    "title": "Substrate selectivity of the human RNA m(5)C methyltransferase NSUN2",
+    "journal": {
+      "name_full": "Nature",
+      "name_short": "Nature",
+      "volume": "",
+      "issue": "",
+      "page_start": "10.1038/s41586-026-10582-9",
+      "page_end": ""
+    },
+    "pub": {
+      "y": "2026",
+      "m": "05",
+      "d": "27"
+    },
+    "epub": {
+      "y": "",
+      "m": "",
+      "d": ""
+    },
+    "doi": "10.1038/s41586-026-10582-9",
+    "pmid": "42203868",
+    "pmcid": "PMC13289585"
+  },
+  {
+    "authors": [
       "Ghai, Sakshi",
       "Vuorre, Matti",
       "Kardefelt-Winther, Daniel",
@@ -2036,34 +2066,6 @@
     "doi": "10.1038/s41586-026-10383-0",
     "pmid": "42129527",
     "pmcid": "PMC13171639"
-  },
-  {
-    "authors": [
-      "Lesk, Corey S",
-      "Mankin, Justin S"
-    ],
-    "title": "More concentrated precipitation decreases terrestrial water storage",
-    "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
-      "volume": "653",
-      "issue": "8114",
-      "page_start": "425",
-      "page_end": "432"
-    },
-    "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": ""
-    },
-    "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "13"
-    },
-    "doi": "10.1038/s41586-026-10487-7",
-    "pmid": "42129525",
-    "pmcid": "PMC13171432"
   },
   {
     "authors": [
@@ -3667,6 +3669,36 @@
   },
   {
     "authors": [
+      "Smith, Jonathan P",
+      "O'Connor, Stephanie",
+      "Date, Anand",
+      "Moonan, Patrick K"
+    ],
+    "title": "Tuberculosis Cases and Deaths Averted by PEPFAR",
+    "journal": {
+      "name_full": "The New England journal of medicine",
+      "name_short": "N Engl J Med",
+      "volume": "394",
+      "issue": "16",
+      "page_start": "1655",
+      "page_end": "1656"
+    },
+    "pub": {
+      "y": "2026",
+      "m": "04",
+      "d": "23"
+    },
+    "epub": {
+      "y": "2026",
+      "m": "03",
+      "d": "24"
+    },
+    "doi": "10.1056/NEJMc2506284",
+    "pmid": "41874342",
+    "pmcid": "PMC13289147"
+  },
+  {
+    "authors": [
       "Pieren, Michel",
       "Dale, Glenn E",
       "Gitzinger, Marc",
@@ -4186,92 +4218,5 @@
     "doi": "10.1056/NEJMoa2500179",
     "pmid": "41297006",
     "pmcid": "PMC12662413"
-  },
-  {
-    "authors": [
-      "Lissauer, David",
-      "Gadama, Luis",
-      "Waitt, Catriona",
-      "Whyte, Sonia",
-      "Burnside, Girvan",
-      "Anilkumar, Aiswarya",
-      "Makuluni, Regina",
-      "Okwaro, Peace",
-      "Yang, Liu",
-      "Waitt, Peter",
-      "Musopole, Owen",
-      "Bilesi, Rosemary",
-      "Maseko, Bertha",
-      "Lwasa, Joel",
-      "Mugahi, Richard",
-      "Olaro, Charles",
-      "Lamorde, Mohammed",
-      "Makuta, Mirriam",
-      "Kachiwaya, Chimwemwe",
-      "Mkandawire, Tionge",
-      "Malunga, Adrian",
-      "Chitsulo, Nyadani",
-      "Abitimo, Prisca",
-      "Ayabo, Tabitha",
-      "Weeks, Andrew",
-      "Martin, James",
-      "Hemming, Karla",
-      "Gallos, Ioannis",
-      "Monk, Edward J M",
-      "Riches, Jennifer",
-      "Chapuma, Chikondi",
-      "Nanyondo S, Judith",
-      "Lorencatto, Fabiana",
-      "Monahan, Mark",
-      "Allegranzi, Benedetta",
-      "Dunlop, Catherine",
-      "Atkins, Lou",
-      "Rosala-Hallas, Anna",
-      "Roberts, Tracy",
-      "Gamble, Carrol",
-      "Malata, Address",
-      "Desmond, Nicola",
-      "Kommwa, Edward",
-      "Merriel, Abi",
-      "Parry-Smith, William",
-      "Smith, Rebecca",
-      "Ndumu, Ivy",
-      "Williams, Eleanor",
-      "Faque, Bob",
-      "Banda, Gertrude",
-      "Nyondo-Mipando, Alinane L",
-      "Twimukye, Adelline",
-      "Chater, Tim",
-      "Diplas, Aristotelis",
-      "Brizuela, Vanessa",
-      "Souza, Joao Paulo",
-      "Rylance, Jamie",
-      "Cheshire, James",
-      "Hawker, Lydia",
-      "Coomarasamy, Arri",
-      "Bonet, Mercedes"
-    ],
-    "title": "A Multicomponent Intervention to Improve Maternal Infection Outcomes",
-    "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
-      "volume": "394",
-      "issue": "17",
-      "page_start": "1685",
-      "page_end": "1695"
-    },
-    "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "30"
-    },
-    "epub": {
-      "y": "2025",
-      "m": "11",
-      "d": "19"
-    },
-    "doi": "10.1056/NEJMoa2512698",
-    "pmid": "41259754",
-    "pmcid": "PMC7618407"
   }
 ]

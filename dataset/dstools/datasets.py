@@ -12,27 +12,27 @@ def ds_entry(rd):
              "format": {} }
 
 # Create a set of set entries from a list of reference data
-def create_dataset(ref_data_list, *, v=False):
+def make_dataset(ref_data_list, *, v=False):
     dataset = [ds_entry(ref) for ref in ref_data_list]
     return dataset
 
 # Bake formatted references from refdata for every entry in a dataset
-def bake_formats(dataset):
+def bake_dataset(dataset):
     for entry in dataset:
         entry["format"] = RB.bake_formats(entry["data"])
 
 # Class of methods to mutate dataset entries using ref_mutator functions.
 class EntryMutator:
-    def __init__(self, *, component_set, fake_titles, fake_authors, fake_journals):
+    def __init__(self, *, component_set, h_titles, h_authors, h_journals):
         # Mutation flags
         self._M_FLAGS = { "title_hallucinate": 0b0001,    # Some errors are not combinable.
                           "title_mismatch":    0b0010 }
 
         # Resources for hallucination and mismatch mutations
         self._COMPONENTS = component_set
-        self._FAKE_TITLES = fake_titles
-        self._FAKE_AUTHORS = fake_authors
-        self._FAKE_JOURNALS = fake_journals
+        self._FAKE_TITLES = h_titles
+        self._FAKE_AUTHORS = h_authors
+        self._FAKE_JOURNALS = h_journals
 
         # Alternatively, if we think a hallucination sample for every component is a good idea:
         # self._REAL_COMPONENTS
