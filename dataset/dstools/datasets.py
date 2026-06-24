@@ -43,7 +43,40 @@ class EntryMutator:
         ds_entry["errors"] = ds_entry["errors"] | self._M_FLAGS[flag]
 
     # AUTHORS
-    def author_typo(self, ds_entry): pass       # Regarding typos, the question is which kind and how many. What range of randomness do we want and why?
+    def author_typo(self, ds_entry):
+        # ! Regarding typos, the question is which kind and how many. What range of randomness do we want and why?
+        # Perhaps (if we care), there is a paper. This one? https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7546536
+        # As a completely arbitrary heuristic, let it be that:
+        #  - There is a 1/4 chance for a typo to appear in an author's name. 
+        #  - Some considerations are made for appearing in the final formats:
+        #    - Typos are added to both the last and first names simultaneously.
+        #    - The first three authors are guaranteed to have at least one typo.
+        #    - * When a typo appears, it appears in both the first and last name (many formats may abbreviate away first name typos)
+        #  - Compounding typo's follow the halving of the probability (2: 1/8, 3: 1/16, so on)
+        #  - Fatfingers are twice as likely as swaps.
+        TYPO_CHANCE = 1/4
+        FATSWAP_RATIO = 2/3
+        authors = ds_entry["data"]["authors"]
+        for author_i, name in enumerate(authors):
+            first_three_guarantee = author_i > 2
+            while random.random() <= TYPO_CHANCE or not first_three_guarantee:
+                for part in name:
+                    if name[part]: # Skip over empty names.
+                        #print(name, part)
+                        letter_i = random.choice([i for i, letter in enumerate(name[part]) if letter.isalpha()])
+                        name[part] = RM.typo_fatfinger(name[part], letter_i) if random.random() <= FATSWAP_RATIO else RM.typo_swapletter(name[part], letter_i)
+                first_three_guarantee = True
+                #chance = chance * 1/2 # Or we could just leave it the same. ! Actually the probability naturally halves, because of the loop.
+                #print(f"[{name}], [{authors[author_i]}]")
+            #print()
+
+
+                #randint(0, len(author)-1)
+                #while (not author[letter_i].isalpha()): letter_i = random.randint(0, len(author)-1)
+
+
+        return ds_entry
+
     def author_shuffle(self, ds_entry): pass
     def author_mismatch(self, ds_entry): pass
     def author_hallucinate(self, ds_entry): pass
@@ -95,7 +128,6 @@ class EntryMutator:
     def pmcid_randomize(self, ds_entry): pass
 
     # @todo: Consider: Should we just blanket each element with the same boilerplate mutation methods, even when it might not make complete sense? (such as mismatches on vol/iss, or hallucinating page numbers?)
-
 
 
 

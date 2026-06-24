@@ -34,10 +34,34 @@ if __name__ == "__main__":
     # Configure the sets (mutate reference data) accordingly.
     setconfig.init(h_titles=h_title_src, h_authors=h_author_src, h_journals=h_journal_src, component_set=compset_src)
 
-    #setconfig.minor_mderror(datasets["minor_mderror"])
-    #setconfig.major_mderror(datasets["minor_mderror"])
+    #setconfig.apply_minor_mderror(datasets["minor_mderror"])
+    #setconfig.apply_major_mderror(datasets["minor_mderror"])
 
     # Bake formatted references from (now modified) references data.
     for ds in datasets: bake_dataset(datasets[ds])
 
-    print(json.dumps(datasets, indent=2))
+    #print(json.dumps(datasets, indent=2))
+
+    # Testing typo shit
+    testsubset = datasets["source"][0:2]
+    #testsubset[0]["data"]["authors"][0]["l"] = ""
+    orig = []
+    typo = []
+    for entry in testsubset:
+        orig.append([name['l']+", "+name['f'] for name in entry["data"]["authors"]])
+    setconfig.test(testsubset)
+    for entry in testsubset:
+        typo.append([name['l']+", "+name['f'] for name in entry["data"]["authors"]])
+
+    for olist, tlist in zip(orig, typo):
+        for o, t in zip(olist, tlist):
+            print(o)
+            print(t)
+            print("-"*20)
+
+    #print("\n".join([name['l']+", "+name['f'] for name in entry["data"]["authors"]]))
+
+    #print(json.dumps(testsubset, indent=2))
+
+
+    # ! Consider: Is there such a thing as authors with only first or only last names? How are those layed out in RIS, and will that cause errors (subtle, undetectable)?

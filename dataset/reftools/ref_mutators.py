@@ -26,7 +26,7 @@ def typo_fatfinger(word, index):
               "zxcvbnmn,."]
     typo = None
     for ri, row in enumerate(QWERTY):
-        if (li := row.find(word[index])) != -1:
+        if (li := row.find(word[index].lower())) != -1:
             row_shift = [0]
             if ri > 0: row_shift.append(-1)         # Stupid. Will break easy if row or letter counts change.
             if ri < 2: row_shift.append(1)
@@ -38,7 +38,10 @@ def typo_fatfinger(word, index):
             let_shift = random.choice(let_shift)
             typo = word[:index]+QWERTY[ri+row_shift][li+let_shift]+word[index+1:]
             break
-    print(f"{i*" "}{i}\n{typo}")
+    # Janky fallback. If we really care there's probably some library to translate foreign keys -> QWERTY or do the whole thing for us.
+    if not typo:
+        print("! bad fatfinger, falling back to letter swap")
+        typo = typo_swapletter(word, index)
     return typo
 
 # Swap char at index with adjacent char in string.

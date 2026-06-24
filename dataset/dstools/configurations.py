@@ -8,10 +8,12 @@ from dstools.datasets import EntryMutator   # Strange
 M = None
 
 def init(*, h_titles, h_authors, h_journals, component_set):
+    global M # Stupid
     M = EntryMutator(h_titles=h_titles,
                      h_authors=h_authors,
                      h_journals=h_journals,
                      component_set=component_set)
+    print("we inited")
 
 # Create sets of ds_entries for source references, hallucinated title references, and mismatched title references. @todo: more
 
@@ -31,3 +33,8 @@ def init(*, h_titles, h_authors, h_journals, component_set):
 #        M.title_hallucinate(entry)
 #    for entry in title_mismatch_ds:
 #        M.title_mismatch(entry)
+
+def test(dataset):
+    for entry in dataset:
+        pass
+        M.author_typo(entry)
