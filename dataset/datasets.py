@@ -43,35 +43,58 @@ class EntryMutator:
         ds_entry["errors"] = ds_entry["errors"] | self._M_FLAGS[flag]
 
     # AUTHORS
+    def author_typo(self, ds_entry): pass       # Regarding typos, the question is which kind and how many. What range of randomness do we want and why?
+    def author_shuffle(self, ds_entry): pass
+    def author_mismatch(self, ds_entry): pass
+    def author_hallucinate(self, ds_entry): pass
 
     # TITLES
-
     def title_typo(self, ds_entry):
-        #RM.set_title
-        pass
-
+        pass    #RM.set_title
     def title_mismatch(self, ds_entry):
         RM.set_title(ds_entry["data"], random.choice(self._COMPONENTS["title"]))
         self._flag(ds_entry, "title_mismatch")
         return ds_entry
-
     def title_hallucinate(self, ds_entry):
         RM.set_title(ds_entry["data"], random.choice(self._FAKE_TITLES))
         self._flag(ds_entry, "title_hallucinate")
         return ds_entry # Note: returns reference for convenience. It is not a copy.
 
-
     # JOURNAL NAMES
-
-    # JOURNAL PUBLICATION DATES
+    def jname_typo(self, ds_entry): pass
+    def jname_mismatch(self, ds_entry): pass
+    def jname_hallucinate(self, ds_entry): pass
 
     # JOURNAL VOLUME / ISSUE
+    def jvol_randomize(self, ds_entry): pass        # @todo: Consider: Should we bother doing mismatches / hallucinations for the numerics?
+    def jiss_randomize(self, ds_entry): pass
 
     # JOURNAL PAGE NUMBERS
+    def jpage_randomize(self, ds_entry): pass
+
+    # JOURNAL PUBLICATION DATES
+    def jpub_mismatch(self, ds_entry): pass
+    def jpub_randomize(self, ds_entry): pass
+
+    # DIGITIAL PUBLICATION DATES
+    def epub_mismatch(self, ds_entry): pass
+    def epub_randomize(self, ds_entry): pass
 
     # DOI
+    def doi_typo(self, ds_entry): pass                  # @todo: Consider: If we do typo's on numerics, should they include fatfinger or only swap? The assumption is that fatfinger typos are too rare in this case (letters in a number would be seen and fixed).
+    def doi_mismatch(self, ds_entry): pass
+    def doi_randomize_prefix(self, ds_entry): pass
+    def doi_randomize_suffix(self, ds_entry): pass
 
     # PMIDS / PMCIDS
+    def pmid_typo(self, ds_entry): pass
+    def pmid_mismatch(self, ds_entry): pass
+    def pmid_randomize(self, ds_entry): pass
+    def pmcid_typo(self, ds_entry): pass
+    def pmcid_mismatch(self, ds_entry): pass
+    def pmcid_randomize(self, ds_entry): pass
+
+    # @todo: Consider: Should we just blanket each element with the same boilerplate mutation methods, even when it might not make complete sense? (such as mismatches on vol/iss, or hallucinating page numbers?)
 
 
 
