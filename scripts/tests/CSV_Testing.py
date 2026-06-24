@@ -19,7 +19,7 @@ def write_csv(inputted_dict):
 
 # add title of the citation
 
-def write_xlsx(inputted_data):
+def write_xlsx(inputted_data, pmid_list):
 
     wb = openpyxl.Workbook()
 
@@ -30,7 +30,7 @@ def write_xlsx(inputted_data):
     # 2. Iterate through the list of dictionaries
     for i, dict_list in enumerate(inputted_data):
 
-        ws = wb.create_sheet(title="Citation" + str(i + 1))
+        ws = wb.create_sheet(title=pmid_list[i])
 
         headers = list(dict_list[0].keys())
         ws.append(headers)
@@ -54,8 +54,10 @@ data = [
     {"Overall": "Fake", "Author": "Real", "Journal": "Real", "Publish Date": "Fake", "Author Order": "Real", "Publisher": "Real", "Percentage of Confidence": 95.00001, "Model": "Gemini"}]
 ]
 
+pmids = ["65sd4f3654f", "4d441dsf44"]
+
 if __name__ == "__main__":
-    write_xlsx(data)
+    write_xlsx(data, pmids)
 #
 # wb = openpyxl.Workbook()
 # ws = wb.active
