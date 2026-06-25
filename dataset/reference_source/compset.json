@@ -9294,5 +9294,27 @@
     "PMC13218738",
     "PMC7618428",
     "PMC12662413"
+  ],
+  "jname_set": [
+    {
+      "full": "Lancet (London, England)",
+      "short": "Lancet"
+    },
+    {
+      "full": "Nature. Mental health",
+      "short": "Nat Ment Health"
+    },
+    {
+      "full": "The New England journal of medicine",
+      "short": "N Engl J Med"
+    },
+    {
+      "full": "Nature",
+      "short": "Nature"
+    },
+    {
+      "full": "BMJ (Clinical research ed.)",
+      "short": "BMJ"
+    }
   ]
 }

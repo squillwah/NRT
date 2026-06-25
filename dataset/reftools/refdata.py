@@ -57,6 +57,12 @@ def component_set(*refdata):
         compset[key] = []
         for ref in refdata:
             compset[key].append(deepcopy(ref[key]))
+
+    # Additional sets for picking differents accross many duplicates
+    #compset["jname_set"] = { "full": list({fn for fn in [j["name"]["full"] for j in compset["journal"]]}),
+    #                         "short": list({sn for sn in [j["name"]["short"] for j in compset["journal"]]}) }
+    compset["jname_set"] = [dict(zip(("full", "short"), jname)) for jname in {tuple(j["name"].values()) for j in compset["journal"]}] # A set of every journal name (short/full dicts)
+    print(compset["jname_set"])
     return compset
 
 # Tests
@@ -71,8 +77,8 @@ if __name__ == "__main__":
     compset = component_set(*refdata)
 
     # Checking, all should be 100
-    print(json.dumps(refdata, indent=4))
-    print(json.dumps(compset, indent=4))
+    #print(json.dumps(refdata, indent=4))
+    #print(json.dumps(compset, indent=4))
     for key in compset:
         print(len(compset[key]))
 
