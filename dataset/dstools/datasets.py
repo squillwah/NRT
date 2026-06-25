@@ -7,7 +7,8 @@ from copy import deepcopy
 # Create a set entry from reference data
 def ds_entry(rd):
     return { "id": rd["pmcid"],        # Should we use PMID, PMCID, or some internal thing (just in index?).
-             "errors": 0b00000000,
+             "mutcode": 0b00000000,
+             "mutlabels": [],
              "data": deepcopy(rd),
              "format": {} }
 
@@ -16,20 +17,22 @@ def make_dataset(ref_data_list, *, v=False):
     dataset = [ds_entry(ref) for ref in ref_data_list]
     return dataset
 
-# Bake formatted references from refdata for every entry in a dataset
+# Bake formatted references from refdata for every entry in a dataset.
+# Also adds a human readable list of mutation labels.
 def bake_dataset(dataset):
     for entry in dataset:
         entry["format"] = RB.bake_formats(entry["data"])
+        entry["mutlabels"] = EntryMutator.explain_mutcode(entry["mutcode"])
 
 # Class of methods to mutate dataset entries using ref_mutator functions.
 class EntryMutator:
-    def __init__(self, *, component_set, h_titles, h_authors, h_journals):
-        # Mutation flags:  
-        mflag_keys = ("author_typo",    "author_mismatch",  "author_hallucinate",   "author_shuffle",   # Note: not all mutations are combinable.
-                      "title_typo",     "title_mismatch",   "title_hallucinate",                        # Also, be wary in the setting of these flags. A wrongly set flag will not reveal itself.
-                      "jname_typo",     "jname_mismatch",   "jname_hallucinate")
-        self._MFLAGS = {flag: 2**i for i, flag in enumerate(mflag_keys)} # Assign a unique bit to every flag.
+    # Mutation flags:  
+    _MLABELS = ("author_typo",    "author_mismatch",  "author_hallucinate",   "author_shuffle",   # Note: not all mutations are combinable.
+                "title_typo",     "title_mismatch",   "title_hallucinate",                        # Also, be wary in the setting of these flags. A wrongly set flag will not reveal itself.
+                "jname_typo",     "jname_mismatch",   "jname_hallucinate")
+    _MFLAGS = {flag: 2**i for i, flag in enumerate(_MLABELS)} # Assign a unique bit for every flag.
 
+    def __init__(self, *, component_set, h_titles, h_authors, h_journals):
         # Resources for hallucination and mismatch mutations
         self._COMPONENTS = component_set            # Alternatively, if we think a hallucination sample for every component is a good idea:
         self._FAKE_TITLES = h_titles                # self._REAL_COMPONENTS
@@ -37,9 +40,16 @@ class EntryMutator:
         self._FAKE_JOURNALS = h_journals            # The issue is, how fake can a date, DOI, or PMCID get? Fake enough to warrant that?
 
 ### little helpers
+    # Return list of mutation labels from mutcode.
+    @classmethod
+    def explain_mutcode(cls, code):
+        return [label for label in cls._MFLAGS if (code & cls._MFLAGS[label])]
     # Set mutation flag in ds_entry.
-    def _flag(self, ds_entry, flag):
-        ds_entry["errors"] = ds_entry["errors"] | self._MFLAGS[flag]
+    @classmethod
+    def _flag(cls, ds_entry, flag):
+        ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MFLAGS[flag]       # @todo !!!! Some mutations undo other ones (like running a mismatch or hallucination after a type).
+                                                                            #       !!!! Either we be very careful in the call order when making configuring datasets, or we add that logic here to remove the conflicted flag.
+
     # Randomly pick between fatfinger or swap typo types.
     def _fatswap(self, string, index):
         FATSWAP_RATIO = 2/3 # Fatfingers are twice as likely as swaps.
@@ -124,11 +134,11 @@ class EntryMutator:
         return ds_entry
     def jname_mismatch(self, ds_entry):
         ds_entry["data"]["journal"]["name"] = self._randcopy([jname for jname in self._COMPONENTS["jname_set"] if jname != ds_entry["data"]["journal"]["name"]])
-        self._flag(ds_entry, "title_mismatch")
+        self._flag(ds_entry, "jname_mismatch")
         return ds_entry
     def jname_hallucinate(self, ds_entry):
         ds_entry["data"]["journal"]["name"] = self._randcopy(self._FAKE_JOURNALS)    # @todo: !! Make sure the fake_journal source contains both full and short names, and that the file is parsed into the proper dict format!
-        self._flag(ds_entry, "title_hallucinate")
+        self._flag(ds_entry, "jname_hallucinate")
         return ds_entry
 
 ### JOURNAL VOLUME / ISSUE
