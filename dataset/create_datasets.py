@@ -20,8 +20,10 @@ if __name__ == "__main__":
     with open(f"{DIR}/refdata.json", "r") as f: refdata_src = json.load(f)
     with open(f"{DIR}/compset.json", "r") as f: compset_src = json.load(f)
     with open(f"{DIR}/h_titles.txt", "r") as f: h_title_src = [line.strip() for line in f if line.strip()]
-    with open(f"{DIR}/h_authors.txt", "r") as f: h_author_src = [line.strip() for line in f if line.strip()]
-    with open(f"{DIR}/h_journals.txt", "r") as f: h_journal_src = [line.strip() for line in f if line.strip()]
+    with open(f"{DIR}/h_authors.txt", "r") as f:
+        h_author_src = {"l": "FAKEAUTH", "f": "FAKEAUTH"} #{ "l": name, "f": name for name in [line.strip() for line in f if line.strip()]} # Placeholder. Either parse by ', ' or have source generate a json of last and first.
+    with open(f"{DIR}/h_journals.txt", "r") as f:
+        h_journal_src = {"full": "FAKEJOURN", "short": "FAKEJOURN"} #{ "full": name, "short": name for name in [line.strip() for line in f if line.strip()]} # Placeholder. Have the source be a JSON with {full, short}
 
     # Make datasets from source references.
     # * going by the five preliminary subsets outlined by Dr Pan, @todo: refine definitions.
