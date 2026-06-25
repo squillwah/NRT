@@ -52,3 +52,9 @@ def test_hallucinate(dataset):
         M.author_hallucinate(entry)
         M.title_hallucinate(entry)
         M.jname_hallucinate(entry)
+
+
+def test_voliss(dataset):
+    for entry in dataset:
+        M.jvol_randomize(entry)
+        M.jiss_randomize(entry)

@@ -5,8 +5,9 @@ import reftools.ref_formatters as RB
 import random
 
 # Create a set entry from reference data
-def ds_entry(rd):
-    return { "id": rd["pmcid"],        # Should we use PMID, PMCID, or some internal thing (just in index?).
+def ds_entry(rd, *, ID=None):
+    return { "id": ID,                  # Internal ID + original PMCID
+             "src_id": rd["pmcid"],
              "mutcode": 0b00000000,
              "mutlabels": [],
              "data": deepcopy(rd),
@@ -14,7 +15,7 @@ def ds_entry(rd):
 
 # Create a set of set entries from a list of reference data
 def make_dataset(ref_data_list, *, v=False):
-    dataset = [ds_entry(ref) for ref in ref_data_list]
+    dataset = [ds_entry(ref, ID=i) for i, ref in enumerate(ref_data_list)]
     return dataset
 
 # Bake formatted references from refdata for every entry in a dataset.
@@ -29,7 +30,8 @@ class EntryMutator:
     # Mutation flags:  
     _MLABELS = ("author_typo",    "author_mismatch",  "author_hallucinate",   "author_shuffle",   # Note: not all mutations are combinable.
                 "title_typo",     "title_mismatch",   "title_hallucinate",                        # Also, be wary in the setting of these flags. A wrongly set flag will not reveal itself.
-                "jname_typo",     "jname_mismatch",   "jname_hallucinate")
+                "jname_typo",     "jname_mismatch",   "jname_hallucinate",
+                "jvol_randomize", "jiss_randomize")
     _MFLAGS = {flag: 2**i for i, flag in enumerate(_MLABELS)} # Assign a unique bit for every flag.
 
     def __init__(self, *, component_set, h_titles, h_authors, h_journals):
@@ -40,6 +42,7 @@ class EntryMutator:
         self._FAKE_JOURNALS = h_journals            # The issue is, how fake can a date, DOI, or PMCID get? Fake enough to warrant that?
 
 ### little helpers
+
     # Return list of mutation labels from mutcode.
     @classmethod
     def explain_mutcode(cls, code):
@@ -54,6 +57,7 @@ class EntryMutator:
         return deepcopy(random.choice(collection))
 
 ### AUTHORS
+
     # For no good reason, author typo logic is different from T.typofy().
     def author_typo(self, ds_entry):
         # ! Regarding typos, the question is which kind and how many. What range of randomness do we want and why?      # Perhaps (if we care), there is a paper. 
@@ -97,6 +101,7 @@ class EntryMutator:
         return ds_entry
 
 ### TITLES
+
     def title_typo(self, ds_entry):
         ds_entry["data"]["title"] = T.typofy(ds_entry["data"]["title"])
         self._flag(ds_entry, "title_typo")
@@ -113,6 +118,7 @@ class EntryMutator:
         return ds_entry
 
 ### JOURNAL NAMES                                               # @todo: Think about: Should we be bothering with replacing each journal element like this, or should we just mismatch the whole thing together (name, date, volume, iss, pages)?
+
     def jname_typo(self, ds_entry):
         ds_entry["data"]["journal"]["name"]["short"] = T.typofy(ds_entry["data"]["journal"]["name"]["short"])
         ds_entry["data"]["journal"]["name"]["full"] = T.typofy(ds_entry["data"]["journal"]["name"]["full"])
@@ -128,21 +134,53 @@ class EntryMutator:
         return ds_entry
 
 ### JOURNAL VOLUME / ISSUE
-    def jvol_randomize(self, ds_entry): pass        # @todo: Consider: Should we bother doing mismatches / hallucinations for the numerics?
-    def jiss_randomize(self, ds_entry): pass
+
+    def jvol_randomize(self, ds_entry):             # @todo: Consider: Should we bother doing mismatches / hallucinations for the numerics?
+        if (vol := ds_entry["data"]["journal"]["volume"]):  # Not all references contain vol/iss data.
+            vol = int(vol)
+            ds_entry["data"]["journal"]["volume"] = random.choice([v for v in range(int(vol*.5), int(vol*1.5)) if v != vol]) # Arbitrary. Randomization range is the volume +/- half
+        else:
+            ds_entry["data"]["journal"]["volume"] = random.randint(0,500)
+            print(f" ! empty vol in {ds_entry["id"]} {ds_entry["src_id"]}, setting to niave random: {ds_entry["data"]["journal"]["volume"]}")
+            self._flag(ds_entry, "jvol_randomize")
+        return ds_entry
+
+    def jiss_randomize(self, ds_entry):
+        if (iss := ds_entry["data"]["journal"]["issue"]):
+            iss = int(iss)
+            ds_entry["data"]["journal"]["issue"] = random.choice([i for i in range(int(iss*.5), int(iss*1.5)) if i != iss])
+        else:
+            # @todo: If we want to ensure that we create a database subset with vols and iss randomizations, we could return a None to signal.
+            #        ALTERNATIVE would be to fail around it, and put some random number anyways.
+            #ds_entry["data"]["journal"]["issue"] = random.choice(self._COMPONENTS["journal"])["issue"] # !! It must be that the same empties exist in the compset. SO, just do a random number.
+            ds_entry["data"]["journal"]["issue"] = random.randint(0,1500)
+            print(f" ! empty iss in {ds_entry["id"]} {ds_entry["src_id"]}, setting to niave random: {ds_entry["data"]["journal"]["issue"]}")
+
+        self._flag(ds_entry, "jiss_randomize")
+        return ds_entry
+
+    # Could also perchance do a jissvol_mismatch (if one of our classifications implies it)
 
 ### JOURNAL PAGE NUMBERS
+
     def jpage_randomize(self, ds_entry): pass
 
+
+    # Other possibilities: mismatch, nonesense_randomize (end < start)
+    # If we do mismatches for these ones, that would make a big jALL_mismatch easy. Though it would be regardless, cause of compset structure. Whatever.
+
 ### JOURNAL PUBLICATION DATES
+
     def jpub_mismatch(self, ds_entry): pass
     def jpub_randomize(self, ds_entry): pass
 
 ### DIGITIAL PUBLICATION DATES
+
     def epub_mismatch(self, ds_entry): pass
     def epub_randomize(self, ds_entry): pass
 
 ### DOI
+
     def doi_typo(self, ds_entry): pass                  # @todo: Consider: If we do typo's on numerics, should they include fatfinger or only swap? The assumption is that fatfinger typos are too rare in this case (letters in a number would be seen and fixed).
     # ^ add one to each side or wu?
     def doi_mismatch_prefix(self, ds_entry): pass
@@ -151,6 +189,7 @@ class EntryMutator:
     def doi_randomize_suffix(self, ds_entry): pass
 
 ### PMIDS / PMCIDS
+
     def pmid_typo(self, ds_entry): pass
     def pmid_mismatch(self, ds_entry): pass
     def pmid_randomize(self, ds_entry): pass

@@ -72,17 +72,21 @@ if __name__ == "__main__":
 
     # Testing tests ...  
     dataset = datasets["source"]
-    print("===MISMATCHTEST===")
-    setconfig.test_mismatch(dataset)
-    bake_dataset(dataset)
-    print(json.dumps(dataset, indent=2))
+#    print("===MISMATCHTEST===")
+#    setconfig.test_mismatch(dataset)
+#    bake_dataset(dataset)
+#    print(json.dumps(dataset, indent=2))
+#
+#    print("===TYPOTEST===")
+#    setconfig.test_typos(dataset)
+#    bake_dataset(dataset)
+#    print(json.dumps(dataset, indent=2))
+#
+#    print("===HALLUCINATETEST===")
+#    setconfig.test_hallucinate(dataset)
+#    bake_dataset(dataset)
+#    print(json.dumps(dataset, indent=2))
 
-    print("===TYPOTEST===")
-    setconfig.test_typos(dataset)
-    bake_dataset(dataset)
-    print(json.dumps(dataset, indent=2))
-
-    print("===HALLUCINATETEST===")
-    setconfig.test_hallucinate(dataset)
+    setconfig.test_voliss(dataset)
     bake_dataset(dataset)
     print(json.dumps(dataset, indent=2))
