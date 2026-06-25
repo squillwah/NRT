@@ -104,12 +104,16 @@
     ],
     "title": "Reporting of Cohort and Routinely Collected Data in Randomised Controlled Trial Protocols (SPIRIT-ROUTINE): extension checklist with explanation and elaboration",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e087095",
-      "page_end": "e087095"
+      "page": {
+        "start": "e087095",
+        "end": "e087095"
+      }
     },
     "pub": {
       "y": "2026",
@@ -198,12 +202,16 @@
     ],
     "title": "Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088116",
-      "page_end": "e088116"
+      "page": {
+        "start": "e088116",
+        "end": "e088116"
+      }
     },
     "pub": {
       "y": "2026",
@@ -328,12 +336,16 @@
     ],
     "title": "Low concentration atropine eye drops and progression of myopia in children: multicentre placebo controlled, double masked, randomised trial in the UK (CHAMP-UK)",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e086698",
-      "page_end": "e086698"
+      "page": {
+        "start": "e086698",
+        "end": "e086698"
+      }
     },
     "pub": {
       "y": "2026",
@@ -378,12 +390,16 @@
     ],
     "title": "Advances in supporting development in autistic children and youth",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e086562",
-      "page_end": "e086562"
+      "page": {
+        "start": "e086562",
+        "end": "e086562"
+      }
     },
     "pub": {
       "y": "2026",
@@ -424,12 +440,16 @@
     ],
     "title": "Global, regional, and national levels and trends in under 5, infant, and neonatal mortality during 1990-2024 with scenario based projections to 2030: modelling study",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088684",
-      "page_end": "e088684"
+      "page": {
+        "start": "e088684",
+        "end": "e088684"
+      }
     },
     "pub": {
       "y": "2026",
@@ -486,12 +506,16 @@
     ],
     "title": "Estimates of global causes of death for children and adolescents aged 5-19 in 2000-24: secondary data analysis using bayesian multinomial logistic regression",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088687",
-      "page_end": "e088687"
+      "page": {
+        "start": "e088687",
+        "end": "e088687"
+      }
     },
     "pub": {
       "y": "2026",
@@ -560,12 +584,16 @@
     ],
     "title": "Systematic estimates of global causes of neonatal and under 5 mortality in 2000-24: secondary data analysis using bayesian multinomial logistic regression",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088686",
-      "page_end": "e088686"
+      "page": {
+        "start": "e088686",
+        "end": "e088686"
+      }
     },
     "pub": {
       "y": "2026",
@@ -614,12 +642,16 @@
     ],
     "title": "Outcome switching in cohort studies of interventions: meta-epidemiological study",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e087975",
-      "page_end": "e087975"
+      "page": {
+        "start": "e087975",
+        "end": "e087975"
+      }
     },
     "pub": {
       "y": "2026",
@@ -712,12 +744,16 @@
     ],
     "title": "UK National Screening Committee position statement on surrogate outcomes in cancer screening trials",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e629407",
-      "page_end": "e629407"
+      "page": {
+        "start": "e629407",
+        "end": "e629407"
+      }
     },
     "pub": {
       "y": "2026",
@@ -794,12 +830,16 @@
     ],
     "title": "UK National Screening Committee position statement on evidence required for multicancer detection tests",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e089868",
-      "page_end": "e089868"
+      "page": {
+        "start": "e089868",
+        "end": "e089868"
+      }
     },
     "pub": {
       "y": "2026",
@@ -916,12 +956,16 @@
     ],
     "title": "CRT-Estimands Framework: consensus based extension of the ICH E9(R1) addendum for cluster randomised trials",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e089050",
-      "page_end": "e089050"
+      "page": {
+        "start": "e089050",
+        "end": "e089050"
+      }
     },
     "pub": {
       "y": "2026",
@@ -978,12 +1022,16 @@
     ],
     "title": "Calcium, vitamin D, or combined supplementation to prevent fractures and falls: systematic review and meta-analysis",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088050",
-      "page_end": "e088050"
+      "page": {
+        "start": "e088050",
+        "end": "e088050"
+      }
     },
     "pub": {
       "y": "2026",
@@ -1032,12 +1080,16 @@
     ],
     "title": "Concordance between target trial emulation and randomised controlled trials: systematic review and meta-analysis",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e086810",
-      "page_end": "e086810"
+      "page": {
+        "start": "e086810",
+        "end": "e086810"
+      }
     },
     "pub": {
       "y": "2026",
@@ -1070,12 +1122,16 @@
     ],
     "title": "Health Bill brings NHS management back into government",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "s958",
-      "page_end": "s958"
+      "page": {
+        "start": "s958",
+        "end": "s958"
+      }
     },
     "pub": {
       "y": "2026",
@@ -1128,12 +1184,16 @@
     ],
     "title": "Analysing complex interventions using component network meta-analysis",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e083075",
-      "page_end": "e083075"
+      "page": {
+        "start": "e083075",
+        "end": "e083075"
+      }
     },
     "pub": {
       "y": "2026",
@@ -1302,12 +1362,16 @@
     ],
     "title": "Prophylactic tranexamic acid for the prevention of postpartum haemorrhage in women with placenta praevia: multicentre, double blind, randomised, placebo controlled, phase 3 trial",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e089636",
-      "page_end": "e089636"
+      "page": {
+        "start": "e089636",
+        "end": "e089636"
+      }
     },
     "pub": {
       "y": "2026",
@@ -1440,12 +1504,16 @@
     ],
     "title": "Efficacy of dual antiplatelet therapy for three months versus 12 months after coronary artery bypass grafting: multicentre, double blinded, randomised controlled trial",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088939",
-      "page_end": "e088939"
+      "page": {
+        "start": "e088939",
+        "end": "e088939"
+      }
     },
     "pub": {
       "y": "2026",
@@ -1494,12 +1562,16 @@
     ],
     "title": "Aluminium adjuvants in vaccines and potential health effects: systematic review",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088921",
-      "page_end": "e088921"
+      "page": {
+        "start": "e088921",
+        "end": "e088921"
+      }
     },
     "pub": {
       "y": "2026",
@@ -1536,12 +1608,16 @@
     ],
     "title": "Clinician in the loop: a flawed solution for AI oversight",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e089213",
-      "page_end": "e089213"
+      "page": {
+        "start": "e089213",
+        "end": "e089213"
+      }
     },
     "pub": {
       "y": "2026",
@@ -1654,12 +1730,16 @@
     ],
     "title": "Accelerated continuous theta burst stimulation targeting left primary motor cortex for children with autism spectrum disorder: multicentre randomised sham controlled trial",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e086295",
-      "page_end": "e086295"
+      "page": {
+        "start": "e086295",
+        "end": "e086295"
+      }
     },
     "pub": {
       "y": "2026",
@@ -1704,12 +1784,16 @@
     ],
     "title": "Benzodiazepine or Z-hypnotic use during pregnancy and risk of psychiatric disorders in children: population based cohort study",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088671",
-      "page_end": "e088671"
+      "page": {
+        "start": "e088671",
+        "end": "e088671"
+      }
     },
     "pub": {
       "y": "2026",
@@ -1742,12 +1826,16 @@
     ],
     "title": "Overcommercialisation of dental practice in England and decline in oral health",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088509",
-      "page_end": "e088509"
+      "page": {
+        "start": "e088509",
+        "end": "e088509"
+      }
     },
     "pub": {
       "y": "2026",
@@ -1804,12 +1892,16 @@
     ],
     "title": "Home environment conditions during childhood and psychosocial outcomes across three generations in Sweden: population based adoption-discordant sibling comparison study",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e087844",
-      "page_end": "e087844"
+      "page": {
+        "start": "e087844",
+        "end": "e087844"
+      }
     },
     "pub": {
       "y": "2026",
@@ -1894,12 +1986,16 @@
     ],
     "title": "Effectiveness of interventions to increase vaccine uptake: component network meta-analysis",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e087578",
-      "page_end": "e087578"
+      "page": {
+        "start": "e087578",
+        "end": "e087578"
+      }
     },
     "pub": {
       "y": "2026",
@@ -1976,12 +2072,16 @@
     ],
     "title": "Prenatal exposure to buprenorphine or methadone and adverse neurodevelopmental outcomes: population based cohort study",
     "journal": {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e087321",
-      "page_end": "e087321"
+      "page": {
+        "start": "e087321",
+        "end": "e087321"
+      }
     },
     "pub": {
       "y": "2026",
@@ -2086,12 +2186,16 @@
     ],
     "title": "Lethal plague outbreaks in Lake Baikal hunter-gatherers 5,500 years ago",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8119",
-      "page_start": "697",
-      "page_end": "705"
+      "page": {
+        "start": "697",
+        "end": "705"
+      }
     },
     "pub": {
       "y": "2026",
@@ -2484,12 +2588,16 @@
     ],
     "title": "A prototype differential atom interferometer for fundamental physics",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8119",
-      "page_start": "622",
-      "page_end": "628"
+      "page": {
+        "start": "622",
+        "end": "628"
+      }
     },
     "pub": {
       "y": "2026",
@@ -2562,12 +2670,16 @@
     ],
     "title": "Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis",
     "journal": {
-      "name_full": "Nature. Mental health",
-      "name_short": "Nat Ment Health",
+      "name": {
+        "full": "Nature. Mental health",
+        "short": "Nat Ment Health"
+      },
       "volume": "4",
       "issue": "6",
-      "page_start": "994",
-      "page_end": "1009"
+      "page": {
+        "start": "994",
+        "end": "1009"
+      }
     },
     "pub": {
       "y": "2026",
@@ -2632,12 +2744,16 @@
     ],
     "title": "Chiral superfluorescence from perovskite superlattices at room temperature",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8118",
-      "page_start": "369",
-      "page_end": "374"
+      "page": {
+        "start": "369",
+        "end": "374"
+      }
     },
     "pub": {
       "y": "2026",
@@ -2682,12 +2798,16 @@
     ],
     "title": "Analysis of trade-offs of post-sorting plastic packaging",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8118",
-      "page_start": "383",
-      "page_end": "390"
+      "page": {
+        "start": "383",
+        "end": "390"
+      }
     },
     "pub": {
       "y": "2026",
@@ -2720,12 +2840,16 @@
     ],
     "title": "Earth's east-west albedo symmetry",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8119",
-      "page_start": "676",
-      "page_end": "682"
+      "page": {
+        "start": "676",
+        "end": "682"
+      }
     },
     "pub": {
       "y": "2026",
@@ -2810,12 +2934,16 @@
     ],
     "title": "Enamel nanocrystal misorientation increased with meat-eating and agriculture",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8117",
-      "page_start": "76",
-      "page_end": "84"
+      "page": {
+        "start": "76",
+        "end": "84"
+      }
     },
     "pub": {
       "y": "2026",
@@ -2860,12 +2988,16 @@
     ],
     "title": "Relativistic electron acceleration at the bow shock of Jupiter and beyond",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8117",
-      "page_start": "47",
-      "page_end": "51"
+      "page": {
+        "start": "47",
+        "end": "51"
+      }
     },
     "pub": {
       "y": "2026",
@@ -2926,12 +3058,16 @@
     ],
     "title": "The association between autistic traits and trajectories of anxiety in middle-aged and older adults: an 8-year growth mixture model analysis",
     "journal": {
-      "name_full": "Nature. Mental health",
-      "name_short": "Nat Ment Health",
+      "name": {
+        "full": "Nature. Mental health",
+        "short": "Nat Ment Health"
+      },
       "volume": "4",
       "issue": "6",
-      "page_start": "971",
-      "page_end": "977"
+      "page": {
+        "start": "971",
+        "end": "977"
+      }
     },
     "pub": {
       "y": "2026",
@@ -3028,12 +3164,16 @@
     ],
     "title": "Multiscale heterogeneity of atypical functional connectivity in autism",
     "journal": {
-      "name_full": "Nature. Mental health",
-      "name_short": "Nat Ment Health",
+      "name": {
+        "full": "Nature. Mental health",
+        "short": "Nat Ment Health"
+      },
       "volume": "4",
       "issue": "6",
-      "page_start": "1010",
-      "page_end": "1020"
+      "page": {
+        "start": "1010",
+        "end": "1020"
+      }
     },
     "pub": {
       "y": "2026",
@@ -3214,12 +3354,16 @@
     ],
     "title": "A direct black-hole mass measurement in a little red dot at high redshift",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "653",
       "issue": "8116",
-      "page_start": "1017",
-      "page_end": "1021"
+      "page": {
+        "start": "1017",
+        "end": "1021"
+      }
     },
     "pub": {
       "y": "2026",
@@ -3472,12 +3616,16 @@
     ],
     "title": "Four ppm measurement of the antihydrogen ground-state hyperfine splitting",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "653",
       "issue": "8116",
-      "page_start": "1022",
-      "page_end": "1026"
+      "page": {
+        "start": "1022",
+        "end": "1026"
+      }
     },
     "pub": {
       "y": "2026",
@@ -3586,12 +3734,16 @@
     ],
     "title": "Universal transcriptomic hallmarks of mammalian ageing and mortality",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8117",
-      "page_start": "173",
-      "page_end": "188"
+      "page": {
+        "start": "173",
+        "end": "188"
+      }
     },
     "pub": {
       "y": "2026",
@@ -3636,12 +3788,16 @@
     ],
     "title": "Temporary carbon dioxide removal to offset short-lived climate forcers",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8118",
-      "page_start": "391",
-      "page_end": "397"
+      "page": {
+        "start": "391",
+        "end": "397"
+      }
     },
     "pub": {
       "y": "2026",
@@ -3678,12 +3834,16 @@
     ],
     "title": "Substrate selectivity of the human RNA m(5)C methyltransferase NSUN2",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "",
       "issue": "",
-      "page_start": "10.1038/s41586-026-10582-9",
-      "page_end": ""
+      "page": {
+        "start": "10.1038/s41586-026-10582-9",
+        "end": ""
+      }
     },
     "pub": {
       "y": "2026",
@@ -3736,12 +3896,16 @@
     ],
     "title": "Technology mediation in child sexual exploitation and abuse in Africa and Asia",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8118",
-      "page_start": "408",
-      "page_end": "418"
+      "page": {
+        "start": "408",
+        "end": "418"
+      }
     },
     "pub": {
       "y": "2026",
@@ -3778,12 +3942,16 @@
     ],
     "title": "Divergent urban storm response to convective, frontal and tropical systems",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "653",
       "issue": "8116",
-      "page_start": "1078",
-      "page_end": "1084"
+      "page": {
+        "start": "1078",
+        "end": "1084"
+      }
     },
     "pub": {
       "y": "2026",
@@ -3864,12 +4032,16 @@
     ],
     "title": "Nonlinear atomic tunnelling boosted by bright squeezed vacuum",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8118",
-      "page_start": "356",
-      "page_end": "360"
+      "page": {
+        "start": "356",
+        "end": "360"
+      }
     },
     "pub": {
       "y": "2026",
@@ -3926,12 +4098,16 @@
     ],
     "title": "Neural representation of action symbols in primate frontal cortex",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8117",
-      "page_start": "152",
-      "page_end": "162"
+      "page": {
+        "start": "152",
+        "end": "162"
+      }
     },
     "pub": {
       "y": "2026",
@@ -4004,12 +4180,16 @@
     ],
     "title": "Dopamine drives persistent remodelling of the maternal brain",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8118",
-      "page_start": "465",
-      "page_end": "475"
+      "page": {
+        "start": "465",
+        "end": "475"
+      }
     },
     "pub": {
       "y": "2026",
@@ -4074,12 +4254,16 @@
     ],
     "title": "Cusp-singularity-enhanced Coriolis effect for sensitive chip-scale gyroscopes",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "653",
       "issue": "8115",
-      "page_start": "700",
-      "page_end": "706"
+      "page": {
+        "start": "700",
+        "end": "706"
+      }
     },
     "pub": {
       "y": "2026",
@@ -4192,12 +4376,16 @@
     ],
     "title": "Stereoelectronic manipulation of ligands for perovskite solar cells",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8119",
-      "page_start": "660",
-      "page_end": "667"
+      "page": {
+        "start": "660",
+        "end": "667"
+      }
     },
     "pub": {
       "y": "2026",
@@ -4262,12 +4450,16 @@
     ],
     "title": "Eosinophils drive intestinal remodelling and innate defence in reproduction",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8117",
-      "page_start": "209",
-      "page_end": "218"
+      "page": {
+        "start": "209",
+        "end": "218"
+      }
     },
     "pub": {
       "y": "2026",
@@ -4320,12 +4512,16 @@
     ],
     "title": "Efficient robot navigation inspired by honeybee learning flights",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "653",
       "issue": "8116",
-      "page_start": "1039",
-      "page_end": "1046"
+      "page": {
+        "start": "1039",
+        "end": "1046"
+      }
     },
     "pub": {
       "y": "2026",
@@ -4350,12 +4546,16 @@
     ],
     "title": "Obesity rise plateaus in developed nations and accelerates in developing nations",
     "journal": {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "653",
       "issue": "8114",
-      "page_start": "510",
-      "page_end": "518"
+      "page": {
+        "start": "510",
+        "end": "518"
+      }
     },
     "pub": {
       "y": "2026",
@@ -4492,12 +4692,16 @@
     ],
     "title": "Safety and efficacy of the monoclonal antibody L9LS for malaria prevention in children exposed to perennial malaria transmission in Kenya: a randomised, double-blind, placebo-controlled, phase 2 trial",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "407",
       "issue": "10539",
-      "page_start": "1614",
-      "page_end": "1625"
+      "page": {
+        "start": "1614",
+        "end": "1625"
+      }
     },
     "pub": {
       "y": "2026",
@@ -4566,12 +4770,16 @@
     ],
     "title": "Adult obesity and risk of severe infections: a multicohort study with global burden estimates",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "407",
       "issue": "10532",
-      "page_start": "951",
-      "page_end": "962"
+      "page": {
+        "start": "951",
+        "end": "962"
+      }
     },
     "pub": {
       "y": "2026",
@@ -4600,12 +4808,16 @@
     ],
     "title": "Assessment of adverse effects attributed to statin therapy in product labels: a meta-analysis of double-blind randomised controlled trials",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "407",
       "issue": "10529",
-      "page_start": "689",
-      "page_end": "703"
+      "page": {
+        "start": "689",
+        "end": "703"
+      }
     },
     "pub": {
       "y": "2026",
@@ -4802,12 +5014,16 @@
     ],
     "title": "Maternal and neonatal outcomes after infection with monkeypox virus clade I during pregnancy in DR Congo: a pooled, prospective cohort study",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "407",
       "issue": "10525",
-      "page_start": "256",
-      "page_end": "266"
+      "page": {
+        "start": "256",
+        "end": "266"
+      }
     },
     "pub": {
       "y": "2026",
@@ -4928,12 +5144,16 @@
     ],
     "title": "Zoliflodacin versus ceftriaxone plus azithromycin for treatment of uncomplicated urogenital gonorrhoea: an international, randomised, controlled, open-label, phase 3, non-inferiority clinical trial",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "407",
       "issue": "10524",
-      "page_start": "147",
-      "page_end": "160"
+      "page": {
+        "start": "147",
+        "end": "160"
+      }
     },
     "pub": {
       "y": "2026",
@@ -4958,12 +5178,16 @@
     ],
     "title": "Disease burden attributable to intimate partner violence against females and sexual violence against children in 204 countries and territories, 1990-2023: a systematic analysis for the Global Burden of Disease Study 2023",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "407",
       "issue": "10523",
-      "page_start": "31",
-      "page_end": "52"
+      "page": {
+        "start": "31",
+        "end": "52"
+      }
     },
     "pub": {
       "y": "2026",
@@ -4988,12 +5212,16 @@
     ],
     "title": "Global burden of 292 causes of death in 204 countries and territories and 660 subnational locations, 1990-2023: a systematic analysis for the Global Burden of Disease Study 2023",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10513",
-      "page_start": "1811",
-      "page_end": "1872"
+      "page": {
+        "start": "1811",
+        "end": "1872"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5018,12 +5246,16 @@
     ],
     "title": "Global age-sex-specific all-cause mortality and life expectancy estimates for 204 countries and territories and 660 subnational locations, 1950-2023: a demographic analysis for the Global Burden of Disease Study 2023",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10513",
-      "page_start": "1731",
-      "page_end": "1810"
+      "page": {
+        "start": "1731",
+        "end": "1810"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5048,12 +5280,16 @@
     ],
     "title": "Burden of 375 diseases and injuries, risk-attributable burden of 88 risk factors, and healthy life expectancy in 204 countries and territories, including 660 subnational locations, 1990-2023: a systematic analysis for the Global Burden of Disease Study 2023",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10513",
-      "page_start": "1873",
-      "page_end": "1922"
+      "page": {
+        "start": "1873",
+        "end": "1922"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5150,12 +5386,16 @@
     ],
     "title": "Prognostic accuracy of clinical markers of postpartum bleeding in predicting maternal mortality or severe morbidity: a WHO individual participant data meta-analysis",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10514",
-      "page_start": "1969",
-      "page_end": "1982"
+      "page": {
+        "start": "1969",
+        "end": "1982"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5300,12 +5540,16 @@
     ],
     "title": "Ibrutinib and rituximab versus immunochemotherapy in patients with previously untreated mantle cell lymphoma (ENRICH): a randomised, open-label, phase 2/3 superiority trial",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10514",
-      "page_start": "1953",
-      "page_end": "1968"
+      "page": {
+        "start": "1953",
+        "end": "1968"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5330,12 +5574,16 @@
     ],
     "title": "The global, regional, and national burden of cancer, 1990-2023, with forecasts to 2050: a systematic analysis for the Global Burden of Disease Study 2023",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10512",
-      "page_start": "1565",
-      "page_end": "1586"
+      "page": {
+        "start": "1565",
+        "end": "1586"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5360,12 +5608,16 @@
     ],
     "title": "Benchmarking progress in non-communicable diseases: a global analysis of cause-specific mortality from 2001 to 2019",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10509",
-      "page_start": "1255",
-      "page_end": "1282"
+      "page": {
+        "start": "1255",
+        "end": "1282"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5422,12 +5674,16 @@
     ],
     "title": "Epidemiological and demographic trends and projections in global health from 1970 to 2050: a descriptive analysis from the third Lancet Commission on Investing in Health, Global Health 2050",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10506",
-      "page_start": "940",
-      "page_end": "949"
+      "page": {
+        "start": "940",
+        "end": "949"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5496,12 +5752,16 @@
     ],
     "title": "Tracking development assistance for health, 1990-2030: historical trends, recent cuts, and outlook",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10501",
-      "page_start": "337",
-      "page_end": "348"
+      "page": {
+        "start": "337",
+        "end": "348"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5570,12 +5830,16 @@
     ],
     "title": "Estimating the effect of maternal viral load on perinatal and postnatal HIV transmission: a systematic review and meta-analysis",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10501",
-      "page_start": "349",
-      "page_end": "357"
+      "page": {
+        "start": "349",
+        "end": "357"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5656,12 +5920,16 @@
     ],
     "title": "Evaluating the impact of two decades of USAID interventions and projecting the effects of defunding on mortality up to 2030: a retrospective impact evaluation and forecasting analysis",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10500",
-      "page_start": "283",
-      "page_end": "294"
+      "page": {
+        "start": "283",
+        "end": "294"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5686,12 +5954,16 @@
     ],
     "title": "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: a systematic analysis for the Global Burden of Disease Study 2023",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10500",
-      "page_start": "235",
-      "page_end": "260"
+      "page": {
+        "start": "235",
+        "end": "260"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5748,12 +6020,16 @@
     ],
     "title": "Trachoma",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "405",
       "issue": "10492",
-      "page_start": "1865",
-      "page_end": "1878"
+      "page": {
+        "start": "1865",
+        "end": "1878"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5822,12 +6098,16 @@
     ],
     "title": "Prevalence of sexual violence against children and age at first exposure: a global analysis by location, age, and sex (1990-2023)",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "405",
       "issue": "10492",
-      "page_start": "1817",
-      "page_end": "1836"
+      "page": {
+        "start": "1817",
+        "end": "1836"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5888,12 +6168,16 @@
     ],
     "title": "Charting a path to health for all at net-zero emissions",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "",
       "issue": "",
-      "page_start": "S0140-6736(25)00813-X",
-      "page_end": ""
+      "page": {
+        "start": "S0140-6736(25)00813-X",
+        "end": ""
+      }
     },
     "pub": {
       "y": "2025",
@@ -5946,12 +6230,16 @@
     ],
     "title": "Negative pressure wound therapy versus usual care in patients with surgical wound healing by secondary intention in the UK (SWHSI-2): an open-label, multicentre, parallel-group, randomised controlled trial",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "405",
       "issue": "10490",
-      "page_start": "1689",
-      "page_end": "1699"
+      "page": {
+        "start": "1689",
+        "end": "1699"
+      }
     },
     "pub": {
       "y": "2025",
@@ -5976,12 +6264,16 @@
     ],
     "title": "A taste of your own medicine: the experience of a transplant",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "405",
       "issue": "10486",
-      "page_start": "1220",
-      "page_end": "1221"
+      "page": {
+        "start": "1220",
+        "end": "1221"
+      }
     },
     "pub": {
       "y": "2025",
@@ -6006,12 +6298,16 @@
     ],
     "title": "Global, regional, and national burden of household air pollution, 1990-2021: a systematic analysis for the Global Burden of Disease Study 2021",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "405",
       "issue": "10485",
-      "page_start": "1167",
-      "page_end": "1181"
+      "page": {
+        "start": "1167",
+        "end": "1181"
+      }
     },
     "pub": {
       "y": "2025",
@@ -6252,12 +6548,16 @@
     ],
     "title": "A multifaceted intervention to improve diagnosis and early management of hospitalised patients with suspected acute brain infections in Brazil, India, and Malawi: an international multicentre intervention study",
     "journal": {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "405",
       "issue": "10483",
-      "page_start": "991",
-      "page_end": "1003"
+      "page": {
+        "start": "991",
+        "end": "1003"
+      }
     },
     "pub": {
       "y": "2025",
@@ -6426,12 +6726,16 @@
     ],
     "title": "Kidney Transplantation in Two Highly Sensitized Candidates after CAR T-Cell Therapy",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "21",
-      "page_start": "2117",
-      "page_end": "2125"
+      "page": {
+        "start": "2117",
+        "end": "2125"
+      }
     },
     "pub": {
       "y": "2026",
@@ -6464,22 +6768,26 @@
     ],
     "title": "Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
-      "volume": "",
-      "issue": "",
-      "page_start": "10.1056/NEJMc2604004",
-      "page_end": ""
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
+      "volume": "394",
+      "issue": "24",
+      "page": {
+        "start": "2479",
+        "end": "2481"
+      }
     },
     "pub": {
       "y": "2026",
-      "m": "05",
-      "d": "20"
+      "m": "06",
+      "d": "25"
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": "2026",
+      "m": "05",
+      "d": "20"
     },
     "doi": "10.1056/NEJMc2604004",
     "pmid": "42160720",
@@ -6550,12 +6858,16 @@
     ],
     "title": "Azithromycin for Preschoolers with Wheezing in the Emergency Department",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "",
       "issue": "",
-      "page_start": "10.1056/NEJMoa2516505",
-      "page_end": ""
+      "page": {
+        "start": "10.1056/NEJMoa2516505",
+        "end": ""
+      }
     },
     "pub": {
       "y": "2026",
@@ -6604,12 +6916,16 @@
     ],
     "title": "Dulaglutide-Associated Choroidal Lymphoid Hyperplasia",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "19",
-      "page_start": "1959",
-      "page_end": "1961"
+      "page": {
+        "start": "1959",
+        "end": "1961"
+      }
     },
     "pub": {
       "y": "2026",
@@ -6730,12 +7046,16 @@
     ],
     "title": "Pulmonary Tuberculosis Detection with MiniDock MTB Using Swab Samples",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "17",
-      "page_start": "1710",
-      "page_end": "1722"
+      "page": {
+        "start": "1710",
+        "end": "1722"
+      }
     },
     "pub": {
       "y": "2026",
@@ -7008,12 +7328,16 @@
     ],
     "title": "Balanced Fluid or 0.9% Saline in Children Treated for Septic Shock",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "",
       "issue": "",
-      "page_start": "10.1056/NEJMoa2601969",
-      "page_end": ""
+      "page": {
+        "start": "10.1056/NEJMoa2601969",
+        "end": ""
+      }
     },
     "pub": {
       "y": "2026",
@@ -7206,12 +7530,16 @@
     ],
     "title": "Oral Nirmatrelvir-Ritonavir for Covid-19 in Higher-Risk Outpatients",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "16",
-      "page_start": "1583",
-      "page_end": "1594"
+      "page": {
+        "start": "1583",
+        "end": "1594"
+      }
     },
     "pub": {
       "y": "2026",
@@ -7268,12 +7596,16 @@
     ],
     "title": "Risk of Guillain-Barr\u00e9 Syndrome after Laboratory-Confirmed Dengue Infection",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "15",
-      "page_start": "1546",
-      "page_end": "1548"
+      "page": {
+        "start": "1546",
+        "end": "1548"
+      }
     },
     "pub": {
       "y": "2026",
@@ -7458,12 +7790,16 @@
     ],
     "title": "Endovascular Therapy for Post-Thrombotic Syndrome - A Randomized Trial",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "23",
-      "page_start": "2293",
-      "page_end": "2304"
+      "page": {
+        "start": "2293",
+        "end": "2304"
+      }
     },
     "pub": {
       "y": "2026",
@@ -7500,12 +7836,16 @@
     ],
     "title": "Trends in Youth-Onset Type 2 Diabetes, 2013-2024",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "14",
-      "page_start": "1451",
-      "page_end": "1453"
+      "page": {
+        "start": "1451",
+        "end": "1453"
+      }
     },
     "pub": {
       "y": "2026",
@@ -7606,12 +7946,16 @@
     ],
     "title": "Multifaceted Strategies for Hypertension Control in Low-Income Patients",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "14",
-      "page_start": "1376",
-      "page_end": "1387"
+      "page": {
+        "start": "1376",
+        "end": "1387"
+      }
     },
     "pub": {
       "y": "2026",
@@ -7668,12 +8012,16 @@
     ],
     "title": "Digital Twin-Guided Ablation for Ventricular Tachycardia",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "13",
-      "page_start": "1345",
-      "page_end": "1347"
+      "page": {
+        "start": "1345",
+        "end": "1347"
+      }
     },
     "pub": {
       "y": "2026",
@@ -7786,12 +8134,16 @@
     ],
     "title": "Atezolizumab plus FOLFOX for Stage III Mismatch Repair-Deficient Colon Cancer",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "12",
-      "page_start": "1155",
-      "page_end": "1166"
+      "page": {
+        "start": "1155",
+        "end": "1166"
+      }
     },
     "pub": {
       "y": "2026",
@@ -7828,12 +8180,16 @@
     ],
     "title": "Tuberculosis Cases and Deaths Averted by PEPFAR",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "16",
-      "page_start": "1655",
-      "page_end": "1656"
+      "page": {
+        "start": "1655",
+        "end": "1656"
+      }
     },
     "pub": {
       "y": "2026",
@@ -7898,12 +8254,16 @@
     ],
     "title": "Revival of Ethionamide by Alpibectir",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "8",
-      "page_start": "818",
-      "page_end": "819"
+      "page": {
+        "start": "818",
+        "end": "819"
+      }
     },
     "pub": {
       "y": "2026",
@@ -8072,12 +8432,16 @@
     ],
     "title": "Cabotegravir plus Rilpivirine for Persons with HIV and Adherence Challenges",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "9",
-      "page_start": "858",
-      "page_end": "871"
+      "page": {
+        "start": "858",
+        "end": "871"
+      }
     },
     "pub": {
       "y": "2026",
@@ -8182,12 +8546,16 @@
     ],
     "title": "Adenoviral Inciting Antigen and Somatic Hypermutation in VITT",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "7",
-      "page_start": "669",
-      "page_end": "683"
+      "page": {
+        "start": "669",
+        "end": "683"
+      }
     },
     "pub": {
       "y": "2026",
@@ -8332,12 +8700,16 @@
     ],
     "title": "AAV9 Gene Therapy in Type II GM1 Gangliosidosis - A Phase 1-2 Trial",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "12",
-      "page_start": "1184",
-      "page_end": "1194"
+      "page": {
+        "start": "1184",
+        "end": "1194"
+      }
     },
     "pub": {
       "y": "2026",
@@ -8370,12 +8742,16 @@
     ],
     "title": "Borrelia burgdorferi Infection and Erythema Migrans",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "3",
-      "page_start": "302",
-      "page_end": "303"
+      "page": {
+        "start": "302",
+        "end": "303"
+      }
     },
     "pub": {
       "y": "2026",
@@ -8412,12 +8788,16 @@
     ],
     "title": "Serogroup Switching in Neisseria meningitidis with Dual Antibiotic Resistance",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "2",
-      "page_start": "199",
-      "page_end": "201"
+      "page": {
+        "start": "199",
+        "end": "201"
+      }
     },
     "pub": {
       "y": "2026",
@@ -8582,12 +8962,16 @@
     ],
     "title": "Trial of High-Dose Oral Rifampin in Adults with Tuberculous Meningitis",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "393",
       "issue": "24",
-      "page_start": "2434",
-      "page_end": "2446"
+      "page": {
+        "start": "2434",
+        "end": "2446"
+      }
     },
     "pub": {
       "y": "2025",
@@ -8636,12 +9020,16 @@
     ],
     "title": "Molecular Evidence of Multiorgan Damage in Patients with Immune-Related Adverse Events",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "393",
       "issue": "23",
-      "page_start": "2377",
-      "page_end": "2379"
+      "page": {
+        "start": "2377",
+        "end": "2379"
+      }
     },
     "pub": {
       "y": "2025",
@@ -8842,12 +9230,16 @@
     ],
     "title": "Teclistamab plus Daratumumab in Relapsed or Refractory Multiple Myeloma",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "8",
-      "page_start": "739",
-      "page_end": "752"
+      "page": {
+        "start": "739",
+        "end": "752"
+      }
     },
     "pub": {
       "y": "2026",
@@ -8924,12 +9316,16 @@
     ],
     "title": "Adrenal Aldosterone Synthase Expression Imaging in Primary Aldosteronism",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "393",
       "issue": "21",
-      "page_start": "2168",
-      "page_end": "2170"
+      "page": {
+        "start": "2168",
+        "end": "2170"
+      }
     },
     "pub": {
       "y": "2025",
@@ -9058,12 +9454,16 @@
     ],
     "title": "Daily Mosnodenvir as Dengue Prophylaxis in a Controlled Human Infection Model",
     "journal": {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "393",
       "issue": "21",
-      "page_start": "2107",
-      "page_end": "2118"
+      "page": {
+        "start": "2107",
+        "end": "2118"
+      }
     },
     "pub": {
       "y": "2025",

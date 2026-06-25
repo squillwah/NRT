@@ -6785,804 +6785,1204 @@
   ],
   "journal": [
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e087095",
-      "page_end": "e087095"
+      "page": {
+        "start": "e087095",
+        "end": "e087095"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088116",
-      "page_end": "e088116"
+      "page": {
+        "start": "e088116",
+        "end": "e088116"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e086698",
-      "page_end": "e086698"
+      "page": {
+        "start": "e086698",
+        "end": "e086698"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e086562",
-      "page_end": "e086562"
+      "page": {
+        "start": "e086562",
+        "end": "e086562"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088684",
-      "page_end": "e088684"
+      "page": {
+        "start": "e088684",
+        "end": "e088684"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088687",
-      "page_end": "e088687"
+      "page": {
+        "start": "e088687",
+        "end": "e088687"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088686",
-      "page_end": "e088686"
+      "page": {
+        "start": "e088686",
+        "end": "e088686"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e087975",
-      "page_end": "e087975"
+      "page": {
+        "start": "e087975",
+        "end": "e087975"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e629407",
-      "page_end": "e629407"
+      "page": {
+        "start": "e629407",
+        "end": "e629407"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e089868",
-      "page_end": "e089868"
+      "page": {
+        "start": "e089868",
+        "end": "e089868"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e089050",
-      "page_end": "e089050"
+      "page": {
+        "start": "e089050",
+        "end": "e089050"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088050",
-      "page_end": "e088050"
+      "page": {
+        "start": "e088050",
+        "end": "e088050"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e086810",
-      "page_end": "e086810"
+      "page": {
+        "start": "e086810",
+        "end": "e086810"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "s958",
-      "page_end": "s958"
+      "page": {
+        "start": "s958",
+        "end": "s958"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e083075",
-      "page_end": "e083075"
+      "page": {
+        "start": "e083075",
+        "end": "e083075"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e089636",
-      "page_end": "e089636"
+      "page": {
+        "start": "e089636",
+        "end": "e089636"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088939",
-      "page_end": "e088939"
+      "page": {
+        "start": "e088939",
+        "end": "e088939"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088921",
-      "page_end": "e088921"
+      "page": {
+        "start": "e088921",
+        "end": "e088921"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e089213",
-      "page_end": "e089213"
+      "page": {
+        "start": "e089213",
+        "end": "e089213"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e086295",
-      "page_end": "e086295"
+      "page": {
+        "start": "e086295",
+        "end": "e086295"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088671",
-      "page_end": "e088671"
+      "page": {
+        "start": "e088671",
+        "end": "e088671"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e088509",
-      "page_end": "e088509"
+      "page": {
+        "start": "e088509",
+        "end": "e088509"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e087844",
-      "page_end": "e087844"
+      "page": {
+        "start": "e087844",
+        "end": "e087844"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e087578",
-      "page_end": "e087578"
+      "page": {
+        "start": "e087578",
+        "end": "e087578"
+      }
     },
     {
-      "name_full": "BMJ (Clinical research ed.)",
-      "name_short": "BMJ",
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
       "volume": "393",
       "issue": "",
-      "page_start": "e087321",
-      "page_end": "e087321"
+      "page": {
+        "start": "e087321",
+        "end": "e087321"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8119",
-      "page_start": "697",
-      "page_end": "705"
+      "page": {
+        "start": "697",
+        "end": "705"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8119",
-      "page_start": "622",
-      "page_end": "628"
+      "page": {
+        "start": "622",
+        "end": "628"
+      }
     },
     {
-      "name_full": "Nature. Mental health",
-      "name_short": "Nat Ment Health",
+      "name": {
+        "full": "Nature. Mental health",
+        "short": "Nat Ment Health"
+      },
       "volume": "4",
       "issue": "6",
-      "page_start": "994",
-      "page_end": "1009"
+      "page": {
+        "start": "994",
+        "end": "1009"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8118",
-      "page_start": "369",
-      "page_end": "374"
+      "page": {
+        "start": "369",
+        "end": "374"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8118",
-      "page_start": "383",
-      "page_end": "390"
+      "page": {
+        "start": "383",
+        "end": "390"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8119",
-      "page_start": "676",
-      "page_end": "682"
+      "page": {
+        "start": "676",
+        "end": "682"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8117",
-      "page_start": "76",
-      "page_end": "84"
+      "page": {
+        "start": "76",
+        "end": "84"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8117",
-      "page_start": "47",
-      "page_end": "51"
+      "page": {
+        "start": "47",
+        "end": "51"
+      }
     },
     {
-      "name_full": "Nature. Mental health",
-      "name_short": "Nat Ment Health",
+      "name": {
+        "full": "Nature. Mental health",
+        "short": "Nat Ment Health"
+      },
       "volume": "4",
       "issue": "6",
-      "page_start": "971",
-      "page_end": "977"
+      "page": {
+        "start": "971",
+        "end": "977"
+      }
     },
     {
-      "name_full": "Nature. Mental health",
-      "name_short": "Nat Ment Health",
+      "name": {
+        "full": "Nature. Mental health",
+        "short": "Nat Ment Health"
+      },
       "volume": "4",
       "issue": "6",
-      "page_start": "1010",
-      "page_end": "1020"
+      "page": {
+        "start": "1010",
+        "end": "1020"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "653",
       "issue": "8116",
-      "page_start": "1017",
-      "page_end": "1021"
+      "page": {
+        "start": "1017",
+        "end": "1021"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "653",
       "issue": "8116",
-      "page_start": "1022",
-      "page_end": "1026"
+      "page": {
+        "start": "1022",
+        "end": "1026"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8117",
-      "page_start": "173",
-      "page_end": "188"
+      "page": {
+        "start": "173",
+        "end": "188"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8118",
-      "page_start": "391",
-      "page_end": "397"
+      "page": {
+        "start": "391",
+        "end": "397"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "",
       "issue": "",
-      "page_start": "10.1038/s41586-026-10582-9",
-      "page_end": ""
+      "page": {
+        "start": "10.1038/s41586-026-10582-9",
+        "end": ""
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8118",
-      "page_start": "408",
-      "page_end": "418"
+      "page": {
+        "start": "408",
+        "end": "418"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "653",
       "issue": "8116",
-      "page_start": "1078",
-      "page_end": "1084"
+      "page": {
+        "start": "1078",
+        "end": "1084"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8118",
-      "page_start": "356",
-      "page_end": "360"
+      "page": {
+        "start": "356",
+        "end": "360"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8117",
-      "page_start": "152",
-      "page_end": "162"
+      "page": {
+        "start": "152",
+        "end": "162"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8118",
-      "page_start": "465",
-      "page_end": "475"
+      "page": {
+        "start": "465",
+        "end": "475"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "653",
       "issue": "8115",
-      "page_start": "700",
-      "page_end": "706"
+      "page": {
+        "start": "700",
+        "end": "706"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8119",
-      "page_start": "660",
-      "page_end": "667"
+      "page": {
+        "start": "660",
+        "end": "667"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "654",
       "issue": "8117",
-      "page_start": "209",
-      "page_end": "218"
+      "page": {
+        "start": "209",
+        "end": "218"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "653",
       "issue": "8116",
-      "page_start": "1039",
-      "page_end": "1046"
+      "page": {
+        "start": "1039",
+        "end": "1046"
+      }
     },
     {
-      "name_full": "Nature",
-      "name_short": "Nature",
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
       "volume": "653",
       "issue": "8114",
-      "page_start": "510",
-      "page_end": "518"
+      "page": {
+        "start": "510",
+        "end": "518"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "407",
       "issue": "10539",
-      "page_start": "1614",
-      "page_end": "1625"
+      "page": {
+        "start": "1614",
+        "end": "1625"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "407",
       "issue": "10532",
-      "page_start": "951",
-      "page_end": "962"
+      "page": {
+        "start": "951",
+        "end": "962"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "407",
       "issue": "10529",
-      "page_start": "689",
-      "page_end": "703"
+      "page": {
+        "start": "689",
+        "end": "703"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "407",
       "issue": "10525",
-      "page_start": "256",
-      "page_end": "266"
+      "page": {
+        "start": "256",
+        "end": "266"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "407",
       "issue": "10524",
-      "page_start": "147",
-      "page_end": "160"
+      "page": {
+        "start": "147",
+        "end": "160"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "407",
       "issue": "10523",
-      "page_start": "31",
-      "page_end": "52"
+      "page": {
+        "start": "31",
+        "end": "52"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10513",
-      "page_start": "1811",
-      "page_end": "1872"
+      "page": {
+        "start": "1811",
+        "end": "1872"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10513",
-      "page_start": "1731",
-      "page_end": "1810"
+      "page": {
+        "start": "1731",
+        "end": "1810"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10513",
-      "page_start": "1873",
-      "page_end": "1922"
+      "page": {
+        "start": "1873",
+        "end": "1922"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10514",
-      "page_start": "1969",
-      "page_end": "1982"
+      "page": {
+        "start": "1969",
+        "end": "1982"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10514",
-      "page_start": "1953",
-      "page_end": "1968"
+      "page": {
+        "start": "1953",
+        "end": "1968"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10512",
-      "page_start": "1565",
-      "page_end": "1586"
+      "page": {
+        "start": "1565",
+        "end": "1586"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10509",
-      "page_start": "1255",
-      "page_end": "1282"
+      "page": {
+        "start": "1255",
+        "end": "1282"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10506",
-      "page_start": "940",
-      "page_end": "949"
+      "page": {
+        "start": "940",
+        "end": "949"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10501",
-      "page_start": "337",
-      "page_end": "348"
+      "page": {
+        "start": "337",
+        "end": "348"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10501",
-      "page_start": "349",
-      "page_end": "357"
+      "page": {
+        "start": "349",
+        "end": "357"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10500",
-      "page_start": "283",
-      "page_end": "294"
+      "page": {
+        "start": "283",
+        "end": "294"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "406",
       "issue": "10500",
-      "page_start": "235",
-      "page_end": "260"
+      "page": {
+        "start": "235",
+        "end": "260"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "405",
       "issue": "10492",
-      "page_start": "1865",
-      "page_end": "1878"
+      "page": {
+        "start": "1865",
+        "end": "1878"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "405",
       "issue": "10492",
-      "page_start": "1817",
-      "page_end": "1836"
+      "page": {
+        "start": "1817",
+        "end": "1836"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "",
       "issue": "",
-      "page_start": "S0140-6736(25)00813-X",
-      "page_end": ""
+      "page": {
+        "start": "S0140-6736(25)00813-X",
+        "end": ""
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "405",
       "issue": "10490",
-      "page_start": "1689",
-      "page_end": "1699"
+      "page": {
+        "start": "1689",
+        "end": "1699"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "405",
       "issue": "10486",
-      "page_start": "1220",
-      "page_end": "1221"
+      "page": {
+        "start": "1220",
+        "end": "1221"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "405",
       "issue": "10485",
-      "page_start": "1167",
-      "page_end": "1181"
+      "page": {
+        "start": "1167",
+        "end": "1181"
+      }
     },
     {
-      "name_full": "Lancet (London, England)",
-      "name_short": "Lancet",
+      "name": {
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
+      },
       "volume": "405",
       "issue": "10483",
-      "page_start": "991",
-      "page_end": "1003"
+      "page": {
+        "start": "991",
+        "end": "1003"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "21",
-      "page_start": "2117",
-      "page_end": "2125"
+      "page": {
+        "start": "2117",
+        "end": "2125"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
+      "volume": "394",
+      "issue": "24",
+      "page": {
+        "start": "2479",
+        "end": "2481"
+      }
+    },
+    {
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "",
       "issue": "",
-      "page_start": "10.1056/NEJMc2604004",
-      "page_end": ""
+      "page": {
+        "start": "10.1056/NEJMoa2516505",
+        "end": ""
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
-      "volume": "",
-      "issue": "",
-      "page_start": "10.1056/NEJMoa2516505",
-      "page_end": ""
-    },
-    {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "19",
-      "page_start": "1959",
-      "page_end": "1961"
+      "page": {
+        "start": "1959",
+        "end": "1961"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "17",
-      "page_start": "1710",
-      "page_end": "1722"
+      "page": {
+        "start": "1710",
+        "end": "1722"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "",
       "issue": "",
-      "page_start": "10.1056/NEJMoa2601969",
-      "page_end": ""
+      "page": {
+        "start": "10.1056/NEJMoa2601969",
+        "end": ""
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "16",
-      "page_start": "1583",
-      "page_end": "1594"
+      "page": {
+        "start": "1583",
+        "end": "1594"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "15",
-      "page_start": "1546",
-      "page_end": "1548"
+      "page": {
+        "start": "1546",
+        "end": "1548"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "23",
-      "page_start": "2293",
-      "page_end": "2304"
+      "page": {
+        "start": "2293",
+        "end": "2304"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "14",
-      "page_start": "1451",
-      "page_end": "1453"
+      "page": {
+        "start": "1451",
+        "end": "1453"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "14",
-      "page_start": "1376",
-      "page_end": "1387"
+      "page": {
+        "start": "1376",
+        "end": "1387"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "13",
-      "page_start": "1345",
-      "page_end": "1347"
+      "page": {
+        "start": "1345",
+        "end": "1347"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "12",
-      "page_start": "1155",
-      "page_end": "1166"
+      "page": {
+        "start": "1155",
+        "end": "1166"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "16",
-      "page_start": "1655",
-      "page_end": "1656"
+      "page": {
+        "start": "1655",
+        "end": "1656"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "8",
-      "page_start": "818",
-      "page_end": "819"
+      "page": {
+        "start": "818",
+        "end": "819"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "9",
-      "page_start": "858",
-      "page_end": "871"
+      "page": {
+        "start": "858",
+        "end": "871"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "7",
-      "page_start": "669",
-      "page_end": "683"
+      "page": {
+        "start": "669",
+        "end": "683"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "12",
-      "page_start": "1184",
-      "page_end": "1194"
+      "page": {
+        "start": "1184",
+        "end": "1194"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "3",
-      "page_start": "302",
-      "page_end": "303"
+      "page": {
+        "start": "302",
+        "end": "303"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "2",
-      "page_start": "199",
-      "page_end": "201"
+      "page": {
+        "start": "199",
+        "end": "201"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "393",
       "issue": "24",
-      "page_start": "2434",
-      "page_end": "2446"
+      "page": {
+        "start": "2434",
+        "end": "2446"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "393",
       "issue": "23",
-      "page_start": "2377",
-      "page_end": "2379"
+      "page": {
+        "start": "2377",
+        "end": "2379"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "394",
       "issue": "8",
-      "page_start": "739",
-      "page_end": "752"
+      "page": {
+        "start": "739",
+        "end": "752"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "393",
       "issue": "21",
-      "page_start": "2168",
-      "page_end": "2170"
+      "page": {
+        "start": "2168",
+        "end": "2170"
+      }
     },
     {
-      "name_full": "The New England journal of medicine",
-      "name_short": "N Engl J Med",
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": "393",
       "issue": "21",
-      "page_start": "2107",
-      "page_end": "2118"
+      "page": {
+        "start": "2107",
+        "end": "2118"
+      }
     }
   ],
   "pub": [
@@ -7968,8 +8368,8 @@
     },
     {
       "y": "2026",
-      "m": "05",
-      "d": "20"
+      "m": "06",
+      "d": "25"
     },
     {
       "y": "2026",
@@ -8469,9 +8869,9 @@
       "d": ""
     },
     {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": "2026",
+      "m": "05",
+      "d": "20"
     },
     {
       "y": "",

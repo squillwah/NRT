@@ -35,11 +35,11 @@ def build_ref_authors(author_list, style):
 def build_ref(refdata, style):
     authors = build_ref_authors(refdata["authors"], style)
     title = refdata["title"]
-    jname = refdata["journal"]["name_short"]
-    jnamef = refdata["journal"]["name_short"]
+    jname = refdata["journal"]["name"]["short"]
+    jnamef = refdata["journal"]["name"]["full"]
     jyear = refdata["pub"]["y"]
     jissue = f"{refdata["journal"]["volume"]}({refdata["journal"]["issue"]})"
-    jpages = f"{refdata["journal"]["page_start"]}-{refdata["journal"]["page_end"]}"
+    jpages = f"{refdata["journal"]["page"]["start"]}-{refdata["journal"]["page"]["end"]}"
     doi = refdata["doi"]
 
     reference = ""
