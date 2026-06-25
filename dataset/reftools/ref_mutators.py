@@ -23,7 +23,7 @@ import random
 def typo_fatfinger(word, index):
     QWERTY = ["qwertyuiop",
               "asdfghjkl;",
-              "zxcvbnmn,."]
+              "zxcvbnmn,."]     # !! Sometimes the non alphanumerics would cause issue. Decisions are to remove alpha check in mutator or remove those chars here. @todo think
     typo = None
     for ri, row in enumerate(QWERTY):
         if (li := row.find(word[index].lower())) != -1:
@@ -46,6 +46,7 @@ def typo_fatfinger(word, index):
 
 # Swap char at index with adjacent char in string.
 def typo_swapletter(word, index):
+    print("! ", word)
     right = (index == 0 or (random.random()>.5 and index < len(word)-1))
     typo = None
     if right:

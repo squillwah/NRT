@@ -25,8 +25,9 @@ def bake_dataset(dataset):
 class EntryMutator:
     def __init__(self, *, component_set, h_titles, h_authors, h_journals):
         # Mutation flags:  
-        mflag_keys = ("author_typo",        "author_shuffle",       "author_mismatch",      "author_hallucinate",   # Note: not all mutations are combinable.
-                      "title_typo",                                 "title_mismatch",       "title_hallucinate")
+        mflag_keys = ("author_typo",    "author_mismatch",  "author_hallucinate",   "author_shuffle",   # Note: not all mutations are combinable.
+                      "title_typo",     "title_mismatch",   "title_hallucinate",                        # Also, be wary in the setting of these flags. A wrongly set flag will not reveal itself.
+                      "jname_typo",     "jname_mismatch",   "jname_hallucinate")
         self._MFLAGS = {flag: 2**i for i, flag in enumerate(mflag_keys)} # Assign a unique bit to every flag.
 
         # Resources for hallucination and mismatch mutations
@@ -41,8 +42,9 @@ class EntryMutator:
         ds_entry["errors"] = ds_entry["errors"] | self._MFLAGS[flag]
     # Randomly pick between fatfinger or swap typo types.
     def _fatswap(self, string, index):
-        FATSWAP_RATIO = 2/3 # Fatfingers are twice as likely as swaps
-        return RM.typo_fatfinger(string, index) if random.random() <= FATSWAP_RATIO else RM.typo_swapletter(string, index)
+        FATSWAP_RATIO = 2/3 # Fatfingers are twice as likely as swaps.
+        # Choose according to ratio, but force fatfinger if the length is only a letter.
+        return RM.typo_fatfinger(string, index) if random.random() <= FATSWAP_RATIO or len(string) == 1 else RM.typo_swapletter(string, index)
     # Return deepcopy of random item from collection.
     def _randcopy(self, collection):
         return deepcopy(random.choice(collection))
@@ -51,8 +53,8 @@ class EntryMutator:
     #  - There is always at least 1 typo, with more for every 10 characters in the title.
     def _typofy(self, string):
         TYPO_PER = 10
-        for i in range(len(string) / TYPO_PER + 1):
-            string = self._fatswap(string, random.randint(0, len(title)-1)) # Any random character.
+        for i in range(len(string) // TYPO_PER + 1):
+            string = self._fatswap(string, random.randint(0, len(string)-1)) # Any random character.
         return string
 
 ### AUTHORS
@@ -73,7 +75,8 @@ class EntryMutator:
             while random.random() <= TYPO_CHANCE or not first_three_guarantee:
                 for part in name:
                     if name[part]: # Skip over empty names.
-                        letter_i = random.choice([i for i, letter in enumerate(name[part]) if letter.isalpha()]) # Don't bother with spaces.
+                        print(" ? ", name, part)
+                        letter_i = random.choice([i for i, letter in enumerate(name[part])]) # if letter.isalpha()]) # Don't bother with spaces.    !!! Alpha check was causing oobs and empty set errors when following a fatfinger that added nonalphas or perhaps just some other weird RIS bugs.
                         #name[part] = RM.typo_fatfinger(name[part], letter_i) if random.random() <= FATSWAP_RATIO else RM.typo_swapletter(name[part], letter_i)
                         name[part] = self._fatswap(name[part], letter_i)
                 first_three_guarantee = True
@@ -91,7 +94,9 @@ class EntryMutator:
         return ds_entry
 
     def author_hallucinate(self, ds_entry):
-        ds_entry["data"]["authors"] = self._randcopy(self._FAKE_AUTHORS)
+        #ds_entry["data"]["authors"] = self._randcopy(self._FAKE_AUTHORS)    # It needs to be a list of fake authors.
+
+        ds_entry["data"]["authors"] = deepcopy(random.sample(self._FAKE_AUTHORS, len(ds_entry["data"]["authors"])))    # Making it the same length. Could be different. Who cares?
         self._flag(ds_entry, "author_hallucinate")
         return ds_entry
 
@@ -111,19 +116,19 @@ class EntryMutator:
         self._flag(ds_entry, "title_hallucinate")
         return ds_entry
 
-### JOURNAL NAMES
+### JOURNAL NAMES                                               # @todo: Think about: Should we be bothering with replacing each journal element like this, or should we just mismatch the whole thing together (name, date, volume, iss, pages)?
     def jname_typo(self, ds_entry):
         ds_entry["data"]["journal"]["name"]["short"] = self._typofy(ds_entry["data"]["journal"]["name"]["short"])
         ds_entry["data"]["journal"]["name"]["full"] = self._typofy(ds_entry["data"]["journal"]["name"]["full"])
         self._flag(ds_entry, "jname_typo")
         return ds_entry
     def jname_mismatch(self, ds_entry):
-        ds_entry["data"]["journal"]["name"] = self._randcopy(self._COMPONENTS["journal"])["name"]        # @todo: Think about: Should we be bothering with replacing each journal element like this, or should we just mismatch the whole thing together (name, date, volume, iss, pages)?
+        ds_entry["data"]["journal"]["name"] = self._randcopy([jname for jname in self._COMPONENTS["jname_set"] if jname != ds_entry["data"]["journal"]["name"]])
         self._flag(ds_entry, "title_mismatch")
         return ds_entry
     def jname_hallucinate(self, ds_entry):
         ds_entry["data"]["journal"]["name"] = self._randcopy(self._FAKE_JOURNALS)    # @todo: !! Make sure the fake_journal source contains both full and short names, and that the file is parsed into the proper dict format!
-        self._flag(ds_entry, "title_mismatch")
+        self._flag(ds_entry, "title_hallucinate")
         return ds_entry
 
 ### JOURNAL VOLUME / ISSUE

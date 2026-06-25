@@ -34,7 +34,21 @@ def init(*, h_titles, h_authors, h_journals, component_set):
 #    for entry in title_mismatch_ds:
 #        M.title_mismatch(entry)
 
-def test(dataset):
+def test_typos(dataset):
     for entry in dataset:
-        pass
+        M.author_shuffle(entry) # and shuffle
         M.author_typo(entry)
+        M.title_typo(entry)
+        M.jname_typo(entry)
+
+def test_mismatch(dataset):
+    for entry in dataset:
+        M.author_mismatch(entry)
+        M.title_mismatch(entry)
+        M.jname_mismatch(entry)
+
+def test_hallucinate(dataset):
+    for entry in dataset:
+        M.author_hallucinate(entry)
+        M.title_hallucinate(entry)
+        M.jname_hallucinate(entry)
