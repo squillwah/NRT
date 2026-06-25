@@ -55,7 +55,7 @@ response_schema = {
 
                 "author_order": {
                     "type": "string",
-                    "enum": ["Yes", "No"],
+                    "enum": ["Verified", "Metadata Error", "Serious Metadata Error", "Plausible Fabricated", "Needs Human Review"],
                     "description": "Whether the author order matches the original source"
                 },
 
@@ -169,6 +169,7 @@ def openrouter_accessor(header, citation, model):
 
   # 1. Convert the raw API HTTP response into a Python dictionary
     api_data = response.json()
+    print(api_data)
   # 2. Extract the stringified content out of the nested dictionary structure
     try:
         raw_content = api_data["choices"][0]["message"]["content"]
