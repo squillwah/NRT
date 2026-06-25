@@ -1,8 +1,8 @@
 
-import reftools.ref_formatters as RB
-import reftools.ref_mutators as RM
-import random
 from copy import deepcopy
+from reftools.typos import Typofier as T
+import reftools.ref_formatters as RB
+import random
 
 # Create a set entry from reference data
 def ds_entry(rd):
@@ -48,26 +48,13 @@ class EntryMutator:
     @classmethod
     def _flag(cls, ds_entry, flag):
         ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MFLAGS[flag]       # @todo !!!! Some mutations undo other ones (like running a mismatch or hallucination after a type).
-                                                                            #       !!!! Either we be very careful in the call order when making configuring datasets, or we add that logic here to remove the conflicted flag.
-
-    # Randomly pick between fatfinger or swap typo types.
-    def _fatswap(self, string, index):
-        FATSWAP_RATIO = 2/3 # Fatfingers are twice as likely as swaps.
-        # Choose according to ratio, but force fatfinger if the length is only a letter.
-        return RM.typo_fatfinger(string, index) if random.random() <= FATSWAP_RATIO or len(string) == 1 else RM.typo_swapletter(string, index)
     # Return deepcopy of random item from collection.
-    def _randcopy(self, collection):
+    @staticmethod
+    def _randcopy(collection):
         return deepcopy(random.choice(collection))
-    # Another arbitrary definition of typos
-    #  - Typos are place randomly within the string
-    #  - There is always at least 1 typo, with more for every 10 characters in the title.
-    def _typofy(self, string):
-        TYPO_PER = 10
-        for i in range(len(string) // TYPO_PER + 1):
-            string = self._fatswap(string, random.randint(0, len(string)-1)) # Any random character.
-        return string
 
 ### AUTHORS
+    # For no good reason, author typo logic is different from T.typofy().
     def author_typo(self, ds_entry):
         # ! Regarding typos, the question is which kind and how many. What range of randomness do we want and why?      # Perhaps (if we care), there is a paper. 
         # As a completely arbitrary heuristic, let it be that:                                                          # This one? https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7546536
@@ -76,8 +63,7 @@ class EntryMutator:
         #    - Typos are added to both the last and first names simultaneously.
         #    - The first three authors are guaranteed to have at least one typo.
         #  - Compounding typo's follow the natural halving of the probability (2: 1/8, 3: 1/16, so on)
-        #  - Fatfingers are twice as likely as swaps.
-        #FATSWAP_RATIO = 2/3 # Moved to _fatswap helper
+        #  - Fatfingers are twice as likely as swaps (moved into typofier.fatswap)
         TYPO_CHANCE = 1/3
         authors = ds_entry["data"]["authors"]
         for author_i, name in enumerate(authors):
@@ -88,7 +74,7 @@ class EntryMutator:
                         print(" ? ", name, part)
                         letter_i = random.choice([i for i, letter in enumerate(name[part])]) # if letter.isalpha()]) # Don't bother with spaces.    !!! Alpha check was causing oobs and empty set errors when following a fatfinger that added nonalphas or perhaps just some other weird RIS bugs.
                         #name[part] = RM.typo_fatfinger(name[part], letter_i) if random.random() <= FATSWAP_RATIO else RM.typo_swapletter(name[part], letter_i)
-                        name[part] = self._fatswap(name[part], letter_i)
+                        name[part] = T.fatswap(name[part], letter_i)
                 first_three_guarantee = True
         self._flag(ds_entry, "author_typo")
         return ds_entry # Note: Reference returns are for convenience. They are not copies.
@@ -112,7 +98,7 @@ class EntryMutator:
 
 ### TITLES
     def title_typo(self, ds_entry):
-        ds_entry["data"]["title"] = self._typofy(ds_entry["data"]["title"])
+        ds_entry["data"]["title"] = T.typofy(ds_entry["data"]["title"])
         self._flag(ds_entry, "title_typo")
         return ds_entry
     def title_mismatch(self, ds_entry):
@@ -128,8 +114,8 @@ class EntryMutator:
 
 ### JOURNAL NAMES                                               # @todo: Think about: Should we be bothering with replacing each journal element like this, or should we just mismatch the whole thing together (name, date, volume, iss, pages)?
     def jname_typo(self, ds_entry):
-        ds_entry["data"]["journal"]["name"]["short"] = self._typofy(ds_entry["data"]["journal"]["name"]["short"])
-        ds_entry["data"]["journal"]["name"]["full"] = self._typofy(ds_entry["data"]["journal"]["name"]["full"])
+        ds_entry["data"]["journal"]["name"]["short"] = T.typofy(ds_entry["data"]["journal"]["name"]["short"])
+        ds_entry["data"]["journal"]["name"]["full"] = T.typofy(ds_entry["data"]["journal"]["name"]["full"])
         self._flag(ds_entry, "jname_typo")
         return ds_entry
     def jname_mismatch(self, ds_entry):
@@ -158,7 +144,9 @@ class EntryMutator:
 
 ### DOI
     def doi_typo(self, ds_entry): pass                  # @todo: Consider: If we do typo's on numerics, should they include fatfinger or only swap? The assumption is that fatfinger typos are too rare in this case (letters in a number would be seen and fixed).
-    def doi_mismatch(self, ds_entry): pass
+    # ^ add one to each side or wu?
+    def doi_mismatch_prefix(self, ds_entry): pass
+    def doi_mismatch_suffix(self, ds_entry): pass
     def doi_randomize_prefix(self, ds_entry): pass
     def doi_randomize_suffix(self, ds_entry): pass
 
