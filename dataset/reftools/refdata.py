@@ -11,19 +11,22 @@ from copy import deepcopy
 
 def make_ref():
     return {
-        "authors": [],  # @todo: split author names into first and last
+        "authors": [],
         "title": "",
         "journal": {
             "name": { "full": "", "short": "" },
             "volume": "",
             "issue": "",
-            "page": { "start": "", "end": "" }
+            "page": { "start": "", "end": "" },
+            "elocator": "",
         },
         "pub": { "y": "", "m": "", "d": "" },   # Date published (in journal)
         "epub": { "y": "", "m": "", "d": "" },  # Date published (digitally)
-        "doi": "",
-        "pmid": "",
-        "pmcid": ""
+        "doi": { "prefix": "", "suffix": "" },
+        "url_abstract": "",
+        "url_direct": "",
+        "pmcid": "",
+        "pmid": ""
     }
 
 # Parse RIS into dictionary representation
@@ -40,13 +43,23 @@ def ristoref(ris):
             case "J2": refdata["journal"]["name"]["short"] = value
             case "VL": refdata["journal"]["volume"] = value
             case "IS": refdata["journal"]["issue"] = value
-            case "SP": refdata["journal"]["page"]["start"] = value
-            case "EP": refdata["journal"]["page"]["end"] = value
+            case "SP":              # RIS from PMC occasionally uses SP/EP to denote eLocators and DOIs
+                if value.isdigit(): refdata["journal"]["page"]["start"] = value
+                elif value[0] == "e" and value[1:].isdigit(): refdata["journal"]["elocator"] = value
+                else: print(f" ! [ristoref] bad SP (doi?): {value}")
+            case "EP":
+                if value.isdigit(): refdata["journal"]["page"]["end"] = value
+                elif value[0] == "e" and value[1:].isdigit(): refdata["journal"]["elocator"] = value
+                else: print(f" ! [ristoref] bad EP (doi?): {value}")
             case "Y1": refdata["pub"]["y"], refdata["pub"]["m"], refdata["pub"]["d"] = (x := value.split("/")) + [""]*(3-len(x)) # Publication date is not always precise.
-            case "ET": refdata["epub"]["y"], refdata["epub"]["m"], refdata["epub"]["d"] = value.split("/")
-            case "DO": refdata["doi"] = value
-            case "AN": refdata["pmid"] = value
+            case "ET":
+                refdata["epub"]["y"], refdata["epub"]["m"], refdata["epub"]["d"] = value.split("/")
+                print(value, refdata["epub"])
+            case "DO": refdata["doi"]["prefix"], refdata["doi"]["suffix"] = value.split("/")
+            case "UR": refdata["url_abstract"] = value
+            case "L2": refdata["url_direct"] = value
             case "U2": refdata["pmcid"] = value[:-7] # Slice off trailing ...[pmcid]
+            case "AN": refdata["pmid"] = value
             #case _: print(f"! unknown RIS tag: {(tag, value)}")
     return refdata
 
@@ -67,18 +80,23 @@ def component_set(*refdata):
 
 # Tests
 if __name__ == "__main__":
-    FILE = "./references.json"
+    FILE = "./reference_ris.json"
 
     refs = None
     with open(FILE, "r") as file:
         refs = json.load(file)
 
-    refdata = [ristoref(r["ris"]) for r in refs]
+    #refdata = [ristoref(r["ris"]) for r in refs]
+    refdata = [ristoref(r) for r in refs]
     compset = component_set(*refdata)
 
     # Checking, all should be 100
-    #print(json.dumps(refdata, indent=4))
+    print(json.dumps(refdata, indent=2))
     #print(json.dumps(compset, indent=4))
     for key in compset:
         print(len(compset[key]))
+
+    for r in refs:
+        print("-"*20)
+        print(r)
 
