@@ -15,13 +15,13 @@ def make_ref():
         "title": "",
         "journal": {
             "name": { "full": "", "short": "" },
-            "volume": "",
-            "issue": "",
+            "volume": None,
+            "issue": None,
             "page": { "start": "", "end": "" },
             "elocator": "",
         },
-        "pub": { "y": "", "m": "", "d": "" },   # Date published (in journal)
-        "epub": { "y": "", "m": "", "d": "" },  # Date published (digitally)
+        "pub": { "y": None, "m": None, "d": None },   # Date published (in journal)
+        "epub": { "y": None, "m": None, "d": None },  # Date published (digitally)
         "doi": { "prefix": "", "suffix": "" },
         "url_abstract": "",
         "url_direct": "",
@@ -41,20 +41,18 @@ def ristoref(ris):
             case "T1": refdata["title"] = value
             case "JF": refdata["journal"]["name"]["full"] = value
             case "J2": refdata["journal"]["name"]["short"] = value
-            case "VL": refdata["journal"]["volume"] = value
-            case "IS": refdata["journal"]["issue"] = value
+            case "VL": refdata["journal"]["volume"] = int(value)
+            case "IS": refdata["journal"]["issue"] = int(value)
             case "SP":              # RIS from PMC occasionally uses SP/EP to denote eLocators and DOIs
-                if value.isdigit(): refdata["journal"]["page"]["start"] = value
+                if value.isdigit(): refdata["journal"]["page"]["start"] = int(value)
                 elif value[0] == "e" and value[1:].isdigit(): refdata["journal"]["elocator"] = value
                 else: print(f" ! [ristoref] bad SP (doi?): {value}")
             case "EP":
-                if value.isdigit(): refdata["journal"]["page"]["end"] = value
+                if value.isdigit(): refdata["journal"]["page"]["end"] = int(value)
                 elif value[0] == "e" and value[1:].isdigit(): refdata["journal"]["elocator"] = value
                 else: print(f" ! [ristoref] bad EP (doi?): {value}")
-            case "Y1": refdata["pub"]["y"], refdata["pub"]["m"], refdata["pub"]["d"] = (x := value.split("/")) + [""]*(3-len(x)) # Publication date is not always precise.
-            case "ET":
-                refdata["epub"]["y"], refdata["epub"]["m"], refdata["epub"]["d"] = value.split("/")
-                print(value, refdata["epub"])
+            case "Y1": refdata["pub"]["y"], refdata["pub"]["m"], refdata["pub"]["d"] = (x := [int(n) for n in value.split("/") if n.isdigit()]) + [None]*(3-len(x)) # Publication dates are not always complete.
+            case "ET": refdata["epub"]["y"], refdata["epub"]["m"], refdata["epub"]["d"] = (x := [int(n) for n in value.split("/") if n.isdigit()]) + [None]*(3-len(x))
             case "DO": refdata["doi"]["prefix"], refdata["doi"]["suffix"] = value.split("/")
             case "UR": refdata["url_abstract"] = value
             case "L2": refdata["url_direct"] = value
