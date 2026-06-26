@@ -130,7 +130,7 @@ class EntryMutator:
         self._flag(ds_entry, "jname_typo")
         return ds_entry
     def jname_mismatch(self, ds_entry):
-        ds_entry["data"]["journal"]["name"] = self._randcopy([jname for jname in self._COMPONENTS["jname_set"] if jname != ds_entry["data"]["journal"]["name"]])
+        ds_entry["data"]["journal"]["name"] = self._randcopy([jname for jname in self._COMPONENTS["sets"]["journal_name"] if jname != ds_entry["data"]["journal"]["name"]])
         self._flag(ds_entry, "jname_mismatch")
         return ds_entry
     def jname_hallucinate(self, ds_entry):
