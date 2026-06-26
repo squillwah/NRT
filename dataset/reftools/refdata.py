@@ -74,8 +74,12 @@ def component_set(*refdata):
     # Additional sets for picking differents accross many duplicates
     #compset["jname_set"] = { "full": list({fn for fn in [j["name"]["full"] for j in compset["journal"]]}),
     #                         "short": list({sn for sn in [j["name"]["short"] for j in compset["journal"]]}) }
-    compset["jname_set"] = [dict(zip(("full", "short"), jname)) for jname in {tuple(j["name"].values()) for j in compset["journal"]}] # A set of every journal name (short/full dicts)
-    print(compset["jname_set"])
+    compset["sets"] = {
+        "journal_name": [dict(zip(("full", "short"), jname)) for jname in {tuple(j["name"].values()) for j in compset["journal"]}], # A set of every journal name (short/full dicts)
+        "doi_prefix": {doi["prefix"] for doi in compset["doi"]},
+        "doi_suffix": {doi["suffix"] for doi in compset["doi"]}   # The brackets are set notation, btw.
+    }
+    print(compset["sets"]["journal_name"])
     return compset
 
 # Tests
@@ -94,9 +98,11 @@ if __name__ == "__main__":
     print(json.dumps(refdata, indent=2))
     #print(json.dumps(compset, indent=4))
     for key in compset:
-        print(len(compset[key]))
-
-    for r in refs:
-        print("-"*20)
-        print(r)
+        print(key, len(compset[key]))
+        if isinstance(compset[key], dict):
+            for subkey in compset[key]:
+                print("-", subkey, len(compset[key][subkey]))
+#    for r in refs:
+#        print("-"*20)
+#        print(r)
 
