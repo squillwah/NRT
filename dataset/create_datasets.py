@@ -42,6 +42,7 @@ if __name__ == "__main__":
 
     for label in ds: bake_dataset(ds[label])
 
+    print(json.dumps(ds, indent=2))
     with open("./THEREFERENCES.json", "x") as f:
         json.dump(ds, f, indent=2)
 

@@ -1,7 +1,8 @@
 
 from copy import deepcopy
 from reftools.typos import Typofier as T
-import reftools.ref_formatters as RB
+#import reftools.ref_formatters as RB
+import reftools.formats as F
 import random
 
 # Create a set entry from reference data
@@ -23,6 +24,7 @@ def make_dataset(ref_data_list, *, v=False):
 def bake_dataset(dataset):
     for entry in dataset:
         #entry["format"] = RB.bake_formats(entry["data"])
+        entry["format"] = F.compile_all(entry["data"])
         entry["mutlabels"] = EntryMutator.explain_mutcode(entry["mutcode"])
 
 # Class of methods to mutate dataset entries using ref_mutator functions.

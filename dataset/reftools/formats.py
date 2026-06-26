@@ -19,7 +19,7 @@ def compile_elsevier(ref: dict) -> str:
         "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
 
     issue_str = f"({ref['journal']['issue']})" if ref["journal"]["issue"] else ""
-    return f"{author_str}. {ref['title']}. {ref['journal']['name']['short']}. {ref['pub']['y']};{ref['journal']['volume']}{issue_str}:{pages}. doi:{ref['doi']}"
+    return f"{author_str}. {ref['title']}. {ref['journal']['name']['short']}. {ref['pub']['y']};{ref['journal']['volume']}{issue_str}:{pages}. doi:{"/".join(ref['doi'].values())}"
 
 def compile_nature(ref: dict) -> str:
     formatted_authors = []
@@ -64,7 +64,7 @@ def compile_oxford(ref: dict) -> str:
         "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
 
     issue_str = f"({ref['journal']['issue']})" if ref["journal"]["issue"] else ""
-    return f"{author_str}. ({ref['pub']['y']}) {ref['title']}. <i>{ref['journal']['name']['short']}</i>, <i>{ref['journal']['volume']}</i>{issue_str}, {pages}. https://doi.org/{ref['doi']}"
+    return f"{author_str}. ({ref['pub']['y']}) {ref['title']}. <i>{ref['journal']['name']['short']}</i>, <i>{ref['journal']['volume']}</i>{issue_str}, {pages}. https://doi.org/{"/".join(ref['doi'].values())}"
 
 def compile_springer(ref: dict) -> str:
     formatted_authors = []
@@ -82,7 +82,7 @@ def compile_springer(ref: dict) -> str:
     pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
         "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
 
-    return f"{author_str}. {ref['title']}. <i>{ref['journal']['name']['short']}</i>. {ref['pub']['y']}; {ref['journal']['volume']}: {pages}. doi: {ref['doi']}"
+    return f"{author_str}. {ref['title']}. <i>{ref['journal']['name']['short']}</i>. {ref['pub']['y']}; {ref['journal']['volume']}: {pages}. doi: {"/".join(ref['doi'].values())}"
 
 def compile_cse(ref: dict) -> str:
     formatted_authors = []
@@ -124,7 +124,24 @@ def compile_harvard(ref: dict) -> str:
         "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
 
     issue_str = f"({ref['journal']['issue']})" if ref["journal"]["issue"] else ""
-    return f"{author_str} ({ref['pub']['y']}). '{ref['title']}', <i>{ref['journal']['name']['full']}</i>, {ref['journal']['volume']}{issue_str}, pp. {pages}. doi: {ref['doi']}."
+    return f"{author_str} ({ref['pub']['y']}). '{ref['title']}', <i>{ref['journal']['name']['full']}</i>, {ref['journal']['volume']}{issue_str}, pp. {pages}. doi: {"/".join(ref['doi'].values())}."
+
+
+
+# Return dict with all formats baked.
+def compile_all(refdata):
+    FORMATS = {
+        "elsevier": compile_elsevier,
+        "nature":   compile_nature,
+        "oxford":   compile_oxford,
+        "springer": compile_springer,
+        "cse":      compile_cse,
+        "harvard":  compile_harvard
+    }
+    return {f: FORMATS[f](refdata) for f in FORMATS}
+
+
+
 
 
 # function to grab refdata.json, grab a random dictionary from it, and then output the different citations
