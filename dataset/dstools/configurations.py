@@ -7,12 +7,13 @@ from dstools.datasets import EntryMutator   # Strange
 # The dataset entry mutator object.
 M = None
 
-def init(*, h_titles, h_authors, h_journals, component_set):
+def init(*, h_titles, h_authors, h_journals, component_set, rand_year_range):
     global M # Stupid
     M = EntryMutator(h_titles=h_titles,
                      h_authors=h_authors,
                      h_journals=h_journals,
-                     component_set=component_set)
+                     component_set=component_set,
+                     rand_year_range=rand_year_range)
     print("we inited")
 
 # Create sets of ds_entries for source references, hallucinated title references, and mismatched title references. @todo: more
@@ -58,3 +59,9 @@ def test_voliss(dataset):
     for entry in dataset:
         M.jvol_randomize(entry)
         M.jiss_randomize(entry)
+
+def test_pagepub(dataset):
+    for entry in dataset:
+        M.jpage_randomize(entry)
+        M.pub_randomize(entry)
+        #M.epub_randomize(entry) # Moved into pub randomize

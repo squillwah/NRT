@@ -34,7 +34,7 @@ if __name__ == "__main__":
                  "human_review":  make_dataset(refdata_src) }
 
     # Configure the sets (mutate reference data) accordingly.
-    setconfig.init(h_titles=h_title_src, h_authors=h_author_src, h_journals=h_journal_src, component_set=compset_src)
+    setconfig.init(h_titles=h_title_src, h_authors=h_author_src, h_journals=h_journal_src, component_set=compset_src, rand_year_range=(2024, 2026))
 
     #setconfig.apply_minor_mderror(datasets["minor_mderror"])
     #setconfig.apply_major_mderror(datasets["minor_mderror"])
@@ -87,6 +87,11 @@ if __name__ == "__main__":
 #    bake_dataset(dataset)
 #    print(json.dumps(dataset, indent=2))
 
+    print("===")
     setconfig.test_voliss(dataset)
+    bake_dataset(dataset)
+    print(json.dumps(dataset, indent=2))
+    print("===")
+    setconfig.test_pagepub(dataset)
     bake_dataset(dataset)
     print(json.dumps(dataset, indent=2))

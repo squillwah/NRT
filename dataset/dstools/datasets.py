@@ -22,25 +22,26 @@ def make_dataset(ref_data_list, *, v=False):
 # Also adds a human readable list of mutation labels.
 def bake_dataset(dataset):
     for entry in dataset:
-        entry["format"] = RB.bake_formats(entry["data"])
+        #entry["format"] = RB.bake_formats(entry["data"])
         entry["mutlabels"] = EntryMutator.explain_mutcode(entry["mutcode"])
 
 # Class of methods to mutate dataset entries using ref_mutator functions.
 class EntryMutator:
     # Mutation flags:  
-    _MLABELS = ("author_typo",    "author_mismatch",  "author_hallucinate",   "author_shuffle",   # Note: not all mutations are combinable.
-                "title_typo",     "title_mismatch",   "title_hallucinate",                        # Also, be wary in the setting of these flags. A wrongly set flag will not reveal itself.
-                "jname_typo",     "jname_mismatch",   "jname_hallucinate",
-                "jvol_randomize", "jiss_randomize")
+    _MLABELS = ("author_typo",      "author_mismatch",  "author_hallucinate",   "author_shuffle",   # Note: not all mutations are combinable.
+                "title_typo",       "title_mismatch",   "title_hallucinate",                        # Also, be wary in the setting of these flags. A wrongly set flag will not reveal itself.
+                "jname_typo",       "jname_mismatch",   "jname_hallucinate",
+                "jvol_randomize",   "jiss_randomize",   "jpage_randomize",
+                "pubs_randomize")    #"epub_randomize")
     _MFLAGS = {flag: 2**i for i, flag in enumerate(_MLABELS)} # Assign a unique bit for every flag.
 
-    def __init__(self, *, component_set, h_titles, h_authors, h_journals):
+    def __init__(self, *, component_set, h_titles, h_authors, h_journals, rand_year_range):
         # Resources for hallucination and mismatch mutations
         self._COMPONENTS = component_set            # Alternatively, if we think a hallucination sample for every component is a good idea:
         self._FAKE_TITLES = h_titles                # self._REAL_COMPONENTS
         self._FAKE_AUTHORS = h_authors              # self._FAKE_COMPONENTS
         self._FAKE_JOURNALS = h_journals            # The issue is, how fake can a date, DOI, or PMCID get? Fake enough to warrant that?
-
+        self._RAND_YEAR_RANGE = (rand_year_range[0], rand_year_range[1])
 ### little helpers
 
     # Return list of mutation labels from mutcode.
@@ -142,7 +143,7 @@ class EntryMutator:
         else:
             ds_entry["data"]["journal"]["volume"] = random.randint(0,500)
             print(f" ! empty vol in {ds_entry["id"]} {ds_entry["src_id"]}, setting to niave random: {ds_entry["data"]["journal"]["volume"]}")
-            self._flag(ds_entry, "jvol_randomize")
+        self._flag(ds_entry, "jvol_randomize")
         return ds_entry
 
     def jiss_randomize(self, ds_entry):
@@ -155,7 +156,6 @@ class EntryMutator:
             #ds_entry["data"]["journal"]["issue"] = random.choice(self._COMPONENTS["journal"])["issue"] # !! It must be that the same empties exist in the compset. SO, just do a random number.
             ds_entry["data"]["journal"]["issue"] = random.randint(0,1500)
             print(f" ! empty iss in {ds_entry["id"]} {ds_entry["src_id"]}, setting to niave random: {ds_entry["data"]["journal"]["issue"]}")
-
         self._flag(ds_entry, "jiss_randomize")
         return ds_entry
 
@@ -163,21 +163,49 @@ class EntryMutator:
 
 ### JOURNAL PAGE NUMBERS
 
-    def jpage_randomize(self, ds_entry): pass
-
+    def jpage_randomize(self, ds_entry):
+        spage = random.randint(23, 1184)    # Completely arbitrary randomness.
+        length = random.randint(3, 51)
+        ds_entry["data"]["journal"]["page"]["start"] = spage
+        ds_entry["data"]["journal"]["page"]["end"] = spage+length
+        self._flag(ds_entry, "jpage_randomize")
+        return ds_entry
 
     # Other possibilities: mismatch, nonesense_randomize (end < start)
     # If we do mismatches for these ones, that would make a big jALL_mismatch easy. Though it would be regardless, cause of compset structure. Whatever.
 
-### JOURNAL PUBLICATION DATES
+    # TODO STILL
+    # elocator mismatch, randomize, typo?
+    # URL typo, mismatch, randomize?
+    def elocator_mismatch(self, ds_entry): pass
+    def elocator_randomize(self, ds_entry): pass
 
-    def jpub_mismatch(self, ds_entry): pass
-    def jpub_randomize(self, ds_entry): pass
+### JOURNAL / DIGITAL PUBLICATION DATES
 
-### DIGITIAL PUBLICATION DATES
+    #def pub_mismatch(self, ds_entry):
+    #def epub_mismatch(self, ds_entry): pass
 
-    def epub_mismatch(self, ds_entry): pass
-    def epub_randomize(self, ds_entry): pass
+    def pub_randomize(self, ds_entry, *, y=True, m=True, d=True):                           # @Consider: Or should both pub and epub be done at once, with only a few days between?
+        if y or m or d:
+            pub = ds_entry["data"]["pub"]
+            epub = ds_entry["data"]["epub"]
+            if y:
+                pub["y"] = random.randint(*self._RAND_YEAR_RANGE)
+                epub["y"] = pub["y"]
+            if m:
+                pub["m"] = random.randint(1, 12)
+                epub["m"] = pub["m"] + random.randint((pub["m"] > 1)*-1, (pub["m"] < 12)*1) # Sometimes offset epub month by 1.
+            if d:
+                pub["d"] = random.randint(1, 31)  # Hmmm
+                epub["d"] = pub["d"] + random.randint((pub["d"] > 5)*-5, (pub["m"] < 27)*5) # Sometimes offset epub day by up to 5.
+            self._flag(ds_entry, "pubs_randomize")
+        return ds_entry
+#    def epub_randomize(self, ds_entry, *, y=True, m=True, d=True):
+#        if y: ds_entry["data"]["epub"]["y"] = random.randint(*self._RAND_YEAR_RANGE)
+#        if m: ds_entry["data"]["epub"]["m"] = random.randint(1, 12)
+#        if d: ds_entry["data"]["epub"]["d"] = random.randint(1, 31)
+#        if y or m or d: self._flag(ds_entry, "epub_randomize")
+#        return ds_entry
 
 ### DOI
 
