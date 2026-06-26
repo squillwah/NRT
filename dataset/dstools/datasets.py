@@ -34,7 +34,8 @@ class EntryMutator:
                 "jvol_hallucinate",     "jiss_hallucinate", "jpage_hallucinate",
                 "pubs_hallucinate",    #"epub_randomize")
                 "elocator_mismatch",    "elocator_hallucinate",
-                "doi_typo", "doi_mismatch_prefix", "doi_mismatch_suffix", "doi_hallucinate_prefix", "doi_hallucinate_suffix")
+                "doi_typo", "doi_mismatch_prefix", "doi_mismatch_suffix", "doi_hallucinate_prefix", "doi_hallucinate_suffix",
+                "pmid_typo", "pmid_mismatch", "pmid_hallucinate", "pmcid_typo", "pmcid_mismatch", "pmcid_hallucinate")
 
     _MFLAGS = {flag: 2**i for i, flag in enumerate(_MLABELS)} # Assign a unique bit for every flag.
 
@@ -249,16 +250,64 @@ class EntryMutator:
         self._flag(ds_entry, "doi_hallucinate_suffix")
         return ds_entry
 
+### URLS
+
+    # ...
 
 ### PMIDS / PMCIDS
 
-    def pmid_typo(self, ds_entry): pass
-    def pmid_mismatch(self, ds_entry): pass
-    def pmid_hallucinate(self, ds_entry): pass
+    def pmid_typo(self, ds_entry):
+        # Only one typo.
+        # 50/50 chance between positional swap or ++/-- error.
+        ID = ds_entry["data"]["pmid"]
+        li = random.randrange(0, len(ID))
+        if random.random() <= .5:
+            ID = T.typo_swapletter(ID, li)
+        else:
+            num = int(ID[li])
+            if num == 9: num = num - 1
+            elif num == 0: num = num + 1
+            else: num = num + random.choice([-1,1])
+            ID = ID[0:li]+str(num)+ID[li+1:] if li < len(ID)-1 else ID[0:li]+str(num)
+        ds_entry["data"]["pmid"] = ID
+        self._flag(ds_entry, "pmid_typo")
+        return ds_entry
 
-    def pmcid_typo(self, ds_entry): pass
-    def pmcid_mismatch(self, ds_entry): pass
-    def pmcid_hallucinate(self, ds_entry): pass
+    def pmid_mismatch(self, ds_entry):
+        ds_entry["data"]["pmid"] = self._randcopy([ID for ID in self._COMPONENTS["pmid"] if ID != ds_entry["data"]["pmid"]])
+        self._flag(ds_entry, "pmid_mismatch")
+        return ds_entry
+
+    def pmid_hallucinate(self, ds_entry):
+        ds_entry["data"]["pmid"] = str(random.randint(1, 999999999)) # Up to 9 digits.
+        self._flag(ds_entry, "pmid_hallucinate")
+        return ds_entry
+
+    # Basically all exact same.
+    def pmcid_typo(self, ds_entry):
+        ID = ds_entry["data"]["pmcid"]
+        li = random.randrange(3, len(ID))   # Avoid PMC prefix
+        if random.random() <= .5:
+            ID = T.typo_swapletter(ID, li)
+        else:
+            num = int(ID[li])
+            if num == 9: num = num - 1
+            elif num == 0: num = num + 1
+            else: num = num + random.choice([-1,1])
+            ID = ID[0:li]+str(num)+ID[li+1:] if li < len(ID)-1 else ID[0:li]+str(num)
+        ds_entry["data"]["pmcid"] = ID
+        self._flag(ds_entry, "pmcid_typo")
+        return ds_entry
+
+    def pmcid_mismatch(self, ds_entry):
+        ds_entry["data"]["pmcid"] = self._randcopy([ID for ID in self._COMPONENTS["pmcid"] if ID != ds_entry["data"]["pmcid"]])
+        self._flag(ds_entry, "pmcid_mismatch")
+        return ds_entry
+
+    def pmcid_hallucinate(self, ds_entry):
+        ds_entry["data"]["pmcid"] = "PMC"+str(random.randint(1, 99999999)) # Up to 8 digits. Plus PMC prefix.
+        self._flag(ds_entry, "pmcid_hallucinate")
+        return ds_entry
 
 
 # @todo: Consider: Should we just blanket each element with the same boilerplate mutation methods, even when it might not make complete sense? (such as mismatches on vol/iss, or hallucinating page numbers?)
