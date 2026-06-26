@@ -28,12 +28,12 @@ def bake_dataset(dataset):
 # Class of methods to mutate dataset entries using ref_mutator functions.
 class EntryMutator:
     # Mutation flags:  
-    _MLABELS = ("author_typo",      "author_mismatch",  "author_hallucinate",   "author_shuffle",   # Note: not all mutations are combinable.
-                "title_typo",       "title_mismatch",   "title_hallucinate",                        # Also, be wary in the setting of these flags. A wrongly set flag will not reveal itself.
-                "jname_typo",       "jname_mismatch",   "jname_hallucinate",
-                "jvol_randomize",   "jiss_randomize",   "jpage_randomize",
-                "pubs_randomize",    #"epub_randomize")
-                "elocator_mismatch", "elocator_randomize",
+    _MLABELS = ("author_typo",          "author_mismatch",  "author_hallucinate",   "author_shuffle",   # Note: not all mutations are combinable.
+                "title_typo",           "title_mismatch",   "title_hallucinate",                        # Also, be wary in the setting of these flags. A wrongly set flag will not reveal itself.
+                "jname_typo",           "jname_mismatch",   "jname_hallucinate",
+                "jvol_hallucinate",     "jiss_hallucinate", "jpage_hallucinate",
+                "pubs_hallucinate",    #"epub_randomize")
+                "elocator_mismatch",    "elocator_hallucinate",
                 "doi_typo")
 
     _MFLAGS = {flag: 2**i for i, flag in enumerate(_MLABELS)} # Assign a unique bit for every flag.
@@ -139,17 +139,17 @@ class EntryMutator:
 
 ### JOURNAL VOLUME / ISSUE
 
-    def jvol_randomize(self, ds_entry):             # @todo: Consider: Should we bother doing mismatches / hallucinations for the numerics?
+    def jvol_hallucinate(self, ds_entry):             # @todo: Consider: Should we bother doing mismatches / hallucinations for the numerics?
         if (vol := ds_entry["data"]["journal"]["volume"]):  # Not all references contain vol/iss data.
             vol = int(vol)
             ds_entry["data"]["journal"]["volume"] = random.choice([v for v in range(int(vol*.5), int(vol*1.5)) if v != vol]) # Arbitrary. Randomization range is the volume +/- half
         else:
             ds_entry["data"]["journal"]["volume"] = random.randint(0,500)
             print(f" ! empty vol in {ds_entry["id"]} {ds_entry["src_id"]}, setting to niave random: {ds_entry["data"]["journal"]["volume"]}")
-        self._flag(ds_entry, "jvol_randomize")
+        self._flag(ds_entry, "jvol_hallucinate")
         return ds_entry
 
-    def jiss_randomize(self, ds_entry):
+    def jiss_hallucinate(self, ds_entry):
         if (iss := ds_entry["data"]["journal"]["issue"]):
             iss = int(iss)
             ds_entry["data"]["journal"]["issue"] = random.choice([i for i in range(int(iss*.5), int(iss*1.5)) if i != iss])
@@ -159,19 +159,19 @@ class EntryMutator:
             #ds_entry["data"]["journal"]["issue"] = random.choice(self._COMPONENTS["journal"])["issue"] # !! It must be that the same empties exist in the compset. SO, just do a random number.
             ds_entry["data"]["journal"]["issue"] = random.randint(0,1500)
             print(f" ! empty iss in {ds_entry["id"]} {ds_entry["src_id"]}, setting to niave random: {ds_entry["data"]["journal"]["issue"]}")
-        self._flag(ds_entry, "jiss_randomize")
+        self._flag(ds_entry, "jiss_hallucinate")
         return ds_entry
 
     # Could also perchance do a jissvol_mismatch (if one of our classifications implies it)
 
 ### JOURNAL PAGE NUMBERS
 
-    def jpage_randomize(self, ds_entry):
+    def jpage_hallucinate(self, ds_entry):
         spage = random.randint(23, 1184)    # Completely arbitrary randomness.
         length = random.randint(3, 51)
         ds_entry["data"]["journal"]["page"]["start"] = spage
         ds_entry["data"]["journal"]["page"]["end"] = spage+length
-        self._flag(ds_entry, "jpage_randomize")
+        self._flag(ds_entry, "jpage_hallucinate")
         return ds_entry
 
     # Other possibilities: mismatch, nonesense_randomize (end < start)
@@ -185,10 +185,10 @@ class EntryMutator:
         self._flag(ds_entry, "elocator_mismatch")
         return ds_entry
 
-    def elocator_randomize(self, ds_entry):
+    def elocator_hallucinate(self, ds_entry):
         num = str(random.randint(1, 999999))
         ds_entry["data"]["journal"]["elocator"] = "e"+"0"*(6-len(num))+num
-        self._flag(ds_entry, "elocator_randomize")
+        self._flag(ds_entry, "elocator_hallucinate")
         return ds_entry
 
 ### JOURNAL / DIGITAL PUBLICATION DATES
@@ -196,7 +196,7 @@ class EntryMutator:
     #def pub_mismatch(self, ds_entry):
     #def epub_mismatch(self, ds_entry): pass
 
-    def pub_randomize(self, ds_entry, *, y=True, m=True, d=True):                           # @Consider: Or should both pub and epub be done at once, with only a few days between?
+    def pubs_hallucinate(self, ds_entry, *, y=True, m=True, d=True):                           # @Consider: Or should both pub and epub be done at once, with only a few days between?
         if y or m or d:
             pub = ds_entry["data"]["pub"]
             epub = ds_entry["data"]["epub"]
@@ -209,7 +209,7 @@ class EntryMutator:
             if d:
                 pub["d"] = random.randint(1, 31)  # Hmmm
                 epub["d"] = pub["d"] + random.randint((pub["d"] > 5)*-5, (pub["m"] < 27)*5) # Sometimes offset epub day by up to 5.
-            self._flag(ds_entry, "pubs_randomize")
+            self._flag(ds_entry, "pubs_hallucinate")
         return ds_entry
 #    def epub_randomize(self, ds_entry, *, y=True, m=True, d=True):
 #        if y: ds_entry["data"]["epub"]["y"] = random.randint(*self._RAND_YEAR_RANGE)
@@ -225,20 +225,30 @@ class EntryMutator:
         doi["prefix"] = T.typo_swapletter(doi["prefix"], random.choice([i for i, char in enumerate(doi["prefix"]) if char != "0"])) # Swap one char in the prefix (not zeros).
         doi["suffix"] = T.typofy(doi["suffix"]) # Just run the standard typo procedure on the suffix.
         self._flag(ds_entry, "doi_typo")
-    def doi_mismatch_prefix(self, ds_entry): pass
-    def doi_mismatch_suffix(self, ds_entry): pass
-    def doi_randomize_prefix(self, ds_entry): pass
-    def doi_randomize_suffix(self, ds_entry): pass
+        return ds_entry
+
+    def doi_mismatch_prefix(self, ds_entry):
+        ds_entry["data"]["doi"]["prefix"] = self._randcopy(self._COMPONENTS["sets"]["doi_prefix"])
+        self._flag(ds_entry, "doi_mismatch_prefix")
+        return ds_entry
+
+    def doi_mismatch_suffix(self, ds_entry):
+        ds_entry["data"]["doi"]["suffix"] = self._randcopy(self._COMPONENTS["sets"]["doi_suffix"])
+        self._flag(ds_entry, "doi_mismatch_suffix")
+        return ds_entry
+
+    def doi_hallucinate_prefix(self, ds_entry): pass
+    def doi_hallucinate_suffix(self, ds_entry): pass
 
 ### PMIDS / PMCIDS
 
     def pmid_typo(self, ds_entry): pass
     def pmid_mismatch(self, ds_entry): pass
-    def pmid_randomize(self, ds_entry): pass
+    def pmid_hallucinate(self, ds_entry): pass
 
     def pmcid_typo(self, ds_entry): pass
     def pmcid_mismatch(self, ds_entry): pass
-    def pmcid_randomize(self, ds_entry): pass
+    def pmcid_hallucinate(self, ds_entry): pass
 
 
 # @todo: Consider: Should we just blanket each element with the same boilerplate mutation methods, even when it might not make complete sense? (such as mismatches on vol/iss, or hallucinating page numbers?)
