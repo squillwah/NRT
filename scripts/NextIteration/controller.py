@@ -27,13 +27,16 @@ def main():
 
     # this loops through every ama citation style in the parsed references and makes the call to openrouter_all_call, for which will go through every LLM and finally return a dictionary which will get dumped to the json file.
     for i, ref in enumerate(parsed_refs):
-        ama_responses = openrouter_all_call(header_prompt, ref["format"]["ama"])
+        print(parsed_refs[ref][i]["format"]["elsevier"])
+        if (i == 0):
+            continue
+        elsevier_responses = openrouter_all_call(header_prompt, parsed_refs[ref][i]["format"]["elsevier"])
         time.sleep(1)
 
-        responses_for_CSV.append(ama_responses)
-        list_of_ids.append(ref["id"].replace(":", "_"))
+        responses_for_CSV.append(elsevier_responses)
+        list_of_ids.append(parsed_refs[ref][i]["src_id"])
 
-        printToFile(ama_responses, ref["id"].replace(":", "_"))
+        printToFile(elsevier_responses, parsed_refs[ref][i]["src_id"])
 
     write_xlsx(responses_for_CSV, list_of_ids)
     print("done!")

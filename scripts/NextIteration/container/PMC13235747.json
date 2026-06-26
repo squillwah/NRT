@@ -1,0 +1,18 @@
+[
+    {
+        "overall": "Plausible Fabricated",
+        "confidence_overall": 95,
+        "author": "Plausible Fabricated",
+        "confidence_author": 95,
+        "journal": "Plausible Fabricated",
+        "confidence_journal": 95,
+        "publish_date": "Plausible Fabricated",
+        "confidence_of_the_publish_date": 95,
+        "publisher": "Plausible Fabricated",
+        "confidence_of_the_publisher": 95,
+        "author_order": "Plausible Fabricated",
+        "confidence_of_the_author_order": 90,
+        "model": "openai/gpt-oss-20b:free",
+        "reasoning_tokens": 492
+    }
+]

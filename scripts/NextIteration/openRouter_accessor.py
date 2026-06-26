@@ -118,10 +118,10 @@ def openrouter_all_call(header_prompt, citation):
     # time.sleep(1)
     # print("3 Done")
 
-    jsonObject = openrouter_accessor(header_prompt, citation, "nvidia/nemotron-3-super-120b-a12b:free")
-    results.append(jsonObject)
-    time.sleep(1)
-    print("4 Done")
+    # jsonObject = openrouter_accessor(header_prompt, citation, "nvidia/nemotron-3-super-120b-a12b:free")
+    # results.append(jsonObject)
+    # time.sleep(1)
+    # print("4 Done")
 
     jsonObject = openrouter_accessor(header_prompt, citation, "openai/gpt-oss-20b:free")
     results.append(jsonObject)

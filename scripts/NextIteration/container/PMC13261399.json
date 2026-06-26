@@ -1,0 +1,34 @@
+[
+    {
+        "author": "Needs Human Review",
+        "confidence_author": 0.6,
+        "journal": "Needs Human Review",
+        "confidence_journal": 0.6,
+        "publish_date": "Needs Human Review",
+        "confidence_of_the_publish_date": 0.3,
+        "author_order": "Needs Human Review",
+        "confidence_of_the_author_order": 0.4,
+        "publisher": "Needs Human Review",
+        "confidence_of_the_publisher": 0.6,
+        "overall": "Metadata Error",
+        "confidence_overall": 0.7,
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311:free",
+        "reasoning_tokens": 1627
+    },
+    {
+        "overall": "Plausible Fabricated",
+        "confidence_overall": 25,
+        "author": "Needs Human Review",
+        "journal": "Verified",
+        "publish_date": "Needs Human Review",
+        "author_order": "Needs Human Review",
+        "publisher": "Verified",
+        "confidence_author": 40,
+        "confidence_journal": 95,
+        "confidence_of_the_publisher": 90,
+        "confidence_of_the_author_order": 35,
+        "confidence_of_the_publish_date": 40,
+        "model": "openai/gpt-oss-20b:free",
+        "reasoning_tokens": 915
+    }
+]

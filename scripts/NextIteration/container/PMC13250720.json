@@ -1,0 +1,18 @@
+[
+    {
+        "overall": "Metadata Error",
+        "confidence_overall": 90,
+        "author": "Verified",
+        "confidence_author": 95,
+        "journal": "Verified",
+        "confidence_journal": 95,
+        "publish_date": "Metadata Error",
+        "confidence_of_the_publish_date": 85,
+        "author_order": "Verified",
+        "confidence_of_the_author_order": 95,
+        "publisher": "Verified",
+        "confidence_of_the_publisher": 95,
+        "model": "openai/gpt-oss-20b:free",
+        "reasoning_tokens": 1064
+    }
+]
