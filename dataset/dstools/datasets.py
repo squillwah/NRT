@@ -32,7 +32,10 @@ class EntryMutator:
                 "title_typo",       "title_mismatch",   "title_hallucinate",                        # Also, be wary in the setting of these flags. A wrongly set flag will not reveal itself.
                 "jname_typo",       "jname_mismatch",   "jname_hallucinate",
                 "jvol_randomize",   "jiss_randomize",   "jpage_randomize",
-                "pubs_randomize")    #"epub_randomize")
+                "pubs_randomize",    #"epub_randomize")
+                "elocator_mismatch", "elocator_randomize",
+                "doi_typo")
+
     _MFLAGS = {flag: 2**i for i, flag in enumerate(_MLABELS)} # Assign a unique bit for every flag.
 
     def __init__(self, *, component_set, h_titles, h_authors, h_journals, rand_year_range):
@@ -174,11 +177,19 @@ class EntryMutator:
     # Other possibilities: mismatch, nonesense_randomize (end < start)
     # If we do mismatches for these ones, that would make a big jALL_mismatch easy. Though it would be regardless, cause of compset structure. Whatever.
 
-    # TODO STILL
-    # elocator mismatch, randomize, typo?
+    # @todo still
+    # elocator mismatch, randomize, typo? For typo, what about off by one and swaps?
     # URL typo, mismatch, randomize?
-    def elocator_mismatch(self, ds_entry): pass
-    def elocator_randomize(self, ds_entry): pass
+    def elocator_mismatch(self, ds_entry):  # @Consider: What about when an article doesn't have an elocator (or any other thing), should the mismatch still occur?
+        ds_entry["data"]["journal"]["elocator"] = self._randcopy([eloc for eloc in self._COMPONENTS["sets"]["journal_elocator"] if eloc != ds_entry["data"]["journal"]["elocator"]])
+        self._flag(ds_entry, "elocator_mismatch")
+        return ds_entry
+
+    def elocator_randomize(self, ds_entry):
+        num = str(random.randint(1, 999999))
+        ds_entry["data"]["journal"]["elocator"] = "e"+"0"*(6-len(num))+num
+        self._flag(ds_entry, "elocator_randomize")
+        return ds_entry
 
 ### JOURNAL / DIGITAL PUBLICATION DATES
 
@@ -209,8 +220,11 @@ class EntryMutator:
 
 ### DOI
 
-    def doi_typo(self, ds_entry): pass                  # @todo: Consider: If we do typo's on numerics, should they include fatfinger or only swap? The assumption is that fatfinger typos are too rare in this case (letters in a number would be seen and fixed).
-    # ^ add one to each side or wu?
+    def doi_typo(self, ds_entry):                       # @todo: Consider: If we do typo's on numerics, should they include fatfinger or only swap? The assumption is that fatfinger typos are too rare in this case (letters in a number would be seen and fixed).
+        doi = ds_entry["data"]["doi"]
+        doi["prefix"] = T.typo_swapletter(doi["prefix"], random.choice([i for i, char in enumerate(doi["prefix"]) if char != "0"])) # Swap one char in the prefix (not zeros).
+        doi["suffix"] = T.typofy(doi["suffix"]) # Just run the standard typo procedure on the suffix.
+        self._flag(ds_entry, "doi_typo")
     def doi_mismatch_prefix(self, ds_entry): pass
     def doi_mismatch_suffix(self, ds_entry): pass
     def doi_randomize_prefix(self, ds_entry): pass
@@ -221,6 +235,7 @@ class EntryMutator:
     def pmid_typo(self, ds_entry): pass
     def pmid_mismatch(self, ds_entry): pass
     def pmid_randomize(self, ds_entry): pass
+
     def pmcid_typo(self, ds_entry): pass
     def pmcid_mismatch(self, ds_entry): pass
     def pmcid_randomize(self, ds_entry): pass
