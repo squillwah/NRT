@@ -34,7 +34,7 @@ class EntryMutator:
                 "jvol_hallucinate",     "jiss_hallucinate", "jpage_hallucinate",
                 "pubs_hallucinate",    #"epub_randomize")
                 "elocator_mismatch",    "elocator_hallucinate",
-                "doi_typo")
+                "doi_typo", "doi_mismatch_prefix", "doi_mismatch_suffix", "doi_hallucinate_prefix", "doi_hallucinate_suffix")
 
     _MFLAGS = {flag: 2**i for i, flag in enumerate(_MLABELS)} # Assign a unique bit for every flag.
 
@@ -228,17 +228,27 @@ class EntryMutator:
         return ds_entry
 
     def doi_mismatch_prefix(self, ds_entry):
-        ds_entry["data"]["doi"]["prefix"] = self._randcopy(self._COMPONENTS["sets"]["doi_prefix"])
+        ds_entry["data"]["doi"]["prefix"] = self._randcopy([p for p in self._COMPONENTS["sets"]["doi_prefix"] if p != ds_entry["data"]["doi"]["prefix"]])
         self._flag(ds_entry, "doi_mismatch_prefix")
         return ds_entry
 
     def doi_mismatch_suffix(self, ds_entry):
-        ds_entry["data"]["doi"]["suffix"] = self._randcopy(self._COMPONENTS["sets"]["doi_suffix"])
+        ds_entry["data"]["doi"]["suffix"] = self._randcopy([s for s in self._COMPONENTS["sets"]["doi_suffix"] if s != ds_entry["data"]["doi"]["suffix"]])
         self._flag(ds_entry, "doi_mismatch_suffix")
         return ds_entry
 
-    def doi_hallucinate_prefix(self, ds_entry): pass
-    def doi_hallucinate_suffix(self, ds_entry): pass
+    def doi_hallucinate_prefix(self, ds_entry):
+        # 10.random1000->9999 + .random0->10or100or1000 (0-2x)
+        ds_entry["data"]["doi"]["prefix"] = ".".join(["10", str(random.randint(1000, 9999))] + [str(random.randint(0, 10**random.randint(1, 3))) for i in range(random.randint(0,2))])
+        self._flag(ds_entry, "doi_hallucinate_prefix")
+        return ds_entry
+
+    def doi_hallucinate_suffix(self, ds_entry):
+        # 1-3 groups of 3 to 8 random numbers and letters
+        ds_entry["data"]["doi"]["suffix"] = "-".join(["".join([random.choice("abcdefghijklmnopqrstuvwxyz,./12345678900987654321") for i in range(random.randint(3, 8))]) for i in range(random.randint(1, 3))])
+        self._flag(ds_entry, "doi_hallucinate_suffix")
+        return ds_entry
+
 
 ### PMIDS / PMCIDS
 
