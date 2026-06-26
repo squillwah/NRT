@@ -74,8 +74,9 @@ def component_set(*refdata):
     #                         "short": list({sn for sn in [j["name"]["short"] for j in compset["journal"]]}) }
     compset["sets"] = {
         "journal_name": [dict(zip(("full", "short"), jname)) for jname in {tuple(j["name"].values()) for j in compset["journal"]}], # A set of every journal name (short/full dicts)
-        "doi_prefix": {doi["prefix"] for doi in compset["doi"]},
-        "doi_suffix": {doi["suffix"] for doi in compset["doi"]}   # The brackets are set notation, btw.
+        "journal_elocator": list({j["elocator"] for j in compset["journal"]}),
+        "doi_prefix": list({doi["prefix"] for doi in compset["doi"]}),
+        "doi_suffix": list({doi["suffix"] for doi in compset["doi"]})   # The brackets are set notation, btw. (and list cause sets are jsonable)
     }
     print(compset["sets"]["journal_name"])
     return compset

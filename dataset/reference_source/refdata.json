@@ -108,26 +108,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e087095",
-        "end": "e087095"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e087095"
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": "12"
+      "y": 2026,
+      "m": 6,
+      "d": 12
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-087095",
-    "pmid": "42285568",
-    "pmcid": "PMC13261399"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-087095"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42285568",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13261399/",
+    "pmcid": "PMC13261399",
+    "pmid": "42285568"
   },
   {
     "authors": [
@@ -206,26 +212,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e088116",
-        "end": "e088116"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e088116"
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": "12"
+      "y": 2026,
+      "m": 6,
+      "d": 12
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-088116",
-    "pmid": "42285563",
-    "pmcid": "PMC13261503"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-088116"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42285563",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13261503/",
+    "pmcid": "PMC13261503",
+    "pmid": "42285563"
   },
   {
     "authors": [
@@ -340,26 +352,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e086698",
-        "end": "e086698"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e086698"
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": "11"
+      "y": 2026,
+      "m": 6,
+      "d": 11
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-086698",
-    "pmid": "42276557",
-    "pmcid": "PMC13274572"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-086698"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42276557",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13274572/",
+    "pmcid": "PMC13274572",
+    "pmid": "42276557"
   },
   {
     "authors": [
@@ -394,26 +412,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e086562",
-        "end": "e086562"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e086562"
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": "10"
+      "y": 2026,
+      "m": 6,
+      "d": 10
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-086562",
-    "pmid": "42270130",
-    "pmcid": "PMC13250720"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-086562"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42270130",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13250720/",
+    "pmcid": "PMC13250720",
+    "pmid": "42270130"
   },
   {
     "authors": [
@@ -444,26 +468,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e088684",
-        "end": "e088684"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e088684"
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": "04"
+      "y": 2026,
+      "m": 6,
+      "d": 4
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-088684",
-    "pmid": "42242779",
-    "pmcid": "PMC13235747"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-088684"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42242779",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13235747/",
+    "pmcid": "PMC13235747",
+    "pmid": "42242779"
   },
   {
     "authors": [
@@ -510,26 +540,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e088687",
-        "end": "e088687"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e088687"
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": "04"
+      "y": 2026,
+      "m": 6,
+      "d": 4
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-088687",
-    "pmid": "42242773",
-    "pmcid": "PMC13235748"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-088687"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42242773",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13235748/",
+    "pmcid": "PMC13235748",
+    "pmid": "42242773"
   },
   {
     "authors": [
@@ -588,26 +624,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e088686",
-        "end": "e088686"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e088686"
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": "04"
+      "y": 2026,
+      "m": 6,
+      "d": 4
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-088686",
-    "pmid": "42242770",
-    "pmcid": "PMC13235706"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-088686"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42242770",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13235706/",
+    "pmcid": "PMC13235706",
+    "pmid": "42242770"
   },
   {
     "authors": [
@@ -646,26 +688,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e087975",
-        "end": "e087975"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e087975"
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "27"
+      "y": 2026,
+      "m": 5,
+      "d": 27
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-087975",
-    "pmid": "42203255",
-    "pmcid": "PMC13213652"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-087975"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42203255",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13213652/",
+    "pmcid": "PMC13213652",
+    "pmid": "42203255"
   },
   {
     "authors": [
@@ -748,26 +796,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e629407",
-        "end": "e629407"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e629407"
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "25"
+      "y": 2026,
+      "m": 5,
+      "d": 25
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2026-629407",
-    "pmid": "42185047",
-    "pmcid": "PMC13224044"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2026-629407"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42185047",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13224044/",
+    "pmcid": "PMC13224044",
+    "pmid": "42185047"
   },
   {
     "authors": [
@@ -834,26 +888,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e089868",
-        "end": "e089868"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e089868"
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "25"
+      "y": 2026,
+      "m": 5,
+      "d": 25
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2026-089868",
-    "pmid": "42185045",
-    "pmcid": "PMC13224043"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2026-089868"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42185045",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13224043/",
+    "pmcid": "PMC13224043",
+    "pmid": "42185045"
   },
   {
     "authors": [
@@ -960,26 +1020,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e089050",
-        "end": "e089050"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e089050"
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "21"
+      "y": 2026,
+      "m": 5,
+      "d": 21
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-089050",
-    "pmid": "42167774",
-    "pmcid": "PMC13191442"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-089050"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42167774",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13191442/",
+    "pmcid": "PMC13191442",
+    "pmid": "42167774"
   },
   {
     "authors": [
@@ -1026,26 +1092,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e088050",
-        "end": "e088050"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e088050"
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "20"
+      "y": 2026,
+      "m": 5,
+      "d": 20
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-088050",
-    "pmid": "42161415",
-    "pmcid": "PMC13188451"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-088050"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42161415",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13188451/",
+    "pmcid": "PMC13188451",
+    "pmid": "42161415"
   },
   {
     "authors": [
@@ -1084,26 +1156,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e086810",
-        "end": "e086810"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e086810"
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "19"
+      "y": 2026,
+      "m": 5,
+      "d": 19
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-086810",
-    "pmid": "42156120",
-    "pmcid": "PMC13184834"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-086810"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42156120",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13184834/",
+    "pmcid": "PMC13184834",
+    "pmid": "42156120"
   },
   {
     "authors": [
@@ -1126,26 +1204,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "s958",
-        "end": "s958"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "15"
+      "y": 2026,
+      "m": 5,
+      "d": 15
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj.s958",
-    "pmid": "42140629",
-    "pmcid": "PMC13178420"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj.s958"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42140629",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13178420/",
+    "pmcid": "PMC13178420",
+    "pmid": "42140629"
   },
   {
     "authors": [
@@ -1188,26 +1272,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e083075",
-        "end": "e083075"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e083075"
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "14"
+      "y": 2026,
+      "m": 5,
+      "d": 14
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2024-083075",
-    "pmid": "42134863",
-    "pmcid": "PMC13173695"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2024-083075"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42134863",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13173695/",
+    "pmcid": "PMC13173695",
+    "pmid": "42134863"
   },
   {
     "authors": [
@@ -1366,26 +1456,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e089636",
-        "end": "e089636"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e089636"
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "13"
+      "y": 2026,
+      "m": 5,
+      "d": 13
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2026-089636",
-    "pmid": "42128454",
-    "pmcid": "PMC13170071"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2026-089636"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42128454",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13170071/",
+    "pmcid": "PMC13170071",
+    "pmid": "42128454"
   },
   {
     "authors": [
@@ -1508,26 +1604,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e088939",
-        "end": "e088939"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e088939"
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "12"
+      "y": 2026,
+      "m": 5,
+      "d": 12
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-088939",
-    "pmid": "42120081",
-    "pmcid": "PMC13162091"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-088939"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42120081",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13162091/",
+    "pmcid": "PMC13162091",
+    "pmid": "42120081"
   },
   {
     "authors": [
@@ -1566,26 +1668,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e088921",
-        "end": "e088921"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e088921"
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "06"
+      "y": 2026,
+      "m": 5,
+      "d": 6
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-088921",
-    "pmid": "42091164",
-    "pmcid": "PMC13147496"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-088921"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42091164",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13147496/",
+    "pmcid": "PMC13147496",
+    "pmid": "42091164"
   },
   {
     "authors": [
@@ -1612,26 +1720,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e089213",
-        "end": "e089213"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e089213"
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "05"
+      "y": 2026,
+      "m": 5,
+      "d": 5
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-089213",
-    "pmid": "42086290",
-    "pmcid": "PMC13140781"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-089213"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42086290",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13140781/",
+    "pmcid": "PMC13140781",
+    "pmid": "42086290"
   },
   {
     "authors": [
@@ -1734,26 +1848,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e086295",
-        "end": "e086295"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e086295"
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "29"
+      "y": 2026,
+      "m": 4,
+      "d": 29
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-086295",
-    "pmid": "42055586",
-    "pmcid": "PMC13126859"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-086295"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42055586",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13126859/",
+    "pmcid": "PMC13126859",
+    "pmid": "42055586"
   },
   {
     "authors": [
@@ -1788,26 +1908,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e088671",
-        "end": "e088671"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e088671"
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "29"
+      "y": 2026,
+      "m": 4,
+      "d": 29
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-088671",
-    "pmid": "42055584",
-    "pmcid": "PMC13126849"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-088671"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42055584",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13126849/",
+    "pmcid": "PMC13126849",
+    "pmid": "42055584"
   },
   {
     "authors": [
@@ -1830,26 +1956,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e088509",
-        "end": "e088509"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e088509"
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "28"
+      "y": 2026,
+      "m": 4,
+      "d": 28
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-088509",
-    "pmid": "42049318",
-    "pmcid": "PMC7619201"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-088509"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42049318",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7619201/",
+    "pmcid": "PMC7619201",
+    "pmid": "42049318"
   },
   {
     "authors": [
@@ -1896,26 +2028,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e087844",
-        "end": "e087844"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e087844"
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "22"
+      "y": 2026,
+      "m": 4,
+      "d": 22
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-087844",
-    "pmid": "42019989",
-    "pmcid": "PMC13101412"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-087844"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42019989",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13101412/",
+    "pmcid": "PMC13101412",
+    "pmid": "42019989"
   },
   {
     "authors": [
@@ -1990,26 +2128,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e087578",
-        "end": "e087578"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e087578"
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "15"
+      "y": 2026,
+      "m": 4,
+      "d": 15
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-087578",
-    "pmid": "41985976",
-    "pmcid": "PMC13081225"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-087578"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41985976",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13081225/",
+    "pmcid": "PMC13081225",
+    "pmid": "41985976"
   },
   {
     "authors": [
@@ -2076,26 +2220,32 @@
         "full": "BMJ (Clinical research ed.)",
         "short": "BMJ"
       },
-      "volume": "393",
-      "issue": "",
+      "volume": 393,
+      "issue": null,
       "page": {
-        "start": "e087321",
-        "end": "e087321"
-      }
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e087321"
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "15"
+      "y": 2026,
+      "m": 4,
+      "d": 15
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1136/bmj-2025-087321",
-    "pmid": "41985931",
-    "pmcid": "PMC13081224"
+    "doi": {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-087321"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41985931",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13081224/",
+    "pmcid": "PMC13081224",
+    "pmid": "41985931"
   },
   {
     "authors": [
@@ -2190,26 +2340,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8119",
+      "volume": 654,
+      "issue": 8119,
       "page": {
-        "start": "697",
-        "end": "705"
-      }
+        "start": 697,
+        "end": 705
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "06",
-      "d": "17"
+      "y": 2026,
+      "m": 6,
+      "d": 17
     },
-    "doi": "10.1038/s41586-026-10540-5",
-    "pmid": "42310115",
-    "pmcid": "PMC13275307"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10540-5"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42310115",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13275307/",
+    "pmcid": "PMC13275307",
+    "pmid": "42310115"
   },
   {
     "authors": [
@@ -2592,26 +2748,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8119",
+      "volume": 654,
+      "issue": 8119,
       "page": {
-        "start": "622",
-        "end": "628"
-      }
+        "start": 622,
+        "end": 628
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "06",
-      "d": "17"
+      "y": 2026,
+      "m": 6,
+      "d": 17
     },
-    "doi": "10.1038/s41586-026-10617-1",
-    "pmid": "42310113",
-    "pmcid": "PMC13275304"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10617-1"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42310113",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13275304/",
+    "pmcid": "PMC13275304",
+    "pmid": "42310113"
   },
   {
     "authors": [
@@ -2674,26 +2836,32 @@
         "full": "Nature. Mental health",
         "short": "Nat Ment Health"
       },
-      "volume": "4",
-      "issue": "6",
+      "volume": 4,
+      "issue": 6,
       "page": {
-        "start": "994",
-        "end": "1009"
-      }
+        "start": 994,
+        "end": 1009
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "",
-      "d": ""
+      "y": 2026,
+      "m": null,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "06",
-      "d": "10"
+      "y": 2026,
+      "m": 6,
+      "d": 10
     },
-    "doi": "10.1038/s44220-026-00669-7",
-    "pmid": "42291779",
-    "pmcid": "PMC13259922"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s44220-026-00669-7"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42291779",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13259922/",
+    "pmcid": "PMC13259922",
+    "pmid": "42291779"
   },
   {
     "authors": [
@@ -2748,26 +2916,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8118",
+      "volume": 654,
+      "issue": 8118,
       "page": {
-        "start": "369",
-        "end": "374"
-      }
+        "start": 369,
+        "end": 374
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "06",
-      "d": "03"
+      "y": 2026,
+      "m": 6,
+      "d": 3
     },
-    "doi": "10.1038/s41586-026-10637-x",
-    "pmid": "42236939",
-    "pmcid": "PMC13253322"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10637-x"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42236939",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13253322/",
+    "pmcid": "PMC13253322",
+    "pmid": "42236939"
   },
   {
     "authors": [
@@ -2802,26 +2976,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8118",
+      "volume": 654,
+      "issue": 8118,
       "page": {
-        "start": "383",
-        "end": "390"
-      }
+        "start": 383,
+        "end": 390
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "06",
-      "d": "03"
+      "y": 2026,
+      "m": 6,
+      "d": 3
     },
-    "doi": "10.1038/s41586-026-10606-4",
-    "pmid": "42236936",
-    "pmcid": "PMC13253328"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10606-4"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42236936",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13253328/",
+    "pmcid": "PMC13253328",
+    "pmid": "42236936"
   },
   {
     "authors": [
@@ -2844,26 +3024,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8119",
+      "volume": 654,
+      "issue": 8119,
       "page": {
-        "start": "676",
-        "end": "682"
-      }
+        "start": 676,
+        "end": 682
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "06",
-      "d": "03"
+      "y": 2026,
+      "m": 6,
+      "d": 3
     },
-    "doi": "10.1038/s41586-026-10624-2",
-    "pmid": "42236934",
-    "pmcid": "PMC13275288"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10624-2"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42236934",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13275288/",
+    "pmcid": "PMC13275288",
+    "pmid": "42236934"
   },
   {
     "authors": [
@@ -2938,26 +3124,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8117",
+      "volume": 654,
+      "issue": 8117,
       "page": {
-        "start": "76",
-        "end": "84"
-      }
+        "start": 76,
+        "end": 84
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "06",
-      "d": "03"
+      "y": 2026,
+      "m": 6,
+      "d": 3
     },
-    "doi": "10.1038/s41586-026-10583-8",
-    "pmid": "42236563",
-    "pmcid": "PMC13233625"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10583-8"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42236563",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13233625/",
+    "pmcid": "PMC13233625",
+    "pmid": "42236563"
   },
   {
     "authors": [
@@ -2992,26 +3184,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8117",
+      "volume": 654,
+      "issue": 8117,
       "page": {
-        "start": "47",
-        "end": "51"
-      }
+        "start": 47,
+        "end": 51
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "06",
-      "d": "03"
+      "y": 2026,
+      "m": 6,
+      "d": 3
     },
-    "doi": "10.1038/s41586-026-10473-z",
-    "pmid": "42236560",
-    "pmcid": "PMC13233311"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10473-z"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42236560",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13233311/",
+    "pmcid": "PMC13233311",
+    "pmid": "42236560"
   },
   {
     "authors": [
@@ -3062,26 +3260,32 @@
         "full": "Nature. Mental health",
         "short": "Nat Ment Health"
       },
-      "volume": "4",
-      "issue": "6",
+      "volume": 4,
+      "issue": 6,
       "page": {
-        "start": "971",
-        "end": "977"
-      }
+        "start": 971,
+        "end": 977
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "",
-      "d": ""
+      "y": 2026,
+      "m": null,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "06",
-      "d": "01"
+      "y": 2026,
+      "m": 6,
+      "d": 1
     },
-    "doi": "10.1038/s44220-026-00654-0",
-    "pmid": "42291777",
-    "pmcid": "PMC13259919"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s44220-026-00654-0"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42291777",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13259919/",
+    "pmcid": "PMC13259919",
+    "pmid": "42291777"
   },
   {
     "authors": [
@@ -3168,26 +3372,32 @@
         "full": "Nature. Mental health",
         "short": "Nat Ment Health"
       },
-      "volume": "4",
-      "issue": "6",
+      "volume": 4,
+      "issue": 6,
       "page": {
-        "start": "1010",
-        "end": "1020"
-      }
+        "start": 1010,
+        "end": 1020
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "",
-      "d": ""
+      "y": 2026,
+      "m": null,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "06",
-      "d": "01"
+      "y": 2026,
+      "m": 6,
+      "d": 1
     },
-    "doi": "10.1038/s44220-026-00656-y",
-    "pmid": "42291776",
-    "pmcid": "PMC13259941"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s44220-026-00656-y"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42291776",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13259941/",
+    "pmcid": "PMC13259941",
+    "pmid": "42291776"
   },
   {
     "authors": [
@@ -3358,26 +3568,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "653",
-      "issue": "8116",
+      "volume": 653,
+      "issue": 8116,
       "page": {
-        "start": "1017",
-        "end": "1021"
-      }
+        "start": 1017,
+        "end": 1021
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": ""
+      "y": 2026,
+      "m": 5,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "27"
+      "y": 2026,
+      "m": 5,
+      "d": 27
     },
-    "doi": "10.1038/s41586-026-10579-4",
-    "pmid": "42203931",
-    "pmcid": "PMC13215880"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10579-4"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42203931",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13215880/",
+    "pmcid": "PMC13215880",
+    "pmid": "42203931"
   },
   {
     "authors": [
@@ -3620,26 +3836,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "653",
-      "issue": "8116",
+      "volume": 653,
+      "issue": 8116,
       "page": {
-        "start": "1022",
-        "end": "1026"
-      }
+        "start": 1022,
+        "end": 1026
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": ""
+      "y": 2026,
+      "m": 5,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "27"
+      "y": 2026,
+      "m": 5,
+      "d": 27
     },
-    "doi": "10.1038/s41586-026-10556-x",
-    "pmid": "42203929",
-    "pmcid": "PMC13216062"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10556-x"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42203929",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13216062/",
+    "pmcid": "PMC13216062",
+    "pmid": "42203929"
   },
   {
     "authors": [
@@ -3738,26 +3960,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8117",
+      "volume": 654,
+      "issue": 8117,
       "page": {
-        "start": "173",
-        "end": "188"
-      }
+        "start": 173,
+        "end": 188
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "27"
+      "y": 2026,
+      "m": 5,
+      "d": 27
     },
-    "doi": "10.1038/s41586-026-10542-3",
-    "pmid": "42203874",
-    "pmcid": "PMC13233323"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10542-3"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42203874",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13233323/",
+    "pmcid": "PMC13233323",
+    "pmid": "42203874"
   },
   {
     "authors": [
@@ -3792,26 +4020,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8118",
+      "volume": 654,
+      "issue": 8118,
       "page": {
-        "start": "391",
-        "end": "397"
-      }
+        "start": 391,
+        "end": 397
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "27"
+      "y": 2026,
+      "m": 5,
+      "d": 27
     },
-    "doi": "10.1038/s41586-026-10607-3",
-    "pmid": "42203873",
-    "pmcid": "PMC13253319"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10607-3"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42203873",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13253319/",
+    "pmcid": "PMC13253319",
+    "pmid": "42203873"
   },
   {
     "authors": [
@@ -3838,26 +4072,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "",
-      "issue": "",
+      "volume": null,
+      "issue": null,
       "page": {
-        "start": "10.1038/s41586-026-10582-9",
+        "start": "",
         "end": ""
-      }
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "27"
+      "y": 2026,
+      "m": 5,
+      "d": 27
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1038/s41586-026-10582-9",
-    "pmid": "42203868",
-    "pmcid": "PMC13289585"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10582-9"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42203868",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13289585/",
+    "pmcid": "PMC13289585",
+    "pmid": "42203868"
   },
   {
     "authors": [
@@ -3900,26 +4140,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8118",
+      "volume": 654,
+      "issue": 8118,
       "page": {
-        "start": "408",
-        "end": "418"
-      }
+        "start": 408,
+        "end": 418
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "27"
+      "y": 2026,
+      "m": 5,
+      "d": 27
     },
-    "doi": "10.1038/s41586-026-10525-4",
-    "pmid": "42203864",
-    "pmcid": "PMC13253325"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10525-4"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42203864",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13253325/",
+    "pmcid": "PMC13253325",
+    "pmid": "42203864"
   },
   {
     "authors": [
@@ -3946,26 +4192,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "653",
-      "issue": "8116",
+      "volume": 653,
+      "issue": 8116,
       "page": {
-        "start": "1078",
-        "end": "1084"
-      }
+        "start": 1078,
+        "end": 1084
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": ""
+      "y": 2026,
+      "m": 5,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "20"
+      "y": 2026,
+      "m": 5,
+      "d": 20
     },
-    "doi": "10.1038/s41586-026-10479-7",
-    "pmid": "42162433",
-    "pmcid": "PMC13216064"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10479-7"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42162433",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13216064/",
+    "pmcid": "PMC13216064",
+    "pmid": "42162433"
   },
   {
     "authors": [
@@ -4036,26 +4288,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8118",
+      "volume": 654,
+      "issue": 8118,
       "page": {
-        "start": "356",
-        "end": "360"
-      }
+        "start": 356,
+        "end": 360
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "20"
+      "y": 2026,
+      "m": 5,
+      "d": 20
     },
-    "doi": "10.1038/s41586-026-10485-9",
-    "pmid": "42162427",
-    "pmcid": "PMC13253329"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10485-9"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42162427",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13253329/",
+    "pmcid": "PMC13253329",
+    "pmid": "42162427"
   },
   {
     "authors": [
@@ -4102,26 +4360,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8117",
+      "volume": 654,
+      "issue": 8117,
       "page": {
-        "start": "152",
-        "end": "162"
-      }
+        "start": 152,
+        "end": 162
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "20"
+      "y": 2026,
+      "m": 5,
+      "d": 20
     },
-    "doi": "10.1038/s41586-026-10297-x",
-    "pmid": "42162420",
-    "pmcid": "PMC13233313"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10297-x"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42162420",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13233313/",
+    "pmcid": "PMC13233313",
+    "pmid": "42162420"
   },
   {
     "authors": [
@@ -4184,26 +4448,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8118",
+      "volume": 654,
+      "issue": 8118,
       "page": {
-        "start": "465",
-        "end": "475"
-      }
+        "start": 465,
+        "end": 475
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "20"
+      "y": 2026,
+      "m": 5,
+      "d": 20
     },
-    "doi": "10.1038/s41586-026-10509-4",
-    "pmid": "42162419",
-    "pmcid": "PMC13253353"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10509-4"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42162419",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13253353/",
+    "pmcid": "PMC13253353",
+    "pmid": "42162419"
   },
   {
     "authors": [
@@ -4258,26 +4528,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "653",
-      "issue": "8115",
+      "volume": 653,
+      "issue": 8115,
       "page": {
-        "start": "700",
-        "end": "706"
-      }
+        "start": 700,
+        "end": 706
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": ""
+      "y": 2026,
+      "m": 5,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "20"
+      "y": 2026,
+      "m": 5,
+      "d": 20
     },
-    "doi": "10.1038/s41586-026-10565-w",
-    "pmid": "42162388",
-    "pmcid": "PMC13190237"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10565-w"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42162388",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13190237/",
+    "pmcid": "PMC13190237",
+    "pmid": "42162388"
   },
   {
     "authors": [
@@ -4380,26 +4656,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8119",
+      "volume": 654,
+      "issue": 8119,
       "page": {
-        "start": "660",
-        "end": "667"
-      }
+        "start": 660,
+        "end": 667
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "13"
+      "y": 2026,
+      "m": 5,
+      "d": 13
     },
-    "doi": "10.1038/s41586-026-10626-0",
-    "pmid": "42129568",
-    "pmcid": "PMC13275290"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10626-0"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42129568",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13275290/",
+    "pmcid": "PMC13275290",
+    "pmid": "42129568"
   },
   {
     "authors": [
@@ -4454,26 +4736,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "654",
-      "issue": "8117",
+      "volume": 654,
+      "issue": 8117,
       "page": {
-        "start": "209",
-        "end": "218"
-      }
+        "start": 209,
+        "end": 218
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": ""
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "13"
+      "y": 2026,
+      "m": 5,
+      "d": 13
     },
-    "doi": "10.1038/s41586-026-10531-6",
-    "pmid": "42129565",
-    "pmcid": "PMC13233317"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10531-6"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42129565",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13233317/",
+    "pmcid": "PMC13233317",
+    "pmid": "42129565"
   },
   {
     "authors": [
@@ -4516,26 +4804,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "653",
-      "issue": "8116",
+      "volume": 653,
+      "issue": 8116,
       "page": {
-        "start": "1039",
-        "end": "1046"
-      }
+        "start": 1039,
+        "end": 1046
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": ""
+      "y": 2026,
+      "m": 5,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "13"
+      "y": 2026,
+      "m": 5,
+      "d": 13
     },
-    "doi": "10.1038/s41586-026-10461-3",
-    "pmid": "42129549",
-    "pmcid": "PMC13216067"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10461-3"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42129549",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13216067/",
+    "pmcid": "PMC13216067",
+    "pmid": "42129549"
   },
   {
     "authors": [
@@ -4550,26 +4844,32 @@
         "full": "Nature",
         "short": "Nature"
       },
-      "volume": "653",
-      "issue": "8114",
+      "volume": 653,
+      "issue": 8114,
       "page": {
-        "start": "510",
-        "end": "518"
-      }
+        "start": 510,
+        "end": 518
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": ""
+      "y": 2026,
+      "m": 5,
+      "d": null
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "13"
+      "y": 2026,
+      "m": 5,
+      "d": 13
     },
-    "doi": "10.1038/s41586-026-10383-0",
-    "pmid": "42129527",
-    "pmcid": "PMC13171639"
+    "doi": {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10383-0"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42129527",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13171639/",
+    "pmcid": "PMC13171639",
+    "pmid": "42129527"
   },
   {
     "authors": [
@@ -4696,26 +4996,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "407",
-      "issue": "10539",
+      "volume": 407,
+      "issue": 10539,
       "page": {
-        "start": "1614",
-        "end": "1625"
-      }
+        "start": 1614,
+        "end": 1625
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "25"
+      "y": 2026,
+      "m": 4,
+      "d": 25
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1016/S0140-6736(26)00258-8",
-    "pmid": "42035777",
-    "pmcid": "PMC13266303"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(26)00258-8"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42035777",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13266303/",
+    "pmcid": "PMC13266303",
+    "pmid": "42035777"
   },
   {
     "authors": [
@@ -4774,26 +5080,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "407",
-      "issue": "10532",
+      "volume": 407,
+      "issue": 10532,
       "page": {
-        "start": "951",
-        "end": "962"
-      }
+        "start": 951,
+        "end": 962
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "03",
-      "d": "07"
+      "y": 2026,
+      "m": 3,
+      "d": 7
     },
     "epub": {
-      "y": "2026",
-      "m": "02",
-      "d": "09"
+      "y": 2026,
+      "m": 2,
+      "d": 9
     },
-    "doi": "10.1016/S0140-6736(25)02474-2",
-    "pmid": "41679324",
-    "pmcid": "PMC12979006"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)02474-2"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41679324",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12979006/",
+    "pmcid": "PMC12979006",
+    "pmid": "41679324"
   },
   {
     "authors": [
@@ -4812,26 +5124,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "407",
-      "issue": "10529",
+      "volume": 407,
+      "issue": 10529,
       "page": {
-        "start": "689",
-        "end": "703"
-      }
+        "start": 689,
+        "end": 703
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "02",
-      "d": "14"
+      "y": 2026,
+      "m": 2,
+      "d": 14
     },
     "epub": {
-      "y": "2026",
-      "m": "02",
-      "d": "05"
+      "y": 2026,
+      "m": 2,
+      "d": 5
     },
-    "doi": "10.1016/S0140-6736(25)01578-8",
-    "pmid": "41655587",
-    "pmcid": "PMC7619005"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)01578-8"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41655587",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7619005/",
+    "pmcid": "PMC7619005",
+    "pmid": "41655587"
   },
   {
     "authors": [
@@ -5018,26 +5336,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "407",
-      "issue": "10525",
+      "volume": 407,
+      "issue": 10525,
       "page": {
-        "start": "256",
-        "end": "266"
-      }
+        "start": 256,
+        "end": 266
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "01",
-      "d": "17"
+      "y": 2026,
+      "m": 1,
+      "d": 17
     },
     "epub": {
-      "y": "2025",
-      "m": "12",
-      "d": "19"
+      "y": 2025,
+      "m": 12,
+      "d": 19
     },
-    "doi": "10.1016/S0140-6736(25)02309-8",
-    "pmid": "41429130",
-    "pmcid": "PMC12823291"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)02309-8"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41429130",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12823291/",
+    "pmcid": "PMC12823291",
+    "pmid": "41429130"
   },
   {
     "authors": [
@@ -5148,26 +5472,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "407",
-      "issue": "10524",
+      "volume": 407,
+      "issue": 10524,
       "page": {
-        "start": "147",
-        "end": "160"
-      }
+        "start": 147,
+        "end": 160
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "01",
-      "d": "10"
+      "y": 2026,
+      "m": 1,
+      "d": 10
     },
     "epub": {
-      "y": "2025",
-      "m": "12",
-      "d": "11"
+      "y": 2025,
+      "m": 12,
+      "d": 11
     },
-    "doi": "10.1016/S0140-6736(25)01953-1",
-    "pmid": "41391465",
-    "pmcid": "PMC12784215"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)01953-1"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41391465",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12784215/",
+    "pmcid": "PMC12784215",
+    "pmid": "41391465"
   },
   {
     "authors": [
@@ -5182,26 +5512,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "407",
-      "issue": "10523",
+      "volume": 407,
+      "issue": 10523,
       "page": {
-        "start": "31",
-        "end": "52"
-      }
+        "start": 31,
+        "end": 52
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "01",
-      "d": "03"
+      "y": 2026,
+      "m": 1,
+      "d": 3
     },
     "epub": {
-      "y": "2025",
-      "m": "12",
-      "d": "09"
+      "y": 2025,
+      "m": 12,
+      "d": 9
     },
-    "doi": "10.1016/S0140-6736(25)02503-6",
-    "pmid": "41386261",
-    "pmcid": "PMC12775558"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)02503-6"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41386261",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12775558/",
+    "pmcid": "PMC12775558",
+    "pmid": "41386261"
   },
   {
     "authors": [
@@ -5216,26 +5552,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "406",
-      "issue": "10513",
+      "volume": 406,
+      "issue": 10513,
       "page": {
-        "start": "1811",
-        "end": "1872"
-      }
+        "start": 1811,
+        "end": 1872
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "10",
-      "d": "18"
+      "y": 2025,
+      "m": 10,
+      "d": 18
     },
     "epub": {
-      "y": "2025",
-      "m": "10",
-      "d": "12"
+      "y": 2025,
+      "m": 10,
+      "d": 12
     },
-    "doi": "10.1016/S0140-6736(25)01917-8",
-    "pmid": "41092928",
-    "pmcid": "PMC12535838"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)01917-8"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41092928",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12535838/",
+    "pmcid": "PMC12535838",
+    "pmid": "41092928"
   },
   {
     "authors": [
@@ -5250,26 +5592,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "406",
-      "issue": "10513",
+      "volume": 406,
+      "issue": 10513,
       "page": {
-        "start": "1731",
-        "end": "1810"
-      }
+        "start": 1731,
+        "end": 1810
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "10",
-      "d": "18"
+      "y": 2025,
+      "m": 10,
+      "d": 18
     },
     "epub": {
-      "y": "2025",
-      "m": "10",
-      "d": "12"
+      "y": 2025,
+      "m": 10,
+      "d": 12
     },
-    "doi": "10.1016/S0140-6736(25)01330-3",
-    "pmid": "41092927",
-    "pmcid": "PMC12535839"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)01330-3"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41092927",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12535839/",
+    "pmcid": "PMC12535839",
+    "pmid": "41092927"
   },
   {
     "authors": [
@@ -5284,26 +5632,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "406",
-      "issue": "10513",
+      "volume": 406,
+      "issue": 10513,
       "page": {
-        "start": "1873",
-        "end": "1922"
-      }
+        "start": 1873,
+        "end": 1922
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "10",
-      "d": "18"
+      "y": 2025,
+      "m": 10,
+      "d": 18
     },
     "epub": {
-      "y": "2025",
-      "m": "10",
-      "d": "12"
+      "y": 2025,
+      "m": 10,
+      "d": 12
     },
-    "doi": "10.1016/S0140-6736(25)01637-X",
-    "pmid": "41092926",
-    "pmcid": "PMC12535840"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)01637-X"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41092926",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12535840/",
+    "pmcid": "PMC12535840",
+    "pmid": "41092926"
   },
   {
     "authors": [
@@ -5390,26 +5744,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "406",
-      "issue": "10514",
+      "volume": 406,
+      "issue": 10514,
       "page": {
-        "start": "1969",
-        "end": "1982"
-      }
+        "start": 1969,
+        "end": 1982
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "10",
-      "d": "25"
+      "y": 2025,
+      "m": 10,
+      "d": 25
     },
     "epub": {
-      "y": "2025",
-      "m": "10",
-      "d": "04"
+      "y": 2025,
+      "m": 10,
+      "d": 4
     },
-    "doi": "10.1016/S0140-6736(25)01639-3",
-    "pmid": "41056961",
-    "pmcid": "PMC12549477"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)01639-3"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41056961",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12549477/",
+    "pmcid": "PMC12549477",
+    "pmid": "41056961"
   },
   {
     "authors": [
@@ -5544,26 +5904,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "406",
-      "issue": "10514",
+      "volume": 406,
+      "issue": 10514,
       "page": {
-        "start": "1953",
-        "end": "1968"
-      }
+        "start": 1953,
+        "end": 1968
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "10",
-      "d": "25"
+      "y": 2025,
+      "m": 10,
+      "d": 25
     },
     "epub": {
-      "y": "2025",
-      "m": "10",
-      "d": "03"
+      "y": 2025,
+      "m": 10,
+      "d": 3
     },
-    "doi": "10.1016/S0140-6736(25)01432-1",
-    "pmid": "41052510",
-    "pmcid": "PMC12549478"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)01432-1"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41052510",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12549478/",
+    "pmcid": "PMC12549478",
+    "pmid": "41052510"
   },
   {
     "authors": [
@@ -5578,26 +5944,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "406",
-      "issue": "10512",
+      "volume": 406,
+      "issue": 10512,
       "page": {
-        "start": "1565",
-        "end": "1586"
-      }
+        "start": 1565,
+        "end": 1586
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "10",
-      "d": "11"
+      "y": 2025,
+      "m": 10,
+      "d": 11
     },
     "epub": {
-      "y": "2025",
-      "m": "09",
-      "d": "24"
+      "y": 2025,
+      "m": 9,
+      "d": 24
     },
-    "doi": "10.1016/S0140-6736(25)01635-6",
-    "pmid": "41015051",
-    "pmcid": "PMC12687902"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)01635-6"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41015051",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12687902/",
+    "pmcid": "PMC12687902",
+    "pmid": "41015051"
   },
   {
     "authors": [
@@ -5612,26 +5984,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "406",
-      "issue": "10509",
+      "volume": 406,
+      "issue": 10509,
       "page": {
-        "start": "1255",
-        "end": "1282"
-      }
+        "start": 1255,
+        "end": 1282
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "09",
-      "d": "20"
+      "y": 2025,
+      "m": 9,
+      "d": 20
     },
     "epub": {
-      "y": "2025",
-      "m": "09",
-      "d": "10"
+      "y": 2025,
+      "m": 9,
+      "d": 10
     },
-    "doi": "10.1016/S0140-6736(25)01388-1",
-    "pmid": "40945529",
-    "pmcid": "PMC7618237"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)01388-1"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/40945529",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7618237/",
+    "pmcid": "PMC7618237",
+    "pmid": "40945529"
   },
   {
     "authors": [
@@ -5678,26 +6056,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "406",
-      "issue": "10506",
+      "volume": 406,
+      "issue": 10506,
       "page": {
-        "start": "940",
-        "end": "949"
-      }
+        "start": 940,
+        "end": 949
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "08",
-      "d": "30"
+      "y": 2025,
+      "m": 8,
+      "d": 30
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1016/S0140-6736(25)00902-X",
-    "pmid": "40885585",
-    "pmcid": "PMC12394659"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)00902-X"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/40885585",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12394659/",
+    "pmcid": "PMC12394659",
+    "pmid": "40885585"
   },
   {
     "authors": [
@@ -5756,26 +6140,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "406",
-      "issue": "10501",
+      "volume": 406,
+      "issue": 10501,
       "page": {
-        "start": "337",
-        "end": "348"
-      }
+        "start": 337,
+        "end": 348
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "07",
-      "d": "26"
+      "y": 2025,
+      "m": 7,
+      "d": 26
     },
     "epub": {
-      "y": "2025",
-      "m": "07",
-      "d": "15"
+      "y": 2025,
+      "m": 7,
+      "d": 15
     },
-    "doi": "10.1016/S0140-6736(25)01240-1",
-    "pmid": "40680759",
-    "pmcid": "PMC12439094"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)01240-1"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/40680759",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12439094/",
+    "pmcid": "PMC12439094",
+    "pmid": "40680759"
   },
   {
     "authors": [
@@ -5834,26 +6224,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "406",
-      "issue": "10501",
+      "volume": 406,
+      "issue": 10501,
       "page": {
-        "start": "349",
-        "end": "357"
-      }
+        "start": 349,
+        "end": 357
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "07",
-      "d": "26"
+      "y": 2025,
+      "m": 7,
+      "d": 26
     },
     "epub": {
-      "y": "2025",
-      "m": "07",
-      "d": "10"
+      "y": 2025,
+      "m": 7,
+      "d": 10
     },
-    "doi": "10.1016/S0140-6736(25)00765-2",
-    "pmid": "40652949",
-    "pmcid": "PMC12262163"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)00765-2"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/40652949",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12262163/",
+    "pmcid": "PMC12262163",
+    "pmid": "40652949"
   },
   {
     "authors": [
@@ -5924,26 +6320,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "406",
-      "issue": "10500",
+      "volume": 406,
+      "issue": 10500,
       "page": {
-        "start": "283",
-        "end": "294"
-      }
+        "start": 283,
+        "end": 294
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "07",
-      "d": "19"
+      "y": 2025,
+      "m": 7,
+      "d": 19
     },
     "epub": {
-      "y": "2025",
-      "m": "06",
-      "d": "30"
+      "y": 2025,
+      "m": 6,
+      "d": 30
     },
-    "doi": "10.1016/S0140-6736(25)01186-9",
-    "pmid": "40609560",
-    "pmcid": "PMC12274115"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)01186-9"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/40609560",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12274115/",
+    "pmcid": "PMC12274115",
+    "pmid": "40609560"
   },
   {
     "authors": [
@@ -5958,26 +6360,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "406",
-      "issue": "10500",
+      "volume": 406,
+      "issue": 10500,
       "page": {
-        "start": "235",
-        "end": "260"
-      }
+        "start": 235,
+        "end": 260
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "07",
-      "d": "19"
+      "y": 2025,
+      "m": 7,
+      "d": 19
     },
     "epub": {
-      "y": "2025",
-      "m": "06",
-      "d": "24"
+      "y": 2025,
+      "m": 6,
+      "d": 24
     },
-    "doi": "10.1016/S0140-6736(25)01037-2",
-    "pmid": "40578370",
-    "pmcid": "PMC12338332"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)01037-2"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/40578370",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12338332/",
+    "pmcid": "PMC12338332",
+    "pmid": "40578370"
   },
   {
     "authors": [
@@ -6024,26 +6432,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "405",
-      "issue": "10492",
+      "volume": 405,
+      "issue": 10492,
       "page": {
-        "start": "1865",
-        "end": "1878"
-      }
+        "start": 1865,
+        "end": 1878
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "05",
-      "d": "24"
+      "y": 2025,
+      "m": 5,
+      "d": 24
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1016/S0140-6736(25)00551-3",
-    "pmid": "40412861",
-    "pmcid": "PMC7618282"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)00551-3"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/40412861",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7618282/",
+    "pmcid": "PMC7618282",
+    "pmid": "40412861"
   },
   {
     "authors": [
@@ -6102,26 +6516,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "405",
-      "issue": "10492",
+      "volume": 405,
+      "issue": 10492,
       "page": {
-        "start": "1817",
-        "end": "1836"
-      }
+        "start": 1817,
+        "end": 1836
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "05",
-      "d": "24"
+      "y": 2025,
+      "m": 5,
+      "d": 24
     },
     "epub": {
-      "y": "2025",
-      "m": "05",
-      "d": "08"
+      "y": 2025,
+      "m": 5,
+      "d": 8
     },
-    "doi": "10.1016/S0140-6736(25)00311-3",
-    "pmid": "40347967",
-    "pmcid": "PMC12100463"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)00311-3"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/40347967",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12100463/",
+    "pmcid": "PMC12100463",
+    "pmid": "40347967"
   },
   {
     "authors": [
@@ -6172,26 +6592,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "",
-      "issue": "",
+      "volume": null,
+      "issue": null,
       "page": {
-        "start": "S0140-6736(25)00813-X",
+        "start": "",
         "end": ""
-      }
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "04",
-      "d": "25"
+      "y": 2025,
+      "m": 4,
+      "d": 25
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1016/S0140-6736(25)00813-X",
-    "pmid": "40294615",
-    "pmcid": "PMC7618538"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)00813-X"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/40294615",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7618538/",
+    "pmcid": "PMC7618538",
+    "pmid": "40294615"
   },
   {
     "authors": [
@@ -6234,26 +6660,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "405",
-      "issue": "10490",
+      "volume": 405,
+      "issue": 10490,
       "page": {
-        "start": "1689",
-        "end": "1699"
-      }
+        "start": 1689,
+        "end": 1699
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "05",
-      "d": "10"
+      "y": 2025,
+      "m": 5,
+      "d": 10
     },
     "epub": {
-      "y": "2025",
-      "m": "04",
-      "d": "15"
+      "y": 2025,
+      "m": 4,
+      "d": 15
     },
-    "doi": "10.1016/S0140-6736(25)00143-6",
-    "pmid": "40250455",
-    "pmcid": "PMC12062190"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)00143-6"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/40250455",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12062190/",
+    "pmcid": "PMC12062190",
+    "pmid": "40250455"
   },
   {
     "authors": [
@@ -6268,26 +6700,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "405",
-      "issue": "10486",
+      "volume": 405,
+      "issue": 10486,
       "page": {
-        "start": "1220",
-        "end": "1221"
-      }
+        "start": 1220,
+        "end": 1221
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "04",
-      "d": "12"
+      "y": 2025,
+      "m": 4,
+      "d": 12
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1016/S0140-6736(25)00691-9",
-    "pmid": "40221153",
-    "pmcid": "PMC7618581"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)00691-9"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/40221153",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7618581/",
+    "pmcid": "PMC7618581",
+    "pmid": "40221153"
   },
   {
     "authors": [
@@ -6302,26 +6740,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "405",
-      "issue": "10485",
+      "volume": 405,
+      "issue": 10485,
       "page": {
-        "start": "1167",
-        "end": "1181"
-      }
+        "start": 1167,
+        "end": 1181
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "04",
-      "d": "05"
+      "y": 2025,
+      "m": 4,
+      "d": 5
     },
     "epub": {
-      "y": "2025",
-      "m": "03",
-      "d": "18"
+      "y": 2025,
+      "m": 3,
+      "d": 18
     },
-    "doi": "10.1016/S0140-6736(24)02840-X",
-    "pmid": "40118081",
-    "pmcid": "PMC11971481"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(24)02840-X"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/40118081",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11971481/",
+    "pmcid": "PMC11971481",
+    "pmid": "40118081"
   },
   {
     "authors": [
@@ -6552,26 +6996,32 @@
         "full": "Lancet (London, England)",
         "short": "Lancet"
       },
-      "volume": "405",
-      "issue": "10483",
+      "volume": 405,
+      "issue": 10483,
       "page": {
-        "start": "991",
-        "end": "1003"
-      }
+        "start": 991,
+        "end": 1003
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "03",
-      "d": "22"
+      "y": 2025,
+      "m": 3,
+      "d": 22
     },
     "epub": {
-      "y": "2025",
-      "m": "03",
-      "d": "10"
+      "y": 2025,
+      "m": 3,
+      "d": 10
     },
-    "doi": "10.1016/S0140-6736(25)00263-6",
-    "pmid": "40081400",
-    "pmcid": "PMC7618301"
+    "doi": {
+      "prefix": "10.1016",
+      "suffix": "S0140-6736(25)00263-6"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/40081400",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7618301/",
+    "pmcid": "PMC7618301",
+    "pmid": "40081400"
   },
   {
     "authors": [
@@ -6730,26 +7180,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "21",
+      "volume": 394,
+      "issue": 21,
       "page": {
-        "start": "2117",
-        "end": "2125"
-      }
+        "start": 2117,
+        "end": 2125
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": "04"
+      "y": 2026,
+      "m": 6,
+      "d": 4
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMoa2513428",
-    "pmid": "42235014",
-    "pmcid": "PMC13240644"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMoa2513428"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42235014",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13240644/",
+    "pmcid": "PMC13240644",
+    "pmid": "42235014"
   },
   {
     "authors": [
@@ -6772,26 +7228,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "24",
+      "volume": 394,
+      "issue": 24,
       "page": {
-        "start": "2479",
-        "end": "2481"
-      }
+        "start": 2479,
+        "end": 2481
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": "25"
+      "y": 2026,
+      "m": 6,
+      "d": 25
     },
     "epub": {
-      "y": "2026",
-      "m": "05",
-      "d": "20"
+      "y": 2026,
+      "m": 5,
+      "d": 20
     },
-    "doi": "10.1056/NEJMc2604004",
-    "pmid": "42160720",
-    "pmcid": "PMC13235145"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMc2604004"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42160720",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13235145/",
+    "pmcid": "PMC13235145",
+    "pmid": "42160720"
   },
   {
     "authors": [
@@ -6862,26 +7324,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "",
-      "issue": "",
+      "volume": null,
+      "issue": null,
       "page": {
-        "start": "10.1056/NEJMoa2516505",
+        "start": "",
         "end": ""
-      }
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "18"
+      "y": 2026,
+      "m": 5,
+      "d": 18
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMoa2516505",
-    "pmid": "42149992",
-    "pmcid": "PMC13186117"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMoa2516505"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42149992",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13186117/",
+    "pmcid": "PMC13186117",
+    "pmid": "42149992"
   },
   {
     "authors": [
@@ -6920,26 +7388,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "19",
+      "volume": 394,
+      "issue": 19,
       "page": {
-        "start": "1959",
-        "end": "1961"
-      }
+        "start": 1959,
+        "end": 1961
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "05",
-      "d": "14"
+      "y": 2026,
+      "m": 5,
+      "d": 14
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMc2600397",
-    "pmid": "42127399",
-    "pmcid": "PMC13215208"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMc2600397"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42127399",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13215208/",
+    "pmcid": "PMC13215208",
+    "pmid": "42127399"
   },
   {
     "authors": [
@@ -7050,26 +7524,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "17",
+      "volume": 394,
+      "issue": 17,
       "page": {
-        "start": "1710",
-        "end": "1722"
-      }
+        "start": 1710,
+        "end": 1722
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "30"
+      "y": 2026,
+      "m": 4,
+      "d": 30
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMoa2509761",
-    "pmid": "42054680",
-    "pmcid": "PMC13132025"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMoa2509761"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42054680",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13132025/",
+    "pmcid": "PMC13132025",
+    "pmid": "42054680"
   },
   {
     "authors": [
@@ -7332,26 +7812,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "",
-      "issue": "",
+      "volume": null,
+      "issue": null,
       "page": {
-        "start": "10.1056/NEJMoa2601969",
+        "start": "",
         "end": ""
-      }
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "24"
+      "y": 2026,
+      "m": 4,
+      "d": 24
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMoa2601969",
-    "pmid": "42028918",
-    "pmcid": "PMC13134814"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMoa2601969"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42028918",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13134814/",
+    "pmcid": "PMC13134814",
+    "pmid": "42028918"
   },
   {
     "authors": [
@@ -7534,26 +8020,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "16",
+      "volume": 394,
+      "issue": 16,
       "page": {
-        "start": "1583",
-        "end": "1594"
-      }
+        "start": 1583,
+        "end": 1594
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "23"
+      "y": 2026,
+      "m": 4,
+      "d": 23
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMoa2502457",
-    "pmid": "42019019",
-    "pmcid": "PMC7619176"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMoa2502457"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42019019",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7619176/",
+    "pmcid": "PMC7619176",
+    "pmid": "42019019"
   },
   {
     "authors": [
@@ -7600,26 +8092,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "15",
+      "volume": 394,
+      "issue": 15,
       "page": {
-        "start": "1546",
-        "end": "1548"
-      }
+        "start": 1546,
+        "end": 1548
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "16"
+      "y": 2026,
+      "m": 4,
+      "d": 16
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMc2519008",
-    "pmid": "41985140",
-    "pmcid": "PMC7619180"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMc2519008"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41985140",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7619180/",
+    "pmcid": "PMC7619180",
+    "pmid": "41985140"
   },
   {
     "authors": [
@@ -7794,26 +8292,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "23",
+      "volume": 394,
+      "issue": 23,
       "page": {
-        "start": "2293",
-        "end": "2304"
-      }
+        "start": 2293,
+        "end": 2304
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "06",
-      "d": "18"
+      "y": 2026,
+      "m": 6,
+      "d": 18
     },
     "epub": {
-      "y": "2026",
-      "m": "04",
-      "d": "13"
+      "y": 2026,
+      "m": 4,
+      "d": 13
     },
-    "doi": "10.1056/NEJMoa2519001",
-    "pmid": "41972998",
-    "pmcid": "PMC13078690"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMoa2519001"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41972998",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13078690/",
+    "pmcid": "PMC13078690",
+    "pmid": "41972998"
   },
   {
     "authors": [
@@ -7840,26 +8344,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "14",
+      "volume": 394,
+      "issue": 14,
       "page": {
-        "start": "1451",
-        "end": "1453"
-      }
+        "start": 1451,
+        "end": 1453
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "09"
+      "y": 2026,
+      "m": 4,
+      "d": 9
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMc2507615",
-    "pmid": "41950480",
-    "pmcid": "PMC13108512"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMc2507615"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41950480",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13108512/",
+    "pmcid": "PMC13108512",
+    "pmid": "41950480"
   },
   {
     "authors": [
@@ -7950,26 +8460,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "14",
+      "volume": 394,
+      "issue": 14,
       "page": {
-        "start": "1376",
-        "end": "1387"
-      }
+        "start": 1376,
+        "end": 1387
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "09"
+      "y": 2026,
+      "m": 4,
+      "d": 9
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMoa2504068",
-    "pmid": "41950472",
-    "pmcid": "PMC13124202"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMoa2504068"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41950472",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13124202/",
+    "pmcid": "PMC13124202",
+    "pmid": "41950472"
   },
   {
     "authors": [
@@ -8016,26 +8532,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "13",
+      "volume": 394,
+      "issue": 13,
       "page": {
-        "start": "1345",
-        "end": "1347"
-      }
+        "start": 1345,
+        "end": 1347
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "02"
+      "y": 2026,
+      "m": 4,
+      "d": 2
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMc2517822",
-    "pmid": "41931055",
-    "pmcid": "PMC13052048"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMc2517822"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41931055",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13052048/",
+    "pmcid": "PMC13052048",
+    "pmid": "41931055"
   },
   {
     "authors": [
@@ -8138,26 +8660,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "12",
+      "volume": 394,
+      "issue": 12,
       "page": {
-        "start": "1155",
-        "end": "1166"
-      }
+        "start": 1155,
+        "end": 1166
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "03",
-      "d": "26"
+      "y": 2026,
+      "m": 3,
+      "d": 26
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMoa2507874",
-    "pmid": "41880612",
-    "pmcid": "PMC13020640"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMoa2507874"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41880612",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13020640/",
+    "pmcid": "PMC13020640",
+    "pmid": "41880612"
   },
   {
     "authors": [
@@ -8184,26 +8712,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "16",
+      "volume": 394,
+      "issue": 16,
       "page": {
-        "start": "1655",
-        "end": "1656"
-      }
+        "start": 1655,
+        "end": 1656
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "04",
-      "d": "23"
+      "y": 2026,
+      "m": 4,
+      "d": 23
     },
     "epub": {
-      "y": "2026",
-      "m": "03",
-      "d": "24"
+      "y": 2026,
+      "m": 3,
+      "d": 24
     },
-    "doi": "10.1056/NEJMc2506284",
-    "pmid": "41874342",
-    "pmcid": "PMC13289147"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMc2506284"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41874342",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13289147/",
+    "pmcid": "PMC13289147",
+    "pmid": "41874342"
   },
   {
     "authors": [
@@ -8258,26 +8792,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "8",
+      "volume": 394,
+      "issue": 8,
       "page": {
-        "start": "818",
-        "end": "819"
-      }
+        "start": 818,
+        "end": 819
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "02",
-      "d": "19"
+      "y": 2026,
+      "m": 2,
+      "d": 19
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMc2504287",
-    "pmid": "41707147",
-    "pmcid": "PMC7618782"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMc2504287"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41707147",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7618782/",
+    "pmcid": "PMC7618782",
+    "pmid": "41707147"
   },
   {
     "authors": [
@@ -8436,26 +8976,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "9",
+      "volume": 394,
+      "issue": 9,
       "page": {
-        "start": "858",
-        "end": "871"
-      }
+        "start": 858,
+        "end": 871
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "02",
-      "d": "26"
+      "y": 2026,
+      "m": 2,
+      "d": 26
     },
     "epub": {
-      "y": "2026",
-      "m": "02",
-      "d": "18"
+      "y": 2026,
+      "m": 2,
+      "d": 18
     },
-    "doi": "10.1056/NEJMoa2508228",
-    "pmid": "41707171",
-    "pmcid": "PMC12919640"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMoa2508228"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41707171",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12919640/",
+    "pmcid": "PMC12919640",
+    "pmid": "41707171"
   },
   {
     "authors": [
@@ -8550,26 +9096,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "7",
+      "volume": 394,
+      "issue": 7,
       "page": {
-        "start": "669",
-        "end": "683"
-      }
+        "start": 669,
+        "end": 683
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "02",
-      "d": "12"
+      "y": 2026,
+      "m": 2,
+      "d": 12
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMoa2514824",
-    "pmid": "41671482",
-    "pmcid": "PMC12900036"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMoa2514824"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41671482",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12900036/",
+    "pmcid": "PMC12900036",
+    "pmid": "41671482"
   },
   {
     "authors": [
@@ -8704,26 +9256,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "12",
+      "volume": 394,
+      "issue": 12,
       "page": {
-        "start": "1184",
-        "end": "1194"
-      }
+        "start": 1184,
+        "end": 1194
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "03",
-      "d": "26"
+      "y": 2026,
+      "m": 3,
+      "d": 26
     },
     "epub": {
-      "y": "2026",
-      "m": "02",
-      "d": "06"
+      "y": 2026,
+      "m": 2,
+      "d": 6
     },
-    "doi": "10.1056/NEJMoa2510935",
-    "pmid": "41665410",
-    "pmcid": "PMC13215599"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMoa2510935"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41665410",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13215599/",
+    "pmcid": "PMC13215599",
+    "pmid": "41665410"
   },
   {
     "authors": [
@@ -8746,26 +9304,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "3",
+      "volume": 394,
+      "issue": 3,
       "page": {
-        "start": "302",
-        "end": "303"
-      }
+        "start": 302,
+        "end": 303
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "01",
-      "d": "15"
+      "y": 2026,
+      "m": 1,
+      "d": 15
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMc2508805",
-    "pmid": "41534048",
-    "pmcid": "PMC12810860"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMc2508805"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41534048",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12810860/",
+    "pmcid": "PMC12810860",
+    "pmid": "41534048"
   },
   {
     "authors": [
@@ -8792,26 +9356,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "2",
+      "volume": 394,
+      "issue": 2,
       "page": {
-        "start": "199",
-        "end": "201"
-      }
+        "start": 199,
+        "end": 201
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "01",
-      "d": "08"
+      "y": 2026,
+      "m": 1,
+      "d": 8
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMc2507652",
-    "pmid": "41499737",
-    "pmcid": "PMC12922507"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMc2507652"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41499737",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12922507/",
+    "pmcid": "PMC12922507",
+    "pmid": "41499737"
   },
   {
     "authors": [
@@ -8966,26 +9536,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "393",
-      "issue": "24",
+      "volume": 393,
+      "issue": 24,
       "page": {
-        "start": "2434",
-        "end": "2446"
-      }
+        "start": 2434,
+        "end": 2446
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "12",
-      "d": "18"
+      "y": 2025,
+      "m": 12,
+      "d": 18
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMoa2502866",
-    "pmid": "41406445",
-    "pmcid": "PMC7618564"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMoa2502866"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41406445",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7618564/",
+    "pmcid": "PMC7618564",
+    "pmid": "41406445"
   },
   {
     "authors": [
@@ -9024,26 +9600,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "393",
-      "issue": "23",
+      "volume": 393,
+      "issue": 23,
       "page": {
-        "start": "2377",
-        "end": "2379"
-      }
+        "start": 2377,
+        "end": 2379
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "12",
-      "d": "11"
+      "y": 2025,
+      "m": 12,
+      "d": 11
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMc2513984",
-    "pmid": "41370805",
-    "pmcid": "PMC12698112"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMc2513984"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41370805",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12698112/",
+    "pmcid": "PMC12698112",
+    "pmid": "41370805"
   },
   {
     "authors": [
@@ -9234,26 +9816,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "394",
-      "issue": "8",
+      "volume": 394,
+      "issue": 8,
       "page": {
-        "start": "739",
-        "end": "752"
-      }
+        "start": 739,
+        "end": 752
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2026",
-      "m": "02",
-      "d": "19"
+      "y": 2026,
+      "m": 2,
+      "d": 19
     },
     "epub": {
-      "y": "2025",
-      "m": "12",
-      "d": "09"
+      "y": 2025,
+      "m": 12,
+      "d": 9
     },
-    "doi": "10.1056/NEJMoa2514663",
-    "pmid": "41363801",
-    "pmcid": "PMC13218738"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMoa2514663"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41363801",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13218738/",
+    "pmcid": "PMC13218738",
+    "pmid": "41363801"
   },
   {
     "authors": [
@@ -9320,26 +9908,32 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "393",
-      "issue": "21",
+      "volume": 393,
+      "issue": 21,
       "page": {
-        "start": "2168",
-        "end": "2170"
-      }
+        "start": 2168,
+        "end": 2170
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "11",
-      "d": "27"
+      "y": 2025,
+      "m": 11,
+      "d": 27
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMc2507481",
-    "pmid": "41297012",
-    "pmcid": "PMC7618428"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMc2507481"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41297012",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7618428/",
+    "pmcid": "PMC7618428",
+    "pmid": "41297012"
   },
   {
     "authors": [
@@ -9458,25 +10052,31 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
-      "volume": "393",
-      "issue": "21",
+      "volume": 393,
+      "issue": 21,
       "page": {
-        "start": "2107",
-        "end": "2118"
-      }
+        "start": 2107,
+        "end": 2118
+      },
+      "elocator": ""
     },
     "pub": {
-      "y": "2025",
-      "m": "11",
-      "d": "27"
+      "y": 2025,
+      "m": 11,
+      "d": 27
     },
     "epub": {
-      "y": "",
-      "m": "",
-      "d": ""
+      "y": null,
+      "m": null,
+      "d": null
     },
-    "doi": "10.1056/NEJMoa2500179",
-    "pmid": "41297006",
-    "pmcid": "PMC12662413"
+    "doi": {
+      "prefix": "10.1056",
+      "suffix": "NEJMoa2500179"
+    },
+    "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/41297006",
+    "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12662413/",
+    "pmcid": "PMC12662413",
+    "pmid": "41297006"
   }
 ]
