@@ -3,17 +3,23 @@ from prompt_writer import generate_prompt
 import json
 import time
 #import ollama
-#import os
+import os
 #from dotenv import load_dotenv
 
 from prompt_schemas import gen_schema
 
-PROMPT_CONTEXT = """Verify biomedical references. Assess each component and examine the reference as a whole. Place the reference in one of these five categories:
-1. Verified: The article exists, and the title plus key metadata match the database record. - Minor formatting differences are acceptable.
-2. Metadata Error: The article exists, but one or more fields are wrong, incomplete, abbreviated, or formatted differently. - The article can still be confidently identified.
-3. Serious Metadata Error: The title or other major fields are wrong, but the DOI or PMID correctly points to a real article. - Not fabricated if the DOI/PMID identifies a real article.
-4. Plausible Fabricated: The claimed title cannot be matched to any real article after reasonable search. - Real authors, real journals, or plausible topics are not enough to prove the article exists.
-5. Needs Human Review: The evidence is mixed, weak, or ambiguous. - Use this when there are partial title matches, missing/conflicting DOI or PMID, or multiple possible matches."""
+
+# The date thing in the context is stupid. 
+# We can easily enable websearch and datetime fetching from OpenRouter, but that conflicts with structured responses.
+# To do both, we will need to run two passes per reference. One that does the websearching and thinking, and the other which thinks again and encodes in into a structured response.
+PROMPT_CONTEXT = """The date is 2026/06/28. You are a biomedical references verifier. Assess each component and examine the reference as a whole. Adhere to the strict structure response JSON schema."""
+#Definitions of categories:
+#1. Verified: The article exists, and the title plus key metadata match the database record. - Minor formatting differences are acceptable.
+#2. Metadata Error: The article exists, but one or more fields are wrong, incomplete, abbreviated, or formatted differently. - The article can still be confidently identified.
+#3. Serious Metadata Error: The title or other major fields are wrong, but the DOI or PMID correctly points to a real article. - Not fabricated if the DOI/PMID identifies a real article.
+#4. Plausible Fabricated: The claimed title cannot be matched to any real article after reasonable search. - Real authors, real journals, or plausible topics are not enough to prove the article exists.
+#5. Needs Human Review: The evidence is mixed, weak, or ambiguous. - Use this when there are partial title matches, missing/conflicting DOI or PMID, or multiple possible matches."""
+
 
 # Dict of internal component tags (in schema/response) against descriptions of components (for prompt insertion, see protoschema templates).
 FOR_VERIFICATION = {
@@ -35,8 +41,7 @@ FOR_CLASSIFICATION = { "REFERENCE": "the reference" }
 
 # Should we use the context_header / classifications?
 # Doing so kinda removes this from a "real-world" type scenario (people just asking bots if refs are real), but we're pretty far from that already with the structured response format.
-
-def payload_template(model, context, reference, schema, *, search=True, datetime=True):
+def payload_template(reference, model, schema, context, *, search=True, datetime=True):
     toolgles = (("openrouter:web_search", search),          #zip((search, datetime), ("openrouter:web_search", "openrouter:datetime")) 
                 ("openrouter:datetime", datetime))
     return {
@@ -53,13 +58,55 @@ def payload_template(model, context, reference, schema, *, search=True, datetime
 # For testing
 #print(json.dumps(schema, indent=2))
 schema = gen_schema(verify=FOR_VERIFICATION, classify=FOR_CLASSIFICATION)
-testmod = "openai/gpt-oss-20b:free"
+testmod = "openai/gpt-oss-120b:free" #"openrouter/free"   # Auto choose one that supports structured responses + netsearch. For testing.      #"openai/gpt-oss-20b:free"
 testref = "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562"
-print(json.dumps(payload_template(testmod, PROMPT_CONTEXT, testref, None), indent=2))
+
+
+payload = payload_template(testref, testmod, schema, PROMPT_CONTEXT, search=True, datetime=True)
+print(json.dumps(payload, indent=2))
+print("\n\n\n")
+response = requests.post(url="https://openrouter.ai/api/v1/chat/completions",
+                         headers={ "Authorization": f"Bearer {os.environ["key"]}", "Content-Type": "application/json" },
+                         json=payload)
+
+
+
+data = None
+try:
+    data = response.json()
+    print(json.dumps(data, indent=2))
+except:
+    print(response.content)
+print("\n\n\n")
+try:
+    print(json.dumps(json.loads(data["choices"][0]["message"]["content"])))
+except:
+    print(response.content)
+    pass
 quit()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 def openrouter_all_call(header_prompt, citation):
 
     print("Starting API Requests")
@@ -97,7 +144,9 @@ def openrouter_all_call(header_prompt, citation):
 
     return results
 
-
+respone = requests.post(url="https://openrouter.ai/api/v1/chat/completions",
+                        headers={ "Authorization": f"Bearer {api_key}", "Content-Type": "application/json" },
+                        json=payload)
 
 
 def openrouter_accessor(header, citation, model):
@@ -163,3 +212,4 @@ if __name__ == "__main__":
     print("\n\n")
     print(json.dumps(jsonObject, indent=2))
     #print(openrouter_all_call(input_header, input_citation))
+"""
