@@ -2,11 +2,46 @@ import requests
 from prompt_writer import generate_prompt
 import json
 import time
-import ollama
-import os
-from dotenv import load_dotenv
+#import ollama
+#import os
+#from dotenv import load_dotenv
 
-load_dotenv()
+from prompt_schemas import gen_schema
+
+CLASSIFIER_DESCRIPTION_HEADER = """=== CLASSIFICATIONS & DEFINITIONS ===
+1. Verified: The article exists, and the title plus key metadata match the database record. - Minor formatting differences are acceptable.
+2. Metadata Error: The article exists, but one or more fields are wrong, incomplete, abbreviated, or formatted differently. - The article can still be confidently identified.
+3. Serious Metadata error: The title or other major fields are wrong, but the DOI or PMID correctly points to a real article. - Not fabricated if the DOI/PMID identifies a real article.
+4. Plausible fabricated: The claimed title cannot be matched to any real article after reasonable search. - Real authors, real journals, or plausible topics are not enough to prove the article exists.
+5. needs human review: The evidence is mixed, weak, or ambiguous. - Use this when there are partial title matches, missing/conflicting DOI or PMID, or multiple possible matches.
+=== REFERENCE TO VALIDATE ==="""
+
+# Dict of internal component tags (in schema/response) against descriptions of components (for prompt insertion, see protoschema templates).
+FOR_VERIFICATION = {
+    "author": "the author list",        # True if {the author list} is real. / Probability that {the author list} is real. / Classification of {the author list}.
+    "author_order": "the order of the author list",
+    "title": "the article title",
+    "journal": "the journal",       # Should we make the distinction of "journal name" specifically?
+    "vol": "the journal volume",
+    "iss": "the journal issue",
+    "page": "the page number",              # !!!! Consider: not all formatted references will have all these components. Should we do some special tailoring of each schema to reflect that? May involve baking a schema for each response, as even within formats some data can be missing. Still the final output (grids?) should probably remain consistant, ig just put nulls or something in the empty spots?
+    "elocator": "the elocator",             # If a ref has an elocator, it will not have a page number. We could merge these together, into just "the page number or elocator". @todo: probably that.
+    "date": "the publishing date",
+    "doi": "the doi",               # Should we split prefix / suffix?
+    "pmid": "the pmid",
+    "pmcid": "the pmcid",
+    "REFERENCE": "the reference"    # Verify and classify the reference (as a whole).
+}
+FOR_CLASSIFICATION = { "REFERENCE": "the reference" }
+
+# For testing
+schema = gen_schema(verify=FOR_VERIFICATION, classify=FOR_CLASSIFICATION)
+print(json.dumps(schema, indent=2))
+quit()
+
+
+
+#load_dotenv()
 response_schema = {
     "type": "json_schema",
     "json_schema": {
