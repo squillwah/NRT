@@ -27,6 +27,18 @@ response_schema = {
                     "maximum": 100,
                     "description": "Confidence score (0-100) for the author verification"
                 },
+                "article_title": {
+                    "type": "string",
+                    "enum": ["Verified", "Metadata Error", "Serious Metadata Error", "Plausible Fabricated",
+                             "Needs Human Review"],
+                    "description": "Verification status of article title and attribution"
+                },
+                "confidence_article_title": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100,
+                    "description": "Confidence score (0-100) for the title verification"
+                },
                 "journal": {
                     "type": "string",
                     "enum": ["Verified", "Metadata Error", "Serious Metadata Error", "Plausible Fabricated", "Needs Human Review"],
@@ -91,7 +103,7 @@ response_schema = {
                     "description": "Confidence score (0-100) for the overall assessment"
                 }
             },
-            "required": ["overall", "confidence_overall", "author", "journal", "publish_date", "author_order", "publisher", "confidence_of_the_publisher", "confidence_of_the_author_order", "confidence_journal", "confidence_of_the_publish_date", "confidence_author"],
+            "required": ["overall", "confidence_overall", "author", "journal", "publish_date", "author_order", "publisher", "confidence_of_the_publisher", "confidence_of_the_author_order", "confidence_journal", "confidence_of_the_publish_date", "confidence_author", "confidence_article_title", "article_title"],
             "additionalProperties": False
         }
     }
