@@ -8,13 +8,12 @@ import time
 
 from prompt_schemas import gen_schema
 
-CLASSIFIER_DESCRIPTION_HEADER = """=== CLASSIFICATIONS & DEFINITIONS ===
+PROMPT_CONTEXT = """Verify biomedical references. Assess each component and examine the reference as a whole. Place the reference in one of these five categories:
 1. Verified: The article exists, and the title plus key metadata match the database record. - Minor formatting differences are acceptable.
 2. Metadata Error: The article exists, but one or more fields are wrong, incomplete, abbreviated, or formatted differently. - The article can still be confidently identified.
-3. Serious Metadata error: The title or other major fields are wrong, but the DOI or PMID correctly points to a real article. - Not fabricated if the DOI/PMID identifies a real article.
-4. Plausible fabricated: The claimed title cannot be matched to any real article after reasonable search. - Real authors, real journals, or plausible topics are not enough to prove the article exists.
-5. needs human review: The evidence is mixed, weak, or ambiguous. - Use this when there are partial title matches, missing/conflicting DOI or PMID, or multiple possible matches.
-=== REFERENCE TO VALIDATE ==="""
+3. Serious Metadata Error: The title or other major fields are wrong, but the DOI or PMID correctly points to a real article. - Not fabricated if the DOI/PMID identifies a real article.
+4. Plausible Fabricated: The claimed title cannot be matched to any real article after reasonable search. - Real authors, real journals, or plausible topics are not enough to prove the article exists.
+5. Needs Human Review: The evidence is mixed, weak, or ambiguous. - Use this when there are partial title matches, missing/conflicting DOI or PMID, or multiple possible matches."""
 
 # Dict of internal component tags (in schema/response) against descriptions of components (for prompt insertion, see protoschema templates).
 FOR_VERIFICATION = {
@@ -34,115 +33,32 @@ FOR_VERIFICATION = {
 }
 FOR_CLASSIFICATION = { "REFERENCE": "the reference" }
 
+# Should we use the context_header / classifications?
+# Doing so kinda removes this from a "real-world" type scenario (people just asking bots if refs are real), but we're pretty far from that already with the structured response format.
+
+def payload_template(model, context, reference, schema, *, search=True, datetime=True):
+    toolgles = (("openrouter:web_search", search),          #zip((search, datetime), ("openrouter:web_search", "openrouter:datetime")) 
+                ("openrouter:datetime", datetime))
+    return {
+        "model": model,
+        "messages": [
+            { "role": "system", "content": context },    # https://openrouter.ai/docs/api/reference/overview What about the 'name' one?
+            { "role": "user", "content": reference }
+        ],
+        "tools": [{ "type": tool } for tool, toggle in toolgles if toggle],     # https://openrouter.ai/docs/guides/features/server-tools/overview
+        "response_format": schema                                               # We can also define local tools, if that becomes useful. https://openrouter.ai/docs/guides/features/tool-calling
+    }
+
+
 # For testing
+#print(json.dumps(schema, indent=2))
 schema = gen_schema(verify=FOR_VERIFICATION, classify=FOR_CLASSIFICATION)
-print(json.dumps(schema, indent=2))
+testmod = "openai/gpt-oss-20b:free"
+testref = "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562"
+print(json.dumps(payload_template(testmod, PROMPT_CONTEXT, testref, None), indent=2))
 quit()
 
 
-
-#load_dotenv()
-response_schema = {
-    "type": "json_schema",
-    "json_schema": {
-        "name": "citation_validation",
-        "strict": True,
-        "schema": {
-            "type": "object",
-            "properties": {
-
-                "author": {
-                    "type": "string",
-                    "enum": ["Verified", "Metadata Error", "Serious Metadata Error", "Plausible Fabricated", "Needs Human Review"],
-                    "description": "Verification status of author name(s) and attribution"
-                },
-                "confidence_author": {
-                    "type": "number",
-                    "minimum": 0,
-                    "maximum": 100,
-                    "description": "Confidence score (0-100) for the author verification"
-                },
-                "article_title": {
-                    "type": "string",
-                    "enum": ["Verified", "Metadata Error", "Serious Metadata Error", "Plausible Fabricated",
-                             "Needs Human Review"],
-                    "description": "Verification status of article title and attribution"
-                },
-                "confidence_article_title": {
-                    "type": "number",
-                    "minimum": 0,
-                    "maximum": 100,
-                    "description": "Confidence score (0-100) for the title verification"
-                },
-                "journal": {
-                    "type": "string",
-                    "enum": ["Verified", "Metadata Error", "Serious Metadata Error", "Plausible Fabricated", "Needs Human Review"],
-                    "description": "Verification status of the journal name and indexing"
-                },
-
-                "confidence_journal": {
-                    "type": "number",
-                    "minimum": 0,
-                    "maximum": 100,
-                    "description": "Confidence score (0-100) for the journal verification"
-                },
-
-                "publish_date": {
-                    "type": "string",
-                    "enum": ["Verified", "Metadata Error", "Serious Metadata Error", "Plausible Fabricated", "Needs Human Review"],
-                    "description": "Verification status of publication date accuracy"
-                },
-
-                "confidence_of_the_publish_date": {
-                    "type": "number",
-                    "minimum": 0,
-                    "maximum": 100,
-                    "description": "Confidence score (0-100) for the citation's publishing date verification"
-                },
-
-                "author_order": {
-                    "type": "string",
-                    "enum": ["Verified", "Metadata Error", "Serious Metadata Error", "Plausible Fabricated", "Needs Human Review"],
-                    "description": "Whether the author order matches the original source"
-                },
-
-                "confidence_of_the_author_order": {
-                    "type": "number",
-                    "minimum": 0,
-                    "maximum": 100,
-                    "description": "Confidence score (0-100) for the citation's author order verification"
-                },
-
-                "publisher": {
-                    "type": "string",
-                    "enum": ["Verified", "Metadata Error", "Serious Metadata Error", "Plausible Fabricated", "Needs Human Review"],
-                    "description": "Verification status of publisher name and imprint"
-                },
-
-                "confidence_of_the_publisher": {
-                    "type": "number",
-                    "minimum": 0,
-                    "maximum": 100,
-                    "description": "Confidence score (0-100) for the citation's publisher verification"
-                },
-
-                "overall": {
-                    "type": "string",
-                    "enum": ["Verified", "Metadata Error", "Serious Metadata Error", "Plausible Fabricated", "Needs Human Review"],
-                    "description": "Overall assessment of the citation's authenticity"
-                },
-                "confidence_overall": {
-                    "type": "number",
-                    "minimum": 0,
-                    "maximum": 100,
-                    "description": "Confidence score (0-100) for the overall assessment"
-                }
-            },
-            "required": ["overall", "confidence_overall", "author", "journal", "publish_date", "author_order", "publisher", "confidence_of_the_publisher", "confidence_of_the_author_order", "confidence_journal", "confidence_of_the_publish_date", "confidence_author", "confidence_article_title", "article_title"],
-            "additionalProperties": False
-        }
-    }
-}
 
 def openrouter_all_call(header_prompt, citation):
 
@@ -183,8 +99,10 @@ def openrouter_all_call(header_prompt, citation):
 
 
 
+
 def openrouter_accessor(header, citation, model):
-    api_key = os.getenv("OPENROUTER_API_KEY")
+    #api_key = os.getenv("OPENROUTER_API_KEY")
+
 
     response = requests.post(
         url="https://openrouter.ai/api/v1/chat/completions",
@@ -198,25 +116,29 @@ def openrouter_accessor(header, citation, model):
             "messages": [
                 {
                     "role": "user",
-                    "content": (header +
-                                "\n\n=== CATEGORIES & DEFINITIONS ===\n"
-                                "1. Verified: The article exists, and the title plus key metadata match the database record. - Minor formatting differences are acceptable.\n"
-                                "2. Metadata Error: The article exists, but one or more fields are wrong, incomplete, abbreviated, or formatted differently. - The article can still be confidently identified.\n"
-                                "3. Serious Metadata error: The title or other major fields are wrong, but the DOI or PMID correctly points to a real article. - Not fabricated if the DOI/PMID identifies a real article.\n"
-                                "4. Plausible fabricated: The claimed title cannot be matched to any real article after reasonable search. - Real authors, real journals, or plausible topics are not enough to prove the article exists.\n"
-                                "5. needs human review: The evidence is mixed, weak, or ambiguous. - Use this when there are partial title matches, missing/conflicting DOI or PMID, or multiple possible matches.\n"
-                                "\n=== CITATION TO VALIDATE ===\n" +
-                                (citation if isinstance(citation, str) else next(iter(citation.values()), ""))),
+                    "content": (header + citation)
+                                #header +
+                                #"\n\n=== CATEGORIES & DEFINITIONS ===\n"
+                                #"1. Verified: The article exists, and the title plus key metadata match the database record. - Minor formatting differences are acceptable.\n"
+                                #"2. Metadata Error: The article exists, but one or more fields are wrong, incomplete, abbreviated, or formatted differently. - The article can still be confidently identified.\n"
+                                #"3. Serious Metadata error: The title or other major fields are wrong, but the DOI or PMID correctly points to a real article. - Not fabricated if the DOI/PMID identifies a real article.\n"
+                                #"4. Plausible fabricated: The claimed title cannot be matched to any real article after reasonable search. - Real authors, real journals, or plausible topics are not enough to prove the article exists.\n"
+                                #"5. needs human review: The evidence is mixed, weak, or ambiguous. - Use this when there are partial title matches, missing/conflicting DOI or PMID, or multiple possible matches.\n"
+                                #"\n=== CITATION TO VALIDATE ===\n" +
+                                #(citation if isinstance(citation, str) else next(iter(citation.values()), ""))),
                 }
             ],
-            "response_format": response_schema,
+            "response_format": schema,
 
         }
     )
 
   # 1. Convert the raw API HTTP response into a Python dictionary
-    api_data = response.json()
-    print(api_data)
+    try:
+        api_data = response.json()
+        print(json.dumps(api_data, indent=2))
+    except:
+        print(response.content)
   # 2. Extract the stringified content out of the nested dictionary structure
     try:
         raw_content = api_data["choices"][0]["message"]["content"]
@@ -235,6 +157,9 @@ def openrouter_accessor(header, citation, model):
     return response_dict
 
 if __name__ == "__main__":
- input_header = generate_prompt()
- input_citation = {"citation1": "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562"}
- print(openrouter_all_call(input_header, input_citation))
+    #input_header = generate_prompt()
+    input_citation = {"citation1": "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562"}
+    jsonObject = openrouter_accessor(CLASSIFIER_DESCRIPTION_HEADER, input_citation["citation1"], "openai/gpt-oss-20b:free")
+    print("\n\n")
+    print(json.dumps(jsonObject, indent=2))
+    #print(openrouter_all_call(input_header, input_citation))
