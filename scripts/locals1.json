@@ -1,0 +1,435 @@
+
+
+
+
+{
+  "model": "Qwen3-4B-Q5_K_M",
+  "messages": [
+    {
+      "role": "system",
+      "content": "The date is 2026/06/28. You are a biomedical references verifier. Assess each component and examine the reference as a whole. "
+    },
+    {
+      "role": "user",
+      "content": "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562"
+    }
+  ],
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "citation_validation",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "author_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the author list is real."
+              },
+              "continuous": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the author list is real."
+              }
+            },
+            "required": [
+              "binary",
+              "continuous"
+            ],
+            "additionalProperties": false
+          },
+          "author_order_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the order of the author list is real."
+              },
+              "continuous": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the order of the author list is real."
+              }
+            },
+            "required": [
+              "binary",
+              "continuous"
+            ],
+            "additionalProperties": false
+          },
+          "title_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the article title is real."
+              },
+              "continuous": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the article title is real."
+              }
+            },
+            "required": [
+              "binary",
+              "continuous"
+            ],
+            "additionalProperties": false
+          },
+          "journal_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the journal is real."
+              },
+              "continuous": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the journal is real."
+              }
+            },
+            "required": [
+              "binary",
+              "continuous"
+            ],
+            "additionalProperties": false
+          },
+          "vol_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the journal volume is real."
+              },
+              "continuous": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the journal volume is real."
+              }
+            },
+            "required": [
+              "binary",
+              "continuous"
+            ],
+            "additionalProperties": false
+          },
+          "iss_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the journal issue is real."
+              },
+              "continuous": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the journal issue is real."
+              }
+            },
+            "required": [
+              "binary",
+              "continuous"
+            ],
+            "additionalProperties": false
+          },
+          "page_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the page number is real."
+              },
+              "continuous": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the page number is real."
+              }
+            },
+            "required": [
+              "binary",
+              "continuous"
+            ],
+            "additionalProperties": false
+          },
+          "elocator_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the elocator is real."
+              },
+              "continuous": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the elocator is real."
+              }
+            },
+            "required": [
+              "binary",
+              "continuous"
+            ],
+            "additionalProperties": false
+          },
+          "date_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the publishing date is real."
+              },
+              "continuous": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the publishing date is real."
+              }
+            },
+            "required": [
+              "binary",
+              "continuous"
+            ],
+            "additionalProperties": false
+          },
+          "doi_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the doi is real."
+              },
+              "continuous": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the doi is real."
+              }
+            },
+            "required": [
+              "binary",
+              "continuous"
+            ],
+            "additionalProperties": false
+          },
+          "pmid_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the pmid is real."
+              },
+              "continuous": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the pmid is real."
+              }
+            },
+            "required": [
+              "binary",
+              "continuous"
+            ],
+            "additionalProperties": false
+          },
+          "pmcid_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the pmcid is real."
+              },
+              "continuous": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the pmcid is real."
+              }
+            },
+            "required": [
+              "binary",
+              "continuous"
+            ],
+            "additionalProperties": false
+          },
+          "REFERENCE_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the reference is real."
+              },
+              "continuous": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the reference is real."
+              }
+            },
+            "required": [
+              "binary",
+              "continuous"
+            ],
+            "additionalProperties": false
+          },
+          "REFERENCE_c": {
+            "type": "object",
+            "properties": {
+              "class": {
+                "type": "string",
+                "enum": [
+                  "Verified",
+                  "Metadata Error",
+                  "Serious Metadata Error",
+                  "Plausible Fabricated",
+                  "Needs Human Review"
+                ],
+                "description": "Classification of the reference."
+              },
+              "confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "Percentage of confidence in the classification of the reference."
+              }
+            },
+            "required": [
+              "class",
+              "confidence"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "author_v",
+          "author_order_v",
+          "title_v",
+          "journal_v",
+          "vol_v",
+          "iss_v",
+          "page_v",
+          "elocator_v",
+          "date_v",
+          "doi_v",
+          "pmid_v",
+          "pmcid_v",
+          "REFERENCE_v",
+          "REFERENCE_c"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}
+
+
+
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"author_v\": {\n    \"binary\": true,\n    \"continuous\": 5\n  },\n  \"author_order_v\": {\n    \"binary\": true,\n    \"continuous\": 0\n  },\n  \"title_v\": {\n    \"binary\": true,\n    \"continuous\": 1\n  },\n  \"journal_v\": {\n    \"binary\": true,\n    \"continuous\": 0\n  },\n  \"vol_v\": {\n    \"binary\": true,\n    \"continuous\": 0\n  },\n  \"iss_v\": {\n    \"binary\": true,\n    \"continuous\": 0\n  },\n  \"page_v\": {\n    \"binary\": true,\n    \"continuous\": 0\n  },\n  \"elocator_v\": {\n    \"binary\": true,\n    \"continuous\": 0\n  },\n  \"date_v\": {\n    \"binary\": true,\n    \"continuous\": 0\n  },\n  \"doi_v\": {\n    \"binary\": false,\n    \"continuous\": 1\n  },\n  \"pmid_v\": {\n    \"binary\": true,\n    \"continuous\": 0\n  },\n  \"pmcid_v\": {\n    \"binary\": true,\n    \"continuous\": 0\n  },\n  \"REFERENCE_v\": {\n    \"binary\": true,\n    \"continuous\": 0\n  },\n  \"REFERENCE_c\": {\n    \"class\": \"Plausible Fabricated\",\n    \"confidence\": 0.96\n  }\n}\n",
+        "reasoning_content": "Okay, let's take a look at this reference. The user wants me to assess each component and examine the reference as a whole. The article is titled \"Advances in supporting development in autistic children and youth\" published in BMJ on 2026/06/10. The authors are Penner, Zwaigenbaum, Piroddi, Park, Minhas, and Singal. The DOI is 10.1136/bmj-2025-086562.\n\nFirst, I need to check if the information is accurate. The date given in the reference is 2026/06/28, but the publication date in the reference is 2026/06/10. Since the user is asking for verification as of 2026/06/28, the article was published on June 10th, which is earlier than the current date. So that's okay.\n\nNext, the authors: Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. I know that some of these authors are well-known in the field of autism research. For example, L. Zwaigenbaum is a researcher in child psychiatry and developmental disabilities. R.S. Minhas is associated with the University of Toronto, and D. Singal is from the University of Toronto as well. So the authors seem credible.\n\nThe title is about advances in supporting development in autistic children and youth. The journal is BMJ, which is a reputable general medical journal. The article is a review or a commentary, given the title. The DOI is 10.1136/bmj-2025-086562. Wait, the year in the DOI is 2025, but the publication date is 2026. That seems conflicting. Because the DOI is part of the publication date. If the article was published in 2026, the DOI should have the year 2026. However, the DOI here has 2025. That might be an error. The user might have made a typo, or the DOI is incorrect. Alternatively, maybe the article was submitted in 2025 but published in 2en26. But the DOI format usually includes the year of publication. So this is a red flag. I need to check that.\n\nWait, the DOI is 10.1136/bmj-2025-086562. The year in the DOI is 2025, but the publication date is listed as 2026. That's a discrepancy. That could be a mistake in the reference. If the article was published in 2026, the DOI should be 2026. So this is a problem. The authors might have made a mistake in the DOI. Alternatively, maybe the article was submitted in 2025 but published in 2026, but that's not standard. Normally, the DOI is based on the publication year. So this is an error in the reference. Therefore, the user's reference might have an incorrect DOI year.\n\nAnother thing to check is the journal's publication date. The BMJ typically publishes articles in the format of the current year, so if the article was published in June 2026, the DOI should be 2026. The user's reference says the DOI is 2025, which is conflicting. So that's a mistake.\n\nAlso, the title mentions \"Advances in supporting development in autistic children and youth.\" Since the article is in BMJ, it's a peer-reviewed journal, so the content would be a review or a meta-analysis. The authors are likely discussing the latest developments in interventions, therapies, or research related to autism in children and youth.\n\nNow, considering the user is a biomedical references verifier, they might need to check for consistency in the publication date, DOI, and the authors' credibility. The main issue here is the DOI year being 2025 instead of 2026. That's a problem. The user might have input the reference incorrectly. Alternatively, maybe the DOI is correct, and the publication date is wrong. But that's less likely. So I should point out that the DOI year does not match the publication date, which is a critical error. The rest of the information seems correct, but the DOI is a red flag. The authors are reputable, the journal is reputable, the title is relevant. So the main issue is the discrepancy in the DOI year.\n"
+      }
+    }
+  ],
+  "created": 1782766073,
+  "model": "Qwen3-4B-Q5_K_M.gguf",
+  "system_fingerprint": "b9072-6d57a49a7",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 1374,
+    "prompt_tokens": 138,
+    "total_tokens": 1512,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-R9UfW86SiEEsFuACnF8Z5uGSUD77ExYI",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 138,
+    "prompt_ms": 16668.758,
+    "prompt_per_token_ms": 120.78810144927537,
+    "prompt_per_second": 8.27896115595415,
+    "predicted_n": 1374,
+    "predicted_ms": 98320.481,
+    "predicted_per_token_ms": 71.55784643377001,
+    "predicted_per_second": 13.974707873937273
+  }
+}
+
+
+
+
+{
+  "author_v": {
+    "binary": true,
+    "continuous": 5
+  },
+  "author_order_v": {
+    "binary": true,
+    "continuous": 0
+  },
+  "title_v": {
+    "binary": true,
+    "continuous": 1
+  },
+  "journal_v": {
+    "binary": true,
+    "continuous": 0
+  },
+  "vol_v": {
+    "binary": true,
+    "continuous": 0
+  },
+  "iss_v": {
+    "binary": true,
+    "continuous": 0
+  },
+  "page_v": {
+    "binary": true,
+    "continuous": 0
+  },
+  "elocator_v": {
+    "binary": true,
+    "continuous": 0
+  },
+  "date_v": {
+    "binary": true,
+    "continuous": 0
+  },
+  "doi_v": {
+    "binary": false,
+    "continuous": 1
+  },
+  "pmid_v": {
+    "binary": true,
+    "continuous": 0
+  },
+  "pmcid_v": {
+    "binary": true,
+    "continuous": 0
+  },
+  "REFERENCE_v": {
+    "binary": true,
+    "continuous": 0
+  },
+  "REFERENCE_c": {
+    "class": "Plausible Fabricated",
+    "confidence": 0.96
+  }
+}
