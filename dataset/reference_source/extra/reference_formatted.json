@@ -741,6 +741,25 @@
     }
   },
   {
+    "id": "pmid:42203868",
+    "ama": {
+      "orig": "Canepa J, Ruiz-Arroyo VM, Schlamowitz NS, Nam Y. Substrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2. Nature. Published online May 27, 2026. doi:10.1038/s41586-026-10582-9",
+      "format": "Canepa J, Ruiz-Arroyo VM, Schlamowitz NS, Nam Y. Substrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2. <i>Nature</i>. Published online May 27, 2026. doi:10.1038/s41586-026-10582-9"
+    },
+    "apa": {
+      "orig": "Canepa, J., Ruiz-Arroyo, V. M., Schlamowitz, N. S., & Nam, Y. (2026). Substrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2. Nature, 10.1038/s41586-026-10582-9. Advance online publication. https://doi.org/10.1038/s41586-026-10582-9",
+      "format": "Canepa, J., Ruiz-Arroyo, V. M., Schlamowitz, N. S., & Nam, Y. (2026). Substrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2. <i>Nature</i>, 10.1038/s41586-026-10582-9. Advance online publication. https://doi.org/10.1038/s41586-026-10582-9"
+    },
+    "mla": {
+      "orig": "Canepa, Jacob et al. \u201cSubstrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2.\u201d Nature, 10.1038/s41586-026-10582-9. 27 May. 2026, doi:10.1038/s41586-026-10582-9",
+      "format": "Canepa, Jacob et al. \u201cSubstrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2.\u201d <i>Nature</i>, 10.1038/s41586-026-10582-9. 27 May. 2026, doi:10.1038/s41586-026-10582-9"
+    },
+    "nlm": {
+      "orig": "Canepa J, Ruiz-Arroyo VM, Schlamowitz NS, Nam Y. Substrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2. Nature. 2026 May 27:10.1038/s41586-026-10582-9. doi: 10.1038/s41586-026-10582-9. Epub ahead of print. PMID: 42203868; PMCID: PMC13289585.",
+      "format": "Canepa J, Ruiz-Arroyo VM, Schlamowitz NS, Nam Y. Substrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2. Nature. 2026 May 27:10.1038/s41586-026-10582-9. doi: 10.1038/s41586-026-10582-9. Epub ahead of print. PMID: 42203868; PMCID: PMC13289585."
+    }
+  },
+  {
     "id": "pmid:42203864",
     "ama": {
       "orig": "Ghai S, Vuorre M, Kardefelt-Winther D, et al. Technology mediation in child sexual exploitation and abuse in Africa and Asia. Nature. 2026;654(8118):408-418. doi:10.1038/s41586-026-10525-4",
@@ -928,25 +947,6 @@
     "nlm": {
       "orig": "NCD Risk Factor Collaboration (NCD-RisC). Obesity rise plateaus in developed nations and accelerates in developing nations. Nature. 2026 May;653(8114):510-518. doi: 10.1038/s41586-026-10383-0. Epub 2026 May 13. PMID: 42129527; PMCID: PMC13171639.",
       "format": "NCD Risk Factor Collaboration (NCD-RisC). Obesity rise plateaus in developed nations and accelerates in developing nations. Nature. 2026 May;653(8114):510-518. doi: 10.1038/s41586-026-10383-0. Epub 2026 May 13. PMID: 42129527; PMCID: PMC13171639."
-    }
-  },
-  {
-    "id": "pmid:42129525",
-    "ama": {
-      "orig": "Lesk CS, Mankin JS. More concentrated precipitation decreases terrestrial water storage. Nature. 2026;653(8114):425-432. doi:10.1038/s41586-026-10487-7",
-      "format": "Lesk CS, Mankin JS. More concentrated precipitation decreases terrestrial water storage. <i>Nature</i>. 2026;653(8114):425-432. doi:10.1038/s41586-026-10487-7"
-    },
-    "apa": {
-      "orig": "Lesk, C. S., & Mankin, J. S. (2026). More concentrated precipitation decreases terrestrial water storage. Nature, 653(8114), 425\u2013432. https://doi.org/10.1038/s41586-026-10487-7",
-      "format": "Lesk, C. S., & Mankin, J. S. (2026). More concentrated precipitation decreases terrestrial water storage. <i>Nature</i>, <i>653</i>(8114), 425\u2013432. https://doi.org/10.1038/s41586-026-10487-7"
-    },
-    "mla": {
-      "orig": "Lesk, Corey S, and Justin S Mankin. \u201cMore concentrated precipitation decreases terrestrial water storage.\u201d Nature vol. 653,8114 (2026): 425-432. doi:10.1038/s41586-026-10487-7",
-      "format": "Lesk, Corey S, and Justin S Mankin. \u201cMore concentrated precipitation decreases terrestrial water storage.\u201d <i>Nature</i> vol. 653,8114 (2026): 425-432. doi:10.1038/s41586-026-10487-7"
-    },
-    "nlm": {
-      "orig": "Lesk CS, Mankin JS. More concentrated precipitation decreases terrestrial water storage. Nature. 2026 May;653(8114):425-432. doi: 10.1038/s41586-026-10487-7. Epub 2026 May 13. PMID: 42129525; PMCID: PMC13171432.",
-      "format": "Lesk CS, Mankin JS. More concentrated precipitation decreases terrestrial water storage. Nature. 2026 May;653(8114):425-432. doi: 10.1038/s41586-026-10487-7. Epub 2026 May 13. PMID: 42129525; PMCID: PMC13171432."
     }
   },
   {
@@ -1446,20 +1446,20 @@
   {
     "id": "pmid:42160720",
     "ama": {
-      "orig": "Serman EA, Witrick B, Rennert L. Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina. N Engl J Med. Published online May 20, 2026. doi:10.1056/NEJMc2604004",
-      "format": "Serman EA, Witrick B, Rennert L. Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina. <i>N Engl J Med</i>. Published online May 20, 2026. doi:10.1056/NEJMc2604004"
+      "orig": "Serman EA, Witrick B, Rennert L. Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina. N Engl J Med. 2026;394(24):2479-2481. doi:10.1056/NEJMc2604004",
+      "format": "Serman EA, Witrick B, Rennert L. Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina. <i>N Engl J Med</i>. 2026;394(24):2479-2481. doi:10.1056/NEJMc2604004"
     },
     "apa": {
-      "orig": "Serman, E. A., Witrick, B., & Rennert, L. (2026). Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina. The New England journal of medicine, 10.1056/NEJMc2604004. Advance online publication. https://doi.org/10.1056/NEJMc2604004",
-      "format": "Serman, E. A., Witrick, B., & Rennert, L. (2026). Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina. <i>The New England journal of medicine</i>, 10.1056/NEJMc2604004. Advance online publication. https://doi.org/10.1056/NEJMc2604004"
+      "orig": "Serman, E. A., Witrick, B., & Rennert, L. (2026). Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina. The New England journal of medicine, 394(24), 2479\u20132481. https://doi.org/10.1056/NEJMc2604004",
+      "format": "Serman, E. A., Witrick, B., & Rennert, L. (2026). Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina. <i>The New England journal of medicine</i>, <i>394</i>(24), 2479\u20132481. https://doi.org/10.1056/NEJMc2604004"
     },
     "mla": {
-      "orig": "Serman, Emily A et al. \u201cClusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina.\u201d The New England journal of medicine, 10.1056/NEJMc2604004. 20 May. 2026, doi:10.1056/NEJMc2604004",
-      "format": "Serman, Emily A et al. \u201cClusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina.\u201d <i>The New England journal of medicine</i>, 10.1056/NEJMc2604004. 20 May. 2026, doi:10.1056/NEJMc2604004"
+      "orig": "Serman, Emily A et al. \u201cClusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina.\u201d The New England journal of medicine vol. 394,24 (2026): 2479-2481. doi:10.1056/NEJMc2604004",
+      "format": "Serman, Emily A et al. \u201cClusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina.\u201d <i>The New England journal of medicine</i> vol. 394,24 (2026): 2479-2481. doi:10.1056/NEJMc2604004"
     },
     "nlm": {
-      "orig": "Serman EA, Witrick B, Rennert L. Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina. N Engl J Med. 2026 May 20:10.1056/NEJMc2604004. doi: 10.1056/NEJMc2604004. Epub ahead of print. PMID: 42160720; PMCID: PMC13235145.",
-      "format": "Serman EA, Witrick B, Rennert L. Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina. N Engl J Med. 2026 May 20:10.1056/NEJMc2604004. doi: 10.1056/NEJMc2604004. Epub ahead of print. PMID: 42160720; PMCID: PMC13235145."
+      "orig": "Serman EA, Witrick B, Rennert L. Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina. N Engl J Med. 2026 Jun 25;394(24):2479-2481. doi: 10.1056/NEJMc2604004. Epub 2026 May 20. PMID: 42160720; PMCID: PMC13235145.",
+      "format": "Serman EA, Witrick B, Rennert L. Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina. N Engl J Med. 2026 Jun 25;394(24):2479-2481. doi: 10.1056/NEJMc2604004. Epub 2026 May 20. PMID: 42160720; PMCID: PMC13235145."
     }
   },
   {
@@ -1672,6 +1672,25 @@
     }
   },
   {
+    "id": "pmid:41874342",
+    "ama": {
+      "orig": "Smith JP, O'Connor S, Date A, Moonan PK. Tuberculosis Cases and Deaths Averted by PEPFAR. N Engl J Med. 2026;394(16):1655-1656. doi:10.1056/NEJMc2506284",
+      "format": "Smith JP, O'Connor S, Date A, Moonan PK. Tuberculosis Cases and Deaths Averted by PEPFAR. <i>N Engl J Med</i>. 2026;394(16):1655-1656. doi:10.1056/NEJMc2506284"
+    },
+    "apa": {
+      "orig": "Smith, J. P., O'Connor, S., Date, A., & Moonan, P. K. (2026). Tuberculosis Cases and Deaths Averted by PEPFAR. The New England journal of medicine, 394(16), 1655\u20131656. https://doi.org/10.1056/NEJMc2506284",
+      "format": "Smith, J. P., O'Connor, S., Date, A., & Moonan, P. K. (2026). Tuberculosis Cases and Deaths Averted by PEPFAR. <i>The New England journal of medicine</i>, <i>394</i>(16), 1655\u20131656. https://doi.org/10.1056/NEJMc2506284"
+    },
+    "mla": {
+      "orig": "Smith, Jonathan P et al. \u201cTuberculosis Cases and Deaths Averted by PEPFAR.\u201d The New England journal of medicine vol. 394,16 (2026): 1655-1656. doi:10.1056/NEJMc2506284",
+      "format": "Smith, Jonathan P et al. \u201cTuberculosis Cases and Deaths Averted by PEPFAR.\u201d <i>The New England journal of medicine</i> vol. 394,16 (2026): 1655-1656. doi:10.1056/NEJMc2506284"
+    },
+    "nlm": {
+      "orig": "Smith JP, O'Connor S, Date A, Moonan PK. Tuberculosis Cases and Deaths Averted by PEPFAR. N Engl J Med. 2026 Apr 23;394(16):1655-1656. doi: 10.1056/NEJMc2506284. Epub 2026 Mar 24. PMID: 41874342; PMCID: PMC13289147.",
+      "format": "Smith JP, O'Connor S, Date A, Moonan PK. Tuberculosis Cases and Deaths Averted by PEPFAR. N Engl J Med. 2026 Apr 23;394(16):1655-1656. doi: 10.1056/NEJMc2506284. Epub 2026 Mar 24. PMID: 41874342; PMCID: PMC13289147."
+    }
+  },
+  {
     "id": "pmid:41707147",
     "ama": {
       "orig": "Pieren M, Dale GE, Gitzinger M, et al. Revival of Ethionamide by Alpibectir. N Engl J Med. 2026;394(8):818-819. doi:10.1056/NEJMc2504287",
@@ -1878,25 +1897,6 @@
     "nlm": {
       "orig": "Durbin AP, Van Wesenbeeck L, Pierce KK, Herrera-Taracena G, Ebone L, Buelens A, Lutton P, Sabundayo BP, Van Eygen V, De Clerck K, Fetter I, Voge NV, Fang X, Goeyvaerts N, Vandendijck Y, Mayfield J, Lenz O, De Meyer S, Kakuda TN, He H, Amaro-Carambot E, Akli RD, Carmolli M, De Marez T, Whitehead SS, Van Loock M, Rasschaert F. Daily Mosnodenvir as Dengue Prophylaxis in a Controlled Human Infection Model. N Engl J Med. 2025 Nov 27;393(21):2107-2118. doi: 10.1056/NEJMoa2500179. PMID: 41297006; PMCID: PMC12662413.",
       "format": "Durbin AP, Van Wesenbeeck L, Pierce KK, Herrera-Taracena G, Ebone L, Buelens A, Lutton P, Sabundayo BP, Van Eygen V, De Clerck K, Fetter I, Voge NV, Fang X, Goeyvaerts N, Vandendijck Y, Mayfield J, Lenz O, De Meyer S, Kakuda TN, He H, Amaro-Carambot E, Akli RD, Carmolli M, De Marez T, Whitehead SS, Van Loock M, Rasschaert F. Daily Mosnodenvir as Dengue Prophylaxis in a Controlled Human Infection Model. N Engl J Med. 2025 Nov 27;393(21):2107-2118. doi: 10.1056/NEJMoa2500179. PMID: 41297006; PMCID: PMC12662413."
-    }
-  },
-  {
-    "id": "pmid:41259754",
-    "ama": {
-      "orig": "Lissauer D, Gadama L, Waitt C, et al. A Multicomponent Intervention to Improve Maternal Infection Outcomes. N Engl J Med. 2026;394(17):1685-1695. doi:10.1056/NEJMoa2512698",
-      "format": "Lissauer D, Gadama L, Waitt C, et al. A Multicomponent Intervention to Improve Maternal Infection Outcomes. <i>N Engl J Med</i>. 2026;394(17):1685-1695. doi:10.1056/NEJMoa2512698"
-    },
-    "apa": {
-      "orig": "Lissauer, D., Gadama, L., Waitt, C., Whyte, S., Burnside, G., Anilkumar, A., Makuluni, R., Okwaro, P., Yang, L., Waitt, P., Musopole, O., Bilesi, R., Maseko, B., Lwasa, J., Mugahi, R., Olaro, C., Lamorde, M., Makuta, M., Kachiwaya, C., Mkandawire, T., \u2026 Bonet, M. (2026). A Multicomponent Intervention to Improve Maternal Infection Outcomes. The New England journal of medicine, 394(17), 1685\u20131695. https://doi.org/10.1056/NEJMoa2512698",
-      "format": "Lissauer, D., Gadama, L., Waitt, C., Whyte, S., Burnside, G., Anilkumar, A., Makuluni, R., Okwaro, P., Yang, L., Waitt, P., Musopole, O., Bilesi, R., Maseko, B., Lwasa, J., Mugahi, R., Olaro, C., Lamorde, M., Makuta, M., Kachiwaya, C., Mkandawire, T., \u2026 Bonet, M. (2026). A Multicomponent Intervention to Improve Maternal Infection Outcomes. <i>The New England journal of medicine</i>, <i>394</i>(17), 1685\u20131695. https://doi.org/10.1056/NEJMoa2512698"
-    },
-    "mla": {
-      "orig": "Lissauer, David et al. \u201cA Multicomponent Intervention to Improve Maternal Infection Outcomes.\u201d The New England journal of medicine vol. 394,17 (2026): 1685-1695. doi:10.1056/NEJMoa2512698",
-      "format": "Lissauer, David et al. \u201cA Multicomponent Intervention to Improve Maternal Infection Outcomes.\u201d <i>The New England journal of medicine</i> vol. 394,17 (2026): 1685-1695. doi:10.1056/NEJMoa2512698"
-    },
-    "nlm": {
-      "orig": "Lissauer D, Gadama L, Waitt C, Whyte S, Burnside G, Anilkumar A, Makuluni R, Okwaro P, Yang L, Waitt P, Musopole O, Bilesi R, Maseko B, Lwasa J, Mugahi R, Olaro C, Lamorde M, Makuta M, Kachiwaya C, Mkandawire T, Malunga A, Chitsulo N, Abitimo P, Ayabo T, Weeks A, Martin J, Hemming K, Gallos I, Monk EJM, Riches J, Chapuma C, Nanyondo S J, Lorencatto F, Monahan M, Allegranzi B, Dunlop C, Atkins L, Rosala-Hallas A, Roberts T, Gamble C, Malata A, Desmond N, Kommwa E, Merriel A, Parry-Smith W, Smith R, Ndumu I, Williams E, Faque B, Banda G, Nyondo-Mipando AL, Twimukye A, Chater T, Diplas A, Brizuela V, Souza JP, Rylance J, Cheshire J, Hawker L, Coomarasamy A, Bonet M. A Multicomponent Intervention to Improve Maternal Infection Outcomes. N Engl J Med. 2026 Apr 30;394(17):1685-1695. doi: 10.1056/NEJMoa2512698. Epub 2025 Nov 19. PMID: 41259754; PMCID: PMC7618407.",
-      "format": "Lissauer D, Gadama L, Waitt C, Whyte S, Burnside G, Anilkumar A, Makuluni R, Okwaro P, Yang L, Waitt P, Musopole O, Bilesi R, Maseko B, Lwasa J, Mugahi R, Olaro C, Lamorde M, Makuta M, Kachiwaya C, Mkandawire T, Malunga A, Chitsulo N, Abitimo P, Ayabo T, Weeks A, Martin J, Hemming K, Gallos I, Monk EJM, Riches J, Chapuma C, Nanyondo S J, Lorencatto F, Monahan M, Allegranzi B, Dunlop C, Atkins L, Rosala-Hallas A, Roberts T, Gamble C, Malata A, Desmond N, Kommwa E, Merriel A, Parry-Smith W, Smith R, Ndumu I, Williams E, Faque B, Banda G, Nyondo-Mipando AL, Twimukye A, Chater T, Diplas A, Brizuela V, Souza JP, Rylance J, Cheshire J, Hawker L, Coomarasamy A, Bonet M. A Multicomponent Intervention to Improve Maternal Infection Outcomes. N Engl J Med. 2026 Apr 30;394(17):1685-1695. doi: 10.1056/NEJMoa2512698. Epub 2025 Nov 19. PMID: 41259754; PMCID: PMC7618407."
     }
   }
 ]

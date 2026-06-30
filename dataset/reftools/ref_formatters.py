@@ -20,7 +20,9 @@ def build_ref_authors(author_list, style):
     author_string = ""
     formatted_names = []
     for auth in author_list:
-        last, firsts = (a := auth.split(", ", 1)) + [""]*(2-len(a))
+        #print(auth, author_list)
+        #last, firsts = (a := auth.split(", ", 1)) + [""]*(2-len(a))    @ FIX cause we split authors at RIS parse now
+        last, firsts = auth["l"], auth["f"]
         if initials: firsts = isp.join([c+ipe for c in firsts if c.isupper()])
         formatted_names.append(lfsp.join((last, firsts)).strip())
     if not eat or len(author_list) < eat:
@@ -34,11 +36,11 @@ def build_ref_authors(author_list, style):
 def build_ref(refdata, style):
     authors = build_ref_authors(refdata["authors"], style)
     title = refdata["title"]
-    jname = refdata["journal"]["name_short"]
-    jnamef = refdata["journal"]["name_short"]
+    jname = refdata["journal"]["name"]["short"]
+    jnamef = refdata["journal"]["name"]["full"]
     jyear = refdata["pub"]["y"]
     jissue = f"{refdata["journal"]["volume"]}({refdata["journal"]["issue"]})"
-    jpages = f"{refdata["journal"]["page_start"]}-{refdata["journal"]["page_end"]}"
+    jpages = f"{refdata["journal"]["page"]["start"]}-{refdata["journal"]["page"]["end"]}"
     doi = refdata["doi"]
 
     reference = ""
