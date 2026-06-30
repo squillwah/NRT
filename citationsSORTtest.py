@@ -13,11 +13,13 @@ def compile_elsevier(ref: dict) -> str:
         parts = first.replace("-", " ").split()
         initials = "".join([p[0].upper() for p in parts if p])
         formatted_authors.append(f"{last} {initials}")
-    author_str = ", ".join(formatted_authors)
+    if len(formatted_authors) >= 7:
+        author_str = ", ".join(formatted_authors[:3]) + ", et al"
+    else:
+        author_str = ", ".join(formatted_authors)
     p_data = ref["journal"]["page"]
-    pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
-        "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
-
+    pages = p_data.get("start", "") if p_data.get("start") == p_data.get("end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
+    
     issue_str = f"({ref['journal']['issue']})" if ref["journal"]["issue"] else ""
     return f"{author_str}. {ref['title']}. {ref['journal']['name']['short']}. {ref['pub']['y']};{ref['journal']['volume']}{issue_str}:{pages}. doi:{ref['doi']}"
 
@@ -77,11 +79,13 @@ def compile_springer(ref: dict) -> str:
         parts = first.replace("-", " ").split()
         initials = "".join([p[0].upper() for p in parts if p])
         formatted_authors.append(f"{last} {initials}")
-    author_str = ", ".join(formatted_authors)
+   if len(formatted_authors) >= 7:
+        author_str = ", ".join(formatted_authors[:3]) + ", et al"
+    else:
+        author_str = ", ".join(formatted_authors)
     p_data = ref["journal"]["page"]
-    pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
-        "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
-
+    pages = p_data.get("start", "") if p_data.get("start") == p_data.get("end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
+    
     return f"{author_str}. {ref['title']}. <i>{ref['journal']['name']['short']}</i>. {ref['pub']['y']}; {ref['journal']['volume']}: {pages}. doi: {ref['doi']}"
 
 def compile_cse(ref: dict) -> str:
@@ -95,15 +99,16 @@ def compile_cse(ref: dict) -> str:
         parts = first.replace("-", " ").split()
         initials = "".join([p[0].upper() for p in parts if p])
         formatted_authors.append(f"{last} {initials}")
-    author_str = ", ".join(formatted_authors)
-
+    if len(formatted_authors) >= 11:
+        author_str = ", ".join(formatted_authors[:10]) + ", et al"
+    else:
+        author_str = ", ".join(formatted_authors)
     p_data = ref["journal"]["page"]
-    pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
-        "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
-
+    pages = p_data.get("start", "") if p_data.get("start") == p_data.get("end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
     issue_str = f"({ref['journal']['issue']})" if ref["journal"]["issue"] else ""
+    
     return f"{author_str}. {ref['title']}. {ref['journal']['name']['short']}. {ref['pub']['y']};{ref['journal']['volume']}{issue_str}:{pages}."
-
+    
 def compile_harvard(ref: dict) -> str:
     formatted_authors = []
     for auth in ref["authors"]:
