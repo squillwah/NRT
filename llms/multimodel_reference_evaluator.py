@@ -1,5 +1,5 @@
 from schemas import ProtoSchemas
-from orouterapi import openrouter, process_response
+from orouterapi import openrouter, parse_response, trytryagain
 import json
 import time
 
@@ -41,15 +41,14 @@ if __name__ == "__main__":
     responses = []
     data = []
     for i, ref in enumerate(refs):
-        print("starting ref")
+        print(f"starting reference {i}")
         data.append({ "reference": ref })
         for model in models:
-            print("starting model")
-            r = process_response(openrouter(model, ref, schema))
-            print(r)
+            print(f"starting model {model}")
+            r = parse_response(trytryagain(openrouter, {"model": model, "ref": ref, "schema": schema}))   # Call openrouter, retry three times if code != 200, then parse into {request, response_text, response_json, content} dict.
             responses.append(r)
             data[i][model] = r["content"]
-            print("done model")
+            print("done")
             time.sleep(1)
 
     with open("multiout_responses.json", "w") as file:

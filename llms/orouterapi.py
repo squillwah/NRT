@@ -36,7 +36,7 @@ def openrouter(model, ref, schema, *, api="completions", key=os.environ["THEKEY"
                          headers={"Authorization":f"Bearer {key}","Content-Type":"application/json" },
                          json=payload)
 
-def process_response(response, *, api="completions"):
+def parse_response(response, *, api="completions"):
     processed = {
         "request_json": json.loads(response.request.body.decode("utf-8")),
         "response_text": response.text,
@@ -61,7 +61,7 @@ def process_response(response, *, api="completions"):
 
     return processed
 
-def trytryagain(request, kwargs, *, tries=3, wait=5, processit=True):
+def trytryagain(request, kwargs, *, tries=3, wait=5):
     args = locals()
     response = request(**kwargs)
     if response.status_code != 200:

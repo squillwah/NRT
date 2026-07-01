@@ -1,0 +1,158 @@
+[
+  {
+    "reference": "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562",
+    "nvidia/nemotron-3-super-120b-a12b:free": {
+      "author": {
+        "classification": false,
+        "confidence_real": 0.95,
+        "confidence_fake": 0.05
+      },
+      "author_order": {
+        "classification": true,
+        "confidence_real": 0.98,
+        "confidence_fake": 0.02
+      },
+      "title": {
+        "classification": true,
+        "confidence_real": 0.97,
+        "confidence_fake": 0.03
+      },
+      "journal": {
+        "classification": true,
+        "confidence_real": 0.99,
+        "confidence_fake": 0.01
+      },
+      "vol": {
+        "classification": true,
+        "confidence_real": 0.96,
+        "confidence_fake": 0.04
+      },
+      "iss": {
+        "classification": true,
+        "confidence_real": 0.96,
+        "confidence_fake": 0.04
+      },
+      "page": {
+        "classification": true,
+        "confidence_real": 0.95,
+        "confidence_fake": 0.05
+      },
+      "elocator": {
+        "classification": true,
+        "confidence_real": 0.96,
+        "confidence_fake": 0.04
+      },
+      "date": {
+        "classification": false,
+        "confidence_real": 0.1,
+        "confidence_fake": 0.9
+      },
+      "doi": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "pmid": {
+        "classification": true,
+        "confidence_real": 0.9,
+        "confidence_fake": 0.1
+      },
+      "pmcid": {
+        "classification": true,
+        "confidence_real": 0.92,
+        "confidence_fake": 0.08
+      },
+      "REFERENCE": {
+        "classification": false,
+        "confidence_real": 0.12,
+        "confidence_fake": 0.88
+      }
+    },
+    "openai/gpt-oss-20b:free": {
+      "reference": "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562",
+      "isValid": false,
+      "overallNotes": "The reference contains multiple internal inconsistencies (year, volume, DOI) that suggest it is not a currently valid citation. It is likely a fabricated or forward\u2011dated entry."
+    }
+  },
+  {
+    "reference": "Volk, R. J., Lewis, K. B., Smith, M., Carley, M., Barry, M. J., Bekker, H. L., H\u00e4rter, M., Hoffmann, T., McCaffery, K., Pignone, M., Steffensen, K. D., Sepucha, K., Thompson, R., Trevena, L., van der Weijden, T., Witteman, H. O., & Stacey, D. (2026). Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process. BMJ (Clinical research ed.), 393, e088116. https://doi.org/10.1136/bmj-2025-088116",
+    "nvidia/nemotron-3-super-120b-a12b:free": {
+      "author": {
+        "classification": false,
+        "confidence_real": 0.95,
+        "confidence_fake": 0.05
+      },
+      "author_order": {
+        "classification": false,
+        "confidence_real": 0.9,
+        "confidence_fake": 0.1
+      },
+      "title": {
+        "classification": false,
+        "confidence_real": 0.85,
+        "confidence_fake": 0.15
+      },
+      "journal": {
+        "classification": false,
+        "confidence_real": 0.8,
+        "confidence_fake": 0.2
+      },
+      "vol": {
+        "classification": false,
+        "confidence_real": 0.75,
+        "confidence_fake": 0.25
+      },
+      "iss": {
+        "classification": false,
+        "confidence_real": 0.7,
+        "confidence_fake": 0.3
+      },
+      "page": {
+        "classification": false,
+        "confidence_real": 0.65,
+        "confidence_fake": 0.35
+      },
+      "elocator": {
+        "classification": false,
+        "confidence_real": 0.6,
+        "confidence_fake": 0.4
+      },
+      "date": {
+        "classification": false,
+        "confidence_real": 0.98,
+        "confidence_fake": 0.02
+      },
+      "doi": {
+        "classification": false,
+        "confidence_real": 0.97,
+        "confidence_fake": 0.03
+      },
+      "pmid": {
+        "classification": false,
+        "confidence_real": 0.5,
+        "confidence_fake": 0.5
+      },
+      "pmcid": {
+        "classification": false,
+        "confidence_real": 0.5,
+        "confidence_fake": 0.5
+      },
+      "REFERENCE": {
+        "classification": false,
+        "confidence_real": 0.99,
+        "confidence_fake": 0.01
+      }
+    },
+    "openai/gpt-oss-20b:free": {
+      "original_reference": "Volk, R. J., Lewis, K. B., Smith, M., Carley, M., Barry, M. J., Bekker, H. L., H\u00e4rter, M., Hoffmann, T., McCaffery, K., Pignone, M., Steffensen, K. D., Sepucha, K., Thompson, R., Trevena, L., van der Weijden, T., Witteman, H. O., & Stacey, D. (2026). Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process. BMJ (Clinical research ed.), 393, e088116. https://doi.org/10.1136/bmj-2025-088116",
+      "authenticity": {
+        "reference_exists_in_publications": "{\"type\":\"Boolean\",\"value\":false}",
+        "doi_record_exists_in_crossref": "{\"type\":\"Boolean\",\"value\":false}",
+        "authors_match_known_publication_authors": "{\"type\":\"Boolean\",\"value\":false}",
+        "year_consistent_with_doi": "{\"type\":\"Boolean\",\"value\":false}",
+        "journal_name_matches_doi_journal": "{\"type\":\"Boolean\",\"value\":false}",
+        "volume_pages_match_doi_record": "{\"type\":\"Boolean\",\"value\":false}"
+      }
+    }
+  }
+]
