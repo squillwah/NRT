@@ -1,5 +1,6 @@
 import os
 import requests
+import json
 
 class ProtoSchemas:
     @staticmethod
@@ -61,6 +62,7 @@ def make_payload_completions(model, ref, schema):
         "plugins": [ { "id": "response-healing" } ]     # Server-side mending of malformed JSON responses.
     }
 
+# Should this do processing as it does, or just return the response object (throw it down the road)?
 def openrouter(model, ref, schema, *, api="completions", key=os.environ["THEKEY"]):
     payload = None
     endpoint = None
@@ -92,8 +94,6 @@ def openrouter(model, ref, schema, *, api="completions", key=os.environ["THEKEY"
 
 
 if __name__ == "__main__":
-    import json
-
     classify = {
         "author":       ProtoSchemas.realfakeconfidence("the author list"),
         "author_order": ProtoSchemas.realfakeconfidence("the order of the author list"),
