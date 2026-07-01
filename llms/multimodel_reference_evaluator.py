@@ -2,6 +2,7 @@ from schemas import ProtoSchemas
 from orouterapi import openrouter, parse_response, trytryagain
 import json
 import time
+import os
 
 # Groundwork for scaling.
 
@@ -15,10 +16,14 @@ if __name__ == "__main__":
         "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562",
         "Volk, R. J., Lewis, K. B., Smith, M., Carley, M., Barry, M. J., Bekker, H. L., H\u00e4rter, M., Hoffmann, T., McCaffery, K., Pignone, M., Steffensen, K. D., Sepucha, K., Thompson, R., Trevena, L., van der Weijden, T., Witteman, H. O., & Stacey, D. (2026). Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process. BMJ (Clinical research ed.), 393, e088116. https://doi.org/10.1136/bmj-2025-088116"
     ]
-    models = [
-            "nvidia/nemotron-3-super-120b-a12b:free"]
+    print(os.environ["THEKEY"])
+#    models = [
+#            "nvidia/nemotron-3-super-120b-a12b:free"]
 #            "openai/gpt-oss-20b:free"
 #    ]
+#    models = ["deepseek/deepseek-v4-flash"]
+
+    models = ["google/gemma-4-31b-it:free", "nvidia/nemotron-3-super-120b-a12b:free"]
 
     # Classify all components. Will trim this according to per reference specifics at some point (avoid confusion / forced hallucination)
     classify = {
@@ -37,6 +42,11 @@ if __name__ == "__main__":
         "REFERENCE":    ProtoSchemas.realfakeconfidence("the reference")
     }
     schema = ProtoSchemas.make_schema(classify)
+
+
+    # @consider: Should we enable reasoning?
+    #            Testing result difference with deepseek, internet on and off.
+
 
     responses = []
     data = []
