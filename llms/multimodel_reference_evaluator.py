@@ -1,4 +1,5 @@
-from schemas import openrouter, ProtoSchemas
+from schemas import ProtoSchemas
+from orouterapi import openrouter, process_response
 import json
 import time
 
@@ -37,19 +38,27 @@ if __name__ == "__main__":
     }
     schema = ProtoSchemas.make_schema(classify)
 
-    results = []
-    for ref in refs:
+    responses = []
+    data = []
+    for i, ref in enumerate(refs):
         print("starting ref")
+        data.append({ "reference": ref })
         for model in models:
             print("starting model")
-            results.append(openrouter(model, ref, schema))
-            print(results)
+            r = process_response(openrouter(model, ref, schema))
+            print(r)
+            responses.append(r)
+            data[i][model] = r["content"]
             print("done model")
             time.sleep(1)
 
-    with open("multiout.json", "w") as file:
-        try: json.dump(results, file, indent=2)
-        except: file.write(results)
+    with open("multiout_responses.json", "w") as file:
+        try: json.dump(responses, file, indent=2)
+        except: file.write(responses)
+
+    with open("multiout_data.json", "w") as file:
+        try: json.dump(data, file, indent=2)
+        except: file.write(data)
 
 
 

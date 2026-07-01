@@ -12,8 +12,9 @@ def make_payload_completions(model, ref, schema):
             { "role": "system", "content": SYSTEMCONTEXT },
             { "role": "user", "content": ref }
         ],
+        "provider": { "require_parameters": True }, # Force providers that support response_format (all stated parameters)
         "response_format": schema,
-        "plugins": [ { "id": "response-healing" } ]     # Server-side mending of malformed JSON responses.
+        "plugins": [ { "id": "response-healing" } ] # Server-side mending of malformed JSON responses.
     }
 
 
