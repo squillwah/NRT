@@ -2,6 +2,7 @@
 import os
 import requests
 import json
+import time
 
 def make_payload_responses(model, ref, schema): pass
 def make_payload_completions(model, ref, schema):
@@ -46,12 +47,39 @@ def process_response(response, *, api="completions"):
         processed["response_json"] = response.json()
         try:
             match api:
-                case "completions": processed["content"] = json.loads(processed["full_json"]["choices"][0]["message"]["content"])
+                case "completions":
+                    try: processed["content"] = json.loads(processed["response_json"]["choices"][0]["message"]["content"])
+                    except Exception as e:
+                        print(" !!! couldn't parse json from choices/message/content: ", e)
+                        processed["content"] = processed["response_json"]["choices"][0]["message"]["content"]
                 case "responses": processed["content"] = "......"
                 case _: print(api, "typo stupid")
-        except requests.exceptions.JSONDecodeError as e:
-            print(" !!! couldn't parse json from choices/message/content: ", e)
-    except requests.exceptions.JSONDecodeError as e:
+        except Exception as e:
+            print(" !!! couldn't even get text of choices/message/content: ", e)
+    except Exception as e:
         print(" !!! couldn't parse json from response: ", e)
 
     return processed
+
+def trytryagain(request, kwargs, *, tries=3, wait=5, processit=True):
+    args = locals()
+    response = request(**kwargs)
+    if response.status_code != 200:
+        print(f" !!! Openrouter request error, status_code: {response.status_code}")
+        if tries > 0:
+            print(f"      Trying again in {wait} seconds, {tries} tries left.")
+            time.sleep(wait)
+            args["tries"] = args["tries"] - 1
+            response = trytryagain(**args)
+        else:
+            print(f"      No tries left, giving up. Message: \n\n{response.text}\n\n")
+    return response
+
+if __name__ == "__main__":
+    m = "openai/gpt-oss-20b:free"
+    r = "Volk, R. J., Lewis, K. B., Smith, M., Carley, M., Barry, M. J., Bekker, H. L., H\u00e4rter, M., Hoffmann, T., McCaffery, K., Pignone, M., Steffensen, K. D., Sepucha, K., Thompson, R., Trevena, L., van der Weijden, T., Witteman, H. O., & Stacey, D. (2026). Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process. BMJ (Clinical research ed.), 393, e088116. https://doi.org/10.1136/bmj-2025-088116"
+    s = "thescemer"
+    print(trytryagain(openrouter, {"model": m, "ref": r, "schema": s}).text)
+
+
+
