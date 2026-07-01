@@ -6,7 +6,7 @@ import time
 
 def make_payload_responses(model, ref, schema): pass
 def make_payload_completions(model, ref, schema):
-    SYSTEMCONTEXT = "You are a citation classifier. Determine the authenticity of references and their individual components. Your response must comply with the strict JSON schema."
+    SYSTEMCONTEXT = "You are a citation classifier. Determine the authenticity of references and their individual components." #Your response must comply with the strict JSON schema."
     return {
         "model": model,
         "messages": [
@@ -63,16 +63,27 @@ def parse_response(response, *, api="completions"):
 
 def trytryagain(request, kwargs, *, tries=3, wait=5):
     args = locals()
+    retry = False
     response = request(**kwargs)
     if response.status_code != 200:
         print(f" !!! Openrouter request error, status_code: {response.status_code}")
-        if tries > 0:
-            print(f"      Trying again in {wait} seconds, {tries} tries left.")
-            time.sleep(wait)
-            args["tries"] = args["tries"] - 1
-            response = trytryagain(**args)
-        else:
-            print(f"      No tries left, giving up. Message: \n\n{response.text}\n\n")
+        retry = True
+    # Catch upstream provider errors
+    else:
+        try:
+            rjson = response.json()# May be fragile, JSON parsing errors or false positives etc.
+            if "error" in rjson:
+                print(f" !!! Upstream error: {rjson["error"]}")
+                retry = True
+            else: print("Request success!")
+        except Exception as e:
+            print(f" !!! Something terrible has happened. \n\n{e}\n\n{response.text}\n\n")
+    if retry and tries > 0:
+        print(f"      Trying again in {wait} seconds, {tries} tries left.")
+        time.sleep(wait)
+        args["tries"] = args["tries"] - 1
+        response = trytryagain(**args)
+    else: print(f"      No tries left, giving up. Message: \n\n{response.text}\n\n")
     return response
 
 if __name__ == "__main__":
