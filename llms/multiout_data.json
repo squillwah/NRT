@@ -1,142 +1,142 @@
 [
   {
     "reference": "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562",
-    "nvidia/nemotron-3-super-120b-a12b:free:online": {
+    "nvidia/nemotron-3-super-120b-a12b:free": {
       "author": {
         "classification": false,
-        "confidence_real": 0.0,
-        "confidence_fake": 1.0
+        "confidence_real": 0.92,
+        "confidence_fake": 0.08
       },
       "author_order": {
         "classification": false,
-        "confidence_real": 0.0,
-        "confidence_fake": 1.0
+        "confidence_real": 0.9,
+        "confidence_fake": 0.1
       },
       "title": {
         "classification": false,
-        "confidence_real": 0.0,
-        "confidence_fake": 1.0
+        "confidence_real": 0.88,
+        "confidence_fake": 0.12
       },
       "journal": {
-        "classification": false,
-        "confidence_real": 0.0,
-        "confidence_fake": 1.0
+        "classification": true,
+        "confidence_real": 0.95,
+        "confidence_fake": 0.05
       },
       "vol": {
         "classification": false,
-        "confidence_real": 0.0,
-        "confidence_fake": 1.0
+        "confidence_real": 0.7,
+        "confidence_fake": 0.3
       },
       "iss": {
         "classification": false,
-        "confidence_real": 0.0,
-        "confidence_fake": 1.0
+        "confidence_real": 0.65,
+        "confidence_fake": 0.35
       },
       "page": {
         "classification": false,
-        "confidence_real": 0.0,
-        "confidence_fake": 1.0
+        "confidence_real": 0.6,
+        "confidence_fake": 0.4
       },
       "elocator": {
         "classification": false,
-        "confidence_real": 0.0,
-        "confidence_fake": 1.0
+        "confidence_real": 0.55,
+        "confidence_fake": 0.45
       },
       "date": {
         "classification": false,
-        "confidence_real": 0.0,
-        "confidence_fake": 1.0
+        "confidence_real": 0.7,
+        "confidence_fake": 0.3
       },
       "doi": {
         "classification": false,
-        "confidence_real": 0.0,
-        "confidence_fake": 1.0
+        "confidence_real": 0.85,
+        "confidence_fake": 0.15
       },
       "pmid": {
         "classification": false,
-        "confidence_real": 0.0,
-        "confidence_fake": 1.0
+        "confidence_real": 0.5,
+        "confidence_fake": 0.5
       },
       "pmcid": {
         "classification": false,
-        "confidence_real": 0.0,
-        "confidence_fake": 1.0
+        "confidence_real": 0.5,
+        "confidence_fake": 0.5
       },
       "REFERENCE": {
         "classification": false,
-        "confidence_real": 0.0,
-        "confidence_fake": 1.0
+        "confidence_real": 0.78,
+        "confidence_fake": 0.22
       }
-    },
-    "openai/gpt-oss-20b:free:online": null
+    }
   },
   {
     "reference": "Volk, R. J., Lewis, K. B., Smith, M., Carley, M., Barry, M. J., Bekker, H. L., H\u00e4rter, M., Hoffmann, T., McCaffery, K., Pignone, M., Steffensen, K. D., Sepucha, K., Thompson, R., Trevena, L., van der Weijden, T., Witteman, H. O., & Stacey, D. (2026). Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process. BMJ (Clinical research ed.), 393, e088116. https://doi.org/10.1136/bmj-2025-088116",
-    "nvidia/nemotron-3-super-120b-a12b:free:online": {},
-    "openai/gpt-oss-20b:free:online": {
-      "authentic": true,
-      "citation": {
-        "authors": [
-          "Volk, R. J.",
-          "Lewis, K. B.",
-          "Smith, M.",
-          "Carley, M.",
-          "Barry, M. J.",
-          "Bekker, H. L.",
-          "H\u00e4rter, M.",
-          "Hoffmann, T.",
-          "McCaffery, K.",
-          "Pignone, M.",
-          "Steffensen, K. D.",
-          "Sepucha, K.",
-          "Thompson, R.",
-          "Trevena, L.",
-          "van der Weijden, T.",
-          "Witteman, H. O.",
-          "Stacey, D."
-        ],
-        "year": 2026,
-        "title": "Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process",
-        "journal": "BMJ (Clinical research ed.)",
-        "volume": 393,
-        "page": "e088116",
-        "doi": "10.1136/bmj-2025-088116",
-        "url": "https://doi.org/10.1136/bmj-2025-088116"
+    "nvidia/nemotron-3-super-120b-a12b:free": {
+      "author": {
+        "classification": false,
+        "confidence_real": 0.3,
+        "confidence_fake": 0.7
       },
-      "components": [
-        {
-          "name": "authors",
-          "valid": true
-        },
-        {
-          "name": "year",
-          "valid": true
-        },
-        {
-          "name": "title",
-          "valid": true
-        },
-        {
-          "name": "journal",
-          "valid": true
-        },
-        {
-          "name": "volume",
-          "valid": true
-        },
-        {
-          "name": "page",
-          "valid": true
-        },
-        {
-          "name": "doi",
-          "valid": true
-        },
-        {
-          "name": "url",
-          "valid": true
-        }
-      ]
+      "author_order": {
+        "classification": false,
+        "confidence_real": 0.2,
+        "confidence_fake": 0.8
+      },
+      "title": {
+        "classification": false,
+        "confidence_real": 0.4,
+        "confidence_fake": 0.6
+      },
+      "journal": {
+        "classification": true,
+        "confidence_real": 0.9,
+        "confidence_fake": 0.1
+      },
+      "vol": {
+        "classification": true,
+        "confidence_real": 0.85,
+        "confidence_fake": 0.15
+      },
+      "iss": {
+        "classification": true,
+        "confidence_real": 0.8,
+        "confidence_fake": 0.2
+      },
+      "page": {
+        "classification": true,
+        "confidence_real": 0.75,
+        "confidence_fake": 0.25
+      },
+      "elocator": {
+        "classification": false,
+        "confidence_real": 0.3,
+        "confidence_fake": 0.7
+      },
+      "date": {
+        "classification": false,
+        "confidence_real": 0.25,
+        "confidence_fake": 0.75
+      },
+      "doi": {
+        "classification": false,
+        "confidence_real": 0.2,
+        "confidence_fake": 0.8
+      },
+      "pmid": {
+        "classification": false,
+        "confidence_real": 0.1,
+        "confidence_fake": 0.9
+      },
+      "pmcid": {
+        "classification": false,
+        "confidence_real": 0.05,
+        "confidence_fake": 0.95
+      },
+      "REFERENCE": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      }
     }
   }
 ]

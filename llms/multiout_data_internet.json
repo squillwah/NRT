@@ -1,0 +1,142 @@
+[
+  {
+    "reference": "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562",
+    "nvidia/nemotron-3-super-120b-a12b:free:online": {
+      "author": {
+        "classification": false,
+        "confidence_real": 0.0,
+        "confidence_fake": 1.0
+      },
+      "author_order": {
+        "classification": false,
+        "confidence_real": 0.0,
+        "confidence_fake": 1.0
+      },
+      "title": {
+        "classification": false,
+        "confidence_real": 0.0,
+        "confidence_fake": 1.0
+      },
+      "journal": {
+        "classification": false,
+        "confidence_real": 0.0,
+        "confidence_fake": 1.0
+      },
+      "vol": {
+        "classification": false,
+        "confidence_real": 0.0,
+        "confidence_fake": 1.0
+      },
+      "iss": {
+        "classification": false,
+        "confidence_real": 0.0,
+        "confidence_fake": 1.0
+      },
+      "page": {
+        "classification": false,
+        "confidence_real": 0.0,
+        "confidence_fake": 1.0
+      },
+      "elocator": {
+        "classification": false,
+        "confidence_real": 0.0,
+        "confidence_fake": 1.0
+      },
+      "date": {
+        "classification": false,
+        "confidence_real": 0.0,
+        "confidence_fake": 1.0
+      },
+      "doi": {
+        "classification": false,
+        "confidence_real": 0.0,
+        "confidence_fake": 1.0
+      },
+      "pmid": {
+        "classification": false,
+        "confidence_real": 0.0,
+        "confidence_fake": 1.0
+      },
+      "pmcid": {
+        "classification": false,
+        "confidence_real": 0.0,
+        "confidence_fake": 1.0
+      },
+      "REFERENCE": {
+        "classification": false,
+        "confidence_real": 0.0,
+        "confidence_fake": 1.0
+      }
+    },
+    "openai/gpt-oss-20b:free:online": null
+  },
+  {
+    "reference": "Volk, R. J., Lewis, K. B., Smith, M., Carley, M., Barry, M. J., Bekker, H. L., H\u00e4rter, M., Hoffmann, T., McCaffery, K., Pignone, M., Steffensen, K. D., Sepucha, K., Thompson, R., Trevena, L., van der Weijden, T., Witteman, H. O., & Stacey, D. (2026). Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process. BMJ (Clinical research ed.), 393, e088116. https://doi.org/10.1136/bmj-2025-088116",
+    "nvidia/nemotron-3-super-120b-a12b:free:online": {},
+    "openai/gpt-oss-20b:free:online": {
+      "authentic": true,
+      "citation": {
+        "authors": [
+          "Volk, R. J.",
+          "Lewis, K. B.",
+          "Smith, M.",
+          "Carley, M.",
+          "Barry, M. J.",
+          "Bekker, H. L.",
+          "H\u00e4rter, M.",
+          "Hoffmann, T.",
+          "McCaffery, K.",
+          "Pignone, M.",
+          "Steffensen, K. D.",
+          "Sepucha, K.",
+          "Thompson, R.",
+          "Trevena, L.",
+          "van der Weijden, T.",
+          "Witteman, H. O.",
+          "Stacey, D."
+        ],
+        "year": 2026,
+        "title": "Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process",
+        "journal": "BMJ (Clinical research ed.)",
+        "volume": 393,
+        "page": "e088116",
+        "doi": "10.1136/bmj-2025-088116",
+        "url": "https://doi.org/10.1136/bmj-2025-088116"
+      },
+      "components": [
+        {
+          "name": "authors",
+          "valid": true
+        },
+        {
+          "name": "year",
+          "valid": true
+        },
+        {
+          "name": "title",
+          "valid": true
+        },
+        {
+          "name": "journal",
+          "valid": true
+        },
+        {
+          "name": "volume",
+          "valid": true
+        },
+        {
+          "name": "page",
+          "valid": true
+        },
+        {
+          "name": "doi",
+          "valid": true
+        },
+        {
+          "name": "url",
+          "valid": true
+        }
+      ]
+    }
+  }
+]
