@@ -51,11 +51,11 @@ if __name__ == "__main__":
             print("done")
             time.sleep(1)
 
-    with open("multiout_responses.json", "w") as file:
+    with open("mmresponses.json", "w") as file:
         try: json.dump(responses, file, indent=2)
         except: file.write(responses)
 
-    with open("multiout_data.json", "w") as file:
+    with open("mmdata.json", "w") as file:
         try: json.dump(data, file, indent=2)
         except: file.write(data)
 

@@ -78,12 +78,13 @@ def trytryagain(request, kwargs, *, tries=3, wait=5):
             else: print("Request success!")
         except Exception as e:
             print(f" !!! Something terrible has happened. \n\n{e}\n\n{response.text}\n\n")
-    if retry and tries > 0:
-        print(f"      Trying again in {wait} seconds, {tries} tries left.")
-        time.sleep(wait)
-        args["tries"] = args["tries"] - 1
-        response = trytryagain(**args)
-    else: print(f"      No tries left, giving up. Message: \n\n{response.text}\n\n")
+    if retry:
+        if tries > 0:
+            print(f"      Trying again in {wait} seconds, {tries} tries left.")
+            time.sleep(wait)
+            args["tries"] = args["tries"] - 1
+            response = trytryagain(**args)
+        else: print(f"      No tries left, giving up. Message: \n\n{response.text}\n\n")
     return response
 
 if __name__ == "__main__":

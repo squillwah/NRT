@@ -1,0 +1,142 @@
+[
+  {
+    "reference": "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562",
+    "nvidia/nemotron-3-super-120b-a12b:free": {
+      "author": {
+        "classification": false,
+        "confidence_real": 0.85,
+        "confidence_fake": 0.85
+      },
+      "author_order": {
+        "classification": false,
+        "confidence_real": 0.9,
+        "confidence_fake": 0.9
+      },
+      "title": {
+        "classification": false,
+        "confidence_real": 0.75,
+        "confidence_fake": 0.75
+      },
+      "journal": {
+        "classification": false,
+        "confidence_real": 0.8,
+        "confidence_fake": 0.8
+      },
+      "vol": {
+        "classification": false,
+        "confidence_real": 0.7,
+        "confidence_fake": 0.7
+      },
+      "iss": {
+        "classification": false,
+        "confidence_real": 0.5,
+        "confidence_fake": 0.5
+      },
+      "page": {
+        "classification": false,
+        "confidence_real": 0.6,
+        "confidence_fake": 0.6
+      },
+      "elocator": {
+        "classification": false,
+        "confidence_real": 0.55,
+        "confidence_fake": 0.55
+      },
+      "date": {
+        "classification": false,
+        "confidence_real": 0.8,
+        "confidence_fake": 0.8
+      },
+      "doi": {
+        "classification": false,
+        "confidence_real": 0.9,
+        "confidence_fake": 0.9
+      },
+      "pmid": {
+        "classification": false,
+        "confidence_real": 0.5,
+        "confidence_fake": 0.5
+      },
+      "pmcid": {
+        "classification": false,
+        "confidence_real": 0.5,
+        "confidence_fake": 0.5
+      },
+      "REFERENCE": {
+        "classification": false,
+        "confidence_real": 0.88,
+        "confidence_fake": 0.88
+      }
+    }
+  },
+  {
+    "reference": "Volk, R. J., Lewis, K. B., Smith, M., Carley, M., Barry, M. J., Bekker, H. L., H\u00e4rter, M., Hoffmann, T., McCaffery, K., Pignone, M., Steffensen, K. D., Sepucha, K., Thompson, R., Trevena, L., van der Weijden, T., Witteman, H. O., & Stacey, D. (2026). Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process. BMJ (Clinical research ed.), 393, e088116. https://doi.org/10.1136/bmj-2025-088116",
+    "nvidia/nemotron-3-super-120b-a12b:free": {
+      "author": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "author_order": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "title": {
+        "classification": false,
+        "confidence_real": 0.2,
+        "confidence_fake": 0.8
+      },
+      "journal": {
+        "classification": true,
+        "confidence_real": 0.9,
+        "confidence_fake": 0.1
+      },
+      "vol": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "iss": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "page": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "elocator": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "date": {
+        "classification": false,
+        "confidence_real": 0.1,
+        "confidence_fake": 0.9
+      },
+      "doi": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "pmid": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "pmcid": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "REFERENCE": {
+        "classification": false,
+        "confidence_real": 0.1,
+        "confidence_fake": 0.9
+      }
+    }
+  }
+]

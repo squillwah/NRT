@@ -1,0 +1,250 @@
+[
+  {
+    "response_text": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1782939961-JEeQ1AKr264vzvLbNm8W\",\"object\":\"chat.completion\",\"created\":1782939961,\"model\":\"nvidia/nemotron-3-super-120b-a12b-20230311:free\",\"provider\":\"Nvidia\",\"system_fingerprint\":null,\"service_tier\":null,\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"author\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.85, \\\"confidence_fake\\\": 0.85}, \\\"author_order\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.9, \\\"confidence_fake\\\": 0.9}, \\\"title\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.75, \\\"confidence_fake\\\": 0.75}, \\\"journal\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.8, \\\"confidence_fake\\\": 0.8}, \\\"vol\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.7, \\\"confidence_fake\\\": 0.7}, \\\"iss\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.5, \\\"confidence_fake\\\": 0.5}, \\\"page\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.6, \\\"confidence_fake\\\": 0.6}, \\\"elocator\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.55, \\\"confidence_fake\\\": 0.55}, \\\"date\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.8, \\\"confidence_fake\\\": 0.8}, \\\"doi\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.9, \\\"confidence_fake\\\": 0.9}, \\\"pmid\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.5, \\\"confidence_fake\\\": 0.5}, \\\"pmcid\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.5, \\\"confidence_fake\\\": 0.5}, \\\"REFERENCE\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.88, \\\"confidence_fake\\\": 0.88}}\",\"refusal\":null,\"reasoning\":\"We need to check authenticity of reference: Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562.\\n\\nWe need to see if that article exists. BMJ 2026 volume 393? BMJ is a weekly journal; volume numbers per year? Usually BMJ volume numbers are like BMJ 2024;385 etc? Let's recall: BMJ (British Medical Journal) historically used volume numbers per year, but since 2014 they started using article numbers. Actually BMJ now uses continuous pagination? Not sure. But volume 393 would correspond to year ~2026? Let's see: BMJ volume numbers increase roughly by about 2 per year? Actually BMJ volume numbers: In 2020, volume 368? Let's check memory: BMJ 2020;368:m... Not sure. Let's approximate: BMJ volume numbers increase by about 2 per year? In 2010 volume 340? Might be off.\\n\\nBetter: Let's quickly think: BMJ 2021 volume 372? Actually BMJ 2021;372:n... I recall BMJ 2021;372:n... So volume numbers roughly increase by about 1 per year? 2020 volume 368, 2021 372, 2022 376, 2023 380, 2024 384, 2025 388, 2026 392? Something like that. So volume 393 would be plausible for 2026.\\n\\nBut the article title: \\\"Advances in supporting development in autistic children and youth\\\". Does such an article exist? I'm not aware. Could be a review article.\\n\\nThe DOI: 10.1136/bmj-2025-086562. That format: BMJ uses doi:10.1136/bmj.-2025-... Actually typical BMJ article DOI: 10.1136/bmj.-2021-065432? Not sure. For BMJ, format often: 10.1136/bmj.-2021-065432? Let's check memory: Example: BMJ 2021;372:n... doi:10.1136/bmj.n... Actually BMJ uses article numbers not volume/issue. Eg: BMJ 2021;372:n... doi:10.1136/bmj.n... So the given doi \\\"bmj-2025-086562\\\" seems off; typical format: 10.1136/bmj.-2025-086562? Actually they use \\\"bmj.-2025-086562\\\"? Let\u2019s recall: For BMJ, article IDs are like \\\"bmj.-2021-065432\\\". So the correct would be \\\"bmj.-2025-086562\\\". The given is missing the dash after bmj? Actually they have \\\"bmj-2025-086562\\\". That might be wrong.\\n\\nThus likely the reference is fabricated or incorrect. We need to assess authenticity: Likely not authentic.\\n\\nThus answer: The reference appears suspicious; volume, year, DOI format not matching BMJ conventions; no such article found.\\n\\nWe should state that we could not locate the article; likely fake.\\n\\nThus respond with assessment.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"We need to check authenticity of reference: Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562.\\n\\nWe need to see if that article exists. BMJ 2026 volume 393? BMJ is a weekly journal; volume numbers per year? Usually BMJ volume numbers are like BMJ 2024;385 etc? Let's recall: BMJ (British Medical Journal) historically used volume numbers per year, but since 2014 they started using article numbers. Actually BMJ now uses continuous pagination? Not sure. But volume 393 would correspond to year ~2026? Let's see: BMJ volume numbers increase roughly by about 2 per year? Actually BMJ volume numbers: In 2020, volume 368? Let's check memory: BMJ 2020;368:m... Not sure. Let's approximate: BMJ volume numbers increase by about 2 per year? In 2010 volume 340? Might be off.\\n\\nBetter: Let's quickly think: BMJ 2021 volume 372? Actually BMJ 2021;372:n... I recall BMJ 2021;372:n... So volume numbers roughly increase by about 1 per year? 2020 volume 368, 2021 372, 2022 376, 2023 380, 2024 384, 2025 388, 2026 392? Something like that. So volume 393 would be plausible for 2026.\\n\\nBut the article title: \\\"Advances in supporting development in autistic children and youth\\\". Does such an article exist? I'm not aware. Could be a review article.\\n\\nThe DOI: 10.1136/bmj-2025-086562. That format: BMJ uses doi:10.1136/bmj.-2025-... Actually typical BMJ article DOI: 10.1136/bmj.-2021-065432? Not sure. For BMJ, format often: 10.1136/bmj.-2021-065432? Let's check memory: Example: BMJ 2021;372:n... doi:10.1136/bmj.n... Actually BMJ uses article numbers not volume/issue. Eg: BMJ 2021;372:n... doi:10.1136/bmj.n... So the given doi \\\"bmj-2025-086562\\\" seems off; typical format: 10.1136/bmj.-2025-086562? Actually they use \\\"bmj.-2025-086562\\\"? Let\u2019s recall: For BMJ, article IDs are like \\\"bmj.-2021-065432\\\". So the correct would be \\\"bmj.-2025-086562\\\". The given is missing the dash after bmj? Actually they have \\\"bmj-2025-086562\\\". That might be wrong.\\n\\nThus likely the reference is fabricated or incorrect. We need to assess authenticity: Likely not authentic.\\n\\nThus answer: The reference appears suspicious; volume, year, DOI format not matching BMJ conventions; no such article found.\\n\\nWe should state that we could not locate the article; likely fake.\\n\\nThus respond with assessment.\\n\\n\",\"format\":\"unknown\",\"index\":0}]}}],\"usage\":{\"prompt_tokens\":126,\"completion_tokens\":1367,\"total_tokens\":1493,\"cost\":0,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0,\"upstream_inference_prompt_cost\":0,\"upstream_inference_completions_cost\":0},\"completion_tokens_details\":{\"reasoning_tokens\":620,\"image_tokens\":0,\"audio_tokens\":0}}}",
+    "response_json": {
+      "id": "gen-1782939961-JEeQ1AKr264vzvLbNm8W",
+      "object": "chat.completion",
+      "created": 1782939961,
+      "model": "nvidia/nemotron-3-super-120b-a12b-20230311:free",
+      "provider": "Nvidia",
+      "system_fingerprint": null,
+      "service_tier": null,
+      "choices": [
+        {
+          "index": 0,
+          "logprobs": null,
+          "finish_reason": "stop",
+          "native_finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "{\"author\": {\"classification\": false, \"confidence_real\": 0.85, \"confidence_fake\": 0.85}, \"author_order\": {\"classification\": false, \"confidence_real\": 0.9, \"confidence_fake\": 0.9}, \"title\": {\"classification\": false, \"confidence_real\": 0.75, \"confidence_fake\": 0.75}, \"journal\": {\"classification\": false, \"confidence_real\": 0.8, \"confidence_fake\": 0.8}, \"vol\": {\"classification\": false, \"confidence_real\": 0.7, \"confidence_fake\": 0.7}, \"iss\": {\"classification\": false, \"confidence_real\": 0.5, \"confidence_fake\": 0.5}, \"page\": {\"classification\": false, \"confidence_real\": 0.6, \"confidence_fake\": 0.6}, \"elocator\": {\"classification\": false, \"confidence_real\": 0.55, \"confidence_fake\": 0.55}, \"date\": {\"classification\": false, \"confidence_real\": 0.8, \"confidence_fake\": 0.8}, \"doi\": {\"classification\": false, \"confidence_real\": 0.9, \"confidence_fake\": 0.9}, \"pmid\": {\"classification\": false, \"confidence_real\": 0.5, \"confidence_fake\": 0.5}, \"pmcid\": {\"classification\": false, \"confidence_real\": 0.5, \"confidence_fake\": 0.5}, \"REFERENCE\": {\"classification\": false, \"confidence_real\": 0.88, \"confidence_fake\": 0.88}}",
+            "refusal": null,
+            "reasoning": "We need to check authenticity of reference: Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562.\n\nWe need to see if that article exists. BMJ 2026 volume 393? BMJ is a weekly journal; volume numbers per year? Usually BMJ volume numbers are like BMJ 2024;385 etc? Let's recall: BMJ (British Medical Journal) historically used volume numbers per year, but since 2014 they started using article numbers. Actually BMJ now uses continuous pagination? Not sure. But volume 393 would correspond to year ~2026? Let's see: BMJ volume numbers increase roughly by about 2 per year? Actually BMJ volume numbers: In 2020, volume 368? Let's check memory: BMJ 2020;368:m... Not sure. Let's approximate: BMJ volume numbers increase by about 2 per year? In 2010 volume 340? Might be off.\n\nBetter: Let's quickly think: BMJ 2021 volume 372? Actually BMJ 2021;372:n... I recall BMJ 2021;372:n... So volume numbers roughly increase by about 1 per year? 2020 volume 368, 2021 372, 2022 376, 2023 380, 2024 384, 2025 388, 2026 392? Something like that. So volume 393 would be plausible for 2026.\n\nBut the article title: \"Advances in supporting development in autistic children and youth\". Does such an article exist? I'm not aware. Could be a review article.\n\nThe DOI: 10.1136/bmj-2025-086562. That format: BMJ uses doi:10.1136/bmj.-2025-... Actually typical BMJ article DOI: 10.1136/bmj.-2021-065432? Not sure. For BMJ, format often: 10.1136/bmj.-2021-065432? Let's check memory: Example: BMJ 2021;372:n... doi:10.1136/bmj.n... Actually BMJ uses article numbers not volume/issue. Eg: BMJ 2021;372:n... doi:10.1136/bmj.n... So the given doi \"bmj-2025-086562\" seems off; typical format: 10.1136/bmj.-2025-086562? Actually they use \"bmj.-2025-086562\"? Let\u2019s recall: For BMJ, article IDs are like \"bmj.-2021-065432\". So the correct would be \"bmj.-2025-086562\". The given is missing the dash after bmj? Actually they have \"bmj-2025-086562\". That might be wrong.\n\nThus likely the reference is fabricated or incorrect. We need to assess authenticity: Likely not authentic.\n\nThus answer: The reference appears suspicious; volume, year, DOI format not matching BMJ conventions; no such article found.\n\nWe should state that we could not locate the article; likely fake.\n\nThus respond with assessment.\n\n",
+            "reasoning_details": [
+              {
+                "type": "reasoning.text",
+                "text": "We need to check authenticity of reference: Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562.\n\nWe need to see if that article exists. BMJ 2026 volume 393? BMJ is a weekly journal; volume numbers per year? Usually BMJ volume numbers are like BMJ 2024;385 etc? Let's recall: BMJ (British Medical Journal) historically used volume numbers per year, but since 2014 they started using article numbers. Actually BMJ now uses continuous pagination? Not sure. But volume 393 would correspond to year ~2026? Let's see: BMJ volume numbers increase roughly by about 2 per year? Actually BMJ volume numbers: In 2020, volume 368? Let's check memory: BMJ 2020;368:m... Not sure. Let's approximate: BMJ volume numbers increase by about 2 per year? In 2010 volume 340? Might be off.\n\nBetter: Let's quickly think: BMJ 2021 volume 372? Actually BMJ 2021;372:n... I recall BMJ 2021;372:n... So volume numbers roughly increase by about 1 per year? 2020 volume 368, 2021 372, 2022 376, 2023 380, 2024 384, 2025 388, 2026 392? Something like that. So volume 393 would be plausible for 2026.\n\nBut the article title: \"Advances in supporting development in autistic children and youth\". Does such an article exist? I'm not aware. Could be a review article.\n\nThe DOI: 10.1136/bmj-2025-086562. That format: BMJ uses doi:10.1136/bmj.-2025-... Actually typical BMJ article DOI: 10.1136/bmj.-2021-065432? Not sure. For BMJ, format often: 10.1136/bmj.-2021-065432? Let's check memory: Example: BMJ 2021;372:n... doi:10.1136/bmj.n... Actually BMJ uses article numbers not volume/issue. Eg: BMJ 2021;372:n... doi:10.1136/bmj.n... So the given doi \"bmj-2025-086562\" seems off; typical format: 10.1136/bmj.-2025-086562? Actually they use \"bmj.-2025-086562\"? Let\u2019s recall: For BMJ, article IDs are like \"bmj.-2021-065432\". So the correct would be \"bmj.-2025-086562\". The given is missing the dash after bmj? Actually they have \"bmj-2025-086562\". That might be wrong.\n\nThus likely the reference is fabricated or incorrect. We need to assess authenticity: Likely not authentic.\n\nThus answer: The reference appears suspicious; volume, year, DOI format not matching BMJ conventions; no such article found.\n\nWe should state that we could not locate the article; likely fake.\n\nThus respond with assessment.\n\n",
+                "format": "unknown",
+                "index": 0
+              }
+            ]
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 126,
+        "completion_tokens": 1367,
+        "total_tokens": 1493,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 620,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "content": {
+      "author": {
+        "classification": false,
+        "confidence_real": 0.85,
+        "confidence_fake": 0.85
+      },
+      "author_order": {
+        "classification": false,
+        "confidence_real": 0.9,
+        "confidence_fake": 0.9
+      },
+      "title": {
+        "classification": false,
+        "confidence_real": 0.75,
+        "confidence_fake": 0.75
+      },
+      "journal": {
+        "classification": false,
+        "confidence_real": 0.8,
+        "confidence_fake": 0.8
+      },
+      "vol": {
+        "classification": false,
+        "confidence_real": 0.7,
+        "confidence_fake": 0.7
+      },
+      "iss": {
+        "classification": false,
+        "confidence_real": 0.5,
+        "confidence_fake": 0.5
+      },
+      "page": {
+        "classification": false,
+        "confidence_real": 0.6,
+        "confidence_fake": 0.6
+      },
+      "elocator": {
+        "classification": false,
+        "confidence_real": 0.55,
+        "confidence_fake": 0.55
+      },
+      "date": {
+        "classification": false,
+        "confidence_real": 0.8,
+        "confidence_fake": 0.8
+      },
+      "doi": {
+        "classification": false,
+        "confidence_real": 0.9,
+        "confidence_fake": 0.9
+      },
+      "pmid": {
+        "classification": false,
+        "confidence_real": 0.5,
+        "confidence_fake": 0.5
+      },
+      "pmcid": {
+        "classification": false,
+        "confidence_real": 0.5,
+        "confidence_fake": 0.5
+      },
+      "REFERENCE": {
+        "classification": false,
+        "confidence_real": 0.88,
+        "confidence_fake": 0.88
+      }
+    }
+  },
+  {
+    "response_text": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1782939996-gHggcv5iNtoYdF8YoDwM\",\"object\":\"chat.completion\",\"created\":1782939996,\"model\":\"nvidia/nemotron-3-super-120b-a12b-20230311:free\",\"provider\":\"Nvidia\",\"system_fingerprint\":null,\"service_tier\":null,\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"author\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.15, \\\"confidence_fake\\\": 0.85}, \\\"author_order\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.15, \\\"confidence_fake\\\": 0.85}, \\\"title\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.2, \\\"confidence_fake\\\": 0.8}, \\\"journal\\\": {\\\"classification\\\": true, \\\"confidence_real\\\": 0.9, \\\"confidence_fake\\\": 0.1}, \\\"vol\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.15, \\\"confidence_fake\\\": 0.85}, \\\"iss\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.15, \\\"confidence_fake\\\": 0.85}, \\\"page\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.15, \\\"confidence_fake\\\": 0.85}, \\\"elocator\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.15, \\\"confidence_fake\\\": 0.85}, \\\"date\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.1, \\\"confidence_fake\\\": 0.9}, \\\"doi\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.15, \\\"confidence_fake\\\": 0.85}, \\\"pmid\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.15, \\\"confidence_fake\\\": 0.85}, \\\"pmcid\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.15, \\\"confidence_fake\\\": 0.85}, \\\"REFERENCE\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.1, \\\"confidence_fake\\\": 0.9}}\",\"refusal\":null,\"reasoning\":\"We need to check authenticity. Likely a fabricated citation. Check details: BMJ 2026, volume 393, article e088116? BMJ volume numbers: 2023 BMJ volume 382, etc. 2026 volume maybe 393 plausible? DOI: 10.1136/bmj-2025-088116 seems like a future article (2025). Might be not real. IPDAS version 5.0? IPDAS known (International Patient Decision Aid Standards). There is IPDAS version 4? Actually IPDAS version 4 was 2013? There's IPDAS Collaboration. Version 5.0 might be recent. However year 2026 seems future; as of 2025, not published. So likely hallucinated. Provide assessment: likely not authentic. Provide reasoning.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"We need to check authenticity. Likely a fabricated citation. Check details: BMJ 2026, volume 393, article e088116? BMJ volume numbers: 2023 BMJ volume 382, etc. 2026 volume maybe 393 plausible? DOI: 10.1136/bmj-2025-088116 seems like a future article (2025). Might be not real. IPDAS version 5.0? IPDAS known (International Patient Decision Aid Standards). There is IPDAS version 4? Actually IPDAS version 4 was 2013? There's IPDAS Collaboration. Version 5.0 might be recent. However year 2026 seems future; as of 2025, not published. So likely hallucinated. Provide assessment: likely not authentic. Provide reasoning.\\n\\n\",\"format\":\"unknown\",\"index\":0}]}}],\"usage\":{\"prompt_tokens\":209,\"completion_tokens\":637,\"total_tokens\":846,\"cost\":0,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0,\"upstream_inference_prompt_cost\":0,\"upstream_inference_completions_cost\":0},\"completion_tokens_details\":{\"reasoning_tokens\":157,\"image_tokens\":0,\"audio_tokens\":0}}}",
+    "response_json": {
+      "id": "gen-1782939996-gHggcv5iNtoYdF8YoDwM",
+      "object": "chat.completion",
+      "created": 1782939996,
+      "model": "nvidia/nemotron-3-super-120b-a12b-20230311:free",
+      "provider": "Nvidia",
+      "system_fingerprint": null,
+      "service_tier": null,
+      "choices": [
+        {
+          "index": 0,
+          "logprobs": null,
+          "finish_reason": "stop",
+          "native_finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "{\"author\": {\"classification\": false, \"confidence_real\": 0.15, \"confidence_fake\": 0.85}, \"author_order\": {\"classification\": false, \"confidence_real\": 0.15, \"confidence_fake\": 0.85}, \"title\": {\"classification\": false, \"confidence_real\": 0.2, \"confidence_fake\": 0.8}, \"journal\": {\"classification\": true, \"confidence_real\": 0.9, \"confidence_fake\": 0.1}, \"vol\": {\"classification\": false, \"confidence_real\": 0.15, \"confidence_fake\": 0.85}, \"iss\": {\"classification\": false, \"confidence_real\": 0.15, \"confidence_fake\": 0.85}, \"page\": {\"classification\": false, \"confidence_real\": 0.15, \"confidence_fake\": 0.85}, \"elocator\": {\"classification\": false, \"confidence_real\": 0.15, \"confidence_fake\": 0.85}, \"date\": {\"classification\": false, \"confidence_real\": 0.1, \"confidence_fake\": 0.9}, \"doi\": {\"classification\": false, \"confidence_real\": 0.15, \"confidence_fake\": 0.85}, \"pmid\": {\"classification\": false, \"confidence_real\": 0.15, \"confidence_fake\": 0.85}, \"pmcid\": {\"classification\": false, \"confidence_real\": 0.15, \"confidence_fake\": 0.85}, \"REFERENCE\": {\"classification\": false, \"confidence_real\": 0.1, \"confidence_fake\": 0.9}}",
+            "refusal": null,
+            "reasoning": "We need to check authenticity. Likely a fabricated citation. Check details: BMJ 2026, volume 393, article e088116? BMJ volume numbers: 2023 BMJ volume 382, etc. 2026 volume maybe 393 plausible? DOI: 10.1136/bmj-2025-088116 seems like a future article (2025). Might be not real. IPDAS version 5.0? IPDAS known (International Patient Decision Aid Standards). There is IPDAS version 4? Actually IPDAS version 4 was 2013? There's IPDAS Collaboration. Version 5.0 might be recent. However year 2026 seems future; as of 2025, not published. So likely hallucinated. Provide assessment: likely not authentic. Provide reasoning.\n\n",
+            "reasoning_details": [
+              {
+                "type": "reasoning.text",
+                "text": "We need to check authenticity. Likely a fabricated citation. Check details: BMJ 2026, volume 393, article e088116? BMJ volume numbers: 2023 BMJ volume 382, etc. 2026 volume maybe 393 plausible? DOI: 10.1136/bmj-2025-088116 seems like a future article (2025). Might be not real. IPDAS version 5.0? IPDAS known (International Patient Decision Aid Standards). There is IPDAS version 4? Actually IPDAS version 4 was 2013? There's IPDAS Collaboration. Version 5.0 might be recent. However year 2026 seems future; as of 2025, not published. So likely hallucinated. Provide assessment: likely not authentic. Provide reasoning.\n\n",
+                "format": "unknown",
+                "index": 0
+              }
+            ]
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 209,
+        "completion_tokens": 637,
+        "total_tokens": 846,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 157,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "content": {
+      "author": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "author_order": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "title": {
+        "classification": false,
+        "confidence_real": 0.2,
+        "confidence_fake": 0.8
+      },
+      "journal": {
+        "classification": true,
+        "confidence_real": 0.9,
+        "confidence_fake": 0.1
+      },
+      "vol": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "iss": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "page": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "elocator": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "date": {
+        "classification": false,
+        "confidence_real": 0.1,
+        "confidence_fake": 0.9
+      },
+      "doi": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "pmid": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "pmcid": {
+        "classification": false,
+        "confidence_real": 0.15,
+        "confidence_fake": 0.85
+      },
+      "REFERENCE": {
+        "classification": false,
+        "confidence_real": 0.1,
+        "confidence_fake": 0.9
+      }
+    }
+  }
+]
