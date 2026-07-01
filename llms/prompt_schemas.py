@@ -37,7 +37,7 @@ def protoschema_verify(thing):   #, *, override_binary=None, override_continuous
                 "description": f"The percent probability that {thing} is real." # Is 'probability' the right framing?
             }
         },
-        "required": ["binary", "continuous"],   # ! Todo: One thing to look at in the data is when they binary contradicts the continuous. Also, would changing the position of these in the schema effect responses? Could be a #experiment.
+        "required": ["binary", "continuous"],   # ! @Todo: One thing to look at in the data is when they binary contradicts the continuous. Also, would changing the position of these in the schema effect responses? Could be a #experiment.
         "additionalProperties": False
     }
 def protoschema_classify(thing):

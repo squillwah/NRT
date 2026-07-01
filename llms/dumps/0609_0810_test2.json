@@ -1,0 +1,433 @@
+{
+  "type": "json_schema",
+  "json_schema": {
+    "name": "reference_evaluation",
+    "strict": true,
+    "schema": {
+      "type": "object",
+      "properties": {
+        "author": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the author list is real, false if the author list is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the author list being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the author list being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "author_order": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the order of the author list is real, false if the order of the author list is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the order of the author list being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the order of the author list being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "title": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the article title is real, false if the article title is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the article title being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the article title being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "journal": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the journal is real, false if the journal is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the journal being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the journal being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "vol": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the journal volume is real, false if the journal volume is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the journal volume being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the journal volume being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "iss": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the journal issue is real, false if the journal issue is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the journal issue being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the journal issue being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "page": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the page number is real, false if the page number is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the page number being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the page number being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "elocator": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the elocator is real, false if the elocator is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the elocator being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the elocator being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "date": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the publishing date is real, false if the publishing date is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the publishing date being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the publishing date being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "doi": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the doi is real, false if the doi is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the doi being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the doi being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "pmid": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the pmid is real, false if the pmid is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the pmid being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the pmid being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "pmcid": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the pmcid is real, false if the pmcid is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the pmcid being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the pmcid being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "REFERENCE": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the reference is real, false if the reference is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the reference being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the reference being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "author",
+        "author_order",
+        "title",
+        "journal",
+        "vol",
+        "iss",
+        "page",
+        "elocator",
+        "date",
+        "doi",
+        "pmid",
+        "pmcid",
+        "REFERENCE"
+      ],
+      "additionalProperties": false
+    }
+  }
+} 
+
+
+ ! couldn't parse json from choices/message/content
+{
+  "raw_request": "{\n  \"model\": \"openrouter/free\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a citation classifier. Determine the authenticity of references and their individual components. Your response must comply with the strict JSON schema.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562\"\n    }\n  ],\n  \"response_format\": {\n    \"type\": \"json_schema\",\n    \"json_schema\": {\n      \"name\": \"reference_evaluation\",\n      \"strict\": true,\n      \"schema\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"author\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the author list is real, false if the author list is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the author list being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the author list being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"author_order\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the order of the author list is real, false if the order of the author list is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the order of the author list being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the order of the author list being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"title\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the article title is real, false if the article title is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the article title being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the article title being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"journal\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the journal is real, false if the journal is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the journal being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the journal being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"vol\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the journal volume is real, false if the journal volume is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the journal volume being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the journal volume being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"iss\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the journal issue is real, false if the journal issue is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the journal issue being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the journal issue being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"page\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the page number is real, false if the page number is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the page number being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the page number being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"elocator\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the elocator is real, false if the elocator is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the elocator being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the elocator being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"date\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the publishing date is real, false if the publishing date is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the publishing date being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the publishing date being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"doi\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the doi is real, false if the doi is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the doi being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the doi being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"pmid\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the pmid is real, false if the pmid is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the pmid being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the pmid being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"pmcid\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the pmcid is real, false if the pmcid is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the pmcid being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the pmcid being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"REFERENCE\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the reference is real, false if the reference is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the reference being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the reference being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          }\n        },\n        \"required\": [\n          \"author\",\n          \"author_order\",\n          \"title\",\n          \"journal\",\n          \"vol\",\n          \"iss\",\n          \"page\",\n          \"elocator\",\n          \"date\",\n          \"doi\",\n          \"pmid\",\n          \"pmcid\",\n          \"REFERENCE\"\n        ],\n        \"additionalProperties\": false\n      }\n    }\n  }\n}",
+  "raw_response": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1782864614-DKO3q4JqXd1UWdYjI9Lr\",\"object\":\"chat.completion\",\"created\":1782864614,\"model\":\"liquid/lfm-2.5-1.2b-instruct-20260120:free\",\"provider\":\"Liquid\",\"system_fingerprint\":null,\"service_tier\":null,\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":null,\"native_finish_reason\":null,\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"REFERENCE\\\": {\\n    \\\"classification\\\":  \\n    false  \\n     \\n    , \\\"confidence_fake\\\": 0.78\\n  , \\\"confidence_real\\\": 0.64\\n  },\\n  \\\"author\\\": {\\n    \\\"classification\\\":  \\n    true  \\n     \\n    , \\\"confidence_fake\\\": 0.95\\n  ,\\n  \\\"confidence_real\\\": 0.93\\n  },\\n  \\\"author_order\\\":   {\\n    \\\"classification\\\": true,\\n    \\\"confidence_fake\\\": 0.88\\n  ,\\n  \\\"confidence_real\\\": 0.82\\n},\\n  \\\"date\\\": {\\n    \\\"classification\\\": true,\\n    \\\"confidence_fake\\\": 0.92,\\n    \\\"confidence_real\\\": 0.86\\n  },\\n  \\\"doi\\\": {\\n    \\\"classification\\\": true,\\n    \\\"confidence_fake\\\": 0.89,\\n    \\\"confidence_real\\\": 0.76\\n  },\\n  \\\"elocator\\\": {\\n    \\\"classification\\\": true,\\n    \\\"confidence_fake\\\": 0.7,\\n    \\\"confidence_real\\\": 0.65\\n  }\\n  \\n  \\n              \\n    \\t\\t            \\n    \\n          \\t\\t\\n\\n\\n\\n\\n\\n\\n    \\t\\t   \\n    \\t\\t         \\t\\t\\t\\t\\t\\t\\t\\t \\t         \\n\\n\\n\\n\\n    \\t\\t         \\t\\t                \\t\\t\\t                \\t\\t\\t\\t\\t \\t\\t\\t\\t            \\t\\t\\t\\t                    \\t\\t\\t\\t        \\t\\t\\t\\t\\t\\t\\t\\t      \\t\\t\\t\\t\\t        \\t      \\t\\t\\t\\t\\t\\t\\t\\t\\t\\t      \\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t              \\t\\t\\t\\t\\t\\t\\t\\t\\t\\t          \\t\\t\\t\\t\\t\\t\\t\\t \\t\\t\\t                                  \\t\\t\\t\\t\\t          \\t\\t\\t\\t\\t                \\t              \\t\\t\\t\\t\\t\\t\\t\\t\\t\\t              \\t\\t\\t\\t\\t\\t\\t          \\t    \\t\\t\\t\\t        \\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t      \\t\\t\\t\\t\\t\\t        \\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t        \\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":93,\"completion_tokens\":1185,\"total_tokens\":1278,\"cost\":0,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0,\"upstream_inference_prompt_cost\":0,\"upstream_inference_completions_cost\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "full_json": {
+    "id": "gen-1782864614-DKO3q4JqXd1UWdYjI9Lr",
+    "object": "chat.completion",
+    "created": 1782864614,
+    "model": "liquid/lfm-2.5-1.2b-instruct-20260120:free",
+    "provider": "Liquid",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": null,
+        "native_finish_reason": null,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"REFERENCE\": {\n    \"classification\":  \n    false  \n     \n    , \"confidence_fake\": 0.78\n  , \"confidence_real\": 0.64\n  },\n  \"author\": {\n    \"classification\":  \n    true  \n     \n    , \"confidence_fake\": 0.95\n  ,\n  \"confidence_real\": 0.93\n  },\n  \"author_order\":   {\n    \"classification\": true,\n    \"confidence_fake\": 0.88\n  ,\n  \"confidence_real\": 0.82\n},\n  \"date\": {\n    \"classification\": true,\n    \"confidence_fake\": 0.92,\n    \"confidence_real\": 0.86\n  },\n  \"doi\": {\n    \"classification\": true,\n    \"confidence_fake\": 0.89,\n    \"confidence_real\": 0.76\n  },\n  \"elocator\": {\n    \"classification\": true,\n    \"confidence_fake\": 0.7,\n    \"confidence_real\": 0.65\n  }\n  \n  \n              \n    \t\t            \n    \n          \t\t\n\n\n\n\n\n\n    \t\t   \n    \t\t         \t\t\t\t\t\t\t\t \t         \n\n\n\n\n    \t\t         \t\t                \t\t\t                \t\t\t\t\t \t\t\t\t            \t\t\t\t                    \t\t\t\t        \t\t\t\t\t\t\t\t      \t\t\t\t\t        \t      \t\t\t\t\t\t\t\t\t\t      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t              \t\t\t\t\t\t\t\t\t\t          \t\t\t\t\t\t\t\t \t\t\t                                  \t\t\t\t\t          \t\t\t\t\t                \t              \t\t\t\t\t\t\t\t\t\t              \t\t\t\t\t\t\t          \t    \t\t\t\t        \t\t\t\t\t\t\t\t\t\t\t      \t\t\t\t\t\t        \t\t\t\t\t\t\t\t\t\t\t        \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 93,
+      "completion_tokens": 1185,
+      "total_tokens": 1278,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "output": null
+}
