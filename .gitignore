@@ -2,3 +2,5 @@
 zunk/
 .zunk/
 __pycache__/
+.venv
+activate

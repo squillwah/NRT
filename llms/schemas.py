@@ -1,3 +1,14 @@
+from pydantic import BaseModel
+
+def test(BaseModel):
+    fart: str
+    ass: bool
+    num1: float
+    num2: float
+
+print(test)
+quit()
+
 
 class ProtoSchemas:
     @staticmethod
