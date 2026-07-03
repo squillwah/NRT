@@ -8,13 +8,20 @@ def write_csv(inputted_json):
     with open(inputted_json, 'r', encoding='utf-8') as file:
         data = json.load(file)
 
+    json_results = data["results"]
 
-    with open("output.csv", "w", newline="") as csv_f:
-        headers = data[0].keys()
+    with open("output.csv", "w", newline="", errors="ignore") as csv_f:
+        writer = csv.writer(csv_f)
 
-        writer = csv.DictWriter(csv_f,fieldnames=headers)
-        writer.writeheader()
-        writer.writerows(data)
+        # Write the column headers (5 key levels + 1 value column)
+        writer.writerow(["Model", "Section of Citation", "Response Criteria", "Response"])
+
+        # Loop through all 5 levels sequentially
+        for k1, v1 in json_results.items():
+            for k2, v2 in v1.items():
+                for k3, v3 in v2.items():
+                    for k4, val in v3.items():
+                        writer.writerow([k1, k3, k4, str(val)])
 
 
     #----Another possible method using a library (found as an example)----
@@ -25,7 +32,12 @@ def write_csv(inputted_json):
     #
     # # Export to a CSV file (index=False prevents writing row numbers)
     # df.to_csv("output.csv", index=False)
-
+    #
+    # headers = json_results.keys()
+    #
+    # writer = csv.DictWriter(csv_f, fieldnames=headers)
+    # writer.writeheader()
+    # writer.writerows(json_results)
 
 
 def write_xlsx(inputted_data, pmid_list):
@@ -56,7 +68,7 @@ def write_xlsx(inputted_data, pmid_list):
     wb.save(filename="output.xlsx")
 
 
-data = [
+test_data = [
     [{"Overall": "Fake", "Author": "Real", "Journal": "Real", "Publish Date": "Fake", "Author Order": "Real", "Publisher": "Real", "Percentage of Confidence": 95.00001, "Model": "Chat-GPT"},
     {"Overall": "Fake", "Author": "Real", "Journal": "Real", "Publish Date": "Fake", "Author Order": "Real", "Publisher": "Real", "Percentage of Confidence": 95.00001, "Model": "Gemini"}],
     [{"Overall": "Real", "Author": "Real", "Journal": "Real", "Publish Date": "Fake", "Author Order": "Real", "Publisher": "Real", "Percentage of Confidence": 95.00001, "Model": "Chat-GPT"},
@@ -66,5 +78,5 @@ data = [
 pmids = ["65sd4f3654f", "4d441dsf44"]
 
 if __name__ == "__main__":
-    write_xlsx(data, pmids)
+    write_csv("id_403.json")
 
