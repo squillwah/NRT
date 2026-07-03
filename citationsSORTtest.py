@@ -2,20 +2,21 @@ import json
 import random
 
 # the thing that Ravi wanted. tracks which components are added to a reference (or tracks it, for better terminology)
-PRESENCE_AUTHOR   = 0b0000000001  
-PRESENCE_TITLE    = 0b0000000010  
-PRESENCE_JOURNAL  = 0b0000000100  
-PRESENCE_VOLUME   = 0b0000001000  
-PRESENCE_ISSUE    = 0b0000010000  
-PRESENCE_PAGE     = 0b0000100000  
-PRESENCE_DATE     = 0b0001000000  
-PRESENCE_DOI      = 0b0010000000  
-PRESENCE_PMID     = 0b0100000000  
-PRESENCE_PMCID    = 0b1000000000
+PRESENCE_AUTHOR = 0b0000000001
+PRESENCE_TITLE = 0b0000000010
+PRESENCE_JOURNAL = 0b0000000100
+PRESENCE_VOLUME = 0b0000001000
+PRESENCE_ISSUE = 0b0000010000
+PRESENCE_PAGE = 0b0000100000
+PRESENCE_DATE = 0b0001000000
+PRESENCE_DOI = 0b0010000000
+PRESENCE_PMID = 0b0100000000
+PRESENCE_PMCID = 0b1000000000
+
 
 # all the individual functions for each of the aforementioned bs citations are listed below.
-# we start with elsevier, although for all other strings, it returns the whole thing of using tuples instead of strings.
-def compile_elsevier(ref: dict) -> tuple:
+# note: this citation replaces elsevier bc elsevier isn't a format >:(
+def compile_vancouver(ref: dict) -> tuple:
     mask = 0
     formatted_authors = []
     for auth in ref["authors"]:
@@ -26,31 +27,32 @@ def compile_elsevier(ref: dict) -> tuple:
             continue
         parts = first.replace("-", " ").split()
         initials = "".join([p[0].upper() for p in parts if p])
-        formatted_authors.append(f"{last} {initials}")    
+        formatted_authors.append(f"{last} {initials}")
     if formatted_authors:
         mask |= PRESENCE_AUTHOR
         if len(formatted_authors) >= 7:
-            author_str = ", ".join(formatted_authors[:3]) + ", et al"
+            author_str = ", ".join(formatted_authors[:6]) + ", et al"
         else:
             author_str = ", ".join(formatted_authors)
     else:
         author_str = ""
     if ref.get("title"): mask |= PRESENCE_TITLE
     if ref["journal"]["name"].get("short"): mask |= PRESENCE_JOURNAL
-    if ref["journal"].get("volume"): mask |= PRESENCE_VOLUME   
+    if ref["journal"].get("volume"): mask |= PRESENCE_VOLUME
     issue_str = ""
     if ref["journal"].get("issue"):
         mask |= PRESENCE_ISSUE
-        issue_str = f"({ref['journal']['issue']})" 
+        issue_str = f"({ref['journal']['issue']})"
     p_data = ref["journal"]["page"]
     pages = ""
     if p_data.get("start"):
         mask |= PRESENCE_PAGE
-        pages = p_data.get("start", "") if p_data.get("start") == p_data.get("end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"     
+        pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
+            "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
     if ref["pub"].get("y"): mask |= PRESENCE_DATE
     if ref.get("doi"): mask |= PRESENCE_DOI
-    if ref.get("pmid"): mask |= PRESENCE_PMID
-    if ref.get("pmcid"): mask |= PRESENCE_PMCID
+
+    # vancouver style skips tracking pmid and pmcid values directly inside the string
     final_str = f"{author_str}. {ref['title']}. {ref['journal']['name']['short']}. {ref['pub']['y']};{ref['journal']['volume']}{issue_str}:{pages}. doi:{ref['doi']}"
     return final_str, mask
 
@@ -66,7 +68,7 @@ def compile_nature(ref: dict) -> tuple:
             continue
         parts = first.replace("-", " ").split()
         dotted = ".".join([p[0].upper() for p in parts if p]) + "." if parts else ""
-        formatted_authors.append(f"{last}, {dotted}") 
+        formatted_authors.append(f"{last}, {dotted}")
     if formatted_authors:
         mask |= PRESENCE_AUTHOR
         if len(formatted_authors) > 5:
@@ -76,20 +78,19 @@ def compile_nature(ref: dict) -> tuple:
         else:
             author_str = formatted_authors[0]
     else:
-        author_str = ""   
+        author_str = ""
     if ref.get("title"): mask |= PRESENCE_TITLE
     if ref["journal"]["name"].get("short"): mask |= PRESENCE_JOURNAL
     if ref["journal"].get("volume"): mask |= PRESENCE_VOLUME
-    if ref["journal"].get("issue"): mask |= PRESENCE_ISSUE
     p_data = ref["journal"]["page"]
     pages = ""
     if p_data.get("start"):
         mask |= PRESENCE_PAGE
-        pages = p_data.get("start", "") if p_data.get("start") == p_data.get("end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}" 
+        pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
+            "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
     if ref["pub"].get("y"): mask |= PRESENCE_DATE
-    if ref.get("doi"): mask |= PRESENCE_DOI
-    if ref.get("pmid"): mask |= PRESENCE_PMID
-    if ref.get("pmcid"): mask |= PRESENCE_PMCID
+
+    # nature drops Issue, DOI, PMID, and PMCID.
     final_str = f"{author_str}. {ref['title']}. <i>{ref['journal']['name']['short']}</i> <b>{ref['journal']['volume']}</b>, {pages} ({ref['pub']['y']})."
     return final_str, mask
 
@@ -105,7 +106,7 @@ def compile_oxford(ref: dict) -> tuple:
             continue
         parts = first.replace("-", " ").split()
         dotted = ".".join([p[0].upper() for p in parts if p]) + "." if parts else ""
-        formatted_authors.append(f"{last}, {dotted}")     
+        formatted_authors.append(f"{last}, {dotted}")
     if formatted_authors:
         mask |= PRESENCE_AUTHOR
         if len(formatted_authors) > 1:
@@ -116,7 +117,7 @@ def compile_oxford(ref: dict) -> tuple:
         author_str = ""
     if ref.get("title"): mask |= PRESENCE_TITLE
     if ref["journal"]["name"].get("short"): mask |= PRESENCE_JOURNAL
-    if ref["journal"].get("volume"): mask |= PRESENCE_VOLUME 
+    if ref["journal"].get("volume"): mask |= PRESENCE_VOLUME
     issue_str = ""
     if ref["journal"].get("issue"):
         mask |= PRESENCE_ISSUE
@@ -125,11 +126,12 @@ def compile_oxford(ref: dict) -> tuple:
     pages = ""
     if p_data.get("start"):
         mask |= PRESENCE_PAGE
-        pages = p_data.get("start", "") if p_data.get("start") == p_data.get("end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
+        pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
+            "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
     if ref["pub"].get("y"): mask |= PRESENCE_DATE
     if ref.get("doi"): mask |= PRESENCE_DOI
-    if ref.get("pmid"): mask |= PRESENCE_PMID
-    if ref.get("pmcid"): mask |= PRESENCE_PMCID
+
+    # oxford drops pmid and pmcid tokens from this layout.
     final_str = f"{author_str}. ({ref['pub']['y']}) {ref['title']}. <i>{ref['journal']['name']['short']}</i>, <i>{ref['journal']['volume']}</i>{issue_str}, {pages}. https://doi.org/{ref['doi']}"
     return final_str, mask
 
@@ -145,7 +147,7 @@ def compile_springer(ref: dict) -> tuple:
             continue
         parts = first.replace("-", " ").split()
         initials = "".join([p[0].upper() for p in parts if p])
-        formatted_authors.append(f"{last} {initials}")   
+        formatted_authors.append(f"{last} {initials}")
     if formatted_authors:
         mask |= PRESENCE_AUTHOR
         if len(formatted_authors) >= 7:
@@ -157,16 +159,17 @@ def compile_springer(ref: dict) -> tuple:
     if ref.get("title"): mask |= PRESENCE_TITLE
     if ref["journal"]["name"].get("short"): mask |= PRESENCE_JOURNAL
     if ref["journal"].get("volume"): mask |= PRESENCE_VOLUME
-    if ref["journal"].get("issue"): mask |= PRESENCE_ISSUE
+
+    # springer drops the issue value from this particular string sequence configuration.
     p_data = ref["journal"]["page"]
     pages = ""
     if p_data.get("start"):
         mask |= PRESENCE_PAGE
-        pages = p_data.get("start", "") if p_data.get("start") == p_data.get("end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
+        pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
+            "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
+
     if ref["pub"].get("y"): mask |= PRESENCE_DATE
     if ref.get("doi"): mask |= PRESENCE_DOI
-    if ref.get("pmid"): mask |= PRESENCE_PMID
-    if ref.get("pmcid"): mask |= PRESENCE_PMCID
     final_str = f"{author_str}. {ref['title']}. <i>{ref['journal']['name']['short']}</i>. {ref['pub']['y']}; {ref['journal']['volume']}: {pages}. doi: {ref['doi']}"
     return final_str, mask
 
@@ -182,7 +185,7 @@ def compile_cse(ref: dict) -> tuple:
             continue
         parts = first.replace("-", " ").split()
         initials = "".join([p[0].upper() for p in parts if p])
-        formatted_authors.append(f"{last} {initials}")   
+        formatted_authors.append(f"{last} {initials}")
     if formatted_authors:
         mask |= PRESENCE_AUTHOR
         if len(formatted_authors) >= 11:
@@ -190,26 +193,27 @@ def compile_cse(ref: dict) -> tuple:
         else:
             author_str = ", ".join(formatted_authors)
     else:
-        author_str = "" 
+        author_str = ""
     if ref.get("title"): mask |= PRESENCE_TITLE
     if ref["journal"]["name"].get("short"): mask |= PRESENCE_JOURNAL
     if ref["journal"].get("volume"): mask |= PRESENCE_VOLUME
     issue_str = ""
     if ref["journal"].get("issue"):
         mask |= PRESENCE_ISSUE
-        issue_str = f"({ref['journal']['issue']})" 
+        issue_str = f"({ref['journal']['issue']})"
     p_data = ref["journal"]["page"]
     pages = ""
     if p_data.get("start"):
         mask |= PRESENCE_PAGE
-        pages = p_data.get("start", "") if p_data.get("start") == p_data.get("end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
+        pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
+            "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
     if ref["pub"].get("y"): mask |= PRESENCE_DATE
-    if ref.get("doi"): mask |= PRESENCE_DOI
-    if ref.get("pmid"): mask |= PRESENCE_PMID
-    if ref.get("pmcid"): mask |= PRESENCE_PMCID
+
+    # cse strips doi, pmid, and pmcid values entirely.
     final_str = f"{author_str}. {ref['title']}. {ref['journal']['name']['short']}. {ref['pub']['y']};{ref['journal']['volume']}{issue_str}:{pages}."
     return final_str, mask
-    
+
+
 def compile_harvard(ref: dict) -> tuple:
     mask = 0
     formatted_authors = []
@@ -222,7 +226,6 @@ def compile_harvard(ref: dict) -> tuple:
         parts = first.replace("-", " ").split()
         dotted = ".".join([p[0].upper() for p in parts if p]) + "." if parts else ""
         formatted_authors.append(f"{last}, {dotted}")
-        
     if formatted_authors:
         mask |= PRESENCE_AUTHOR
         if len(formatted_authors) > 1:
@@ -231,27 +234,23 @@ def compile_harvard(ref: dict) -> tuple:
             author_str = formatted_authors[0]
     else:
         author_str = ""
-        
     if ref.get("title"): mask |= PRESENCE_TITLE
     if ref["journal"]["name"].get("full"): mask |= PRESENCE_JOURNAL
     if ref["journal"].get("volume"): mask |= PRESENCE_VOLUME
-    
     issue_str = ""
     if ref["journal"].get("issue"):
         mask |= PRESENCE_ISSUE
         issue_str = f"({ref['journal']['issue']})"
-        
     p_data = ref["journal"]["page"]
     pages = ""
     if p_data.get("start"):
         mask |= PRESENCE_PAGE
-        pages = p_data.get("start", "") if p_data.get("start") == p_data.get("end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
-        
+        pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
+            "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
     if ref["pub"].get("y"): mask |= PRESENCE_DATE
     if ref.get("doi"): mask |= PRESENCE_DOI
-    if ref.get("pmid"): mask |= PRESENCE_PMID
-    if ref.get("pmcid"): mask |= PRESENCE_PMCID
 
+    # harvard leaves out pmid and pmcid strings.
     final_str = f"{author_str} ({ref['pub']['y']}). '{ref['title']}', <i>{ref['journal']['name']['full']}</i>, {ref['journal']['volume']}{issue_str}, pp. {pages}. doi: {ref['doi']}."
     return final_str, mask
 
@@ -270,7 +269,7 @@ def run_random_citation_builder(input_filename: str, output_filename: str):
     selected_reference = random.choice(data_pool)
 
     # calls the modified functions and unpack their tuple vars
-    els_str, els_mask = compile_elsevier(selected_reference)
+    van_str, van_mask = compile_vancouver(selected_reference)
     nat_str, nat_mask = compile_nature(selected_reference)
     oxf_str, oxf_mask = compile_oxford(selected_reference)
     spr_str, spr_mask = compile_springer(selected_reference)
@@ -281,10 +280,10 @@ def run_random_citation_builder(input_filename: str, output_filename: str):
         "doi": selected_reference["doi"],
         "pmid": selected_reference["pmid"],
         "citations": {
-            "elsevier": {
-                "string": els_str,
-                "components_bitmask_int": els_mask,
-                "components_bitmask_bin": f"0b{els_mask:010b}"
+            "vancouver": {
+                "string": van_str,
+                "components_bitmask_int": van_mask,
+                "components_bitmask_bin": f"0b{van_mask:010b}"
             },
             "nature": {
                 "string": nat_str,
@@ -316,6 +315,7 @@ def run_random_citation_builder(input_filename: str, output_filename: str):
     with open(output_filename, "w", encoding="utf-8") as f:
         json.dump(output_payload, f, indent=2, ensure_ascii=False)
     print(f"[Success] Done. Look in '{output_filename}'")
+
 
 if __name__ == "__main__":
     run_random_citation_builder("refdata.json", "mutationcombinedoutput.json")
