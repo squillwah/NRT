@@ -1,6 +1,5 @@
 import csv
 import openpyxl
-from openpyxl import Workbook
 import json
 
 def write_csv(inputted_json):
@@ -9,35 +8,23 @@ def write_csv(inputted_json):
         data = json.load(file)
 
     json_results = data["results"]
+    json_keynames = data["keynames"]
 
-    with open("output.csv", "w", newline="", errors="ignore") as csv_f:
+    with open("output.csv", "w") as csv_f:
         writer = csv.writer(csv_f)
 
-        # Write the column headers (5 key levels + 1 value column)
-        writer.writerow(["Model", "Section of Citation", "Response Criteria", "Response"])
+        writer.writerow(json_keynames)
 
-        # Loop through all 5 levels sequentially
-        for k1, v1 in json_results.items():
-            for k2, v2 in v1.items():
-                for k3, v3 in v2.items():
-                    for k4, val in v3.items():
-                        writer.writerow([k1, k3, k4, str(val)])
+        for model in json_results:
+            model_results = json_results[model]
+            for form in model_results:
+                component_data = model_results[form]
+                csv_f.write(model + ",")
+                for component in component_data:
+                    csv_f.write(",".join([str(c) for c in list(component_data[component].values())[1:]]))
+                    csv_f.write(",")
+                csv_f.write("\n")
 
-
-    #----Another possible method using a library (found as an example)----
-    # import pandas as pd
-    #
-    # # Load the JSON file directly into a DataFrame
-    # df = pd.read_json("data.json")
-    #
-    # # Export to a CSV file (index=False prevents writing row numbers)
-    # df.to_csv("output.csv", index=False)
-    #
-    # headers = json_results.keys()
-    #
-    # writer = csv.DictWriter(csv_f, fieldnames=headers)
-    # writer.writeheader()
-    # writer.writerows(json_results)
 
 
 def write_xlsx(inputted_data, pmid_list):
