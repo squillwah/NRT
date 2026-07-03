@@ -22,8 +22,50 @@ import random
 #       - is it too abstract/bespoke of classifcation? We should make sure it isn't/doesn't become. Keep it simple, broad, and distinct.
 #
 
+# After meeting (friday 07-03)
+# ignoring / discounting results for components in references where they're absent. But having that missing ocmponent be evaluated is still valuable.
+# two experiments, one with schema trimming and other without. This shows robustness of model, if absent components make it tend toward negative evaluation even when it shouldn't (like few references have PMCIDs, but nemotron marked it down cause of it missing wherase deepseek did true .5 vs .5)
+#   different models evaluated absent components in different ways, effecting its weight toward them being absent. bringing total down or up. ROBUSTness?
+#   making it 'fair' (schema trimming) vs not making life any easier for llms (full schema, let it hurt itself)
+#
+# simplifying classification
+#  - Real/Fake classification decision
+#  - 1 - 10 confidence in that decision.
+# or
+#  - Real/Fake (or Valid/Invalid) classification
+#  - Single range number, 0 (or .1 or 1) being full confidence in fake, 1 (or 10) being full confidence in real. So .49 being little confidence fake and .51 being little confidence real.
+#
+# true/falase
+# howconfidence? 0idk, 1really
+#
+# true/false
+# range true/false .5 idk, .49falsedk, 0realfalse, 51trueidk, 1realtrue
+#
+#
+# The holistic classifications (pan?) and per component evaluations are not mutually exclusive. They can be applied to both (as we've done so far).
+# Reconsiling Pan's broader (and somewhat human interpretation influenced) categories with the precise values is a thing to think about.
 
+# something with WEIGHTS ? of components? down the line... ?
+# science journal doesn't put titles.
+# title high weight, journal high, page lower, pmid lower... ? what uses? weight in what equations?
+# older articles (2000s, 1990s, etc.) will have no DOIs. @todo regen dataset with bigger DATE RANGE and more random ordering (not just pub order. for variety). 
+# as tangent, date range is a thing to think about in our methodology, the testing we're doing. for the paper. influence of corresponding years with llms?
 
+# chatbots holistic evaluation 
+# will also have per component evaluation INSIDE
+# interesting to see how it matches up?
+# But chatbot holistic is not our deterministic combination of it's component evaluations. It is it's own decision.
+#  Though we could do that as well, and compare. Again same as seeing how the two line up.
+#  Of course we'll know the corret answers too. Exactly what's been done on each reference, which components it comprises.
+#  Could we in addition, also do some manual weighted score based on the ground-truth modifications we know exist in the reference? Compare that with model holistic, and our averaging of model component scores?
+
+# Putting refs into something more specific like pans categories could be a seperate problem. 
+# A more difficult one, since we're defining more things.
+# Placing category cutoffs along some range 0 -> 1? .8 suspect, 1 real, .2 badbad... ?
+
+# ryan implemented internet search locally, which works. Second pass adhers to json schema.
+# jackson is working on csv files
+# gabriel did the stuff with reference baking, format component codes. Now onto absent component mutations.
 
 # Create a set entry from reference data
 def ds_entry(rd, *, ID=None):
