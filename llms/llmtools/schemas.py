@@ -1,14 +1,3 @@
-from pydantic import BaseModel
-
-def test(BaseModel):
-    fart: str
-    ass: bool
-    num1: float
-    num2: float
-
-print(test)
-quit()
-
 
 class ProtoSchemas:
     @staticmethod
@@ -55,6 +44,27 @@ class ProtoSchemas:
                 }
             }
         }
+
+    # Include properties only for components present in a reference.
+    @staticmethod
+    def make_schema_properties(component_code):
+        # Classify all components. Will trim this according to per reference specifics at some point (avoid confusion / forced hallucination)   @todo: track components in references, use that metadata to craft these specifically.
+        properties = {
+            "author":       ProtoSchemas.realfakeconfidence("the author list"),
+            "author_order": ProtoSchemas.realfakeconfidence("the order of the author list"),
+            "title":        ProtoSchemas.realfakeconfidence("the article title"),
+            "journal":      ProtoSchemas.realfakeconfidence("the journal"),
+            "vol":          ProtoSchemas.realfakeconfidence("the journal volume"),
+            "iss":          ProtoSchemas.realfakeconfidence("the journal issue"),
+            "page":         ProtoSchemas.realfakeconfidence("the page number"),
+            "elocator":     ProtoSchemas.realfakeconfidence("the elocator"),
+            "date":         ProtoSchemas.realfakeconfidence("the publishing date"),
+            "doi":          ProtoSchemas.realfakeconfidence("the doi"),
+            "pmid":         ProtoSchemas.realfakeconfidence("the pmid"),
+            "pmcid":        ProtoSchemas.realfakeconfidence("the pmcid"),
+            "REFERENCE":    ProtoSchemas.realfakeconfidence("the reference")
+        }
+        return properties
 
 if __name__ == "__main__":
     from orouterapi import *
