@@ -6,6 +6,9 @@ import json
 import time
 import os
 
+
+# @todo add keys array to JSON output.
+
 # Groundwork for scaling.
 # Testing two references against two models. 
 # Save results into matrix.
@@ -92,6 +95,7 @@ if __name__ == "__main__":
             result = evaluate_dsentry(model, dsentry, form)
             refresults["results"][model][form] = result
             if not result: log("Uh oh, that one was null.", t="e")
+            else: result
             log(f"Saving results of RefID {dsentry["id"]} to 'ID{dsentry["id"]}.json'")
             write_json(refresults, f"./{OUTPUT_DIR}/id_{dsentry["id"]}.json")
         log(f"End of RefID {dsentry["id"]}")

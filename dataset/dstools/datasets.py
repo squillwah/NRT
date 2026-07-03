@@ -5,12 +5,34 @@ from reftools.typos import Typofier as T
 import reftools.formats as F
 import random
 
+
+
+# @todo
+#
+#   Add other levels of flaggin
+#   Mutcode_verbose (current)
+#   Mutcode_gist    (flag whenever individual element is modified, so just author, title, journal, etc...)
+#   Error_class     (flags class of entry)
+#     - Subtle mutations (like typo, abreviation, stuff humans could make) will tip this over from 'real' into 'ambiguous'
+#     - More egregious mutations (hallucinations, swaps) will flip it all the way into 'generated'.
+#   
+#     - What other classifications could exist, other than those three? They'd need to be distinct, orthogonal.
+#
+#     - This will be used in the grid / final data determination. It's the thing to compare against, the model's outputs, to evaluate their PERFORMANCE at detecting.
+#       - is it too abstract/bespoke of classifcation? We should make sure it isn't/doesn't become. Keep it simple, broad, and distinct.
+#
+
+
+
+
 # Create a set entry from reference data
 def ds_entry(rd, *, ID=None):
     return { "id": ID,                  # Internal ID + original PMCID
              "src_id": rd["pmcid"],
              "mutcode": 0b00000000,
+             "mutcode_gist": 0b0000,
              "mutlabels": [],
+             "mutlevel": "",
              "data": deepcopy(rd),
              "format": {} }
 
@@ -29,8 +51,12 @@ def bake_dataset(dataset):
 
 # Class of methods to mutate dataset entries using ref_mutator functions.
 class EntryMutator:
-    # Mutation flags:  
-    _MLABELS = ("author_typo",          "author_mismatch",  "author_hallucinate",   "author_shuffle",   # Note: not all mutations are combinable.
+    # Mutation level. Or, the classification of a reference based on the sum of it's mutations.
+    # Differentiates between ambigious "human-esque" reference mistakes, and undeniably "chatbot-esque" hallucinations.
+    _MLEVELS = ("REAL", "FLAWED", "GENERATED")  # Will be per component, and holistic. Higher order takes precedence.
+
+    # Mutation flags. Describe exactly which modifications were performed on a reference dataset entry.
+    _MLABELS = ("author_typo",          "author_mismatch",  "author_hallucinate",   "author_shuffle",   # Note: not all mutations are combinable (overwrites).
                 "title_typo",           "title_mismatch",   "title_hallucinate",                        # Also, be wary in the setting of these flags. A wrongly set flag will not reveal itself.
                 "jname_typo",           "jname_mismatch",   "jname_hallucinate",
                 "jvol_hallucinate",     "jiss_hallucinate", "jpage_hallucinate",
@@ -38,8 +64,8 @@ class EntryMutator:
                 "elocator_mismatch",    "elocator_hallucinate",
                 "doi_typo", "doi_mismatch_prefix", "doi_mismatch_suffix", "doi_hallucinate_prefix", "doi_hallucinate_suffix",
                 "pmid_typo", "pmid_mismatch", "pmid_hallucinate", "pmcid_typo", "pmcid_mismatch", "pmcid_hallucinate")
-
     _MFLAGS = {flag: 2**i for i, flag in enumerate(_MLABELS)} # Assign a unique bit for every flag.
+
 
     def __init__(self, *, component_set, h_titles, h_authors, h_journals, rand_year_range):
         # Resources for hallucination and mismatch mutations
@@ -58,6 +84,9 @@ class EntryMutator:
     @classmethod
     def _flag(cls, ds_entry, flag):
         ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MFLAGS[flag]       # @todo !!!! Some mutations undo other ones (like running a mismatch or hallucination after a type).
+    # Increase mutation level. 
+    @classmethod
+    def _level(
     # Return deepcopy of random item from collection.
     @staticmethod
     def _randcopy(collection):
