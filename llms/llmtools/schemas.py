@@ -5,6 +5,10 @@ class ProtoSchemas:
         return {
             "type": "object",
             "properties": {
+                "reasoning": {
+                    "type": "string",
+                    "description": "1 to 2 sentences outlining the reasoning behind your classification."       # This may help keep the model on track. 
+                },
                 "classification": {
                     "type": "boolean",
                     #"description": f"True if {thing} is real, false if {thing} is fake."
@@ -15,17 +19,17 @@ class ProtoSchemas:
                     "minimum": 0,
                     "maximum": 1,
                     #"description": f"Confidence value (0.0 -> 1.0) of {thing} being real."   # Authentic, legitimate, exists? 
-                    "description": f"Confidence value (0.0 -> 1.0) of {thing} being real."   # Authentic, legitimate, exists? 
+                    "description": f"Confidence value (0.0 -> 1.0) in the classification 'real' for {thing}."   # Authentic, legitimate, exists? 
                 },
                 "confidence_fake": {
                     "type": "number",
                     "minimum": 0,
                     "maximum": 1,
                     #"description": f"Confidence value (0.0 -> 1.0) of {thing} being fake."   # Artificial, fabricated, hallucinated?
-                    "description": f"Confidence value (0.0 -> 1.0) of {thing} being generated."   # Artificial, fabricated, hallucinated?
+                    "description": f"Confidence value (0.0 -> 1.0) in the classification 'generated' {thing}."   # Artificial, fabricated, hallucinated?
                 }
             },
-            "required": ["classification", "confidence_real", "confidence_fake"],
+            "required": ["reasoning", "classification", "confidence_real", "confidence_fake"],
             "additionalProperties": False
         }
 
