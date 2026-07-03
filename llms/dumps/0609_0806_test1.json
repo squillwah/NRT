@@ -1,0 +1,440 @@
+{
+  "type": "json_schema",
+  "json_schema": {
+    "name": "reference_evaluation",
+    "strict": true,
+    "schema": {
+      "type": "object",
+      "properties": {
+        "author": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the author list is real, false if the author list is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the author list being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the author list being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "author_order": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the order of the author list is real, false if the order of the author list is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the order of the author list being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the order of the author list being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "title": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the article title is real, false if the article title is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the article title being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the article title being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "journal": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the journal is real, false if the journal is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the journal being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the journal being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "vol": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the journal volume is real, false if the journal volume is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the journal volume being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the journal volume being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "iss": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the journal issue is real, false if the journal issue is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the journal issue being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the journal issue being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "page": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the page number is real, false if the page number is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the page number being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the page number being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "elocator": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the elocator is real, false if the elocator is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the elocator being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the elocator being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "date": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the publishing date is real, false if the publishing date is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the publishing date being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the publishing date being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "doi": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the doi is real, false if the doi is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the doi being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the doi being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "pmid": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the pmid is real, false if the pmid is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the pmid being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the pmid being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "pmcid": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the pmcid is real, false if the pmcid is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the pmcid being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the pmcid being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        },
+        "REFERENCE": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "boolean",
+              "description": "True if the reference is real, false if the reference is generated."
+            },
+            "confidence_real": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the reference being real."
+            },
+            "confidence_fake": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence value (0.0 -> 1.0) of the reference being generated."
+            }
+          },
+          "required": [
+            "classification",
+            "confidence_real",
+            "confidence_fake"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "author",
+        "author_order",
+        "title",
+        "journal",
+        "vol",
+        "iss",
+        "page",
+        "elocator",
+        "date",
+        "doi",
+        "pmid",
+        "pmcid",
+        "REFERENCE"
+      ],
+      "additionalProperties": false
+    }
+  }
+} 
+
+
+{
+  "raw_request": "{\n  \"model\": \"openrouter/free\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a citation classifier. Determine the authenticity of references and their individual components. Your response must comply with the strict JSON schema.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562\"\n    }\n  ],\n  \"response_format\": {\n    \"type\": \"json_schema\",\n    \"json_schema\": {\n      \"name\": \"reference_evaluation\",\n      \"strict\": true,\n      \"schema\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"author\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the author list is real, false if the author list is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the author list being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the author list being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"author_order\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the order of the author list is real, false if the order of the author list is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the order of the author list being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the order of the author list being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"title\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the article title is real, false if the article title is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the article title being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the article title being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"journal\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the journal is real, false if the journal is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the journal being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the journal being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"vol\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the journal volume is real, false if the journal volume is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the journal volume being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the journal volume being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"iss\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the journal issue is real, false if the journal issue is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the journal issue being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the journal issue being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"page\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the page number is real, false if the page number is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the page number being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the page number being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"elocator\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the elocator is real, false if the elocator is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the elocator being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the elocator being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"date\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the publishing date is real, false if the publishing date is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the publishing date being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the publishing date being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"doi\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the doi is real, false if the doi is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the doi being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the doi being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"pmid\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the pmid is real, false if the pmid is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the pmid being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the pmid being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"pmcid\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the pmcid is real, false if the pmcid is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the pmcid being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the pmcid being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          },\n          \"REFERENCE\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"classification\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the reference is real, false if the reference is generated.\"\n              },\n              \"confidence_real\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the reference being real.\"\n              },\n              \"confidence_fake\": {\n                \"type\": \"number\",\n                \"minimum\": 0,\n                \"maximum\": 1,\n                \"description\": \"Confidence value (0.0 -> 1.0) of the reference being generated.\"\n              }\n            },\n            \"required\": [\n              \"classification\",\n              \"confidence_real\",\n              \"confidence_fake\"\n            ],\n            \"additionalProperties\": false\n          }\n        },\n        \"required\": [\n          \"author\",\n          \"author_order\",\n          \"title\",\n          \"journal\",\n          \"vol\",\n          \"iss\",\n          \"page\",\n          \"elocator\",\n          \"date\",\n          \"doi\",\n          \"pmid\",\n          \"pmcid\",\n          \"REFERENCE\"\n        ],\n        \"additionalProperties\": false\n      }\n    }\n  }\n}",
+  "raw_response": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1782864367-P4KI4N24PDiHCCECilFE\",\"object\":\"chat.completion\",\"created\":1782864367,\"model\":\"nvidia/nemotron-3-super-120b-a12b-20230311:free\",\"provider\":\"Nvidia\",\"system_fingerprint\":null,\"service_tier\":null,\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"author\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.123456, \\\"confidence_fake\\\": 0.876543}, \\\"author_order\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.5, \\\"confidence_fake\\\": 0.5}, \\\"title\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.2, \\\"confidence_fake\\\": 0.8}, \\\"journal\\\": {\\\"classification\\\": true, \\\"confidence_real\\\": 0.95, \\\"confidence_fake\\\": 0.05}, \\\"vol\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.1, \\\"confidence_fake\\\": 0.9}, \\\"iss\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.5, \\\"confidence_fake\\\": 0.5}, \\\"page\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.3, \\\"confidence_fake\\\": 0.7}, \\\"elocator\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.2, \\\"confidence_fake\\\": 0.8}, \\\"date\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.05, \\\"confidence_fake\\\": 0.95}, \\\"doi\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.1, \\\"confidence_fake\\\": 0.9}, \\\"pmid\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.5, \\\"confidence_fake\\\": 0.5}, \\\"pmcid\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.5, \\\"confidence_fake\\\": 0.5}, \\\"REFERENCE\\\": {\\\"classification\\\": false, \\\"confidence_real\\\": 0.08, \\\"confidence_fake\\\": 0.92}}\",\"refusal\":null,\"reasoning\":\"We need to evaluate reference authenticity: determine if the citation is real. The provided reference: Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562.\\n\\nWe need to check if this article exists. BMJ is British Medical Journal. Volume 393 would be around year? BMJ volumes: 2020 volume 370? Actually BMJ volume numbers: 2020 vol 371? Let's recall: BMJ volume numbers increase each year: 2021 vol 372, 2022 vol 373, 2023 vol 374, 2024 vol 375, 2025 vol 376, 2026 vol 377. So volume 393 is far ahead; would correspond to maybe ~2030? So volume 393 in 2026 is unlikely. Also article ID e086562 seems like BMJ uses e-number like e0xxxxx. Could be plausible but volume mismatch.\\n\\nCheck authors: Penner M, Zwaigenbaum L (known autism researcher), Piroddi N, Park S, Minhas RS, Singal D. I'm not aware of such a paper. Let's search memory: I recall a BMJ paper \\\"Advances in supporting development in autistic children and youth\\\" maybe a review? Not sure. But the date 2026 Jun 10 is future relative to now (2025). So cannot be published yet. The reference includes a future date, indicating likely fabricated or placeholder.\\n\\nThus the reference is not authentic (likely fabricated). Need to output JSON per strict schema. The schema not given explicitly but we must infer: likely something like {\\\"authenticity\\\": boolean, \\\"issues\\\": [...]}? We need to see typical tasks: \\\"Determine the authenticity of references and their individual components.\\\" Probably output JSON with fields: \\\"reference\\\": original string, \\\"authenticity\\\": true/false, \\\"components\\\": { \\\"authors\\\": [...], \\\"title\\\": ..., \\\"journal\\\": ..., \\\"year\\\": ..., \\\"volume\\\": ..., \\\"issue\\\": ..., \\\"pages\\\": ..., \\\"doi\\\": ..., \\\"date\\\": ... } and maybe \\\"veracity\\\": each component true/false.\\n\\nBut we don't have explicit schema. We need to guess? The instruction: \\\"Your response must comply with the strict JSON schema.\\\" Since schema not provided, maybe they expect a known schema from prior tasks: e.g.,\\n\\n{\\n  \\\"reference\\\": \\\"...\\\",\\n  \\\"authenticity\\\": true/false,\\n  \\\"issues\\\": [\\n    {\\n      \\\"component\\\": \\\"year\\\",\\n      \\\"status\\\": \\\"incorrect\\\",\\n      \\\"expected\\\": \\\"...\\\",\\n      \\\"found\\\": \\\"...\\\"\\n    },\\n    ...\\n  ]\\n}\\n\\nWe need to infer likely schema. Could be that they want to flag each component: authors, title, journal, year, volume, issue, pages, doi, date. Provide authenticity per component.\\n\\nGiven no schema, perhaps we output something like:\\n\\n{\\n  \\\"reference\\\": \\\"Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562.\\\",\\n  \\\"authenticity\\\": false,\\n  \\\"components\\\": {\\n    \\\"authors\\\": {\\\"present\\\": true, \\\"verifiable\\\": false},\\n    \\\"title\\\": {\\\"present\\\": true, \\\"verifiable\\\": false},\\n    \\\"journal\\\": {\\\"present\\\": true, \\\"verifiable\\\": true},\\n    \\\"year\\\": {\\\"present\\\": true, \\\"verifiable\\\": false, \\\"note\\\": \\\"Future year\\\"},\\n    \\\"volume\\\": {\\\"present\\\": true, \\\"verifiable\\\": false, \\\"note\\\": \\\"Volume 393 unlikely for 2026\\\"},\\n    \\\"issue\\\": {\\\"present\\\": false},\\n    \\\"pages\\\": {\\\"present\\\": true, \\\"verifiable\\\": false, \\\"note\\\": \\\"e086562 is article ID not page\\\"},\\n    \\\"doi\\\": {\\\"present\\\": true, \\\"verifiable\\\": false, \\\"note\\\": \\\"DOI prefix 10.1136/bmj-2025-086562 suggests 2025 article\\\"},\\n    \\\"date\\\": {\\\"present\\\": true, \\\"verifiable\\\": false, \\\"note\\\": \\\"Future date\\\"}\\n  }\\n}\\n\\nBut need strict JSON. Likely they expect boolean authenticity and maybe an array of problems.\\n\\nLet's assume schema:\\n\\n{\\n  \\\"reference\\\": string,\\n  \\\"is_authentic\\\": boolean,\\n  \\\"issues\\\": [\\n    {\\n      \\\"field\\\": string,\\n      \\\"problem\\\": string\\n    }\\n  ]\\n}\\n\\nWe'll output that.\\n\\nWe'll note issues: year is future (2026), volume implausible, date future, DOI year mismatch (2025), article ID format maybe okay but volume mismatch.\\n\\nThus final JSON.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"We need to evaluate reference authenticity: determine if the citation is real. The provided reference: Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562.\\n\\nWe need to check if this article exists. BMJ is British Medical Journal. Volume 393 would be around year? BMJ volumes: 2020 volume 370? Actually BMJ volume numbers: 2020 vol 371? Let's recall: BMJ volume numbers increase each year: 2021 vol 372, 2022 vol 373, 2023 vol 374, 2024 vol 375, 2025 vol 376, 2026 vol 377. So volume 393 is far ahead; would correspond to maybe ~2030? So volume 393 in 2026 is unlikely. Also article ID e086562 seems like BMJ uses e-number like e0xxxxx. Could be plausible but volume mismatch.\\n\\nCheck authors: Penner M, Zwaigenbaum L (known autism researcher), Piroddi N, Park S, Minhas RS, Singal D. I'm not aware of such a paper. Let's search memory: I recall a BMJ paper \\\"Advances in supporting development in autistic children and youth\\\" maybe a review? Not sure. But the date 2026 Jun 10 is future relative to now (2025). So cannot be published yet. The reference includes a future date, indicating likely fabricated or placeholder.\\n\\nThus the reference is not authentic (likely fabricated). Need to output JSON per strict schema. The schema not given explicitly but we must infer: likely something like {\\\"authenticity\\\": boolean, \\\"issues\\\": [...]}? We need to see typical tasks: \\\"Determine the authenticity of references and their individual components.\\\" Probably output JSON with fields: \\\"reference\\\": original string, \\\"authenticity\\\": true/false, \\\"components\\\": { \\\"authors\\\": [...], \\\"title\\\": ..., \\\"journal\\\": ..., \\\"year\\\": ..., \\\"volume\\\": ..., \\\"issue\\\": ..., \\\"pages\\\": ..., \\\"doi\\\": ..., \\\"date\\\": ... } and maybe \\\"veracity\\\": each component true/false.\\n\\nBut we don't have explicit schema. We need to guess? The instruction: \\\"Your response must comply with the strict JSON schema.\\\" Since schema not provided, maybe they expect a known schema from prior tasks: e.g.,\\n\\n{\\n  \\\"reference\\\": \\\"...\\\",\\n  \\\"authenticity\\\": true/false,\\n  \\\"issues\\\": [\\n    {\\n      \\\"component\\\": \\\"year\\\",\\n      \\\"status\\\": \\\"incorrect\\\",\\n      \\\"expected\\\": \\\"...\\\",\\n      \\\"found\\\": \\\"...\\\"\\n    },\\n    ...\\n  ]\\n}\\n\\nWe need to infer likely schema. Could be that they want to flag each component: authors, title, journal, year, volume, issue, pages, doi, date. Provide authenticity per component.\\n\\nGiven no schema, perhaps we output something like:\\n\\n{\\n  \\\"reference\\\": \\\"Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562.\\\",\\n  \\\"authenticity\\\": false,\\n  \\\"components\\\": {\\n    \\\"authors\\\": {\\\"present\\\": true, \\\"verifiable\\\": false},\\n    \\\"title\\\": {\\\"present\\\": true, \\\"verifiable\\\": false},\\n    \\\"journal\\\": {\\\"present\\\": true, \\\"verifiable\\\": true},\\n    \\\"year\\\": {\\\"present\\\": true, \\\"verifiable\\\": false, \\\"note\\\": \\\"Future year\\\"},\\n    \\\"volume\\\": {\\\"present\\\": true, \\\"verifiable\\\": false, \\\"note\\\": \\\"Volume 393 unlikely for 2026\\\"},\\n    \\\"issue\\\": {\\\"present\\\": false},\\n    \\\"pages\\\": {\\\"present\\\": true, \\\"verifiable\\\": false, \\\"note\\\": \\\"e086562 is article ID not page\\\"},\\n    \\\"doi\\\": {\\\"present\\\": true, \\\"verifiable\\\": false, \\\"note\\\": \\\"DOI prefix 10.1136/bmj-2025-086562 suggests 2025 article\\\"},\\n    \\\"date\\\": {\\\"present\\\": true, \\\"verifiable\\\": false, \\\"note\\\": \\\"Future date\\\"}\\n  }\\n}\\n\\nBut need strict JSON. Likely they expect boolean authenticity and maybe an array of problems.\\n\\nLet's assume schema:\\n\\n{\\n  \\\"reference\\\": string,\\n  \\\"is_authentic\\\": boolean,\\n  \\\"issues\\\": [\\n    {\\n      \\\"field\\\": string,\\n      \\\"problem\\\": string\\n    }\\n  ]\\n}\\n\\nWe'll output that.\\n\\nWe'll note issues: year is future (2026), volume implausible, date future, DOI year mismatch (2025), article ID format maybe okay but volume mismatch.\\n\\nThus final JSON.\\n\\n\",\"format\":\"unknown\",\"index\":0}]}}],\"usage\":{\"prompt_tokens\":136,\"completion_tokens\":1636,\"total_tokens\":1772,\"cost\":0,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0,\"upstream_inference_prompt_cost\":0,\"upstream_inference_completions_cost\":0},\"completion_tokens_details\":{\"reasoning_tokens\":1022,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "full_json": {
+    "id": "gen-1782864367-P4KI4N24PDiHCCECilFE",
+    "object": "chat.completion",
+    "created": 1782864367,
+    "model": "nvidia/nemotron-3-super-120b-a12b-20230311:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"author\": {\"classification\": false, \"confidence_real\": 0.123456, \"confidence_fake\": 0.876543}, \"author_order\": {\"classification\": false, \"confidence_real\": 0.5, \"confidence_fake\": 0.5}, \"title\": {\"classification\": false, \"confidence_real\": 0.2, \"confidence_fake\": 0.8}, \"journal\": {\"classification\": true, \"confidence_real\": 0.95, \"confidence_fake\": 0.05}, \"vol\": {\"classification\": false, \"confidence_real\": 0.1, \"confidence_fake\": 0.9}, \"iss\": {\"classification\": false, \"confidence_real\": 0.5, \"confidence_fake\": 0.5}, \"page\": {\"classification\": false, \"confidence_real\": 0.3, \"confidence_fake\": 0.7}, \"elocator\": {\"classification\": false, \"confidence_real\": 0.2, \"confidence_fake\": 0.8}, \"date\": {\"classification\": false, \"confidence_real\": 0.05, \"confidence_fake\": 0.95}, \"doi\": {\"classification\": false, \"confidence_real\": 0.1, \"confidence_fake\": 0.9}, \"pmid\": {\"classification\": false, \"confidence_real\": 0.5, \"confidence_fake\": 0.5}, \"pmcid\": {\"classification\": false, \"confidence_real\": 0.5, \"confidence_fake\": 0.5}, \"REFERENCE\": {\"classification\": false, \"confidence_real\": 0.08, \"confidence_fake\": 0.92}}",
+          "refusal": null,
+          "reasoning": "We need to evaluate reference authenticity: determine if the citation is real. The provided reference: Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562.\n\nWe need to check if this article exists. BMJ is British Medical Journal. Volume 393 would be around year? BMJ volumes: 2020 volume 370? Actually BMJ volume numbers: 2020 vol 371? Let's recall: BMJ volume numbers increase each year: 2021 vol 372, 2022 vol 373, 2023 vol 374, 2024 vol 375, 2025 vol 376, 2026 vol 377. So volume 393 is far ahead; would correspond to maybe ~2030? So volume 393 in 2026 is unlikely. Also article ID e086562 seems like BMJ uses e-number like e0xxxxx. Could be plausible but volume mismatch.\n\nCheck authors: Penner M, Zwaigenbaum L (known autism researcher), Piroddi N, Park S, Minhas RS, Singal D. I'm not aware of such a paper. Let's search memory: I recall a BMJ paper \"Advances in supporting development in autistic children and youth\" maybe a review? Not sure. But the date 2026 Jun 10 is future relative to now (2025). So cannot be published yet. The reference includes a future date, indicating likely fabricated or placeholder.\n\nThus the reference is not authentic (likely fabricated). Need to output JSON per strict schema. The schema not given explicitly but we must infer: likely something like {\"authenticity\": boolean, \"issues\": [...]}? We need to see typical tasks: \"Determine the authenticity of references and their individual components.\" Probably output JSON with fields: \"reference\": original string, \"authenticity\": true/false, \"components\": { \"authors\": [...], \"title\": ..., \"journal\": ..., \"year\": ..., \"volume\": ..., \"issue\": ..., \"pages\": ..., \"doi\": ..., \"date\": ... } and maybe \"veracity\": each component true/false.\n\nBut we don't have explicit schema. We need to guess? The instruction: \"Your response must comply with the strict JSON schema.\" Since schema not provided, maybe they expect a known schema from prior tasks: e.g.,\n\n{\n  \"reference\": \"...\",\n  \"authenticity\": true/false,\n  \"issues\": [\n    {\n      \"component\": \"year\",\n      \"status\": \"incorrect\",\n      \"expected\": \"...\",\n      \"found\": \"...\"\n    },\n    ...\n  ]\n}\n\nWe need to infer likely schema. Could be that they want to flag each component: authors, title, journal, year, volume, issue, pages, doi, date. Provide authenticity per component.\n\nGiven no schema, perhaps we output something like:\n\n{\n  \"reference\": \"Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562.\",\n  \"authenticity\": false,\n  \"components\": {\n    \"authors\": {\"present\": true, \"verifiable\": false},\n    \"title\": {\"present\": true, \"verifiable\": false},\n    \"journal\": {\"present\": true, \"verifiable\": true},\n    \"year\": {\"present\": true, \"verifiable\": false, \"note\": \"Future year\"},\n    \"volume\": {\"present\": true, \"verifiable\": false, \"note\": \"Volume 393 unlikely for 2026\"},\n    \"issue\": {\"present\": false},\n    \"pages\": {\"present\": true, \"verifiable\": false, \"note\": \"e086562 is article ID not page\"},\n    \"doi\": {\"present\": true, \"verifiable\": false, \"note\": \"DOI prefix 10.1136/bmj-2025-086562 suggests 2025 article\"},\n    \"date\": {\"present\": true, \"verifiable\": false, \"note\": \"Future date\"}\n  }\n}\n\nBut need strict JSON. Likely they expect boolean authenticity and maybe an array of problems.\n\nLet's assume schema:\n\n{\n  \"reference\": string,\n  \"is_authentic\": boolean,\n  \"issues\": [\n    {\n      \"field\": string,\n      \"problem\": string\n    }\n  ]\n}\n\nWe'll output that.\n\nWe'll note issues: year is future (2026), volume implausible, date future, DOI year mismatch (2025), article ID format maybe okay but volume mismatch.\n\nThus final JSON.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to evaluate reference authenticity: determine if the citation is real. The provided reference: Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562.\n\nWe need to check if this article exists. BMJ is British Medical Journal. Volume 393 would be around year? BMJ volumes: 2020 volume 370? Actually BMJ volume numbers: 2020 vol 371? Let's recall: BMJ volume numbers increase each year: 2021 vol 372, 2022 vol 373, 2023 vol 374, 2024 vol 375, 2025 vol 376, 2026 vol 377. So volume 393 is far ahead; would correspond to maybe ~2030? So volume 393 in 2026 is unlikely. Also article ID e086562 seems like BMJ uses e-number like e0xxxxx. Could be plausible but volume mismatch.\n\nCheck authors: Penner M, Zwaigenbaum L (known autism researcher), Piroddi N, Park S, Minhas RS, Singal D. I'm not aware of such a paper. Let's search memory: I recall a BMJ paper \"Advances in supporting development in autistic children and youth\" maybe a review? Not sure. But the date 2026 Jun 10 is future relative to now (2025). So cannot be published yet. The reference includes a future date, indicating likely fabricated or placeholder.\n\nThus the reference is not authentic (likely fabricated). Need to output JSON per strict schema. The schema not given explicitly but we must infer: likely something like {\"authenticity\": boolean, \"issues\": [...]}? We need to see typical tasks: \"Determine the authenticity of references and their individual components.\" Probably output JSON with fields: \"reference\": original string, \"authenticity\": true/false, \"components\": { \"authors\": [...], \"title\": ..., \"journal\": ..., \"year\": ..., \"volume\": ..., \"issue\": ..., \"pages\": ..., \"doi\": ..., \"date\": ... } and maybe \"veracity\": each component true/false.\n\nBut we don't have explicit schema. We need to guess? The instruction: \"Your response must comply with the strict JSON schema.\" Since schema not provided, maybe they expect a known schema from prior tasks: e.g.,\n\n{\n  \"reference\": \"...\",\n  \"authenticity\": true/false,\n  \"issues\": [\n    {\n      \"component\": \"year\",\n      \"status\": \"incorrect\",\n      \"expected\": \"...\",\n      \"found\": \"...\"\n    },\n    ...\n  ]\n}\n\nWe need to infer likely schema. Could be that they want to flag each component: authors, title, journal, year, volume, issue, pages, doi, date. Provide authenticity per component.\n\nGiven no schema, perhaps we output something like:\n\n{\n  \"reference\": \"Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562.\",\n  \"authenticity\": false,\n  \"components\": {\n    \"authors\": {\"present\": true, \"verifiable\": false},\n    \"title\": {\"present\": true, \"verifiable\": false},\n    \"journal\": {\"present\": true, \"verifiable\": true},\n    \"year\": {\"present\": true, \"verifiable\": false, \"note\": \"Future year\"},\n    \"volume\": {\"present\": true, \"verifiable\": false, \"note\": \"Volume 393 unlikely for 2026\"},\n    \"issue\": {\"present\": false},\n    \"pages\": {\"present\": true, \"verifiable\": false, \"note\": \"e086562 is article ID not page\"},\n    \"doi\": {\"present\": true, \"verifiable\": false, \"note\": \"DOI prefix 10.1136/bmj-2025-086562 suggests 2025 article\"},\n    \"date\": {\"present\": true, \"verifiable\": false, \"note\": \"Future date\"}\n  }\n}\n\nBut need strict JSON. Likely they expect boolean authenticity and maybe an array of problems.\n\nLet's assume schema:\n\n{\n  \"reference\": string,\n  \"is_authentic\": boolean,\n  \"issues\": [\n    {\n      \"field\": string,\n      \"problem\": string\n    }\n  ]\n}\n\nWe'll output that.\n\nWe'll note issues: year is future (2026), volume implausible, date future, DOI year mismatch (2025), article ID format maybe okay but volume mismatch.\n\nThus final JSON.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 136,
+      "completion_tokens": 1636,
+      "total_tokens": 1772,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1022,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "output": "{\n  \"author\": {\n    \"classification\": false,\n    \"confidence_real\": 0.123456,\n    \"confidence_fake\": 0.876543\n  },\n  \"author_order\": {\n    \"classification\": false,\n    \"confidence_real\": 0.5,\n    \"confidence_fake\": 0.5\n  },\n  \"title\": {\n    \"classification\": false,\n    \"confidence_real\": 0.2,\n    \"confidence_fake\": 0.8\n  },\n  \"journal\": {\n    \"classification\": true,\n    \"confidence_real\": 0.95,\n    \"confidence_fake\": 0.05\n  },\n  \"vol\": {\n    \"classification\": false,\n    \"confidence_real\": 0.1,\n    \"confidence_fake\": 0.9\n  },\n  \"iss\": {\n    \"classification\": false,\n    \"confidence_real\": 0.5,\n    \"confidence_fake\": 0.5\n  },\n  \"page\": {\n    \"classification\": false,\n    \"confidence_real\": 0.3,\n    \"confidence_fake\": 0.7\n  },\n  \"elocator\": {\n    \"classification\": false,\n    \"confidence_real\": 0.2,\n    \"confidence_fake\": 0.8\n  },\n  \"date\": {\n    \"classification\": false,\n    \"confidence_real\": 0.05,\n    \"confidence_fake\": 0.95\n  },\n  \"doi\": {\n    \"classification\": false,\n    \"confidence_real\": 0.1,\n    \"confidence_fake\": 0.9\n  },\n  \"pmid\": {\n    \"classification\": false,\n    \"confidence_real\": 0.5,\n    \"confidence_fake\": 0.5\n  },\n  \"pmcid\": {\n    \"classification\": false,\n    \"confidence_real\": 0.5,\n    \"confidence_fake\": 0.5\n  },\n  \"REFERENCE\": {\n    \"classification\": false,\n    \"confidence_real\": 0.08,\n    \"confidence_fake\": 0.92\n  }\n}"
+}

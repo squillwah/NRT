@@ -1,0 +1,347 @@
+
+
+
+
+{
+  "model": "Qwen3-4B-Q5_K_M",
+  "messages": [
+    {
+      "role": "system",
+      "content": "The date is 2026/06/28. You are a biomedical references verifier. Assess each component and examine the reference as a whole. "
+    },
+    {
+      "role": "user",
+      "content": "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026;393:e086562. Published 2026 Jun 10. doi:10.1136/bmj-2025-086562"
+    }
+  ],
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "citation_validation",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "author_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the author list is real."
+              },
+              "probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the author list is real."
+              }
+            },
+            "required": [
+              "binary",
+              "probability"
+            ],
+            "additionalProperties": false
+          },
+          "author_order_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the order of the author list is real."
+              },
+              "probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the order of the author list is real."
+              }
+            },
+            "required": [
+              "binary",
+              "probability"
+            ],
+            "additionalProperties": false
+          },
+          "title_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the article title is real."
+              },
+              "probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the article title is real."
+              }
+            },
+            "required": [
+              "binary",
+              "probability"
+            ],
+            "additionalProperties": false
+          },
+          "journal_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the journal is real."
+              },
+              "probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the journal is real."
+              }
+            },
+            "required": [
+              "binary",
+              "probability"
+            ],
+            "additionalProperties": false
+          },
+          "vol_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the journal volume is real."
+              },
+              "probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the journal volume is real."
+              }
+            },
+            "required": [
+              "binary",
+              "probability"
+            ],
+            "additionalProperties": false
+          },
+          "iss_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the journal issue is real."
+              },
+              "probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the journal issue is real."
+              }
+            },
+            "required": [
+              "binary",
+              "probability"
+            ],
+            "additionalProperties": false
+          },
+          "page_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the page number is real."
+              },
+              "probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the page number is real."
+              }
+            },
+            "required": [
+              "binary",
+              "probability"
+            ],
+            "additionalProperties": false
+          },
+          "elocator_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the elocator is real."
+              },
+              "probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the elocator is real."
+              }
+            },
+            "required": [
+              "binary",
+              "probability"
+            ],
+            "additionalProperties": false
+          },
+          "date_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the publishing date is real."
+              },
+              "probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the publishing date is real."
+              }
+            },
+            "required": [
+              "binary",
+              "probability"
+            ],
+            "additionalProperties": false
+          },
+          "doi_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the doi is real."
+              },
+              "probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the doi is real."
+              }
+            },
+            "required": [
+              "binary",
+              "probability"
+            ],
+            "additionalProperties": false
+          },
+          "pmid_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the pmid is real."
+              },
+              "probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the pmid is real."
+              }
+            },
+            "required": [
+              "binary",
+              "probability"
+            ],
+            "additionalProperties": false
+          },
+          "pmcid_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the pmcid is real."
+              },
+              "probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the pmcid is real."
+              }
+            },
+            "required": [
+              "binary",
+              "probability"
+            ],
+            "additionalProperties": false
+          },
+          "REFERENCE_v": {
+            "type": "object",
+            "properties": {
+              "binary": {
+                "type": "boolean",
+                "description": "True if the reference is real."
+              },
+              "probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "The percent probability that the reference is real."
+              }
+            },
+            "required": [
+              "binary",
+              "probability"
+            ],
+            "additionalProperties": false
+          },
+          "REFERENCE_c": {
+            "type": "object",
+            "properties": {
+              "class": {
+                "type": "string",
+                "enum": [
+                  "Verified",
+                  "Metadata Error",
+                  "Serious Metadata Error",
+                  "Plausible Fabricated",
+                  "Needs Human Review"
+                ],
+                "description": "Classification of the reference."
+              },
+              "confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "Percentage of confidence in the classification of the reference."
+              }
+            },
+            "required": [
+              "class",
+              "confidence"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "author_v",
+          "author_order_v",
+          "title_v",
+          "journal_v",
+          "vol_v",
+          "iss_v",
+          "page_v",
+          "elocator_v",
+          "date_v",
+          "doi_v",
+          "pmid_v",
+          "pmcid_v",
+          "REFERENCE_v",
+          "REFERENCE_c"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}
+
+
+
+{
+  "error": {
+    "code": 400,
+    "message": "'input' is required",
+    "type": "invalid_request_error"
+  }
+}
+
+
+
+
