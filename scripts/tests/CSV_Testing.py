@@ -1,23 +1,32 @@
 import csv
 import openpyxl
 from openpyxl import Workbook
+import json
 
-def write_csv(inputted_dict):
-    wb = openpyxl.Workbook()
-    ws = wb.active
-    ws.title = "Output from Models"
+def write_csv(inputted_json):
 
-    for i in range(len(inputted_dict)):
-        new_sheet = wb.create_sheet(title="Test" + str(i))
-        headers = ["Overall", "Author", "Journal", "Publish Date", "Author Order", "Publisher", "Percentage of Confidence", "Model"]
+    with open(inputted_json, 'r', encoding='utf-8') as file:
+        data = json.load(file)
 
-        new_sheet.append(headers)
-        row_values = [inputted_dict[key] for key in headers]
-        new_sheet.append(row_values)
 
-    wb.save(filename="output.xlsx")
+    with open("output.csv", "w", newline="") as csv_f:
+        headers = data[0].keys()
 
-# add title of the citation
+        writer = csv.DictWriter(csv_f,fieldnames=headers)
+        writer.writeheader()
+        writer.writerows(data)
+
+
+    #----Another possible method using a library (found as an example)----
+    # import pandas as pd
+    #
+    # # Load the JSON file directly into a DataFrame
+    # df = pd.read_json("data.json")
+    #
+    # # Export to a CSV file (index=False prevents writing row numbers)
+    # df.to_csv("output.csv", index=False)
+
+
 
 def write_xlsx(inputted_data, pmid_list):
 
@@ -58,23 +67,4 @@ pmids = ["65sd4f3654f", "4d441dsf44"]
 
 if __name__ == "__main__":
     write_xlsx(data, pmids)
-#
-# wb = openpyxl.Workbook()
-# ws = wb.active
-# ws.title = "Test 1"
-#
-# for i in range(len(data)):
-#     new_sheet = wb.create_sheet(title="Test" + str(i))
-#     headers = ["Overall", "Author", "Journal", "Publish Date", "Author Order", "Publisher", "Percentage of Confidence", "Model"]
-#
-#     new_sheet.append(headers)
-#     for item in data:
-#         row_values = [item[key] for key in headers]
-#         new_sheet.append(row_values)
-#
-#
-# wb.save(filename= "output.xlsx")
-
-# make a final column of what the correct answer should be
-# need to create a full excel
 
