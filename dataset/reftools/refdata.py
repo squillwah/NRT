@@ -9,6 +9,16 @@ from copy import deepcopy
 #  store puzzlepiece set X
 # All reference formats use the abreviation, is storing the full needed? It could be useful for adding error. !! Have a "minor quirks" subset, where the reference is real but some of the formatting is off.
 
+# Definitive and formal list of all the unique components we're considering.
+COMPONENT_LIST = ("authors", "title", "journal_name", "journal_volume", "journal_issue", "journal_page",
+                  "elocator", "publication_date", "doi", "url_abstract", "url_direct", "pmcid", "pmid")
+                  # *notes
+                  #   no distinction is made (pairs always modified in same step) between:
+                  #     short and full journal names
+                  #     start and end journal pages
+                  #     pub date and epub date
+                  #   we're making a big deal out of PMID and PMCID cause our data source is PubMed, but know the majority of IRL refs have neither.
+
 def make_ref():
     return {
         "authors": [],

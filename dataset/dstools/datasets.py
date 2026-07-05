@@ -1,6 +1,7 @@
 
 from copy import deepcopy
 from reftools.typos import Typofier as T
+from reftools.refdata import COMPONENT_LIST
 #import reftools.ref_formatters as RB
 import reftools.formats as F
 import random
@@ -71,10 +72,11 @@ import random
 def ds_entry(rd, *, ID=None):
     return { "id": ID,                  # Internal ID + original PMCID
              "src_id": rd["pmcid"],
-             "mutcode": 0b00000000,
-             "mutcode_gist": 0b0000,
-             "mutlabels": [],
-             "mutlevel": "",
+             #"modcode": 0b00000000,     # Signals mutated components + degree of mutation. 
+             #"modflags": [],
+             "mutcode": 0b00000000,     # Describes specific mutations.
+             "mutflags": [],
+             "compconfs": {},           # Component : "suggested confidence score". Key existence signal component modification as well.
              "data": deepcopy(rd),
              "format": {} }
 
@@ -91,23 +93,94 @@ def bake_dataset(dataset):
         entry["format"] = F.compile_all(entry["data"])
         entry["mutlabels"] = EntryMutator.explain_mutcode(entry["mutcode"])
 
+
 # Class of methods to mutate dataset entries using ref_mutator functions.
 class EntryMutator:
-    # Mutation level. Or, the classification of a reference based on the sum of it's mutations.
-    # Differentiates between ambigious "human-esque" reference mistakes, and undeniably "chatbot-esque" hallucinations.
-    _MLEVELS = ("REAL", "FLAWED", "GENERATED")  # Will be per component, and holistic. Higher order takes precedence.
+    # There are components, and there are mutations.
+    # One type of mutation can work on multiple component types. Other types only a few.
+
+    # THE MATTER OF GRADING REFERENCE MUTATION SEVERITY / MODEL DETECTION PERFORMANCE
+    # Different mutation types have different levels of "validity" (in the sense of the reference being human-made vs generated).
+    # Mutation validity is stored similar way to model's classification confidences, 0 (>conf invalid) -> .49 (<conf) -> .5 (ambig) -> .51 (<conf) 1 (>conf valid).
+    # This (along with grading valid / invalid classification in a binary way) is a a method of grading chatbot fake reference detection performance
+
+    # Mutations: typo, mismatch, hallucinate, shuffle,
+    # COMPONENT_LIST = ("authors", "title", "journal_name", "journal_volume", "journal_issue", "journal_page",
+    #                   "elocator", "publication_date", "doi", "url_abstract", "url_direct", "pmcid", "pmid")
+
+    # Define which mutations are valid per component, and the degrees of invalidity.
+    _MUTMAP = {
+        "authors":          [("typo", .50), ("mismatch", .00),  ("hallucinate", .00),   ("shuffle", .25)],          # @ this is kind of like the 'weight' stuff with scoring, but applied to how much (thing being wrong) tarnishes the "validity" of a reference.
+        "title":            [("typo", .50), ("mismatch", .00),  ("hallucinate", .00)],
+        "journal_name":     [("typo", .50), ("mismatch", .00),  ("hallucinate", .00)],
+        "journal_volume":   [                                   ("hallucinate", .00)],
+        "journal_issue":    [                                   ("hallucinate", .00)],
+        "journal_page":     [                                   ("hallucinate", .00)],                  # @todo we REALLY need to add the 'missing component' thing. Maybe. That would give reason for more variety in the weighting (not just .5 typos and 0 all else)
+        "elocator":         [               ("mismatch", .00),  ("hallucinate", .00)],
+        "publication_date": [                                   ("hallucinate", .00)],                  # @ consider, when would it be above .5? Never really, cause we know it's been modified. Above .5 would incentivize confidence in the wrong answer... Right?
+        "pmcid":            [("typo", .50), ("mismatch", .50),  ("hallucinate", .00)],                  # How are we going to compare their scores against this? Will it just be closeness, or does the funny business around the .5 interfere with that?
+        "pmid":             [("typo", .50), ("mismatch", .50),  ("hallucinate", .00)],
+        "doi":              [("typo", .50), ("mismatch_prefix", .00),   ("hallucinate_prefix", .50),
+                                            ("mismatch_suffix", .00),   ("hallucinate_suffix", .50)]    # ! @todo Inconsistency with DOI prefix and suffix thing.
+        #"url_abstract":     ("typo", "mismatch", "hallucinate"),
+        #"url_direct":       ("typo", "mismatch", "hallucinate"),
+    }
+    # Map assigned "correct" confidence values to each mutation.                                @ EMAIL DON is this even the right way to go about grading them ????? idk.......... can't think..... of anything ... better..
+    _MUTCONFS = {comp: {mutconf[0]: mutconf[1] for mutconf in mutconfs} for comp, mutconfs in _MUTMAP.items()}
+    # Map unique bits to each mutation.
+    _MUTFLAGS = {}
+    _MUTLABELS = {} # Bake some human readable labels for convenience.
+    bit = 1
+    for comp, muts in _MUTMAP.items():              # @note: the best and most flexible thing to do would be assign a set # of bits per component, each bit position relative to each block start represents the same mutation type. But, WHO CARES!
+        _MUTFLAGS[comp] = {}
+        for mut in muts:
+            _MUTFLAGS[comp][mut[0]] = bit
+            _MUTLABELS[bit] = f"{comp}::{mut}"
+            bit = bit << 1
+    del bit
+    print(*[str(i)+"\n" for i in _MUTFLAGS.items()])
+    for bit in _MUTLABELS: print(_MUTLABELS[bit])
+    # Some human readable flat labels.
+    #_MUTLABELS = [f"{comp}_{mut}[{muts[mut]}]" for comp, muts in _MUTFLAGS.items() for mut in muts]
+
+    # Create flat unique labels for all possible mutations.
+    #_MUTLABELS = [f"{comp}_{mut}" for comp, muts in _MUTMAP.items() for mut in muts]
+    # Assign bit to each mutation.
+    #_MUTFLAGS = {flag: 2**i for i, flag in enumerate(_MUTLABELS)}
+    #_MUTFLAGS = {comp: {mut: i1+(2**i2 for mut in _MUTMAP(comp)} for comp, i, 
+
+    # Keeping for temporary (lmao) translation
+    _MUTFLAGS_DEPRECATED = ("author_typo",          "author_mismatch",  "author_hallucinate",   "author_shuffle",   # Note: not all mutations are combinable (overwrites).
+                 "title_typo",           "title_mismatch",   "title_hallucinate",                        # Also, be wary in the setting of these flags. A wrongly set flag will not reveal itself.
+                 "jname_typo",           "jname_mismatch",   "jname_hallucinate",
+                 "jvol_hallucinate",     "jiss_hallucinate", "jpage_hallucinate",
+                 "elocator_mismatch",    "elocator_hallucinate",
+                 "pubs_hallucinate",    #"epub_randomize")
+                 "doi_typo", "doi_mismatch_prefix", "doi_mismatch_suffix", "doi_hallucinate_prefix", "doi_hallucinate_suffix",
+                 "pmid_typo", "pmid_mismatch", "pmid_hallucinate", "pmcid_typo", "pmcid_mismatch", "pmcid_hallucinate")
+    #print(*[a+" "+b+"\n" for a, b in zip(_MUTLABELS,_MUTFLAGS_DEPRECATED)])
+
 
     # Mutation flags. Describe exactly which modifications were performed on a reference dataset entry.
-    _MLABELS = ("author_typo",          "author_mismatch",  "author_hallucinate",   "author_shuffle",   # Note: not all mutations are combinable (overwrites).
-                "title_typo",           "title_mismatch",   "title_hallucinate",                        # Also, be wary in the setting of these flags. A wrongly set flag will not reveal itself.
-                "jname_typo",           "jname_mismatch",   "jname_hallucinate",
-                "jvol_hallucinate",     "jiss_hallucinate", "jpage_hallucinate",
-                "pubs_hallucinate",    #"epub_randomize")
-                "elocator_mismatch",    "elocator_hallucinate",
-                "doi_typo", "doi_mismatch_prefix", "doi_mismatch_suffix", "doi_hallucinate_prefix", "doi_hallucinate_suffix",
-                "pmid_typo", "pmid_mismatch", "pmid_hallucinate", "pmcid_typo", "pmcid_mismatch", "pmcid_hallucinate")
-    _MFLAGS = {flag: 2**i for i, flag in enumerate(_MLABELS)} # Assign a unique bit for every flag.
-
+    #_MUTFLAGS_MAP =     _MUTFLAGS_FLAT = 
+#    # Modification flags. Signals which general components have had a modification applied. Is just a list of the modified components. 
+#    _MODFLAGS = COMPONENT_LIST.copy()
+#    # *note: There is a more clever (less stupid) way to do this. But who cares, it probably won't be a problem.
+#    for f in _MUTFLAGS:
+#        if "author" in f: _MODFLAGS[f] = "authors"
+#        elif "title" in f: _MODFLAGS[f] = "title"
+#        elif "jname" in f: _MODFLAGS[f] = "journal_name"
+#        elif "jvol" in f: _MODFLAGS[f] = "journal_volume"
+#        elif "jiss" in f: _MODFLAGS[f] = "journal_issue"
+#        elif "jpage" in f: _MODFLAGS[f] = "journal_page"
+#        elif "elocator" in f: _MODFLAGS[f] = "elocator"
+#        elif "pubs" in f: _MODFLAGS[f] = "publication_date"
+#        elif "doi" in f: _MODFLAGS[f] = "doi"
+#        #elif "url_abstract":
+#        #elif "url_direct":
+#        elif "pmcid" in f: _MODFLAGS[f] = "pmcid"
+#        elif "pmid" in f: _MODFLAGS[f] = "pmid"
+#        else: print("!!!! BADBADBAD !!!!")
 
     def __init__(self, *, component_set, h_titles, h_authors, h_journals, rand_year_range):
         # Resources for hallucination and mismatch mutations
@@ -119,16 +192,23 @@ class EntryMutator:
 ### little helpers
 
     # Return list of mutation labels from mutcode.
+#    @classmethod
+#    def explain_mutcode_deprecated(cls, code):
+#        return [label for label in cls._MUTFLAG_BITS if (code & cls._MUTFLAG_BITS[label])]
     @classmethod
     def explain_mutcode(cls, code):
-        return [label for label in cls._MFLAGS if (code & cls._MFLAGS[label])]
+        #return [label for label in cls._MUTLABELS if (code & cls._MUTFLAG_BITS[label])]
+        return cls._MUTLABELS[code] if code in cls._MUTLABELS else f"Bad Code: {code}"
     # Set mutation flag in ds_entry.
     @classmethod
     def _flag(cls, ds_entry, flag):
-        ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MFLAGS[flag]       # @todo !!!! Some mutations undo other ones (like running a mismatch or hallucination after a type).
-    # Increase mutation level. 
-    @classmethod
-    def _level(
+        ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MUTFLAG_BITS[flag]       # @todo !!!! Some mutations undo other ones (like running a mismatch or hallucination after a type).
+    def _flag(cls, ds_entry, c, m):
+        # Set flag
+        ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MUTFLAGS[c][m]
+        # Create or bring down conf score if 
+        if c not in ds_entry["compconf"] or  cls._MUTCONFS[c][m] < ds_entry["compconf"][c]:
+            ds_entry["compconf"][c] = cls._MUTCONFS[c][m]
     # Return deepcopy of random item from collection.
     @staticmethod
     def _randcopy(collection):
@@ -325,7 +405,7 @@ class EntryMutator:
 
 ### URLS
 
-    # ...
+    # ...       @todo something with the URLs???
 
 ### PMIDS / PMCIDS
 
@@ -389,3 +469,9 @@ class EntryMutator:
 # @todo: Consider: What about mutations which work on the final format itself? Like swaping a full journal name with an abreviation or vice versa? 
 #                  Is such an error to minute to test, will it make a difference?
 #                  We could just set the flag. Then it would be the format baker's responsibility to read it and bake accordingly.
+
+
+
+
+    # Mutation level. Or, the classification of a reference based on the sum of it's mutations.
+    # Differentiates between ambigious "human-esque" reference mistakes, and undeniably "chatbot-esque" hallucinations.
