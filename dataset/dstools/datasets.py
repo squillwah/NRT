@@ -1,8 +1,9 @@
 
-from copy import deepcopy
-from reftools.typos import Typofier as T
-from reftools.refdata import COMPONENT_LIST
 #import reftools.ref_formatters as RB
+from copy import deepcopy
+from enum import Enum
+from reftools.typos import Typofier as T
+from reftools.refdata import ReferenceComponents as RC
 import reftools.formats as F
 import random
 
@@ -68,17 +69,21 @@ import random
 # jackson is working on csv files
 # gabriel did the stuff with reference baking, format component codes. Now onto absent component mutations.
 
-# Create a set entry from reference data
-def ds_entry(rd, *, ID=None):
-    return { "id": ID,                  # Internal ID + original PMCID
-             "src_id": rd["pmcid"],
              #"modcode": 0b00000000,     # Signals mutated components + degree of mutation. 
              #"modflags": [],
-             "mutcode": 0b00000000,     # Describes specific mutations.
-             "mutflags": [],
-             "compconfs": {},           # Component : "suggested confidence score". Key existence signal component modification as well.
-             "data": deepcopy(rd),
-             "format": {} }
+#             "confidencess": {},           # Component : "suggested confidence score". Key existence signal component modification as well.
+
+# Create a set entry from reference data
+def ds_entry(rd, *, ID=None):
+    return {
+        "id": ID,                  # Internal ID + original PMCID
+        "src_id": rd["pmcid"],
+        "mutcode": 0b00000000,     # Describes specific mutations.
+        "mutlabels": [],
+        "compscores": {component: (True, 1) for component in RC}    # Component status (true == unmodified), suggested validity confidence (0 = invalid, 1 = valid)
+        "data": deepcopy(rd),
+        "format": {}
+    }
 
 # Create a set of set entries from a list of reference data
 def make_dataset(ref_data_list, *, v=False):
@@ -108,20 +113,32 @@ class EntryMutator:
     # COMPONENT_LIST = ("authors", "title", "journal_name", "journal_volume", "journal_issue", "journal_page",
     #                   "elocator", "publication_date", "doi", "url_abstract", "url_direct", "pmcid", "pmid")
 
+    class Mutation(Enum):
+        TYPO = "typo"
+        MISMATCH = "mismatch"
+        HALLUCINATION = "hallucination"
+        SHUFFLE = "shuffle"
+
+    # Right now all typos are .5 confidence, aka ambiguous on the generated -> authentic scale (invalid -> valid?).
+    # We could have it change depending on element, perhaps author typos are less suspect, so a confidence of .75 instead?  @TODO fine tune
+
     # Define which mutations are valid per component, and the degrees of invalidity.
+    # ! Make sure the names match exactly with COMPONENT_LIST
     _MUTMAP = {
-        "authors":          [("typo", .50), ("mismatch", .00),  ("hallucinate", .00),   ("shuffle", .25)],          # @ this is kind of like the 'weight' stuff with scoring, but applied to how much (thing being wrong) tarnishes the "validity" of a reference.
-        "title":            [("typo", .50), ("mismatch", .00),  ("hallucinate", .00)],
-        "journal_name":     [("typo", .50), ("mismatch", .00),  ("hallucinate", .00)],
-        "journal_volume":   [                                   ("hallucinate", .00)],
-        "journal_issue":    [                                   ("hallucinate", .00)],
-        "journal_page":     [                                   ("hallucinate", .00)],                  # @todo we REALLY need to add the 'missing component' thing. Maybe. That would give reason for more variety in the weighting (not just .5 typos and 0 all else)
-        "elocator":         [               ("mismatch", .00),  ("hallucinate", .00)],
-        "publication_date": [                                   ("hallucinate", .00)],                  # @ consider, when would it be above .5? Never really, cause we know it's been modified. Above .5 would incentivize confidence in the wrong answer... Right?
-        "pmcid":            [("typo", .50), ("mismatch", .50),  ("hallucinate", .00)],                  # How are we going to compare their scores against this? Will it just be closeness, or does the funny business around the .5 interfere with that?
-        "pmid":             [("typo", .50), ("mismatch", .50),  ("hallucinate", .00)],
-        "doi":              [("typo", .50), ("mismatch_prefix", .00),   ("hallucinate_prefix", .50),
-                                            ("mismatch_suffix", .00),   ("hallucinate_suffix", .50)]    # ! @todo Inconsistency with DOI prefix and suffix thing.
+        RC.AUTHORS:          [ (Mutation.TYPO, .5), (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0), (Mutation.SHUFFLE, .25) ],          # @ this is kind of like the 'weight' stuff with scoring, but applied to how much (thing being wrong) tarnishes the "validity" of a reference.
+        RC.TITLE:            [ (Mutation.TYPO, .5), (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0) ],
+        RC.JOURNAL_NAME:     [ (Mutation.TYPO, .5), (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0) ],
+        RC.JOURNAL_VOLUME:   [                                               (Mutation.HALLUCINATION, .0) ],
+        RC.JOURNAL_ISSUE:    [                                               (Mutation.HALLUCINATION, .0) ],
+        RC.JOURNAL_PAGE:     [                                               (Mutation.HALLUCINATION, .0) ],                  # @todo we REALLY need to add the 'missing component' thing. Maybe. That would give reason for more variety in the weighting (not just .5 typos and 0 all else)
+        RC.ELOCATOR:         [                      (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0) ],
+        RC.PUBLICATION_DATE: [                                               (Mutation.HALLUCINATION, .0) ],                  # @ consider, when would it be above .5? Never really, cause we know it's been modified. Above .5 would incentivize confidence in the wrong answer... Right?
+        RC.PMCID:            [ (Mutation.TYPO, .5), (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0) ],                  # How are we going to compare their scores against this? Will it just be closeness, or does the funny business around the .5 interfere with that?
+        RC.PMID:             [ (Mutation.TYPO, .5), (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0) ],
+        RC.DOI:              [ (Mutation.TYPO, .5), (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0) ]
+
+        #RC.DOI:              [ (Mutation.TYPO, .5), ("mismatch_prefix", .0),  ("hallucinate_prefix", .50),
+        #                                           ("mismatch_suffix", .0),  ("hallucinate_suffix", .50)]    # ! @todo Inconsistency with DOI prefix and suffix thing.
         #"url_abstract":     ("typo", "mismatch", "hallucinate"),
         #"url_direct":       ("typo", "mismatch", "hallucinate"),
     }

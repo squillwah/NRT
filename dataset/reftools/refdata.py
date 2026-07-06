@@ -1,6 +1,7 @@
 
 import json
 from copy import deepcopy
+from enum import Enum
 
 # brealdowm
 #  restircit refs to articles only X
@@ -10,14 +11,20 @@ from copy import deepcopy
 # All reference formats use the abreviation, is storing the full needed? It could be useful for adding error. !! Have a "minor quirks" subset, where the reference is real but some of the formatting is off.
 
 # Definitive and formal list of all the unique components we're considering.
-COMPONENT_LIST = ("authors", "title", "journal_name", "journal_volume", "journal_issue", "journal_page",
-                  "elocator", "publication_date", "doi", "url_abstract", "url_direct", "pmcid", "pmid")
-                  # *notes
-                  #   no distinction is made (pairs always modified in same step) between:
-                  #     short and full journal names
-                  #     start and end journal pages
-                  #     pub date and epub date
-                  #   we're making a big deal out of PMID and PMCID cause our data source is PubMed, but know the majority of IRL refs have neither.
+class ReferenceComponents(Enum):
+    AUTHORS = "authors"
+    TITLE = "title"
+    JOURNAL_NAME = "journal_name"                       # *notes
+    JOURNAL_VOLUME = "journal_volume"                   #   no distinction is made (pairs always modified in same step) between:
+    JOURNAL_ISSUE = "journal_issue"                     #     short and full journal names
+    JOURNAL_PAGE = "journal_page"                       #     start and end journal pages
+    ELOCATOR = "elocator"                               #     pub date and epub date
+    PUBLICATION_DATE= "publication_date"                #   we're making a big deal out of PMID and PMCID cause our data source is PubMed, but know the majority of IRL refs have neither.
+    DOI = "doi"                                         # COMPONENT_LIST = ("authors", "title", "journal_name", "journal_volume", "journal_issue", "journal_page",
+    URL_ABSTRACT = "url_abstract"                       #                   "elocator", "publication_date", "doi", "url_abstract", "url_direct", "pmcid", "pmid")
+    URL_DIRECT = "url_direct"
+    PMCID = "pmcid"
+    PMID = "pmid"
 
 def make_ref():
     return {
