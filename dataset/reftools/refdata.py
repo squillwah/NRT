@@ -1,7 +1,7 @@
 
 import json
 from copy import deepcopy
-from enum import Enum
+from enum import StrEnum
 
 # brealdowm
 #  restircit refs to articles only X
@@ -11,7 +11,7 @@ from enum import Enum
 # All reference formats use the abreviation, is storing the full needed? It could be useful for adding error. !! Have a "minor quirks" subset, where the reference is real but some of the formatting is off.
 
 # Definitive and formal list of all the unique components we're considering.
-class ReferenceComponents(Enum):
+class ReferenceComponents(StrEnum):
     AUTHORS = "authors"
     TITLE = "title"
     JOURNAL_NAME = "journal_name"                       # *notes
@@ -43,7 +43,8 @@ def make_ref():
         "url_abstract": "",
         "url_direct": "",
         "pmcid": "",
-        "pmid": ""
+        "pmid": "",
+        "COMPONENTS": {rc: False for rc in ReferenceComponents} # Metadata. Components which exist in this reference specifically.
     }
 
 # Parse RIS into dictionary representation
@@ -54,28 +55,61 @@ def ristoref(ris):
     for tag, value in risitems:
         match tag:
             #case "AU": refdata["authors"].append(value)
-            case "AU": refdata["authors"].append(dict(zip(["l", "f"], (names := value.split(", "))+[""]*(2-len(names))))) # Split authors into dicts of {'l': "last", 'f': "first"} 
-            case "T1": refdata["title"] = value
-            case "JF": refdata["journal"]["name"]["full"] = value
-            case "J2": refdata["journal"]["name"]["short"] = value
-            case "VL": refdata["journal"]["volume"] = int(value)
-            case "IS": refdata["journal"]["issue"] = int(value)
-            case "SP":              # RIS from PMC occasionally uses SP/EP to denote eLocators and DOIs
-                if value.isdigit(): refdata["journal"]["page"]["start"] = int(value)
-                elif value[0] == "e" and value[1:].isdigit(): refdata["journal"]["elocator"] = value
+            case "AU":
+                refdata["authors"].append(dict(zip(["l", "f"], (names := value.split(", "))+[""]*(2-len(names))))) # Split authors into dicts of {'l': "last", 'f': "first"} 
+                refdata["COMPONENTS"][ReferenceComponents.AUTHORS] = True
+            case "T1":
+                refdata["title"] = value
+                refdata["COMPONENTS"][ReferenceComponents.TITLE] = True
+            case "JF":
+                refdata["journal"]["name"]["full"] = value
+                refdata["COMPONENTS"][ReferenceComponents.JOURNAL_NAME] = True
+            case "J2":
+                refdata["journal"]["name"]["short"] = value
+                refdata["COMPONENTS"][ReferenceComponents.JOURNAL_NAME] = True
+            case "VL":
+                refdata["journal"]["volume"] = int(value)
+                refdata["COMPONENTS"][ReferenceComponents.JOURNAL_VOLUME] = True
+            case "IS":
+                refdata["journal"]["issue"] = int(value)
+                refdata["COMPONENTS"][ReferenceComponents.JOURNAL_ISSUE] = True
+            case "SP":  # RIS from PMC occasionally uses SP/EP to denote eLocators and DOIs
+                if value.isdigit():
+                    refdata["journal"]["page"]["start"] = int(value)
+                    refdata["COMPONENTS"][ReferenceComponents.JOURNAL_PAGE] = True
+                elif value[0] == "e" and value[1:].isdigit():
+                    refdata["journal"]["elocator"] = value
+                    refdata["COMPONENTS"][ReferenceComponents.ELOCATOR] = True
                 else: print(f" ! [ristoref] bad SP (doi?): {value}")
             case "EP":
-                if value.isdigit(): refdata["journal"]["page"]["end"] = int(value)
-                elif value[0] == "e" and value[1:].isdigit(): refdata["journal"]["elocator"] = value
+                if value.isdigit():
+                    refdata["journal"]["page"]["end"] = int(value)
+                    refdata["COMPONENTS"][ReferenceComponents.JOURNAL_PAGE] = True
+                elif value[0] == "e" and value[1:].isdigit():
+                    refdata["journal"]["elocator"] = value
+                    refdata["COMPONENTS"][ReferenceComponents.ELOCATOR] = True
                 else: print(f" ! [ristoref] bad EP (doi?): {value}")
-            case "Y1": refdata["pub"]["y"], refdata["pub"]["m"], refdata["pub"]["d"] = (x := [int(n) for n in value.split("/") if n.isdigit()]) + [None]*(3-len(x)) # Publication dates are not always complete.
-            case "ET": refdata["epub"]["y"], refdata["epub"]["m"], refdata["epub"]["d"] = (x := [int(n) for n in value.split("/") if n.isdigit()]) + [None]*(3-len(x))
-            case "DO": refdata["doi"]["prefix"], refdata["doi"]["suffix"] = value.split("/")
-            case "UR": refdata["url_abstract"] = value
-            case "L2": refdata["url_direct"] = value
-            case "U2": refdata["pmcid"] = value[:-7] # Slice off trailing ...[pmcid]
-            case "AN": refdata["pmid"] = value
-            #case _: print(f"! unknown RIS tag: {(tag, value)}")
+            case "Y1":
+                refdata["pub"]["y"], refdata["pub"]["m"], refdata["pub"]["d"] = (x := [int(n) for n in value.split("/") if n.isdigit()]) + [None]*(3-len(x)) # Publication dates are not always complete.
+                refdata["COMPONENTS"][ReferenceComponents.PUBLICATION_DATE] = True
+            case "ET":
+                refdata["epub"]["y"], refdata["epub"]["m"], refdata["epub"]["d"] = (x := [int(n) for n in value.split("/") if n.isdigit()]) + [None]*(3-len(x))
+                refdata["COMPONENTS"][ReferenceComponents.PUBLICATION_DATE] = True
+            case "DO":
+                refdata["doi"]["prefix"], refdata["doi"]["suffix"] = value.split("/")
+                refdata["COMPONENTS"][ReferenceComponents.DOI] = True
+            case "UR":
+                refdata["url_abstract"] = value
+                #refdata["COMPONENTS"][ReferenceComponents.oii] = True
+            case "L2":
+                refdata["url_direct"] = value
+                #refdata["COMPONENTS"][ReferenceComponents.oii] = True
+            case "U2":
+                refdata["pmcid"] = value[:-7] # Slice off trailing ...[pmcid]
+                refdata["COMPONENTS"][ReferenceComponents.PMCID] = True
+            case "AN":
+                refdata["pmid"] = value
+                refdata["COMPONENTS"][ReferenceComponents.PMID] = True
     return refdata
 
 # Create flat reference component set from multiple reference datas
@@ -111,7 +145,7 @@ if __name__ == "__main__":
     compset = component_set(*refdata)
 
     # Checking, all should be 100
-    print(json.dumps(refdata, indent=2))
+    print(json.dumps(refdata, indent=4))
     #print(json.dumps(compset, indent=4))
     for key in compset:
         print(key, len(compset[key]))
