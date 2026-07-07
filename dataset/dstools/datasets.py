@@ -177,7 +177,7 @@ class EntryMutator:
     def author_hallucinate(self, ds_entry):
         #ds_entry["data"]["authors"] = self._randcopy(self._FAKE_AUTHORS)    # It needs to be a list of fake authors.
         ds_entry["data"]["authors"] = deepcopy(random.sample(self._FAKE_AUTHORS, len(ds_entry["data"]["authors"])))    # Making it the same length. Could be different. Who cares?
-        self._flag(ds_entry, C.AUTHOR, M.HALLUCINATE)
+        self._flag(ds_entry, C.AUTHOR, M.HALLUCINATION)
         return ds_entry
 
 ### TITLES
@@ -189,12 +189,12 @@ class EntryMutator:
     def title_mismatch(self, ds_entry):
         #RM.set_title(ds_entry["data"], random.choice(self._COMPONENTS["title"]))   # Screw the ref_mutator shit
         ds_entry["data"]["title"] = self._randcopy(self._COMPONENTS["title"])
-        self._flag(ds_entry, "title_mismatch")
+        self._flag(ds_entry, C.TITLE, M.MISMATCH)
         return ds_entry
     def title_hallucinate(self, ds_entry):
         #RM.set_title(ds_entry["data"], random.choice(self._FAKE_TITLES))
         ds_entry["data"]["title"] = self._randcopy(self._FAKE_TITLES)
-        self._flag(ds_entry, "title_hallucinate")
+        self._flag(ds_entry, C.TITLE, M.HALLUCINATION)
         return ds_entry
 
 ### JOURNAL NAMES                                               # @todo: Think about: Should we be bothering with replacing each journal element like this, or should we just mismatch the whole thing together (name, date, volume, iss, pages)?
@@ -206,11 +206,11 @@ class EntryMutator:
         return ds_entry
     def jname_mismatch(self, ds_entry):
         ds_entry["data"]["journal"]["name"] = self._randcopy([jname for jname in self._COMPONENTS["sets"]["journal_name"] if jname != ds_entry["data"]["journal"]["name"]])
-        self._flag(ds_entry, "jname_mismatch")
+        self._flag(ds_entry, C.JOURNAL_NAME, M.MISMATCH)
         return ds_entry
     def jname_hallucinate(self, ds_entry):
         ds_entry["data"]["journal"]["name"] = self._randcopy(self._FAKE_JOURNALS)    # @todo: !! Make sure the fake_journal source contains both full and short names, and that the file is parsed into the proper dict format!
-        self._flag(ds_entry, "jname_hallucinate")
+        self._flag(ds_entry, C.JOURNAL_NAME, M.HALLUCINATION)
         return ds_entry
 
 ### JOURNAL VOLUME / ISSUE
@@ -222,7 +222,7 @@ class EntryMutator:
         else:
             ds_entry["data"]["journal"]["volume"] = random.randint(0,500)
             print(f" ! empty vol in {ds_entry["id"]} {ds_entry["src_id"]}, setting to niave random: {ds_entry["data"]["journal"]["volume"]}")
-        self._flag(ds_entry, "jvol_hallucinate")
+        self._flag(ds_entry, C.JOURNAL_VOLUME, M.HALLUCINATION)
         return ds_entry
 
     def jiss_hallucinate(self, ds_entry):
@@ -235,7 +235,7 @@ class EntryMutator:
             #ds_entry["data"]["journal"]["issue"] = random.choice(self._COMPONENTS["journal"])["issue"] # !! It must be that the same empties exist in the compset. SO, just do a random number.
             ds_entry["data"]["journal"]["issue"] = random.randint(0,1500)
             print(f" ! empty iss in {ds_entry["id"]} {ds_entry["src_id"]}, setting to niave random: {ds_entry["data"]["journal"]["issue"]}")
-        self._flag(ds_entry, "jiss_hallucinate")
+        self._flag(ds_entry, C.JOURNAL_ISSUE, M.HALLUCINATION)
         return ds_entry
 
     # Could also perchance do a jissvol_mismatch (if one of our classifications implies it)
@@ -247,7 +247,7 @@ class EntryMutator:
         length = random.randint(3, 51)
         ds_entry["data"]["journal"]["page"]["start"] = spage
         ds_entry["data"]["journal"]["page"]["end"] = spage+length
-        self._flag(ds_entry, "jpage_hallucinate")
+        self._flag(ds_entry, C.JOURNAL_PAGE, M.HALLUCINATION)
         return ds_entry
 
     # Other possibilities: mismatch, nonesense_randomize (end < start)
@@ -258,13 +258,13 @@ class EntryMutator:
     # URL typo, mismatch, randomize?
     def elocator_mismatch(self, ds_entry):  # @Consider: What about when an article doesn't have an elocator (or any other thing), should the mismatch still occur?
         ds_entry["data"]["journal"]["elocator"] = self._randcopy([eloc for eloc in self._COMPONENTS["sets"]["journal_elocator"] if eloc != ds_entry["data"]["journal"]["elocator"]])
-        self._flag(ds_entry, "elocator_mismatch")
+        self._flag(ds_entry, C.ELOCATOR, M.MISMATCH)
         return ds_entry
 
     def elocator_hallucinate(self, ds_entry):
         num = str(random.randint(1, 999999))
         ds_entry["data"]["journal"]["elocator"] = "e"+"0"*(6-len(num))+num
-        self._flag(ds_entry, "elocator_hallucinate")
+        self._flag(ds_entry, C.ELOCATOR, M.HALLUCINATION)
         return ds_entry
 
 ### JOURNAL / DIGITAL PUBLICATION DATES
@@ -285,7 +285,7 @@ class EntryMutator:
             if d:
                 pub["d"] = random.randint(1, 31)  # Hmmm
                 epub["d"] = pub["d"] + random.randint((pub["d"] > 5)*-5, (pub["m"] < 27)*5) # Sometimes offset epub day by up to 5.
-            self._flag(ds_entry, "pubs_hallucinate")
+            self._flag(ds_entry, C.PUBLICATION_DATE, M.HALLUCINATION)
         return ds_entry
 #    def epub_randomize(self, ds_entry, *, y=True, m=True, d=True):
 #        if y: ds_entry["data"]["epub"]["y"] = random.randint(*self._RAND_YEAR_RANGE)
@@ -300,29 +300,33 @@ class EntryMutator:
         doi = ds_entry["data"]["doi"]
         doi["prefix"] = T.typo_swapletter(doi["prefix"], random.choice([i for i, char in enumerate(doi["prefix"]) if char != "0"])) # Swap one char in the prefix (not zeros).
         doi["suffix"] = T.typofy(doi["suffix"]) # Just run the standard typo procedure on the suffix.
-        self._flag(ds_entry, "doi_typo")
+        self._flag(ds_entry, C.DOI, M.TYPO)
         return ds_entry
 
     def doi_mismatch_prefix(self, ds_entry):
         ds_entry["data"]["doi"]["prefix"] = self._randcopy([p for p in self._COMPONENTS["sets"]["doi_prefix"] if p != ds_entry["data"]["doi"]["prefix"]])
-        self._flag(ds_entry, "doi_mismatch_prefix")
+        #self._flag(ds_entry, "doi_mismatch_prefix")
+        self._flag(ds_entry, C.DOI, M.MISMATCH)         # Prefix and suffix used to be seperate, now aren't. Should they?
         return ds_entry
 
     def doi_mismatch_suffix(self, ds_entry):
         ds_entry["data"]["doi"]["suffix"] = self._randcopy([s for s in self._COMPONENTS["sets"]["doi_suffix"] if s != ds_entry["data"]["doi"]["suffix"]])
-        self._flag(ds_entry, "doi_mismatch_suffix")
+        #self._flag(ds_entry, "doi_mismatch_suffix")
+        self._flag(ds_entry, C.DOI, M.MISMATCH)
         return ds_entry
 
     def doi_hallucinate_prefix(self, ds_entry):
         # 10.random1000->9999 + .random0->10or100or1000 (0-2x)
         ds_entry["data"]["doi"]["prefix"] = ".".join(["10", str(random.randint(1000, 9999))] + [str(random.randint(0, 10**random.randint(1, 3))) for i in range(random.randint(0,2))])
-        self._flag(ds_entry, "doi_hallucinate_prefix")
+        #self._flag(ds_entry, "doi_hallucinate_prefix")
+        self._flag(ds_entry, C.DOI, M.HALLUCINATION)
         return ds_entry
 
     def doi_hallucinate_suffix(self, ds_entry):
         # 1-3 groups of 3 to 8 random numbers and letters
         ds_entry["data"]["doi"]["suffix"] = "-".join(["".join([random.choice("abcdefghijklmnopqrstuvwxyz,./12345678900987654321") for i in range(random.randint(3, 8))]) for i in range(random.randint(1, 3))])
-        self._flag(ds_entry, "doi_hallucinate_suffix")
+        #self._flag(ds_entry, "doi_hallucinate_suffix")
+        self._flag(ds_entry, C.DOI, M.HALLUCINATION)
         return ds_entry
 
 ### URLS
@@ -345,17 +349,17 @@ class EntryMutator:
             else: num = num + random.choice([-1,1])
             ID = ID[0:li]+str(num)+ID[li+1:] if li < len(ID)-1 else ID[0:li]+str(num)
         ds_entry["data"]["pmid"] = ID
-        self._flag(ds_entry, "pmid_typo")
+        self._flag(ds_entry, C.PMID, M.TYPO)
         return ds_entry
 
     def pmid_mismatch(self, ds_entry):
         ds_entry["data"]["pmid"] = self._randcopy([ID for ID in self._COMPONENTS["pmid"] if ID != ds_entry["data"]["pmid"]])
-        self._flag(ds_entry, "pmid_mismatch")
+        self._flag(ds_entry, C.PMID, M.MISMATCH)
         return ds_entry
 
     def pmid_hallucinate(self, ds_entry):
         ds_entry["data"]["pmid"] = str(random.randint(1, 999999999)) # Up to 9 digits.
-        self._flag(ds_entry, "pmid_hallucinate")
+        self._flag(ds_entry, C.PMID, M.HALLUCINATION)
         return ds_entry
 
     # Basically all exact same.
@@ -371,17 +375,17 @@ class EntryMutator:
             else: num = num + random.choice([-1,1])
             ID = ID[0:li]+str(num)+ID[li+1:] if li < len(ID)-1 else ID[0:li]+str(num)
         ds_entry["data"]["pmcid"] = ID
-        self._flag(ds_entry, "pmcid_typo")
+        self._flag(ds_entry, C.PMCID, M.TYPO)
         return ds_entry
 
     def pmcid_mismatch(self, ds_entry):
         ds_entry["data"]["pmcid"] = self._randcopy([ID for ID in self._COMPONENTS["pmcid"] if ID != ds_entry["data"]["pmcid"]])
-        self._flag(ds_entry, "pmcid_mismatch")
+        self._flag(ds_entry, C.PMCID, M.MISMATCH)
         return ds_entry
 
     def pmcid_hallucinate(self, ds_entry):
         ds_entry["data"]["pmcid"] = "PMC"+str(random.randint(1, 99999999)) # Up to 8 digits. Plus PMC prefix.
-        self._flag(ds_entry, "pmcid_hallucinate")
+        self._flag(ds_entry, C.PMCID, M.HALLUCINATION)
         return ds_entry
 
 
@@ -397,6 +401,11 @@ class EntryMutator:
 
     # Mutation level. Or, the classification of a reference based on the sum of it's mutations.
     # Differentiates between ambigious "human-esque" reference mistakes, and undeniably "chatbot-esque" hallucinations.
+
+
+# @Consider: One thing with the score totalling, is journal_page/journal_volume vs elocator can change scores. When one substitutes the other in the ref, even though both are valid. Because page + vol are 2 values, the 'weight' of them combined is heavier than elocator, even though they're subsituting each other.
+
+
 
 if __name__ == "__main__" or True:
     import json
@@ -430,7 +439,7 @@ if __name__ == "__main__" or True:
     setconfig.test_typos(ds["source"])
     bake_dataset(ds["source"])
     print(json.dumps(ds["source"], indent=2))
-    quit()
+    #quit()
 
 
     setconfig.l1_metadata_error(ds["minor_mderror"])
