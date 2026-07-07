@@ -1,9 +1,9 @@
 
 #import reftools.ref_formatters as RB
 from copy import deepcopy
-from enum import Enum
+from enum import StrEnum
 from reftools.typos import Typofier as T
-from reftools.refdata import ReferenceComponents as RC
+from reftools.refdata import ReferenceComponent as RC
 import reftools.formats as F
 import random
 
@@ -74,29 +74,85 @@ import random
 #             "confidencess": {},           # Component : "suggested confidence score". Key existence signal component modification as well.
 
 # Create a set entry from reference data
-def ds_entry(rd, *, ID=None):
+def dsentry(rd, *, ID=None):
     return {
         "id": ID,                  # Internal ID + original PMCID
         "src_id": rd["pmcid"],
         "mutcode": 0b00000000,     # Describes specific mutations.
         "mutlabels": [],
-        "compscores": {component: (True, 1) for component in RC}    # Component status (true == unmodified), suggested validity confidence (0 = invalid, 1 = valid)
         "data": deepcopy(rd),
-        "format": {}
+        "format": {},   # Should unbaked forms be absent or a None?
+        "scores": {
+            "combined": [True, 1.0],
+            "byformat": {"ama": None}, # @TODO {form: None for form in FormatStyles}       Different holistic scores per format addresses the issue of absent components bias.
+            "component": {comp: ([True, 1.0] if rd["COMPONENTS"][comp] else None) for comp in RC}
+        }
     }
+
+# @CONSIDER: Sometimes the true/false and the confidence score wont line up. Should the True/False be more of a "was this modified thing" or stay the same as the conf. Probably stay the same. Idk just think about it. There's something there.
+
+# @CONSIDER !! What about adding hallucinated/mismatch components to references which never had one in the first place?
+#  The question is: Should we only mutate a component when it already exists (refdataCOMPONENTS = True), or should we always mutate?
+#  how address in scoring?
+#  should we keep list of modified components?
+#  we have comp score list at init already, with Trues and Nones when no component.
+#  so, we set that value during the check. scores modified in place during mutation
+#  then if we do or dont want mutating of absent components, we just disable it on the None check instead of creating new.
+
+
+def bake_dsentry(entry):
+    entry["format"] = F.compile_all(entry["data"])
+    entry["mutlabels"] = EntryMutator.explain_mutcode(entry["mutcode"])
+
+    # Averaging holistic scores (ALL and format styles)
+    c_scores = [entry["scores"]["component"][component] for component in RC if entry["scores"]["component"][component]] # List of valid component-wise scores (non null, meaning component did or now exists and has some grade).
+    classes, confidences = [cs[0] for cs in c_scores], [cs[1] for cs in c_scores]
+
+    score = entry["scores"]["combined"]
+    score[0] = score[0] and all(c_scores[0])
+    score[1] = (score[1] + sum(c_scores[1]))/(1+len(c_scores[1]))
+#                                                                                                                                           for s in c_scores:
+#                                                                                                                                               score[0] = score[0] and s[0]    # ANDing maybe not so good. Weights?
+#                                                                                                                                               score[1] = score[1] + s[1]      # Standard averaging. Again, weights?           # Another Question @ should we have our own FormatStyle ALL, that is just the JSON printout? Could work for an experiment.
+#                                                                                                                                       
+#                                                                                                                                           for form in entry["format"]:    # or form in FormatStyles (if we make that Enum, and have explicit unbaked formats default init to None). OR form in entry["scores"]["byformat"]
+#                                                                                                                                               score = entry["scores"]["byformat"][form]
+#                                                                                                                                               for s in c_scores
+#                                                                                                                                               if entry["format"][form]["components"][component]:
+#                                                                                                                                                   s
+#                                                                                                                                       
+#                                                                                                                                       #    c = {style: 1
+#                                                                                                                                           for style in scores:
+#                                                                                                                                               scores[style]
+#                                                                                                                                           for component in RC:
+#                                                                                                                                               c_score = entry["scores"]["component"][component]
+#                                                                                                                                               if c_score is not None: # Could make a seperate element for present components of mutated dsentry, but right now checking for a None score is enough for this. If we need to know that data later we should.
+#                                                                                                                                       #            # Stlye specific (avoid bias from absent components)
+#                                                                                                                                       #            for style in entry["format"]:
+#                                                                                                                                       #                if entry["format"][style]["components"][component]:     # Assuming dict of Component: Bool. # Could use another Enum with bits instead, for a code not dict. Or just pattern match in a function using base ReferenceComponent.
+#                                                                                                                                       #                    s[style][0] = s[entry][0] and c_score[0]
+#                                                                                                                                                   # Every present component
+    #entry["score"][1] = entry["score"][1] + c_score[1]                  # THIS SPECIFICALLY @@@@ !!!! Is terrible. It bases the holistic confidence score on components that might not even be in the reference. @TODO Make the holistic score per baked format somehow. The component scores can remain impartial. BUT they do need to be trimmed in DSENTRY to not include components that aren't in the refdata at all @TODO
+                                                                                                                                                                                                                                                                                                                                 # Need a component code in REFDATA too, then we can adjust COMPSCORES with Nones accordingly. @TODO                                                                                                                                   
+        # Might not be the best thing. Just ANDing and averaging evenly. This questions our methodology. Should something small like a typo really flip the WHOLE reference into being 'invalid'? 
+        # The float score would make the full answer "invalid, with low confidence".
+        # ! If we're to do a kind of WEIGHTING thing per component for our own score, this is where we'd do it.
+
+    # @CONSIDER what about when components are deleted? Should we keep that score in, or mark that the component is absent in the dsentry (mark all component existence?). For things like titles, we definitely shouldn't remove that score. Probably just keep them all. AH! This is where the conf weight thing comes in!!!! @. A title_missing could have a lower suggested confidence score than a journal_page_missing, for example.
+
+
 
 # Create a set of set entries from a list of reference data
 def make_dataset(ref_data_list, *, v=False):
-    dataset = [ds_entry(ref, ID=i) for i, ref in enumerate(ref_data_list)]
+    dataset = [dsentry(ref, ID=i) for i, ref in enumerate(ref_data_list)]
     return dataset
 
 # Bake formatted references from refdata for every entry in a dataset.
 # Also adds a human readable list of mutation labels.
 def bake_dataset(dataset):
     for entry in dataset:
+        bake_dsentry(entry)
         #entry["format"] = RB.bake_formats(entry["data"])
-        entry["format"] = F.compile_all(entry["data"])
-        entry["mutlabels"] = EntryMutator.explain_mutcode(entry["mutcode"])
 
 
 # Class of methods to mutate dataset entries using ref_mutator functions.
@@ -113,7 +169,7 @@ class EntryMutator:
     # COMPONENT_LIST = ("authors", "title", "journal_name", "journal_volume", "journal_issue", "journal_page",
     #                   "elocator", "publication_date", "doi", "url_abstract", "url_direct", "pmcid", "pmid")
 
-    class Mutation(Enum):
+    class Mutation(StrEnum):
         TYPO = "typo"
         MISMATCH = "mismatch"
         HALLUCINATION = "hallucination"
@@ -214,8 +270,10 @@ class EntryMutator:
 #        return [label for label in cls._MUTFLAG_BITS if (code & cls._MUTFLAG_BITS[label])]
     @classmethod
     def explain_mutcode(cls, code):
+        return [cls._MUTLABELS[bit] for bit in cls._MUTLABELS if (code & bit)]
+
         #return [label for label in cls._MUTLABELS if (code & cls._MUTFLAG_BITS[label])]
-        return cls._MUTLABELS[code] if code in cls._MUTLABELS else f"Bad Code: {code}"
+        #return cls._MUTLABELS[code] if code in cls._MUTLABELS else f"Bad Code: {code}"
     # Set mutation flag in ds_entry.
     @classmethod
     def _flag(cls, ds_entry, flag):
@@ -492,3 +550,13 @@ class EntryMutator:
 
     # Mutation level. Or, the classification of a reference based on the sum of it's mutations.
     # Differentiates between ambigious "human-esque" reference mistakes, and undeniably "chatbot-esque" hallucinations.
+
+if __name__ == "__main__" or True:
+    import json
+
+    r = None
+    with open("testrefs.json") as f: r = json.load(f)
+
+    ds = make_dataset(r)
+    bake_dataset(ds)
+    print(json.dumps(ds, indent=4))
