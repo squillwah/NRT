@@ -131,12 +131,14 @@ def l3_plausible_fabricated(dataset):
 def l4_needs_human_review(dataset):
     # Just a bunch of random mangling.
     for entry in dataset:
-        M.author_mismatch(entry)
+        #M.author_mismatch(entry)
+        M.author_hallucinate(entry)
         M.author_shuffle(entry)     # Also author_hallucinate(entry), but we don't have the file for that yet :( @todo!
         M.title_mismatch(entry)
         M.jvol_hallucinate(entry)
         M.jiss_hallucinate(entry)
-        M.jname_mismatch(entry)
+        #M.jname_mismatch(entry)
+        M.jname_hallucinate(entry)
         M.pubs_hallucinate(entry)
         M.elocator_mismatch(entry)
         M.pmcid_typo(entry)

@@ -2,6 +2,118 @@
   "authors": [
     [
       {
+        "l": "Barnes",
+        "f": "Courtney"
+      },
+      {
+        "l": "Hall",
+        "f": "Alix"
+      },
+      {
+        "l": "Mantach",
+        "f": "Stephanie"
+      },
+      {
+        "l": "Oldmeadow",
+        "f": "Christopher"
+      },
+      {
+        "l": "Attia",
+        "f": "John"
+      },
+      {
+        "l": "Backholer",
+        "f": "Kathryn"
+      },
+      {
+        "l": "Williams",
+        "f": "Carmel"
+      },
+      {
+        "l": "Tefera",
+        "f": "Yonatal"
+      },
+      {
+        "l": "Kay",
+        "f": "Frances"
+      },
+      {
+        "l": "Wolfenden",
+        "f": "Luke"
+      }
+    ],
+    [
+      {
+        "l": "Jackson",
+        "f": "Timothy L"
+      },
+      {
+        "l": "Desai",
+        "f": "Riti"
+      },
+      {
+        "l": "Wafa",
+        "f": "Hatem A"
+      },
+      {
+        "l": "Lee",
+        "f": "Chan Ning"
+      },
+      {
+        "l": "Wang",
+        "f": "Yanzhong"
+      },
+      {
+        "l": "Peacock",
+        "f": "Janet L"
+      },
+      {
+        "l": "Peto",
+        "f": "Tunde"
+      },
+      {
+        "l": "Chakravarthy",
+        "f": "Usha"
+      },
+      {
+        "l": "Zhu",
+        "f": "Xuemin"
+      },
+      {
+        "l": "Dakin",
+        "f": "Helen"
+      },
+      {
+        "l": "Wordsworth",
+        "f": "Sarah"
+      },
+      {
+        "l": "Clinch",
+        "f": "Patricia"
+      },
+      {
+        "l": "Ramazzotto",
+        "f": "Lisa"
+      },
+      {
+        "l": "Neffendorf",
+        "f": "James E"
+      },
+      {
+        "l": "O'Sullivan",
+        "f": "Joe M"
+      },
+      {
+        "l": "Reeves",
+        "f": "Barnaby C"
+      },
+      {
+        "l": "STAR study group",
+        "f": ""
+      }
+    ],
+    [
+      {
         "l": "Kearney",
         "f": "Patricia M"
       },
@@ -302,6 +414,72 @@
       {
         "l": "Singal",
         "f": "Deepa"
+      }
+    ],
+    [
+      {
+        "l": "You",
+        "f": "Danzhen"
+      },
+      {
+        "l": "Hug",
+        "f": "Lucia"
+      },
+      {
+        "l": "Fell",
+        "f": "Graeme Wilson"
+      },
+      {
+        "l": "Liu",
+        "f": "Yang"
+      },
+      {
+        "l": "Sharrow",
+        "f": "David"
+      },
+      {
+        "l": "Gerland",
+        "f": "Patrick"
+      },
+      {
+        "l": "Masquelier",
+        "f": "Bruno"
+      },
+      {
+        "l": "Alkema",
+        "f": "Leontine"
+      },
+      {
+        "l": "Chao",
+        "f": "Fengqing"
+      },
+      {
+        "l": "Guillot",
+        "f": "Michel"
+      },
+      {
+        "l": "Spoorenberg",
+        "f": "Thomas"
+      },
+      {
+        "l": "Cao",
+        "f": "Bochen"
+      },
+      {
+        "l": "Strong",
+        "f": "Kathleen"
+      },
+      {
+        "l": "Wang",
+        "f": "Haidong"
+      },
+      {
+        "l": "Cruz Castanheira",
+        "f": "Helena"
+      },
+      {
+        "l": "Suzuki",
+        "f": "Emi"
       }
     ],
     [
@@ -1238,164 +1416,1122 @@
     ],
     [
       {
-        "l": "Liao",
-        "f": "Zhenxin"
+        "l": "MacDonald",
+        "f": "Ryan J"
       },
       {
-        "l": "Zhou",
-        "f": "Mengping"
+        "l": "O'Connor",
+        "f": "Christopher E"
       },
       {
-        "l": "Brikell",
-        "f": "Isabell"
+        "l": "Boehm",
+        "f": "Victoria A"
       },
       {
-        "l": "Chang",
-        "f": "Zheng"
+        "l": "May",
+        "f": "E M"
       },
       {
-        "l": "Kuja-Halkola",
-        "f": "Ralf"
+        "l": "Sing",
+        "f": "David K"
       },
       {
-        "l": "D'Onofrio",
-        "f": "Brian M"
+        "l": "Mullens",
+        "f": "Elijah"
       },
       {
-        "l": "Larsson",
-        "f": "Henrik"
+        "l": "Mayorga",
+        "f": "L C"
       },
       {
-        "l": "Lichtenstein",
-        "f": "Paul"
+        "l": "Foote",
+        "f": "Trevor O"
       },
       {
-        "l": "Pettersson",
-        "f": "Erik"
+        "l": "Blouin",
+        "f": "Simon"
+      },
+      {
+        "l": "Pearce",
+        "f": "Logan A"
+      },
+      {
+        "l": "Lewis",
+        "f": "Nikole K"
+      },
+      {
+        "l": "Valenti",
+        "f": "Jeff"
+      },
+      {
+        "l": "Batalha",
+        "f": "Natasha E"
+      },
+      {
+        "l": "Lally",
+        "f": "Maura"
+      },
+      {
+        "l": "Lothringer",
+        "f": "Joshua D"
+      },
+      {
+        "l": "Marley",
+        "f": "Mark S"
+      },
+      {
+        "l": "Mishra",
+        "f": "Ishan"
+      },
+      {
+        "l": "Mullally",
+        "f": "Susan E"
       }
     ],
     [
       {
-        "l": "Davies",
-        "f": "Sarah R"
+        "l": "Obermeyer",
+        "f": "Ziad"
       },
       {
-        "l": "Davies",
-        "f": "Annabel L"
+        "l": "Schubert",
+        "f": "Alexander"
       },
       {
-        "l": "Higgins",
-        "f": "Julian P T"
+        "l": "Ross",
+        "f": "James"
       },
       {
-        "l": "Caldwell",
-        "f": "Deborah M"
+        "l": "Mullainathan",
+        "f": "Sendhil"
       },
       {
-        "l": "Thornton",
-        "f": "Zak A"
+        "l": "Lingman",
+        "f": "Markus"
+      }
+    ],
+    [
+      {
+        "l": "Xue",
+        "f": "Mintao"
       },
       {
-        "l": "Aiton",
-        "f": "Elisabeth"
+        "l": "Li",
+        "f": "Suzhi"
       },
       {
-        "l": "Ali",
-        "f": "Ifra"
+        "l": "Wang",
+        "f": "Jing"
       },
       {
-        "l": "Dawson",
-        "f": "Sarah"
+        "l": "Li",
+        "f": "Jinyang"
       },
       {
-        "l": "McGrath",
-        "f": "Carmel"
+        "l": "Ding",
+        "f": "Xiangdong"
       },
       {
-        "l": "Parkhouse",
-        "f": "Thomas"
+        "l": "Ma",
+        "f": "En"
       },
       {
-        "l": "Yardley",
-        "f": "Lucy"
+        "l": "Sun",
+        "f": "Jun"
+      }
+    ],
+    [
+      {
+        "l": "Glauser",
+        "f": "Yannik M"
       },
       {
-        "l": "Yates",
-        "f": "Julie"
+        "l": "Vonk",
+        "f": "Sander J W"
       },
       {
-        "l": "Letley",
-        "f": "Louise"
+        "l": "Seda",
+        "f": "David B"
       },
       {
-        "l": "Ismail",
-        "f": "Sharif A"
-      },
-      {
-        "l": "Christensen",
+        "l": "Niese",
         "f": "Hannah"
       },
       {
-        "l": "French",
-        "f": "Clare E"
+        "l": "de Jong",
+        "f": "Boris"
+      },
+      {
+        "l": "Bidaut",
+        "f": "Matthieu F"
+      },
+      {
+        "l": "Bossavit",
+        "f": "Erwan"
+      },
+      {
+        "l": "Petter",
+        "f": "Daniel"
+      },
+      {
+        "l": "Nagamine",
+        "f": "Gabriel"
+      },
+      {
+        "l": "Lassaline",
+        "f": "Nolan"
+      },
+      {
+        "l": "Norris",
+        "f": "David J"
       }
     ],
     [
       {
-        "l": "Friedrich",
-        "f": "Sabine"
+        "l": "Mao",
+        "f": "Yuan-Hao"
       },
       {
-        "l": "Huybrechts",
-        "f": "Krista F"
+        "l": "Xu",
+        "f": "Ji-Peng"
       },
       {
-        "l": "Straub",
-        "f": "Loreen"
+        "l": "Ji",
+        "f": "Hong-Teng"
       },
       {
-        "l": "Hernandez-Diaz",
-        "f": "Sonia"
+        "l": "Yang",
+        "f": "Li-Tian"
       },
       {
-        "l": "Zhu",
-        "f": "Yanmin"
+        "l": "Tan",
+        "f": "Zhong-Qi"
       },
       {
-        "l": "Hahn",
-        "f": "Georg"
+        "l": "Quan",
+        "f": "Yu-Chuan"
       },
       {
-        "l": "Mogun",
-        "f": "Helen"
+        "l": "Pu",
+        "f": "Tao"
       },
       {
-        "l": "Jones",
-        "f": "Hendr\u00e9e E"
+        "l": "Shao",
+        "f": "Wei"
       },
       {
-        "l": "Connery",
-        "f": "Hilary S"
+        "l": "Hu",
+        "f": "Jun-Quan"
+      },
+      {
+        "l": "Huang",
+        "f": "Ran"
+      },
+      {
+        "l": "Nori",
+        "f": "Franco"
+      },
+      {
+        "l": "Jing",
+        "f": "Hui"
+      }
+    ],
+    [
+      {
+        "l": "Ransford",
+        "f": "Anthony"
+      },
+      {
+        "l": "Allman",
+        "f": "M S"
+      },
+      {
+        "l": "Arkinstall",
+        "f": "Jake"
+      },
+      {
+        "l": "Campora",
+        "f": "J P"
+      },
+      {
+        "l": "Cooper",
+        "f": "Samuel F"
+      },
+      {
+        "l": "Delaney",
+        "f": "Robert D"
+      },
+      {
+        "l": "Dreiling",
+        "f": "Joan M"
+      },
+      {
+        "l": "Estey",
+        "f": "Brian"
+      },
+      {
+        "l": "Figgatt",
+        "f": "Caroline"
+      },
+      {
+        "l": "Hall",
+        "f": "Alex"
+      },
+      {
+        "l": "Husain",
+        "f": "Ali A"
+      },
+      {
+        "l": "Isanaka",
+        "f": "Akhil"
+      },
+      {
+        "l": "Kennedy",
+        "f": "Colin J"
+      },
+      {
+        "l": "Kotibhaskar",
+        "f": "Nikhil"
+      },
+      {
+        "l": "Madjarov",
+        "f": "Ivaylo S"
+      },
+      {
+        "l": "Mayer",
+        "f": "Karl"
+      },
+      {
+        "l": "Milne",
+        "f": "Alistair R"
+      },
+      {
+        "l": "Park",
+        "f": "Annie J"
+      },
+      {
+        "l": "Reed",
+        "f": "Adam P"
+      },
+      {
+        "l": "Ancona",
+        "f": "Riley"
+      },
+      {
+        "l": "Andersen",
+        "f": "Molly P"
+      },
+      {
+        "l": "Andres-Martinez",
+        "f": "Pablo"
+      },
+      {
+        "l": "Angenent",
+        "f": "Will"
+      },
+      {
+        "l": "Argueta",
+        "f": "Liz"
+      },
+      {
+        "l": "Arkin",
+        "f": "Benjamin"
+      },
+      {
+        "l": "Ascarrunz",
+        "f": "Leonardo"
+      },
+      {
+        "l": "Baker",
+        "f": "William"
+      },
+      {
+        "l": "Barnes",
+        "f": "Corey"
+      },
+      {
+        "l": "Bartolotta",
+        "f": "John"
+      },
+      {
+        "l": "Berg",
+        "f": "Jordan"
+      },
+      {
+        "l": "Besand",
+        "f": "Ryan"
+      },
+      {
+        "l": "Bjork",
+        "f": "Bryce"
+      },
+      {
+        "l": "Blain",
+        "f": "Matt"
+      },
+      {
+        "l": "Blanchard",
+        "f": "Paul"
+      },
+      {
+        "l": "Blume-Kohout",
+        "f": "Robin"
+      },
+      {
+        "l": "Bohn",
+        "f": "Matt"
+      },
+      {
+        "l": "Borgna",
+        "f": "Agust\u00edin"
+      },
+      {
+        "l": "Botamanenko",
+        "f": "Daniel Y"
+      },
+      {
+        "l": "Boutelle",
+        "f": "Robert"
+      },
+      {
+        "l": "Brown",
+        "f": "Natalie"
+      },
+      {
+        "l": "Buckingham",
+        "f": "Grant T"
+      },
+      {
+        "l": "Burdick",
+        "f": "Nathaniel Q"
+      },
+      {
+        "l": "Burton",
+        "f": "William Cody"
+      },
+      {
+        "l": "Carey",
+        "f": "Varis"
+      },
+      {
+        "l": "Carron",
+        "f": "Christopher J"
+      },
+      {
+        "l": "Chambers",
+        "f": "Joe"
+      },
+      {
+        "l": "Chan",
+        "f": "Jia Wen"
+      },
+      {
+        "l": "Children",
+        "f": "John"
+      },
+      {
+        "l": "Colussi",
+        "f": "Victor E"
+      },
+      {
+        "l": "Crepinsek",
+        "f": "Steven"
+      },
+      {
+        "l": "Cureton",
+        "f": "Andrew"
+      },
+      {
+        "l": "Davies",
+        "f": "Joe"
       },
       {
         "l": "Davis",
-        "f": "Jonathan M"
+        "f": "Daniel"
       },
       {
-        "l": "Gray",
-        "f": "Kathryn J"
+        "l": "DeCross",
+        "f": "Matthew"
       },
       {
-        "l": "Lester",
-        "f": "Barry"
+        "l": "Deen",
+        "f": "David"
       },
       {
-        "l": "Terplan",
-        "f": "Mishka"
+        "l": "Delaney",
+        "f": "Conor"
       },
       {
-        "l": "Bateman",
-        "f": "Brian T"
+        "l": "DelVento",
+        "f": "Davide"
+      },
+      {
+        "l": "DeSalvo",
+        "f": "B J"
+      },
+      {
+        "l": "Dominy",
+        "f": "Jason"
+      },
+      {
+        "l": "Drotar",
+        "f": "Sydney"
+      },
+      {
+        "l": "Duncan",
+        "f": "Ross"
+      },
+      {
+        "l": "Eccles",
+        "f": "Vanya"
+      },
+      {
+        "l": "Edgington",
+        "f": "Alec"
+      },
+      {
+        "l": "Erickson",
+        "f": "Neal"
+      },
+      {
+        "l": "Erickson",
+        "f": "Stephen"
+      },
+      {
+        "l": "Ertsgaard",
+        "f": "Christopher T"
+      },
+      {
+        "l": "Esposito",
+        "f": "Jay"
+      },
+      {
+        "l": "Evans",
+        "f": "Bruce"
+      },
+      {
+        "l": "Evans",
+        "f": "Tyler"
+      },
+      {
+        "l": "Fabrikant",
+        "f": "Maya I"
+      },
+      {
+        "l": "Fischer",
+        "f": "Andrew"
+      },
+      {
+        "l": "Foltz",
+        "f": "Cameron"
+      },
+      {
+        "l": "Foss-Feig",
+        "f": "Michael"
+      },
+      {
+        "l": "Francois",
+        "f": "David"
+      },
+      {
+        "l": "Freyberg",
+        "f": "Brad"
+      },
+      {
+        "l": "Gao",
+        "f": "Charles"
+      },
+      {
+        "l": "Garay",
+        "f": "Robert"
+      },
+      {
+        "l": "Garvin",
+        "f": "Jane"
+      },
+      {
+        "l": "Gaudiosi",
+        "f": "David M"
+      },
+      {
+        "l": "Gilbreth",
+        "f": "Christopher N"
+      },
+      {
+        "l": "Giles",
+        "f": "Josh"
+      },
+      {
+        "l": "Glynn",
+        "f": "Erin"
+      },
+      {
+        "l": "Graves",
+        "f": "Jeff"
+      },
+      {
+        "l": "Hansen",
+        "f": "Azure"
+      },
+      {
+        "l": "Hayes",
+        "f": "David"
+      },
+      {
+        "l": "Heidemann",
+        "f": "Lukas"
+      },
+      {
+        "l": "Higashi",
+        "f": "Bob"
+      },
+      {
+        "l": "Hilbun",
+        "f": "Tyler"
+      },
+      {
+        "l": "Hines",
+        "f": "Jordan"
+      },
+      {
+        "l": "Hlavaty",
+        "f": "Ariana"
+      },
+      {
+        "l": "Hoffman",
+        "f": "Kyle"
+      },
+      {
+        "l": "Hoffman",
+        "f": "Ian M"
+      },
+      {
+        "l": "Holliman",
+        "f": "Craig"
+      },
+      {
+        "l": "Hooper",
+        "f": "Isobel"
+      },
+      {
+        "l": "Horning",
+        "f": "Bob"
+      },
+      {
+        "l": "Hostetter",
+        "f": "James"
+      },
+      {
+        "l": "Hothem",
+        "f": "Daniel"
+      },
+      {
+        "l": "Houlton",
+        "f": "Jack"
+      },
+      {
+        "l": "Hout",
+        "f": "Jared"
+      },
+      {
+        "l": "Hutson",
+        "f": "Ross"
+      },
+      {
+        "l": "Jacobs",
+        "f": "Ryan T"
+      },
+      {
+        "l": "Jacobs",
+        "f": "Trent"
+      },
+      {
+        "l": "Johannsen",
+        "f": "Melf"
+      },
+      {
+        "l": "Johansen",
+        "f": "Jacob"
+      },
+      {
+        "l": "Jones",
+        "f": "Loren"
+      },
+      {
+        "l": "Julian",
+        "f": "Sydney"
+      },
+      {
+        "l": "Jung",
+        "f": "Ryan"
+      },
+      {
+        "l": "Keay",
+        "f": "Aidan"
+      },
+      {
+        "l": "Klein",
+        "f": "Todd"
+      },
+      {
+        "l": "Koch",
+        "f": "Mark"
+      },
+      {
+        "l": "Kondo",
+        "f": "Ryo"
+      },
+      {
+        "l": "Kong",
+        "f": "Chang"
+      },
+      {
+        "l": "Kosto",
+        "f": "Asa"
+      },
+      {
+        "l": "Lawrence",
+        "f": "Alan"
+      },
+      {
+        "l": "Liefer",
+        "f": "David"
+      },
+      {
+        "l": "Lollie",
+        "f": "Michelle"
+      },
+      {
+        "l": "Lucchetti",
+        "f": "Dominic"
+      },
+      {
+        "l": "Lysne",
+        "f": "Nathan K"
+      },
+      {
+        "l": "Lytle",
+        "f": "Christian"
+      },
+      {
+        "l": "MacPherson",
+        "f": "Callum"
+      },
+      {
+        "l": "Malm",
+        "f": "Andrew"
+      },
+      {
+        "l": "Mather",
+        "f": "Spencer"
+      },
+      {
+        "l": "Mathewson",
+        "f": "Brian"
+      },
+      {
+        "l": "Maxwell",
+        "f": "Daniel"
+      },
+      {
+        "l": "McCaffrey",
+        "f": "Lauren"
+      },
+      {
+        "l": "McDougall",
+        "f": "Hannah"
+      },
+      {
+        "l": "Mendoza",
+        "f": "Robin"
+      },
+      {
+        "l": "Miller",
+        "f": "David B"
+      },
+      {
+        "l": "Mills",
+        "f": "Michael"
+      },
+      {
+        "l": "Morrison",
+        "f": "Richard"
+      },
+      {
+        "l": "Narmour",
+        "f": "Louis"
+      },
+      {
+        "l": "Nguyen",
+        "f": "Nhung"
+      },
+      {
+        "l": "Nugent",
+        "f": "Lora"
+      },
+      {
+        "l": "Olson",
+        "f": "Scott"
+      },
+      {
+        "l": "Ouellette",
+        "f": "Daniel"
+      },
+      {
+        "l": "Parks",
+        "f": "Jeremy"
+      },
+      {
+        "l": "Peters",
+        "f": "Zach"
+      },
+      {
+        "l": "Peterson",
+        "f": "Timothy A"
+      },
+      {
+        "l": "Petricka",
+        "f": "Jessie"
+      },
+      {
+        "l": "Pino",
+        "f": "Juan M"
+      },
+      {
+        "l": "Polito",
+        "f": "Frank"
+      },
+      {
+        "l": "Potter",
+        "f": "Andrew C"
+      },
+      {
+        "l": "Preidl",
+        "f": "Matthias"
+      },
+      {
+        "l": "Price",
+        "f": "Gabriel"
+      },
+      {
+        "l": "Proctor",
+        "f": "Timothy"
+      },
+      {
+        "l": "Pugh",
+        "f": "McKinley"
+      },
+      {
+        "l": "Ratcliff",
+        "f": "Noah"
+      },
+      {
+        "l": "Raymondson",
+        "f": "Daisy"
+      },
+      {
+        "l": "Rhodes",
+        "f": "Peter"
+      },
+      {
+        "l": "Roman",
+        "f": "Conrad"
+      },
+      {
+        "l": "Roy",
+        "f": "Craig"
+      },
+      {
+        "l": "Ryan-Anderson",
+        "f": "Ciaran"
+      },
+      {
+        "l": "Sanchez",
+        "f": "Fernando Betanzo"
+      },
+      {
+        "l": "Sangiolo",
+        "f": "George"
+      },
+      {
+        "l": "Sawadski",
+        "f": "Tatiana"
+      },
+      {
+        "l": "Schaffer",
+        "f": "Andrew"
+      },
+      {
+        "l": "Schow",
+        "f": "Peter"
+      },
+      {
+        "l": "Sedlacek",
+        "f": "Jon"
+      },
+      {
+        "l": "Semenenko",
+        "f": "Henry"
+      },
+      {
+        "l": "Shevchuk",
+        "f": "Peter"
+      },
+      {
+        "l": "Shore",
+        "f": "Susan"
+      },
+      {
+        "l": "Siegfried",
+        "f": "Peter"
+      },
+      {
+        "l": "Singhal",
+        "f": "Kartik"
+      },
+      {
+        "l": "Sivarajah",
+        "f": "Seyon"
+      },
+      {
+        "l": "Skripka",
+        "f": "Thomas"
+      },
+      {
+        "l": "Sletten",
+        "f": "Lucas"
+      },
+      {
+        "l": "Spaun",
+        "f": "Ben"
+      },
+      {
+        "l": "Sprenkle",
+        "f": "R Tucker"
+      },
+      {
+        "l": "Stoufer",
+        "f": "Paul"
+      },
+      {
+        "l": "Tader",
+        "f": "Mariel"
+      },
+      {
+        "l": "Taylor",
+        "f": "Stephen F"
+      },
+      {
+        "l": "Thompson",
+        "f": "Travis H"
+      },
+      {
+        "l": "Tobey",
+        "f": "Raanan"
+      },
+      {
+        "l": "Tran",
+        "f": "Anh"
+      },
+      {
+        "l": "Tran",
+        "f": "Tam"
+      },
+      {
+        "l": "Vittorini",
+        "f": "Grahame"
+      },
+      {
+        "l": "Volin",
+        "f": "Curtis"
+      },
+      {
+        "l": "Walker",
+        "f": "Jim"
+      },
+      {
+        "l": "White",
+        "f": "Sam"
+      },
+      {
+        "l": "Williams",
+        "f": "Garrett R"
+      },
+      {
+        "l": "Wilson",
+        "f": "Douglas"
+      },
+      {
+        "l": "Wolf",
+        "f": "Quinn"
+      },
+      {
+        "l": "Wringe",
+        "f": "Chester"
+      },
+      {
+        "l": "Young",
+        "f": "Kevin"
+      },
+      {
+        "l": "Zheng",
+        "f": "Jian"
+      },
+      {
+        "l": "Zuraski",
+        "f": "Kristen"
+      },
+      {
+        "l": "Baldwin",
+        "f": "Charles H"
+      },
+      {
+        "l": "Chernoguzov",
+        "f": "Alex"
+      },
+      {
+        "l": "Gaebler",
+        "f": "John P"
+      },
+      {
+        "l": "Sanders",
+        "f": "Steven J"
+      },
+      {
+        "l": "Neyenhuis",
+        "f": "Brian"
+      },
+      {
+        "l": "Stutz",
+        "f": "Russell"
+      },
+      {
+        "l": "Bohnet",
+        "f": "Justin G"
+      }
+    ],
+    [
+      {
+        "l": "Zhang",
+        "f": "Liwei"
+      },
+      {
+        "l": "Bufe",
+        "f": "Aaron"
+      },
+      {
+        "l": "Dean",
+        "f": "Joshua F"
+      },
+      {
+        "l": "Rocher-Ros",
+        "f": "Gerard"
+      },
+      {
+        "l": "Sponseller",
+        "f": "Ryan A"
+      },
+      {
+        "l": "Stanley",
+        "f": "Emily H"
+      },
+      {
+        "l": "Karlsson",
+        "f": "Jan"
+      },
+      {
+        "l": "Butman",
+        "f": "David E"
+      },
+      {
+        "l": "Liu",
+        "f": "Ran"
+      },
+      {
+        "l": "Hou",
+        "f": "Lijun"
+      },
+      {
+        "l": "Ding",
+        "f": "Jinzhi"
+      },
+      {
+        "l": "Piao",
+        "f": "Shilong"
+      },
+      {
+        "l": "Xia",
+        "f": "Xinghui"
+      },
+      {
+        "l": "Battin",
+        "f": "Tom J"
+      }
+    ],
+    [
+      {
+        "l": "Zhang",
+        "f": "Zhejing"
+      },
+      {
+        "l": "Canela",
+        "f": "Andres"
+      },
+      {
+        "l": "Kurisu",
+        "f": "Junko"
+      },
+      {
+        "l": "Zou",
+        "f": "Peilin"
+      },
+      {
+        "l": "Kawaue",
+        "f": "Takumi"
+      },
+      {
+        "l": "Nakazawa",
+        "f": "Naotaka"
+      },
+      {
+        "l": "Takeda",
+        "f": "Noriko"
+      },
+      {
+        "l": "Saeki",
+        "f": "Mai"
+      },
+      {
+        "l": "Utsunomiya",
+        "f": "Masaki"
+      },
+      {
+        "l": "Bilgic",
+        "f": "Merve"
+      },
+      {
+        "l": "Ishidate",
+        "f": "Fumiyoshi"
+      },
+      {
+        "l": "Grenci",
+        "f": "Gianluca"
+      },
+      {
+        "l": "Furuta",
+        "f": "Takahiro"
+      },
+      {
+        "l": "Kishi",
+        "f": "Yusuke"
+      },
+      {
+        "l": "Sasanuma",
+        "f": "Hiroyuki"
+      },
+      {
+        "l": "Kengaku",
+        "f": "Mineko"
       }
     ],
     [
@@ -1914,6 +3050,194 @@
     ],
     [
       {
+        "l": "Krumpen",
+        "f": "Thomas"
+      },
+      {
+        "l": "Meyer-Kaiser",
+        "f": "Kirstin S"
+      },
+      {
+        "l": "Wekerle",
+        "f": "Claudia"
+      },
+      {
+        "l": "Ackermann",
+        "f": "Lars"
+      },
+      {
+        "l": "Castle",
+        "f": "Deonie"
+      },
+      {
+        "l": "Bergmann",
+        "f": "Melanie"
+      },
+      {
+        "l": "Hoppmann",
+        "f": "Mario"
+      },
+      {
+        "l": "Khan",
+        "f": "Shfaqat A"
+      },
+      {
+        "l": "Purser",
+        "f": "Autun"
+      },
+      {
+        "l": "Schmith\u00fcsen",
+        "f": "Holger"
+      }
+    ],
+    [
+      {
+        "l": "Gaskin",
+        "f": "Thomas"
+      },
+      {
+        "l": "Abel",
+        "f": "Guy J"
+      }
+    ],
+    [
+      {
+        "l": "Kistwal",
+        "f": "Tanuja"
+      },
+      {
+        "l": "Kanhaiya",
+        "f": "Krishan"
+      },
+      {
+        "l": "Buchmann",
+        "f": "Adrian"
+      },
+      {
+        "l": "Ma",
+        "f": "Chen"
+      },
+      {
+        "l": "Nikoli\u0107",
+        "f": "Jana"
+      },
+      {
+        "l": "Ackermann",
+        "f": "Julia"
+      },
+      {
+        "l": "Galonska",
+        "f": "Phillip"
+      },
+      {
+        "l": "Nalige",
+        "f": "Sanjana S"
+      },
+      {
+        "l": "Sardari",
+        "f": "Vahideh"
+      },
+      {
+        "l": "Sudarsan",
+        "f": "Aishwarya"
+      },
+      {
+        "l": "Havenith",
+        "f": "Martina"
+      },
+      {
+        "l": "Sulpizi",
+        "f": "Marialore"
+      },
+      {
+        "l": "Kruss",
+        "f": "Sebastian"
+      }
+    ],
+    [
+      {
+        "l": "Peng",
+        "f": "Xiaotong"
+      },
+      {
+        "l": "Zhou",
+        "f": "Peng"
+      },
+      {
+        "l": "Song",
+        "f": "Xikun"
+      },
+      {
+        "l": "Bianucci",
+        "f": "Giovanni"
+      },
+      {
+        "l": "Du",
+        "f": "Mengran"
+      },
+      {
+        "l": "Collareta",
+        "f": "Alberto"
+      },
+      {
+        "l": "Gao",
+        "f": "Zhaoming"
+      },
+      {
+        "l": "Xie",
+        "f": "Tongtong"
+      },
+      {
+        "l": "Teng",
+        "f": "Mingyao"
+      },
+      {
+        "l": "Leduc",
+        "f": "Daniel"
+      },
+      {
+        "l": "Mills",
+        "f": "Sadie"
+      },
+      {
+        "l": "Ta",
+        "f": "Kaiwen"
+      },
+      {
+        "l": "Li",
+        "f": "Jiwei"
+      },
+      {
+        "l": "Wei",
+        "f": "Taoshu"
+      },
+      {
+        "l": "Dasgupta",
+        "f": "Shamik"
+      },
+      {
+        "l": "Liu",
+        "f": "Hao"
+      },
+      {
+        "l": "He",
+        "f": "Yuan"
+      },
+      {
+        "l": "Xu",
+        "f": "Wenjing"
+      },
+      {
+        "l": "Liu",
+        "f": "Shuangquan"
+      },
+      {
+        "l": "Zhang",
+        "f": "Hanyu"
+      }
+    ],
+    [
+      {
         "l": "Wei",
         "f": "Qi"
       },
@@ -1996,6 +3320,36 @@
       {
         "l": "Feingold",
         "f": "Graham"
+      }
+    ],
+    [
+      {
+        "l": "Morton",
+        "f": "Oscar"
+      },
+      {
+        "l": "Bousfield",
+        "f": "Christopher G"
+      },
+      {
+        "l": "D\u00e9gny Val\u00e9",
+        "f": "Prince"
+      },
+      {
+        "l": "Lamb",
+        "f": "Ieuan"
+      },
+      {
+        "l": "Maus",
+        "f": "Victor"
+      },
+      {
+        "l": "Bryant",
+        "f": "Robert G"
+      },
+      {
+        "l": "Edwards",
+        "f": "David P"
       }
     ],
     [
@@ -2603,572 +3957,6 @@
       },
       {
         "l": "ALPHA Collaboration",
-        "f": ""
-      }
-    ],
-    [
-      {
-        "l": "Tyshkovskiy",
-        "f": "Alexander"
-      },
-      {
-        "l": "Kholdina",
-        "f": "Daria"
-      },
-      {
-        "l": "Davitadze",
-        "f": "Maria"
-      },
-      {
-        "l": "Moli\u00e8re",
-        "f": "Adrian"
-      },
-      {
-        "l": "Moldakozhayev",
-        "f": "Alibek"
-      },
-      {
-        "l": "Tongu",
-        "f": "Yoshiyasu"
-      },
-      {
-        "l": "Kasahara",
-        "f": "Tomoko"
-      },
-      {
-        "l": "Glubokov",
-        "f": "Dmitrii"
-      },
-      {
-        "l": "Eames",
-        "f": "Alec"
-      },
-      {
-        "l": "Kats",
-        "f": "Leonid M"
-      },
-      {
-        "l": "Vladimirova",
-        "f": "Anastasiya"
-      },
-      {
-        "l": "Ying",
-        "f": "Kejun"
-      },
-      {
-        "l": "Liu",
-        "f": "Hanna"
-      },
-      {
-        "l": "Zhang",
-        "f": "Bohan"
-      },
-      {
-        "l": "Khasanova",
-        "f": "Uma"
-      },
-      {
-        "l": "Moqri",
-        "f": "Mahdi"
-      },
-      {
-        "l": "Van Raamsdonk",
-        "f": "Jeremy M"
-      },
-      {
-        "l": "Harrison",
-        "f": "David E"
-      },
-      {
-        "l": "Strong",
-        "f": "Randy"
-      },
-      {
-        "l": "Abe",
-        "f": "Takaaki"
-      },
-      {
-        "l": "Dmitriev",
-        "f": "Sergey E"
-      },
-      {
-        "l": "Gladyshev",
-        "f": "Vadim N"
-      }
-    ],
-    [
-      {
-        "l": "He",
-        "f": "Yue"
-      },
-      {
-        "l": "Riahi",
-        "f": "Keywan"
-      },
-      {
-        "l": "Gidden",
-        "f": "Matthew J"
-      },
-      {
-        "l": "Piao",
-        "f": "Shilong"
-      },
-      {
-        "l": "Wang",
-        "f": "Tao"
-      },
-      {
-        "l": "Gasser",
-        "f": "Thomas"
-      }
-    ],
-    [
-      {
-        "l": "Canepa",
-        "f": "Jacob"
-      },
-      {
-        "l": "Ruiz-Arroyo",
-        "f": "Victor M"
-      },
-      {
-        "l": "Schlamowitz",
-        "f": "Netanya S"
-      },
-      {
-        "l": "Nam",
-        "f": "Yunsun"
-      }
-    ],
-    [
-      {
-        "l": "Ghai",
-        "f": "Sakshi"
-      },
-      {
-        "l": "Vuorre",
-        "f": "Matti"
-      },
-      {
-        "l": "Kardefelt-Winther",
-        "f": "Daniel"
-      },
-      {
-        "l": "Ferguson",
-        "f": "Amanda M"
-      },
-      {
-        "l": "Kurten",
-        "f": "Sebastian"
-      },
-      {
-        "l": "Livingstone",
-        "f": "Sonia"
-      },
-      {
-        "l": "Przybylski",
-        "f": "Andrew K"
-      },
-      {
-        "l": "Orben",
-        "f": "Amy"
-      }
-    ],
-    [
-      {
-        "l": "Sui",
-        "f": "Xinxin"
-      },
-      {
-        "l": "Nielsen-Gammon",
-        "f": "John"
-      },
-      {
-        "l": "Yang",
-        "f": "Zong-Liang"
-      },
-      {
-        "l": "Niyogi",
-        "f": "Dev"
-      }
-    ],
-    [
-      {
-        "l": "Jiang",
-        "f": "Zhejun"
-      },
-      {
-        "l": "Pan",
-        "f": "Shengzhe"
-      },
-      {
-        "l": "Chen",
-        "f": "Jianqi"
-      },
-      {
-        "l": "Zhu",
-        "f": "Mingyu"
-      },
-      {
-        "l": "Zhao",
-        "f": "Chenhao"
-      },
-      {
-        "l": "Wang",
-        "f": "Yiwen"
-      },
-      {
-        "l": "Zhang",
-        "f": "Ru"
-      },
-      {
-        "l": "Lu",
-        "f": "Jianshi"
-      },
-      {
-        "l": "Han",
-        "f": "Lulu"
-      },
-      {
-        "l": "Xiong",
-        "f": "Suwen"
-      },
-      {
-        "l": "Wu",
-        "f": "Dian"
-      },
-      {
-        "l": "Li",
-        "f": "Wenxue"
-      },
-      {
-        "l": "Jiang",
-        "f": "Shicheng"
-      },
-      {
-        "l": "Ni",
-        "f": "Hongcheng"
-      },
-      {
-        "l": "Wu",
-        "f": "Jian"
-      }
-    ],
-    [
-      {
-        "l": "Tian",
-        "f": "Lucas Y"
-      },
-      {
-        "l": "Garz\u00f3n Gupta",
-        "f": "Kedar"
-      },
-      {
-        "l": "Hanuska",
-        "f": "Daniel J"
-      },
-      {
-        "l": "Rouse",
-        "f": "Adam G"
-      },
-      {
-        "l": "Eldridge",
-        "f": "Mark A G"
-      },
-      {
-        "l": "Schieber",
-        "f": "Marc H"
-      },
-      {
-        "l": "Wang",
-        "f": "Xiao-Jing"
-      },
-      {
-        "l": "Tenenbaum",
-        "f": "Joshua B"
-      },
-      {
-        "l": "Freiwald",
-        "f": "Winrich A"
-      }
-    ],
-    [
-      {
-        "l": "O'Chan",
-        "f": "Jennifer C"
-      },
-      {
-        "l": "Di Salvo",
-        "f": "Giuseppina"
-      },
-      {
-        "l": "Cunningham",
-        "f": "Ashley M"
-      },
-      {
-        "l": "Dutta",
-        "f": "Sohini"
-      },
-      {
-        "l": "Brindley",
-        "f": "Elizabeth"
-      },
-      {
-        "l": "Weekley",
-        "f": "Benjamin H"
-      },
-      {
-        "l": "Chen",
-        "f": "Winnie"
-      },
-      {
-        "l": "Iyer",
-        "f": "Rasika R"
-      },
-      {
-        "l": "Wan",
-        "f": "Ethan"
-      },
-      {
-        "l": "Zhang",
-        "f": "Cindy"
-      },
-      {
-        "l": "Mechawar",
-        "f": "Naguib"
-      },
-      {
-        "l": "Turecki",
-        "f": "Gustavo"
-      },
-      {
-        "l": "Maze",
-        "f": "Ian"
-      }
-    ],
-    [
-      {
-        "l": "Zhang",
-        "f": "Sen"
-      },
-      {
-        "l": "Xiao",
-        "f": "Dingbang"
-      },
-      {
-        "l": "Wang",
-        "f": "Fei"
-      },
-      {
-        "l": "Huang",
-        "f": "Ran"
-      },
-      {
-        "l": "Yu",
-        "f": "Lei"
-      },
-      {
-        "l": "Zhou",
-        "f": "Ning"
-      },
-      {
-        "l": "He",
-        "f": "Kaixuan"
-      },
-      {
-        "l": "Wu",
-        "f": "Xuezhong"
-      },
-      {
-        "l": "Nori",
-        "f": "Franco"
-      },
-      {
-        "l": "Jing",
-        "f": "Hui"
-      },
-      {
-        "l": "Zhou",
-        "f": "Xin"
-      }
-    ],
-    [
-      {
-        "l": "Yang",
-        "f": "Tinghuan"
-      },
-      {
-        "l": "Zhao",
-        "f": "Erxin"
-      },
-      {
-        "l": "Wu",
-        "f": "Nan"
-      },
-      {
-        "l": "Chang",
-        "f": "Xiaoming"
-      },
-      {
-        "l": "Tian",
-        "f": "Chenqing"
-      },
-      {
-        "l": "Wang",
-        "f": "Hai-Long"
-      },
-      {
-        "l": "Zhang",
-        "f": "Lu"
-      },
-      {
-        "l": "Gu",
-        "f": "Nannan"
-      },
-      {
-        "l": "Nie",
-        "f": "Ting"
-      },
-      {
-        "l": "Yang",
-        "f": "Ye"
-      },
-      {
-        "l": "Zhang",
-        "f": "Zheng"
-      },
-      {
-        "l": "Xu",
-        "f": "Tianfei"
-      },
-      {
-        "l": "Chen",
-        "f": "Xin"
-      },
-      {
-        "l": "Wang",
-        "f": "Shuang"
-      },
-      {
-        "l": "Niu",
-        "f": "Tianqi"
-      },
-      {
-        "l": "Xu",
-        "f": "Niansheng"
-      },
-      {
-        "l": "Ma",
-        "f": "Chuang"
-      },
-      {
-        "l": "Li",
-        "f": "Haojin"
-      },
-      {
-        "l": "Yan",
-        "f": "Buyi"
-      },
-      {
-        "l": "Ding",
-        "f": "Zicheng"
-      },
-      {
-        "l": "Liu",
-        "f": "Shengzhong Frank"
-      },
-      {
-        "l": "Gao",
-        "f": "Feng"
-      },
-      {
-        "l": "Zhao",
-        "f": "Kui"
-      }
-    ],
-    [
-      {
-        "l": "Huang",
-        "f": "Chenyan"
-      },
-      {
-        "l": "Sun",
-        "f": "Amanda"
-      },
-      {
-        "l": "Reyes",
-        "f": "Jojo"
-      },
-      {
-        "l": "Ribeiro de Souza",
-        "f": "Jessica"
-      },
-      {
-        "l": "Cafiero",
-        "f": "Thomas R"
-      },
-      {
-        "l": "Antunes Fernandes",
-        "f": "Krist H"
-      },
-      {
-        "l": "Oliveira",
-        "f": "Fabricio Marcus Silva"
-      },
-      {
-        "l": "Qiao",
-        "f": "Yujie"
-      },
-      {
-        "l": "Gazzinelli-Guimaraes",
-        "f": "Pedro"
-      },
-      {
-        "l": "Pritykin",
-        "f": "Yuri"
-      },
-      {
-        "l": "Lim",
-        "f": "Ai Ing"
-      }
-    ],
-    [
-      {
-        "l": "Ou",
-        "f": "Dequan"
-      },
-      {
-        "l": "Hagenaars",
-        "f": "Jesse J"
-      },
-      {
-        "l": "Jankowski",
-        "f": "Maciej R"
-      },
-      {
-        "l": "Firlefyn",
-        "f": "Michiel V M"
-      },
-      {
-        "l": "De Wagter",
-        "f": "Christophe"
-      },
-      {
-        "l": "Muijres",
-        "f": "Florian T"
-      },
-      {
-        "l": "Degen",
-        "f": "Jacqueline"
-      },
-      {
-        "l": "de Croon",
-        "f": "Guido C H E"
-      }
-    ],
-    [
-      {
-        "l": "NCD Risk Factor Collaboration (NCD-RisC)",
         "f": ""
       }
     ],
@@ -4636,6 +5424,136 @@
       {
         "l": "Rennert",
         "f": "Lior"
+      }
+    ],
+    [
+      {
+        "l": "Sperry",
+        "f": "Jason L"
+      },
+      {
+        "l": "Guyette",
+        "f": "Francis X"
+      },
+      {
+        "l": "Cotton",
+        "f": "Bryan A"
+      },
+      {
+        "l": "Luther",
+        "f": "James F"
+      },
+      {
+        "l": "Utarnachitt",
+        "f": "Richard B"
+      },
+      {
+        "l": "Kutcher",
+        "f": "Matthew E"
+      },
+      {
+        "l": "Daley",
+        "f": "Brian J"
+      },
+      {
+        "l": "Peetz",
+        "f": "Allan B"
+      },
+      {
+        "l": "Patel",
+        "f": "Mayur B"
+      },
+      {
+        "l": "Goodman",
+        "f": "Michael D"
+      },
+      {
+        "l": "Claridge",
+        "f": "Jeffrey A"
+      },
+      {
+        "l": "Patel",
+        "f": "Nimitt"
+      },
+      {
+        "l": "Harbrecht",
+        "f": "Brian G"
+      },
+      {
+        "l": "Hashmi",
+        "f": "Zain G"
+      },
+      {
+        "l": "Zarychanski",
+        "f": "Ryan"
+      },
+      {
+        "l": "Neal",
+        "f": "Matthew D"
+      },
+      {
+        "l": "Yazer",
+        "f": "Mark H"
+      },
+      {
+        "l": "Martin-Gill",
+        "f": "Christian"
+      },
+      {
+        "l": "Vincent",
+        "f": "Laura E"
+      },
+      {
+        "l": "Harner",
+        "f": "Ashley M"
+      },
+      {
+        "l": "Meyer",
+        "f": "David E"
+      },
+      {
+        "l": "Latimer",
+        "f": "Andrew J"
+      },
+      {
+        "l": "Robinson",
+        "f": "Bryce R"
+      },
+      {
+        "l": "McKnight",
+        "f": "Catherine L"
+      },
+      {
+        "l": "Hinckley",
+        "f": "William R"
+      },
+      {
+        "l": "Miller",
+        "f": "Keith R"
+      },
+      {
+        "l": "Jansen",
+        "f": "Jan O"
+      },
+      {
+        "l": "Martin",
+        "f": "Douglas"
+      },
+      {
+        "l": "Fox",
+        "f": "Erin E"
+      },
+      {
+        "l": "Rosario-Rivera",
+        "f": "Bedda L"
+      },
+      {
+        "l": "Wisniewski",
+        "f": "Stephen R"
+      },
+      {
+        "l": "TOWAR Study Group",
+        "f": ""
       }
     ],
     [
@@ -6569,123 +7487,16 @@
         "l": "Williams",
         "f": "Bryan"
       }
-    ],
-    [
-      {
-        "l": "Durbin",
-        "f": "Anna P"
-      },
-      {
-        "l": "Van Wesenbeeck",
-        "f": "Liesbeth"
-      },
-      {
-        "l": "Pierce",
-        "f": "Kristen K"
-      },
-      {
-        "l": "Herrera-Taracena",
-        "f": "Guillermo"
-      },
-      {
-        "l": "Ebone",
-        "f": "Laura"
-      },
-      {
-        "l": "Buelens",
-        "f": "Annemie"
-      },
-      {
-        "l": "Lutton",
-        "f": "Patricia"
-      },
-      {
-        "l": "Sabundayo",
-        "f": "Beulah P"
-      },
-      {
-        "l": "Van Eygen",
-        "f": "Veerle"
-      },
-      {
-        "l": "De Clerck",
-        "f": "Kim"
-      },
-      {
-        "l": "Fetter",
-        "f": "Isabel"
-      },
-      {
-        "l": "Voge",
-        "f": "Natalia V"
-      },
-      {
-        "l": "Fang",
-        "f": "Xi"
-      },
-      {
-        "l": "Goeyvaerts",
-        "f": "Nele"
-      },
-      {
-        "l": "Vandendijck",
-        "f": "Yannick"
-      },
-      {
-        "l": "Mayfield",
-        "f": "Jeffrey"
-      },
-      {
-        "l": "Lenz",
-        "f": "Oliver"
-      },
-      {
-        "l": "De Meyer",
-        "f": "Sandra"
-      },
-      {
-        "l": "Kakuda",
-        "f": "Thomas N"
-      },
-      {
-        "l": "He",
-        "f": "Huili"
-      },
-      {
-        "l": "Amaro-Carambot",
-        "f": "Em\u00e9rito"
-      },
-      {
-        "l": "Akli",
-        "f": "Ruxandra Draghia"
-      },
-      {
-        "l": "Carmolli",
-        "f": "Marya"
-      },
-      {
-        "l": "De Marez",
-        "f": "Tine"
-      },
-      {
-        "l": "Whitehead",
-        "f": "Stephen S"
-      },
-      {
-        "l": "Van Loock",
-        "f": "Marnix"
-      },
-      {
-        "l": "Rasschaert",
-        "f": "Freya"
-      }
     ]
   ],
   "title": [
+    "Assessing early effects of Australia's Social Media Minimum Age Act on adolescents' social media use: observational study",
+    "Stereotactic radiotherapy for neovascular age related macular degeneration: year 3 and 4 extended follow up results of a randomised, double masked, sham controlled, device trial (STAR)",
     "Reporting of Cohort and Routinely Collected Data in Randomised Controlled Trial Protocols (SPIRIT-ROUTINE): extension checklist with explanation and elaboration",
     "Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process",
     "Low concentration atropine eye drops and progression of myopia in children: multicentre placebo controlled, double masked, randomised trial in the UK (CHAMP-UK)",
     "Advances in supporting development in autistic children and youth",
+    "Global, regional, and national levels and trends in older child, adolescent, and youth (5-24 years) all cause mortality from 1990 to 2024: modelling study",
     "Global, regional, and national levels and trends in under 5, infant, and neonatal mortality during 1990-2024 with scenario based projections to 2030: modelling study",
     "Estimates of global causes of death for children and adolescents aged 5-19 in 2000-24: secondary data analysis using bayesian multinomial logistic regression",
     "Systematic estimates of global causes of neonatal and under 5 mortality in 2000-24: secondary data analysis using bayesian multinomial logistic regression",
@@ -6704,34 +7515,31 @@
     "Accelerated continuous theta burst stimulation targeting left primary motor cortex for children with autism spectrum disorder: multicentre randomised sham controlled trial",
     "Benzodiazepine or Z-hypnotic use during pregnancy and risk of psychiatric disorders in children: population based cohort study",
     "Overcommercialisation of dental practice in England and decline in oral health",
-    "Home environment conditions during childhood and psychosocial outcomes across three generations in Sweden: population based adoption-discordant sibling comparison study",
-    "Effectiveness of interventions to increase vaccine uptake: component network meta-analysis",
-    "Prenatal exposure to buprenorphine or methadone and adverse neurodevelopmental outcomes: population based cohort study",
+    "Aerosols and hydrocarbons in the atmosphere of a white dwarf planet",
+    "An ECG biomarker for sudden cardiac death discovered with deep learning",
+    "Ductile alloys offering 100 MPa tensile strength at 2,400 \u00b0C",
+    "Fourier pixels for bidirectional light control",
+    "Chiral laser gyroscopes breaking the lock-in limit",
+    "A 98-qubit trapped-ion quantum computer with all-to-all connectivity",
+    "Rock weathering can counteract river CO(2) emissions induced by permafrost thaw",
+    "Confined migration induces non-lethal DNA damage in developing neurons",
     "Lethal plague outbreaks in Lake Baikal hunter-gatherers 5,500 years ago",
     "A prototype differential atom interferometer for fundamental physics",
     "Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis",
+    "Amplified Arctic iceberg traffic reshapes benthic biodiversity",
+    "Deep learning four decades of human migration",
+    "Light-induced quantum friction of carbon nanotubes in water",
+    "A 5.3-million-year-old deep-sea whale necropolis in the Diamantina Zone",
     "Chiral superfluorescence from perovskite superlattices at room temperature",
     "Analysis of trade-offs of post-sorting plastic packaging",
     "Earth's east-west albedo symmetry",
+    "Mining triggers extensive additional deforestation in sub-Saharan Africa",
     "Enamel nanocrystal misorientation increased with meat-eating and agriculture",
     "Relativistic electron acceleration at the bow shock of Jupiter and beyond",
     "The association between autistic traits and trajectories of anxiety in middle-aged and older adults: an 8-year growth mixture model analysis",
     "Multiscale heterogeneity of atypical functional connectivity in autism",
     "A direct black-hole mass measurement in a little red dot at high redshift",
     "Four ppm measurement of the antihydrogen ground-state hyperfine splitting",
-    "Universal transcriptomic hallmarks of mammalian ageing and mortality",
-    "Temporary carbon dioxide removal to offset short-lived climate forcers",
-    "Substrate selectivity of the human RNA m(5)C methyltransferase NSUN2",
-    "Technology mediation in child sexual exploitation and abuse in Africa and Asia",
-    "Divergent urban storm response to convective, frontal and tropical systems",
-    "Nonlinear atomic tunnelling boosted by bright squeezed vacuum",
-    "Neural representation of action symbols in primate frontal cortex",
-    "Dopamine drives persistent remodelling of the maternal brain",
-    "Cusp-singularity-enhanced Coriolis effect for sensitive chip-scale gyroscopes",
-    "Stereoelectronic manipulation of ligands for perovskite solar cells",
-    "Eosinophils drive intestinal remodelling and innate defence in reproduction",
-    "Efficient robot navigation inspired by honeybee learning flights",
-    "Obesity rise plateaus in developed nations and accelerates in developing nations",
     "Safety and efficacy of the monoclonal antibody L9LS for malaria prevention in children exposed to perennial malaria transmission in Kenya: a randomised, double-blind, placebo-controlled, phase 2 trial",
     "Adult obesity and risk of severe infections: a multicohort study with global burden estimates",
     "Assessment of adverse effects attributed to statin therapy in product labels: a meta-analysis of double-blind randomised controlled trials",
@@ -6759,6 +7567,7 @@
     "A multifaceted intervention to improve diagnosis and early management of hospitalised patients with suspected acute brain infections in Brazil, India, and Malawi: an international multicentre intervention study",
     "Kidney Transplantation in Two Highly Sensitized Candidates after CAR T-Cell Therapy",
     "Clusters of Concern - Spatial Link between Childhood Undervaccination and Measles Outbreaks in South Carolina",
+    "Prehospital Resuscitation with Type O Whole Blood for Trauma and Hemorrhage",
     "Azithromycin for Preschoolers with Wheezing in the Emergency Department",
     "Dulaglutide-Associated Choroidal Lymphoid Hyperplasia",
     "Pulmonary Tuberculosis Detection with MiniDock MTB Using Swab Samples",
@@ -6780,10 +7589,35 @@
     "Trial of High-Dose Oral Rifampin in Adults with Tuberculous Meningitis",
     "Molecular Evidence of Multiorgan Damage in Patients with Immune-Related Adverse Events",
     "Teclistamab plus Daratumumab in Relapsed or Refractory Multiple Myeloma",
-    "Adrenal Aldosterone Synthase Expression Imaging in Primary Aldosteronism",
-    "Daily Mosnodenvir as Dengue Prophylaxis in a Controlled Human Infection Model"
+    "Adrenal Aldosterone Synthase Expression Imaging in Primary Aldosteronism"
   ],
   "journal": [
+    {
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
+      "volume": 393,
+      "issue": null,
+      "page": {
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e363695"
+    },
+    {
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
+      "volume": 393,
+      "issue": null,
+      "page": {
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e729694"
+    },
     {
       "name": {
         "full": "BMJ (Clinical research ed.)",
@@ -6835,6 +7669,19 @@
         "end": ""
       },
       "elocator": "e086562"
+    },
+    {
+      "name": {
+        "full": "BMJ (Clinical research ed.)",
+        "short": "BMJ"
+      },
+      "volume": 393,
+      "issue": null,
+      "page": {
+        "start": "",
+        "end": ""
+      },
+      "elocator": "e088685"
     },
     {
       "name": {
@@ -7072,42 +7919,107 @@
     },
     {
       "name": {
-        "full": "BMJ (Clinical research ed.)",
-        "short": "BMJ"
+        "full": "Nature",
+        "short": "Nature"
       },
-      "volume": 393,
-      "issue": null,
+      "volume": 655,
+      "issue": 8121,
       "page": {
-        "start": "",
-        "end": ""
+        "start": 76,
+        "end": 80
       },
-      "elocator": "e087844"
+      "elocator": ""
     },
     {
       "name": {
-        "full": "BMJ (Clinical research ed.)",
-        "short": "BMJ"
+        "full": "Nature",
+        "short": "Nature"
       },
-      "volume": 393,
-      "issue": null,
+      "volume": 655,
+      "issue": 8121,
       "page": {
-        "start": "",
-        "end": ""
+        "start": 210,
+        "end": 218
       },
-      "elocator": "e087578"
+      "elocator": ""
     },
     {
       "name": {
-        "full": "BMJ (Clinical research ed.)",
-        "short": "BMJ"
+        "full": "Nature",
+        "short": "Nature"
       },
-      "volume": 393,
-      "issue": null,
+      "volume": 655,
+      "issue": 8121,
       "page": {
-        "start": "",
-        "end": ""
+        "start": 109,
+        "end": 115
       },
-      "elocator": "e087321"
+      "elocator": ""
+    },
+    {
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
+      "volume": 655,
+      "issue": 8121,
+      "page": {
+        "start": 87,
+        "end": 92
+      },
+      "elocator": ""
+    },
+    {
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
+      "volume": 654,
+      "issue": 8120,
+      "page": {
+        "start": 926,
+        "end": 931
+      },
+      "elocator": ""
+    },
+    {
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
+      "volume": 655,
+      "issue": 8121,
+      "page": {
+        "start": 81,
+        "end": 86
+      },
+      "elocator": ""
+    },
+    {
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
+      "volume": 655,
+      "issue": 8121,
+      "page": {
+        "start": 125,
+        "end": 132
+      },
+      "elocator": ""
+    },
+    {
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
+      "volume": 654,
+      "issue": 8120,
+      "page": {
+        "start": 1098,
+        "end": 1107
+      },
+      "elocator": ""
     },
     {
       "name": {
@@ -7154,6 +8066,58 @@
         "short": "Nature"
       },
       "volume": 654,
+      "issue": 8120,
+      "page": {
+        "start": 963,
+        "end": 970
+      },
+      "elocator": ""
+    },
+    {
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
+      "volume": 655,
+      "issue": 8121,
+      "page": {
+        "start": 148,
+        "end": 157
+      },
+      "elocator": ""
+    },
+    {
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
+      "volume": 654,
+      "issue": 8120,
+      "page": {
+        "start": 941,
+        "end": 947
+      },
+      "elocator": ""
+    },
+    {
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
+      "volume": 654,
+      "issue": 8120,
+      "page": {
+        "start": 978,
+        "end": 983
+      },
+      "elocator": ""
+    },
+    {
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
+      "volume": 654,
       "issue": 8118,
       "page": {
         "start": 369,
@@ -7184,6 +8148,19 @@
       "page": {
         "start": 676,
         "end": 682
+      },
+      "elocator": ""
+    },
+    {
+      "name": {
+        "full": "Nature",
+        "short": "Nature"
+      },
+      "volume": 654,
+      "issue": 8120,
+      "page": {
+        "start": 971,
+        "end": 977
       },
       "elocator": ""
     },
@@ -7262,175 +8239,6 @@
       "page": {
         "start": 1022,
         "end": 1026
-      },
-      "elocator": ""
-    },
-    {
-      "name": {
-        "full": "Nature",
-        "short": "Nature"
-      },
-      "volume": 654,
-      "issue": 8117,
-      "page": {
-        "start": 173,
-        "end": 188
-      },
-      "elocator": ""
-    },
-    {
-      "name": {
-        "full": "Nature",
-        "short": "Nature"
-      },
-      "volume": 654,
-      "issue": 8118,
-      "page": {
-        "start": 391,
-        "end": 397
-      },
-      "elocator": ""
-    },
-    {
-      "name": {
-        "full": "Nature",
-        "short": "Nature"
-      },
-      "volume": null,
-      "issue": null,
-      "page": {
-        "start": "",
-        "end": ""
-      },
-      "elocator": ""
-    },
-    {
-      "name": {
-        "full": "Nature",
-        "short": "Nature"
-      },
-      "volume": 654,
-      "issue": 8118,
-      "page": {
-        "start": 408,
-        "end": 418
-      },
-      "elocator": ""
-    },
-    {
-      "name": {
-        "full": "Nature",
-        "short": "Nature"
-      },
-      "volume": 653,
-      "issue": 8116,
-      "page": {
-        "start": 1078,
-        "end": 1084
-      },
-      "elocator": ""
-    },
-    {
-      "name": {
-        "full": "Nature",
-        "short": "Nature"
-      },
-      "volume": 654,
-      "issue": 8118,
-      "page": {
-        "start": 356,
-        "end": 360
-      },
-      "elocator": ""
-    },
-    {
-      "name": {
-        "full": "Nature",
-        "short": "Nature"
-      },
-      "volume": 654,
-      "issue": 8117,
-      "page": {
-        "start": 152,
-        "end": 162
-      },
-      "elocator": ""
-    },
-    {
-      "name": {
-        "full": "Nature",
-        "short": "Nature"
-      },
-      "volume": 654,
-      "issue": 8118,
-      "page": {
-        "start": 465,
-        "end": 475
-      },
-      "elocator": ""
-    },
-    {
-      "name": {
-        "full": "Nature",
-        "short": "Nature"
-      },
-      "volume": 653,
-      "issue": 8115,
-      "page": {
-        "start": 700,
-        "end": 706
-      },
-      "elocator": ""
-    },
-    {
-      "name": {
-        "full": "Nature",
-        "short": "Nature"
-      },
-      "volume": 654,
-      "issue": 8119,
-      "page": {
-        "start": 660,
-        "end": 667
-      },
-      "elocator": ""
-    },
-    {
-      "name": {
-        "full": "Nature",
-        "short": "Nature"
-      },
-      "volume": 654,
-      "issue": 8117,
-      "page": {
-        "start": 209,
-        "end": 218
-      },
-      "elocator": ""
-    },
-    {
-      "name": {
-        "full": "Nature",
-        "short": "Nature"
-      },
-      "volume": 653,
-      "issue": 8116,
-      "page": {
-        "start": 1039,
-        "end": 1046
-      },
-      "elocator": ""
-    },
-    {
-      "name": {
-        "full": "Nature",
-        "short": "Nature"
-      },
-      "volume": 653,
-      "issue": 8114,
-      "page": {
-        "start": 510,
-        "end": 518
       },
       "elocator": ""
     },
@@ -7790,6 +8598,19 @@
         "full": "The New England journal of medicine",
         "short": "N Engl J Med"
       },
+      "volume": 394,
+      "issue": 23,
+      "page": {
+        "start": 2317,
+        "end": 2328
+      },
+      "elocator": ""
+    },
+    {
+      "name": {
+        "full": "The New England journal of medicine",
+        "short": "N Engl J Med"
+      },
       "volume": null,
       "issue": null,
       "page": {
@@ -8070,22 +8891,19 @@
         "end": 2170
       },
       "elocator": ""
-    },
-    {
-      "name": {
-        "full": "The New England journal of medicine",
-        "short": "N Engl J Med"
-      },
-      "volume": 393,
-      "issue": 21,
-      "page": {
-        "start": 2107,
-        "end": 2118
-      },
-      "elocator": ""
     }
   ],
   "pub": [
+    {
+      "y": 2026,
+      "m": 6,
+      "d": 24
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": 18
+    },
     {
       "y": 2026,
       "m": 6,
@@ -8105,6 +8923,11 @@
       "y": 2026,
       "m": 6,
       "d": 10
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": 4
     },
     {
       "y": 2026,
@@ -8198,18 +9021,43 @@
     },
     {
       "y": 2026,
-      "m": 4,
-      "d": 22
+      "m": 7,
+      "d": null
     },
     {
       "y": 2026,
-      "m": 4,
-      "d": 15
+      "m": 7,
+      "d": null
     },
     {
       "y": 2026,
-      "m": 4,
-      "d": 15
+      "m": 7,
+      "d": null
+    },
+    {
+      "y": 2026,
+      "m": 7,
+      "d": null
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": null
+    },
+    {
+      "y": 2026,
+      "m": 7,
+      "d": null
+    },
+    {
+      "y": 2026,
+      "m": 7,
+      "d": null
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": null
     },
     {
       "y": 2026,
@@ -8233,6 +9081,31 @@
     },
     {
       "y": 2026,
+      "m": 7,
+      "d": null
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": null
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": null
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": null
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": null
+    },
+    {
+      "y": 2026,
       "m": 6,
       "d": null
     },
@@ -8259,71 +9132,6 @@
     {
       "y": 2026,
       "m": null,
-      "d": null
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": null
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": null
-    },
-    {
-      "y": 2026,
-      "m": 6,
-      "d": null
-    },
-    {
-      "y": 2026,
-      "m": 6,
-      "d": null
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": 27
-    },
-    {
-      "y": 2026,
-      "m": 6,
-      "d": null
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": null
-    },
-    {
-      "y": 2026,
-      "m": 6,
-      "d": null
-    },
-    {
-      "y": 2026,
-      "m": 6,
-      "d": null
-    },
-    {
-      "y": 2026,
-      "m": 6,
-      "d": null
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": null
-    },
-    {
-      "y": 2026,
-      "m": 6,
-      "d": null
-    },
-    {
-      "y": 2026,
-      "m": 6,
       "d": null
     },
     {
@@ -8473,6 +9281,11 @@
     },
     {
       "y": 2026,
+      "m": 6,
+      "d": 18
+    },
+    {
+      "y": 2026,
       "m": 5,
       "d": 18
     },
@@ -8575,11 +9388,6 @@
       "y": 2026,
       "m": 2,
       "d": 19
-    },
-    {
-      "y": 2025,
-      "m": 11,
-      "d": 27
     },
     {
       "y": 2025,
@@ -8715,6 +9523,31 @@
     },
     {
       "y": 2026,
+      "m": 7,
+      "d": 1
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": 24
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": 24
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": 24
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": 24
+    },
+    {
+      "y": 2026,
       "m": 6,
       "d": 17
     },
@@ -8722,6 +9555,41 @@
       "y": 2026,
       "m": 6,
       "d": 17
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": 17
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": 17
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": 17
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": 10
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": 10
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": 10
+    },
+    {
+      "y": 2026,
+      "m": 6,
+      "d": 10
     },
     {
       "y": 2026,
@@ -8756,6 +9624,11 @@
     {
       "y": 2026,
       "m": 6,
+      "d": 3
+    },
+    {
+      "y": 2026,
+      "m": 6,
       "d": 1
     },
     {
@@ -8772,71 +9645,6 @@
       "y": 2026,
       "m": 5,
       "d": 27
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": 27
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": 27
-    },
-    {
-      "y": null,
-      "m": null,
-      "d": null
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": 27
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": 20
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": 20
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": 20
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": 20
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": 20
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": 13
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": 13
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": 13
-    },
-    {
-      "y": 2026,
-      "m": 5,
-      "d": 13
     },
     {
       "y": null,
@@ -8974,6 +9782,11 @@
       "d": 20
     },
     {
+      "y": 2026,
+      "m": 5,
+      "d": 18
+    },
+    {
       "y": null,
       "m": null,
       "d": null
@@ -9082,14 +9895,17 @@
       "y": null,
       "m": null,
       "d": null
-    },
-    {
-      "y": null,
-      "m": null,
-      "d": null
     }
   ],
   "doi": [
+    {
+      "prefix": "10.1136",
+      "suffix": "bmj-2026-363695"
+    },
+    {
+      "prefix": "10.1136",
+      "suffix": "bmj-2026-729694"
+    },
     {
       "prefix": "10.1136",
       "suffix": "bmj-2025-087095"
@@ -9105,6 +9921,10 @@
     {
       "prefix": "10.1136",
       "suffix": "bmj-2025-086562"
+    },
+    {
+      "prefix": "10.1136",
+      "suffix": "bmj-2025-088685"
     },
     {
       "prefix": "10.1136",
@@ -9179,16 +9999,36 @@
       "suffix": "bmj-2025-088509"
     },
     {
-      "prefix": "10.1136",
-      "suffix": "bmj-2025-087844"
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10514-7"
     },
     {
-      "prefix": "10.1136",
-      "suffix": "bmj-2025-087578"
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10674-6"
     },
     {
-      "prefix": "10.1136",
-      "suffix": "bmj-2025-087321"
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10708-z"
+    },
+    {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10681-7"
+    },
+    {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10684-4"
+    },
+    {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10676-4"
+    },
+    {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10664-8"
+    },
+    {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10648-8"
     },
     {
       "prefix": "10.1038",
@@ -9204,6 +10044,22 @@
     },
     {
       "prefix": "10.1038",
+      "suffix": "s41586-026-10630-4"
+    },
+    {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10611-7"
+    },
+    {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10632-2"
+    },
+    {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10546-z"
+    },
+    {
+      "prefix": "10.1038",
       "suffix": "s41586-026-10637-x"
     },
     {
@@ -9213,6 +10069,10 @@
     {
       "prefix": "10.1038",
       "suffix": "s41586-026-10624-2"
+    },
+    {
+      "prefix": "10.1038",
+      "suffix": "s41586-026-10551-2"
     },
     {
       "prefix": "10.1038",
@@ -9237,58 +10097,6 @@
     {
       "prefix": "10.1038",
       "suffix": "s41586-026-10556-x"
-    },
-    {
-      "prefix": "10.1038",
-      "suffix": "s41586-026-10542-3"
-    },
-    {
-      "prefix": "10.1038",
-      "suffix": "s41586-026-10607-3"
-    },
-    {
-      "prefix": "10.1038",
-      "suffix": "s41586-026-10582-9"
-    },
-    {
-      "prefix": "10.1038",
-      "suffix": "s41586-026-10525-4"
-    },
-    {
-      "prefix": "10.1038",
-      "suffix": "s41586-026-10479-7"
-    },
-    {
-      "prefix": "10.1038",
-      "suffix": "s41586-026-10485-9"
-    },
-    {
-      "prefix": "10.1038",
-      "suffix": "s41586-026-10297-x"
-    },
-    {
-      "prefix": "10.1038",
-      "suffix": "s41586-026-10509-4"
-    },
-    {
-      "prefix": "10.1038",
-      "suffix": "s41586-026-10565-w"
-    },
-    {
-      "prefix": "10.1038",
-      "suffix": "s41586-026-10626-0"
-    },
-    {
-      "prefix": "10.1038",
-      "suffix": "s41586-026-10531-6"
-    },
-    {
-      "prefix": "10.1038",
-      "suffix": "s41586-026-10461-3"
-    },
-    {
-      "prefix": "10.1038",
-      "suffix": "s41586-026-10383-0"
     },
     {
       "prefix": "10.1016",
@@ -9400,6 +10208,10 @@
     },
     {
       "prefix": "10.1056",
+      "suffix": "NEJMoa2602167"
+    },
+    {
+      "prefix": "10.1056",
       "suffix": "NEJMoa2516505"
     },
     {
@@ -9485,17 +10297,16 @@
     {
       "prefix": "10.1056",
       "suffix": "NEJMc2507481"
-    },
-    {
-      "prefix": "10.1056",
-      "suffix": "NEJMoa2500179"
     }
   ],
   "url_abstract": [
+    "https://pubmed.ncbi.nlm.nih.gov/42342272",
+    "https://pubmed.ncbi.nlm.nih.gov/42315290",
     "https://pubmed.ncbi.nlm.nih.gov/42285568",
     "https://pubmed.ncbi.nlm.nih.gov/42285563",
     "https://pubmed.ncbi.nlm.nih.gov/42276557",
     "https://pubmed.ncbi.nlm.nih.gov/42270130",
+    "https://pubmed.ncbi.nlm.nih.gov/42242781",
     "https://pubmed.ncbi.nlm.nih.gov/42242779",
     "https://pubmed.ncbi.nlm.nih.gov/42242773",
     "https://pubmed.ncbi.nlm.nih.gov/42242770",
@@ -9514,34 +10325,31 @@
     "https://pubmed.ncbi.nlm.nih.gov/42055586",
     "https://pubmed.ncbi.nlm.nih.gov/42055584",
     "https://pubmed.ncbi.nlm.nih.gov/42049318",
-    "https://pubmed.ncbi.nlm.nih.gov/42019989",
-    "https://pubmed.ncbi.nlm.nih.gov/41985976",
-    "https://pubmed.ncbi.nlm.nih.gov/41985931",
+    "https://pubmed.ncbi.nlm.nih.gov/42387166",
+    "https://pubmed.ncbi.nlm.nih.gov/42343137",
+    "https://pubmed.ncbi.nlm.nih.gov/42343135",
+    "https://pubmed.ncbi.nlm.nih.gov/42343125",
+    "https://pubmed.ncbi.nlm.nih.gov/42342875",
+    "https://pubmed.ncbi.nlm.nih.gov/42310465",
+    "https://pubmed.ncbi.nlm.nih.gov/42310459",
+    "https://pubmed.ncbi.nlm.nih.gov/42310452",
     "https://pubmed.ncbi.nlm.nih.gov/42310115",
     "https://pubmed.ncbi.nlm.nih.gov/42310113",
     "https://pubmed.ncbi.nlm.nih.gov/42291779",
+    "https://pubmed.ncbi.nlm.nih.gov/42271066",
+    "https://pubmed.ncbi.nlm.nih.gov/42271065",
+    "https://pubmed.ncbi.nlm.nih.gov/42271052",
+    "https://pubmed.ncbi.nlm.nih.gov/42271050",
     "https://pubmed.ncbi.nlm.nih.gov/42236939",
     "https://pubmed.ncbi.nlm.nih.gov/42236936",
     "https://pubmed.ncbi.nlm.nih.gov/42236934",
+    "https://pubmed.ncbi.nlm.nih.gov/42236933",
     "https://pubmed.ncbi.nlm.nih.gov/42236563",
     "https://pubmed.ncbi.nlm.nih.gov/42236560",
     "https://pubmed.ncbi.nlm.nih.gov/42291777",
     "https://pubmed.ncbi.nlm.nih.gov/42291776",
     "https://pubmed.ncbi.nlm.nih.gov/42203931",
     "https://pubmed.ncbi.nlm.nih.gov/42203929",
-    "https://pubmed.ncbi.nlm.nih.gov/42203874",
-    "https://pubmed.ncbi.nlm.nih.gov/42203873",
-    "https://pubmed.ncbi.nlm.nih.gov/42203868",
-    "https://pubmed.ncbi.nlm.nih.gov/42203864",
-    "https://pubmed.ncbi.nlm.nih.gov/42162433",
-    "https://pubmed.ncbi.nlm.nih.gov/42162427",
-    "https://pubmed.ncbi.nlm.nih.gov/42162420",
-    "https://pubmed.ncbi.nlm.nih.gov/42162419",
-    "https://pubmed.ncbi.nlm.nih.gov/42162388",
-    "https://pubmed.ncbi.nlm.nih.gov/42129568",
-    "https://pubmed.ncbi.nlm.nih.gov/42129565",
-    "https://pubmed.ncbi.nlm.nih.gov/42129549",
-    "https://pubmed.ncbi.nlm.nih.gov/42129527",
     "https://pubmed.ncbi.nlm.nih.gov/42035777",
     "https://pubmed.ncbi.nlm.nih.gov/41679324",
     "https://pubmed.ncbi.nlm.nih.gov/41655587",
@@ -9569,6 +10377,7 @@
     "https://pubmed.ncbi.nlm.nih.gov/40081400",
     "https://pubmed.ncbi.nlm.nih.gov/42235014",
     "https://pubmed.ncbi.nlm.nih.gov/42160720",
+    "https://pubmed.ncbi.nlm.nih.gov/42150044",
     "https://pubmed.ncbi.nlm.nih.gov/42149992",
     "https://pubmed.ncbi.nlm.nih.gov/42127399",
     "https://pubmed.ncbi.nlm.nih.gov/42054680",
@@ -9590,14 +10399,16 @@
     "https://pubmed.ncbi.nlm.nih.gov/41406445",
     "https://pubmed.ncbi.nlm.nih.gov/41370805",
     "https://pubmed.ncbi.nlm.nih.gov/41363801",
-    "https://pubmed.ncbi.nlm.nih.gov/41297012",
-    "https://pubmed.ncbi.nlm.nih.gov/41297006"
+    "https://pubmed.ncbi.nlm.nih.gov/41297012"
   ],
   "url_direct": [
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13327661/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13327491/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13261399/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13261503/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13274572/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13250720/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13327470/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13235747/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13235748/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13235706/",
@@ -9616,34 +10427,31 @@
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13126859/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13126849/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7619201/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13101412/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13081225/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13081224/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13322981/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13323061/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13323083/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13323068/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13293876/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13322971/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13322975/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13293896/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13275307/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13275304/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13259922/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13293891/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13322962/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13293881/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13293867/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13253322/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13253328/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13275288/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13293856/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13233625/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13233311/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13259919/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13259941/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13215880/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13216062/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13233323/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13253319/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13289585/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13253325/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13216064/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13253329/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13233313/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13253353/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13190237/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13275290/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13233317/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13216067/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13171639/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13266303/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12979006/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7619005/",
@@ -9671,6 +10479,7 @@
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7618301/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13240644/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13235145/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13313084/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13186117/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13215208/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13132025/",
@@ -9692,14 +10501,16 @@
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7618564/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12698112/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13218738/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7618428/",
-    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12662413/"
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7618428/"
   ],
   "pmcid": [
+    "PMC13327661",
+    "PMC13327491",
     "PMC13261399",
     "PMC13261503",
     "PMC13274572",
     "PMC13250720",
+    "PMC13327470",
     "PMC13235747",
     "PMC13235748",
     "PMC13235706",
@@ -9718,34 +10529,31 @@
     "PMC13126859",
     "PMC13126849",
     "PMC7619201",
-    "PMC13101412",
-    "PMC13081225",
-    "PMC13081224",
+    "PMC13322981",
+    "PMC13323061",
+    "PMC13323083",
+    "PMC13323068",
+    "PMC13293876",
+    "PMC13322971",
+    "PMC13322975",
+    "PMC13293896",
     "PMC13275307",
     "PMC13275304",
     "PMC13259922",
+    "PMC13293891",
+    "PMC13322962",
+    "PMC13293881",
+    "PMC13293867",
     "PMC13253322",
     "PMC13253328",
     "PMC13275288",
+    "PMC13293856",
     "PMC13233625",
     "PMC13233311",
     "PMC13259919",
     "PMC13259941",
     "PMC13215880",
     "PMC13216062",
-    "PMC13233323",
-    "PMC13253319",
-    "PMC13289585",
-    "PMC13253325",
-    "PMC13216064",
-    "PMC13253329",
-    "PMC13233313",
-    "PMC13253353",
-    "PMC13190237",
-    "PMC13275290",
-    "PMC13233317",
-    "PMC13216067",
-    "PMC13171639",
     "PMC13266303",
     "PMC12979006",
     "PMC7619005",
@@ -9773,6 +10581,7 @@
     "PMC7618301",
     "PMC13240644",
     "PMC13235145",
+    "PMC13313084",
     "PMC13186117",
     "PMC13215208",
     "PMC13132025",
@@ -9794,14 +10603,16 @@
     "PMC7618564",
     "PMC12698112",
     "PMC13218738",
-    "PMC7618428",
-    "PMC12662413"
+    "PMC7618428"
   ],
   "pmid": [
+    "42342272",
+    "42315290",
     "42285568",
     "42285563",
     "42276557",
     "42270130",
+    "42242781",
     "42242779",
     "42242773",
     "42242770",
@@ -9820,34 +10631,31 @@
     "42055586",
     "42055584",
     "42049318",
-    "42019989",
-    "41985976",
-    "41985931",
+    "42387166",
+    "42343137",
+    "42343135",
+    "42343125",
+    "42342875",
+    "42310465",
+    "42310459",
+    "42310452",
     "42310115",
     "42310113",
     "42291779",
+    "42271066",
+    "42271065",
+    "42271052",
+    "42271050",
     "42236939",
     "42236936",
     "42236934",
+    "42236933",
     "42236563",
     "42236560",
     "42291777",
     "42291776",
     "42203931",
     "42203929",
-    "42203874",
-    "42203873",
-    "42203868",
-    "42203864",
-    "42162433",
-    "42162427",
-    "42162420",
-    "42162419",
-    "42162388",
-    "42129568",
-    "42129565",
-    "42129549",
-    "42129527",
     "42035777",
     "41679324",
     "41655587",
@@ -9875,6 +10683,7 @@
     "40081400",
     "42235014",
     "42160720",
+    "42150044",
     "42149992",
     "42127399",
     "42054680",
@@ -9896,14 +10705,1515 @@
     "41406445",
     "41370805",
     "41363801",
-    "41297012",
-    "41297006"
+    "41297012"
+  ],
+  "COMPONENTS": [
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": true,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": false,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": false,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": false,
+      "journal_issue": false,
+      "journal_page": false,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    },
+    {
+      "authors": true,
+      "title": true,
+      "journal_name": true,
+      "journal_volume": true,
+      "journal_issue": true,
+      "journal_page": true,
+      "elocator": false,
+      "publication_date": true,
+      "doi": true,
+      "url_abstract": false,
+      "url_direct": false,
+      "pmcid": true,
+      "pmid": true
+    }
   ],
   "sets": {
     "journal_name": [
       {
-        "full": "Nature. Mental health",
-        "short": "Nat Ment Health"
+        "full": "Lancet (London, England)",
+        "short": "Lancet"
       },
       {
         "full": "The New England journal of medicine",
@@ -9918,144 +12228,144 @@
         "short": "Nature"
       },
       {
-        "full": "Lancet (London, England)",
-        "short": "Lancet"
+        "full": "Nature. Mental health",
+        "short": "Nat Ment Health"
       }
     ],
     "journal_elocator": [
       "",
-      "e088116",
-      "e089050",
-      "e088050",
-      "e088921",
-      "e089868",
-      "e086810",
-      "e087844",
       "e087975",
-      "e086562",
-      "e629407",
-      "e089213",
-      "e087095",
       "e089636",
-      "e088509",
-      "e086698",
-      "e087321",
-      "e088684",
-      "e087578",
-      "e088939",
       "e086295",
-      "e083075",
-      "e088687",
+      "e629407",
+      "e088671",
+      "e088684",
+      "e729694",
+      "e086810",
+      "e089050",
+      "e088509",
+      "e089868",
       "e088686",
-      "e088671"
+      "e087095",
+      "e089213",
+      "e083075",
+      "e088921",
+      "e088687",
+      "e088939",
+      "e086562",
+      "e363695",
+      "e088685",
+      "e086698",
+      "e088050",
+      "e088116"
     ],
     "doi_prefix": [
-      "10.1136",
       "10.1056",
+      "10.1038",
       "10.1016",
-      "10.1038"
+      "10.1136"
     ],
     "doi_suffix": [
-      "S0140-6736(25)01639-3",
-      "S0140-6736(25)01953-1",
-      "NEJMoa2513428",
-      "s41586-026-10297-x",
-      "NEJMoa2516505",
-      "s41586-026-10565-w",
-      "NEJMc2513984",
-      "bmj-2025-088050",
-      "bmj-2025-088687",
-      "NEJMoa2508228",
-      "bmj-2025-088686",
-      "s41586-026-10531-6",
-      "s41586-026-10579-4",
-      "bmj-2026-089636",
-      "S0140-6736(25)01388-1",
-      "bmj-2025-086810",
-      "bmj-2025-088509",
-      "s41586-026-10383-0",
-      "S0140-6736(25)00902-X",
-      "bmj-2024-083075",
-      "bmj-2025-089050",
-      "S0140-6736(25)01330-3",
-      "S0140-6736(25)02309-8",
-      "s41586-026-10626-0",
-      "bmj-2025-087095",
-      "NEJMoa2514663",
-      "bmj-2025-087321",
-      "s41586-026-10583-8",
-      "S0140-6736(25)00691-9",
-      "S0140-6736(25)01578-8",
-      "NEJMc2507652",
-      "s41586-026-10540-5",
-      "s41586-026-10479-7",
-      "NEJMoa2510935",
-      "s41586-026-10485-9",
-      "NEJMc2517822",
-      "NEJMc2507481",
-      "S0140-6736(25)01186-9",
-      "S0140-6736(25)00143-6",
-      "s41586-026-10617-1",
-      "S0140-6736(25)01637-X",
-      "S0140-6736(24)02840-X",
-      "bmj-2025-088116",
-      "bmj-2026-629407",
-      "s44220-026-00654-0",
-      "s41586-026-10637-x",
-      "s41586-026-10582-9",
-      "S0140-6736(25)01635-6",
-      "s41586-026-10473-z",
-      "NEJMoa2502866",
-      "bmj-2025-088939",
+      "bmj-2026-363695",
       "NEJMc2604004",
-      "S0140-6736(25)01037-2",
-      "S0140-6736(25)01432-1",
-      "NEJMoa2504068",
-      "bmj-2025-088671",
-      "bmj.s958",
-      "s44220-026-00669-7",
-      "bmj-2025-086698",
-      "NEJMoa2502457",
-      "NEJMc2506284",
-      "NEJMc2508805",
-      "S0140-6736(25)02503-6",
-      "bmj-2026-089868",
-      "bmj-2025-087844",
-      "NEJMc2519008",
-      "s41586-026-10556-x",
-      "s41586-026-10542-3",
+      "NEJMc2504287",
+      "NEJMc2507615",
+      "bmj-2025-086562",
+      "bmj-2025-088685",
+      "NEJMoa2509761",
+      "s41586-026-10648-8",
+      "bmj-2025-089050",
+      "bmj-2025-088687",
+      "S0140-6736(25)02474-2",
+      "s41586-026-10514-7",
+      "NEJMc2600397",
+      "s41586-026-10473-z",
+      "S0140-6736(25)01635-6",
       "bmj-2025-089213",
-      "bmj-2025-087578",
+      "S0140-6736(25)01578-8",
+      "S0140-6736(25)01637-X",
+      "NEJMoa2514824",
+      "S0140-6736(25)00691-9",
+      "NEJMc2519008",
+      "s41586-026-10684-4",
+      "S0140-6736(25)00813-X",
+      "bmj-2025-088921",
+      "bmj-2025-088116",
+      "s44220-026-00654-0",
+      "bmj-2026-629407",
+      "S0140-6736(25)00143-6",
+      "S0140-6736(25)01917-8",
+      "NEJMoa2504068",
+      "s41586-026-10611-7",
+      "NEJMoa2510935",
+      "bmj-2025-088686",
+      "bmj.s958",
+      "s41586-026-10676-4",
+      "s41586-026-10551-2",
+      "s41586-026-10674-6",
+      "NEJMoa2519001",
+      "NEJMc2513984",
       "bmj-2025-087975",
-      "S0140-6736(25)00765-2",
+      "S0140-6736(25)01037-2",
+      "S0140-6736(25)01639-3",
+      "NEJMoa2502457",
+      "NEJMoa2508228",
+      "NEJMc2507481",
       "S0140-6736(26)00258-8",
+      "NEJMoa2602167",
+      "s41586-026-10579-4",
+      "NEJMoa2514663",
+      "NEJMoa2516505",
+      "NEJMoa2601969",
+      "s44220-026-00669-7",
+      "S0140-6736(25)01330-3",
+      "S0140-6736(24)02840-X",
+      "s41586-026-10606-4",
+      "bmj-2025-087095",
+      "NEJMc2507652",
+      "s41586-026-10624-2",
+      "s41586-026-10630-4",
+      "NEJMc2508805",
+      "S0140-6736(25)00551-3",
+      "NEJMc2506284",
+      "s41586-026-10708-z",
+      "s41586-026-10632-2",
+      "bmj-2025-088509",
+      "bmj-2025-086810",
+      "bmj-2024-083075",
+      "s41586-026-10540-5",
+      "s41586-026-10637-x",
+      "NEJMoa2513428",
+      "s44220-026-00656-y",
       "bmj-2025-088684",
       "bmj-2025-086295",
-      "NEJMc2504287",
-      "NEJMoa2519001",
-      "NEJMoa2500179",
-      "NEJMoa2601969",
-      "S0140-6736(25)00551-3",
-      "S0140-6736(25)00263-6",
-      "NEJMoa2509761",
-      "S0140-6736(25)01240-1",
-      "s41586-026-10607-3",
-      "s41586-026-10461-3",
-      "S0140-6736(25)02474-2",
-      "NEJMoa2514824",
-      "s41586-026-10509-4",
-      "S0140-6736(25)01917-8",
-      "NEJMc2507615",
-      "s41586-026-10606-4",
-      "s41586-026-10525-4",
-      "bmj-2025-088921",
-      "NEJMc2600397",
-      "s41586-026-10624-2",
-      "NEJMoa2507874",
       "S0140-6736(25)00311-3",
-      "S0140-6736(25)00813-X",
-      "s44220-026-00656-y",
-      "bmj-2025-086562"
+      "S0140-6736(25)01432-1",
+      "S0140-6736(25)01953-1",
+      "s41586-026-10556-x",
+      "NEJMoa2507874",
+      "NEJMoa2502866",
+      "s41586-026-10583-8",
+      "S0140-6736(25)00263-6",
+      "s41586-026-10617-1",
+      "NEJMc2517822",
+      "S0140-6736(25)02309-8",
+      "bmj-2026-729694",
+      "s41586-026-10681-7",
+      "s41586-026-10546-z",
+      "bmj-2025-088939",
+      "S0140-6736(25)02503-6",
+      "S0140-6736(25)01186-9",
+      "bmj-2025-088050",
+      "bmj-2026-089636",
+      "S0140-6736(25)00765-2",
+      "S0140-6736(25)01240-1",
+      "bmj-2025-086698",
+      "S0140-6736(25)01388-1",
+      "bmj-2026-089868",
+      "S0140-6736(25)00902-X",
+      "bmj-2025-088671",
+      "s41586-026-10664-8"
     ]
   }
 }

@@ -45,7 +45,7 @@ def bake_dsentry(entry):
     score = entry["scores"]["combined"]
     classes, confidences = zip(*[c_scores[c] for c in c_scores])    # Lists of all classification bools and confidence values for all components.
     score[0] = classes and all(classes)                             # AND every class           @TODO May want to weight these somehow? Or should even the tiniest typo make it "false"? If so, then the binary score means a slightly different thing than confidence. Probably good that way? Maybe not, a confusing case would be a False (invalid) class due to a type but a very high (.95) confidence value. It would make sense on the component level (since we shouldn't set default conf values above .5), but not when maintaining that negative bool for the average. ANDing booleans is not the same as averaging. Do we even need the True/False at this step? Probably, something to mark the mutation. Otherwise setting the suggested confidences will be tricky and precise, we open ourselves up to clearly mutated/hallucinated references being marked True when the average works out > .5
-    score[1] = sum(confidences)/len(confidences)                    # Average all confidences
+    score[1] = sum(confidences)/len(confidences)                    # Average all confidences   ... probably need a zero check here ...
 #    for style in FormatStyles:
 #        score = entry["scores"]["byformat"][style]
 #        classes, confidences = zip(*[c_scores[c] for c in c_scores if entry["format"][style]["components"][c])  # Do not include scores absent from the formatted reference (detailed by "components" element with the formatted string.
@@ -126,11 +126,11 @@ class EntryMutator:
     @classmethod
     def _flag(cls, ds_entry, component, mutation):
         ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MUTFLAG[component][mutation]
-        print(ds_entry["scores"]["component"][component])
+        #print(ds_entry["scores"]["component"][component])
         if not ds_entry["scores"]["component"][component] or ds_entry["scores"]["component"][component][1] > cls._MUTCONF[component][mutation]:  # Also lower or create (for originally absent components) suggested confidence scores. 
-            print(ds_entry["scores"]["component"][component])
+            #print(ds_entry["scores"]["component"][component])
             ds_entry["scores"]["component"][component] = (False, cls._MUTCONF[component][mutation])
-            print(ds_entry["scores"]["component"][component])
+            #print(ds_entry["scores"]["component"][component])
 
     # Return deepcopy of random item from collection.
     @staticmethod
@@ -177,7 +177,7 @@ class EntryMutator:
     def author_hallucinate(self, ds_entry):
         #ds_entry["data"]["authors"] = self._randcopy(self._FAKE_AUTHORS)    # It needs to be a list of fake authors.
         ds_entry["data"]["authors"] = deepcopy(random.sample(self._FAKE_AUTHORS, len(ds_entry["data"]["authors"])))    # Making it the same length. Could be different. Who cares?
-        self._flag(ds_entry, C.AUTHOR, M.HALLUCINATION)
+        self._flag(ds_entry, C.AUTHORS, M.HALLUCINATION)
         return ds_entry
 
 ### TITLES
@@ -407,7 +407,7 @@ class EntryMutator:
 
 
 
-if __name__ == "__main__" or True:
+if __name__ == "__main__":
     import json
     import dstools.configurations as setconfig
 
