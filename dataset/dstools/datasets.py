@@ -7,90 +7,23 @@ from reftools.refdata import ReferenceComponent as RC
 import reftools.formats as F
 import random
 
-
-
-# @todo
-#
-#   Add other levels of flaggin
-#   Mutcode_verbose (current)
-#   Mutcode_gist    (flag whenever individual element is modified, so just author, title, journal, etc...)
-#   Error_class     (flags class of entry)
-#     - Subtle mutations (like typo, abreviation, stuff humans could make) will tip this over from 'real' into 'ambiguous'
-#     - More egregious mutations (hallucinations, swaps) will flip it all the way into 'generated'.
-#   
-#     - What other classifications could exist, other than those three? They'd need to be distinct, orthogonal.
-#
-#     - This will be used in the grid / final data determination. It's the thing to compare against, the model's outputs, to evaluate their PERFORMANCE at detecting.
-#       - is it too abstract/bespoke of classifcation? We should make sure it isn't/doesn't become. Keep it simple, broad, and distinct.
-#
-
-# After meeting (friday 07-03)
-# ignoring / discounting results for components in references where they're absent. But having that missing ocmponent be evaluated is still valuable.
-# two experiments, one with schema trimming and other without. This shows robustness of model, if absent components make it tend toward negative evaluation even when it shouldn't (like few references have PMCIDs, but nemotron marked it down cause of it missing wherase deepseek did true .5 vs .5)
-#   different models evaluated absent components in different ways, effecting its weight toward them being absent. bringing total down or up. ROBUSTness?
-#   making it 'fair' (schema trimming) vs not making life any easier for llms (full schema, let it hurt itself)
-#
-# simplifying classification
-#  - Real/Fake classification decision
-#  - 1 - 10 confidence in that decision.
-# or
-#  - Real/Fake (or Valid/Invalid) classification
-#  - Single range number, 0 (or .1 or 1) being full confidence in fake, 1 (or 10) being full confidence in real. So .49 being little confidence fake and .51 being little confidence real.
-#
-# true/falase
-# howconfidence? 0idk, 1really
-#
-# true/false
-# range true/false .5 idk, .49falsedk, 0realfalse, 51trueidk, 1realtrue
-#
-#
-# The holistic classifications (pan?) and per component evaluations are not mutually exclusive. They can be applied to both (as we've done so far).
-# Reconsiling Pan's broader (and somewhat human interpretation influenced) categories with the precise values is a thing to think about.
-
-# something with WEIGHTS ? of components? down the line... ?
-# science journal doesn't put titles.
-# title high weight, journal high, page lower, pmid lower... ? what uses? weight in what equations?
-# older articles (2000s, 1990s, etc.) will have no DOIs. @todo regen dataset with bigger DATE RANGE and more random ordering (not just pub order. for variety). 
-# as tangent, date range is a thing to think about in our methodology, the testing we're doing. for the paper. influence of corresponding years with llms?
-
-# chatbots holistic evaluation 
-# will also have per component evaluation INSIDE
-# interesting to see how it matches up?
-# But chatbot holistic is not our deterministic combination of it's component evaluations. It is it's own decision.
-#  Though we could do that as well, and compare. Again same as seeing how the two line up.
-#  Of course we'll know the corret answers too. Exactly what's been done on each reference, which components it comprises.
-#  Could we in addition, also do some manual weighted score based on the ground-truth modifications we know exist in the reference? Compare that with model holistic, and our averaging of model component scores?
-
-# Putting refs into something more specific like pans categories could be a seperate problem. 
-# A more difficult one, since we're defining more things.
-# Placing category cutoffs along some range 0 -> 1? .8 suspect, 1 real, .2 badbad... ?
-
-# ryan implemented internet search locally, which works. Second pass adhers to json schema.
-# jackson is working on csv files
-# gabriel did the stuff with reference baking, format component codes. Now onto absent component mutations.
-
-             #"modcode": 0b00000000,     # Signals mutated components + degree of mutation. 
-             #"modflags": [],
-#             "confidencess": {},           # Component : "suggested confidence score". Key existence signal component modification as well.
-
 # Create a set entry from reference data
 def dsentry(rd, *, ID=None):
     return {
-        "id": ID,                  # Internal ID + original PMCID
+        "id": ID,               # Internal ID + original PMCID
         "src_id": rd["pmcid"],
-        "mutcode": 0b00000000,     # Describes specific mutations.
+        "mutcode": 0b00000000,  # Describes specific mutations.
         "mutlabels": [],
         "data": deepcopy(rd),
-        "format": {},   # Should unbaked forms be absent or a None?
+        "format": {},           # Should unbaked forms be absent or a None?
         "scores": {
             "combined": [True, 1.0],
-            "byformat": {"ama": None}, # @TODO {form: None for form in FormatStyles}       Different holistic scores per format addresses the issue of absent components bias.
+            "byformat": {"ama": None},  # @TODO {form: None for form in FormatStyles}. Different holistic scores per format addresses the issue of absent components bias.
             "component": {comp: ([True, 1.0] if rd["COMPONENTS"][comp] else None) for comp in RC}
         }
     }
 
 # @CONSIDER: Sometimes the true/false and the confidence score wont line up. Should the True/False be more of a "was this modified thing" or stay the same as the conf. Probably stay the same. Idk just think about it. There's something there.
-
 # @CONSIDER !! What about adding hallucinated/mismatch components to references which never had one in the first place?
 #  The question is: Should we only mutate a component when it already exists (refdataCOMPONENTS = True), or should we always mutate?
 #  how address in scoring?
@@ -99,161 +32,74 @@ def dsentry(rd, *, ID=None):
 #  so, we set that value during the check. scores modified in place during mutation
 #  then if we do or dont want mutating of absent components, we just disable it on the None check instead of creating new.
 
-
-def bake_dsentry(entry):
-    entry["format"] = F.compile_all(entry["data"])
-    entry["mutlabels"] = EntryMutator.explain_mutcode(entry["mutcode"])
-
-    # Averaging holistic scores (ALL and format styles)
-    c_scores = [entry["scores"]["component"][component] for component in RC if entry["scores"]["component"][component]] # List of valid component-wise scores (non null, meaning component did or now exists and has some grade).
-    classes, confidences = [cs[0] for cs in c_scores], [cs[1] for cs in c_scores]
-
-    score = entry["scores"]["combined"]
-    score[0] = score[0] and all(c_scores[0])
-    score[1] = (score[1] + sum(c_scores[1]))/(1+len(c_scores[1]))
-#                                                                                                                                           for s in c_scores:
-#                                                                                                                                               score[0] = score[0] and s[0]    # ANDing maybe not so good. Weights?
-#                                                                                                                                               score[1] = score[1] + s[1]      # Standard averaging. Again, weights?           # Another Question @ should we have our own FormatStyle ALL, that is just the JSON printout? Could work for an experiment.
-#                                                                                                                                       
-#                                                                                                                                           for form in entry["format"]:    # or form in FormatStyles (if we make that Enum, and have explicit unbaked formats default init to None). OR form in entry["scores"]["byformat"]
-#                                                                                                                                               score = entry["scores"]["byformat"][form]
-#                                                                                                                                               for s in c_scores
-#                                                                                                                                               if entry["format"][form]["components"][component]:
-#                                                                                                                                                   s
-#                                                                                                                                       
-#                                                                                                                                       #    c = {style: 1
-#                                                                                                                                           for style in scores:
-#                                                                                                                                               scores[style]
-#                                                                                                                                           for component in RC:
-#                                                                                                                                               c_score = entry["scores"]["component"][component]
-#                                                                                                                                               if c_score is not None: # Could make a seperate element for present components of mutated dsentry, but right now checking for a None score is enough for this. If we need to know that data later we should.
-#                                                                                                                                       #            # Stlye specific (avoid bias from absent components)
-#                                                                                                                                       #            for style in entry["format"]:
-#                                                                                                                                       #                if entry["format"][style]["components"][component]:     # Assuming dict of Component: Bool. # Could use another Enum with bits instead, for a code not dict. Or just pattern match in a function using base ReferenceComponent.
-#                                                                                                                                       #                    s[style][0] = s[entry][0] and c_score[0]
-#                                                                                                                                                   # Every present component
-    #entry["score"][1] = entry["score"][1] + c_score[1]                  # THIS SPECIFICALLY @@@@ !!!! Is terrible. It bases the holistic confidence score on components that might not even be in the reference. @TODO Make the holistic score per baked format somehow. The component scores can remain impartial. BUT they do need to be trimmed in DSENTRY to not include components that aren't in the refdata at all @TODO
-                                                                                                                                                                                                                                                                                                                                 # Need a component code in REFDATA too, then we can adjust COMPSCORES with Nones accordingly. @TODO                                                                                                                                   
-        # Might not be the best thing. Just ANDing and averaging evenly. This questions our methodology. Should something small like a typo really flip the WHOLE reference into being 'invalid'? 
-        # The float score would make the full answer "invalid, with low confidence".
-        # ! If we're to do a kind of WEIGHTING thing per component for our own score, this is where we'd do it.
-
-    # @CONSIDER what about when components are deleted? Should we keep that score in, or mark that the component is absent in the dsentry (mark all component existence?). For things like titles, we definitely shouldn't remove that score. Probably just keep them all. AH! This is where the conf weight thing comes in!!!! @. A title_missing could have a lower suggested confidence score than a journal_page_missing, for example.
-
-
-
 # Create a set of set entries from a list of reference data
 def make_dataset(ref_data_list, *, v=False):
     dataset = [dsentry(ref, ID=i) for i, ref in enumerate(ref_data_list)]
     return dataset
 
-# Bake formatted references from refdata for every entry in a dataset.
-# Also adds a human readable list of mutation labels.
+def bake_dsentry(entry):
+    entry["format"] = F.compile_all(entry["data"])
+    entry["mutlabels"] = EntryMutator.explain_mutcode(entry["mutcode"])
+    # Averaging holistic score
+    c_scores = {component: entry["scores"]["component"][component] for component in RC if entry["scores"]["component"][component]} # Components with existing scores in the dsentry.
+    score = entry["scores"]["combined"]
+    classes, confidences = zip(*[c_scores[c] for c in c_scores])    # Lists of all classification bools and confidence values for all components.
+    score[0] = classes and all(classes)                             # AND every class           @TODO May want to weight these somehow? Or should even the tiniest typo make it "false"? If so, then the binary score means a slightly different thing than confidence. Probably good that way? Maybe not, a confusing case would be a False (invalid) class due to a type but a very high (.95) confidence value. It would make sense on the component level (since we shouldn't set default conf values above .5), but not when maintaining that negative bool for the average. ANDing booleans is not the same as averaging. Do we even need the True/False at this step? Probably, something to mark the mutation. Otherwise setting the suggested confidences will be tricky and precise, we open ourselves up to clearly mutated/hallucinated references being marked True when the average works out > .5
+    score[1] = sum(confidences)/len(confidences)                    # Average all confidences
+#    for style in FormatStyles:
+#        score = entry["scores"]["byformat"][style]
+#        classes, confidences = zip(*[c_scores[c] for c in c_scores if entry["format"][style]["components"][c])  # Do not include scores absent from the formatted reference (detailed by "components" element with the formatted string.
+#        score[0] = score[0] and all(c_scores[0])
+#        score[1] = sum(c_scores[1])/len(c_scores[1])
+
+# Bake mutation labels, reference formats, and suggested reference scores every entry in a dataset.
 def bake_dataset(dataset):
     for entry in dataset:
         bake_dsentry(entry)
-        #entry["format"] = RB.bake_formats(entry["data"])
-
 
 # Class of methods to mutate dataset entries using ref_mutator functions.
 class EntryMutator:
-    # There are components, and there are mutations.
-    # One type of mutation can work on multiple component types. Other types only a few.
-
-    # THE MATTER OF GRADING REFERENCE MUTATION SEVERITY / MODEL DETECTION PERFORMANCE
-    # Different mutation types have different levels of "validity" (in the sense of the reference being human-made vs generated).
-    # Mutation validity is stored similar way to model's classification confidences, 0 (>conf invalid) -> .49 (<conf) -> .5 (ambig) -> .51 (<conf) 1 (>conf valid).
-    # This (along with grading valid / invalid classification in a binary way) is a a method of grading chatbot fake reference detection performance
-
-    # Mutations: typo, mismatch, hallucinate, shuffle,
-    # COMPONENT_LIST = ("authors", "title", "journal_name", "journal_volume", "journal_issue", "journal_page",
-    #                   "elocator", "publication_date", "doi", "url_abstract", "url_direct", "pmcid", "pmid")
-
     class Mutation(StrEnum):
         TYPO = "typo"
         MISMATCH = "mismatch"
         HALLUCINATION = "hallucination"
         SHUFFLE = "shuffle"
 
-    # Right now all typos are .5 confidence, aka ambiguous on the generated -> authentic scale (invalid -> valid?).
-    # We could have it change depending on element, perhaps author typos are less suspect, so a confidence of .75 instead?  @TODO fine tune
+    # Mutation flags. Composed into a 'mutation code'. Unique bits describe exactly which modifications were performed on a dsentry. Not all mutations are combinable (overwrites). Also, be wary in the setting flags. A wrongly set flag will not reveal itself.
+    # Mutation confidence. The "suggested confidence level" for the mutated component. Lower scores take precedence. Used as baseline for model response grading. Arbitrary, we should choose values wisely.
 
-    # Define which mutations are valid per component, and the degrees of invalidity.
-    # ! Make sure the names match exactly with COMPONENT_LIST
+    _MUTFLAG = {}   # Map to the unique bit identifier of all defined mutations.
+    _MUTCONF = {}   # Map to the suggested confidence value of all defined mutations.
+    _MUTLABELS = {} # Human readable convenience labels for each bit identifier.
+
+    # Define valid mutations per component, plus "suggested confidence" (what the mutation brings component's score down to).
     _MUTMAP = {
         RC.AUTHORS:          [ (Mutation.TYPO, .5), (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0), (Mutation.SHUFFLE, .25) ],          # @ this is kind of like the 'weight' stuff with scoring, but applied to how much (thing being wrong) tarnishes the "validity" of a reference.
         RC.TITLE:            [ (Mutation.TYPO, .5), (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0) ],
-        RC.JOURNAL_NAME:     [ (Mutation.TYPO, .5), (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0) ],
-        RC.JOURNAL_VOLUME:   [                                               (Mutation.HALLUCINATION, .0) ],
+        RC.JOURNAL_NAME:     [ (Mutation.TYPO, .5), (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0) ],                  # Right now all typos are .5 confidence, aka ambiguous on the generated -> authentic scale (invalid -> valid?).
+        RC.JOURNAL_VOLUME:   [                                               (Mutation.HALLUCINATION, .0) ],                  # We could have it change depending on element, perhaps author typos are less suspect, so a confidence of .75 instead?  @TODO fine tune
         RC.JOURNAL_ISSUE:    [                                               (Mutation.HALLUCINATION, .0) ],
         RC.JOURNAL_PAGE:     [                                               (Mutation.HALLUCINATION, .0) ],                  # @todo we REALLY need to add the 'missing component' thing. Maybe. That would give reason for more variety in the weighting (not just .5 typos and 0 all else)
         RC.ELOCATOR:         [                      (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0) ],
         RC.PUBLICATION_DATE: [                                               (Mutation.HALLUCINATION, .0) ],                  # @ consider, when would it be above .5? Never really, cause we know it's been modified. Above .5 would incentivize confidence in the wrong answer... Right?
         RC.PMCID:            [ (Mutation.TYPO, .5), (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0) ],                  # How are we going to compare their scores against this? Will it just be closeness, or does the funny business around the .5 interfere with that?
         RC.PMID:             [ (Mutation.TYPO, .5), (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0) ],
-        RC.DOI:              [ (Mutation.TYPO, .5), (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0) ]
-
-        #RC.DOI:              [ (Mutation.TYPO, .5), ("mismatch_prefix", .0),  ("hallucinate_prefix", .50),
-        #                                           ("mismatch_suffix", .0),  ("hallucinate_suffix", .50)]    # ! @todo Inconsistency with DOI prefix and suffix thing.
+        RC.DOI:              [ (Mutation.TYPO, .5), (Mutation.MISMATCH, .0), (Mutation.HALLUCINATION, .0) ]         # @TODO Reconsile the split DOI prefix/suffix mutation inconsistency.
         #"url_abstract":     ("typo", "mismatch", "hallucinate"),
         #"url_direct":       ("typo", "mismatch", "hallucinate"),
     }
-    # Map assigned "correct" confidence values to each mutation.                                @ EMAIL DON is this even the right way to go about grading them ????? idk.......... can't think..... of anything ... better..
-    _MUTCONFS = {comp: {mutconf[0]: mutconf[1] for mutconf in mutconfs} for comp, mutconfs in _MUTMAP.items()}
-    # Map unique bits to each mutation.
-    _MUTFLAGS = {}
-    _MUTLABELS = {} # Bake some human readable labels for convenience.
+
+    # Construct static maps to bits, confidences, and convenience labels.
     bit = 1
-    for comp, muts in _MUTMAP.items():              # @note: the best and most flexible thing to do would be assign a set # of bits per component, each bit position relative to each block start represents the same mutation type. But, WHO CARES!
-        _MUTFLAGS[comp] = {}
-        for mut in muts:
-            _MUTFLAGS[comp][mut[0]] = bit
+    for comp, muts in _MUTMAP.items():
+        _MUTFLAG[comp] = {}
+        _MUTCONF[comp] = {}
+        for (mut, conf) in muts:
+            _MUTFLAG[comp][mut] = bit
+            _MUTCONF[comp][mut] = conf
             _MUTLABELS[bit] = f"{comp}::{mut}"
             bit = bit << 1
     del bit
-    print(*[str(i)+"\n" for i in _MUTFLAGS.items()])
-    for bit in _MUTLABELS: print(_MUTLABELS[bit])
-    # Some human readable flat labels.
-    #_MUTLABELS = [f"{comp}_{mut}[{muts[mut]}]" for comp, muts in _MUTFLAGS.items() for mut in muts]
-
-    # Create flat unique labels for all possible mutations.
-    #_MUTLABELS = [f"{comp}_{mut}" for comp, muts in _MUTMAP.items() for mut in muts]
-    # Assign bit to each mutation.
-    #_MUTFLAGS = {flag: 2**i for i, flag in enumerate(_MUTLABELS)}
-    #_MUTFLAGS = {comp: {mut: i1+(2**i2 for mut in _MUTMAP(comp)} for comp, i, 
-
-    # Keeping for temporary (lmao) translation
-    _MUTFLAGS_DEPRECATED = ("author_typo",          "author_mismatch",  "author_hallucinate",   "author_shuffle",   # Note: not all mutations are combinable (overwrites).
-                 "title_typo",           "title_mismatch",   "title_hallucinate",                        # Also, be wary in the setting of these flags. A wrongly set flag will not reveal itself.
-                 "jname_typo",           "jname_mismatch",   "jname_hallucinate",
-                 "jvol_hallucinate",     "jiss_hallucinate", "jpage_hallucinate",
-                 "elocator_mismatch",    "elocator_hallucinate",
-                 "pubs_hallucinate",    #"epub_randomize")
-                 "doi_typo", "doi_mismatch_prefix", "doi_mismatch_suffix", "doi_hallucinate_prefix", "doi_hallucinate_suffix",
-                 "pmid_typo", "pmid_mismatch", "pmid_hallucinate", "pmcid_typo", "pmcid_mismatch", "pmcid_hallucinate")
-    #print(*[a+" "+b+"\n" for a, b in zip(_MUTLABELS,_MUTFLAGS_DEPRECATED)])
-
-
-    # Mutation flags. Describe exactly which modifications were performed on a reference dataset entry.
-    #_MUTFLAGS_MAP =     _MUTFLAGS_FLAT = 
-#    # Modification flags. Signals which general components have had a modification applied. Is just a list of the modified components. 
-#    _MODFLAGS = COMPONENT_LIST.copy()
-#    # *note: There is a more clever (less stupid) way to do this. But who cares, it probably won't be a problem.
-#    for f in _MUTFLAGS:
-#        if "author" in f: _MODFLAGS[f] = "authors"
-#        elif "title" in f: _MODFLAGS[f] = "title"
-#        elif "jname" in f: _MODFLAGS[f] = "journal_name"
-#        elif "jvol" in f: _MODFLAGS[f] = "journal_volume"
-#        elif "jiss" in f: _MODFLAGS[f] = "journal_issue"
-#        elif "jpage" in f: _MODFLAGS[f] = "journal_page"
-#        elif "elocator" in f: _MODFLAGS[f] = "elocator"
-#        elif "pubs" in f: _MODFLAGS[f] = "publication_date"
-#        elif "doi" in f: _MODFLAGS[f] = "doi"
-#        #elif "url_abstract":
-#        #elif "url_direct":
-#        elif "pmcid" in f: _MODFLAGS[f] = "pmcid"
-#        elif "pmid" in f: _MODFLAGS[f] = "pmid"
-#        else: print("!!!! BADBADBAD !!!!")
 
     def __init__(self, *, component_set, h_titles, h_authors, h_journals, rand_year_range):
         # Resources for hallucination and mismatch mutations
@@ -262,28 +108,21 @@ class EntryMutator:
         self._FAKE_AUTHORS = h_authors              # self._FAKE_COMPONENTS
         self._FAKE_JOURNALS = h_journals            # The issue is, how fake can a date, DOI, or PMCID get? Fake enough to warrant that?
         self._RAND_YEAR_RANGE = (rand_year_range[0], rand_year_range[1])
+
 ### little helpers
 
-    # Return list of mutation labels from mutcode.
-#    @classmethod
-#    def explain_mutcode_deprecated(cls, code):
-#        return [label for label in cls._MUTFLAG_BITS if (code & cls._MUTFLAG_BITS[label])]
+    # Return list of mutation labels from a mutcode.
     @classmethod
     def explain_mutcode(cls, code):
         return [cls._MUTLABELS[bit] for bit in cls._MUTLABELS if (code & bit)]
 
-        #return [label for label in cls._MUTLABELS if (code & cls._MUTFLAG_BITS[label])]
-        #return cls._MUTLABELS[code] if code in cls._MUTLABELS else f"Bad Code: {code}"
-    # Set mutation flag in ds_entry.
+    # Sets mutation flags, adjusts component scores.
     @classmethod
-    def _flag(cls, ds_entry, flag):
-        ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MUTFLAG_BITS[flag]       # @todo !!!! Some mutations undo other ones (like running a mismatch or hallucination after a type).
-    def _flag(cls, ds_entry, c, m):
-        # Set flag
-        ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MUTFLAGS[c][m]
-        # Create or bring down conf score if 
-        if c not in ds_entry["compconf"] or  cls._MUTCONFS[c][m] < ds_entry["compconf"][c]:
-            ds_entry["compconf"][c] = cls._MUTCONFS[c][m]
+    def _flag(cls, ds_entry, component, mutation):
+        ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MUTFLAG[component][mutation]
+        if not ds_entry["scores"][component] or ds_entry["scores"][component] > cls._MUTCONF[component][mutation]:  # Also lower or create (for originally absent components) suggested confidence scores. 
+            ds_entry["scores"][component] = (False, cls._MUTCONF[component][mutation])
+
     # Return deepcopy of random item from collection.
     @staticmethod
     def _randcopy(collection):
@@ -553,6 +392,7 @@ class EntryMutator:
 
 if __name__ == "__main__" or True:
     import json
+    import dstools.configurations as setconfig
 
     r = None
     with open("testrefs.json") as f: r = json.load(f)
@@ -560,3 +400,31 @@ if __name__ == "__main__" or True:
     ds = make_dataset(r)
     bake_dataset(ds)
     print(json.dumps(ds, indent=4))
+
+
+    DIR = "./reference_source"
+    #with open(f"{DIR}/refdata.json", "r") as f: refdata_src = json.load(f)
+    with open(f"testrefs.json", "r") as f: refdata_src = json.load(f)
+    with open(f"{DIR}/compset.json", "r") as f: compset_src = json.load(f)
+    with open(f"{DIR}/h_titles.txt", "r") as f: h_title_src = [line.strip() for line in f if line.strip()]
+    with open(f"{DIR}/h_authors.txt", "r") as f:
+        h_author_src = [{"l": "FAKEAUTH", "f": "FAKEAUTH"}]*200 #{ "l": name, "f": name for name in [line.strip() for line in f if line.strip()]} # Placeholder. Either parse by ', ' or have source generate a json of last and first.
+    with open(f"{DIR}/h_journals.txt", "r") as f:
+        h_journal_src = [{"full": "FAKEJOURN", "short": "FAKEJOURN"}]*200 #{ "full": name, "short": name for name in [line.strip() for line in f if line.strip()]} # Placeholder. Have the source be a JSON with {full, short}
+
+    srcds = make_dataset(refdata_src*5)
+    ds = { "source":        srcds[:100],
+           "minor_mderror": srcds[100:200],
+           "major_mderror": srcds[200:300],
+           "plausible_fab": srcds[300:400],
+           "human_review":  srcds[400:] }
+
+    setconfig.init(h_titles=h_title_src, h_authors=h_author_src, h_journals=h_journal_src, component_set=compset_src, rand_year_range=(2024, 2026))
+    setconfig.l1_metadata_error(ds["minor_mderror"])
+    setconfig.l2_serious_metadata_error(ds["major_mderror"])
+    setconfig.l3_plausible_fabricated(ds["plausible_fab"])
+    setconfig.l4_needs_human_review(ds["human_review"])
+
+    for label in ds: bake_dataset(ds[label])
+
+    print(json.dumps(ds, indent=2))
