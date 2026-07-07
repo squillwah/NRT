@@ -10,7 +10,10 @@ def write_csv(inputted_json):
     json_results = data["results"]
     json_keynames = data["keynames"]
 
-    with open("output.csv", "w") as csv_f:
+    journal_id = inputted_json.replace(".json", "")
+
+
+    with open(journal_id + ".csv", "w") as csv_f:
         writer = csv.writer(csv_f)
 
         writer.writerow(json_keynames)
