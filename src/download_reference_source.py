@@ -1,6 +1,6 @@
 
-from reftools.api import get_papers_filter, get_ris, get_ref
-from reftools.refdata import ristoref, component_set
+from tools.references.api import get_papers_filter, get_ris, get_ref
+from tools.references.refdata import ristoref, component_set
 import json
 
 # Takes dict of {journal : count}, returns list of refdata dicts.

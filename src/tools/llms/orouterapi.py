@@ -3,7 +3,7 @@ import os
 import requests
 import json
 import time
-from llmtools.help import log
+from tools.help import log
 
 def make_payload_responses(model, ref, schema): pass
 def make_payload_completions(model, ref, schema):

@@ -1,5 +1,43 @@
 [
   {
+    "id": "pmid:42342272",
+    "ama": {
+      "orig": "Barnes C, Hall A, Mantach S, et al. Assessing early effects of Australia's Social Media Minimum Age Act on adolescents' social media use: observational study. BMJ. 2026;393:e363695. Published 2026 Jun 24. doi:10.1136/bmj-2026-363695",
+      "format": "Barnes C, Hall A, Mantach S, et al. Assessing early effects of Australia's Social Media Minimum Age Act on adolescents' social media use: observational study. <i>BMJ</i>. 2026;393:e363695. Published 2026 Jun 24. doi:10.1136/bmj-2026-363695"
+    },
+    "apa": {
+      "orig": "Barnes, C., Hall, A., Mantach, S., Oldmeadow, C., Attia, J., Backholer, K., Williams, C., Tefera, Y., Kay, F., & Wolfenden, L. (2026). Assessing early effects of Australia's Social Media Minimum Age Act on adolescents' social media use: observational study. BMJ (Clinical research ed.), 393, e363695. https://doi.org/10.1136/bmj-2026-363695",
+      "format": "Barnes, C., Hall, A., Mantach, S., Oldmeadow, C., Attia, J., Backholer, K., Williams, C., Tefera, Y., Kay, F., & Wolfenden, L. (2026). Assessing early effects of Australia's Social Media Minimum Age Act on adolescents' social media use: observational study. <i>BMJ (Clinical research ed.)</i>, <i>393</i>, e363695. https://doi.org/10.1136/bmj-2026-363695"
+    },
+    "mla": {
+      "orig": "Barnes, Courtney et al. \u201cAssessing early effects of Australia's Social Media Minimum Age Act on adolescents' social media use: observational study.\u201d BMJ (Clinical research ed.) vol. 393 e363695. 24 Jun. 2026, doi:10.1136/bmj-2026-363695",
+      "format": "Barnes, Courtney et al. \u201cAssessing early effects of Australia's Social Media Minimum Age Act on adolescents' social media use: observational study.\u201d <i>BMJ (Clinical research ed.)</i> vol. 393 e363695. 24 Jun. 2026, doi:10.1136/bmj-2026-363695"
+    },
+    "nlm": {
+      "orig": "Barnes C, Hall A, Mantach S, Oldmeadow C, Attia J, Backholer K, Williams C, Tefera Y, Kay F, Wolfenden L. Assessing early effects of Australia's Social Media Minimum Age Act on adolescents' social media use: observational study. BMJ. 2026 Jun 24;393:e363695. doi: 10.1136/bmj-2026-363695. PMID: 42342272; PMCID: PMC13327661.",
+      "format": "Barnes C, Hall A, Mantach S, Oldmeadow C, Attia J, Backholer K, Williams C, Tefera Y, Kay F, Wolfenden L. Assessing early effects of Australia's Social Media Minimum Age Act on adolescents' social media use: observational study. BMJ. 2026 Jun 24;393:e363695. doi: 10.1136/bmj-2026-363695. PMID: 42342272; PMCID: PMC13327661."
+    }
+  },
+  {
+    "id": "pmid:42315290",
+    "ama": {
+      "orig": "Jackson TL, Desai R, Wafa HA, et al. Stereotactic radiotherapy for neovascular age related macular degeneration: year 3 and 4 extended follow up results of a randomised, double masked, sham controlled, device trial (STAR). BMJ. 2026;393:e729694. Published 2026 Jun 18. doi:10.1136/bmj-2026-729694",
+      "format": "Jackson TL, Desai R, Wafa HA, et al. Stereotactic radiotherapy for neovascular age related macular degeneration: year 3 and 4 extended follow up results of a randomised, double masked, sham controlled, device trial (STAR). <i>BMJ</i>. 2026;393:e729694. Published 2026 Jun 18. doi:10.1136/bmj-2026-729694"
+    },
+    "apa": {
+      "orig": "Jackson, T. L., Desai, R., Wafa, H. A., Lee, C. N., Wang, Y., Peacock, J. L., Peto, T., Chakravarthy, U., Zhu, X., Dakin, H., Wordsworth, S., Clinch, P., Ramazzotto, L., Neffendorf, J. E., O'Sullivan, J. M., Reeves, B. C., & STAR study group (2026). Stereotactic radiotherapy for neovascular age related macular degeneration: year 3 and 4 extended follow up results of a randomised, double masked, sham controlled, device trial (STAR). BMJ (Clinical research ed.), 393, e729694. https://doi.org/10.1136/bmj-2026-729694",
+      "format": "Jackson, T. L., Desai, R., Wafa, H. A., Lee, C. N., Wang, Y., Peacock, J. L., Peto, T., Chakravarthy, U., Zhu, X., Dakin, H., Wordsworth, S., Clinch, P., Ramazzotto, L., Neffendorf, J. E., O'Sullivan, J. M., Reeves, B. C., & STAR study group (2026). Stereotactic radiotherapy for neovascular age related macular degeneration: year 3 and 4 extended follow up results of a randomised, double masked, sham controlled, device trial (STAR). <i>BMJ (Clinical research ed.)</i>, <i>393</i>, e729694. https://doi.org/10.1136/bmj-2026-729694"
+    },
+    "mla": {
+      "orig": "Jackson, Timothy L et al. \u201cStereotactic radiotherapy for neovascular age related macular degeneration: year 3 and 4 extended follow up results of a randomised, double masked, sham controlled, device trial (STAR).\u201d BMJ (Clinical research ed.) vol. 393 e729694. 18 Jun. 2026, doi:10.1136/bmj-2026-729694",
+      "format": "Jackson, Timothy L et al. \u201cStereotactic radiotherapy for neovascular age related macular degeneration: year 3 and 4 extended follow up results of a randomised, double masked, sham controlled, device trial (STAR).\u201d <i>BMJ (Clinical research ed.)</i> vol. 393 e729694. 18 Jun. 2026, doi:10.1136/bmj-2026-729694"
+    },
+    "nlm": {
+      "orig": "Jackson TL, Desai R, Wafa HA, Lee CN, Wang Y, Peacock JL, Peto T, Chakravarthy U, Zhu X, Dakin H, Wordsworth S, Clinch P, Ramazzotto L, Neffendorf JE, O'Sullivan JM, Reeves BC; STAR study group. Stereotactic radiotherapy for neovascular age related macular degeneration: year 3 and 4 extended follow up results of a randomised, double masked, sham controlled, device trial (STAR). BMJ. 2026 Jun 18;393:e729694. doi: 10.1136/bmj-2026-729694. PMID: 42315290; PMCID: PMC13327491.",
+      "format": "Jackson TL, Desai R, Wafa HA, Lee CN, Wang Y, Peacock JL, Peto T, Chakravarthy U, Zhu X, Dakin H, Wordsworth S, Clinch P, Ramazzotto L, Neffendorf JE, O'Sullivan JM, Reeves BC; STAR study group. Stereotactic radiotherapy for neovascular age related macular degeneration: year 3 and 4 extended follow up results of a randomised, double masked, sham controlled, device trial (STAR). BMJ. 2026 Jun 18;393:e729694. doi: 10.1136/bmj-2026-729694. PMID: 42315290; PMCID: PMC13327491."
+    }
+  },
+  {
     "id": "pmid:42285568",
     "ama": {
       "orig": "Kearney PM, McCarthy M, Rengarajan S, et al. Reporting of Cohort and Routinely Collected Data in Randomised Controlled Trial Protocols (SPIRIT-ROUTINE): extension checklist with explanation and elaboration. BMJ. 2026;393:e087095. Published 2026 Jun 12. doi:10.1136/bmj-2025-087095",
@@ -73,6 +111,25 @@
     "nlm": {
       "orig": "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026 Jun 10;393:e086562. doi: 10.1136/bmj-2025-086562. PMID: 42270130; PMCID: PMC13250720.",
       "format": "Penner M, Zwaigenbaum L, Piroddi N, Park S, Minhas RS, Singal D. Advances in supporting development in autistic children and youth. BMJ. 2026 Jun 10;393:e086562. doi: 10.1136/bmj-2025-086562. PMID: 42270130; PMCID: PMC13250720."
+    }
+  },
+  {
+    "id": "pmid:42242781",
+    "ama": {
+      "orig": "You D, Hug L, Fell GW, et al. Global, regional, and national levels and trends in older child, adolescent, and youth (5-24 years) all cause mortality from 1990 to 2024: modelling study. BMJ. 2026;393:e088685. Published 2026 Jun 4. doi:10.1136/bmj-2025-088685",
+      "format": "You D, Hug L, Fell GW, et al. Global, regional, and national levels and trends in older child, adolescent, and youth (5-24 years) all cause mortality from 1990 to 2024: modelling study. <i>BMJ</i>. 2026;393:e088685. Published 2026 Jun 4. doi:10.1136/bmj-2025-088685"
+    },
+    "apa": {
+      "orig": "You, D., Hug, L., Fell, G. W., Liu, Y., Sharrow, D., Gerland, P., Masquelier, B., Alkema, L., Chao, F., Guillot, M., Spoorenberg, T., Cao, B., Strong, K., Wang, H., Cruz Castanheira, H., & Suzuki, E. (2026). Global, regional, and national levels and trends in older child, adolescent, and youth (5-24 years) all cause mortality from 1990 to 2024: modelling study. BMJ (Clinical research ed.), 393, e088685. https://doi.org/10.1136/bmj-2025-088685",
+      "format": "You, D., Hug, L., Fell, G. W., Liu, Y., Sharrow, D., Gerland, P., Masquelier, B., Alkema, L., Chao, F., Guillot, M., Spoorenberg, T., Cao, B., Strong, K., Wang, H., Cruz Castanheira, H., & Suzuki, E. (2026). Global, regional, and national levels and trends in older child, adolescent, and youth (5-24 years) all cause mortality from 1990 to 2024: modelling study. <i>BMJ (Clinical research ed.)</i>, <i>393</i>, e088685. https://doi.org/10.1136/bmj-2025-088685"
+    },
+    "mla": {
+      "orig": "You, Danzhen et al. \u201cGlobal, regional, and national levels and trends in older child, adolescent, and youth (5-24 years) all cause mortality from 1990 to 2024: modelling study.\u201d BMJ (Clinical research ed.) vol. 393 e088685. 4 Jun. 2026, doi:10.1136/bmj-2025-088685",
+      "format": "You, Danzhen et al. \u201cGlobal, regional, and national levels and trends in older child, adolescent, and youth (5-24 years) all cause mortality from 1990 to 2024: modelling study.\u201d <i>BMJ (Clinical research ed.)</i> vol. 393 e088685. 4 Jun. 2026, doi:10.1136/bmj-2025-088685"
+    },
+    "nlm": {
+      "orig": "You D, Hug L, Fell GW, Liu Y, Sharrow D, Gerland P, Masquelier B, Alkema L, Chao F, Guillot M, Spoorenberg T, Cao B, Strong K, Wang H, Cruz Castanheira H, Suzuki E. Global, regional, and national levels and trends in older child, adolescent, and youth (5-24 years) all cause mortality from 1990 to 2024: modelling study. BMJ. 2026 Jun 4;393:e088685. doi: 10.1136/bmj-2025-088685. PMID: 42242781; PMCID: PMC13327470.",
+      "format": "You D, Hug L, Fell GW, Liu Y, Sharrow D, Gerland P, Masquelier B, Alkema L, Chao F, Guillot M, Spoorenberg T, Cao B, Strong K, Wang H, Cruz Castanheira H, Suzuki E. Global, regional, and national levels and trends in older child, adolescent, and youth (5-24 years) all cause mortality from 1990 to 2024: modelling study. BMJ. 2026 Jun 4;393:e088685. doi: 10.1136/bmj-2025-088685. PMID: 42242781; PMCID: PMC13327470."
     }
   },
   {
@@ -418,60 +475,155 @@
     }
   },
   {
-    "id": "pmid:42019989",
+    "id": "pmid:42387166",
     "ama": {
-      "orig": "Liao Z, Zhou M, Brikell I, et al. Home environment conditions during childhood and psychosocial outcomes across three generations in Sweden: population based adoption-discordant sibling comparison study. BMJ. 2026;393:e087844. Published 2026 Apr 22. doi:10.1136/bmj-2025-087844",
-      "format": "Liao Z, Zhou M, Brikell I, et al. Home environment conditions during childhood and psychosocial outcomes across three generations in Sweden: population based adoption-discordant sibling comparison study. <i>BMJ</i>. 2026;393:e087844. Published 2026 Apr 22. doi:10.1136/bmj-2025-087844"
+      "orig": "MacDonald RJ, O'Connor CE, Boehm VA, et al. Aerosols and hydrocarbons in the atmosphere of a white dwarf planet. Nature. 2026;655(8121):76-80. doi:10.1038/s41586-026-10514-7",
+      "format": "MacDonald RJ, O'Connor CE, Boehm VA, et al. Aerosols and hydrocarbons in the atmosphere of a white dwarf planet. <i>Nature</i>. 2026;655(8121):76-80. doi:10.1038/s41586-026-10514-7"
     },
     "apa": {
-      "orig": "Liao, Z., Zhou, M., Brikell, I., Chang, Z., Kuja-Halkola, R., D'Onofrio, B. M., Larsson, H., Lichtenstein, P., & Pettersson, E. (2026). Home environment conditions during childhood and psychosocial outcomes across three generations in Sweden: population based adoption-discordant sibling comparison study. BMJ (Clinical research ed.), 393, e087844. https://doi.org/10.1136/bmj-2025-087844",
-      "format": "Liao, Z., Zhou, M., Brikell, I., Chang, Z., Kuja-Halkola, R., D'Onofrio, B. M., Larsson, H., Lichtenstein, P., & Pettersson, E. (2026). Home environment conditions during childhood and psychosocial outcomes across three generations in Sweden: population based adoption-discordant sibling comparison study. <i>BMJ (Clinical research ed.)</i>, <i>393</i>, e087844. https://doi.org/10.1136/bmj-2025-087844"
+      "orig": "MacDonald, R. J., O'Connor, C. E., Boehm, V. A., May, E. M., Sing, D. K., Mullens, E., Mayorga, L. C., Foote, T. O., Blouin, S., Pearce, L. A., Lewis, N. K., Valenti, J., Batalha, N. E., Lally, M., Lothringer, J. D., Marley, M. S., Mishra, I., & Mullally, S. E. (2026). Aerosols and hydrocarbons in the atmosphere of a white dwarf planet. Nature, 655(8121), 76\u201380. https://doi.org/10.1038/s41586-026-10514-7",
+      "format": "MacDonald, R. J., O'Connor, C. E., Boehm, V. A., May, E. M., Sing, D. K., Mullens, E., Mayorga, L. C., Foote, T. O., Blouin, S., Pearce, L. A., Lewis, N. K., Valenti, J., Batalha, N. E., Lally, M., Lothringer, J. D., Marley, M. S., Mishra, I., & Mullally, S. E. (2026). Aerosols and hydrocarbons in the atmosphere of a white dwarf planet. <i>Nature</i>, <i>655</i>(8121), 76\u201380. https://doi.org/10.1038/s41586-026-10514-7"
     },
     "mla": {
-      "orig": "Liao, Zhenxin et al. \u201cHome environment conditions during childhood and psychosocial outcomes across three generations in Sweden: population based adoption-discordant sibling comparison study.\u201d BMJ (Clinical research ed.) vol. 393 e087844. 22 Apr. 2026, doi:10.1136/bmj-2025-087844",
-      "format": "Liao, Zhenxin et al. \u201cHome environment conditions during childhood and psychosocial outcomes across three generations in Sweden: population based adoption-discordant sibling comparison study.\u201d <i>BMJ (Clinical research ed.)</i> vol. 393 e087844. 22 Apr. 2026, doi:10.1136/bmj-2025-087844"
+      "orig": "MacDonald, Ryan J et al. \u201cAerosols and hydrocarbons in the atmosphere of a white dwarf planet.\u201d Nature vol. 655,8121 (2026): 76-80. doi:10.1038/s41586-026-10514-7",
+      "format": "MacDonald, Ryan J et al. \u201cAerosols and hydrocarbons in the atmosphere of a white dwarf planet.\u201d <i>Nature</i> vol. 655,8121 (2026): 76-80. doi:10.1038/s41586-026-10514-7"
     },
     "nlm": {
-      "orig": "Liao Z, Zhou M, Brikell I, Chang Z, Kuja-Halkola R, D'Onofrio BM, Larsson H, Lichtenstein P, Pettersson E. Home environment conditions during childhood and psychosocial outcomes across three generations in Sweden: population based adoption-discordant sibling comparison study. BMJ. 2026 Apr 22;393:e087844. doi: 10.1136/bmj-2025-087844. PMID: 42019989; PMCID: PMC13101412.",
-      "format": "Liao Z, Zhou M, Brikell I, Chang Z, Kuja-Halkola R, D'Onofrio BM, Larsson H, Lichtenstein P, Pettersson E. Home environment conditions during childhood and psychosocial outcomes across three generations in Sweden: population based adoption-discordant sibling comparison study. BMJ. 2026 Apr 22;393:e087844. doi: 10.1136/bmj-2025-087844. PMID: 42019989; PMCID: PMC13101412."
+      "orig": "MacDonald RJ, O'Connor CE, Boehm VA, May EM, Sing DK, Mullens E, Mayorga LC, Foote TO, Blouin S, Pearce LA, Lewis NK, Valenti J, Batalha NE, Lally M, Lothringer JD, Marley MS, Mishra I, Mullally SE. Aerosols and hydrocarbons in the atmosphere of a white dwarf planet. Nature. 2026 Jul;655(8121):76-80. doi: 10.1038/s41586-026-10514-7. Epub 2026 Jul 1. PMID: 42387166; PMCID: PMC13322981.",
+      "format": "MacDonald RJ, O'Connor CE, Boehm VA, May EM, Sing DK, Mullens E, Mayorga LC, Foote TO, Blouin S, Pearce LA, Lewis NK, Valenti J, Batalha NE, Lally M, Lothringer JD, Marley MS, Mishra I, Mullally SE. Aerosols and hydrocarbons in the atmosphere of a white dwarf planet. Nature. 2026 Jul;655(8121):76-80. doi: 10.1038/s41586-026-10514-7. Epub 2026 Jul 1. PMID: 42387166; PMCID: PMC13322981."
     }
   },
   {
-    "id": "pmid:41985976",
+    "id": "pmid:42343137",
     "ama": {
-      "orig": "Davies SR, Davies AL, Higgins JPT, et al. Effectiveness of interventions to increase vaccine uptake: component network meta-analysis. BMJ. 2026;393:e087578. Published 2026 Apr 15. doi:10.1136/bmj-2025-087578",
-      "format": "Davies SR, Davies AL, Higgins JPT, et al. Effectiveness of interventions to increase vaccine uptake: component network meta-analysis. <i>BMJ</i>. 2026;393:e087578. Published 2026 Apr 15. doi:10.1136/bmj-2025-087578"
+      "orig": "Obermeyer Z, Schubert A, Ross J, Mullainathan S, Lingman M. An ECG biomarker for sudden cardiac death discovered with deep learning. Nature. 2026;655(8121):210-218. doi:10.1038/s41586-026-10674-6",
+      "format": "Obermeyer Z, Schubert A, Ross J, Mullainathan S, Lingman M. An ECG biomarker for sudden cardiac death discovered with deep learning. <i>Nature</i>. 2026;655(8121):210-218. doi:10.1038/s41586-026-10674-6"
     },
     "apa": {
-      "orig": "Davies, S. R., Davies, A. L., Higgins, J. P. T., Caldwell, D. M., Thornton, Z. A., Aiton, E., Ali, I., Dawson, S., McGrath, C., Parkhouse, T., Yardley, L., Yates, J., Letley, L., Ismail, S. A., Christensen, H., & French, C. E. (2026). Effectiveness of interventions to increase vaccine uptake: component network meta-analysis. BMJ (Clinical research ed.), 393, e087578. https://doi.org/10.1136/bmj-2025-087578",
-      "format": "Davies, S. R., Davies, A. L., Higgins, J. P. T., Caldwell, D. M., Thornton, Z. A., Aiton, E., Ali, I., Dawson, S., McGrath, C., Parkhouse, T., Yardley, L., Yates, J., Letley, L., Ismail, S. A., Christensen, H., & French, C. E. (2026). Effectiveness of interventions to increase vaccine uptake: component network meta-analysis. <i>BMJ (Clinical research ed.)</i>, <i>393</i>, e087578. https://doi.org/10.1136/bmj-2025-087578"
+      "orig": "Obermeyer, Z., Schubert, A., Ross, J., Mullainathan, S., & Lingman, M. (2026). An ECG biomarker for sudden cardiac death discovered with deep learning. Nature, 655(8121), 210\u2013218. https://doi.org/10.1038/s41586-026-10674-6",
+      "format": "Obermeyer, Z., Schubert, A., Ross, J., Mullainathan, S., & Lingman, M. (2026). An ECG biomarker for sudden cardiac death discovered with deep learning. <i>Nature</i>, <i>655</i>(8121), 210\u2013218. https://doi.org/10.1038/s41586-026-10674-6"
     },
     "mla": {
-      "orig": "Davies, Sarah R et al. \u201cEffectiveness of interventions to increase vaccine uptake: component network meta-analysis.\u201d BMJ (Clinical research ed.) vol. 393 e087578. 15 Apr. 2026, doi:10.1136/bmj-2025-087578",
-      "format": "Davies, Sarah R et al. \u201cEffectiveness of interventions to increase vaccine uptake: component network meta-analysis.\u201d <i>BMJ (Clinical research ed.)</i> vol. 393 e087578. 15 Apr. 2026, doi:10.1136/bmj-2025-087578"
+      "orig": "Obermeyer, Ziad et al. \u201cAn ECG biomarker for sudden cardiac death discovered with deep learning.\u201d Nature vol. 655,8121 (2026): 210-218. doi:10.1038/s41586-026-10674-6",
+      "format": "Obermeyer, Ziad et al. \u201cAn ECG biomarker for sudden cardiac death discovered with deep learning.\u201d <i>Nature</i> vol. 655,8121 (2026): 210-218. doi:10.1038/s41586-026-10674-6"
     },
     "nlm": {
-      "orig": "Davies SR, Davies AL, Higgins JPT, Caldwell DM, Thornton ZA, Aiton E, Ali I, Dawson S, McGrath C, Parkhouse T, Yardley L, Yates J, Letley L, Ismail SA, Christensen H, French CE. Effectiveness of interventions to increase vaccine uptake: component network meta-analysis. BMJ. 2026 Apr 15;393:e087578. doi: 10.1136/bmj-2025-087578. PMID: 41985976; PMCID: PMC13081225.",
-      "format": "Davies SR, Davies AL, Higgins JPT, Caldwell DM, Thornton ZA, Aiton E, Ali I, Dawson S, McGrath C, Parkhouse T, Yardley L, Yates J, Letley L, Ismail SA, Christensen H, French CE. Effectiveness of interventions to increase vaccine uptake: component network meta-analysis. BMJ. 2026 Apr 15;393:e087578. doi: 10.1136/bmj-2025-087578. PMID: 41985976; PMCID: PMC13081225."
+      "orig": "Obermeyer Z, Schubert A, Ross J, Mullainathan S, Lingman M. An ECG biomarker for sudden cardiac death discovered with deep learning. Nature. 2026 Jul;655(8121):210-218. doi: 10.1038/s41586-026-10674-6. Epub 2026 Jun 24. PMID: 42343137; PMCID: PMC13323061.",
+      "format": "Obermeyer Z, Schubert A, Ross J, Mullainathan S, Lingman M. An ECG biomarker for sudden cardiac death discovered with deep learning. Nature. 2026 Jul;655(8121):210-218. doi: 10.1038/s41586-026-10674-6. Epub 2026 Jun 24. PMID: 42343137; PMCID: PMC13323061."
     }
   },
   {
-    "id": "pmid:41985931",
+    "id": "pmid:42343135",
     "ama": {
-      "orig": "Friedrich S, Huybrechts KF, Straub L, et al. Prenatal exposure to buprenorphine or methadone and adverse neurodevelopmental outcomes: population based cohort study. BMJ. 2026;393:e087321. Published 2026 Apr 15. doi:10.1136/bmj-2025-087321",
-      "format": "Friedrich S, Huybrechts KF, Straub L, et al. Prenatal exposure to buprenorphine or methadone and adverse neurodevelopmental outcomes: population based cohort study. <i>BMJ</i>. 2026;393:e087321. Published 2026 Apr 15. doi:10.1136/bmj-2025-087321"
+      "orig": "Xue M, Li S, Wang J, et al. Ductile alloys offering 100 MPa tensile strength at 2,400 \u00b0C. Nature. 2026;655(8121):109-115. doi:10.1038/s41586-026-10708-z",
+      "format": "Xue M, Li S, Wang J, et al. Ductile alloys offering 100 MPa tensile strength at 2,400 \u00b0C. <i>Nature</i>. 2026;655(8121):109-115. doi:10.1038/s41586-026-10708-z"
     },
     "apa": {
-      "orig": "Friedrich, S., Huybrechts, K. F., Straub, L., Hernandez-Diaz, S., Zhu, Y., Hahn, G., Mogun, H., Jones, H. E., Connery, H. S., Davis, J. M., Gray, K. J., Lester, B., Terplan, M., & Bateman, B. T. (2026). Prenatal exposure to buprenorphine or methadone and adverse neurodevelopmental outcomes: population based cohort study. BMJ (Clinical research ed.), 393, e087321. https://doi.org/10.1136/bmj-2025-087321",
-      "format": "Friedrich, S., Huybrechts, K. F., Straub, L., Hernandez-Diaz, S., Zhu, Y., Hahn, G., Mogun, H., Jones, H. E., Connery, H. S., Davis, J. M., Gray, K. J., Lester, B., Terplan, M., & Bateman, B. T. (2026). Prenatal exposure to buprenorphine or methadone and adverse neurodevelopmental outcomes: population based cohort study. <i>BMJ (Clinical research ed.)</i>, <i>393</i>, e087321. https://doi.org/10.1136/bmj-2025-087321"
+      "orig": "Xue, M., Li, S., Wang, J., Li, J., Ding, X., Ma, E., & Sun, J. (2026). Ductile alloys offering 100 MPa tensile strength at 2,400 \u00b0C. Nature, 655(8121), 109\u2013115. https://doi.org/10.1038/s41586-026-10708-z",
+      "format": "Xue, M., Li, S., Wang, J., Li, J., Ding, X., Ma, E., & Sun, J. (2026). Ductile alloys offering 100 MPa tensile strength at 2,400 \u00b0C. <i>Nature</i>, <i>655</i>(8121), 109\u2013115. https://doi.org/10.1038/s41586-026-10708-z"
     },
     "mla": {
-      "orig": "Friedrich, Sabine et al. \u201cPrenatal exposure to buprenorphine or methadone and adverse neurodevelopmental outcomes: population based cohort study.\u201d BMJ (Clinical research ed.) vol. 393 e087321. 15 Apr. 2026, doi:10.1136/bmj-2025-087321",
-      "format": "Friedrich, Sabine et al. \u201cPrenatal exposure to buprenorphine or methadone and adverse neurodevelopmental outcomes: population based cohort study.\u201d <i>BMJ (Clinical research ed.)</i> vol. 393 e087321. 15 Apr. 2026, doi:10.1136/bmj-2025-087321"
+      "orig": "Xue, Mintao et al. \u201cDuctile alloys offering 100 MPa tensile strength at 2,400 \u00b0C.\u201d Nature vol. 655,8121 (2026): 109-115. doi:10.1038/s41586-026-10708-z",
+      "format": "Xue, Mintao et al. \u201cDuctile alloys offering 100 MPa tensile strength at 2,400 \u00b0C.\u201d <i>Nature</i> vol. 655,8121 (2026): 109-115. doi:10.1038/s41586-026-10708-z"
     },
     "nlm": {
-      "orig": "Friedrich S, Huybrechts KF, Straub L, Hernandez-Diaz S, Zhu Y, Hahn G, Mogun H, Jones HE, Connery HS, Davis JM, Gray KJ, Lester B, Terplan M, Bateman BT. Prenatal exposure to buprenorphine or methadone and adverse neurodevelopmental outcomes: population based cohort study. BMJ. 2026 Apr 15;393:e087321. doi: 10.1136/bmj-2025-087321. PMID: 41985931; PMCID: PMC13081224.",
-      "format": "Friedrich S, Huybrechts KF, Straub L, Hernandez-Diaz S, Zhu Y, Hahn G, Mogun H, Jones HE, Connery HS, Davis JM, Gray KJ, Lester B, Terplan M, Bateman BT. Prenatal exposure to buprenorphine or methadone and adverse neurodevelopmental outcomes: population based cohort study. BMJ. 2026 Apr 15;393:e087321. doi: 10.1136/bmj-2025-087321. PMID: 41985931; PMCID: PMC13081224."
+      "orig": "Xue M, Li S, Wang J, Li J, Ding X, Ma E, Sun J. Ductile alloys offering 100 MPa tensile strength at 2,400 \u00b0C. Nature. 2026 Jul;655(8121):109-115. doi: 10.1038/s41586-026-10708-z. Epub 2026 Jun 24. PMID: 42343135; PMCID: PMC13323083.",
+      "format": "Xue M, Li S, Wang J, Li J, Ding X, Ma E, Sun J. Ductile alloys offering 100 MPa tensile strength at 2,400 \u00b0C. Nature. 2026 Jul;655(8121):109-115. doi: 10.1038/s41586-026-10708-z. Epub 2026 Jun 24. PMID: 42343135; PMCID: PMC13323083."
+    }
+  },
+  {
+    "id": "pmid:42343125",
+    "ama": {
+      "orig": "Glauser YM, Vonk SJW, Seda DB, et al. Fourier pixels for bidirectional light control. Nature. 2026;655(8121):87-92. doi:10.1038/s41586-026-10681-7",
+      "format": "Glauser YM, Vonk SJW, Seda DB, et al. Fourier pixels for bidirectional light control. <i>Nature</i>. 2026;655(8121):87-92. doi:10.1038/s41586-026-10681-7"
+    },
+    "apa": {
+      "orig": "Glauser, Y. M., Vonk, S. J. W., Seda, D. B., Niese, H., de Jong, B., Bidaut, M. F., Bossavit, E., Petter, D., Nagamine, G., Lassaline, N., & Norris, D. J. (2026). Fourier pixels for bidirectional light control. Nature, 655(8121), 87\u201392. https://doi.org/10.1038/s41586-026-10681-7",
+      "format": "Glauser, Y. M., Vonk, S. J. W., Seda, D. B., Niese, H., de Jong, B., Bidaut, M. F., Bossavit, E., Petter, D., Nagamine, G., Lassaline, N., & Norris, D. J. (2026). Fourier pixels for bidirectional light control. <i>Nature</i>, <i>655</i>(8121), 87\u201392. https://doi.org/10.1038/s41586-026-10681-7"
+    },
+    "mla": {
+      "orig": "Glauser, Yannik M et al. \u201cFourier pixels for bidirectional light control.\u201d Nature vol. 655,8121 (2026): 87-92. doi:10.1038/s41586-026-10681-7",
+      "format": "Glauser, Yannik M et al. \u201cFourier pixels for bidirectional light control.\u201d <i>Nature</i> vol. 655,8121 (2026): 87-92. doi:10.1038/s41586-026-10681-7"
+    },
+    "nlm": {
+      "orig": "Glauser YM, Vonk SJW, Seda DB, Niese H, de Jong B, Bidaut MF, Bossavit E, Petter D, Nagamine G, Lassaline N, Norris DJ. Fourier pixels for bidirectional light control. Nature. 2026 Jul;655(8121):87-92. doi: 10.1038/s41586-026-10681-7. Epub 2026 Jun 24. PMID: 42343125; PMCID: PMC13323068.",
+      "format": "Glauser YM, Vonk SJW, Seda DB, Niese H, de Jong B, Bidaut MF, Bossavit E, Petter D, Nagamine G, Lassaline N, Norris DJ. Fourier pixels for bidirectional light control. Nature. 2026 Jul;655(8121):87-92. doi: 10.1038/s41586-026-10681-7. Epub 2026 Jun 24. PMID: 42343125; PMCID: PMC13323068."
+    }
+  },
+  {
+    "id": "pmid:42342875",
+    "ama": {
+      "orig": "Mao YH, Xu JP, Ji HT, et al. Chiral laser gyroscopes breaking the lock-in limit. Nature. 2026;654(8120):926-931. doi:10.1038/s41586-026-10684-4",
+      "format": "Mao YH, Xu JP, Ji HT, et al. Chiral laser gyroscopes breaking the lock-in limit. <i>Nature</i>. 2026;654(8120):926-931. doi:10.1038/s41586-026-10684-4"
+    },
+    "apa": {
+      "orig": "Mao, Y. H., Xu, J. P., Ji, H. T., Yang, L. T., Tan, Z. Q., Quan, Y. C., Pu, T., Shao, W., Hu, J. Q., Huang, R., Nori, F., & Jing, H. (2026). Chiral laser gyroscopes breaking the lock-in limit. Nature, 654(8120), 926\u2013931. https://doi.org/10.1038/s41586-026-10684-4",
+      "format": "Mao, Y. H., Xu, J. P., Ji, H. T., Yang, L. T., Tan, Z. Q., Quan, Y. C., Pu, T., Shao, W., Hu, J. Q., Huang, R., Nori, F., & Jing, H. (2026). Chiral laser gyroscopes breaking the lock-in limit. <i>Nature</i>, <i>654</i>(8120), 926\u2013931. https://doi.org/10.1038/s41586-026-10684-4"
+    },
+    "mla": {
+      "orig": "Mao, Yuan-Hao et al. \u201cChiral laser gyroscopes breaking the lock-in limit.\u201d Nature vol. 654,8120 (2026): 926-931. doi:10.1038/s41586-026-10684-4",
+      "format": "Mao, Yuan-Hao et al. \u201cChiral laser gyroscopes breaking the lock-in limit.\u201d <i>Nature</i> vol. 654,8120 (2026): 926-931. doi:10.1038/s41586-026-10684-4"
+    },
+    "nlm": {
+      "orig": "Mao YH, Xu JP, Ji HT, Yang LT, Tan ZQ, Quan YC, Pu T, Shao W, Hu JQ, Huang R, Nori F, Jing H. Chiral laser gyroscopes breaking the lock-in limit. Nature. 2026 Jun;654(8120):926-931. doi: 10.1038/s41586-026-10684-4. Epub 2026 Jun 24. PMID: 42342875; PMCID: PMC13293876.",
+      "format": "Mao YH, Xu JP, Ji HT, Yang LT, Tan ZQ, Quan YC, Pu T, Shao W, Hu JQ, Huang R, Nori F, Jing H. Chiral laser gyroscopes breaking the lock-in limit. Nature. 2026 Jun;654(8120):926-931. doi: 10.1038/s41586-026-10684-4. Epub 2026 Jun 24. PMID: 42342875; PMCID: PMC13293876."
+    }
+  },
+  {
+    "id": "pmid:42310465",
+    "ama": {
+      "orig": "Ransford A, Allman MS, Arkinstall J, et al. A 98-qubit trapped-ion quantum computer with all-to-all connectivity. Nature. 2026;655(8121):81-86. doi:10.1038/s41586-026-10676-4",
+      "format": "Ransford A, Allman MS, Arkinstall J, et al. A 98-qubit trapped-ion quantum computer with all-to-all connectivity. <i>Nature</i>. 2026;655(8121):81-86. doi:10.1038/s41586-026-10676-4"
+    },
+    "apa": {
+      "orig": "Ransford, A., Allman, M. S., Arkinstall, J., Campora, J. P., 3rd, Cooper, S. F., Delaney, R. D., Dreiling, J. M., Estey, B., Figgatt, C., Hall, A., Husain, A. A., Isanaka, A., Kennedy, C. J., Kotibhaskar, N., Madjarov, I. S., Mayer, K., Milne, A. R., Park, A. J., Reed, A. P., Ancona, R., \u2026 Bohnet, J. G. (2026). A 98-qubit trapped-ion quantum computer with all-to-all connectivity. Nature, 655(8121), 81\u201386. https://doi.org/10.1038/s41586-026-10676-4",
+      "format": "Ransford, A., Allman, M. S., Arkinstall, J., Campora, J. P., 3rd, Cooper, S. F., Delaney, R. D., Dreiling, J. M., Estey, B., Figgatt, C., Hall, A., Husain, A. A., Isanaka, A., Kennedy, C. J., Kotibhaskar, N., Madjarov, I. S., Mayer, K., Milne, A. R., Park, A. J., Reed, A. P., Ancona, R., \u2026 Bohnet, J. G. (2026). A 98-qubit trapped-ion quantum computer with all-to-all connectivity. <i>Nature</i>, <i>655</i>(8121), 81\u201386. https://doi.org/10.1038/s41586-026-10676-4"
+    },
+    "mla": {
+      "orig": "Ransford, Anthony et al. \u201cA 98-qubit trapped-ion quantum computer with all-to-all connectivity.\u201d Nature vol. 655,8121 (2026): 81-86. doi:10.1038/s41586-026-10676-4",
+      "format": "Ransford, Anthony et al. \u201cA 98-qubit trapped-ion quantum computer with all-to-all connectivity.\u201d <i>Nature</i> vol. 655,8121 (2026): 81-86. doi:10.1038/s41586-026-10676-4"
+    },
+    "nlm": {
+      "orig": "Ransford A, Allman MS, Arkinstall J, Campora JP 3rd, Cooper SF, Delaney RD, Dreiling JM, Estey B, Figgatt C, Hall A, Husain AA, Isanaka A, Kennedy CJ, Kotibhaskar N, Madjarov IS, Mayer K, Milne AR, Park AJ, Reed AP, Ancona R, Andersen MP, Andres-Martinez P, Angenent W, Argueta L, Arkin B, Ascarrunz L, Baker W, Barnes C, Bartolotta J, Berg J, Besand R, Bjork B, Blain M, Blanchard P, Blume-Kohout R, Bohn M, Borgna A, Botamanenko DY, Boutelle R, Brown N, Buckingham GT, Burdick NQ, Burton WC, Carey V, Carron CJ, Chambers J, Chan JW, Children J, Colussi VE, Crepinsek S, Cureton A, Davies J, Davis D, DeCross M, Deen D, Delaney C, DelVento D, DeSalvo BJ, Dominy J, Drotar S, Duncan R, Eccles V, Edgington A, Erickson N, Erickson S, Ertsgaard CT, Esposito J, Evans B, Evans T, Fabrikant MI, Fischer A, Foltz C, Foss-Feig M, Francois D, Freyberg B, Gao C, Garay R, Garvin J, Gaudiosi DM, Gilbreth CN, Giles J, Glynn E, Graves J, Hansen A, Hayes D, Heidemann L, Higashi B, Hilbun T, Hines J, Hlavaty A, Hoffman K, Hoffman IM, Holliman C, Hooper I, Horning B, Hostetter J, Hothem D, Houlton J, Hout J, Hutson R, Jacobs RT, Jacobs T, Johannsen M, Johansen J, Jones L, Julian S, Jung R, Keay A, Klein T, Koch M, Kondo R, Kong C, Kosto A, Lawrence A, Liefer D, Lollie M, Lucchetti D, Lysne NK, Lytle C, MacPherson C, Malm A, Mather S, Mathewson B, Maxwell D, McCaffrey L, McDougall H, Mendoza R, Miller DB, Mills M, Morrison R, Narmour L, Nguyen N, Nugent L, Olson S, Ouellette D, Parks J, Peters Z, Peterson TA, Petricka J, Pino JM, Polito F, Potter AC, Preidl M, Price G, Proctor T, Pugh M, Ratcliff N, Raymondson D, Rhodes P, Roman C, Roy C, Ryan-Anderson C, Sanchez FB, Sangiolo G, Sawadski T, Schaffer A, Schow P, Sedlacek J, Semenenko H, Shevchuk P, Shore S, Siegfried P, Singhal K, Sivarajah S, Skripka T, Sletten L, Spaun B, Sprenkle RT, Stoufer P, Tader M, Taylor SF, Thompson TH, Tobey R, Tran A, Tran T, Vittorini G, Volin C, Walker J, White S, Williams GR, Wilson D, Wolf Q, Wringe C, Young K, Zheng J, Zuraski K, Baldwin CH, Chernoguzov A, Gaebler JP, Sanders SJ, Neyenhuis B, Stutz R, Bohnet JG. A 98-qubit trapped-ion quantum computer with all-to-all connectivity. Nature. 2026 Jul;655(8121):81-86. doi: 10.1038/s41586-026-10676-4. Epub 2026 Jun 17. PMID: 42310465; PMCID: PMC13322971.",
+      "format": "Ransford A, Allman MS, Arkinstall J, Campora JP 3rd, Cooper SF, Delaney RD, Dreiling JM, Estey B, Figgatt C, Hall A, Husain AA, Isanaka A, Kennedy CJ, Kotibhaskar N, Madjarov IS, Mayer K, Milne AR, Park AJ, Reed AP, Ancona R, Andersen MP, Andres-Martinez P, Angenent W, Argueta L, Arkin B, Ascarrunz L, Baker W, Barnes C, Bartolotta J, Berg J, Besand R, Bjork B, Blain M, Blanchard P, Blume-Kohout R, Bohn M, Borgna A, Botamanenko DY, Boutelle R, Brown N, Buckingham GT, Burdick NQ, Burton WC, Carey V, Carron CJ, Chambers J, Chan JW, Children J, Colussi VE, Crepinsek S, Cureton A, Davies J, Davis D, DeCross M, Deen D, Delaney C, DelVento D, DeSalvo BJ, Dominy J, Drotar S, Duncan R, Eccles V, Edgington A, Erickson N, Erickson S, Ertsgaard CT, Esposito J, Evans B, Evans T, Fabrikant MI, Fischer A, Foltz C, Foss-Feig M, Francois D, Freyberg B, Gao C, Garay R, Garvin J, Gaudiosi DM, Gilbreth CN, Giles J, Glynn E, Graves J, Hansen A, Hayes D, Heidemann L, Higashi B, Hilbun T, Hines J, Hlavaty A, Hoffman K, Hoffman IM, Holliman C, Hooper I, Horning B, Hostetter J, Hothem D, Houlton J, Hout J, Hutson R, Jacobs RT, Jacobs T, Johannsen M, Johansen J, Jones L, Julian S, Jung R, Keay A, Klein T, Koch M, Kondo R, Kong C, Kosto A, Lawrence A, Liefer D, Lollie M, Lucchetti D, Lysne NK, Lytle C, MacPherson C, Malm A, Mather S, Mathewson B, Maxwell D, McCaffrey L, McDougall H, Mendoza R, Miller DB, Mills M, Morrison R, Narmour L, Nguyen N, Nugent L, Olson S, Ouellette D, Parks J, Peters Z, Peterson TA, Petricka J, Pino JM, Polito F, Potter AC, Preidl M, Price G, Proctor T, Pugh M, Ratcliff N, Raymondson D, Rhodes P, Roman C, Roy C, Ryan-Anderson C, Sanchez FB, Sangiolo G, Sawadski T, Schaffer A, Schow P, Sedlacek J, Semenenko H, Shevchuk P, Shore S, Siegfried P, Singhal K, Sivarajah S, Skripka T, Sletten L, Spaun B, Sprenkle RT, Stoufer P, Tader M, Taylor SF, Thompson TH, Tobey R, Tran A, Tran T, Vittorini G, Volin C, Walker J, White S, Williams GR, Wilson D, Wolf Q, Wringe C, Young K, Zheng J, Zuraski K, Baldwin CH, Chernoguzov A, Gaebler JP, Sanders SJ, Neyenhuis B, Stutz R, Bohnet JG. A 98-qubit trapped-ion quantum computer with all-to-all connectivity. Nature. 2026 Jul;655(8121):81-86. doi: 10.1038/s41586-026-10676-4. Epub 2026 Jun 17. PMID: 42310465; PMCID: PMC13322971."
+    }
+  },
+  {
+    "id": "pmid:42310459",
+    "ama": {
+      "orig": "Zhang L, Bufe A, Dean JF, et al. Rock weathering can counteract river CO<sub>2</sub> emissions induced by permafrost thaw. Nature. 2026;655(8121):125-132. doi:10.1038/s41586-026-10664-8",
+      "format": "Zhang L, Bufe A, Dean JF, et al. Rock weathering can counteract river CO<sub>2</sub> emissions induced by permafrost thaw. <i>Nature</i>. 2026;655(8121):125-132. doi:10.1038/s41586-026-10664-8"
+    },
+    "apa": {
+      "orig": "Zhang, L., Bufe, A., Dean, J. F., Rocher-Ros, G., Sponseller, R. A., Stanley, E. H., Karlsson, J., Butman, D. E., Liu, R., Hou, L., Ding, J., Piao, S., Xia, X., & Battin, T. J. (2026). Rock weathering can counteract river CO<sub>2</sub> emissions induced by permafrost thaw. Nature, 655(8121), 125\u2013132. https://doi.org/10.1038/s41586-026-10664-8",
+      "format": "Zhang, L., Bufe, A., Dean, J. F., Rocher-Ros, G., Sponseller, R. A., Stanley, E. H., Karlsson, J., Butman, D. E., Liu, R., Hou, L., Ding, J., Piao, S., Xia, X., & Battin, T. J. (2026). Rock weathering can counteract river CO<sub>2</sub> emissions induced by permafrost thaw. <i>Nature</i>, <i>655</i>(8121), 125\u2013132. https://doi.org/10.1038/s41586-026-10664-8"
+    },
+    "mla": {
+      "orig": "Zhang, Liwei et al. \u201cRock weathering can counteract river CO<sub>2</sub> emissions induced by permafrost thaw.\u201d Nature vol. 655,8121 (2026): 125-132. doi:10.1038/s41586-026-10664-8",
+      "format": "Zhang, Liwei et al. \u201cRock weathering can counteract river CO<sub>2</sub> emissions induced by permafrost thaw.\u201d <i>Nature</i> vol. 655,8121 (2026): 125-132. doi:10.1038/s41586-026-10664-8"
+    },
+    "nlm": {
+      "orig": "Zhang L, Bufe A, Dean JF, Rocher-Ros G, Sponseller RA, Stanley EH, Karlsson J, Butman DE, Liu R, Hou L, Ding J, Piao S, Xia X, Battin TJ. Rock weathering can counteract river CO<sub>2</sub> emissions induced by permafrost thaw. Nature. 2026 Jul;655(8121):125-132. doi: 10.1038/s41586-026-10664-8. Epub 2026 Jun 17. PMID: 42310459; PMCID: PMC13322975.",
+      "format": "Zhang L, Bufe A, Dean JF, Rocher-Ros G, Sponseller RA, Stanley EH, Karlsson J, Butman DE, Liu R, Hou L, Ding J, Piao S, Xia X, Battin TJ. Rock weathering can counteract river CO<sub>2</sub> emissions induced by permafrost thaw. Nature. 2026 Jul;655(8121):125-132. doi: 10.1038/s41586-026-10664-8. Epub 2026 Jun 17. PMID: 42310459; PMCID: PMC13322975."
+    }
+  },
+  {
+    "id": "pmid:42310452",
+    "ama": {
+      "orig": "Zhang Z, Canela A, Kurisu J, et al. Confined migration induces non-lethal DNA damage in developing neurons. Nature. 2026;654(8120):1098-1107. doi:10.1038/s41586-026-10648-8",
+      "format": "Zhang Z, Canela A, Kurisu J, et al. Confined migration induces non-lethal DNA damage in developing neurons. <i>Nature</i>. 2026;654(8120):1098-1107. doi:10.1038/s41586-026-10648-8"
+    },
+    "apa": {
+      "orig": "Zhang, Z., Canela, A., Kurisu, J., Zou, P., Kawaue, T., Nakazawa, N., Takeda, N., Saeki, M., Utsunomiya, M., Bilgic, M., Ishidate, F., Grenci, G., Furuta, T., Kishi, Y., Sasanuma, H., & Kengaku, M. (2026). Confined migration induces non-lethal DNA damage in developing neurons. Nature, 654(8120), 1098\u20131107. https://doi.org/10.1038/s41586-026-10648-8",
+      "format": "Zhang, Z., Canela, A., Kurisu, J., Zou, P., Kawaue, T., Nakazawa, N., Takeda, N., Saeki, M., Utsunomiya, M., Bilgic, M., Ishidate, F., Grenci, G., Furuta, T., Kishi, Y., Sasanuma, H., & Kengaku, M. (2026). Confined migration induces non-lethal DNA damage in developing neurons. <i>Nature</i>, <i>654</i>(8120), 1098\u20131107. https://doi.org/10.1038/s41586-026-10648-8"
+    },
+    "mla": {
+      "orig": "Zhang, Zhejing et al. \u201cConfined migration induces non-lethal DNA damage in developing neurons.\u201d Nature vol. 654,8120 (2026): 1098-1107. doi:10.1038/s41586-026-10648-8",
+      "format": "Zhang, Zhejing et al. \u201cConfined migration induces non-lethal DNA damage in developing neurons.\u201d <i>Nature</i> vol. 654,8120 (2026): 1098-1107. doi:10.1038/s41586-026-10648-8"
+    },
+    "nlm": {
+      "orig": "Zhang Z, Canela A, Kurisu J, Zou P, Kawaue T, Nakazawa N, Takeda N, Saeki M, Utsunomiya M, Bilgic M, Ishidate F, Grenci G, Furuta T, Kishi Y, Sasanuma H, Kengaku M. Confined migration induces non-lethal DNA damage in developing neurons. Nature. 2026 Jun;654(8120):1098-1107. doi: 10.1038/s41586-026-10648-8. Epub 2026 Jun 17. PMID: 42310452; PMCID: PMC13293896.",
+      "format": "Zhang Z, Canela A, Kurisu J, Zou P, Kawaue T, Nakazawa N, Takeda N, Saeki M, Utsunomiya M, Bilgic M, Ishidate F, Grenci G, Furuta T, Kishi Y, Sasanuma H, Kengaku M. Confined migration induces non-lethal DNA damage in developing neurons. Nature. 2026 Jun;654(8120):1098-1107. doi: 10.1038/s41586-026-10648-8. Epub 2026 Jun 17. PMID: 42310452; PMCID: PMC13293896."
     }
   },
   {
@@ -532,6 +684,82 @@
     }
   },
   {
+    "id": "pmid:42271066",
+    "ama": {
+      "orig": "Krumpen T, Meyer-Kaiser KS, Wekerle C, et al. Amplified Arctic iceberg traffic reshapes benthic biodiversity. Nature. 2026;654(8120):963-970. doi:10.1038/s41586-026-10630-4",
+      "format": "Krumpen T, Meyer-Kaiser KS, Wekerle C, et al. Amplified Arctic iceberg traffic reshapes benthic biodiversity. <i>Nature</i>. 2026;654(8120):963-970. doi:10.1038/s41586-026-10630-4"
+    },
+    "apa": {
+      "orig": "Krumpen, T., Meyer-Kaiser, K. S., Wekerle, C., Ackermann, L., Castle, D., Bergmann, M., Hoppmann, M., Khan, S. A., Purser, A., & Schmith\u00fcsen, H. (2026). Amplified Arctic iceberg traffic reshapes benthic biodiversity. Nature, 654(8120), 963\u2013970. https://doi.org/10.1038/s41586-026-10630-4",
+      "format": "Krumpen, T., Meyer-Kaiser, K. S., Wekerle, C., Ackermann, L., Castle, D., Bergmann, M., Hoppmann, M., Khan, S. A., Purser, A., & Schmith\u00fcsen, H. (2026). Amplified Arctic iceberg traffic reshapes benthic biodiversity. <i>Nature</i>, <i>654</i>(8120), 963\u2013970. https://doi.org/10.1038/s41586-026-10630-4"
+    },
+    "mla": {
+      "orig": "Krumpen, Thomas et al. \u201cAmplified Arctic iceberg traffic reshapes benthic biodiversity.\u201d Nature vol. 654,8120 (2026): 963-970. doi:10.1038/s41586-026-10630-4",
+      "format": "Krumpen, Thomas et al. \u201cAmplified Arctic iceberg traffic reshapes benthic biodiversity.\u201d <i>Nature</i> vol. 654,8120 (2026): 963-970. doi:10.1038/s41586-026-10630-4"
+    },
+    "nlm": {
+      "orig": "Krumpen T, Meyer-Kaiser KS, Wekerle C, Ackermann L, Castle D, Bergmann M, Hoppmann M, Khan SA, Purser A, Schmith\u00fcsen H. Amplified Arctic iceberg traffic reshapes benthic biodiversity. Nature. 2026 Jun;654(8120):963-970. doi: 10.1038/s41586-026-10630-4. Epub 2026 Jun 10. PMID: 42271066; PMCID: PMC13293891.",
+      "format": "Krumpen T, Meyer-Kaiser KS, Wekerle C, Ackermann L, Castle D, Bergmann M, Hoppmann M, Khan SA, Purser A, Schmith\u00fcsen H. Amplified Arctic iceberg traffic reshapes benthic biodiversity. Nature. 2026 Jun;654(8120):963-970. doi: 10.1038/s41586-026-10630-4. Epub 2026 Jun 10. PMID: 42271066; PMCID: PMC13293891."
+    }
+  },
+  {
+    "id": "pmid:42271065",
+    "ama": {
+      "orig": "Gaskin T, Abel GJ. Deep learning four decades of human migration. Nature. 2026;655(8121):148-157. doi:10.1038/s41586-026-10611-7",
+      "format": "Gaskin T, Abel GJ. Deep learning four decades of human migration. <i>Nature</i>. 2026;655(8121):148-157. doi:10.1038/s41586-026-10611-7"
+    },
+    "apa": {
+      "orig": "Gaskin, T., & Abel, G. J. (2026). Deep learning four decades of human migration. Nature, 655(8121), 148\u2013157. https://doi.org/10.1038/s41586-026-10611-7",
+      "format": "Gaskin, T., & Abel, G. J. (2026). Deep learning four decades of human migration. <i>Nature</i>, <i>655</i>(8121), 148\u2013157. https://doi.org/10.1038/s41586-026-10611-7"
+    },
+    "mla": {
+      "orig": "Gaskin, Thomas, and Guy J Abel. \u201cDeep learning four decades of human migration.\u201d Nature vol. 655,8121 (2026): 148-157. doi:10.1038/s41586-026-10611-7",
+      "format": "Gaskin, Thomas, and Guy J Abel. \u201cDeep learning four decades of human migration.\u201d <i>Nature</i> vol. 655,8121 (2026): 148-157. doi:10.1038/s41586-026-10611-7"
+    },
+    "nlm": {
+      "orig": "Gaskin T, Abel GJ. Deep learning four decades of human migration. Nature. 2026 Jul;655(8121):148-157. doi: 10.1038/s41586-026-10611-7. Epub 2026 Jun 10. PMID: 42271065; PMCID: PMC13322962.",
+      "format": "Gaskin T, Abel GJ. Deep learning four decades of human migration. Nature. 2026 Jul;655(8121):148-157. doi: 10.1038/s41586-026-10611-7. Epub 2026 Jun 10. PMID: 42271065; PMCID: PMC13322962."
+    }
+  },
+  {
+    "id": "pmid:42271052",
+    "ama": {
+      "orig": "Kistwal T, Kanhaiya K, Buchmann A, et al. Light-induced quantum friction of carbon nanotubes in water. Nature. 2026;654(8120):941-947. doi:10.1038/s41586-026-10632-2",
+      "format": "Kistwal T, Kanhaiya K, Buchmann A, et al. Light-induced quantum friction of carbon nanotubes in water. <i>Nature</i>. 2026;654(8120):941-947. doi:10.1038/s41586-026-10632-2"
+    },
+    "apa": {
+      "orig": "Kistwal, T., Kanhaiya, K., Buchmann, A., Ma, C., Nikoli\u0107, J., Ackermann, J., Galonska, P., Nalige, S. S., Sardari, V., Sudarsan, A., Havenith, M., Sulpizi, M., & Kruss, S. (2026). Light-induced quantum friction of carbon nanotubes in water. Nature, 654(8120), 941\u2013947. https://doi.org/10.1038/s41586-026-10632-2",
+      "format": "Kistwal, T., Kanhaiya, K., Buchmann, A., Ma, C., Nikoli\u0107, J., Ackermann, J., Galonska, P., Nalige, S. S., Sardari, V., Sudarsan, A., Havenith, M., Sulpizi, M., & Kruss, S. (2026). Light-induced quantum friction of carbon nanotubes in water. <i>Nature</i>, <i>654</i>(8120), 941\u2013947. https://doi.org/10.1038/s41586-026-10632-2"
+    },
+    "mla": {
+      "orig": "Kistwal, Tanuja et al. \u201cLight-induced quantum friction of carbon nanotubes in water.\u201d Nature vol. 654,8120 (2026): 941-947. doi:10.1038/s41586-026-10632-2",
+      "format": "Kistwal, Tanuja et al. \u201cLight-induced quantum friction of carbon nanotubes in water.\u201d <i>Nature</i> vol. 654,8120 (2026): 941-947. doi:10.1038/s41586-026-10632-2"
+    },
+    "nlm": {
+      "orig": "Kistwal T, Kanhaiya K, Buchmann A, Ma C, Nikoli\u0107 J, Ackermann J, Galonska P, Nalige SS, Sardari V, Sudarsan A, Havenith M, Sulpizi M, Kruss S. Light-induced quantum friction of carbon nanotubes in water. Nature. 2026 Jun;654(8120):941-947. doi: 10.1038/s41586-026-10632-2. Epub 2026 Jun 10. PMID: 42271052; PMCID: PMC13293881.",
+      "format": "Kistwal T, Kanhaiya K, Buchmann A, Ma C, Nikoli\u0107 J, Ackermann J, Galonska P, Nalige SS, Sardari V, Sudarsan A, Havenith M, Sulpizi M, Kruss S. Light-induced quantum friction of carbon nanotubes in water. Nature. 2026 Jun;654(8120):941-947. doi: 10.1038/s41586-026-10632-2. Epub 2026 Jun 10. PMID: 42271052; PMCID: PMC13293881."
+    }
+  },
+  {
+    "id": "pmid:42271050",
+    "ama": {
+      "orig": "Peng X, Zhou P, Song X, et al. A 5.3-million-year-old deep-sea whale necropolis in the Diamantina Zone. Nature. 2026;654(8120):978-983. doi:10.1038/s41586-026-10546-z",
+      "format": "Peng X, Zhou P, Song X, et al. A 5.3-million-year-old deep-sea whale necropolis in the Diamantina Zone. <i>Nature</i>. 2026;654(8120):978-983. doi:10.1038/s41586-026-10546-z"
+    },
+    "apa": {
+      "orig": "Peng, X., Zhou, P., Song, X., Bianucci, G., Du, M., Collareta, A., Gao, Z., Xie, T., Teng, M., Leduc, D., Mills, S., Ta, K., Li, J., Wei, T., Dasgupta, S., Liu, H., He, Y., Xu, W., Liu, S., & Zhang, H. (2026). A 5.3-million-year-old deep-sea whale necropolis in the Diamantina Zone. Nature, 654(8120), 978\u2013983. https://doi.org/10.1038/s41586-026-10546-z",
+      "format": "Peng, X., Zhou, P., Song, X., Bianucci, G., Du, M., Collareta, A., Gao, Z., Xie, T., Teng, M., Leduc, D., Mills, S., Ta, K., Li, J., Wei, T., Dasgupta, S., Liu, H., He, Y., Xu, W., Liu, S., & Zhang, H. (2026). A 5.3-million-year-old deep-sea whale necropolis in the Diamantina Zone. <i>Nature</i>, <i>654</i>(8120), 978\u2013983. https://doi.org/10.1038/s41586-026-10546-z"
+    },
+    "mla": {
+      "orig": "Peng, Xiaotong et al. \u201cA 5.3-million-year-old deep-sea whale necropolis in the Diamantina Zone.\u201d Nature vol. 654,8120 (2026): 978-983. doi:10.1038/s41586-026-10546-z",
+      "format": "Peng, Xiaotong et al. \u201cA 5.3-million-year-old deep-sea whale necropolis in the Diamantina Zone.\u201d <i>Nature</i> vol. 654,8120 (2026): 978-983. doi:10.1038/s41586-026-10546-z"
+    },
+    "nlm": {
+      "orig": "Peng X, Zhou P, Song X, Bianucci G, Du M, Collareta A, Gao Z, Xie T, Teng M, Leduc D, Mills S, Ta K, Li J, Wei T, Dasgupta S, Liu H, He Y, Xu W, Liu S, Zhang H. A 5.3-million-year-old deep-sea whale necropolis in the Diamantina Zone. Nature. 2026 Jun;654(8120):978-983. doi: 10.1038/s41586-026-10546-z. Epub 2026 Jun 10. PMID: 42271050; PMCID: PMC13293867.",
+      "format": "Peng X, Zhou P, Song X, Bianucci G, Du M, Collareta A, Gao Z, Xie T, Teng M, Leduc D, Mills S, Ta K, Li J, Wei T, Dasgupta S, Liu H, He Y, Xu W, Liu S, Zhang H. A 5.3-million-year-old deep-sea whale necropolis in the Diamantina Zone. Nature. 2026 Jun;654(8120):978-983. doi: 10.1038/s41586-026-10546-z. Epub 2026 Jun 10. PMID: 42271050; PMCID: PMC13293867."
+    }
+  },
+  {
     "id": "pmid:42236939",
     "ama": {
       "orig": "Wei Q, Peter JS, Ren H, et al. Chiral superfluorescence from perovskite superlattices at room temperature. Nature. 2026;654(8118):369-374. doi:10.1038/s41586-026-10637-x",
@@ -586,6 +814,25 @@
     "nlm": {
       "orig": "Zhang J, Gristey JJ, Feingold G. Earth's east-west albedo symmetry. Nature. 2026 Jun;654(8119):676-682. doi: 10.1038/s41586-026-10624-2. Epub 2026 Jun 3. PMID: 42236934; PMCID: PMC13275288.",
       "format": "Zhang J, Gristey JJ, Feingold G. Earth's east-west albedo symmetry. Nature. 2026 Jun;654(8119):676-682. doi: 10.1038/s41586-026-10624-2. Epub 2026 Jun 3. PMID: 42236934; PMCID: PMC13275288."
+    }
+  },
+  {
+    "id": "pmid:42236933",
+    "ama": {
+      "orig": "Morton O, Bousfield CG, D\u00e9gny Val\u00e9 P, et al. Mining triggers extensive additional deforestation in sub-Saharan Africa. Nature. 2026;654(8120):971-977. doi:10.1038/s41586-026-10551-2",
+      "format": "Morton O, Bousfield CG, D\u00e9gny Val\u00e9 P, et al. Mining triggers extensive additional deforestation in sub-Saharan Africa. <i>Nature</i>. 2026;654(8120):971-977. doi:10.1038/s41586-026-10551-2"
+    },
+    "apa": {
+      "orig": "Morton, O., Bousfield, C. G., D\u00e9gny Val\u00e9, P., Lamb, I., Maus, V., Bryant, R. G., & Edwards, D. P. (2026). Mining triggers extensive additional deforestation in sub-Saharan Africa. Nature, 654(8120), 971\u2013977. https://doi.org/10.1038/s41586-026-10551-2",
+      "format": "Morton, O., Bousfield, C. G., D\u00e9gny Val\u00e9, P., Lamb, I., Maus, V., Bryant, R. G., & Edwards, D. P. (2026). Mining triggers extensive additional deforestation in sub-Saharan Africa. <i>Nature</i>, <i>654</i>(8120), 971\u2013977. https://doi.org/10.1038/s41586-026-10551-2"
+    },
+    "mla": {
+      "orig": "Morton, Oscar et al. \u201cMining triggers extensive additional deforestation in sub-Saharan Africa.\u201d Nature vol. 654,8120 (2026): 971-977. doi:10.1038/s41586-026-10551-2",
+      "format": "Morton, Oscar et al. \u201cMining triggers extensive additional deforestation in sub-Saharan Africa.\u201d <i>Nature</i> vol. 654,8120 (2026): 971-977. doi:10.1038/s41586-026-10551-2"
+    },
+    "nlm": {
+      "orig": "Morton O, Bousfield CG, D\u00e9gny Val\u00e9 P, Lamb I, Maus V, Bryant RG, Edwards DP. Mining triggers extensive additional deforestation in sub-Saharan Africa. Nature. 2026 Jun;654(8120):971-977. doi: 10.1038/s41586-026-10551-2. Epub 2026 Jun 3. PMID: 42236933; PMCID: PMC13293856.",
+      "format": "Morton O, Bousfield CG, D\u00e9gny Val\u00e9 P, Lamb I, Maus V, Bryant RG, Edwards DP. Mining triggers extensive additional deforestation in sub-Saharan Africa. Nature. 2026 Jun;654(8120):971-977. doi: 10.1038/s41586-026-10551-2. Epub 2026 Jun 3. PMID: 42236933; PMCID: PMC13293856."
     }
   },
   {
@@ -700,253 +947,6 @@
     "nlm": {
       "orig": "Akbari R, de Araujo Azevedo LO, Baker CJ, Bertsche W, Bhatt NM, Bonomi G, Capra A, Carli I, L Cesar C, Charlton M, Cridland Mathad A, Del Vincio A, Duque Quiceno D, Eriksson S, Evans A, Fajans J, Friesen T, Fujiwara MC, Golino LM, Gomes Gon\u00e7alves MB, Hangst JS, Hayden ME, Heidari P, Hodgkinson D, Isaac CA, Jones SA, Jonsell S, Madsen N, Marshall VR, McKenna JTK, Momose T, Nauta J, Oliveira AN, Powell A, Rasmussen C\u00d8, Robertson-Brown T, Robicheaux F, Sacramento RL, Sarid E, Schoonwater J, Silveira DM, Singh J, Smith G, So C, Stracka S, Suh J, Swadling AG, Tharp TD, Thompson KA, Thompson RI, Thorpe-Woods E, Uribe Jimenez AJ, Urioni M, van de Werf DP, Wilson SG, Woosaree P, Wurtele JS; ALPHA Collaboration. Four ppm measurement of the antihydrogen ground-state hyperfine splitting. Nature. 2026 May;653(8116):1022-1026. doi: 10.1038/s41586-026-10556-x. Epub 2026 May 27. PMID: 42203929; PMCID: PMC13216062.",
       "format": "Akbari R, de Araujo Azevedo LO, Baker CJ, Bertsche W, Bhatt NM, Bonomi G, Capra A, Carli I, L Cesar C, Charlton M, Cridland Mathad A, Del Vincio A, Duque Quiceno D, Eriksson S, Evans A, Fajans J, Friesen T, Fujiwara MC, Golino LM, Gomes Gon\u00e7alves MB, Hangst JS, Hayden ME, Heidari P, Hodgkinson D, Isaac CA, Jones SA, Jonsell S, Madsen N, Marshall VR, McKenna JTK, Momose T, Nauta J, Oliveira AN, Powell A, Rasmussen C\u00d8, Robertson-Brown T, Robicheaux F, Sacramento RL, Sarid E, Schoonwater J, Silveira DM, Singh J, Smith G, So C, Stracka S, Suh J, Swadling AG, Tharp TD, Thompson KA, Thompson RI, Thorpe-Woods E, Uribe Jimenez AJ, Urioni M, van de Werf DP, Wilson SG, Woosaree P, Wurtele JS; ALPHA Collaboration. Four ppm measurement of the antihydrogen ground-state hyperfine splitting. Nature. 2026 May;653(8116):1022-1026. doi: 10.1038/s41586-026-10556-x. Epub 2026 May 27. PMID: 42203929; PMCID: PMC13216062."
-    }
-  },
-  {
-    "id": "pmid:42203874",
-    "ama": {
-      "orig": "Tyshkovskiy A, Kholdina D, Davitadze M, et al. Universal transcriptomic hallmarks of mammalian ageing and mortality. Nature. 2026;654(8117):173-188. doi:10.1038/s41586-026-10542-3",
-      "format": "Tyshkovskiy A, Kholdina D, Davitadze M, et al. Universal transcriptomic hallmarks of mammalian ageing and mortality. <i>Nature</i>. 2026;654(8117):173-188. doi:10.1038/s41586-026-10542-3"
-    },
-    "apa": {
-      "orig": "Tyshkovskiy, A., Kholdina, D., Davitadze, M., Moli\u00e8re, A., Moldakozhayev, A., Tongu, Y., Kasahara, T., Glubokov, D., Eames, A., Kats, L. M., Vladimirova, A., Ying, K., Liu, H., Zhang, B., Khasanova, U., Moqri, M., Van Raamsdonk, J. M., Harrison, D. E., Strong, R., Abe, T., \u2026 Gladyshev, V. N. (2026). Universal transcriptomic hallmarks of mammalian ageing and mortality. Nature, 654(8117), 173\u2013188. https://doi.org/10.1038/s41586-026-10542-3",
-      "format": "Tyshkovskiy, A., Kholdina, D., Davitadze, M., Moli\u00e8re, A., Moldakozhayev, A., Tongu, Y., Kasahara, T., Glubokov, D., Eames, A., Kats, L. M., Vladimirova, A., Ying, K., Liu, H., Zhang, B., Khasanova, U., Moqri, M., Van Raamsdonk, J. M., Harrison, D. E., Strong, R., Abe, T., \u2026 Gladyshev, V. N. (2026). Universal transcriptomic hallmarks of mammalian ageing and mortality. <i>Nature</i>, <i>654</i>(8117), 173\u2013188. https://doi.org/10.1038/s41586-026-10542-3"
-    },
-    "mla": {
-      "orig": "Tyshkovskiy, Alexander et al. \u201cUniversal transcriptomic hallmarks of mammalian ageing and mortality.\u201d Nature vol. 654,8117 (2026): 173-188. doi:10.1038/s41586-026-10542-3",
-      "format": "Tyshkovskiy, Alexander et al. \u201cUniversal transcriptomic hallmarks of mammalian ageing and mortality.\u201d <i>Nature</i> vol. 654,8117 (2026): 173-188. doi:10.1038/s41586-026-10542-3"
-    },
-    "nlm": {
-      "orig": "Tyshkovskiy A, Kholdina D, Davitadze M, Moli\u00e8re A, Moldakozhayev A, Tongu Y, Kasahara T, Glubokov D, Eames A, Kats LM, Vladimirova A, Ying K, Liu H, Zhang B, Khasanova U, Moqri M, Van Raamsdonk JM, Harrison DE, Strong R, Abe T, Dmitriev SE, Gladyshev VN. Universal transcriptomic hallmarks of mammalian ageing and mortality. Nature. 2026 Jun;654(8117):173-188. doi: 10.1038/s41586-026-10542-3. Epub 2026 May 27. PMID: 42203874; PMCID: PMC13233323.",
-      "format": "Tyshkovskiy A, Kholdina D, Davitadze M, Moli\u00e8re A, Moldakozhayev A, Tongu Y, Kasahara T, Glubokov D, Eames A, Kats LM, Vladimirova A, Ying K, Liu H, Zhang B, Khasanova U, Moqri M, Van Raamsdonk JM, Harrison DE, Strong R, Abe T, Dmitriev SE, Gladyshev VN. Universal transcriptomic hallmarks of mammalian ageing and mortality. Nature. 2026 Jun;654(8117):173-188. doi: 10.1038/s41586-026-10542-3. Epub 2026 May 27. PMID: 42203874; PMCID: PMC13233323."
-    }
-  },
-  {
-    "id": "pmid:42203873",
-    "ama": {
-      "orig": "He Y, Riahi K, Gidden MJ, Piao S, Wang T, Gasser T. Temporary carbon dioxide removal to offset short-lived climate forcers. Nature. 2026;654(8118):391-397. doi:10.1038/s41586-026-10607-3",
-      "format": "He Y, Riahi K, Gidden MJ, Piao S, Wang T, Gasser T. Temporary carbon dioxide removal to offset short-lived climate forcers. <i>Nature</i>. 2026;654(8118):391-397. doi:10.1038/s41586-026-10607-3"
-    },
-    "apa": {
-      "orig": "He, Y., Riahi, K., Gidden, M. J., Piao, S., Wang, T., & Gasser, T. (2026). Temporary carbon dioxide removal to offset short-lived climate forcers. Nature, 654(8118), 391\u2013397. https://doi.org/10.1038/s41586-026-10607-3",
-      "format": "He, Y., Riahi, K., Gidden, M. J., Piao, S., Wang, T., & Gasser, T. (2026). Temporary carbon dioxide removal to offset short-lived climate forcers. <i>Nature</i>, <i>654</i>(8118), 391\u2013397. https://doi.org/10.1038/s41586-026-10607-3"
-    },
-    "mla": {
-      "orig": "He, Yue et al. \u201cTemporary carbon dioxide removal to offset short-lived climate forcers.\u201d Nature vol. 654,8118 (2026): 391-397. doi:10.1038/s41586-026-10607-3",
-      "format": "He, Yue et al. \u201cTemporary carbon dioxide removal to offset short-lived climate forcers.\u201d <i>Nature</i> vol. 654,8118 (2026): 391-397. doi:10.1038/s41586-026-10607-3"
-    },
-    "nlm": {
-      "orig": "He Y, Riahi K, Gidden MJ, Piao S, Wang T, Gasser T. Temporary carbon dioxide removal to offset short-lived climate forcers. Nature. 2026 Jun;654(8118):391-397. doi: 10.1038/s41586-026-10607-3. Epub 2026 May 27. PMID: 42203873; PMCID: PMC13253319.",
-      "format": "He Y, Riahi K, Gidden MJ, Piao S, Wang T, Gasser T. Temporary carbon dioxide removal to offset short-lived climate forcers. Nature. 2026 Jun;654(8118):391-397. doi: 10.1038/s41586-026-10607-3. Epub 2026 May 27. PMID: 42203873; PMCID: PMC13253319."
-    }
-  },
-  {
-    "id": "pmid:42203868",
-    "ama": {
-      "orig": "Canepa J, Ruiz-Arroyo VM, Schlamowitz NS, Nam Y. Substrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2. Nature. Published online May 27, 2026. doi:10.1038/s41586-026-10582-9",
-      "format": "Canepa J, Ruiz-Arroyo VM, Schlamowitz NS, Nam Y. Substrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2. <i>Nature</i>. Published online May 27, 2026. doi:10.1038/s41586-026-10582-9"
-    },
-    "apa": {
-      "orig": "Canepa, J., Ruiz-Arroyo, V. M., Schlamowitz, N. S., & Nam, Y. (2026). Substrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2. Nature, 10.1038/s41586-026-10582-9. Advance online publication. https://doi.org/10.1038/s41586-026-10582-9",
-      "format": "Canepa, J., Ruiz-Arroyo, V. M., Schlamowitz, N. S., & Nam, Y. (2026). Substrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2. <i>Nature</i>, 10.1038/s41586-026-10582-9. Advance online publication. https://doi.org/10.1038/s41586-026-10582-9"
-    },
-    "mla": {
-      "orig": "Canepa, Jacob et al. \u201cSubstrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2.\u201d Nature, 10.1038/s41586-026-10582-9. 27 May. 2026, doi:10.1038/s41586-026-10582-9",
-      "format": "Canepa, Jacob et al. \u201cSubstrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2.\u201d <i>Nature</i>, 10.1038/s41586-026-10582-9. 27 May. 2026, doi:10.1038/s41586-026-10582-9"
-    },
-    "nlm": {
-      "orig": "Canepa J, Ruiz-Arroyo VM, Schlamowitz NS, Nam Y. Substrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2. Nature. 2026 May 27:10.1038/s41586-026-10582-9. doi: 10.1038/s41586-026-10582-9. Epub ahead of print. PMID: 42203868; PMCID: PMC13289585.",
-      "format": "Canepa J, Ruiz-Arroyo VM, Schlamowitz NS, Nam Y. Substrate selectivity of the human RNA m<sup>5</sup>C methyltransferase NSUN2. Nature. 2026 May 27:10.1038/s41586-026-10582-9. doi: 10.1038/s41586-026-10582-9. Epub ahead of print. PMID: 42203868; PMCID: PMC13289585."
-    }
-  },
-  {
-    "id": "pmid:42203864",
-    "ama": {
-      "orig": "Ghai S, Vuorre M, Kardefelt-Winther D, et al. Technology mediation in child sexual exploitation and abuse in Africa and Asia. Nature. 2026;654(8118):408-418. doi:10.1038/s41586-026-10525-4",
-      "format": "Ghai S, Vuorre M, Kardefelt-Winther D, et al. Technology mediation in child sexual exploitation and abuse in Africa and Asia. <i>Nature</i>. 2026;654(8118):408-418. doi:10.1038/s41586-026-10525-4"
-    },
-    "apa": {
-      "orig": "Ghai, S., Vuorre, M., Kardefelt-Winther, D., Ferguson, A. M., Kurten, S., Livingstone, S., Przybylski, A. K., & Orben, A. (2026). Technology mediation in child sexual exploitation and abuse in Africa and Asia. Nature, 654(8118), 408\u2013418. https://doi.org/10.1038/s41586-026-10525-4",
-      "format": "Ghai, S., Vuorre, M., Kardefelt-Winther, D., Ferguson, A. M., Kurten, S., Livingstone, S., Przybylski, A. K., & Orben, A. (2026). Technology mediation in child sexual exploitation and abuse in Africa and Asia. <i>Nature</i>, <i>654</i>(8118), 408\u2013418. https://doi.org/10.1038/s41586-026-10525-4"
-    },
-    "mla": {
-      "orig": "Ghai, Sakshi et al. \u201cTechnology mediation in child sexual exploitation and abuse in Africa and Asia.\u201d Nature vol. 654,8118 (2026): 408-418. doi:10.1038/s41586-026-10525-4",
-      "format": "Ghai, Sakshi et al. \u201cTechnology mediation in child sexual exploitation and abuse in Africa and Asia.\u201d <i>Nature</i> vol. 654,8118 (2026): 408-418. doi:10.1038/s41586-026-10525-4"
-    },
-    "nlm": {
-      "orig": "Ghai S, Vuorre M, Kardefelt-Winther D, Ferguson AM, Kurten S, Livingstone S, Przybylski AK, Orben A. Technology mediation in child sexual exploitation and abuse in Africa and Asia. Nature. 2026 Jun;654(8118):408-418. doi: 10.1038/s41586-026-10525-4. Epub 2026 May 27. PMID: 42203864; PMCID: PMC13253325.",
-      "format": "Ghai S, Vuorre M, Kardefelt-Winther D, Ferguson AM, Kurten S, Livingstone S, Przybylski AK, Orben A. Technology mediation in child sexual exploitation and abuse in Africa and Asia. Nature. 2026 Jun;654(8118):408-418. doi: 10.1038/s41586-026-10525-4. Epub 2026 May 27. PMID: 42203864; PMCID: PMC13253325."
-    }
-  },
-  {
-    "id": "pmid:42162433",
-    "ama": {
-      "orig": "Sui X, Nielsen-Gammon J, Yang ZL, Niyogi D. Divergent urban storm response to convective, frontal and tropical systems. Nature. 2026;653(8116):1078-1084. doi:10.1038/s41586-026-10479-7",
-      "format": "Sui X, Nielsen-Gammon J, Yang ZL, Niyogi D. Divergent urban storm response to convective, frontal and tropical systems. <i>Nature</i>. 2026;653(8116):1078-1084. doi:10.1038/s41586-026-10479-7"
-    },
-    "apa": {
-      "orig": "Sui, X., Nielsen-Gammon, J., Yang, Z. L., & Niyogi, D. (2026). Divergent urban storm response to convective, frontal and tropical systems. Nature, 653(8116), 1078\u20131084. https://doi.org/10.1038/s41586-026-10479-7",
-      "format": "Sui, X., Nielsen-Gammon, J., Yang, Z. L., & Niyogi, D. (2026). Divergent urban storm response to convective, frontal and tropical systems. <i>Nature</i>, <i>653</i>(8116), 1078\u20131084. https://doi.org/10.1038/s41586-026-10479-7"
-    },
-    "mla": {
-      "orig": "Sui, Xinxin et al. \u201cDivergent urban storm response to convective, frontal and tropical systems.\u201d Nature vol. 653,8116 (2026): 1078-1084. doi:10.1038/s41586-026-10479-7",
-      "format": "Sui, Xinxin et al. \u201cDivergent urban storm response to convective, frontal and tropical systems.\u201d <i>Nature</i> vol. 653,8116 (2026): 1078-1084. doi:10.1038/s41586-026-10479-7"
-    },
-    "nlm": {
-      "orig": "Sui X, Nielsen-Gammon J, Yang ZL, Niyogi D. Divergent urban storm response to convective, frontal and tropical systems. Nature. 2026 May;653(8116):1078-1084. doi: 10.1038/s41586-026-10479-7. Epub 2026 May 20. PMID: 42162433; PMCID: PMC13216064.",
-      "format": "Sui X, Nielsen-Gammon J, Yang ZL, Niyogi D. Divergent urban storm response to convective, frontal and tropical systems. Nature. 2026 May;653(8116):1078-1084. doi: 10.1038/s41586-026-10479-7. Epub 2026 May 20. PMID: 42162433; PMCID: PMC13216064."
-    }
-  },
-  {
-    "id": "pmid:42162427",
-    "ama": {
-      "orig": "Jiang Z, Pan S, Chen J, et al. Nonlinear atomic tunnelling boosted by bright squeezed vacuum. Nature. 2026;654(8118):356-360. doi:10.1038/s41586-026-10485-9",
-      "format": "Jiang Z, Pan S, Chen J, et al. Nonlinear atomic tunnelling boosted by bright squeezed vacuum. <i>Nature</i>. 2026;654(8118):356-360. doi:10.1038/s41586-026-10485-9"
-    },
-    "apa": {
-      "orig": "Jiang, Z., Pan, S., Chen, J., Zhu, M., Zhao, C., Wang, Y., Zhang, R., Lu, J., Han, L., Xiong, S., Wu, D., Li, W., Jiang, S., Ni, H., & Wu, J. (2026). Nonlinear atomic tunnelling boosted by bright squeezed vacuum. Nature, 654(8118), 356\u2013360. https://doi.org/10.1038/s41586-026-10485-9",
-      "format": "Jiang, Z., Pan, S., Chen, J., Zhu, M., Zhao, C., Wang, Y., Zhang, R., Lu, J., Han, L., Xiong, S., Wu, D., Li, W., Jiang, S., Ni, H., & Wu, J. (2026). Nonlinear atomic tunnelling boosted by bright squeezed vacuum. <i>Nature</i>, <i>654</i>(8118), 356\u2013360. https://doi.org/10.1038/s41586-026-10485-9"
-    },
-    "mla": {
-      "orig": "Jiang, Zhejun et al. \u201cNonlinear atomic tunnelling boosted by bright squeezed vacuum.\u201d Nature vol. 654,8118 (2026): 356-360. doi:10.1038/s41586-026-10485-9",
-      "format": "Jiang, Zhejun et al. \u201cNonlinear atomic tunnelling boosted by bright squeezed vacuum.\u201d <i>Nature</i> vol. 654,8118 (2026): 356-360. doi:10.1038/s41586-026-10485-9"
-    },
-    "nlm": {
-      "orig": "Jiang Z, Pan S, Chen J, Zhu M, Zhao C, Wang Y, Zhang R, Lu J, Han L, Xiong S, Wu D, Li W, Jiang S, Ni H, Wu J. Nonlinear atomic tunnelling boosted by bright squeezed vacuum. Nature. 2026 Jun;654(8118):356-360. doi: 10.1038/s41586-026-10485-9. Epub 2026 May 20. PMID: 42162427; PMCID: PMC13253329.",
-      "format": "Jiang Z, Pan S, Chen J, Zhu M, Zhao C, Wang Y, Zhang R, Lu J, Han L, Xiong S, Wu D, Li W, Jiang S, Ni H, Wu J. Nonlinear atomic tunnelling boosted by bright squeezed vacuum. Nature. 2026 Jun;654(8118):356-360. doi: 10.1038/s41586-026-10485-9. Epub 2026 May 20. PMID: 42162427; PMCID: PMC13253329."
-    }
-  },
-  {
-    "id": "pmid:42162420",
-    "ama": {
-      "orig": "Tian LY, Garz\u00f3n Gupta K, Hanuska DJ, et al. Neural representation of action symbols in primate frontal cortex. Nature. 2026;654(8117):152-162. doi:10.1038/s41586-026-10297-x",
-      "format": "Tian LY, Garz\u00f3n Gupta K, Hanuska DJ, et al. Neural representation of action symbols in primate frontal cortex. <i>Nature</i>. 2026;654(8117):152-162. doi:10.1038/s41586-026-10297-x"
-    },
-    "apa": {
-      "orig": "Tian, L. Y., Garz\u00f3n Gupta, K., Hanuska, D. J., Rouse, A. G., Eldridge, M. A. G., Schieber, M. H., Wang, X. J., Tenenbaum, J. B., & Freiwald, W. A. (2026). Neural representation of action symbols in primate frontal cortex. Nature, 654(8117), 152\u2013162. https://doi.org/10.1038/s41586-026-10297-x",
-      "format": "Tian, L. Y., Garz\u00f3n Gupta, K., Hanuska, D. J., Rouse, A. G., Eldridge, M. A. G., Schieber, M. H., Wang, X. J., Tenenbaum, J. B., & Freiwald, W. A. (2026). Neural representation of action symbols in primate frontal cortex. <i>Nature</i>, <i>654</i>(8117), 152\u2013162. https://doi.org/10.1038/s41586-026-10297-x"
-    },
-    "mla": {
-      "orig": "Tian, Lucas Y et al. \u201cNeural representation of action symbols in primate frontal cortex.\u201d Nature vol. 654,8117 (2026): 152-162. doi:10.1038/s41586-026-10297-x",
-      "format": "Tian, Lucas Y et al. \u201cNeural representation of action symbols in primate frontal cortex.\u201d <i>Nature</i> vol. 654,8117 (2026): 152-162. doi:10.1038/s41586-026-10297-x"
-    },
-    "nlm": {
-      "orig": "Tian LY, Garz\u00f3n Gupta K, Hanuska DJ, Rouse AG, Eldridge MAG, Schieber MH, Wang XJ, Tenenbaum JB, Freiwald WA. Neural representation of action symbols in primate frontal cortex. Nature. 2026 Jun;654(8117):152-162. doi: 10.1038/s41586-026-10297-x. Epub 2026 May 20. PMID: 42162420; PMCID: PMC13233313.",
-      "format": "Tian LY, Garz\u00f3n Gupta K, Hanuska DJ, Rouse AG, Eldridge MAG, Schieber MH, Wang XJ, Tenenbaum JB, Freiwald WA. Neural representation of action symbols in primate frontal cortex. Nature. 2026 Jun;654(8117):152-162. doi: 10.1038/s41586-026-10297-x. Epub 2026 May 20. PMID: 42162420; PMCID: PMC13233313."
-    }
-  },
-  {
-    "id": "pmid:42162419",
-    "ama": {
-      "orig": "O'Chan JC, Di Salvo G, Cunningham AM, et al. Dopamine drives persistent remodelling of the maternal brain. Nature. 2026;654(8118):465-475. doi:10.1038/s41586-026-10509-4",
-      "format": "O'Chan JC, Di Salvo G, Cunningham AM, et al. Dopamine drives persistent remodelling of the maternal brain. <i>Nature</i>. 2026;654(8118):465-475. doi:10.1038/s41586-026-10509-4"
-    },
-    "apa": {
-      "orig": "O'Chan, J. C., Di Salvo, G., Cunningham, A. M., Dutta, S., Brindley, E., Weekley, B. H., Chen, W., Iyer, R. R., Wan, E., Zhang, C., Mechawar, N., Turecki, G., & Maze, I. (2026). Dopamine drives persistent remodelling of the maternal brain. Nature, 654(8118), 465\u2013475. https://doi.org/10.1038/s41586-026-10509-4",
-      "format": "O'Chan, J. C., Di Salvo, G., Cunningham, A. M., Dutta, S., Brindley, E., Weekley, B. H., Chen, W., Iyer, R. R., Wan, E., Zhang, C., Mechawar, N., Turecki, G., & Maze, I. (2026). Dopamine drives persistent remodelling of the maternal brain. <i>Nature</i>, <i>654</i>(8118), 465\u2013475. https://doi.org/10.1038/s41586-026-10509-4"
-    },
-    "mla": {
-      "orig": "O'Chan, Jennifer C et al. \u201cDopamine drives persistent remodelling of the maternal brain.\u201d Nature vol. 654,8118 (2026): 465-475. doi:10.1038/s41586-026-10509-4",
-      "format": "O'Chan, Jennifer C et al. \u201cDopamine drives persistent remodelling of the maternal brain.\u201d <i>Nature</i> vol. 654,8118 (2026): 465-475. doi:10.1038/s41586-026-10509-4"
-    },
-    "nlm": {
-      "orig": "O'Chan JC, Di Salvo G, Cunningham AM, Dutta S, Brindley E, Weekley BH, Chen W, Iyer RR, Wan E, Zhang C, Mechawar N, Turecki G, Maze I. Dopamine drives persistent remodelling of the maternal brain. Nature. 2026 Jun;654(8118):465-475. doi: 10.1038/s41586-026-10509-4. Epub 2026 May 20. PMID: 42162419; PMCID: PMC13253353.",
-      "format": "O'Chan JC, Di Salvo G, Cunningham AM, Dutta S, Brindley E, Weekley BH, Chen W, Iyer RR, Wan E, Zhang C, Mechawar N, Turecki G, Maze I. Dopamine drives persistent remodelling of the maternal brain. Nature. 2026 Jun;654(8118):465-475. doi: 10.1038/s41586-026-10509-4. Epub 2026 May 20. PMID: 42162419; PMCID: PMC13253353."
-    }
-  },
-  {
-    "id": "pmid:42162388",
-    "ama": {
-      "orig": "Zhang S, Xiao D, Wang F, et al. Cusp-singularity-enhanced Coriolis effect for sensitive chip-scale gyroscopes. Nature. 2026;653(8115):700-706. doi:10.1038/s41586-026-10565-w",
-      "format": "Zhang S, Xiao D, Wang F, et al. Cusp-singularity-enhanced Coriolis effect for sensitive chip-scale gyroscopes. <i>Nature</i>. 2026;653(8115):700-706. doi:10.1038/s41586-026-10565-w"
-    },
-    "apa": {
-      "orig": "Zhang, S., Xiao, D., Wang, F., Huang, R., Yu, L., Zhou, N., He, K., Wu, X., Nori, F., Jing, H., & Zhou, X. (2026). Cusp-singularity-enhanced Coriolis effect for sensitive chip-scale gyroscopes. Nature, 653(8115), 700\u2013706. https://doi.org/10.1038/s41586-026-10565-w",
-      "format": "Zhang, S., Xiao, D., Wang, F., Huang, R., Yu, L., Zhou, N., He, K., Wu, X., Nori, F., Jing, H., & Zhou, X. (2026). Cusp-singularity-enhanced Coriolis effect for sensitive chip-scale gyroscopes. <i>Nature</i>, <i>653</i>(8115), 700\u2013706. https://doi.org/10.1038/s41586-026-10565-w"
-    },
-    "mla": {
-      "orig": "Zhang, Sen et al. \u201cCusp-singularity-enhanced Coriolis effect for sensitive chip-scale gyroscopes.\u201d Nature vol. 653,8115 (2026): 700-706. doi:10.1038/s41586-026-10565-w",
-      "format": "Zhang, Sen et al. \u201cCusp-singularity-enhanced Coriolis effect for sensitive chip-scale gyroscopes.\u201d <i>Nature</i> vol. 653,8115 (2026): 700-706. doi:10.1038/s41586-026-10565-w"
-    },
-    "nlm": {
-      "orig": "Zhang S, Xiao D, Wang F, Huang R, Yu L, Zhou N, He K, Wu X, Nori F, Jing H, Zhou X. Cusp-singularity-enhanced Coriolis effect for sensitive chip-scale gyroscopes. Nature. 2026 May;653(8115):700-706. doi: 10.1038/s41586-026-10565-w. Epub 2026 May 20. PMID: 42162388; PMCID: PMC13190237.",
-      "format": "Zhang S, Xiao D, Wang F, Huang R, Yu L, Zhou N, He K, Wu X, Nori F, Jing H, Zhou X. Cusp-singularity-enhanced Coriolis effect for sensitive chip-scale gyroscopes. Nature. 2026 May;653(8115):700-706. doi: 10.1038/s41586-026-10565-w. Epub 2026 May 20. PMID: 42162388; PMCID: PMC13190237."
-    }
-  },
-  {
-    "id": "pmid:42129568",
-    "ama": {
-      "orig": "Yang T, Zhao E, Wu N, et al. Stereoelectronic manipulation of ligands for perovskite solar cells. Nature. 2026;654(8119):660-667. doi:10.1038/s41586-026-10626-0",
-      "format": "Yang T, Zhao E, Wu N, et al. Stereoelectronic manipulation of ligands for perovskite solar cells. <i>Nature</i>. 2026;654(8119):660-667. doi:10.1038/s41586-026-10626-0"
-    },
-    "apa": {
-      "orig": "Yang, T., Zhao, E., Wu, N., Chang, X., Tian, C., Wang, H. L., Zhang, L., Gu, N., Nie, T., Yang, Y., Zhang, Z., Xu, T., Chen, X., Wang, S., Niu, T., Xu, N., Ma, C., Li, H., Yan, B., Ding, Z., \u2026 Zhao, K. (2026). Stereoelectronic manipulation of ligands for perovskite solar cells. Nature, 654(8119), 660\u2013667. https://doi.org/10.1038/s41586-026-10626-0",
-      "format": "Yang, T., Zhao, E., Wu, N., Chang, X., Tian, C., Wang, H. L., Zhang, L., Gu, N., Nie, T., Yang, Y., Zhang, Z., Xu, T., Chen, X., Wang, S., Niu, T., Xu, N., Ma, C., Li, H., Yan, B., Ding, Z., \u2026 Zhao, K. (2026). Stereoelectronic manipulation of ligands for perovskite solar cells. <i>Nature</i>, <i>654</i>(8119), 660\u2013667. https://doi.org/10.1038/s41586-026-10626-0"
-    },
-    "mla": {
-      "orig": "Yang, Tinghuan et al. \u201cStereoelectronic manipulation of ligands for perovskite solar cells.\u201d Nature vol. 654,8119 (2026): 660-667. doi:10.1038/s41586-026-10626-0",
-      "format": "Yang, Tinghuan et al. \u201cStereoelectronic manipulation of ligands for perovskite solar cells.\u201d <i>Nature</i> vol. 654,8119 (2026): 660-667. doi:10.1038/s41586-026-10626-0"
-    },
-    "nlm": {
-      "orig": "Yang T, Zhao E, Wu N, Chang X, Tian C, Wang HL, Zhang L, Gu N, Nie T, Yang Y, Zhang Z, Xu T, Chen X, Wang S, Niu T, Xu N, Ma C, Li H, Yan B, Ding Z, Liu SF, Gao F, Zhao K. Stereoelectronic manipulation of ligands for perovskite solar cells. Nature. 2026 Jun;654(8119):660-667. doi: 10.1038/s41586-026-10626-0. Epub 2026 May 13. PMID: 42129568; PMCID: PMC13275290.",
-      "format": "Yang T, Zhao E, Wu N, Chang X, Tian C, Wang HL, Zhang L, Gu N, Nie T, Yang Y, Zhang Z, Xu T, Chen X, Wang S, Niu T, Xu N, Ma C, Li H, Yan B, Ding Z, Liu SF, Gao F, Zhao K. Stereoelectronic manipulation of ligands for perovskite solar cells. Nature. 2026 Jun;654(8119):660-667. doi: 10.1038/s41586-026-10626-0. Epub 2026 May 13. PMID: 42129568; PMCID: PMC13275290."
-    }
-  },
-  {
-    "id": "pmid:42129565",
-    "ama": {
-      "orig": "Huang C, Sun A, Reyes J, et al. Eosinophils drive intestinal remodelling and innate defence in reproduction. Nature. 2026;654(8117):209-218. doi:10.1038/s41586-026-10531-6",
-      "format": "Huang C, Sun A, Reyes J, et al. Eosinophils drive intestinal remodelling and innate defence in reproduction. <i>Nature</i>. 2026;654(8117):209-218. doi:10.1038/s41586-026-10531-6"
-    },
-    "apa": {
-      "orig": "Huang, C., Sun, A., Reyes, J., Ribeiro de Souza, J., Cafiero, T. R., Antunes Fernandes, K. H., Oliveira, F. M. S., Qiao, Y., Gazzinelli-Guimaraes, P., Pritykin, Y., & Lim, A. I. (2026). Eosinophils drive intestinal remodelling and innate defence in reproduction. Nature, 654(8117), 209\u2013218. https://doi.org/10.1038/s41586-026-10531-6",
-      "format": "Huang, C., Sun, A., Reyes, J., Ribeiro de Souza, J., Cafiero, T. R., Antunes Fernandes, K. H., Oliveira, F. M. S., Qiao, Y., Gazzinelli-Guimaraes, P., Pritykin, Y., & Lim, A. I. (2026). Eosinophils drive intestinal remodelling and innate defence in reproduction. <i>Nature</i>, <i>654</i>(8117), 209\u2013218. https://doi.org/10.1038/s41586-026-10531-6"
-    },
-    "mla": {
-      "orig": "Huang, Chenyan et al. \u201cEosinophils drive intestinal remodelling and innate defence in reproduction.\u201d Nature vol. 654,8117 (2026): 209-218. doi:10.1038/s41586-026-10531-6",
-      "format": "Huang, Chenyan et al. \u201cEosinophils drive intestinal remodelling and innate defence in reproduction.\u201d <i>Nature</i> vol. 654,8117 (2026): 209-218. doi:10.1038/s41586-026-10531-6"
-    },
-    "nlm": {
-      "orig": "Huang C, Sun A, Reyes J, Ribeiro de Souza J, Cafiero TR, Antunes Fernandes KH, Oliveira FMS, Qiao Y, Gazzinelli-Guimaraes P, Pritykin Y, Lim AI. Eosinophils drive intestinal remodelling and innate defence in reproduction. Nature. 2026 Jun;654(8117):209-218. doi: 10.1038/s41586-026-10531-6. Epub 2026 May 13. PMID: 42129565; PMCID: PMC13233317.",
-      "format": "Huang C, Sun A, Reyes J, Ribeiro de Souza J, Cafiero TR, Antunes Fernandes KH, Oliveira FMS, Qiao Y, Gazzinelli-Guimaraes P, Pritykin Y, Lim AI. Eosinophils drive intestinal remodelling and innate defence in reproduction. Nature. 2026 Jun;654(8117):209-218. doi: 10.1038/s41586-026-10531-6. Epub 2026 May 13. PMID: 42129565; PMCID: PMC13233317."
-    }
-  },
-  {
-    "id": "pmid:42129549",
-    "ama": {
-      "orig": "Ou D, Hagenaars JJ, Jankowski MR, et al. Efficient robot navigation inspired by honeybee learning flights. Nature. 2026;653(8116):1039-1046. doi:10.1038/s41586-026-10461-3",
-      "format": "Ou D, Hagenaars JJ, Jankowski MR, et al. Efficient robot navigation inspired by honeybee learning flights. <i>Nature</i>. 2026;653(8116):1039-1046. doi:10.1038/s41586-026-10461-3"
-    },
-    "apa": {
-      "orig": "Ou, D., Hagenaars, J. J., Jankowski, M. R., Firlefyn, M. V. M., De Wagter, C., Muijres, F. T., Degen, J., & de Croon, G. C. H. E. (2026). Efficient robot navigation inspired by honeybee learning flights. Nature, 653(8116), 1039\u20131046. https://doi.org/10.1038/s41586-026-10461-3",
-      "format": "Ou, D., Hagenaars, J. J., Jankowski, M. R., Firlefyn, M. V. M., De Wagter, C., Muijres, F. T., Degen, J., & de Croon, G. C. H. E. (2026). Efficient robot navigation inspired by honeybee learning flights. <i>Nature</i>, <i>653</i>(8116), 1039\u20131046. https://doi.org/10.1038/s41586-026-10461-3"
-    },
-    "mla": {
-      "orig": "Ou, Dequan et al. \u201cEfficient robot navigation inspired by honeybee learning flights.\u201d Nature vol. 653,8116 (2026): 1039-1046. doi:10.1038/s41586-026-10461-3",
-      "format": "Ou, Dequan et al. \u201cEfficient robot navigation inspired by honeybee learning flights.\u201d <i>Nature</i> vol. 653,8116 (2026): 1039-1046. doi:10.1038/s41586-026-10461-3"
-    },
-    "nlm": {
-      "orig": "Ou D, Hagenaars JJ, Jankowski MR, Firlefyn MVM, De Wagter C, Muijres FT, Degen J, de Croon GCHE. Efficient robot navigation inspired by honeybee learning flights. Nature. 2026 May;653(8116):1039-1046. doi: 10.1038/s41586-026-10461-3. Epub 2026 May 13. PMID: 42129549; PMCID: PMC13216067.",
-      "format": "Ou D, Hagenaars JJ, Jankowski MR, Firlefyn MVM, De Wagter C, Muijres FT, Degen J, de Croon GCHE. Efficient robot navigation inspired by honeybee learning flights. Nature. 2026 May;653(8116):1039-1046. doi: 10.1038/s41586-026-10461-3. Epub 2026 May 13. PMID: 42129549; PMCID: PMC13216067."
-    }
-  },
-  {
-    "id": "pmid:42129527",
-    "ama": {
-      "orig": "NCD Risk Factor Collaboration (NCD-RisC). Obesity rise plateaus in developed nations and accelerates in developing nations. Nature. 2026;653(8114):510-518. doi:10.1038/s41586-026-10383-0",
-      "format": "NCD Risk Factor Collaboration (NCD-RisC). Obesity rise plateaus in developed nations and accelerates in developing nations. <i>Nature</i>. 2026;653(8114):510-518. doi:10.1038/s41586-026-10383-0"
-    },
-    "apa": {
-      "orig": "NCD Risk Factor Collaboration (NCD-RisC) (2026). Obesity rise plateaus in developed nations and accelerates in developing nations. Nature, 653(8114), 510\u2013518. https://doi.org/10.1038/s41586-026-10383-0",
-      "format": "NCD Risk Factor Collaboration (NCD-RisC) (2026). Obesity rise plateaus in developed nations and accelerates in developing nations. <i>Nature</i>, <i>653</i>(8114), 510\u2013518. https://doi.org/10.1038/s41586-026-10383-0"
-    },
-    "mla": {
-      "orig": "NCD Risk Factor Collaboration (NCD-RisC). \u201cObesity rise plateaus in developed nations and accelerates in developing nations.\u201d Nature vol. 653,8114 (2026): 510-518. doi:10.1038/s41586-026-10383-0",
-      "format": "NCD Risk Factor Collaboration (NCD-RisC). \u201cObesity rise plateaus in developed nations and accelerates in developing nations.\u201d <i>Nature</i> vol. 653,8114 (2026): 510-518. doi:10.1038/s41586-026-10383-0"
-    },
-    "nlm": {
-      "orig": "NCD Risk Factor Collaboration (NCD-RisC). Obesity rise plateaus in developed nations and accelerates in developing nations. Nature. 2026 May;653(8114):510-518. doi: 10.1038/s41586-026-10383-0. Epub 2026 May 13. PMID: 42129527; PMCID: PMC13171639.",
-      "format": "NCD Risk Factor Collaboration (NCD-RisC). Obesity rise plateaus in developed nations and accelerates in developing nations. Nature. 2026 May;653(8114):510-518. doi: 10.1038/s41586-026-10383-0. Epub 2026 May 13. PMID: 42129527; PMCID: PMC13171639."
     }
   },
   {
@@ -1463,6 +1463,25 @@
     }
   },
   {
+    "id": "pmid:42150044",
+    "ama": {
+      "orig": "Sperry JL, Guyette FX, Cotton BA, et al. Prehospital Resuscitation with Type O Whole Blood for Trauma and Hemorrhage. N Engl J Med. 2026;394(23):2317-2328. doi:10.1056/NEJMoa2602167",
+      "format": "Sperry JL, Guyette FX, Cotton BA, et al. Prehospital Resuscitation with Type O Whole Blood for Trauma and Hemorrhage. <i>N Engl J Med</i>. 2026;394(23):2317-2328. doi:10.1056/NEJMoa2602167"
+    },
+    "apa": {
+      "orig": "Sperry, J. L., Guyette, F. X., Cotton, B. A., Luther, J. F., Utarnachitt, R. B., Kutcher, M. E., Daley, B. J., Peetz, A. B., Patel, M. B., Goodman, M. D., Claridge, J. A., Patel, N., Harbrecht, B. G., Hashmi, Z. G., Zarychanski, R., Neal, M. D., Yazer, M. H., Martin-Gill, C., Vincent, L. E., Harner, A. M., \u2026 TOWAR Study Group (2026). Prehospital Resuscitation with Type O Whole Blood for Trauma and Hemorrhage. The New England journal of medicine, 394(23), 2317\u20132328. https://doi.org/10.1056/NEJMoa2602167",
+      "format": "Sperry, J. L., Guyette, F. X., Cotton, B. A., Luther, J. F., Utarnachitt, R. B., Kutcher, M. E., Daley, B. J., Peetz, A. B., Patel, M. B., Goodman, M. D., Claridge, J. A., Patel, N., Harbrecht, B. G., Hashmi, Z. G., Zarychanski, R., Neal, M. D., Yazer, M. H., Martin-Gill, C., Vincent, L. E., Harner, A. M., \u2026 TOWAR Study Group (2026). Prehospital Resuscitation with Type O Whole Blood for Trauma and Hemorrhage. <i>The New England journal of medicine</i>, <i>394</i>(23), 2317\u20132328. https://doi.org/10.1056/NEJMoa2602167"
+    },
+    "mla": {
+      "orig": "Sperry, Jason L et al. \u201cPrehospital Resuscitation with Type O Whole Blood for Trauma and Hemorrhage.\u201d The New England journal of medicine vol. 394,23 (2026): 2317-2328. doi:10.1056/NEJMoa2602167",
+      "format": "Sperry, Jason L et al. \u201cPrehospital Resuscitation with Type O Whole Blood for Trauma and Hemorrhage.\u201d <i>The New England journal of medicine</i> vol. 394,23 (2026): 2317-2328. doi:10.1056/NEJMoa2602167"
+    },
+    "nlm": {
+      "orig": "Sperry JL, Guyette FX, Cotton BA, Luther JF, Utarnachitt RB, Kutcher ME, Daley BJ, Peetz AB, Patel MB, Goodman MD, Claridge JA, Patel N, Harbrecht BG, Hashmi ZG, Zarychanski R, Neal MD, Yazer MH, Martin-Gill C, Vincent LE, Harner AM, Meyer DE, Latimer AJ, Robinson BR, McKnight CL, Hinckley WR, Miller KR, Jansen JO, Martin D, Fox EE, Rosario-Rivera BL, Wisniewski SR; TOWAR Study Group. Prehospital Resuscitation with Type O Whole Blood for Trauma and Hemorrhage. N Engl J Med. 2026 Jun 18;394(23):2317-2328. doi: 10.1056/NEJMoa2602167. Epub 2026 May 18. PMID: 42150044; PMCID: PMC13313084.",
+      "format": "Sperry JL, Guyette FX, Cotton BA, Luther JF, Utarnachitt RB, Kutcher ME, Daley BJ, Peetz AB, Patel MB, Goodman MD, Claridge JA, Patel N, Harbrecht BG, Hashmi ZG, Zarychanski R, Neal MD, Yazer MH, Martin-Gill C, Vincent LE, Harner AM, Meyer DE, Latimer AJ, Robinson BR, McKnight CL, Hinckley WR, Miller KR, Jansen JO, Martin D, Fox EE, Rosario-Rivera BL, Wisniewski SR; TOWAR Study Group. Prehospital Resuscitation with Type O Whole Blood for Trauma and Hemorrhage. N Engl J Med. 2026 Jun 18;394(23):2317-2328. doi: 10.1056/NEJMoa2602167. Epub 2026 May 18. PMID: 42150044; PMCID: PMC13313084."
+    }
+  },
+  {
     "id": "pmid:42149992",
     "ama": {
       "orig": "Denninghoff KR, Casper TC, Zorc JJ, et al. Azithromycin for Preschoolers with Wheezing in the Emergency Department. N Engl J Med. Published online May 18, 2026. doi:10.1056/NEJMoa2516505",
@@ -1878,25 +1897,6 @@
     "nlm": {
       "orig": "\u00c5rstad E, Sander K, Kurzawinski TR, Anderson C, Buhidma Y, Awais RO, Sirindil F, Shortman R, Dickinson L, O'Keeffe AG, Dickson J, Chung TT, Brown MJ, Williams B. Adrenal Aldosterone Synthase Expression Imaging in Primary Aldosteronism. N Engl J Med. 2025 Nov 27;393(21):2168-2170. doi: 10.1056/NEJMc2507481. PMID: 41297012; PMCID: PMC7618428.",
       "format": "\u00c5rstad E, Sander K, Kurzawinski TR, Anderson C, Buhidma Y, Awais RO, Sirindil F, Shortman R, Dickinson L, O'Keeffe AG, Dickson J, Chung TT, Brown MJ, Williams B. Adrenal Aldosterone Synthase Expression Imaging in Primary Aldosteronism. N Engl J Med. 2025 Nov 27;393(21):2168-2170. doi: 10.1056/NEJMc2507481. PMID: 41297012; PMCID: PMC7618428."
-    }
-  },
-  {
-    "id": "pmid:41297006",
-    "ama": {
-      "orig": "Durbin AP, Van Wesenbeeck L, Pierce KK, et al. Daily Mosnodenvir as Dengue Prophylaxis in a Controlled Human Infection Model. N Engl J Med. 2025;393(21):2107-2118. doi:10.1056/NEJMoa2500179",
-      "format": "Durbin AP, Van Wesenbeeck L, Pierce KK, et al. Daily Mosnodenvir as Dengue Prophylaxis in a Controlled Human Infection Model. <i>N Engl J Med</i>. 2025;393(21):2107-2118. doi:10.1056/NEJMoa2500179"
-    },
-    "apa": {
-      "orig": "Durbin, A. P., Van Wesenbeeck, L., Pierce, K. K., Herrera-Taracena, G., Ebone, L., Buelens, A., Lutton, P., Sabundayo, B. P., Van Eygen, V., De Clerck, K., Fetter, I., Voge, N. V., Fang, X., Goeyvaerts, N., Vandendijck, Y., Mayfield, J., Lenz, O., De Meyer, S., Kakuda, T. N., He, H., \u2026 Rasschaert, F. (2025). Daily Mosnodenvir as Dengue Prophylaxis in a Controlled Human Infection Model. The New England journal of medicine, 393(21), 2107\u20132118. https://doi.org/10.1056/NEJMoa2500179",
-      "format": "Durbin, A. P., Van Wesenbeeck, L., Pierce, K. K., Herrera-Taracena, G., Ebone, L., Buelens, A., Lutton, P., Sabundayo, B. P., Van Eygen, V., De Clerck, K., Fetter, I., Voge, N. V., Fang, X., Goeyvaerts, N., Vandendijck, Y., Mayfield, J., Lenz, O., De Meyer, S., Kakuda, T. N., He, H., \u2026 Rasschaert, F. (2025). Daily Mosnodenvir as Dengue Prophylaxis in a Controlled Human Infection Model. <i>The New England journal of medicine</i>, <i>393</i>(21), 2107\u20132118. https://doi.org/10.1056/NEJMoa2500179"
-    },
-    "mla": {
-      "orig": "Durbin, Anna P et al. \u201cDaily Mosnodenvir as Dengue Prophylaxis in a Controlled Human Infection Model.\u201d The New England journal of medicine vol. 393,21 (2025): 2107-2118. doi:10.1056/NEJMoa2500179",
-      "format": "Durbin, Anna P et al. \u201cDaily Mosnodenvir as Dengue Prophylaxis in a Controlled Human Infection Model.\u201d <i>The New England journal of medicine</i> vol. 393,21 (2025): 2107-2118. doi:10.1056/NEJMoa2500179"
-    },
-    "nlm": {
-      "orig": "Durbin AP, Van Wesenbeeck L, Pierce KK, Herrera-Taracena G, Ebone L, Buelens A, Lutton P, Sabundayo BP, Van Eygen V, De Clerck K, Fetter I, Voge NV, Fang X, Goeyvaerts N, Vandendijck Y, Mayfield J, Lenz O, De Meyer S, Kakuda TN, He H, Amaro-Carambot E, Akli RD, Carmolli M, De Marez T, Whitehead SS, Van Loock M, Rasschaert F. Daily Mosnodenvir as Dengue Prophylaxis in a Controlled Human Infection Model. N Engl J Med. 2025 Nov 27;393(21):2107-2118. doi: 10.1056/NEJMoa2500179. PMID: 41297006; PMCID: PMC12662413.",
-      "format": "Durbin AP, Van Wesenbeeck L, Pierce KK, Herrera-Taracena G, Ebone L, Buelens A, Lutton P, Sabundayo BP, Van Eygen V, De Clerck K, Fetter I, Voge NV, Fang X, Goeyvaerts N, Vandendijck Y, Mayfield J, Lenz O, De Meyer S, Kakuda TN, He H, Amaro-Carambot E, Akli RD, Carmolli M, De Marez T, Whitehead SS, Van Loock M, Rasschaert F. Daily Mosnodenvir as Dengue Prophylaxis in a Controlled Human Infection Model. N Engl J Med. 2025 Nov 27;393(21):2107-2118. doi: 10.1056/NEJMoa2500179. PMID: 41297006; PMCID: PMC12662413."
     }
   }
 ]

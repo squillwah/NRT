@@ -1,6 +1,6 @@
 
-from dstools.datasets import make_dataset, bake_dataset
-import dstools.configurations as setconfig
+from tools.datasets.dataset import make_dataset, bake_dataset
+import tools.datasets.configurations as setconfig
 import json
 
 # This is the thing.
@@ -20,10 +20,10 @@ if __name__ == "__main__":
     with open(f"{DIR}/refdata.json", "r") as f: refdata_src = json.load(f)
     with open(f"{DIR}/compset.json", "r") as f: compset_src = json.load(f)
     with open(f"{DIR}/h_titles.txt", "r") as f: h_title_src = [line.strip() for line in f if line.strip()]
-    with open(f"{DIR}/h_authors.txt", "r") as f:
-        h_author_src = [{"l": "FAKEAUTH", "f": "FAKEAUTH"}]*200 #{ "l": name, "f": name for name in [line.strip() for line in f if line.strip()]} # Placeholder. Either parse by ', ' or have source generate a json of last and first.
-    with open(f"{DIR}/h_journals.txt", "r") as f:
-        h_journal_src = [{"full": "FAKEJOURN", "short": "FAKEJOURN"}]*200 #{ "full": name, "short": name for name in [line.strip() for line in f if line.strip()]} # Placeholder. Have the source be a JSON with {full, short}
+    with open(f"{DIR}/h_authors.json", "r") as f: h_author_src = json.load(f)
+#        h_author_src = [{"l": "FAKEAUTH", "f": "FAKEAUTH"}]*200 #{ "l": name, "f": name for name in [line.strip() for line in f if line.strip()]} # Placeholder. Either parse by ', ' or have source generate a json of last and first.
+    with open(f"{DIR}/h_journals.json", "r") as f: h_journal_src = json.load(f)
+#        h_journal_src = [{"full": "FAKEJOURN", "short": "FAKEJOURN"}]*200 #{ "full": name, "short": name for name in [line.strip() for line in f if line.strip()]} # Placeholder. Have the source be a JSON with {full, short}
 
 
 
@@ -38,12 +38,12 @@ if __name__ == "__main__":
     setconfig.l1_metadata_error(ds["minor_mderror"])
     setconfig.l2_serious_metadata_error(ds["major_mderror"])
     setconfig.l3_plausible_fabricated(ds["plausible_fab"])
-    setconfig.l4_needs_human_review(ds["human_review"])
+    setconfig.l4_needs_human_review(ds["human_review"])             # @ Todo better differentiation between and variety within subsets. If we do subsets like this. Alternative is some kind of randomized assignment of mutation, with policies to avoid mutation overriding and (maybe?) give a gradient to the results, so it's not all bogus.
 
     for label in ds: bake_dataset(ds[label])
 
     print(json.dumps(ds, indent=2))
-    with open("./THEREFERENCES.json", "x") as f:
+    with open("./THEREFERENCES_SIMPLECLASSES.json", "x") as f:
         json.dump(ds, f, indent=2)
 
 

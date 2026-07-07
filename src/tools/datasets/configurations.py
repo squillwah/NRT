@@ -1,6 +1,6 @@
 # Thinking about reference components, types of mutations on components, and classifying sets of component mutations.
 
-from dstools.datasets import EntryMutator   # Strange
+from tools.datasets.datasets import EntryMutator   # Strange
 import random
 
 # Again, no error handling in any of this. Will break if it breaks.
@@ -131,12 +131,14 @@ def l3_plausible_fabricated(dataset):
 def l4_needs_human_review(dataset):
     # Just a bunch of random mangling.
     for entry in dataset:
-        M.author_mismatch(entry)
+        #M.author_mismatch(entry)
+        M.author_hallucinate(entry)
         M.author_shuffle(entry)     # Also author_hallucinate(entry), but we don't have the file for that yet :( @todo!
         M.title_mismatch(entry)
         M.jvol_hallucinate(entry)
         M.jiss_hallucinate(entry)
-        M.jname_mismatch(entry)
+        #M.jname_mismatch(entry)
+        M.jname_hallucinate(entry)
         M.pubs_hallucinate(entry)
         M.elocator_mismatch(entry)
         M.pmcid_typo(entry)
