@@ -1,0 +1,316 @@
+{
+  "ref": {
+    "id": 3,
+    "src_id": "PMC13261503",
+    "mutcode": 0,
+    "mutlabels": [],
+    "data": {
+      "authors": [
+        {
+          "l": "Volk",
+          "f": "Robert J"
+        },
+        {
+          "l": "Lewis",
+          "f": "Krystina B"
+        },
+        {
+          "l": "Smith",
+          "f": "Maureen"
+        },
+        {
+          "l": "Carley",
+          "f": "Meg"
+        },
+        {
+          "l": "Barry",
+          "f": "Michael J"
+        },
+        {
+          "l": "Bekker",
+          "f": "Hilary L"
+        },
+        {
+          "l": "H\u00e4rter",
+          "f": "Martin"
+        },
+        {
+          "l": "Hoffmann",
+          "f": "Tammy"
+        },
+        {
+          "l": "McCaffery",
+          "f": "Kirsten"
+        },
+        {
+          "l": "Pignone",
+          "f": "Michael"
+        },
+        {
+          "l": "Steffensen",
+          "f": "Karina Dahl"
+        },
+        {
+          "l": "Sepucha",
+          "f": "Karen"
+        },
+        {
+          "l": "Thompson",
+          "f": "Rachel"
+        },
+        {
+          "l": "Trevena",
+          "f": "Lyndal"
+        },
+        {
+          "l": "van der Weijden",
+          "f": "Trudy"
+        },
+        {
+          "l": "Witteman",
+          "f": "Holly O"
+        },
+        {
+          "l": "Stacey",
+          "f": "Dawn"
+        }
+      ],
+      "title": "Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process",
+      "journal": {
+        "name": {
+          "full": "BMJ (Clinical research ed.)",
+          "short": "BMJ"
+        },
+        "volume": 393,
+        "issue": null,
+        "page": {
+          "start": "",
+          "end": ""
+        },
+        "elocator": "e088116"
+      },
+      "pub": {
+        "y": 2026,
+        "m": 6,
+        "d": 12
+      },
+      "epub": {
+        "y": null,
+        "m": null,
+        "d": null
+      },
+      "doi": {
+        "prefix": "10.1136",
+        "suffix": "bmj-2025-088116"
+      },
+      "url_abstract": "https://pubmed.ncbi.nlm.nih.gov/42285563",
+      "url_direct": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13261503/",
+      "pmcid": "PMC13261503",
+      "pmid": "42285563",
+      "COMPONENTS": {
+        "authors": true,
+        "title": true,
+        "journal_name": true,
+        "journal_volume": true,
+        "journal_issue": false,
+        "journal_page": false,
+        "elocator": true,
+        "publication_date": true,
+        "doi": true,
+        "url_abstract": false,
+        "url_direct": false,
+        "pmcid": true,
+        "pmid": true
+      }
+    },
+    "format": {
+      "elsevier": "Volk RJ, Lewis KB, Smith M, Carley M, Barry MJ, Bekker HL, H\u00e4rter M, Hoffmann T, McCaffery K, Pignone M, Steffensen KD, Sepucha K, Thompson R, Trevena L, van der Weijden T, Witteman HO, Stacey D. Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process. BMJ. 2026;393:. doi:10.1136/bmj-2025-088116",
+      "nature": "Volk, R.J., et al. Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process. <i>BMJ</i> <b>393</b>,  (2026).",
+      "oxford": "Volk, R.J., Lewis, K.B., Smith, M., Carley, M., Barry, M.J., Bekker, H.L., H\u00e4rter, M., Hoffmann, T., McCaffery, K., Pignone, M., Steffensen, K.D., Sepucha, K., Thompson, R., Trevena, L., van der Weijden, T., Witteman, H.O. and Stacey, D.. (2026) Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process. <i>BMJ</i>, <i>393</i>, . https://doi.org/10.1136/bmj-2025-088116",
+      "springer": "Volk RJ, Lewis KB, Smith M, Carley M, Barry MJ, Bekker HL, H\u00e4rter M, Hoffmann T, McCaffery K, Pignone M, Steffensen KD, Sepucha K, Thompson R, Trevena L, van der Weijden T, Witteman HO, Stacey D. Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process. <i>BMJ</i>. 2026; 393: . doi: 10.1136/bmj-2025-088116",
+      "cse": "Volk RJ, Lewis KB, Smith M, Carley M, Barry MJ, Bekker HL, H\u00e4rter M, Hoffmann T, McCaffery K, Pignone M, Steffensen KD, Sepucha K, Thompson R, Trevena L, van der Weijden T, Witteman HO, Stacey D. Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process. BMJ. 2026;393:.",
+      "harvard": "Volk, R.J., Lewis, K.B., Smith, M., Carley, M., Barry, M.J., Bekker, H.L., H\u00e4rter, M., Hoffmann, T., McCaffery, K., Pignone, M., Steffensen, K.D., Sepucha, K., Thompson, R., Trevena, L., van der Weijden, T., Witteman, H.O. and Stacey, D. (2026). 'Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process', <i>BMJ (Clinical research ed.)</i>, 393, pp. . doi: 10.1136/bmj-2025-088116."
+    },
+    "scores": {
+      "combined": [
+        true,
+        1.0
+      ],
+      "byformat": {
+        "ama": null
+      },
+      "component": {
+        "authors": [
+          true,
+          1.0
+        ],
+        "title": [
+          true,
+          1.0
+        ],
+        "journal_name": [
+          true,
+          1.0
+        ],
+        "journal_volume": [
+          true,
+          1.0
+        ],
+        "journal_issue": null,
+        "journal_page": null,
+        "elocator": [
+          true,
+          1.0
+        ],
+        "publication_date": [
+          true,
+          1.0
+        ],
+        "doi": [
+          true,
+          1.0
+        ],
+        "url_abstract": null,
+        "url_direct": null,
+        "pmcid": [
+          true,
+          1.0
+        ],
+        "pmid": [
+          true,
+          1.0
+        ]
+      }
+    }
+  },
+  "results": {
+    "deepseek/deepseek-v4-flash": {
+      "elsevier": {
+        "REFERENCE": {
+          "reasoning": "The reference claims publication in BMJ in 2026, which is a future year relative to the available knowledge cutoff. While the author list and topic are plausible, the DOI format is atypical (BMJ DOIs usually follow a pattern like 10.1136/bmj.xxxxx, not 'bmj-2025-088116'), and the volume number (393) cannot be verified for 2026. Given the future date and unusual DOI, the reference is likely fabricated or unreliable.",
+          "validity": false,
+          "validity_confidence": 0.85
+        },
+        "authors": {
+          "reasoning": "The author list includes many well-known researchers in shared decision making and patient decision aids (e.g., Volk, Barry, Bekker, H\u00e4rter, Hoffmann, McCaffery, Pignone, Sepucha, Stacey). The names are real and plausible for this topic. However, the presence of 'Smith M' and 'Carley M' is less specific but still possible. No clear fabrication is evident in the author names.",
+          "validity": true,
+          "validity_confidence": 0.9
+        },
+        "doi": {
+          "reasoning": "The DOI '10.1136/bmj-2025-088116' is unusual. BMJ typically uses DOIs like '10.1136/bmj.o1234' or '10.1136/bmj.2023.p1234'. The inclusion of 'bmj-2025' with a hyphen and then a number is not standard for BMJ articles. This suggests the DOI may be fabricated.",
+          "validity": false,
+          "validity_confidence": 0.9
+        },
+        "elocator": {
+          "reasoning": "The reference provides '2026;393:' but no elocator or page number is given. The colon after the volume suggests an elocator is missing. However, some BMJ articles do not have page numbers. The volume 393 is plausible for 2026 but cannot be confirmed. The format is incomplete.",
+          "validity": false,
+          "validity_confidence": 0.7
+        },
+        "journal_issue": {
+          "reasoning": "The journal is BMJ, a well-known medical journal. The volume 393 is plausible for 2026 (BMJ volume numbers are around 380-390 in recent years). However, the year 2026 is in the future, so the issue cannot be verified. The combination of future year and unverifiable volume makes this component suspect.",
+          "validity": false,
+          "validity_confidence": 0.8
+        },
+        "journal_name": {
+          "reasoning": "BMJ is a real, well-known journal. The name is correctly cited.",
+          "validity": true,
+          "validity_confidence": 1.0
+        },
+        "journal_page": {
+          "reasoning": "No page numbers are provided, only a colon after the volume. This is an incomplete citation but not necessarily false. However, given the other issues, it adds to the suspicion.",
+          "validity": false,
+          "validity_confidence": 0.6
+        },
+        "journal_volume": {
+          "reasoning": "Volume 393 is plausible for a 2026 publication, but cannot be verified. The year 2026 is future, so the volume assignment is speculative.",
+          "validity": false,
+          "validity_confidence": 0.7
+        },
+        "pmcid": {
+          "reasoning": "No PMCID is provided, which is not required but common for BMJ articles. Absence is not a sign of fabrication.",
+          "validity": true,
+          "validity_confidence": 0.9
+        },
+        "pmid": {
+          "reasoning": "No PMID is provided. Absence is not unusual, but a real published article would have a PMID. The absence is not a strong indicator of fabrication.",
+          "validity": true,
+          "validity_confidence": 0.8
+        },
+        "publication_date": {
+          "reasoning": "The publication year is 2026, which is in the future relative to the knowledge cutoff. This is the strongest indicator of fabrication. The month is not specified. A future date cannot be authentic.",
+          "validity": false,
+          "validity_confidence": 1.0
+        },
+        "title": {
+          "reasoning": "The title 'Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process' is plausible. IPDAS is a real initiative, and version 5.0 would be a logical update. The title matches the style of previous IPDAS publications.",
+          "validity": true,
+          "validity_confidence": 0.9
+        }
+      }
+    },
+    "nvidia/nemotron-3-super-120b-a12b:free": {
+      "elsevier": {
+        "authors": {
+          "reasoning": "The author list is plausible for an international guideline group; names are real individuals known in decision\u2011aid research. This part could be genuine.",
+          "validity": true,
+          "validity_confidence": 0.7
+        },
+        "title": {
+          "reasoning": "The title describes an update to the International Patient Decision Aid Standards (IPDAS) using a modified Delphi process, which matches the scope of the real IPDAS collaboration. It reads like a legitimate article title.",
+          "validity": true,
+          "validity_confidence": 0.8
+        },
+        "journal_name": {
+          "reasoning": "BMJ is a real, peer\u2011reviewed journal.",
+          "validity": true,
+          "validity_confidence": 1.0
+        },
+        "journal_volume": {
+          "reasoning": "BMJ does not use volume numbers in the 300\u2011plus range; as of 2024 the journal is around volume 380\u2011384. A volume of 393 in 2026 is implausible.",
+          "validity": false,
+          "validity_confidence": 0.9
+        },
+        "journal_issue": {
+          "reasoning": "The issue field is blank (shown as a single colon after the volume), which is atypical for a BMJ article; BMJ citations normally include an issue number or page range.",
+          "validity": false,
+          "validity_confidence": 0.8
+        },
+        "journal_page": {
+          "reasoning": "No page numbers are provided; the citation ends after the volume with a colon, indicating missing pages. BMJ articles always have page numbers or article IDs.",
+          "validity": false,
+          "validity_confidence": 0.85
+        },
+        "elocator": {
+          "reasoning": "No electronic locator (e.g., article ID) is supplied; the citation lacks the usual BMJ article identifier.",
+          "validity": false,
+          "validity_confidence": 0.8
+        },
+        "publication_date": {
+          "reasoning": "The year 2026 is in the future relative to the model\u2019s knowledge cutoff (2024) and cannot be verified. No real BMJ issue from 2026 exists.",
+          "validity": false,
+          "validity_confidence": 0.95
+        },
+        "doi": {
+          "reasoning": "The DOI prefix 10.1136 is correct for BMJ, but the suffix bmj-2025-088116 does not correspond to any known article; attempting to resolve it would likely fail. The pattern is fabricated.",
+          "validity": false,
+          "validity_confidence": 0.9
+        },
+        "pmid": {
+          "reasoning": "No PMID is provided, and BMJ articles indexed in PubMed would have one. Its absence, combined with other issues, suggests the reference is not real.",
+          "validity": false,
+          "validity_confidence": 0.85
+        },
+        "pmcid": {
+          "reasoning": "No PMCID is supplied; not expected for a BMJ article unless it is open access and deposited.",
+          "validity": false,
+          "validity_confidence": 0.7
+        },
+        "REFERENCE": {
+          "reasoning": "Multiple core bibliographic elements (volume, issue/pages, date, DOI) are inconsistent with how BMJ publishes articles or refer to a future year that cannot be verified. The title and author list appear plausible, but the overall citation fails basic verification checks.",
+          "validity": false,
+          "validity_confidence": 0.88
+        }
+      }
+    }
+  }
+}
