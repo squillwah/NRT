@@ -1,6 +1,6 @@
 
-from dstools.datasets import make_dataset, bake_dataset
-import dstools.configurations as setconfig
+from tools.datasets.dataset import make_dataset, bake_dataset
+import tools.datasets.configurations as setconfig
 import json
 
 # This is the thing.

@@ -2,9 +2,9 @@
 #import reftools.ref_formatters as RB
 from copy import deepcopy
 from enum import StrEnum
-from reftools.typos import Typofier
-from reftools.refdata import ReferenceComponent
-import reftools.formats as Formats
+from tools.references.typos import Typofier
+from tools.references.refdata import ReferenceComponent
+import tools.references.formats as Formats
 import random
 
 # Create a set entry from reference data

@@ -1,6 +1,5 @@
 
-#from reftools.refdata import ReferenceComponent as RC
-from refdata import ReferenceComponent as RC
+from tools.references.refdata import ReferenceComponent as RC
 
 class ProtoSchemas:
     @staticmethod

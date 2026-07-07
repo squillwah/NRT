@@ -1,11 +1,11 @@
-from llmtools.schemas import ProtoSchemas
-from llmtools.orouterapi import openrouter, parse_response, trytryagain
-from llmtools.help import log, write_json
+
+from tools.llms.schemas import ProtoSchemas
+from tools.llms.orouterapi import openrouter, parse_response, trytryagain
+from tools.help import log, write_json
 from pathlib import Path
 import json
 import time
 import os
-
 
 # @todo add keys array to JSON output.
 
@@ -17,7 +17,7 @@ import os
 #                 Testing result difference with deepseek, internet on and off.
 
 
-DATASET_FILE = "REFERENCE_DATASET.json"
+DATASET_FILE = "REFERENCE_DATASET2.json"
 OUTPUT_DIR = f"mme{int(time.time())}"
 MODELS = (
         #    "openai/gpt-oss-20b:free",
@@ -99,30 +99,5 @@ if __name__ == "__main__":
             log(f"Saving results of RefID {dsentry["id"]} to 'ID{dsentry["id"]}.json'")
             write_json(refresults, f"./{OUTPUT_DIR}/id_{dsentry["id"]}.json")
         log(f"End of RefID {dsentry["id"]}")
-
-"""
-    responses = []
-    data = []
-    for i, ref in enumerate(refs):
-        print(f"starting reference {i}")
-        data.append({ "reference": ref })
-        for model in models:
-            print(f"starting model {model}")
-            r = parse_response(trytryagain(openrouter, {"model": model, "ref": ref, "schema": schema}))   # Call openrouter, retry three times if code != 200, then parse into {request, response_text, response_json, content} dict.
-            responses.append({k: r[k] for k in r if k != "request_json"})
-            data[i][model] = r["content"]
-            print("done")
-            time.sleep(1)
-
-    with open("mmresponses.json", "w") as file:
-        try: json.dump(responses, file, indent=2)
-        except: file.write(responses)
-
-    with open("mmdata.json", "w") as file:
-        try: json.dump(data, file, indent=2)
-        except: file.write(data)
-"""
-
-
 
 
