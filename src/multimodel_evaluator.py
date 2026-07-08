@@ -1,6 +1,6 @@
 
 from tools.llms.schemas import ProtoSchemas
-from tools.llms.orouterapi import openrouter, parse_response, trytryagain
+#from tools.llms.orouterapi import openrouter, parse_response, trytryagain
 from tools.help import log, write_json
 from pathlib import Path
 import json
@@ -16,6 +16,33 @@ import os
 #      @consider: Should we enable reasoning?
 #                 Testing result difference with deepseek, internet on and off.
 
+from tools.help import log 
+import tools.help as h
+
+save_result = None
+save_request_dump = None
+def open_files():
+    d_root = h.mkdir("./mme", timestamp=True)
+    d_results = h.mkdir(d_root / "results")
+    d_request_dumps = h.mkdir(d_root / "request_dumps")
+    h.open_log(d_root / "log")
+
+    global save_result, save_request_dump
+    save_result = lambda result, name: h.write_json(result, f"{d_results}/{name}.json")
+    save_request_dump = lambda dump, name: h.write_json(dump, f"{d_request_dumps}/{name}.json")
+
+def close_files(): 
+    global save_result, save_request_dump
+    save_result, save_request_dump = None, None
+    h.close_log()
+
+open_files()
+log("this is a test")
+save_result({"test": "result"}, "1")
+save_request_dump({"test": "dump"}, "11")
+close_files()
+
+"""
 
 DATASET_FILE = "REFERENCE_DATASET2.json"
 OUTPUT_DIR = f"mme{int(time.time())}"
@@ -100,4 +127,4 @@ if __name__ == "__main__":
             write_json(refresults, f"./{OUTPUT_DIR}/id_{dsentry["id"]}.json")
         log(f"End of RefID {dsentry["id"]}")
 
-
+"""
