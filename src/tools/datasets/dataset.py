@@ -8,18 +8,18 @@ import tools.references.formats as Formats
 import random
 
 # Create a set entry from reference data
-def dsentry(rd, *, ID=None):
+def dsentry(rd, ID=None):    #, *, ID=None):
     return {
-        "id": ID,               # Internal ID + original PMCID
+        "id": ID,               # Internal ID + original PMCID         IDs now stored as keys in the flat dataset dict. Categories can persist as per component/holistic tags (replacement for "suggested confidence" silliness)
         "src_id": rd["pmcid"],
         "mutcode": 0b00000000,  # Describes specific mutations.
         "mutlabels": [],
         "data": deepcopy(rd),
-        "format": {},           # Should unbaked forms be absent or a None?
+        "format": {},           # All format styles generated at baking step. 
         "scores": {
-            "combined": [True, 1.0],
-            "byformat": {"ama": None},  # @TODO {form: None for form in FormatStyles}. Different holistic scores per format addresses the issue of absent components bias.
-            "component": {comp: ([True, 1.0] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}
+            "combined": [True, 1.0],        # @ These two are where some kind of weight would come in, but right now they don't matter at all.
+            "byformat": {"ama": None},                                                                              # @TODO {form: None for form in FormatStyles}. Different holistic scores per format addresses the issue of absent components bias.
+            "component": {comp: ([True, 1.0] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}   # @RECONSIDER: The holistic score totalling nonsense is convoluted and an overcomplication.
         }
     }
 
@@ -33,8 +33,9 @@ def dsentry(rd, *, ID=None):
 #  then if we do or dont want mutating of absent components, we just disable it on the None check instead of creating new.
 
 # Create a set of set entries from a list of reference data
-def make_dataset(ref_data_list, *, v=False):
-    dataset = [dsentry(ref, ID=i) for i, ref in enumerate(ref_data_list)]
+def make_dataset(refdata_list, *, v=False):
+    dataset = {ID: dsentry(refdata, ID) for ID, refdata in enumerate(refdata_list)}
+    #dataset = [dsentry(ref, ID=i) for i, ref in enumerate(refdata_list)]
     return dataset
 
 def bake_dsentry(entry):
@@ -54,8 +55,8 @@ def bake_dsentry(entry):
 
 # Bake mutation labels, reference formats, and suggested reference scores every entry in a dataset.
 def bake_dataset(dataset):
-    for entry in dataset:
-        bake_dsentry(entry)
+    for entryID in dataset:
+        bake_dsentry(dataset[entryID])
 
 class Mutation(StrEnum):
     TYPO = "typo"
@@ -80,17 +81,17 @@ class EntryMutator:
 
     # Define valid mutations per component, plus "suggested confidence" (what the mutation brings component's score down to).
     _MUTMAP = {
-        C.AUTHORS:          [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0), (M.SHUFFLE, .25) ],          # @ this is kind of like the 'weight' stuff with scoring, but applied to how much (thing being wrong) tarnishes the "validity" of a reference.
+        C.AUTHORS:          [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0), (M.SHUFFLE, .25) ],                # @ this is kind of like the 'weight' stuff with scoring, but applied to how much (thing being wrong) tarnishes the "validity" of a reference.
         C.TITLE:            [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],
-        C.JOURNAL_NAME:     [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],                  # Right now all typos are .5 confidence, aka ambiguous on the generated -> authentic scale (invalid -> valid?).
-        C.JOURNAL_VOLUME:   [                                 (M.HALLUCINATION, .0) ],                  # We could have it change depending on element, perhaps author typos are less suspect, so a confidence of .75 instead?  @TODO fine tune
+        C.JOURNAL_NAME:     [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],                                  # Right now all typos are .5 confidence, aka ambiguous on the generated -> authentic scale (invalid -> valid?).
+        C.JOURNAL_VOLUME:   [                                 (M.HALLUCINATION, .0) ],                                  # We could have it change depending on element, perhaps author typos are less suspect, so a confidence of .75 instead?  @TODO fine tune
         C.JOURNAL_ISSUE:    [                                 (M.HALLUCINATION, .0) ],
-        C.JOURNAL_PAGE:     [                                 (M.HALLUCINATION, .0) ],                  # @todo we REALLY need to add the 'missing component' thing. Maybe. That would give reason for more variety in the weighting (not just .5 typos and 0 all else)
+        C.JOURNAL_PAGE:     [                                 (M.HALLUCINATION, .0) ],                                  # @todo we REALLY need to add the 'missing component' thing. Maybe. That would give reason for more variety in the weighting (not just .5 typos and 0 all else)
         C.ELOCATOR:         [               (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],
-        C.PUBLICATION_DATE: [                                 (M.HALLUCINATION, .0) ],                  # @ consider, when would it be above .5? Never really, cause we know it's been modified. Above .5 would incentivize confidence in the wrong answer... Right?
-        C.PMCID:            [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],                  # How are we going to compare their scores against this? Will it just be closeness, or does the funny business around the .5 interfere with that?
+        C.PUBLICATION_DATE: [                                 (M.HALLUCINATION, .0) ],                                  # @ consider, when would it be above .5? Never really, cause we know it's been modified. Above .5 would incentivize confidence in the wrong answer... Right?
+        C.PMCID:            [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],                                  # How are we going to compare their scores against this? Will it just be closeness, or does the funny business around the .5 interfere with that?
         C.PMID:             [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],
-        C.DOI:              [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ]         # @TODO Reconsile the split DOI prefix/suffix mutation inconsistency.
+        C.DOI:              [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ]                                   # @TODO Reconsile the split DOI prefix/suffix mutation inconsistency.
         #"url_abstract":     ("typo", "mismatch", "hallucinate"),
         #"url_direct":       ("typo", "mismatch", "hallucinate"),
     }
