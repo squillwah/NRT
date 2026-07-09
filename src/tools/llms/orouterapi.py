@@ -36,30 +36,25 @@ def openrouter(model, ref, schema, *, api="completions", key=os.environ["THEKEY"
                          headers={"Authorization":f"Bearer {key}","Content-Type":"application/json" },
                          json=payload)
 
-def parse_response(response, *, api="completions"):
+def parse_response(response): #, *, api="completions"):
     processed = {
-        "request_json": json.loads(response.request.body.decode("utf-8")),
-        "response_text": response.text,
-        "response_json": None,
-        "content": None
+        "request": json.loads(response.request.body.decode("utf-8")),
+        "response": None,
+        "result": None
     }
-    try:
-        processed["response_json"] = response.json()
-        try:
-            match api:
-                case "completions":
-                    try: processed["content"] = json.loads(processed["response_json"]["choices"][0]["message"]["content"])
-                    except Exception as e:
-                        log("Couldn't parse json from choices/message/content: ", e, t="e")
-                        input("Now would be the time to quit if something is wrong.")                               # @ Don't forget you put this here.
-                        processed["content"] = processed["response_json"]["choices"][0]["message"]["content"]
-                case "responses": processed["content"] = "......"
-                case _: log(api, "typo stupid", t="e")
-        except Exception as e:
-            log("Couldn't even get text from [choices][0][message][content]: ", e, t="e")
+    try: processed["response"] = response.json()
     except Exception as e:
         log("Couldn't parse json from response: ", e, t="e")
-
+        log("Saving response as plaintext, result as null", t="e")
+        processed["response"] = response.text
+        processed["result"]: None
+    else:
+        try: processed["result"] = json.loads(processed["response"]["choices"][0]["message"]["content"])
+        except Exception as e:
+            #input("Now would be the time to quit if something is wrong.")                               # @ Don't forget you put this here.
+            log("Couldn't parse json from response[choices][0][message][content] (does the model support response_format?): ", e, t="e")
+            try: processed["result"] = processed["response"]["choices"][0]["message"]["content"]
+            except Exception as e: log("Couldn't even get text from response[choices][0][message][content]: ", e, t="e")
     return processed
 
 def trytryagain(request, kwargs, *, tries=3, wait=5):
@@ -76,7 +71,7 @@ def trytryagain(request, kwargs, *, tries=3, wait=5):
             if "error" in rjson:
                 log(f"Upstream error: {rjson["error"]}", t="e")
                 retry = True
-            else: log("Request success!")
+            else: log("Request success!", t="s")
         except Exception as e:
             log(f"Something terrible has happened. \n\n{e}\n\n{response.text}\n\n", t="e")
     if retry:
@@ -86,7 +81,9 @@ def trytryagain(request, kwargs, *, tries=3, wait=5):
             args["tries"] = args["tries"] - 1
             response = trytryagain(**args)
         else: log(f"No tries left, giving up. Message: \n\n{response.text}\n\n", t="e")
-    return response
+    return response # TODO: return time here.
+
+# Or have another wrapper function around openrouter, and send that to trytryagain. Probably best that way.
 
 if __name__ == "__main__":
     m = "openai/gpt-oss-20b:free"
