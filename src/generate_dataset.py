@@ -51,7 +51,7 @@ if __name__ == "__main__":
     bake_dataset(srcds) # It's been modified in place.
 
     print(json.dumps(srcds, indent=2))
-    with open("./THEREFERENCES_IDKEYS.json", "x") as f:
+    with open("./REFERENCES_NOSUG.json", "x") as f:
         json.dump(srcds, f, indent=2)
 
 

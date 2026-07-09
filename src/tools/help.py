@@ -28,12 +28,12 @@ def close_log():
 def log(*messages, delim=" ", t="log"):
     # Can redirect these to a file later.
     messages = delim.join([str(m) for m in messages])
-    if t in ("log", "l"):   t = ">> "
-    elif t in ("sup", "s"): t = " *  "
-    elif t in ("err", "e"): t = "!! "
+    if t in ("log", "l"):   t = "> "
+    elif t in ("sup", "s"): t = "  "
+    elif t in ("err", "e"): t = "! "
     elif t in ("hed", "h"): 
-        t = "== "
-        messages = messages + " =="
+        t = "=== "
+        messages = messages + " ==="
     
     _LOGOUT(f"[{time.strftime("%H:%M:%S", time.localtime())}] {t}{messages}")
 

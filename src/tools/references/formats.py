@@ -2,7 +2,7 @@ import json
 import random
 from enum import StrEnum
 
-class FormatStyle:
+class FormatStyle(StrEnum):
     ELSEVIER  = "elsevier",
     NATURE    = "nature",
     OXFORD    = "oxford",

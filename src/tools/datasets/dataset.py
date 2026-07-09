@@ -39,9 +39,6 @@ def dsentry(rd, ID=None):    #, *, ID=None):
             "holistic_complete": [True, S.REAL],                                    # Default holistic score to True
             "holistic_formatted": {style: None for style in Formats.FormatStyle},   # Initialize style scores but leave NULL for bake.
             "component": {comp: ([True, S.REAL] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}    # Default component scores to True, but set nonexistent components to NULL
-            #""combined": [True, 1.0],        # @ These two are where some kind of weight would come in, but right now they don't matter at all.
-            #""byformat": {"ama": None},                                                                              # @TODO {form: None for form in FormatStyles}. Different holistic scores per format addresses the issue of absent components bias.
-            #""component": {comp: ([True, 1.0] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}   # @RECONSIDER: The holistic score totalling nonsense is convoluted and an overcomplication.
         }
     }
 
@@ -50,18 +47,6 @@ def dsentry(rd, ID=None):    #, *, ID=None):
 #  - Arbitary Severity (A number in a range (or class alternatively) denoting our own classification of severity for a bad component)
 #
 # The score is applied to single components and the entire references.
-
-
-
-
-# @CONSIDER: Sometimes the true/false and the confidence score wont line up. Should the True/False be more of a "was this modified thing" or stay the same as the conf. Probably stay the same. Idk just think about it. There's something there.
-# @CONSIDER !! What about adding hallucinated/mismatch components to references which never had one in the first place?
-#  The question is: Should we only mutate a component when it already exists (refdataCOMPONENTS = True), or should we always mutate?
-#  how address in scoring?
-#  should we keep list of modified components?
-#  we have comp score list at init already, with Trues and Nones when no component.
-#  so, we set that value during the check. scores modified in place during mutation
-#  then if we do or dont want mutating of absent components, we just disable it on the None check instead of creating new.
 
 # Create a set of set entries from a list of reference data
 def make_dataset(refdata_list, *, v=False):
@@ -80,6 +65,7 @@ def bake_dsentry(entry):
     # @TODO Averaging the formatted scores (exlcuding absent components)
     # @TODO Doing the averaging logic different in a way that doesn't bias from component count? ?
     # Note the getting of the format score thing is really only relevant if we really care to evaluate model responses within our specific arbitrary framework. It's not the big focus.
+    # It's all a bit meaningless honestly. When going component by component. The model would have to identify the original reference amid all the other clutter, and see that it doesn't line up. Quite the task. When the reference is so garbled to be entirely 'hallucinated', what really makes an 'unmutated' page number more 'real' than 'fake'?
 
 #    for style in FormatStyles:
 #        score = entry["scores"]["byformat"][style]
@@ -431,6 +417,20 @@ class EntryMutator:
 
 # @Consider: One thing with the score totalling, is journal_page/journal_volume vs elocator can change scores. When one substitutes the other in the ref, even though both are valid. Because page + vol are 2 values, the 'weight' of them combined is heavier than elocator, even though they're subsituting each other.
 
+
+
+# @CONSIDER: Sometimes the true/false and the confidence score wont line up. Should the True/False be more of a "was this modified thing" or stay the same as the conf. Probably stay the same. Idk just think about it. There's something there.
+# @CONSIDER !! What about adding hallucinated/mismatch components to references which never had one in the first place?
+#  The question is: Should we only mutate a component when it already exists (refdataCOMPONENTS = True), or should we always mutate?
+#  how address in scoring?
+#  should we keep list of modified components?
+#  we have comp score list at init already, with Trues and Nones when no component.
+#  so, we set that value during the check. scores modified in place during mutation
+#  then if we do or dont want mutating of absent components, we just disable it on the None check instead of creating new.
+
+            #""combined": [True, 1.0],        # @ These two are where some kind of weight would come in, but right now they don't matter at all.
+            #""byformat": {"ama": None},                                                                              # @TODO {form: None for form in FormatStyles}. Different holistic scores per format addresses the issue of absent components bias.
+            #""component": {comp: ([True, 1.0] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}   # @RECONSIDER: The holistic score totalling nonsense is convoluted and an overcomplication.
 
 
 if __name__ == "__main__":
