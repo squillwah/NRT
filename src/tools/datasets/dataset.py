@@ -1,11 +1,30 @@
 
 #import reftools.ref_formatters as RB
 from copy import deepcopy
-from enum import StrEnum
+from enum import StrEnum, Enum
 from tools.references.typos import Typofier
 from tools.references.refdata import ReferenceComponent
 import tools.references.formats as Formats
 import random
+
+class MutationType(StrEnum):
+    TYPO = "typo"
+    MISMATCH = "mismatch"
+    HALLUCINATION = "hallucination"
+    SHUFFLE = "shuffle"
+
+class SeverityClass(float, Enum):
+    REAL = 1.0
+    MINOR_ERROR = .75
+    AMBIGUOUS = .5
+    MAJOR_ERROR = .25
+    FAKE = 0.0
+
+# Enum and utility aliases
+C = ReferenceComponent
+M = MutationType
+S = SeverityClass
+T = Typofier
 
 # Create a set entry from reference data
 def dsentry(rd, ID=None):    #, *, ID=None):
@@ -17,11 +36,23 @@ def dsentry(rd, ID=None):    #, *, ID=None):
         "data": deepcopy(rd),
         "format": {},           # All format styles generated at baking step. 
         "scores": {
-            "combined": [True, 1.0],        # @ These two are where some kind of weight would come in, but right now they don't matter at all.
-            "byformat": {"ama": None},                                                                              # @TODO {form: None for form in FormatStyles}. Different holistic scores per format addresses the issue of absent components bias.
-            "component": {comp: ([True, 1.0] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}   # @RECONSIDER: The holistic score totalling nonsense is convoluted and an overcomplication.
+            "holistic_complete": [True, S.REAL],                                    # Default holistic score to True
+            "holistic_formatted": {style: None for style in Formats.FormatStyle},   # Initialize style scores but leave NULL for bake.
+            "component": {comp: ([True, S.REAL] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}    # Default component scores to True, but set nonexistent components to NULL
+            #""combined": [True, 1.0],        # @ These two are where some kind of weight would come in, but right now they don't matter at all.
+            #""byformat": {"ama": None},                                                                              # @TODO {form: None for form in FormatStyles}. Different holistic scores per format addresses the issue of absent components bias.
+            #""component": {comp: ([True, 1.0] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}   # @RECONSIDER: The holistic score totalling nonsense is convoluted and an overcomplication.
         }
     }
+
+# Scores are in two parts:
+#  - Valid/Invalid (True if it's original, False if it's a mutated component)
+#  - Arbitary Severity (A number in a range (or class alternatively) denoting our own classification of severity for a bad component)
+#
+# The score is applied to single components and the entire references.
+
+
+
 
 # @CONSIDER: Sometimes the true/false and the confidence score wont line up. Should the True/False be more of a "was this modified thing" or stay the same as the conf. Probably stay the same. Idk just think about it. There's something there.
 # @CONSIDER !! What about adding hallucinated/mismatch components to references which never had one in the first place?
@@ -58,16 +89,6 @@ def bake_dataset(dataset):
     for entryID in dataset:
         bake_dsentry(dataset[entryID])
 
-class Mutation(StrEnum):
-    TYPO = "typo"
-    MISMATCH = "mismatch"
-    HALLUCINATION = "hallucination"
-    SHUFFLE = "shuffle"
-
-# Enum and utility aliases
-C = ReferenceComponent
-M = Mutation
-T = Typofier
 
 # Class of methods to mutate dataset entries using ref_mutator functions.
 class EntryMutator:
