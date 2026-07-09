@@ -32,9 +32,14 @@ def openrouter(model, ref, schema, *, api="completions", key=os.environ["THEKEY"
             payload = make_payload_responses(model, ref, schema)
             endpoint = "/api/v1/responses"
 
-    return requests.post(url=f"https://openrouter.ai{endpoint}",
-                         headers={"Authorization":f"Bearer {key}","Content-Type":"application/json" },
-                         json=payload)
+    # Recording time benchmark
+    t = time.perf_counter()
+    response = requests.post(url=f"https://openrouter.ai{endpoint}",
+                             headers={"Authorization":f"Bearer {key}","Content-Type":"application/json" },
+                             json=payload)
+    t = time.perf_counter() - t     # End time minus start time
+
+    return response, t
 
 def parse_response(response): #, *, api="completions"):
     processed = {
@@ -60,12 +65,14 @@ def parse_response(response): #, *, api="completions"):
 def trytryagain(request, kwargs, *, tries=3, wait=5):
     args = locals()
     retry = False
-    response = request(**kwargs)
+
+    response, t = request(**kwargs)
+    
     if response.status_code != 200:
         log(f"Openrouter request error, status_code: {response.status_code}", t="e")
         retry = True
-    # Catch upstream provider errors
     else:
+        # Catch upstream provider errors
         try:
             rjson = response.json() # May be fragile, JSON parsing errors or false positives etc.
             if "error" in rjson:
@@ -74,14 +81,16 @@ def trytryagain(request, kwargs, *, tries=3, wait=5):
             else: log("Request success!", t="s")
         except Exception as e:
             log(f"Something terrible has happened. \n\n{e}\n\n{response.text}\n\n", t="e")
+    
     if retry:
         if tries > 0:
             log(f"Trying again in {wait} seconds, {tries} tries left.", t="s")
             time.sleep(wait)
             args["tries"] = args["tries"] - 1
-            response = trytryagain(**args)
+            response, t = trytryagain(**args)
         else: log(f"No tries left, giving up. Message: \n\n{response.text}\n\n", t="e")
-    return response # TODO: return time here.
+    
+    return response, t # TODO: return time here.
 
 # Or have another wrapper function around openrouter, and send that to trytryagain. Probably best that way.
 

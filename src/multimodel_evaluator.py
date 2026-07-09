@@ -34,12 +34,13 @@ def close_files():
 def evaluate(dsentry, model, form=None):
     schema = ProtoSchemas.make_schema(ProtoSchemas.make_schema_properties())        # Later on this can be tailored. A "prompt trimming" experiment (make it easier on the AI).
     log("Requesting Openrouter", t="s")
-    response = trytryagain(openrouter, {"model": model, "ref": dsentry["format"]["elsevier"], "schema": schema})    # @TODO differentiate formats
-    log("Parsing response", t="s")
-    response = parse_response(response)     # @TODO record time ....
-    log(f"Saving response dump to '{dsentry["id"]}_{model.split("/")[-1]}_{form}.json'", t="s")
+    response, t = trytryagain(openrouter, {"model": model, "ref": dsentry["format"]["elsevier"], "schema": schema})    # @TODO differentiate formats
+    log(f"Time elapsed: {t} seconds", t="s")
+    log(f"Parsing response and saving response dump to '{dsentry["id"]}_{model.split("/")[-1]}_{form}.json'", t="s")
+    response = parse_response(response) # Parse is where we'd pull out tokens and other metrics. Return a result and a {metrics}.
     save_response_dump(response, f"{dsentry["id"]}_{model.split("/")[-1]}_{form}")
-    return response["result"]
+
+    return response["result"], t    # @TODO Could also return Token usage, but it can always be extracted from the dump postfact.
 
 # Template for evaluated reference file structure
 def results_template(dsentry, models):
@@ -50,8 +51,8 @@ def results_template(dsentry, models):
         "formats": {},
         "results": {m: {f: None for f in FormatStyle} for m in models}  # @TODO add time and token metrics (probably return as part of result in evaluate)
     }
-def add_result(model, style, result, results): 
-    results["results"][model][style] = result
+def add_result(model, style, result, t, results): 
+    results["results"][model][style] = {"metrics": {"time": t}, "response": result}      # Could include more metrics later (tokens etc), though most already exist in the dump (can be added on a second pass).
     if style not in results["formats"]: results["formats"][style] = [model] 
     elif model not in results["formats"][style]: results["formats"][style].append(model)
 
@@ -83,10 +84,9 @@ if __name__ == "__main__":
             style = random.choice(list(FormatStyle))        # @TODO Pick formats intelligently? Is random a good metric, or should we weight by 'popularity' (whatever that may be).
             
             log(f"{ID} {model} {style}", t="h")
-            result = evaluate(entry, model, form=style)
+            result, t = evaluate(entry, model, form=style)
             
-            log(f"Adding result: {model} ({style})", t="s")
-            if result: add_result(model, style, result, results)
+            if result: add_result(model, style, result, t, results)
             else: log("BADBAD! Result is null and was not added, something terrible must have happened.", t="e")
         
         log(f"Saving full multimodel evaluation of ENTRY {ID} to '{ID}.json' and appending to 'all.json'")
@@ -95,7 +95,6 @@ if __name__ == "__main__":
 
     log(f"Saving all results to 'all.json'")
     save_results(results_all, "all")
-
     
     close_files()
 
