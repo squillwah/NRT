@@ -56,9 +56,21 @@ def add_result(model, style, result, t, results):
     if style not in results["formats"]: results["formats"][style] = [model] 
     elif model not in results["formats"][style]: results["formats"][style].append(model)
 
-MODELS = ("deepseek/deepseek-v4-flash", "nvidia/nemotron-3-super-120b-a12b:free")
-DATASET = "THEREFERENCES_IDKEYS.json"
+
+
 TARGET_DIR = "./mme"
+DATASET = "REFERENCES_NOSUG.json"
+MODELS = (
+    "deepseek/deepseek-v4-flash",                   # A couple of the most popular models (and nemotron) with text capabilities + response_format parameter support.
+    "nvidia/nemotron-3-super-120b-a12b:free",       # https://openrouter.ai/models?supported_parameters=response_format&order=most-popular&input_modalities=text&output_modalities=text    
+    "xiaomi/mimo-v2.5",
+    "google/gemini-3-flash-preview"
+)
+# @TODO: Use papers with dates before knowledge cutoffs
+# @TODO: Or specifiy current date in system prompt.
+# @TODO: Could we use a LLM to analyze all the reasoning data? To detect trends, such as the issues with 'future' dates?
+# @TODO: !!! Before the big test, make sure format compilers actually do what they say!
+# @TODO: !! AND before the even bigger test, get down the variations in the dataset. The old test functions are not varied enough.
 
 if __name__ == "__main__":
     open_files(TARGET_DIR)
@@ -69,8 +81,8 @@ if __name__ == "__main__":
     save_dataset(DATASET)
     dataset = h.read_json(DATASET)
 
-    # Trim to 2 for testing
-    dataset = {ID: entry for ID, entry in list(dataset.items())[:2]}
+    # Trim to 5 for testing
+    dataset = {ID: entry for ID, entry in list(dataset.items())[:5]}
 
     log(f"Beginning evaluation of {len(dataset)} references, with {len(MODELS)} models per reference")
     

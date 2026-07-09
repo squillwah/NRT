@@ -1,0 +1,129 @@
+
+ 2026-07-09 19:36:10
+
+[19:36:10] === Directory: mme ===
+[19:36:10] > Testing references in 'REFERENCES_NOSUG.json' against:
+[19:36:10]   deepseek/deepseek-v4-flash
+[19:36:10]   nvidia/nemotron-3-super-120b-a12b:free
+[19:36:10]   xiaomi/mimo-v2.5
+[19:36:10]   google/gemini-3-flash-preview
+[19:36:10] > Loading dataset, creating backup 'source.json' at root
+[19:36:10] > Beginning evaluation of 5 references, with 4 models per reference
+[19:36:10] > Generating result template for 0
+[19:36:10] > Iterating models...
+[19:36:10] === 0 deepseek/deepseek-v4-flash elsevier ===
+[19:36:10]   Requesting Openrouter
+[19:36:36]   Request success!
+[19:36:36]   Time elapsed: 25.633522280986654 seconds
+[19:36:36]   Parsing response and saving response dump to '0_deepseek-v4-flash_elsevier.json'
+[19:36:36] === 0 nvidia/nemotron-3-super-120b-a12b:free cse ===
+[19:36:36]   Requesting Openrouter
+[19:36:51]   Request success!
+[19:36:51]   Time elapsed: 15.456025463994592 seconds
+[19:36:51]   Parsing response and saving response dump to '0_nemotron-3-super-120b-a12b:free_cse.json'
+[19:36:51] === 0 xiaomi/mimo-v2.5 elsevier ===
+[19:36:51]   Requesting Openrouter
+[19:37:45]   Request success!
+[19:37:45]   Time elapsed: 53.83325705101015 seconds
+[19:37:45]   Parsing response and saving response dump to '0_mimo-v2.5_elsevier.json'
+[19:37:45] === 0 google/gemini-3-flash-preview oxford ===
+[19:37:45]   Requesting Openrouter
+[19:37:49]   Request success!
+[19:37:49]   Time elapsed: 3.6008687390130945 seconds
+[19:37:49]   Parsing response and saving response dump to '0_gemini-3-flash-preview_oxford.json'
+[19:37:49] > Saving full multimodel evaluation of ENTRY 0 to '0.json' and appending to 'all.json'
+[19:37:49] > Generating result template for 1
+[19:37:49] > Iterating models...
+[19:37:49] === 1 deepseek/deepseek-v4-flash springer ===
+[19:37:49]   Requesting Openrouter
+[19:38:19]   Request success!
+[19:38:19]   Time elapsed: 30.480383154994342 seconds
+[19:38:19]   Parsing response and saving response dump to '1_deepseek-v4-flash_springer.json'
+[19:38:19] === 1 nvidia/nemotron-3-super-120b-a12b:free harvard ===
+[19:38:19]   Requesting Openrouter
+[19:44:19]   Request success!
+[19:44:19]   Time elapsed: 359.81541408301564 seconds
+[19:44:19]   Parsing response and saving response dump to '1_nemotron-3-super-120b-a12b:free_harvard.json'
+[19:44:19] ! Couldn't parse json from response[choices][0][message][content] (does the model support response_format?):  Expecting value: line 1 column 1 (char 0)
+[19:44:19] === 1 xiaomi/mimo-v2.5 cse ===
+[19:44:19]   Requesting Openrouter
+[19:45:28]   Request success!
+[19:45:28]   Time elapsed: 68.62384647401632 seconds
+[19:45:28]   Parsing response and saving response dump to '1_mimo-v2.5_cse.json'
+[19:45:28] === 1 google/gemini-3-flash-preview harvard ===
+[19:45:28]   Requesting Openrouter
+[19:45:33]   Request success!
+[19:45:33]   Time elapsed: 4.874782207974931 seconds
+[19:45:33]   Parsing response and saving response dump to '1_gemini-3-flash-preview_harvard.json'
+[19:45:33] > Saving full multimodel evaluation of ENTRY 1 to '1.json' and appending to 'all.json'
+[19:45:33] > Generating result template for 2
+[19:45:33] > Iterating models...
+[19:45:33] === 2 deepseek/deepseek-v4-flash elsevier ===
+[19:45:33]   Requesting Openrouter
+[19:46:30]   Request success!
+[19:46:30]   Time elapsed: 57.04338385598385 seconds
+[19:46:30]   Parsing response and saving response dump to '2_deepseek-v4-flash_elsevier.json'
+[19:46:30] === 2 nvidia/nemotron-3-super-120b-a12b:free harvard ===
+[19:46:30]   Requesting Openrouter
+[19:46:55]   Request success!
+[19:46:55]   Time elapsed: 25.187400781025644 seconds
+[19:46:55]   Parsing response and saving response dump to '2_nemotron-3-super-120b-a12b:free_harvard.json'
+[19:46:55] === 2 xiaomi/mimo-v2.5 elsevier ===
+[19:46:55]   Requesting Openrouter
+[19:48:43]   Request success!
+[19:48:43]   Time elapsed: 107.70953396501136 seconds
+[19:48:43]   Parsing response and saving response dump to '2_mimo-v2.5_elsevier.json'
+[19:48:43] === 2 google/gemini-3-flash-preview nature ===
+[19:48:43]   Requesting Openrouter
+[19:48:47]   Request success!
+[19:48:47]   Time elapsed: 4.092220965016168 seconds
+[19:48:47]   Parsing response and saving response dump to '2_gemini-3-flash-preview_nature.json'
+[19:48:47] > Saving full multimodel evaluation of ENTRY 2 to '2.json' and appending to 'all.json'
+[19:48:47] > Generating result template for 3
+[19:48:47] > Iterating models...
+[19:48:47] === 3 deepseek/deepseek-v4-flash springer ===
+[19:48:47]   Requesting Openrouter
+[19:49:01]   Request success!
+[19:49:01]   Time elapsed: 14.709194154012948 seconds
+[19:49:01]   Parsing response and saving response dump to '3_deepseek-v4-flash_springer.json'
+[19:49:01] === 3 nvidia/nemotron-3-super-120b-a12b:free nature ===
+[19:49:01]   Requesting Openrouter
+[19:49:33]   Request success!
+[19:49:33]   Time elapsed: 31.103724150976632 seconds
+[19:49:33]   Parsing response and saving response dump to '3_nemotron-3-super-120b-a12b:free_nature.json'
+[19:49:33] === 3 xiaomi/mimo-v2.5 nature ===
+[19:49:33]   Requesting Openrouter
+[19:51:01]   Request success!
+[19:51:01]   Time elapsed: 88.72435901701101 seconds
+[19:51:01]   Parsing response and saving response dump to '3_mimo-v2.5_nature.json'
+[19:51:01] === 3 google/gemini-3-flash-preview harvard ===
+[19:51:01]   Requesting Openrouter
+[19:51:07]   Request success!
+[19:51:07]   Time elapsed: 5.3847365679976065 seconds
+[19:51:07]   Parsing response and saving response dump to '3_gemini-3-flash-preview_harvard.json'
+[19:51:07] > Saving full multimodel evaluation of ENTRY 3 to '3.json' and appending to 'all.json'
+[19:51:07] > Generating result template for 4
+[19:51:07] > Iterating models...
+[19:51:07] === 4 deepseek/deepseek-v4-flash nature ===
+[19:51:07]   Requesting Openrouter
+[19:51:19]   Request success!
+[19:51:19]   Time elapsed: 11.992028879991267 seconds
+[19:51:19]   Parsing response and saving response dump to '4_deepseek-v4-flash_nature.json'
+[19:51:19] === 4 nvidia/nemotron-3-super-120b-a12b:free nature ===
+[19:51:19]   Requesting Openrouter
+[19:51:51]   Request success!
+[19:51:51]   Time elapsed: 32.48260220201337 seconds
+[19:51:51]   Parsing response and saving response dump to '4_nemotron-3-super-120b-a12b:free_nature.json'
+[19:51:51] === 4 xiaomi/mimo-v2.5 elsevier ===
+[19:51:51]   Requesting Openrouter
+[19:52:57]   Request success!
+[19:52:57]   Time elapsed: 66.1621177699999 seconds
+[19:52:57]   Parsing response and saving response dump to '4_mimo-v2.5_elsevier.json'
+[19:52:57] === 4 google/gemini-3-flash-preview cse ===
+[19:52:57]   Requesting Openrouter
+[19:53:01]   Request success!
+[19:53:01]   Time elapsed: 3.908336149994284 seconds
+[19:53:01]   Parsing response and saving response dump to '4_gemini-3-flash-preview_cse.json'
+[19:53:01] > Saving full multimodel evaluation of ENTRY 4 to '4.json' and appending to 'all.json'
+[19:53:01] > Saving all results to 'all.json'
+[19:53:01] > Closing log file.
