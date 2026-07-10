@@ -62,6 +62,7 @@ class Mutation(StrEnum):
     MISMATCH = "mismatch"
     HALLUCINATION = "hallucination"
     SHUFFLE = "shuffle"
+    OMISSION = "omission" # unlike the other 3, this one specifically demolishes a component within the structure of a citation. 
 
 # Enum and utility aliases
 C = ReferenceComponent
@@ -79,18 +80,19 @@ class EntryMutator:
     _MUTLABELS = {} # Human readable convenience labels for each bit identifier.
 
     # Define valid mutations per component, plus "suggested confidence" (what the mutation brings component's score down to).
+    # as of 7/10/2026, gabe has added the m.omission parameters so that way stuff just gets outright deleted.
     _MUTMAP = {
-        C.AUTHORS:          [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0), (M.SHUFFLE, .25) ],          # @ this is kind of like the 'weight' stuff with scoring, but applied to how much (thing being wrong) tarnishes the "validity" of a reference.
-        C.TITLE:            [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],
-        C.JOURNAL_NAME:     [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],                  # Right now all typos are .5 confidence, aka ambiguous on the generated -> authentic scale (invalid -> valid?).
-        C.JOURNAL_VOLUME:   [                                 (M.HALLUCINATION, .0) ],                  # We could have it change depending on element, perhaps author typos are less suspect, so a confidence of .75 instead?  @TODO fine tune
-        C.JOURNAL_ISSUE:    [                                 (M.HALLUCINATION, .0) ],
-        C.JOURNAL_PAGE:     [                                 (M.HALLUCINATION, .0) ],                  # @todo we REALLY need to add the 'missing component' thing. Maybe. That would give reason for more variety in the weighting (not just .5 typos and 0 all else)
-        C.ELOCATOR:         [               (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],
-        C.PUBLICATION_DATE: [                                 (M.HALLUCINATION, .0) ],                  # @ consider, when would it be above .5? Never really, cause we know it's been modified. Above .5 would incentivize confidence in the wrong answer... Right?
-        C.PMCID:            [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],                  # How are we going to compare their scores against this? Will it just be closeness, or does the funny business around the .5 interfere with that?
-        C.PMID:             [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],
-        C.DOI:              [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ]         # @TODO Reconsile the split DOI prefix/suffix mutation inconsistency.
+        C.AUTHORS:          [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0), (M.SHUFFLE, .25), (M.OMISSION, .0) ],          # @ this is kind of like the 'weight' stuff with scoring, but applied to how much (thing being wrong) tarnishes the "validity" of a reference.
+        C.TITLE:            [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0), (M.OMISSION, .0) ],
+        C.JOURNAL_NAME:     [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0), (M.OMISSION, .0) ],                  # Right now all typos are .5 confidence, aka ambiguous on the generated -> authentic scale (invalid -> valid?).
+        C.JOURNAL_VOLUME:   [                                 (M.HALLUCINATION, .0), (M.OMISSION, .0) ],                  # We could have it change depending on element, perhaps author typos are less suspect, so a confidence of .75 instead?  @TODO fine tune
+        C.JOURNAL_ISSUE:    [                                 (M.HALLUCINATION, .0), (M.OMISSION, .0) ],
+        C.JOURNAL_PAGE:     [                                 (M.HALLUCINATION, .0), (M.OMISSION, .0) ],                  # @todo we REALLY need to add the 'missing component' thing. Maybe. That would give reason for more variety in the weighting (not just .5 typos and 0 all else)
+        C.ELOCATOR:         [               (M.MISMATCH, .0), (M.HALLUCINATION, .0), (M.OMISSION, .0) ],
+        C.PUBLICATION_DATE: [                                 (M.HALLUCINATION, .0), (M.OMISSION, .0) ],                  # @ consider, when would it be above .5? Never really, cause we know it's been modified. Above .5 would incentivize confidence in the wrong answer... Right?
+        C.PMCID:            [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0), (M.OMISSION, .0) ],                  # How are we going to compare their scores against this? Will it just be closeness, or does the funny business around the .5 interfere with that?
+        C.PMID:             [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0), (M.OMISSION, .0) ],
+        C.DOI:              [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0), (M.OMISSION, .0) ]         # @TODO Reconsile the split DOI prefix/suffix mutation inconsistency.
         #"url_abstract":     ("typo", "mismatch", "hallucinate"),
         #"url_direct":       ("typo", "mismatch", "hallucinate"),
     }
@@ -179,7 +181,12 @@ class EntryMutator:
         ds_entry["data"]["authors"] = deepcopy(random.sample(self._FAKE_AUTHORS, len(ds_entry["data"]["authors"])))    # Making it the same length. Could be different. Who cares?
         self._flag(ds_entry, C.AUTHORS, M.HALLUCINATION)
         return ds_entry
-
+        
+    def drop_authors(self, ds_entry):
+        # gets rid of authors component
+        ds_entry["data"]["authors"] = []
+        self._flag(ds_entry, C.AUTHORS, M.OMISSION)
+        return ds_entry
 ### TITLES
 
     def title_typo(self, ds_entry):
@@ -195,6 +202,12 @@ class EntryMutator:
         #RM.set_title(ds_entry["data"], random.choice(self._FAKE_TITLES))
         ds_entry["data"]["title"] = self._randcopy(self._FAKE_TITLES)
         self._flag(ds_entry, C.TITLE, M.HALLUCINATION)
+        return ds_entry
+
+    def drop_title(self, ds_entry):
+        # gets rid of title component
+        ds_entry["data"]["title"] = ""
+        self._flag(ds_entry, C.TITLE, M.OMISSION)
         return ds_entry
 
 ### JOURNAL NAMES                                               # @todo: Think about: Should we be bothering with replacing each journal element like this, or should we just mismatch the whole thing together (name, date, volume, iss, pages)?
@@ -213,6 +226,14 @@ class EntryMutator:
         self._flag(ds_entry, C.JOURNAL_NAME, M.HALLUCINATION)
         return ds_entry
 
+    def drop_journal_name(self, ds_entry):
+        # gets rid of journal name component
+        ds_entry["data"]["journal"]["name"]["full"] = ""
+        ds_entry["data"]["journal"]["name"]["short"] = ""
+        self._flag(ds_entry, C.JOURNAL_NAME, M.OMISSION)
+        return ds_entry
+
+    
 ### JOURNAL VOLUME / ISSUE
 
     def jvol_hallucinate(self, ds_entry):             # @todo: Consider: Should we bother doing mismatches / hallucinations for the numerics?
@@ -240,6 +261,18 @@ class EntryMutator:
 
     # Could also perchance do a jissvol_mismatch (if one of our classifications implies it)
 
+    def drop_volume(self, ds_entry):
+         # gets rid of journal volume component
+        ds_entry["data"]["journal"]["volume"] = ""
+        self._flag(ds_entry, C.JOURNAL_VOLUME, M.OMISSION)
+        return ds_entry
+
+    def drop_issue(self, ds_entry):
+        # gets rid of journal issue component
+        ds_entry["data"]["journal"]["issue"] = ""
+        self._flag(ds_entry, C.JOURNAL_ISSUE, M.OMISSION)
+        return ds_entry
+        
 ### JOURNAL PAGE NUMBERS
 
     def jpage_hallucinate(self, ds_entry):
@@ -267,6 +300,22 @@ class EntryMutator:
         self._flag(ds_entry, C.ELOCATOR, M.HALLUCINATION)
         return ds_entry
 
+    def drop_pages(self, ds_entry):
+        # gets rid of journal issue component
+        ds_entry["data"]["journal"]["page"]["start"] = ""
+        ds_entry["data"]["journal"]["page"]["end"] = ""
+        self._flag(ds_entry, C.JOURNAL_PAGE, M.OMISSION)
+        return ds_entry
+
+    def drop_elocator(self, ds_entry):
+        # gets rid of elocator component
+        if "elocator" in ds_entry["data"]:
+            ds_entry["data"]["elocator"] = ""
+        elif "journal" in ds_entry["data"] and "elocator" in ds_entry["data"]["journal"]:
+            ds_entry["data"]["journal"]["elocator"] = ""
+            
+        self._flag(ds_entry, C.ELOCATOR, M.OMISSION)
+        return ds_entry
 ### JOURNAL / DIGITAL PUBLICATION DATES
 
     #def pub_mismatch(self, ds_entry):
@@ -287,12 +336,31 @@ class EntryMutator:
                 epub["d"] = pub["d"] + random.randint((pub["d"] > 5)*-5, (pub["m"] < 27)*5) # Sometimes offset epub day by up to 5.
             self._flag(ds_entry, C.PUBLICATION_DATE, M.HALLUCINATION)
         return ds_entry
+
+    def drop_publication_date(self, ds_entry):
+        # gets rid of pub component
+        if "pub" in ds_entry["data"]:
+            ds_entry["data"]["pub"]["y"] = ""
+            ds_entry["data"]["pub"]["m"] = ""
+            ds_entry["data"]["pub"]["d"] = ""
+        # gets rid of epub component
+        if "epub" in ds_entry["data"]:
+            ds_entry["data"]["epub"]["y"] = ""
+            ds_entry["data"]["epub"]["m"] = ""
+            ds_entry["data"]["epub"]["d"] = ""
+            
+        self._flag(ds_entry, C.PUBLICATION_DATE, M.OMISSION)
+        return ds_entry
+        
 #    def epub_randomize(self, ds_entry, *, y=True, m=True, d=True):
 #        if y: ds_entry["data"]["epub"]["y"] = random.randint(*self._RAND_YEAR_RANGE)
 #        if m: ds_entry["data"]["epub"]["m"] = random.randint(1, 12)
 #        if d: ds_entry["data"]["epub"]["d"] = random.randint(1, 31)
 #        if y or m or d: self._flag(ds_entry, "epub_randomize")
 #        return ds_entry
+
+
+    
 
 ### DOI
 
@@ -327,6 +395,12 @@ class EntryMutator:
         ds_entry["data"]["doi"]["suffix"] = "-".join(["".join([random.choice("abcdefghijklmnopqrstuvwxyz,./12345678900987654321") for i in range(random.randint(3, 8))]) for i in range(random.randint(1, 3))])
         #self._flag(ds_entry, "doi_hallucinate_suffix")
         self._flag(ds_entry, C.DOI, M.HALLUCINATION)
+        return ds_entry
+
+    def drop_doi(self, ds_entry):
+        # gets rid of doi component
+        ds_entry["data"]["doi"] = ""
+        self._flag(ds_entry, C.DOI, M.OMISSION)
         return ds_entry
 
 ### URLS
@@ -388,6 +462,15 @@ class EntryMutator:
         self._flag(ds_entry, C.PMCID, M.HALLUCINATION)
         return ds_entry
 
+    def drop_identifiers(self, ds_entry, *, pmid=True, pmcid=True):
+        # gets rid of pmid, pmcid components
+        if pmid:
+            ds_entry["data"]["pmid"] = ""
+            self._flag(ds_entry, C.PMID, M.OMISSION)
+        if pmcid:
+            ds_entry["data"]["pmcid"] = ""
+            self._flag(ds_entry, C.PMCID, M.OMISSION)
+        return ds_entry
 
 # @todo: Consider: Should we just blanket each element with the same boilerplate mutation methods, even when it might not make complete sense? (such as mismatches on vol/iss, or hallucinating page numbers?)
 
