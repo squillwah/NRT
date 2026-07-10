@@ -53,7 +53,8 @@ def write_json(data, filename, access="w"):
             log(f"JSON conversion failed\n\n{e}\n, writing plaintext...", t="e")
             file.write(data)
 
-def read_json(filename):
+def read_json(filename, intkeys=False):
     data = None
-    with open(f"{filename}", "r") as f: data = json.load(f)
+    o_hook = (lambda d: {(int(k) if k.isdigit() else k): v for k, v in d.items()}) if intkeys else None
+    with open(f"{filename}", "r") as f: data = json.load(f, object_hook=o_hook)
     return data
