@@ -1,40 +1,56 @@
 
 #import reftools.ref_formatters as RB
 from copy import deepcopy
-from enum import StrEnum
+from enum import StrEnum, Enum
 from tools.references.typos import Typofier
 from tools.references.refdata import ReferenceComponent
 import tools.references.formats as Formats
 import random
 
+class MutationType(StrEnum):
+    TYPO = "typo"
+    MISMATCH = "mismatch"
+    HALLUCINATION = "hallucination"
+    SHUFFLE = "shuffle"
+
+class SeverityClass(float, Enum):
+    REAL = 1.0
+    MINOR_ERROR = .75
+    AMBIGUOUS = .5
+    MAJOR_ERROR = .25
+    FAKE = 0.0
+
+# Enum and utility aliases
+C = ReferenceComponent
+M = MutationType
+S = SeverityClass
+T = Typofier
+
 # Create a set entry from reference data
-def dsentry(rd, *, ID=None):
+def dsentry(rd, ID=None):    #, *, ID=None):
     return {
-        "id": ID,               # Internal ID + original PMCID
+        "id": ID,               # Internal ID + original PMCID         IDs now stored as keys in the flat dataset dict. Categories can persist as per component/holistic tags (replacement for "suggested confidence" silliness)
         "src_id": rd["pmcid"],
         "mutcode": 0b00000000,  # Describes specific mutations.
         "mutlabels": [],
         "data": deepcopy(rd),
-        "format": {},           # Should unbaked forms be absent or a None?
+        "format": {},           # All format styles generated at baking step. 
         "scores": {
-            "combined": [True, 1.0],
-            "byformat": {"ama": None},  # @TODO {form: None for form in FormatStyles}. Different holistic scores per format addresses the issue of absent components bias.
-            "component": {comp: ([True, 1.0] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}
+            "holistic_complete": [True, S.REAL],                                    # Default holistic score to True
+            "holistic_formatted": {style: None for style in Formats.FormatStyle},   # Initialize style scores but leave NULL for bake.
+            "component": {comp: ([True, S.REAL] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}    # Default component scores to True, but set nonexistent components to NULL
         }
     }
 
-# @CONSIDER: Sometimes the true/false and the confidence score wont line up. Should the True/False be more of a "was this modified thing" or stay the same as the conf. Probably stay the same. Idk just think about it. There's something there.
-# @CONSIDER !! What about adding hallucinated/mismatch components to references which never had one in the first place?
-#  The question is: Should we only mutate a component when it already exists (refdataCOMPONENTS = True), or should we always mutate?
-#  how address in scoring?
-#  should we keep list of modified components?
-#  we have comp score list at init already, with Trues and Nones when no component.
-#  so, we set that value during the check. scores modified in place during mutation
-#  then if we do or dont want mutating of absent components, we just disable it on the None check instead of creating new.
+# Scores are in two parts:
+#  - Valid/Invalid (True if it's original, False if it's a mutated component)
+#  - Arbitary Severity (A number in a range (or class alternatively) denoting our own classification of severity for a bad component)
+#
+# The score is applied to single components and the entire references.
 
 # Create a set of set entries from a list of reference data
-def make_dataset(ref_data_list, *, v=False):
-    dataset = [dsentry(ref, ID=i) for i, ref in enumerate(ref_data_list)]
+def make_dataset(refdata_list, *, v=False):
+    dataset = {ID: dsentry(refdata, ID) for ID, refdata in enumerate(refdata_list)}
     return dataset
 
 def bake_dsentry(entry):
@@ -42,10 +58,15 @@ def bake_dsentry(entry):
     entry["mutlabels"] = EntryMutator.explain_mutcode(entry["mutcode"])
     # Averaging holistic score
     c_scores = {component: entry["scores"]["component"][component] for component in ReferenceComponent if entry["scores"]["component"][component]} # Components with existing scores in the dsentry.
-    score = entry["scores"]["combined"]
+    score = entry["scores"]["holistic_complete"]
     classes, confidences = zip(*[c_scores[c] for c in c_scores])    # Lists of all classification bools and confidence values for all components.
     score[0] = classes and all(classes)                             # AND every class           @TODO May want to weight these somehow? Or should even the tiniest typo make it "false"? If so, then the binary score means a slightly different thing than confidence. Probably good that way? Maybe not, a confusing case would be a False (invalid) class due to a type but a very high (.95) confidence value. It would make sense on the component level (since we shouldn't set default conf values above .5), but not when maintaining that negative bool for the average. ANDing booleans is not the same as averaging. Do we even need the True/False at this step? Probably, something to mark the mutation. Otherwise setting the suggested confidences will be tricky and precise, we open ourselves up to clearly mutated/hallucinated references being marked True when the average works out > .5
     score[1] = sum(confidences)/len(confidences)                    # Average all confidences   ... probably need a zero check here ...
+    # @TODO Averaging the formatted scores (exlcuding absent components)
+    # @TODO Doing the averaging logic different in a way that doesn't bias from component count? ?
+    # Note the getting of the format score thing is really only relevant if we really care to evaluate model responses within our specific arbitrary framework. It's not the big focus.
+    # It's all a bit meaningless honestly. When going component by component. The model would have to identify the original reference amid all the other clutter, and see that it doesn't line up. Quite the task. When the reference is so garbled to be entirely 'hallucinated', what really makes an 'unmutated' page number more 'real' than 'fake'?
+
 #    for style in FormatStyles:
 #        score = entry["scores"]["byformat"][style]
 #        classes, confidences = zip(*[c_scores[c] for c in c_scores if entry["format"][style]["components"][c])  # Do not include scores absent from the formatted reference (detailed by "components" element with the formatted string.
@@ -54,45 +75,35 @@ def bake_dsentry(entry):
 
 # Bake mutation labels, reference formats, and suggested reference scores every entry in a dataset.
 def bake_dataset(dataset):
-    for entry in dataset:
-        bake_dsentry(entry)
+    for entryID in dataset:
+        bake_dsentry(dataset[entryID])
 
-class Mutation(StrEnum):
-    TYPO = "typo"
-    MISMATCH = "mismatch"
-    HALLUCINATION = "hallucination"
-    SHUFFLE = "shuffle"
-
-# Enum and utility aliases
-C = ReferenceComponent
-M = Mutation
-T = Typofier
 
 # Class of methods to mutate dataset entries using ref_mutator functions.
 class EntryMutator:
 
     # Mutation flags. Composed into a 'mutation code'. Unique bits describe exactly which modifications were performed on a dsentry. Not all mutations are combinable (overwrites). Also, be wary in the setting flags. A wrongly set flag will not reveal itself.
-    # Mutation confidence. The "suggested confidence level" for the mutated component. Lower scores take precedence. Used as baseline for model response grading. Arbitrary, we should choose values wisely.
 
     _MUTFLAG = {}   # Map to the unique bit identifier of all defined mutations.
     _MUTCONF = {}   # Map to the suggested confidence value of all defined mutations.
     _MUTLABELS = {} # Human readable convenience labels for each bit identifier.
 
-    # Define valid mutations per component, plus "suggested confidence" (what the mutation brings component's score down to).
+    # Define possible mutations and their arbitrary severity classes.
     _MUTMAP = {
-        C.AUTHORS:          [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0), (M.SHUFFLE, .25) ],          # @ this is kind of like the 'weight' stuff with scoring, but applied to how much (thing being wrong) tarnishes the "validity" of a reference.
-        C.TITLE:            [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],
-        C.JOURNAL_NAME:     [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],                  # Right now all typos are .5 confidence, aka ambiguous on the generated -> authentic scale (invalid -> valid?).
-        C.JOURNAL_VOLUME:   [                                 (M.HALLUCINATION, .0) ],                  # We could have it change depending on element, perhaps author typos are less suspect, so a confidence of .75 instead?  @TODO fine tune
-        C.JOURNAL_ISSUE:    [                                 (M.HALLUCINATION, .0) ],
-        C.JOURNAL_PAGE:     [                                 (M.HALLUCINATION, .0) ],                  # @todo we REALLY need to add the 'missing component' thing. Maybe. That would give reason for more variety in the weighting (not just .5 typos and 0 all else)
-        C.ELOCATOR:         [               (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],
-        C.PUBLICATION_DATE: [                                 (M.HALLUCINATION, .0) ],                  # @ consider, when would it be above .5? Never really, cause we know it's been modified. Above .5 would incentivize confidence in the wrong answer... Right?
-        C.PMCID:            [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],                  # How are we going to compare their scores against this? Will it just be closeness, or does the funny business around the .5 interfere with that?
-        C.PMID:             [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ],
-        C.DOI:              [ (M.TYPO, .5), (M.MISMATCH, .0), (M.HALLUCINATION, .0) ]         # @TODO Reconsile the split DOI prefix/suffix mutation inconsistency.
+        C.AUTHORS:          [ (M.TYPO, S.MINOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE), (M.SHUFFLE, S.AMBIGUOUS) ],     # @ this is kind of like the 'weight' stuff with scoring, but applied to how much (thing being wrong) tarnishes the "validity" of a reference.
+        C.TITLE:            [ (M.TYPO, S.MINOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE) ],
+        C.JOURNAL_NAME:     [ (M.TYPO, S.AMBIGUOUS), (M.MISMATCH, S.MAJOR_ERROR), (M.HALLUCINATION, S.FAKE) ],                         # Right now all typos are .5 confidence, aka ambiguous on the generated -> authentic scale (invalid -> valid?).
+        C.JOURNAL_VOLUME:   [ (M.HALLUCINATION, S.MAJOR_ERROR) ],                                                                       # We could have it change depending on element, perhaps author typos are less suspect, so a confidence of .75 instead?  @TODO fine tune
+        C.JOURNAL_ISSUE:    [ (M.HALLUCINATION, S.MAJOR_ERROR) ],
+        C.JOURNAL_PAGE:     [ (M.HALLUCINATION, S.AMBIGUOUS) ],                                                                         # @todo we REALLY need to add the 'missing component' thing. Maybe. That would give reason for more variety in the weighting (not just .5 typos and 0 all else)
+        C.ELOCATOR:         [ (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.MAJOR_ERROR) ],
+        C.PUBLICATION_DATE: [ (M.HALLUCINATION, S.MAJOR_ERROR) ],                                                                       # @ consider, when would it be above .5? Never really, cause we know it's been modified. Above .5 would incentivize confidence in the wrong answer... Right?
+        C.PMCID:            [ (M.TYPO, S.MAJOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE) ],                               # How are we going to compare their scores against this? Will it just be closeness, or does the funny business around the .5 interfere with that?
+        C.PMID:             [ (M.TYPO, S.MAJOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE) ],
+        C.DOI:              [ (M.TYPO, S.MAJOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE) ]                                # @TODO Reconsile the split DOI prefix/suffix mutation inconsistency.
         #"url_abstract":     ("typo", "mismatch", "hallucinate"),
         #"url_direct":       ("typo", "mismatch", "hallucinate"),
+        # @TODO Still need those missing mutations. Would add complexity to the classfying.
     }
 
     # Construct static maps to bits, confidences, and convenience labels.
@@ -126,11 +137,12 @@ class EntryMutator:
     @classmethod
     def _flag(cls, ds_entry, component, mutation):
         ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MUTFLAG[component][mutation]
-        #print(ds_entry["scores"]["component"][component])
-        if not ds_entry["scores"]["component"][component] or ds_entry["scores"]["component"][component][1] > cls._MUTCONF[component][mutation]:  # Also lower or create (for originally absent components) suggested confidence scores. 
-            #print(ds_entry["scores"]["component"][component])
+        # Lower or introduce score + severity class 
+        print(ds_entry["scores"]["component"][component])
+        if not ds_entry["scores"]["component"][component] or ds_entry["scores"]["component"][component][1] > cls._MUTCONF[component][mutation]:
+            print(ds_entry["scores"]["component"][component])
             ds_entry["scores"]["component"][component] = (False, cls._MUTCONF[component][mutation])
-            #print(ds_entry["scores"]["component"][component])
+            print(ds_entry["scores"]["component"][component])
 
     # Return deepcopy of random item from collection.
     @staticmethod
@@ -405,6 +417,20 @@ class EntryMutator:
 
 # @Consider: One thing with the score totalling, is journal_page/journal_volume vs elocator can change scores. When one substitutes the other in the ref, even though both are valid. Because page + vol are 2 values, the 'weight' of them combined is heavier than elocator, even though they're subsituting each other.
 
+
+
+# @CONSIDER: Sometimes the true/false and the confidence score wont line up. Should the True/False be more of a "was this modified thing" or stay the same as the conf. Probably stay the same. Idk just think about it. There's something there.
+# @CONSIDER !! What about adding hallucinated/mismatch components to references which never had one in the first place?
+#  The question is: Should we only mutate a component when it already exists (refdataCOMPONENTS = True), or should we always mutate?
+#  how address in scoring?
+#  should we keep list of modified components?
+#  we have comp score list at init already, with Trues and Nones when no component.
+#  so, we set that value during the check. scores modified in place during mutation
+#  then if we do or dont want mutating of absent components, we just disable it on the None check instead of creating new.
+
+            #""combined": [True, 1.0],        # @ These two are where some kind of weight would come in, but right now they don't matter at all.
+            #""byformat": {"ama": None},                                                                              # @TODO {form: None for form in FormatStyles}. Different holistic scores per format addresses the issue of absent components bias.
+            #""component": {comp: ([True, 1.0] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}   # @RECONSIDER: The holistic score totalling nonsense is convoluted and an overcomplication.
 
 
 if __name__ == "__main__":

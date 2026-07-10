@@ -2,6 +2,7 @@
 from tools.datasets.dataset import make_dataset, bake_dataset
 import tools.datasets.configurations as setconfig
 import json
+import tools.help as h
 
 # This is the thing.
 
@@ -25,14 +26,19 @@ if __name__ == "__main__":
     with open(f"{DIR}/h_journals.json", "r") as f: h_journal_src = json.load(f)
 #        h_journal_src = [{"full": "FAKEJOURN", "short": "FAKEJOURN"}]*200 #{ "full": name, "short": name for name in [line.strip() for line in f if line.strip()]} # Placeholder. Have the source be a JSON with {full, short}
 
+    
 
 
-    srcds = make_dataset(refdata_src*5)
-    ds = { "source":        srcds[:100],
-           "minor_mderror": srcds[100:200],
-           "major_mderror": srcds[200:300],
-           "plausible_fab": srcds[300:400],
-           "human_review":  srcds[400:] }
+    srcds = make_dataset(refdata_src*5) # Dictionary of incrementing IDs : entries
+    num_entries = range(len(srcds))
+
+    ds = { "source":        [srcds[i] for i in num_entries[:100]],        # Janky, VERY TEMPORARY. We need to redo all of this entirely.
+           "minor_mderror": [srcds[i] for i in num_entries[100:200]],
+           "major_mderror": [srcds[i] for i in num_entries[200:300]],
+           "plausible_fab": [srcds[i] for i in num_entries[300:400]],
+           "human_review":  [srcds[i] for i in num_entries[400:]] }
+
+    # @ TODO ! important: We need a policy for generating references. As in, how many of what kind of mutation, the combinations and what not. Should it all be random? We will need a solid amount of source refs. What we need are RATIOS. 
 
     setconfig.init(h_titles=h_title_src, h_authors=h_author_src, h_journals=h_journal_src, component_set=compset_src, rand_year_range=(2024, 2026))
     setconfig.l1_metadata_error(ds["minor_mderror"])
@@ -40,11 +46,13 @@ if __name__ == "__main__":
     setconfig.l3_plausible_fabricated(ds["plausible_fab"])
     setconfig.l4_needs_human_review(ds["human_review"])             # @ Todo better differentiation between and variety within subsets. If we do subsets like this. Alternative is some kind of randomized assignment of mutation, with policies to avoid mutation overriding and (maybe?) give a gradient to the results, so it's not all bogus.
 
-    for label in ds: bake_dataset(ds[label])
+    #for label in ds: bake_dataset(ds[label])
 
-    print(json.dumps(ds, indent=2))
-    with open("./THEREFERENCES_SIMPLECLASSES.json", "x") as f:
-        json.dump(ds, f, indent=2)
+    bake_dataset(srcds) # It's been modified in place.
+
+    print(json.dumps(srcds, indent=2))
+    with open("./REFERENCES_NOSUG.json", "x") as f:
+        json.dump(srcds, f, indent=2)
 
 
 # ignore ...

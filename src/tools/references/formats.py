@@ -1,5 +1,15 @@
 import json
 import random
+from enum import StrEnum
+
+class FormatStyle(StrEnum):
+    ELSEVIER  = "elsevier",
+    NATURE    = "nature",
+    OXFORD    = "oxford",
+    SPRINGER  = "springer",
+    CSE       = "cse",
+    HARVARD   = "harvard"
+
 
 # all the individual functions for each of the aforementioned bs citations are listed below.
 def compile_elsevier(ref: dict) -> str:
@@ -127,22 +137,18 @@ def compile_harvard(ref: dict) -> str:
     return f"{author_str} ({ref['pub']['y']}). '{ref['title']}', <i>{ref['journal']['name']['full']}</i>, {ref['journal']['volume']}{issue_str}, pp. {pages}. doi: {"/".join(ref['doi'].values())}."
 
 
+STYLE_COMPILE = {
+    FormatStyle.ELSEVIER: compile_elsevier,
+    FormatStyle.NATURE:   compile_nature,
+    FormatStyle.OXFORD:   compile_oxford,
+    FormatStyle.SPRINGER: compile_springer,
+    FormatStyle.CSE:      compile_cse,
+    FormatStyle.HARVARD:  compile_harvard
+}
 
 # Return dict with all formats baked.
 def compile_all(refdata):
-    FORMATS = {
-        "elsevier": compile_elsevier,
-        "nature":   compile_nature,
-        "oxford":   compile_oxford,
-        "springer": compile_springer,
-        "cse":      compile_cse,
-        "harvard":  compile_harvard
-    }
-    return {f: FORMATS[f](refdata) for f in FORMATS}
-
-
-
-
+    return {f: STYLE_COMPILE[f](refdata) for f in FormatStyle}
 
 # function to grab refdata.json, grab a random dictionary from it, and then output the different citations
 def run_random_citation_builder(input_filename: str, output_filename: str):
