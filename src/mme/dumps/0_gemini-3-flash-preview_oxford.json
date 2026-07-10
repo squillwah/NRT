@@ -1,0 +1,463 @@
+{
+  "request": {
+    "model": "google/gemini-3-flash-preview",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a citation classifier. Determine the authenticity of references and their individual components."
+      },
+      {
+        "role": "user",
+        "content": "Barnes C, Hall A, Mantach S, Oldmeadow C, Attia J, Backholer K, Williams C, Tefera Y, Kay F, Wolfenden L. Assessing early effects of Australia's Social Media Minimum Age Act on adolescents' social media use: observational study. BMJ. 2026;393:. doi:10.1136/bmj-2026-363695"
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "reference_evaluation",
+        "strict": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "authors": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the author list is real, false if the author list is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the author list being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "title": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the article title is real, false if the article title is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the article title being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "journal_name": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the journal is real, false if the journal is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the journal being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "journal_volume": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the journal volume is real, false if the journal volume is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the journal volume being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "journal_issue": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the journal issue is real, false if the journal issue is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the journal issue being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "journal_page": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the page number is real, false if the page number is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the page number being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "elocator": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the elocator is real, false if the elocator is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the elocator being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "publication_date": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the publishing date is real, false if the publishing date is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the publishing date being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "doi": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the doi is real, false if the doi is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the doi being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "pmid": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the pmid is real, false if the pmid is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the pmid being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "pmcid": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the pmcid is real, false if the pmcid is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the pmcid being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "REFERENCE": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the reference is real, false if the reference is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the reference being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "authors",
+            "title",
+            "journal_name",
+            "journal_volume",
+            "journal_issue",
+            "journal_page",
+            "elocator",
+            "publication_date",
+            "doi",
+            "pmid",
+            "pmcid",
+            "REFERENCE"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "plugins": [
+      {
+        "id": "response-healing"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1783640265-qeSmoMZOpNBx3WmPByzI",
+    "object": "chat.completion",
+    "created": 1783640265,
+    "model": "google/gemini-3-flash-preview-20251217",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "STOP",
+        "message": {
+          "role": "assistant",
+          "content": "{\"authors\":{\"reasoning\":\"While several of the listed researchers are real academics in public health and medicine, they have not collaboratively published this specific study.\",\"validity\":false,\"validity_confidence\":0.95},\"title\":{\"reasoning\":\"The title refers to a 'Social Media Minimum Age Act' and a 2026 study date; however, this legislation is still under proposal/debate in 2024 and no such study exists yet.\",\"validity\":false,\"validity_confidence\":1.0},\"journal_name\":{\"reasoning\":\"BMJ is a well-known, legitimate medical journal.\",\"validity\":true,\"validity_confidence\":1.0},\"journal_volume\":{\"reasoning\":\"The BMJ uses year-based volume numbering and has not reached volume 393, nor the year 2026.\",\"validity\":false,\"validity_confidence\":0.99},\"journal_issue\":{\"reasoning\":\"No issue number was provided in the citation.\",\"validity\":false,\"validity_confidence\":0.5},\"journal_page\":{\"reasoning\":\"The page field is empty, which is common for online-first publications but invalid here as the paper doesn't exist.\",\"validity\":false,\"validity_confidence\":0.9},\"elocator\":{\"reasoning\":\"No specific elocator was provided beyond the empty page field.\",\"validity\":false,\"validity_confidence\":0.5},\"publication_date\":{\"reasoning\":\"The publication year 2026 is in the future, making the citation anachronistic and currently non-existent.\",\"validity\":false,\"validity_confidence\":1.0},\"doi\":{\"reasoning\":\"The DOI 10.1136/bmj-2026-363695 does not resolve to any published manuscript and appears to be a predictive or hallucinated string.\",\"validity\":false,\"validity_confidence\":1.0},\"pmid\":{\"reasoning\":\"No PMID was provided for this non-existent article.\",\"validity\":false,\"validity_confidence\":0.5},\"pmcid\":{\"reasoning\":\"No PMCID was provided for this non-existent article.\",\"validity\":false,\"validity_confidence\":0.5},\"REFERENCE\":{\"reasoning\":\"This is a hallucinated reference regarding future legislation that has not yet been enacted or studied in the year 2026.\",\"validity\":false,\"validity_confidence\":1.0}}",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "signature": "AY89a1/EnfN4ChuhYCUoKqFYmKfGI1f86oMvKOSzxgAkreZyQv8TGqYG7zzKRKpKrmg=",
+              "format": "google-gemini-v1",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2452,
+      "completion_tokens": 530,
+      "total_tokens": 2982,
+      "cost": 0.002816,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.002816,
+        "upstream_inference_prompt_cost": 0.001226,
+        "upstream_inference_completions_cost": 0.00159
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "result": {
+    "authors": {
+      "reasoning": "While several of the listed researchers are real academics in public health and medicine, they have not collaboratively published this specific study.",
+      "validity": false,
+      "validity_confidence": 0.95
+    },
+    "title": {
+      "reasoning": "The title refers to a 'Social Media Minimum Age Act' and a 2026 study date; however, this legislation is still under proposal/debate in 2024 and no such study exists yet.",
+      "validity": false,
+      "validity_confidence": 1.0
+    },
+    "journal_name": {
+      "reasoning": "BMJ is a well-known, legitimate medical journal.",
+      "validity": true,
+      "validity_confidence": 1.0
+    },
+    "journal_volume": {
+      "reasoning": "The BMJ uses year-based volume numbering and has not reached volume 393, nor the year 2026.",
+      "validity": false,
+      "validity_confidence": 0.99
+    },
+    "journal_issue": {
+      "reasoning": "No issue number was provided in the citation.",
+      "validity": false,
+      "validity_confidence": 0.5
+    },
+    "journal_page": {
+      "reasoning": "The page field is empty, which is common for online-first publications but invalid here as the paper doesn't exist.",
+      "validity": false,
+      "validity_confidence": 0.9
+    },
+    "elocator": {
+      "reasoning": "No specific elocator was provided beyond the empty page field.",
+      "validity": false,
+      "validity_confidence": 0.5
+    },
+    "publication_date": {
+      "reasoning": "The publication year 2026 is in the future, making the citation anachronistic and currently non-existent.",
+      "validity": false,
+      "validity_confidence": 1.0
+    },
+    "doi": {
+      "reasoning": "The DOI 10.1136/bmj-2026-363695 does not resolve to any published manuscript and appears to be a predictive or hallucinated string.",
+      "validity": false,
+      "validity_confidence": 1.0
+    },
+    "pmid": {
+      "reasoning": "No PMID was provided for this non-existent article.",
+      "validity": false,
+      "validity_confidence": 0.5
+    },
+    "pmcid": {
+      "reasoning": "No PMCID was provided for this non-existent article.",
+      "validity": false,
+      "validity_confidence": 0.5
+    },
+    "REFERENCE": {
+      "reasoning": "This is a hallucinated reference regarding future legislation that has not yet been enacted or studied in the year 2026.",
+      "validity": false,
+      "validity_confidence": 1.0
+    }
+  }
+}
