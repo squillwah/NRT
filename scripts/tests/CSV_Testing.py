@@ -8,9 +8,14 @@ def write_csv(inputted_json):
         data = json.load(file)
 
     json_results = data["results"]
-    json_keynames = data["keynames"]
+    json_keynames = data["components"]
+    journal_id = str(data["id"])
 
-    journal_id = inputted_json.replace(".json", "")
+    json_keynames.insert(0, "model")
+    json_keynames.remove("REFERENCE")
+    json_keynames.remove("url_abstract")
+    json_keynames.remove("url_direct")
+    json_keynames.insert(1, "REFERENCE")
 
 
     with open(journal_id + ".csv", "w") as csv_f:
@@ -21,14 +26,23 @@ def write_csv(inputted_json):
         for model in json_results:
             model_results = json_results[model]
             for form in model_results:
-                component_data = model_results[form]
-                csv_f.write(model + ",")
+                if model_results[form] is not None:
+                    component_data = model_results[form]
+                    csv_f.write(model + ",")
+                else:
+                    continue
                 for component in component_data:
-                    csv_f.write(",".join([str(c) for c in list(component_data[component].values())[1:]]))
+                    csv_f.write(str(component_data[component]["validity"]))
                     csv_f.write(",")
                 csv_f.write("\n")
 
 
+def write_all_csv(inputted_json):
+    with open(inputted_json, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+
+        for paper in data:
+            write_csv(data[paper])
 
 def write_xlsx(inputted_data, pmid_list):
 
@@ -68,5 +82,5 @@ test_data = [
 pmids = ["65sd4f3654f", "4d441dsf44"]
 
 if __name__ == "__main__":
-    write_csv("id_403.json")
+    write_csv("1.json")
 
