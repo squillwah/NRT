@@ -41,6 +41,7 @@ def get_papers_filter(count, terms):
     request = kindly_get(ENDPOINT_ESEARCH, params={
         "db":"pmc", "sort":"pubdate", "format":"json",
         "term":f"open_access[Filter]{terms} NOT ({" OR ".join(EXCLUDE)})",
+        "mindate": "1800", "maxdate": "2021/12/31",
         "retmax":count})
     #return ["PMC"+ID for ID in request.json()["esearchresult"]["idlist"]]
     return request.json()["esearchresult"]["idlist"]
