@@ -99,5 +99,11 @@ if __name__ == "__main__":
         #log("
                     
 
+# @TODO a better layout
+
+# model, format, component_m (MODEL), component_T (TRUTH)   
+#                   true                  true
+#                   true                  null  < If component not present in (SPECIFIC REFERENCE FORMAT, not entire reference data)
+#                   false                 true
 
         
