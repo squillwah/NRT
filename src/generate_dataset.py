@@ -11,7 +11,7 @@ import tools.help as h
 
 if __name__ == "__main__":
     # Open source files 
-    DIR = "./reference_source"
+    DIR = "./data/reference_source"
     refdata_src = None
     compset_src = None
     h_title_src = None
@@ -50,9 +50,10 @@ if __name__ == "__main__":
 
     bake_dataset(srcds) # It's been modified in place.
 
-    print(json.dumps(srcds, indent=2))
-    with open("./REFERENCES_NOSUG.json", "x") as f:
-        json.dump(srcds, f, indent=2)
+    h.write_json(srcds, "./data/refsource.json")
+#    print(json.dumps(srcds, indent=2))
+#    with open("./data/refsource.json", "x") as f:
+#        json.dump(srcds, f, indent=2)
 
 
 # ignore ...

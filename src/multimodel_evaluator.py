@@ -58,7 +58,7 @@ def add_result(model, style, result, t, results):
 
 
 
-TARGET_DIR = "./mme"
+TARGET_DIR = "./data/model_responses"
 DATASET = "REFERENCES_NOSUG.json"
 MODELS = (
     "deepseek/deepseek-v4-flash",                   # A couple of the most popular models (and nemotron) with text capabilities + response_format parameter support.

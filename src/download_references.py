@@ -1,6 +1,7 @@
 
 from tools.references.api import get_papers_filter, get_ris, get_ref
 from tools.references.refdata import ristoref, component_set
+import tools.help as h
 import json
 
 # Takes dict of {journal : count}, returns list of refdata dicts.
@@ -17,8 +18,9 @@ def get_reference_data(journals, *, v=False, saveall=True):
 
     # Testing to verify some stuff about formats.
     if saveall:
-        _json_filer(raw_ris, f"{DIRECTORY}/extra/reference_ris.json")
-        _json_filer(get_ref(*pmcids), f"{DIRECTORY}/extra/reference_formatted.json")
+        extra = h.mkdir(DIRECTORY / "extra")
+        _json_filer(raw_ris, extra / "reference_ris.json")
+        _json_filer(get_ref(*pmcids), extra / "reference_formatted.json")
 
     if v: print(f"Formalizing {len(raw_ris)} RIS entries...")
     ref_data = [ristoref(ris) for ris in raw_ris]
@@ -42,13 +44,13 @@ if __name__ == "__main__":
                 "Nature": 25,
                 "Lancet": 25,
                 "NEJM": 25}
-    DIRECTORY = "./reference_source"
+    DIRECTORY = h.mkdir("./data/reference_source")
 
     ref_data = get_reference_data(JOURNALS, v=True)
     print("Writing reference data to file...")
-    _json_filer(ref_data, f"{DIRECTORY}/refdata.json")
+    _json_filer(ref_data, DIRECTORY / "refdata.json")
 
     print("Writing component set to file...")
-    _json_filer(component_set(*ref_data), f"{DIRECTORY}/compset.json")
+    _json_filer(component_set(*ref_data), DIRECTORY / "compset.json")
 
 
