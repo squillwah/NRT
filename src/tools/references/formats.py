@@ -10,7 +10,287 @@ class FormatStyle(StrEnum):
     CSE       = "cse",
     HARVARD   = "harvard"
 
+# Standards
+# AMA
+# Vancouver
+# NLM
+# APA
 
+# Journal Variations
+# Nature
+# Science
+# Elsevier
+# Springer
+
+class Formats:
+    _AUTHOR_PRESETS = {
+        "vancouver": {
+            "ea_threshold": 6,
+            "delim_authors": ", ",
+            "delim_initials": "",
+            "delim_lastfirst": " ",
+            "initialize": True,
+            "initialize_periods": False
+        }
+    }
+
+    @staticmethod
+    def authorize(authors, *, ea_threshold=None, delim_authors, delim_initials, delim_lastfirst, initialize, initialize_periods):       # Some lasts will already be initialized, but may lack periods.
+        names = [(a["l"], a["f"]) for a in authors]
+        ea = ea_threshold is not None and len(names) > ea_threshold
+        if ea: names = names[:ea_threshold]
+        for i, (last, firsts) in enumerate(names):
+            if initialize and firsts:    # Not all have first names to be initialized.
+                firsts = [i[0].upper()+("." if initialize_periods else "") for i in firsts.split()] # Will we ever get empty from split?
+                firsts = delim_initials.join(firsts)
+            names[i] = delim_lastfirst.join((last, firsts)) if firsts else last     # Condition avoids trailing ' ' when no first names.
+        if ea: names.append("et al")
+        names = delim_authors.join(names)
+        print(names)
+        #print(locals())
+        #formatted = ([None] * ea_threshold + ["et al"]) if ea_threshold is not None and len(names) > ea_threshold else ([None] * len(names))
+        #print(formatted)
+
+ass = [
+      {
+        "l": "Akbari",
+        "f": "R"
+      },
+      {
+        "l": "de Araujo Azevedo",
+        "f": "L O"
+      },
+      {
+        "l": "Baker",
+        "f": "C J"
+      },
+      {
+        "l": "Bertsche",
+        "f": "W"
+      },
+      {
+        "l": "Bhatt",
+        "f": "N M"
+      },
+      {
+        "l": "Bonomi",
+        "f": "G"
+      },
+      {
+        "l": "Capra",
+        "f": "A"
+      },
+      {
+        "l": "Carli",
+        "f": "I"
+      },
+      {
+        "l": "L Cesar",
+        "f": "C"
+      },
+      {
+        "l": "Charlton",
+        "f": "M"
+      },
+      {
+        "l": "Cridland Mathad",
+        "f": "A"
+      },
+      {
+        "l": "Del Vincio",
+        "f": "A"
+      },
+      {
+        "l": "Duque Quiceno",
+        "f": "D"
+      },
+      {
+        "l": "Eriksson",
+        "f": "S"
+      },
+      {
+        "l": "Evans",
+        "f": "A"
+      },
+      {
+        "l": "Fajans",
+        "f": "J"
+      },
+      {
+        "l": "Friesen",
+        "f": "T"
+      },
+      {
+        "l": "Fujiwara",
+        "f": "M C"
+      },
+      {
+        "l": "Golino",
+        "f": "L M"
+      },
+      {
+        "l": "Gomes Gon\u00e7alves",
+        "f": "M B"
+      },
+      {
+        "l": "Hangst",
+        "f": "J S"
+      },
+      {
+        "l": "Hayden",
+        "f": "M E"
+      },
+      {
+        "l": "Heidari",
+        "f": "P"
+      },
+      {
+        "l": "Hodgkinson",
+        "f": "D"
+      },
+      {
+        "l": "Isaac",
+        "f": "C A"
+      },
+      {
+        "l": "Jones",
+        "f": "S A"
+      },
+      {
+        "l": "Jonsell",
+        "f": "S"
+      },
+      {
+        "l": "Madsen",
+        "f": "N"
+      },
+      {
+        "l": "Marshall",
+        "f": "V R"
+      },
+      {
+        "l": "McKenna",
+        "f": "J T K"
+      },
+      {
+        "l": "Momose",
+        "f": "T"
+      },
+      {
+        "l": "Nauta",
+        "f": "J"
+      },
+      {
+        "l": "Oliveira",
+        "f": "A N"
+      },
+      {
+        "l": "Powell",
+        "f": "A"
+      },
+      {
+        "l": "Rasmussen",
+        "f": "C \u00d8"
+      },
+      {
+        "l": "Robertson-Brown",
+        "f": "T"
+      },
+      {
+        "l": "Robicheaux",
+        "f": "F"
+      },
+      {
+        "l": "Sacramento",
+        "f": "R L"
+      },
+      {
+        "l": "Sarid",
+        "f": "E"
+      },
+      {
+        "l": "Schoonwater",
+        "f": "J"
+      },
+      {
+        "l": "Silveira",
+        "f": "D M"
+      },
+      {
+        "l": "Singh",
+        "f": "J"
+      },
+      {
+        "l": "Smith",
+        "f": "G"
+      },
+      {
+        "l": "So",
+        "f": "C"
+      },
+      {
+        "l": "Stracka",
+        "f": "S"
+      },
+      {
+        "l": "Suh",
+        "f": "J"
+      },
+      {
+        "l": "Swadling",
+        "f": "A G"
+      },
+      {
+        "l": "Tharp",
+        "f": "T D"
+      },
+      {
+        "l": "Thompson",
+        "f": "K A"
+      },
+      {
+        "l": "Thompson",
+        "f": "R I"
+      },
+      {
+        "l": "Thorpe-Woods",
+        "f": "E"
+      },
+      {
+        "l": "Uribe Jimenez",
+        "f": "A J"
+      },
+      {
+        "l": "Urioni",
+        "f": "M"
+      },
+      {
+        "l": "van de Werf",
+        "f": "D P"
+      },
+      {
+        "l": "Wilson",
+        "f": "S G"
+      },
+      {
+        "l": "ALPHA Collaboration",
+        "f": ""
+      },
+      {
+        "l": "Woosaree",
+        "f": "P"
+      },
+      {
+        "l": "Wurtele",
+        "f": "J S"
+      }
+    ]
+
+
+
+Formats.authorize(ass, **Formats._AUTHOR_PRESETS["vancouver"])
+
+"""
 # all the individual functions for each of the aforementioned bs citations are listed below.
 def compile_elsevier(ref: dict) -> str:
     formatted_authors = []
@@ -184,3 +464,4 @@ def run_random_citation_builder(input_filename: str, output_filename: str):
 
 if __name__ == "__main__":
     run_random_citation_builder("refdata.json", "mutationcombinedoutput.json")
+"""
