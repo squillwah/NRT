@@ -1,5 +1,6 @@
 
-from tools.help import log 
+
+from tools.help import log
 from tools.llms.schemas import ProtoSchemas
 from tools.llms.orouterapi import openrouter, parse_response, trytryagain
 from tools.references.refdata import ReferenceComponent
@@ -8,6 +9,8 @@ from shutil import copy2
 import tools.help as h
 import json
 import random
+import concurrent.futures
+import threading
 
 # Set up output files
 save_dataset = None
@@ -56,6 +59,12 @@ def add_result(model, style, result, t, results):
     if style not in results["formats"]: results["formats"][style] = [model] 
     elif model not in results["formats"][style]: results["formats"][style].append(model)
 
+def safe_log(msg, t=None):
+    with log_lock:
+        log(msg, t=t)  # Replace with your actual logging function
+
+def _evaluate_task(entry, model, style):
+    return evaluate(entry, model, form=style)
 
 
 TARGET_DIR = "./mme"
@@ -81,33 +90,59 @@ if __name__ == "__main__":
     save_dataset(DATASET)
     dataset = h.read_json(DATASET)
 
+    log_lock = threading.Lock()
+
     # Trim to 5 for testing
     dataset = {ID: entry for ID, entry in list(dataset.items())[:5]}
 
     log(f"Beginning evaluation of {len(dataset)} references, with {len(MODELS)} models per reference")
     
     results_all = {ID: None for ID in dataset}
-    for ID, entry in dataset.items():
-        log(f"Generating result template for {entry["id"]}")
-        results = results_template(entry, MODELS)
-        
-        log(f"Iterating models...")
-        for model in MODELS:
-            style = random.choice(list(FormatStyle))        # @TODO Pick formats intelligently? Is random a good metric, or should we weight by 'popularity' (whatever that may be).
-            
-            log(f"{ID} {model} {style}", t="h")
-            result, t = evaluate(entry, model, form=style)
-            
-            if result: add_result(model, style, result, t, results)
-            else: log("BADBAD! Result is null and was not added, something terrible must have happened.", t="e")
-        
-        log(f"Saving full multimodel evaluation of ENTRY {ID} to '{ID}.json' and appending to 'all.json'")
-        save_results(results, f"{ID}")
-        results_all[ID] = results
 
-    log(f"Saving all results to 'all.json'")
-    save_results(results_all, "all")
-    
+    max_workers = min(len(MODELS) * len(dataset), 15)
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+        for ID, entry in dataset.items():
+            log(f"Generating result template for {entry['id']}")
+            results = results_template(entry, MODELS)
+
+            # Queue all model evaluations for this entry
+            future_to_model = {}
+            for model in MODELS:
+                style = random.choice(list(FormatStyle))
+
+                with log_lock:
+                    log(f"{ID} {model} {style}", t="h")
+
+                future = executor.submit(_evaluate_task, entry, model, style)
+                future_to_model[future] = (model, style)
+
+            for future in concurrent.futures.as_completed(future_to_model):
+                model, style = future_to_model[future]
+                try:
+                    result, t = future.result()
+
+                    with log_lock:
+                        log(f"{ID} {model} {style}", t="h")
+
+                    if result:
+                        add_result(model, style, result, t, results)
+                    else:
+                        with log_lock:
+                            log("BADBAD! Result is null and was not added, something terrible must have happened.", t="e")
+                except Exception as e:
+                    with log_lock:
+                        log(f"Failed evaluation for {model}: {e}", t="e")
+
+            with log_lock:
+                log(f"Saving full multimodel evaluation of ENTRY {ID} to '{ID}.json' and appending to 'all.json'")
+            save_results(results, f"{ID}")
+            results_all[ID] = results
+
+        with log_lock:
+            log(f"Saving all results to 'all.json'")
+        save_results(results_all, "all")
+
     close_files()
 
 
