@@ -4,7 +4,8 @@ from copy import deepcopy
 from enum import StrEnum, Enum
 from tools.references.typos import Typofier
 from tools.references.refdata import ReferenceComponent
-import tools.references.formats as Formats
+#import tools.references.formats as Formats
+from tools.references.formats import FormatStyle, Formats
 import random
 
 class MutationType(StrEnum):
@@ -37,7 +38,7 @@ def dsentry(rd, ID=None):    #, *, ID=None):
         "format": {},           # All format styles generated at baking step. 
         "scores": {
             "holistic_complete": [True, S.REAL],                                    # Default holistic score to True
-            "holistic_formatted": {style: None for style in Formats.FormatStyle},   # Initialize style scores but leave NULL for bake.
+            "holistic_formatted": {style: None for style in FormatStyle},   # Initialize style scores but leave NULL for bake.
             "component": {comp: ([True, S.REAL] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}    # Default component scores to True, but set nonexistent components to NULL
         }
     }
@@ -54,7 +55,8 @@ def make_dataset(refdata_list, *, v=False):
     return dataset
 
 def bake_dsentry(entry):
-    entry["format"] = Formats.compile_all(entry["data"])
+    entry["format"] = Formats.build_all(entry["data"])
+#    for form in entry["format"]    @TODO AND with refdata COMPONENTS (once that's synced with mutations)
     entry["mutlabels"] = EntryMutator.explain_mutcode(entry["mutcode"])
     # Averaging holistic score
     c_scores = {component: entry["scores"]["component"][component] for component in ReferenceComponent if entry["scores"]["component"][component]} # Components with existing scores in the dsentry.
@@ -137,6 +139,9 @@ class EntryMutator:
     @classmethod
     def _flag(cls, ds_entry, component, mutation):
         ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MUTFLAG[component][mutation]
+        # Flag the component as EXISTING or NOT EXISTING depending on mutation type:
+        if mutation in (M.HALLUCINATION, M.MISMATCH): ds_entry["data"]["COMPONENTS"][component] = True      # @TODO Bring in gabe's omission stuff, then do the ANDing with reference specific component data in the bake.
+        elif mutation in (M.OMISSION): ds_entry["data"]["COMPONENTS"][component] = False
         # Lower or introduce score + severity class 
         print(ds_entry["scores"]["component"][component])
         if not ds_entry["scores"]["component"][component] or ds_entry["scores"]["component"][component][1] > cls._MUTCONF[component][mutation]:

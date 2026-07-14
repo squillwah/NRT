@@ -1,7 +1,7 @@
 import json
 import random
 from enum import StrEnum
-from refdata import ReferenceComponent
+from tools.references.refdata import ReferenceComponent
     
 # PMC Citing Medicine Guide
 # https://www.ncbi.nlm.nih.gov/books/NBK7256/
@@ -359,10 +359,11 @@ class Formats:
 
     # For omissions, just mark them in the dataset. Make sure to set it false in REFERENCES metacomponent.
 
+    # Return dict of formatted reference and bools for the components contained.
     @classmethod
     def build(cls, refdata, style):
         elements = {element: ElementBuilder.build(element)(refdata, cls._STYLE_CONFIG[style][element]) for element in CitationElement}    # @TODO factor the omissions into this.
-        return cls._LAYOUT[style](**elements)
+        return {"reference": cls._LAYOUT[style](**elements), "components": cls._FORMAT_COMPONENTS[style].copy()}    # ! @TODO To be ANDed with calling refdata database component info, for true accuracy.
 
     @classmethod
     def build_all(cls, refdata):
