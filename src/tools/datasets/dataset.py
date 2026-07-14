@@ -39,7 +39,7 @@ def dsentry(rd, ID=None):    #, *, ID=None):
         "scores": {
             "holistic_complete": [True, S.REAL],                                    # Default holistic score to True
             "holistic_formatted": {style: None for style in FormatStyle},   # Initialize style scores but leave NULL for bake.
-            "component": {comp: ([True, S.REAL] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}    # Default component scores to True, but set nonexistent components to NULL
+            "component": {comp: ([True, S.REAL] if rd["_meta"]["has_component"][comp] else None) for comp in ReferenceComponent}    # Default component scores to True, but set nonexistent components to NULL
         }
     }
 
@@ -140,8 +140,8 @@ class EntryMutator:
     def _flag(cls, ds_entry, component, mutation):
         ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MUTFLAG[component][mutation]
         # Flag the component as EXISTING or NOT EXISTING depending on mutation type:
-        if mutation in (M.HALLUCINATION, M.MISMATCH): ds_entry["data"]["COMPONENTS"][component] = True      # @TODO Bring in gabe's omission stuff, then do the ANDing with reference specific component data in the bake.
-        elif mutation in (M.OMISSION): ds_entry["data"]["COMPONENTS"][component] = False
+        if mutation in (M.HALLUCINATION, M.MISMATCH): ds_entry["data"]["_meta"]["has_component"][component] = True      # @TODO Bring in gabe's omission stuff, then do the ANDing with reference specific component data in the bake.
+        elif mutation in (M.OMISSION): ds_entry["data"]["_meta"]["has_component"][component] = False
         # Lower or introduce score + severity class 
         print(ds_entry["scores"]["component"][component])
         if not ds_entry["scores"]["component"][component] or ds_entry["scores"]["component"][component][1] > cls._MUTCONF[component][mutation]:
@@ -435,7 +435,7 @@ class EntryMutator:
 
             #""combined": [True, 1.0],        # @ These two are where some kind of weight would come in, but right now they don't matter at all.
             #""byformat": {"ama": None},                                                                              # @TODO {form: None for form in FormatStyles}. Different holistic scores per format addresses the issue of absent components bias.
-            #""component": {comp: ([True, 1.0] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}   # @RECONSIDER: The holistic score totalling nonsense is convoluted and an overcomplication.
+            #""component": {comp: ([True, 1.0] if rd["_meta"]["has_component"][comp] else None) for comp in ReferenceComponent}   # @RECONSIDER: The holistic score totalling nonsense is convoluted and an overcomplication.
 
 
 if __name__ == "__main__":
