@@ -2,19 +2,35 @@ import json
 import random
 from enum import StrEnum
 from refdata import ReferenceComponent
+    
+# PMC Citing Medicine Guide
+# https://www.ncbi.nlm.nih.gov/books/NBK7256/
+
+# Vancouver / NLM
+# PubMed
+# AMA                                # Standards
+# ICMJE                              # AMA
+# Nature                             # Vancouver
+# Cell Press                         # NLM
+# Science (AAAS)                     # APA
+# PNAS                               
+# Elsevier Vancouver                 # Journal Variations
+# Springer Nature                    # Nature
+# Wiley                              # Science
+# eLife                              # Elsevier
+# Oxford University Press            # Springer
+# ACS (biochemistry journals)
+# IEEE
 
 class FormatStyle(StrEnum):
-    VANCOUVER = "vancouver"
     APA = "apa"
-
-
-
-    ELSEVIER  = "elsevier",
-    NATURE    = "nature",
-    OXFORD    = "oxford",
-    SPRINGER  = "springer",
-    CSE       = "cse",
-    HARVARD   = "harvard",
+    HARVARD = "harvard"
+    VANCOUVER = "vancouver"
+    #ELSEVIER  = "elsevier",
+    #NATURE    = "nature",
+    #OXFORD    = "oxford",
+    #SPRINGER  = "springer",
+    #CSE       = "cse",
 
 class CitationElement(StrEnum):
     AUTHORS          = "authors"
@@ -23,44 +39,14 @@ class CitationElement(StrEnum):
     PUBLICATION_DATE = "publication_date"
     JOURNAL_META     = "journal_meta"   # Comprises volume, issue, pages/elocator
     IDENTIFIERS      = "identifiers"    # DOI or other database IDs
-    
 
-# Standards
-# AMA
-# Vancouver
-# NLM
-# APA
-
-# Journal Variations
-# Nature
-# Science
-# Elsevier
-# Springer
-
-#Vancouver / NLM
-#PubMed
-#AMA
-#ICMJE
-#Nature
-#Cell Press
-#Science (AAAS)
-#PNAS
-#Elsevier Vancouver
-#Springer Nature
-#Wiley
-#eLife
-#Oxford University Press
-#ACS (biochemistry journals)
-# IEEE
-
-# PMC Citing Medicine Guide
-# https://www.ncbi.nlm.nih.gov/books/NBK7256/
-
-CE = CitationElement
+check_none = lambda e, end: f"{e}{end}" if e else "" # To not include anything if component is ommitted.
 
 # Functions which build each element of a citation. Configurable.
 class ElementBuilder: 
-    def authors(authors, *, etal, etal_apa=False, etal_threshold, delim_authors, delim_initials, delim_lastfirst, initialize, initialize_periods, penultimate_and):       # Some lasts will already be initialized, but may lack periods.
+    def authors(authors, *, etal, etal_apa=False, etal_harvard=False, etal_threshold, delim_authors, delim_initials, delim_lastfirst, initialize, initialize_periods, penultimate_and):       # Some lasts will already be initialized, but may lack periods.
+        if authors is None or len(authors) == 0: return None     # Checks for omission mutations
+
         names = [(a["l"], a["f"]) for a in authors]
         ea = etal_threshold is not None and len(names) > etal_threshold
         if ea: names = names[:etal_threshold] + ([names[-1]] if etal_apa else []) # APA etal mode appends the absolute final author.
@@ -71,30 +57,46 @@ class ElementBuilder:
                 firsts = delim_initials.join(firsts)
             names[i] = delim_lastfirst.join((last, firsts)) if firsts else last     # Condition avoids trailing ' ' when no first names.
         # Etalify 
-        if penultimate_and and not ea:
-            names = delim_authors.join(names[:-1]) + penultimate_and + names[-1]
-        elif ea:
-            if etal_apa: names = delim_authors.join(names[:-1]) + etal + names[-1]  # Smith, J., ... Jane, M.
-            else: names = delim_authors.join(names) + etal
-        else:
-            names = delim_authors.join(names)
+        if len(names) > 1:
+            if penultimate_and and not ea:
+                names = delim_authors.join(names[:-1]) + penultimate_and + names[-1]
+            elif ea:
+                if etal_apa: names = delim_authors.join(names[:-1]) + etal + names[-1]  # Smith, J., ... Jane, M.
+                elif etal_harvard: names = names[0] + etal  # <first only> et al
+                else: names = delim_authors.join(names) + etal
+            else:
+                names = delim_authors.join(names)
+        else: names = names[0]
         return names
 
+    def title(title, quotes):
+        if title is None or not title: return None
+
+        return f"'{title}'" if quotes else title
+
     def journal_name(names, abbreviate):
+        if names is None: return None
+        
         return names["short"] if abbreviate else names["full"]
 
     def journal_meta(vol, iss, page, elocator, styler):
+        if all(m is None for m in (vol, iss, page, elocator)): return None
+
         return styler(vol=vol, iss=iss, page=page, elocator=elocator)  # "stylers" are fstring template functions
 
     def publication_date(pub, epub, styler):   
+        if all(d is None for d in (pub, epub)): return None
+
         return styler(pub=pub, epub=epub)
 
     def identifiers(doi, pmid, pmcid, styler): 
+        if all(i is None for i in (doi, pmid, pmcid)): return None
+
         return styler(doi=doi, pmid=pmid, pmcid=pmcid)
    
     # Wrappers around builder methods for unified interface associated with element type constants.
     _COMPONENT_MAP = {
-        CitationElement.TITLE:            lambda ref, conf: ref["title"],  #_title(refdata["title"], **settings),
+        CitationElement.TITLE:            lambda ref, conf: ElementBuilder.title(ref["title"], **conf),
         CitationElement.AUTHORS:          lambda ref, conf: ElementBuilder.authors(ref["authors"], **conf),
         CitationElement.JOURNAL_NAME:     lambda ref, conf: ElementBuilder.journal_name(ref["journal"]["name"], **conf),
         CitationElement.JOURNAL_META:     lambda ref, conf: ElementBuilder.journal_meta(vol=ref["journal"]["volume"], iss=ref["journal"]["issue"], page=ref["journal"]["page"], elocator=ref["journal"]["elocator"], **conf),
@@ -135,6 +137,7 @@ class Formats:
             return styled
         
         # Vancouver Stylers
+        # vol(iss):<page/elocator>
         def vancouver_journal_meta(**metadata):
             vol, iss, page, elocator = [metadata[part] for part in ("vol", "iss", "page", "elocator")]
             styled = ""
@@ -146,17 +149,20 @@ class Formats:
                 styled += f":{page["start"] if page["start"] else page["end"]}"
             if elocator:
                 styled += f":{elocator}"
-            return styled
+            return styled if styled else None   # ! Return None when styled elements are empty. This signals not to include anything (avoiding double periods and strangeness)
+        # year month day
         @classmethod
         def vancouver_publication_date(cls, **pubdates):
             pub, epub = [pubdates[p] for p in ("pub", "epub")]
             date = pub if pub["y"] else epub
-            return cls._monthify_date(date)
+            date = cls._monthify_date(date)
+            return date if date else None
         def vancouver_identifiers(**idents):
             doi = idents["doi"]
-            return f"Available from: doi:{doi["prefix"]}/{doi["suffix"]}"   # Maybe vancouver just shouldn't do DOI? Or it should do URLs instead? Variation needed...
+            return f"Available from: doi:{doi["prefix"]}/{doi["suffix"]}" if doi else None# Maybe vancouver just shouldn't do DOI? Or it should do URLs instead? Variation needed...
        
         # APA Stylers
+        # vol(iss), <page/elocator>
         def apa_journal_meta(**metadata):
             vol, iss, page, elocator = [metadata[part] for part in ("vol", "iss", "page", "elocator")]
             styled = ""
@@ -168,22 +174,76 @@ class Formats:
                 styled += f", {page["start"] if page["start"] else page["end"]}"
             if elocator:
                 styled += f", {elocator}"
-            return styled
+            return styled if styled else None
+        # (year)
         def apa_publication_date(**pubdates):
             pub, epub = [pubdates[p] for p in ("pub", "epub")]
             return f"({pub["y"]})" if pub["y"] else f"({epub["y"]})" if epub["y"] else None
         def apa_identifiers(**idents):
             doi = idents["doi"] # We've never encountered a reference without a DOI in the RIS. How would this break if it's absent?
-            return f"https://doi.org/{doi["prefix"]}/{doi["suffix"]}"
+            return f"https://doi.org/{doi["prefix"]}/{doi["suffix"]}" if doi is not None else None
+
+        # Harvard Stylers
+        # vol(iss), pp. <page-page>
+        def harvard_journal_meta(**metadata):
+            vol, iss, page, elocator = [metadata[part] for part in ("vol", "iss", "page", "elocator")]
+            styled = ""
+            styled += str(vol) if vol else ""
+            styled += f"({iss})" if iss else ""
+            if page["start"] and page["end"]:
+                styled += f", pp. {page["start"]}-{page["end"]}"
+            elif page["start"] or page["end"]:
+                styled += f", pp. {page["start"] if page["start"] else page["end"]}"
+            if elocator:
+                styled += f", article {elocator}"
+            return styled if styled else None
+        @classmethod
+        def harvard_publication_date(cls, **pubdates):
+            pub, epub = [pubdates[p] for p in ("pub", "epub")]
+            date = pub if pub["y"] else epub
+            date = cls._monthify_date(date)
+            return f"({date})" if date else None
+        def harvard_identifiers(**idents):
+            doi = idents["doi"] # We've never encountered a reference without a DOI in the RIS. How would this break if it's absent?
+            return f"Available at: doi:{doi["prefix"]}/{doi["suffix"]}" if doi else None
 
     # Ordering/combining of rendered citation elements      # This is probabaly where the omission checking would come in?
     def _layout_vancouver(authors, title, journal_name, publication_date, journal_meta, identifiers):   # ! Argument names should match CitationElement strings (so unwrapped CitationElement: "element" dicts can be used)
-        return f"{authors}. {title}. {journal_name}. {publication_date};{journal_meta}. {identifiers}"
+        # authors. title. jname. pubdate;jmeta. identifiers
+        au = check_none(authors, ". ") 
+        ti = check_none(title, ". ")
+        jn = check_none(journal_name, ". ")             # return f"{H(authors, ". ")}{H(title, ". ")}{H(journal_name, ". ")}{H(publication_date, ";")}{H(journal_meta, ". ")}{H(identifiers, "")}"
+        pd = check_none(publication_date, ";")
+        jm = check_none(journal_meta, ". ")
+        ids = check_none(identifiers, "")
+        return au+ti+jn+pd+jm+ids
+    
     def _layout_apa(authors, title, journal_name, publication_date, journal_meta, identifiers):
-        return f"{authors} {publication_date}. {title}. {journal_name}, {journal_meta}. {identifiers}"
+        # authors pubdate. title. jname, jmeta. identifiers
+        au = check_none(authors, " ") 
+        ti = check_none(title, ". ")
+        jn = check_none(journal_name, ", ")
+        pd = check_none(publication_date, ". ")
+        jm = check_none(journal_meta, ". ")
+        ids = check_none(identifiers, "")
+        return au+pd+ti+jn+jm+ids
+    
+    def _layout_harvard(authors, title, journal_name, publication_date, journal_meta, identifiers):
+        # authors. pubdate title, jname, jmeta. identifiers.
+        
+        au = check_none(authors, ". ") 
+        ti = check_none(title, ". ")
+        jn = check_none(journal_name, ", ")
+        pd = check_none(publication_date, " ")
+        jm = check_none(journal_meta, ". ")
+        ids = check_none(identifiers, ".")
+        return au+pd+ti+jn+jm+ids
+    #return f"{authors} {publication_date}. {title}. {journal_name}, {journal_meta}. {identifiers}"
+    
     _LAYOUT = {
         FormatStyle.VANCOUVER: _layout_vancouver,
-        FormatStyle.APA: _layout_apa 
+        FormatStyle.APA: _layout_apa,
+        FormatStyle.HARVARD: _layout_harvard
     }
 
     # Styling configuration of citation elements
@@ -200,7 +260,7 @@ class Formats:
                 "initialize_periods": False,
                 "penultimate_and": "",          # Include comma at start for oxford comma. ", and " or " & " or ", & "  etc.
             },
-            CitationElement.TITLE:            { None },  # All supported styles use the default: sentence case.
+            CitationElement.TITLE:            { "quotes": False },
             CitationElement.JOURNAL_NAME:     { "abbreviate": True },
             CitationElement.JOURNAL_META:     { "styler": ElementStylers.vancouver_journal_meta },
             CitationElement.PUBLICATION_DATE: { "styler": ElementStylers.vancouver_publication_date },
@@ -219,199 +279,106 @@ class Formats:
                 "penultimate_and": " & ",       # Include comma at start for oxford comma. ", and " or " & " or ", & "  etc.
 
             },
-            CitationElement.TITLE:            { None },
+            CitationElement.TITLE:            { "quotes": False },
             CitationElement.JOURNAL_NAME:     { "abbreviate": False },
             CitationElement.JOURNAL_META:     { "styler": ElementStylers.apa_journal_meta },
             CitationElement.PUBLICATION_DATE: { "styler": ElementStylers.apa_publication_date },
             CitationElement.IDENTIFIERS:      { "styler": ElementStylers.apa_identifiers }
+        },
+        FormatStyle.HARVARD: {
+            CitationElement.AUTHORS: {
+                "etal": " et al",
+                "etal_harvard": True,           # Cuts the et al down to the first author only.
+                "etal_threshold": 3,
+                "delim_authors": ", ",
+                "delim_initials": "",
+                "delim_lastfirst": ", ",
+                "initialize": True,
+                "initialize_periods": True,
+                "penultimate_and": " and ",       # Include comma at start for oxford comma. ", and " or " & " or ", & "  etc.
+
+            },
+            CitationElement.TITLE:            { "quotes": True },
+            CitationElement.JOURNAL_NAME:     { "abbreviate": False },
+            CitationElement.JOURNAL_META:     { "styler": ElementStylers.harvard_journal_meta },
+            CitationElement.PUBLICATION_DATE: { "styler": ElementStylers.harvard_publication_date },
+            CitationElement.IDENTIFIERS:      { "styler": ElementStylers.harvard_identifiers }
         }
     }
-   
+
+    # Defining which components are present by default inside a given format.
+    # Has no effect on the rendering of the format. 
+    # Is ANDed database COMPONENTS array, for accurate absent component marking.
+    _FORMAT_COMPONENTS = {
+        FormatStyle.VANCOUVER: {
+            ReferenceComponent.AUTHORS          : True,
+            ReferenceComponent.TITLE            : True,
+            ReferenceComponent.JOURNAL_NAME     : True,
+            ReferenceComponent.JOURNAL_VOLUME   : True,
+            ReferenceComponent.JOURNAL_ISSUE    : True,
+            ReferenceComponent.JOURNAL_PAGE     : True,
+            ReferenceComponent.ELOCATOR         : True,
+            ReferenceComponent.PUBLICATION_DATE : True,
+            ReferenceComponent.DOI              : True,
+            ReferenceComponent.URL_ABSTRACT     : False,
+            ReferenceComponent.URL_DIRECT       : False,
+            ReferenceComponent.PMCID            : False,
+            ReferenceComponent.PMID             : False
+        },
+        FormatStyle.APA: {
+            ReferenceComponent.AUTHORS          : True,
+            ReferenceComponent.TITLE            : True,
+            ReferenceComponent.JOURNAL_NAME     : True,
+            ReferenceComponent.JOURNAL_VOLUME   : True,
+            ReferenceComponent.JOURNAL_ISSUE    : True,
+            ReferenceComponent.JOURNAL_PAGE     : True,
+            ReferenceComponent.ELOCATOR         : True,
+            ReferenceComponent.PUBLICATION_DATE : True,
+            ReferenceComponent.DOI              : True,
+            ReferenceComponent.URL_ABSTRACT     : False,
+            ReferenceComponent.URL_DIRECT       : False,
+            ReferenceComponent.PMCID            : False,
+            ReferenceComponent.PMID             : False
+        },
+        FormatStyle.HARVARD: {
+            ReferenceComponent.AUTHORS          : True,
+            ReferenceComponent.TITLE            : True,
+            ReferenceComponent.JOURNAL_NAME     : True,
+            ReferenceComponent.JOURNAL_VOLUME   : True,
+            ReferenceComponent.JOURNAL_ISSUE    : True,
+            ReferenceComponent.JOURNAL_PAGE     : True,
+            ReferenceComponent.ELOCATOR         : True,
+            ReferenceComponent.PUBLICATION_DATE : True,
+            ReferenceComponent.DOI              : True,
+            ReferenceComponent.URL_ABSTRACT     : False,
+            ReferenceComponent.URL_DIRECT       : False,
+            ReferenceComponent.PMCID            : False,
+            ReferenceComponent.PMID             : False
+        }
+    }
+
+    # For omissions, just mark them in the dataset. Make sure to set it false in REFERENCES metacomponent.
+
     @classmethod
     def build(cls, refdata, style):
         elements = {element: ElementBuilder.build(element)(refdata, cls._STYLE_CONFIG[style][element]) for element in CitationElement}    # @TODO factor the omissions into this.
-        print(cls._LAYOUT[style](**elements))
+        return cls._LAYOUT[style](**elements)
+
+    @classmethod
+    def build_all(cls, refdata):
+        return {style: cls.build(refdata, style) for style in FormatStyle}
 
 if __name__ == "__main__":
     import h
     refs = h.read_json("refset.json", intkeys=True)
 #    Formats.build(refs[88]["data"], FormatStyle.VANCOUVER)
-    Formats.build(refs[88]["data"], FormatStyle.VANCOUVER)
-    Formats.build(refs[88]["data"], FormatStyle.APA)
+    #print(Formats.build(refs[88]["data"], FormatStyle.APA))
+    #print(Formats.build(refs[88]["data"], FormatStyle.HARVARD))
+    #print(Formats.build(refs[88]["data"], FormatStyle.VANCOUVER))
+    print()
+    print(Formats.build_all(refs[88]["data"]))
+    for r in refs:
+        print(Formats.build_all(refs[r]["data"]))
+
     #Formats._authorize(ass, **Formats._STYLE_CONFIGS[FormatStyle.VANCOUVER]["authors"])
 
-"""
-# all the individual functions for each of the aforementioned bs citations are listed below.
-def compile_elsevier(ref: dict) -> str:
-    formatted_authors = []
-    for auth in ref["authors"]:
-        last = auth.get("l", "").strip()
-        first = auth.get("f", "").strip()
-        if last and not first:
-            formatted_authors.append(last)
-            continue
-        parts = first.replace("-", " ").split()
-        initials = "".join([p[0].upper() for p in parts if p])
-        formatted_authors.append(f"{last} {initials}")
-    author_str = ", ".join(formatted_authors)
-    p_data = ref["journal"]["page"]
-    pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
-        "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
-
-    issue_str = f"({ref['journal']['issue']})" if ref["journal"]["issue"] else ""
-    return f"{author_str}. {ref['title']}. {ref['journal']['name']['short']}. {ref['pub']['y']};{ref['journal']['volume']}{issue_str}:{pages}. doi:{"/".join(ref['doi'].values())}"
-
-def compile_nature(ref: dict) -> str:
-    formatted_authors = []
-    for auth in ref["authors"]:
-        last = auth.get("l", "").strip()
-        first = auth.get("f", "").strip()
-        if last and not first:
-            formatted_authors.append(last)
-            continue
-        parts = first.replace("-", " ").split()
-        dotted = ".".join([p[0].upper() for p in parts if p]) + "." if parts else ""
-        formatted_authors.append(f"{last}, {dotted}")
-    if len(formatted_authors) > 5:
-        author_str = f"{formatted_authors[0]}, et al"
-    elif len(formatted_authors) > 1:
-        author_str = ", ".join(formatted_authors[:-1]) + " & " + formatted_authors[-1]
-    else:
-        author_str = formatted_authors[0] if formatted_authors else ""
-    p_data = ref["journal"]["page"]
-    pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
-        "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
-
-    return f"{author_str}. {ref['title']}. <i>{ref['journal']['name']['short']}</i> <b>{ref['journal']['volume']}</b>, {pages} ({ref['pub']['y']})."
-
-def compile_oxford(ref: dict) -> str:
-    formatted_authors = []
-    for auth in ref["authors"]:
-        last = auth.get("l", "").strip()
-        first = auth.get("f", "").strip()
-        if last and not first:
-            formatted_authors.append(last)
-            continue
-        parts = first.replace("-", " ").split()
-        dotted = ".".join([p[0].upper() for p in parts if p]) + "." if parts else ""
-        formatted_authors.append(f"{last}, {dotted}")
-    if len(formatted_authors) > 1:
-        author_str = ", ".join(formatted_authors[:-1]) + " and " + formatted_authors[-1]
-    else:
-        author_str = formatted_authors[0] if formatted_authors else ""
-    p_data = ref["journal"]["page"]
-    pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
-        "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
-
-    issue_str = f"({ref['journal']['issue']})" if ref["journal"]["issue"] else ""
-    return f"{author_str}. ({ref['pub']['y']}) {ref['title']}. <i>{ref['journal']['name']['short']}</i>, <i>{ref['journal']['volume']}</i>{issue_str}, {pages}. https://doi.org/{"/".join(ref['doi'].values())}"
-
-def compile_springer(ref: dict) -> str:
-    formatted_authors = []
-    for auth in ref["authors"]:
-        last = auth.get("l", "").strip()
-        first = auth.get("f", "").strip()
-        if last and not first:
-            formatted_authors.append(last)
-            continue
-        parts = first.replace("-", " ").split()
-        initials = "".join([p[0].upper() for p in parts if p])
-        formatted_authors.append(f"{last} {initials}")
-    author_str = ", ".join(formatted_authors)
-    p_data = ref["journal"]["page"]
-    pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
-        "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
-
-    return f"{author_str}. {ref['title']}. <i>{ref['journal']['name']['short']}</i>. {ref['pub']['y']}; {ref['journal']['volume']}: {pages}. doi: {"/".join(ref['doi'].values())}"
-
-def compile_cse(ref: dict) -> str:
-    formatted_authors = []
-    for auth in ref["authors"]:
-        last = auth.get("l", "").strip()
-        first = auth.get("f", "").strip()
-        if last and not first:
-            formatted_authors.append(last)
-            continue
-        parts = first.replace("-", " ").split()
-        initials = "".join([p[0].upper() for p in parts if p])
-        formatted_authors.append(f"{last} {initials}")
-    author_str = ", ".join(formatted_authors)
-
-    p_data = ref["journal"]["page"]
-    pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
-        "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
-
-    issue_str = f"({ref['journal']['issue']})" if ref["journal"]["issue"] else ""
-    return f"{author_str}. {ref['title']}. {ref['journal']['name']['short']}. {ref['pub']['y']};{ref['journal']['volume']}{issue_str}:{pages}."
-
-def compile_harvard(ref: dict) -> str:
-    formatted_authors = []
-    for auth in ref["authors"]:
-        last = auth.get("l", "").strip()
-        first = auth.get("f", "").strip()
-        if last and not first:
-            formatted_authors.append(last)
-            continue
-        parts = first.replace("-", " ").split()
-        dotted = ".".join([p[0].upper() for p in parts if p]) + "." if parts else ""
-        formatted_authors.append(f"{last}, {dotted}")
-    if len(formatted_authors) > 1:
-        author_str = ", ".join(formatted_authors[:-1]) + " and " + formatted_authors[-1]
-    else:
-        author_str = formatted_authors[0] if formatted_authors else ""
-    p_data = ref["journal"]["page"]
-    pages = p_data.get("start", "") if p_data.get("start") == p_data.get(
-        "end") else f"{p_data.get('start', '')}–{p_data.get('end', '')}"
-
-    issue_str = f"({ref['journal']['issue']})" if ref["journal"]["issue"] else ""
-    return f"{author_str} ({ref['pub']['y']}). '{ref['title']}', <i>{ref['journal']['name']['full']}</i>, {ref['journal']['volume']}{issue_str}, pp. {pages}. doi: {"/".join(ref['doi'].values())}."
-
-
-STYLE_COMPILE = {
-    FormatStyle.ELSEVIER: compile_elsevier,
-    FormatStyle.NATURE:   compile_nature,
-    FormatStyle.OXFORD:   compile_oxford,
-    FormatStyle.SPRINGER: compile_springer,
-    FormatStyle.CSE:      compile_cse,
-    FormatStyle.HARVARD:  compile_harvard
-}
-
-# Return dict with all formats baked.
-def compile_all(refdata):
-    return {f: STYLE_COMPILE[f](refdata) for f in FormatStyle}
-
-# function to grab refdata.json, grab a random dictionary from it, and then output the different citations
-def run_random_citation_builder(input_filename: str, output_filename: str):
-    try:
-        with open(input_filename, "r", encoding="utf-8") as f:
-            data_pool = json.load(f)
-    except FileNotFoundError:
-        print(f"Error: Could not locate '{input_filename}' in this folder directory.")
-        return
-    if not data_pool:
-        print("Error: Input data pool file is empty.")
-        return
-    # just for that free grab thingymabob
-    selected_reference = random.choice(data_pool)
-
-    # hands off selected dictionary to function
-    output_payload = {
-        "selected_reference_title": selected_reference["title"],
-        "doi": selected_reference["doi"],
-        "pmid": selected_reference["pmid"],
-        "citations": {
-            "elsevier": compile_elsevier(selected_reference),
-            "nature": compile_nature(selected_reference),
-            "oxford": compile_oxford(selected_reference),
-            "springer_vancouver": compile_springer(selected_reference),
-            "cse": compile_cse(selected_reference),
-            "harvard": compile_harvard(selected_reference)
-        }
-    }
-    with open(output_filename, "w", encoding="utf-8") as f:
-        json.dump(output_payload, f, indent=2, ensure_ascii=False)
-    print(f"[Success] Done. Look in '{output_filename}'")
-
-if __name__ == "__main__":
-    run_random_citation_builder("refdata.json", "mutationcombinedoutput.json")
-"""
