@@ -7,10 +7,12 @@ from tools.references.refdata import ReferenceComponent
 from tools.references.formats import FormatStyle
 from shutil import copy2
 import tools.help as h
-import json
 import random
+
+#Multithreading libraries
 import concurrent.futures
 import threading
+import time
 
 # Set up output files
 save_dataset = None
@@ -84,30 +86,35 @@ MODELS = (
 if __name__ == "__main__":
     open_files(TARGET_DIR)
     log(f"Testing references in '{DATASET}' against:")
-    for m in MODELS: log(m, t="s") 
-    
+    for m in MODELS:
+        log(m, t="s")
+
     log("Loading dataset, creating backup 'source.json' at root")
     save_dataset(DATASET)
     dataset = h.read_json(DATASET)
 
     log_lock = threading.Lock()
 
-    # Trim to 5 for testing
-    dataset = {ID: entry for ID, entry in list(dataset.items())[:5]}
+    # Trim to 5 for testing (remove [:5] in production)
+    entries_to_process = list(dataset.items())[:5]
+    total_entries = len(entries_to_process)
 
-    log(f"Beginning evaluation of {len(dataset)} references, with {len(MODELS)} models per reference")
-    
-    results_all = {ID: None for ID in dataset}
+    log(f"Beginning evaluation of {total_entries} references, with {len(MODELS)} models per reference")
 
     max_workers = 15
+    all_futures = []
+    future_meta = {}       # future -> (ID, model, style)
+    entry_results_map = {} # ID -> shared results dict for that entry
+
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        for ID, entry in dataset.items():
-            log(f"Generating result template for {entry['id']}")
-            results = results_template(entry, MODELS)
 
-            # Queue all model evaluations for this entry
-            future_to_model = {}
+        log("Submitting all evaluation tasks...")
+        for ID, entry in entries_to_process:
+            # Create template once per entry
+            entry_results = results_template(entry, MODELS)
+            entry_results_map[ID] = entry_results
+
             for model in MODELS:
                 style = random.choice(list(FormatStyle))
 
@@ -115,33 +122,49 @@ if __name__ == "__main__":
                     log(f"{ID} {model} {style}", t="h")
 
                 future = executor.submit(_evaluate_task, entry, model, style)
-                future_to_model[future] = (model, style)
+                all_futures.append(future)
+                future_meta[future] = (ID, model, style)
 
-            for future in concurrent.futures.as_completed(future_to_model):
-                model, style = future_to_model[future]
-                try:
-                    result, t = future.result()
+        completed_count = 0
+        start_time = time.time()
+        last_status = time.time()
 
-                    with log_lock:
-                        log(f"{ID} {model} {style}", t="h")
+        for future in concurrent.futures.as_completed(all_futures):
+            ID, model, style = future_meta[future]
+            entry_results = entry_results_map[ID]
 
+
+            if time.time() - last_status >= 1.0:
+                active = sum(1 for f in all_futures if f.running())
+                log(f"[Monitor] {int(time.time()-start_time):02d}s | Active threads: {active}/{max_workers} | Done: {completed_count}/{len(all_futures)}", t="s")
+                last_status = time.time()
+
+            try:
+                result, t = future.result()
+                completed_count += 1
+
+                with log_lock:
                     if result:
-                        add_result(model, style, result, t, results)
+                        log(f"{ID} {model} {style}", t="h")
+                        add_result(model, style, result, t, entry_results)
+
+                        # Save per-entry results immediately (thread-safe since filenames are unique)
+                        save_results(entry_results, f"{ID}")
                     else:
-                        with log_lock:
-                            log("BADBAD! Result is null and was not added, something terrible must have happened.", t="e")
-                except Exception as e:
-                    with log_lock:
-                        log(f"Failed evaluation for {model}: {e}", t="e")
+                        log("BADBAD! Result is null and was not added, something terrible must have happened.", t="e")
 
-            with log_lock:
-                log(f"Saving full multimodel evaluation of ENTRY {ID} to '{ID}.json' and appending to 'all.json'")
-            save_results(results, f"{ID}")
-            results_all[ID] = results
+            except Exception as e:
+                with log_lock:
+                    log(f"Failed evaluation for {model}: {e}", t="e")
 
-        with log_lock:
-            log(f"Saving all results to 'all.json'")
-        save_results(results_all, "all")
+    with log_lock:
+        log("Reconstructing final results dictionary...")
+
+    # Build the final dict (all models share the same entry_results dict per ID)
+    results_all = dict(entry_results_map)
+    with log_lock:
+        log(f"Saving all results to 'all.json'")
+    save_results(results_all, "all")
 
     close_files()
 
@@ -154,9 +177,8 @@ if __name__ == "__main__":
 # old
 
 # Groundwork for scaling.
-# Testing two references against two models. 
+# Testing two references against two models.
 # Save results into matrix.
 # ! To @consider: should files be references and columns models, or vice versa? What is our z?
 #      @consider: Should we enable reasoning?
 #                 Testing result difference with deepseek, internet on and off.
-
