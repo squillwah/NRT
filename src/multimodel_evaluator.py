@@ -99,7 +99,7 @@ if __name__ == "__main__":
     
     results_all = {ID: None for ID in dataset}
 
-    max_workers = min(len(MODELS) * len(dataset), 15)
+    max_workers = 15
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         for ID, entry in dataset.items():
