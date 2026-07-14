@@ -1,6 +1,8 @@
 import csv
 import openpyxl
 import json
+from openpyxl.styles import Font, PatternFill, Alignment
+from openpyxl.utils import get_column_letter
 
 # def write_csv(inputted_json):
 #
@@ -71,7 +73,7 @@ def write_all_csv(inputted_json):
                             csv_f.write(",")
                         csv_f.write("\n")
 
-def write_xlsx(inputted_data, pmid_list):
+def write_xlsx(inputted_csv):
 
     wb = openpyxl.Workbook()
 
@@ -79,24 +81,66 @@ def write_xlsx(inputted_data, pmid_list):
     default_sheet = wb.active
     wb.remove(default_sheet)
 
-    # 2. Iterate through the list of dictionaries
-    for i, dict_list in enumerate(inputted_data):
+    with open(inputted_csv, 'r', encoding='utf-8') as file:
+        reader = csv.reader(file)
+        csv_id = str(inputted_csv.replace('.csv', ''))
+        csv_lines = [row for row in reader]
 
-        ws = wb.create_sheet(title=pmid_list[i])
+        csv_lines.remove(csv_lines[1])
 
-        headers = list(dict_list[0].keys())
-        ws.append(headers)
-        for inputted_dict in dict_list:
+        xlsx_header = csv_lines[0]
 
-            # Extract headers and values for THIS dictionary specifically
+        ws = wb.create_sheet(title=csv_id)
 
-            values = [inputted_dict[key] for key in headers]
+        ws.append(xlsx_header)
 
-            # Append the headers as row 1, and values as row 2
+        header_font = Font(name="Calibri", size=11, bold=True, color="FFFFFF")
+        header_fill = PatternFill(start_color="1F4E78", end_color="1F4E78", fill_type="solid")  # Dark Blue
+        header_align = Alignment(horizontal="center", vertical="center")
 
-            ws.append(values)
+        # 4. Apply styling to row 1, freeze panes, and enable print titles
+        for cell in ws[1]:
+            cell.font = header_font
+            cell.fill = header_fill
+            cell.alignment = header_align
 
-    wb.save(filename="output.xlsx")
+        for row in csv_lines[1:]:
+            ws.append(row)
+
+
+        for col in ws.columns:
+            max_len = 0
+            column = col[0].column
+            for cell in col:
+                if cell.value:
+                    max_len = max(max_len, len(str(cell.value)))
+
+            # Set width with buffer, min width 10
+            adjusted_width = (max_len + 3)
+            ws.column_dimensions[get_column_letter(column)].width = adjusted_width
+
+        wb.save(filename=csv_id + ".xlsx")
+
+
+
+    # # 2. Iterate through the list of dictionaries
+    # for i, dict_list in enumerate(inputted_data):
+    #
+    #     ws = wb.create_sheet(title=pmid_list[i])
+    #
+    #     headers = list(dict_list[0].keys())
+    #     ws.append(headers)
+    #     for inputted_dict in dict_list:
+    #
+    #         # Extract headers and values for THIS dictionary specifically
+    #
+    #         values = [inputted_dict[key] for key in headers]
+    #
+    #         # Append the headers as row 1, and values as row 2
+    #
+    #         ws.append(values)
+    #
+    # wb.save(filename="output.xlsx")
 
 
 test_data = [
@@ -109,5 +153,5 @@ test_data = [
 pmids = ["65sd4f3654f", "4d441dsf44"]
 
 if __name__ == "__main__":
-    # write_csv("1.json")
-    write_all_csv("all.json")
+    write_xlsx('1.csv')
+    # write_all_csv("all.json")
