@@ -40,9 +40,14 @@ class EntryMutator:
 
     # Mutation flags. Composed into a 'mutation code'. Unique bits describe exactly which modifications were performed on a dsentry. Not all mutations are combinable (overwrites). Also, be wary in the setting flags. A wrongly set flag will not reveal itself.
 
-    _MUTFLAG = {}   # Map to the unique bit identifier of all defined mutations.
-    _MUTCONF = {}   # Map to the suggested confidence value of all defined mutations.
-    _MUTLABELS = {} # Human readable convenience labels for each bit identifier.
+#    _MUT_BITFLAG = {}   # Map to the unique bit identifier of all defined mutations. Holdover from before constants. Bitcode works fine, don't care enough to change into new conventions.
+#    _MUT_SEVERITY = {}   # Map to the suggested confidence value of all defined mutations.
+#    _MUT_LABEL = {} # Human readable convenience labels for each bit identifier.
+    
+    _MUTATIONS = {}             # Supported mutations. Map of {ReferenceComponent: [<supported MutationType>, ...]}
+    _MUTATION_SEVERITIES = {}   # Severities of unique mutations. Map of {RC: {MT: <SeverityClass>, ...}, ...}
+    _MUTATION_BITFLAGS = {}     # Unique mutation bitflags / IDs. Map of {RC: {MT: 0b0000, ...}, ...}
+    _CONVENIENCE_LABELS = {}    # Human readable descriptors of mutation bitflags.
 
    # @ this is kind of like the 'weight' stuff with scoring, but applied to how much (thing being wrong) tarnishes the "validity" of a reference.
                                                                                                                                                                    
@@ -125,12 +130,13 @@ class EntryMutator:
     # Construct static maps to bits, confidences, and convenience labels.
     bit = 1
     for comp, muts in _MUTMAP.items():
-        _MUTFLAG[comp] = {}
-        _MUTCONF[comp] = {}
-        for (mut, conf) in muts:
-            _MUTFLAG[comp][mut] = bit
-            _MUTCONF[comp][mut] = conf
-            _MUTLABELS[bit] = f"{comp}::{mut}"
+        _MUTATIONS[comp] = [m[0] for m in muts] # List of MutationTypes
+        _MUTATION_BITFLAGS[comp] = {}
+        _MUTATION_SEVERITIES[comp] = {}
+        for (mut, severity) in muts:
+            _MUTATION_SEVERITIES[comp][mut] = severity
+            _MUTATION_BITFLAGS[comp][mut] = bit
+            _CONVENIENCE_LABELS[bit] = f"{comp}::{mut}"
             bit = bit << 1
     del bit
 
@@ -142,17 +148,12 @@ class EntryMutator:
         self._FAKE_JOURNALS = h_journals            # The issue is, how fake can a date, DOI, or PMCID get? Fake enough to warrant that?
         self._RAND_YEAR_RANGE = (rand_year_range[0], rand_year_range[1])
 
-### little helpers
-
-    # Return list of mutation labels from a mutcode.
-    @classmethod
-    def explain_mutcode(cls, code):
-        return [cls._MUTLABELS[bit] for bit in cls._MUTLABELS if (code & bit)]
+# little helpers #
 
     # Sets mutation flags, adjusts component scores.
     @classmethod
     def _flag(cls, ds_entry, component, mutation):
-        ds_entry["mut_code"] = ds_entry["mut_code"] | cls._MUTFLAG[component][mutation]
+        ds_entry["mut_code"] = ds_entry["mut_code"] | cls._MUTATION_BITFLAGS[component][mutation]
         
         # Flag the component as EXISTING or NOT EXISTING depending on mutation type:
         if mutation in (M.HALLUCINATION, M.MISMATCH): ds_entry["has_component"][component] = True      # @TODO Bring in gabe's omission stuff, then do the ANDing with reference specific component data in the bake.
@@ -160,15 +161,32 @@ class EntryMutator:
         
         # Lower or introduce score + severity class 
         #print(ds_entry["scores"]["component"][component])
-        if not ds_entry["mut_severity"]["component"][component] or ds_entry["mut_severity"]["component"][component][1] > cls._MUTCONF[component][mutation]:
+        if not ds_entry["mut_severity"]["component"][component] or ds_entry["mut_severity"]["component"][component][1] > cls._MUTATION_SEVERITIES[component][mutation]:
             #print(ds_entry["scores"]["component"][component])
-            ds_entry["mut_severity"]["component"][component] = (False, cls._MUTCONF[component][mutation])
+            ds_entry["mut_severity"]["component"][component] = (False, cls._MUTATION_SEVERITIES[component][mutation])
             #print(ds_entry["scores"]["component"][component])
 
     # Return deepcopy of random item from collection.
     @staticmethod
     def _randcopy(collection):
         return deepcopy(random.choice(collection))
+
+# external #
+
+    # Return list of mutation labels from a mutcode.
+    @classmethod
+    def explain_mutcode(cls, code):
+        return [cls._CONVENIENCE_LABELS[bit] for bit in cls._CONVENIENCE_LABELS if (code & bit)]
+    
+    # Return compatible mutations. Dict of all lists by component or single list of specified.
+    @classmethod
+    def get_mutations(cls): return cls._MUTATIONS
+    @classmethod
+    def get_mutations(cls, component): return cls._MUTATIONS[component]
+
+    # Unified interface to apply mutations using formal constants.
+    def mutate(self, component, mutation):
+
 
 ### AUTHORS
 
