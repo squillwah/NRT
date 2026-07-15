@@ -95,7 +95,7 @@ class ElementBuilder:
         return styler(doi=doi, pmid=pmid, pmcid=pmcid)
    
     # Wrappers around builder methods for unified interface associated with element type constants.
-    _COMPONENT_MAP = {
+    _ELEMENT_MAP = {
         CitationElement.TITLE:            lambda ref, conf: ElementBuilder.title(ref["title"], **conf),
         CitationElement.AUTHORS:          lambda ref, conf: ElementBuilder.authors(ref["authors"], **conf),
         CitationElement.JOURNAL_NAME:     lambda ref, conf: ElementBuilder.journal_name(ref["journal"]["name"], **conf),
@@ -107,7 +107,7 @@ class ElementBuilder:
     # Returns reference to lambdas which call builder functions.
     @classmethod
     def build(cls, element): 
-        return cls._COMPONENT_MAP[element]
+        return cls._ELEMENT_MAP[element]
 
 class Formats:
     # Citations consist of the six CitationElements.
@@ -363,7 +363,7 @@ class Formats:
     @classmethod
     def build(cls, refdata, style):
         elements = {element: ElementBuilder.build(element)(refdata, cls._STYLE_CONFIG[style][element]) for element in CitationElement}    # @TODO factor the omissions into this.
-        return {"reference": cls._LAYOUT[style](**elements), "components": cls._FORMAT_COMPONENTS[style].copy()}    # ! @TODO To be ANDed with calling refdata database component info, for true accuracy.
+        return {"citation": cls._LAYOUT[style](**elements), "has_component": cls._FORMAT_COMPONENTS[style].copy()}    # ! @TODO To be ANDed with calling refdata database component info, for true accuracy.
 
     @classmethod
     def build_all(cls, refdata):
