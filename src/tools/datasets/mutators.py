@@ -13,11 +13,18 @@ class MutationType(StrEnum):
     OMISSION = "omission"
 
 class SeverityClass(float, Enum):
-    REAL = 1.0
-    MINOR_ERROR = .75
-    AMBIGUOUS = .5
-    MAJOR_ERROR = .25
-    FAKE = 0.0
+    NONE = 0.0
+    ACCEPTABLE = 0.1        # For acceptable omissions? Like no PMCID, PMID, DOI...
+    MINOR_ERROR = 0.33          # Slight errors, indicative of human style mistakes. Typos, small omissions.
+    AMBIGUOUS_ERROR = 0.66      # More severe errors, cloud be human or machine. Author shuffle, small mismatches, larger omissions.
+    MAJOR_ERROR = 1.0           # Most severe errors, definitively machinistic. Hallucinations, large mismatches, large omissions.
+    #HUMAN_ERROR = 0.25
+    #AMBIGUOUS_ERROR = .5
+    #MAJOR_ERROR = .75
+    #FAKE = 1.0
+
+# @TODO Set dsentry severity initializers to NONE not REAL. Also make sure to check zeros when averaging...
+# Thinking, more precises defintition. Also flipped it so 0 is no severe (no error), 1 is FAKE (error means it is no doubt hallucinated).
 
 # Enum and utility aliases
 C, M, S, T = ReferenceComponent, MutationType, SeverityClass, Typofier
@@ -37,19 +44,79 @@ class EntryMutator:
     _MUTCONF = {}   # Map to the suggested confidence value of all defined mutations.
     _MUTLABELS = {} # Human readable convenience labels for each bit identifier.
 
+   # @ this is kind of like the 'weight' stuff with scoring, but applied to how much (thing being wrong) tarnishes the "validity" of a reference.
+                                                                                                                                                                   
+  # Right now all typos are .5 confidence, aka ambiguous on the generated -> authentic scale (invalid -> valid?).
+   # We could have it change depending on element, perhaps author typos are less suspect, so a confidence of .75 instead?  @TODO fine tune
+                                                                                                                                                                   
+   # @todo we REALLY need to add the 'missing component' thing. Maybe. That would give reason for more variety in the weighting (not just .5 typos and 0 all else)
+                                                                                                                                                                   
+   # @ consider, when would it be above .5? Never really, cause we know it's been modified. Above .5 would incentivize confidence in the wrong answer... Right?
+   # How are we going to compare their scores against this? Will it just be closeness, or does the funny business around the .5 interfere with that?
+                                                                                                                                                                   
+   # @TODO Reconsile the split DOI prefix/suffix mutation inconsistency.
+
+
     # Define possible mutations and their arbitrary severity classes.
     _MUTMAP = {
-        C.AUTHORS:          [ (M.TYPO, S.MINOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE), (M.SHUFFLE, S.AMBIGUOUS) ],     # @ this is kind of like the 'weight' stuff with scoring, but applied to how much (thing being wrong) tarnishes the "validity" of a reference.
-        C.TITLE:            [ (M.TYPO, S.MINOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE) ],
-        C.JOURNAL_NAME:     [ (M.TYPO, S.AMBIGUOUS), (M.MISMATCH, S.MAJOR_ERROR), (M.HALLUCINATION, S.FAKE) ],                         # Right now all typos are .5 confidence, aka ambiguous on the generated -> authentic scale (invalid -> valid?).
-        C.JOURNAL_VOLUME:   [ (M.HALLUCINATION, S.MAJOR_ERROR) ],                                                                       # We could have it change depending on element, perhaps author typos are less suspect, so a confidence of .75 instead?  @TODO fine tune
-        C.JOURNAL_ISSUE:    [ (M.HALLUCINATION, S.MAJOR_ERROR) ],
-        C.JOURNAL_PAGE:     [ (M.HALLUCINATION, S.AMBIGUOUS) ],                                                                         # @todo we REALLY need to add the 'missing component' thing. Maybe. That would give reason for more variety in the weighting (not just .5 typos and 0 all else)
-        C.ELOCATOR:         [ (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.MAJOR_ERROR) ],
-        C.PUBLICATION_DATE: [ (M.HALLUCINATION, S.MAJOR_ERROR) ],                                                                       # @ consider, when would it be above .5? Never really, cause we know it's been modified. Above .5 would incentivize confidence in the wrong answer... Right?
-        C.PMCID:            [ (M.TYPO, S.MAJOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE) ],                               # How are we going to compare their scores against this? Will it just be closeness, or does the funny business around the .5 interfere with that?
-        C.PMID:             [ (M.TYPO, S.MAJOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE) ],
-        C.DOI:              [ (M.TYPO, S.MAJOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE) ]                                # @TODO Reconsile the split DOI prefix/suffix mutation inconsistency.
+        C.AUTHORS: [ 
+            (M.TYPO,            S.MINOR_ERROR), 
+            (M.MISMATCH,        S.MAJOR_ERROR), 
+            (M.HALLUCINATION,   S.MAJOR_ERROR), 
+            (M.SHUFFLE,         S.AMBIGUOUS_ERROR),
+            (M.OMISSION,        S.MAJOR_ERROR)
+        ],  
+        C.TITLE: [ 
+            (M.TYPO,            S.MINOR_ERROR), 
+            (M.MISMATCH,        S.MAJOR_ERROR), 
+            (M.HALLUCINATION,   S.MAJOR_ERROR), 
+            (M.OMISSION,        S.AMBIGUOUS_ERROR)  # Some publishers include no title.
+        ],
+        C.JOURNAL_NAME: [ 
+            (M.TYPO,            S.MINOR_ERROR), 
+            (M.MISMATCH,        S.AMBIGUOUS_ERROR), 
+            (M.HALLUCINATION,   S.MAJOR_ERROR),
+            (M.OMISSION,        S.MAJOR_ERROR)
+        ],                       
+        C.JOURNAL_VOLUME: [ 
+            (M.HALLUCINATION,   S.MAJOR_ERROR),
+            (M.OMISSION,        S.AMBIGUOUS_ERROR)
+        ],
+        C.JOURNAL_ISSUE: [ 
+            (M.HALLUCINATION,   S.MAJOR_ERROR),
+            (M.OMISSION,        S.MINOR_ERROR)
+        ],
+        C.JOURNAL_PAGE: [ 
+            (M.HALLUCINATION,   S.AMBIGUOUS),
+            (M.OMISSION,        S.MINOR_ERROR)
+        ],                                                                      
+        C.ELOCATOR: [ 
+            (M.MISMATCH,        S.MAJOR_ERROR), 
+            (M.HALLUCINATION,   S.MAJOR_ERROR),
+            (M.OMISSION,        S.MINOR_ERROR)
+        ],
+        C.PUBLICATION_DATE: [                       # @TODO If we put in a check before applying a mutation (if entry["data"]["pub"] == none), that wouldn't work... Has_component should work right? One rule should be: don't apply omissions if has_component, and don't apply any other errors if has omission? How might that effect the dataset in an unexpected way?
+            (M.HALLUCINATION,   S.MAJOR_ERROR) 
+            (M.OMISSION,        S.AMBIGUOUS)
+        ],                                                                    
+        C.PMCID: [ 
+            (M.TYPO,            S.MINOR_ERROR), 
+            (M.MISMATCH,        S.MAJOR_ERROR), 
+            (M.HALLUCINATION,   S.MAJOR_ERROR),
+            (M.OMISSION,        S.MINOR_ERROR)      # Or should it be NONE? Not all references have PMCIDs... But that's handled elsewhere right? It is not included in the average if the original refdata was missing a PMCID, but it is included if it was ommitted. But! All our references have pmcids, so they're all included. The problem is that none of the references include the PMCID... so they're all going to have this error applied. If we set this error as a NONE severity, then what others should we set as NONE?
+        ],                                          # If we set them as NONE, then they'll still be included in the average, and thus bias the average less severe. It should just not be included in the average. Should we have a 'don't include these components in average when ommitted' list? Or is that too specific. Is all of this stupid?
+        C.PMID: [                                   # Could instead have another SeverityClass with low severity (.1 or .01) which represents these omissions...
+            (M.TYPO,            S.MINOR_ERROR),
+            (M.MISMATCH,        S.MAJOR_ERROR),
+            (M.HALLUCINATION,   S.MAJOR_ERROR),
+            (M.OMISSION,        S.MINOR_ERROR),     # S.ACCEPTABLE ?
+        ],
+        C.DOI: [ 
+            (M.TYPO,            S.AMBIGUOUS_ERROR), 
+            (M.MISMATCH,        S.MAJOR_ERROR), 
+            (M.HALLUCINATION,   S.MAJOR_ERROR), 
+            (M.OMISSION,        S.MINOR_ERROR)
+        ]                             
         #"url_abstract":     ("typo", "mismatch", "hallucinate"),
         #"url_direct":       ("typo", "mismatch", "hallucinate"),
         # @TODO Still need those missing mutations. Would add complexity to the classfying.

@@ -15,19 +15,21 @@ from tools.datasets.mutators import EntryMutator, SeverityClass
 
 COMPONENT_WEIGHT_PRIORITY = {
     ReferenceComponent.AUTHORS: 5,
-    ReferenceComponent.TITLE: 5,
+    ReferenceComponent.TITLE: 50,
     ReferenceComponent.JOURNAL_NAME: 5,
-    ReferenceComponent.JOURNAL_VOLUME: 4,
-    ReferenceComponent.JOURNAL_ISSUE: 2,
-    ReferenceComponent.JOURNAL_PAGE: 1,
-    ReferenceComponent.ELOCATOR: 2,
-    ReferenceComponent.PUBLICATION_DATE: 3,
-    ReferenceComponent.DOI: 4,
-    ReferenceComponent.URL_ABSTRACT: 3,
-    ReferenceComponent.URL_DIRECT: 3,
-    ReferenceComponent.PMCID: 3,
-    ReferenceComponent.PMID: 3
+    ReferenceComponent.JOURNAL_VOLUME: 5,
+    ReferenceComponent.JOURNAL_ISSUE: 5,
+    ReferenceComponent.JOURNAL_PAGE: 5,
+    ReferenceComponent.ELOCATOR: 5,
+    ReferenceComponent.PUBLICATION_DATE: 5,
+    ReferenceComponent.DOI: 5,
+    ReferenceComponent.URL_ABSTRACT: 0,
+    ReferenceComponent.URL_DIRECT: 0,
+    ReferenceComponent.PMCID: 5,
+    ReferenceComponent.PMID: 5
 }
+    
+    # @? Why is have less for just title but shouldnt have more cause it is half? Still not sure how weighting works... How say title always be worth half? Can even? Why? want?
 
 # The layout of dataset entries.
 def dsentry(rd, ID=None, ID_src=None):    #, *, ID=None):
@@ -74,6 +76,7 @@ def bake_dsentry(entry):
     #mut_severity_exclude_omissions # OR is this just the same as the reference severities?
 
     # ALSO THINK ABOUT how maybe we do need the format has_components PRE ANDing with entry has_components, so we know which "omissions" to include? Ughhh who caaarrressss.....
+
 
     c_severities = {component: entry["mut_severity"]["component"][component] for component in ReferenceComponent if entry["mut_severity"]["component"][component]} # Components with existing scores in the dsentry.
     severity = entry["mut_severity"]["entire"]
