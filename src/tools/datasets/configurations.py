@@ -1,6 +1,6 @@
 # Thinking about reference components, types of mutations on components, and classifying sets of component mutations.
 
-from tools.datasets.dataset import EntryMutator   # Strange
+from tools.datasets.mutators import EntryMutator   # Strange
 import random
 
 # Again, no error handling in any of this. Will break if it breaks.
