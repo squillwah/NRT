@@ -363,7 +363,6 @@ class Formats:
     # Return dict of formatted reference and bools for the components contained.
     @classmethod
     def build(cls, refdata, has_component, style):
-        print(refdata)
         # Build each CitationElement according to style
         elements = {
             element: ElementBuilder.build(element)(refdata, cls._STYLE_CONFIG[style][element]) for element in CitationElement
