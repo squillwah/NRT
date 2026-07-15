@@ -11,7 +11,8 @@ import tools.help as h
 
 if __name__ == "__main__":
     # Open source files 
-    DIR = "./data/reference_source"
+    HDIR = "./data/source_hallucinations"
+    DIR = "./data/source_references1"
     refdata_src = None
     compset_src = None
     h_title_src = None
@@ -20,16 +21,21 @@ if __name__ == "__main__":
 
     with open(f"{DIR}/refdata.json", "r") as f: refdata_src = json.load(f)
     with open(f"{DIR}/compset.json", "r") as f: compset_src = json.load(f)
-    with open(f"{DIR}/h_titles.txt", "r") as f: h_title_src = [line.strip() for line in f if line.strip()]
-    with open(f"{DIR}/h_authors.json", "r") as f: h_author_src = json.load(f)
+    with open(f"{HDIR}/h_titles.txt", "r") as f: h_title_src = [line.strip() for line in f if line.strip()]
+    with open(f"{HDIR}/h_authors.json", "r") as f: h_author_src = json.load(f)
 #        h_author_src = [{"l": "FAKEAUTH", "f": "FAKEAUTH"}]*200 #{ "l": name, "f": name for name in [line.strip() for line in f if line.strip()]} # Placeholder. Either parse by ', ' or have source generate a json of last and first.
-    with open(f"{DIR}/h_journals.json", "r") as f: h_journal_src = json.load(f)
+    with open(f"{HDIR}/h_journals.json", "r") as f: h_journal_src = json.load(f)
 #        h_journal_src = [{"full": "FAKEJOURN", "short": "FAKEJOURN"}]*200 #{ "full": name, "short": name for name in [line.strip() for line in f if line.strip()]} # Placeholder. Have the source be a JSON with {full, short}
 
-    
+#    print(json.dumps(h_author_src, indent=2))    
+#    print(json.dumps(h_journal_src, indent=2))    
+#    print(h_title_src)    
+#    quit()
 
+    srcds = make_dataset(refdata_src, 4) # Source references, with four duplicates. (100 + 400 = 500)
+    print(json.dumps(srcds, indent=2)) 
 
-    srcds = make_dataset(refdata_src*5) # Dictionary of incrementing IDs : entries
+    #srcds = make_dataset(refdata_src*5) # Dictionary of incrementing IDs : entries
     num_entries = range(len(srcds))
 
     ds = { "source":        [srcds[i] for i in num_entries[:100]],        # Janky, VERY TEMPORARY. We need to redo all of this entirely.
@@ -50,7 +56,7 @@ if __name__ == "__main__":
 
     bake_dataset(srcds) # It's been modified in place.
 
-    h.write_json(srcds, "./data/refsource.json")
+    h.write_json(srcds, "./data/refset.json")
 #    print(json.dumps(srcds, indent=2))
 #    with open("./data/refsource.json", "x") as f:
 #        json.dump(srcds, f, indent=2)

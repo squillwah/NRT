@@ -50,8 +50,10 @@ def write_json(data, filename, access="w", protect=True):
     f, i = filename if isinstance(filename, Path) else Path(filename), 0
     while (protect and f.exists()):
         log(f"{f} exists.", t="e")
+        name = str(f.with_suffix(""))
+        name = name[:-1] if name[-1].isdigit() else name
         i = i + 1
-        f = Path(f"{str(f.with_suffix(""))}{i}.json")
+        f = Path(f"{name}{i}.json")
         log(f"Writing as {f}.", t="s")
     with open(f, access, buffering=1) as file:
         try: json.dump(data, file, indent=2)

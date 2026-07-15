@@ -46,7 +46,7 @@ def dsentry(rd, ID=None, ID_src=None):    #, *, ID=None):
             "component": {
                 comp: ([True, S.REAL] if ref_metadata["has_component"][comp] else None) for comp in ReferenceComponent  # Default component scores to True, but set nonexistent components to NULL
             }
-        }
+        },
         "reference": {},        # All format styles generated at baking step. 
         "data": ref_data
     }
@@ -57,9 +57,21 @@ def dsentry(rd, ID=None, ID_src=None):    #, *, ID=None):
 #
 # The score is applied to single components and the entire references.
 
-# Create a set of set entries from a list of reference data
-def make_dataset(refdata_list, *, v=False):
-    dataset = {ID: dsentry(refdata, ID) for ID, refdata in enumerate(refdata_list)}
+# Create a set of set entries from a list of reference data.
+# 'duplicate' specifies how many copies of the source should be included
+def make_dataset(refdata_list, duplicate=0):
+    #IDs = [(i, None) for i in range(size)]  # ID, source ID (null for source refs)
+    ## Extend with duplicate copies, storing source reference entry IDs  
+    #for i in range(duplicate): IDs.extend(zip(range((i+1)*size, (i+1)*size+size), range(size)))
+    #dataset = {ID: dsentry(refdata, ID) for ID, refdata in enumerate(refdata_list)}
+    dataset = {}
+    source_size = len(refdata_list)
+    for i, refdata in enumerate(refdata_list):
+        source_id = i
+        dataset[source_id] = dsentry(refdata, ID=source_id, ID_src=None)
+        for j in range(1, duplicate+1):                         # Extend duplicates with source IDs attached (0, None) ... (99, None) | (100, 0), (101, 1), etc
+            duplicate_id = source_id + j*source_size
+            dataset[duplicate_id] = dsentry(refdata, ID=duplicate_id, ID_src=source_id)
     return dataset
 
 def bake_dsentry(entry):
@@ -69,7 +81,7 @@ def bake_dsentry(entry):
 # Should severity be higher or lower numbers? Probably higher, since it's multiplied by weight. Although it might not matter either way, as long as consistent. Higher is more intuitive though.
     entry["mut_labels"] = EntryMutator.explain_mutcode(entry["mut_code"])
     # Averaging holistic score
-    c_scores = {component: entry["mut_severity"]["entire"][component] for component in ReferenceComponent if entry["mut_severity"]["component"][component]} # Components with existing scores in the dsentry.
+    c_scores = {component: entry["mut_severity"]["component"][component] for component in ReferenceComponent if entry["mut_severity"]["component"][component]} # Components with existing scores in the dsentry.
     score = entry["mut_severity"]["entire"]
     classes, confidences = zip(*[c_scores[c] for c in c_scores])    # Lists of all classification bools and confidence values for all components.
     score[0] = classes and all(classes)                             # AND every class           @TODO May want to weight these somehow? Or should even the tiniest typo make it "false"? If so, then the binary score means a slightly different thing than confidence. Probably good that way? Maybe not, a confusing case would be a False (invalid) class due to a type but a very high (.95) confidence value. It would make sense on the component level (since we shouldn't set default conf values above .5), but not when maintaining that negative bool for the average. ANDing booleans is not the same as averaging. Do we even need the True/False at this step? Probably, something to mark the mutation. Otherwise setting the suggested confidences will be tricky and precise, we open ourselves up to clearly mutated/hallucinated references being marked True when the average works out > .5
@@ -151,8 +163,8 @@ class EntryMutator:
         ds_entry["mut_code"] = ds_entry["mut_code"] | cls._MUTFLAG[component][mutation]
         
         # Flag the component as EXISTING or NOT EXISTING depending on mutation type:
-        if mutation in (M.HALLUCINATION, M.MISMATCH): ds_entry["data"]["_meta"]["has_component"][component] = True      # @TODO Bring in gabe's omission stuff, then do the ANDing with reference specific component data in the bake.
-        elif mutation in (M.OMISSION): ds_entry["data"]["_meta"]["has_component"][component] = False
+        if mutation in (M.HALLUCINATION, M.MISMATCH): ds_entry["has_component"][component] = True      # @TODO Bring in gabe's omission stuff, then do the ANDing with reference specific component data in the bake.
+        #elif mutation in (M.OMISSION): ds_entry["data"]["_meta"]["has_component"][component] = False
         
         # Lower or introduce score + severity class 
         #print(ds_entry["scores"]["component"][component])
@@ -205,7 +217,12 @@ class EntryMutator:
 
     def author_hallucinate(self, ds_entry):
         #ds_entry["data"]["authors"] = self._randcopy(self._FAKE_AUTHORS)    # It needs to be a list of fake authors.
-        ds_entry["data"]["authors"] = deepcopy(random.sample(self._FAKE_AUTHORS, len(ds_entry["data"]["authors"])))    # Making it the same length. Could be different. Who cares?
+        print(len(self._FAKE_AUTHORS))
+        print(len(ds_entry["data"]["authors"]))
+        print(ds_entry["data"]["pmcid"])
+        # A random sample of authors, from 1 to len(authors)+5 < len(fake_authors)
+        l1, l2 = len(ds_entry["data"]["authors"]) + 5, len(self._FAKE_AUTHORS)
+        ds_entry["data"]["authors"] = deepcopy(random.sample(self._FAKE_AUTHORS, random.randint(1, l1 if l1 < l2 else l2)))
         self._flag(ds_entry, C.AUTHORS, M.HALLUCINATION)
         return ds_entry
 
@@ -250,7 +267,7 @@ class EntryMutator:
             ds_entry["data"]["journal"]["volume"] = random.choice([v for v in range(int(vol*.5), int(vol*1.5)) if v != vol]) # Arbitrary. Randomization range is the volume +/- half
         else:
             ds_entry["data"]["journal"]["volume"] = random.randint(0,500)
-            print(f" ! empty vol in {ds_entry["id"]} {ds_entry["id_src"]}, setting to niave random: {ds_entry["data"]["journal"]["volume"]}")
+            print(f" ! empty vol in {ds_entry["id"]} {ds_entry["id_source"]}, setting to niave random: {ds_entry["data"]["journal"]["volume"]}")
         self._flag(ds_entry, C.JOURNAL_VOLUME, M.HALLUCINATION)
         return ds_entry
 
@@ -263,7 +280,7 @@ class EntryMutator:
             #        ALTERNATIVE would be to fail around it, and put some random number anyways.
             #ds_entry["data"]["journal"]["issue"] = random.choice(self._COMPONENTS["journal"])["issue"] # !! It must be that the same empties exist in the compset. SO, just do a random number.
             ds_entry["data"]["journal"]["issue"] = random.randint(0,1500)
-            print(f" ! empty iss in {ds_entry["id"]} {ds_entry["id_src"]}, setting to niave random: {ds_entry["data"]["journal"]["issue"]}")
+            print(f" ! empty iss in {ds_entry["id"]} {ds_entry["id_source"]}, setting to niave random: {ds_entry["data"]["journal"]["issue"]}")
         self._flag(ds_entry, C.JOURNAL_ISSUE, M.HALLUCINATION)
         return ds_entry
 
