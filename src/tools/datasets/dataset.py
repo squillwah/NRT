@@ -43,12 +43,12 @@ def dsentry(rd, ID=None, ID_src=None):    #, *, ID=None):
         "mut_code": 0b00000000, # Describes specific mutations.
         "mut_labels": [],
         "mut_severity": {
-            "entire": [True, SeverityClass.REAL],   # Default holistic score to True
+            "entire": [True, SeverityClass.NONE],   # Default holistic score to True
             "format": {
                 style: None for style in FormatStyle    # Initialize style scores but leave NULL for bake.
             },
             "component": {
-                comp: ([True, SeverityClass.REAL] if ref_metadata["has_component"][comp] else None) for comp in ReferenceComponent  # Default component scores to True, but set nonexistent components to NULL
+                comp: ([True, SeverityClass.NONE] if ref_metadata["has_component"][comp] else None) for comp in ReferenceComponent  # Default component scores to True, but set nonexistent components to NULL
             }
         },
         "reference": {},        # All format styles generated at baking step. 

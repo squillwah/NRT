@@ -143,7 +143,7 @@ def l4_needs_human_review(dataset):
         M.elocator_mismatch(entry)
         M.pmcid_typo(entry)
         M.pmid_hallucinate(entry)
-        M.doi_mismatch_suffix(entry)
+        M.doi_mismatch(entry)
 
 # The big takeaway: 1. we need to have a good think about how to group/classify these variations of reference errors.
 #                      - Orthogonality? The bounds between them are blurry, it is difficult to decide which mutations go where.

@@ -133,7 +133,7 @@ class EntryMutator:
         _MUTATIONS[comp] = [m[0] for m in muts] # List of MutationTypes
         _MUTATION_SEVERITIES[comp], _MUTATION_BITFLAGS[comp], _MUTATION_DISPATCH[comp] = {}, {}, {}
         for (mut, severity) in muts:
-            _MUTATION_SEVERITIES[comp][mut], _MUTATION_BITFLAGS[comp][mut] _MUTATION_DISPATCH[comp][mut], = severity, bit, None
+            _MUTATION_SEVERITIES[comp][mut], _MUTATION_BITFLAGS[comp][mut], _MUTATION_DISPATCH[comp][mut], = severity, bit, None
             _CONVENIENCE_LABELS[bit] = f"{comp}::{mut}"
             bit = bit << 1
     del bit
@@ -161,7 +161,7 @@ class EntryMutator:
         
         # Lower or introduce score + severity class 
         #print(ds_entry["scores"]["component"][component])
-        if not ds_entry["mut_severity"]["component"][component] or ds_entry["mut_severity"]["component"][component][1] > cls._MUTATION_SEVERITIES[component][mutation]:
+        if not ds_entry["mut_severity"]["component"][component] or ds_entry["mut_severity"]["component"][component][1] < cls._MUTATION_SEVERITIES[component][mutation]:
             #print(ds_entry["scores"]["component"][component])
             ds_entry["mut_severity"]["component"][component] = (False, cls._MUTATION_SEVERITIES[component][mutation])
             #print(ds_entry["scores"]["component"][component])
@@ -384,13 +384,15 @@ class EntryMutator:
         self._flag(ds_entry, C.DOI, M.TYPO)
         return ds_entry
 
-   def _doi_mismatch(self, ds_entry):
+    # @TODO Better randomization of suffix vs prefix mismatching / hallucinating?
+
+    def doi_mismatch(self, ds_entry):
         ds_entry["data"]["doi"]["prefix"] = self._randcopy([p for p in self._COMPONENTS["sets"]["doi_prefix"] if p != ds_entry["data"]["doi"]["prefix"]])
         ds_entry["data"]["doi"]["suffix"] = self._randcopy([s for s in self._COMPONENTS["sets"]["doi_suffix"] if s != ds_entry["data"]["doi"]["suffix"]])
         self._flag(ds_entry, C.DOI, M.MISMATCH)
         return ds_entry
         
-    def _doi_hallucinate(self, ds_entry):
+    def doi_hallucinate(self, ds_entry):
         # 10.random1000->9999 + .random0->10or100or1000 (0-2x)
         ds_entry["data"]["doi"]["prefix"] = ".".join(["10", str(random.randint(1000, 9999))] + [str(random.randint(0, 10**random.randint(1, 3))) for i in range(random.randint(0,2))])
         # 1-3 groups of 3 to 8 random numbers and letters
@@ -404,7 +406,7 @@ class EntryMutator:
 
     # ...       @todo something with the URLs???        ### URLS
     
-    def _pmid_typo(self, ds_entry):
+    def pmid_typo(self, ds_entry):
         # Only one typo.
         # 50/50 chance between positional swap or ++/-- error.
         ID = ds_entry["data"]["pmid"]
@@ -421,12 +423,12 @@ class EntryMutator:
         self._flag(ds_entry, C.PMID, M.TYPO)
         return ds_entry
 
-    def _pmid_mismatch(self, ds_entry):
+    def pmid_mismatch(self, ds_entry):
         ds_entry["data"]["pmid"] = self._randcopy([ID for ID in self._COMPONENTS["pmid"] if ID != ds_entry["data"]["pmid"]])
         self._flag(ds_entry, C.PMID, M.MISMATCH)
         return ds_entry
 
-    def _pmid_hallucinate(self, ds_entry):
+    def pmid_hallucinate(self, ds_entry):
         ds_entry["data"]["pmid"] = str(random.randint(1, 999999999)) # Up to 9 digits.
         self._flag(ds_entry, C.PMID, M.HALLUCINATION)
         return ds_entry
@@ -436,7 +438,7 @@ class EntryMutator:
     _MUTATION_DISPATCH[C.PMID][M.HALLUCINATION] = pmid_hallucinate
 
     # Basically all exact same.
-    def _pmcid_typo(self, ds_entry):
+    def pmcid_typo(self, ds_entry):
         ID = ds_entry["data"]["pmcid"]
         li = random.randrange(3, len(ID))   # Avoid PMC prefix
         if random.random() <= .5:
@@ -451,12 +453,12 @@ class EntryMutator:
         self._flag(ds_entry, C.PMCID, M.TYPO)
         return ds_entry
     
-    def _pmcid_mismatch(self, ds_entry):
+    def pmcid_mismatch(self, ds_entry):
         ds_entry["data"]["pmcid"] = self._randcopy([ID for ID in self._COMPONENTS["pmcid"] if ID != ds_entry["data"]["pmcid"]])
         self._flag(ds_entry, C.PMCID, M.MISMATCH)
         return ds_entry
 
-    def _pmcid_hallucinate(self, ds_entry):
+    def pmcid_hallucinate(self, ds_entry):
         ds_entry["data"]["pmcid"] = "PMC"+str(random.randint(1, 99999999)) # Up to 8 digits. Plus PMC prefix.
         self._flag(ds_entry, C.PMCID, M.HALLUCINATION)
         return ds_entry
