@@ -28,19 +28,27 @@ S = SeverityClass
 T = Typofier
 
 # Create a set entry from reference data
-def dsentry(rd, ID=None):    #, *, ID=None):
+def dsentry(rd, ID=None, ID_src=None):    #, *, ID=None):
+    ref_data = deepcopy(rd)
+    ref_metadata = ref_data.pop("_meta")
     return {
         "id": ID,               # Internal ID + original PMCID         IDs now stored as keys in the flat dataset dict. Categories can persist as per component/holistic tags (replacement for "suggested confidence" silliness)
-        "src_id": rd["pmcid"],
-        "mutcode": 0b00000000,  # Describes specific mutations.
-        "mutlabels": [],
-        "data": deepcopy(rd),
-        "format": {},           # All format styles generated at baking step. 
-        "scores": {
-            "holistic_complete": [True, S.REAL],                                    # Default holistic score to True
-            "holistic_formatted": {style: None for style in FormatStyle},   # Initialize style scores but leave NULL for bake.
-            "component": {comp: ([True, S.REAL] if rd["_meta"]["has_component"][comp] else None) for comp in ReferenceComponent}    # Default component scores to True, but set nonexistent components to NULL
+        "id_source": ID_src,    # Changed from PMCID to relative dataset ID. Use dataset[entry["src_id"]]["data"]["pmcid"]
+        "has_component": ref_metadata["has_component"],
+        "has_component_source": deepcopy(ref_metadata["has_component"]),    # Copy is kept for weighting of omitting mutations vs truly absent components (absent from source). ! May not be necessary if ["mut_severity"]["component"] infers this with NULLs. (never modified or always absent components default to NULL scores)
+        "mut_code": 0b00000000, # Describes specific mutations.
+        "mut_labels": [],
+        "mut_severity": {
+            "entire": [True, S.REAL],   # Default holistic score to True
+            "format": {
+                style: None for style in FormatStyle    # Initialize style scores but leave NULL for bake.
+            },
+            "component": {
+                comp: ([True, S.REAL] if ref_metadata["has_component"][comp] else None) for comp in ReferenceComponent  # Default component scores to True, but set nonexistent components to NULL
+            }
         }
+        "reference": {},        # All format styles generated at baking step. 
+        "data": ref_data
     }
 
 # Scores are in two parts:
@@ -55,12 +63,14 @@ def make_dataset(refdata_list, *, v=False):
     return dataset
 
 def bake_dsentry(entry):
-    entry["format"] = Formats.build_all(entry["data"])
+    entry["reference"] = Formats.build_all(entry["data"])
 #    for form in entry["format"]    @TODO AND with refdata COMPONENTS (once that's synced with mutations)
-    entry["mutlabels"] = EntryMutator.explain_mutcode(entry["mutcode"])
+
+# Should severity be higher or lower numbers? Probably higher, since it's multiplied by weight. Although it might not matter either way, as long as consistent. Higher is more intuitive though.
+    entry["mut_labels"] = EntryMutator.explain_mutcode(entry["mut_code"])
     # Averaging holistic score
-    c_scores = {component: entry["scores"]["component"][component] for component in ReferenceComponent if entry["scores"]["component"][component]} # Components with existing scores in the dsentry.
-    score = entry["scores"]["holistic_complete"]
+    c_scores = {component: entry["mut_severity"]["entire"][component] for component in ReferenceComponent if entry["mut_severity"]["component"][component]} # Components with existing scores in the dsentry.
+    score = entry["mut_severity"]["entire"]
     classes, confidences = zip(*[c_scores[c] for c in c_scores])    # Lists of all classification bools and confidence values for all components.
     score[0] = classes and all(classes)                             # AND every class           @TODO May want to weight these somehow? Or should even the tiniest typo make it "false"? If so, then the binary score means a slightly different thing than confidence. Probably good that way? Maybe not, a confusing case would be a False (invalid) class due to a type but a very high (.95) confidence value. It would make sense on the component level (since we shouldn't set default conf values above .5), but not when maintaining that negative bool for the average. ANDing booleans is not the same as averaging. Do we even need the True/False at this step? Probably, something to mark the mutation. Otherwise setting the suggested confidences will be tricky and precise, we open ourselves up to clearly mutated/hallucinated references being marked True when the average works out > .5
     score[1] = sum(confidences)/len(confidences)                    # Average all confidences   ... probably need a zero check here ...
@@ -138,16 +148,18 @@ class EntryMutator:
     # Sets mutation flags, adjusts component scores.
     @classmethod
     def _flag(cls, ds_entry, component, mutation):
-        ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MUTFLAG[component][mutation]
+        ds_entry["mut_code"] = ds_entry["mut_code"] | cls._MUTFLAG[component][mutation]
+        
         # Flag the component as EXISTING or NOT EXISTING depending on mutation type:
         if mutation in (M.HALLUCINATION, M.MISMATCH): ds_entry["data"]["_meta"]["has_component"][component] = True      # @TODO Bring in gabe's omission stuff, then do the ANDing with reference specific component data in the bake.
         elif mutation in (M.OMISSION): ds_entry["data"]["_meta"]["has_component"][component] = False
+        
         # Lower or introduce score + severity class 
-        print(ds_entry["scores"]["component"][component])
-        if not ds_entry["scores"]["component"][component] or ds_entry["scores"]["component"][component][1] > cls._MUTCONF[component][mutation]:
-            print(ds_entry["scores"]["component"][component])
-            ds_entry["scores"]["component"][component] = (False, cls._MUTCONF[component][mutation])
-            print(ds_entry["scores"]["component"][component])
+        #print(ds_entry["scores"]["component"][component])
+        if not ds_entry["mut_severity"]["component"][component] or ds_entry["mut_severity"]["component"][component][1] > cls._MUTCONF[component][mutation]:
+            #print(ds_entry["scores"]["component"][component])
+            ds_entry["mut_severity"]["component"][component] = (False, cls._MUTCONF[component][mutation])
+            #print(ds_entry["scores"]["component"][component])
 
     # Return deepcopy of random item from collection.
     @staticmethod
@@ -238,7 +250,7 @@ class EntryMutator:
             ds_entry["data"]["journal"]["volume"] = random.choice([v for v in range(int(vol*.5), int(vol*1.5)) if v != vol]) # Arbitrary. Randomization range is the volume +/- half
         else:
             ds_entry["data"]["journal"]["volume"] = random.randint(0,500)
-            print(f" ! empty vol in {ds_entry["id"]} {ds_entry["src_id"]}, setting to niave random: {ds_entry["data"]["journal"]["volume"]}")
+            print(f" ! empty vol in {ds_entry["id"]} {ds_entry["id_src"]}, setting to niave random: {ds_entry["data"]["journal"]["volume"]}")
         self._flag(ds_entry, C.JOURNAL_VOLUME, M.HALLUCINATION)
         return ds_entry
 
@@ -251,7 +263,7 @@ class EntryMutator:
             #        ALTERNATIVE would be to fail around it, and put some random number anyways.
             #ds_entry["data"]["journal"]["issue"] = random.choice(self._COMPONENTS["journal"])["issue"] # !! It must be that the same empties exist in the compset. SO, just do a random number.
             ds_entry["data"]["journal"]["issue"] = random.randint(0,1500)
-            print(f" ! empty iss in {ds_entry["id"]} {ds_entry["src_id"]}, setting to niave random: {ds_entry["data"]["journal"]["issue"]}")
+            print(f" ! empty iss in {ds_entry["id"]} {ds_entry["id_src"]}, setting to niave random: {ds_entry["data"]["journal"]["issue"]}")
         self._flag(ds_entry, C.JOURNAL_ISSUE, M.HALLUCINATION)
         return ds_entry
 
