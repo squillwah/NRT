@@ -309,7 +309,7 @@ class Formats:
     # Defining which components are present by default inside a given format.
     # Has no effect on the rendering of the format. 
     # Is ANDed database COMPONENTS array, for accurate absent component marking.
-    _FORMAT_COMPONENTS = {
+    _FORMAT_REFERENCE_COMPONENTS = {
         FormatStyle.VANCOUVER: {
             ReferenceComponent.AUTHORS          : True,
             ReferenceComponent.TITLE            : True,
@@ -358,16 +358,31 @@ class Formats:
     }
 
     # For omissions, just mark them in the dataset. Make sure to set it false in REFERENCES metacomponent.
+    # Omission are handled before this, by setting the ds element to None. Any missing components are caught and not added here.
 
     # Return dict of formatted reference and bools for the components contained.
     @classmethod
-    def build(cls, refdata, style):
-        elements = {element: ElementBuilder.build(element)(refdata, cls._STYLE_CONFIG[style][element]) for element in CitationElement}    # @TODO factor the omissions into this.
-        return {"citation": cls._LAYOUT[style](**elements), "has_component": cls._FORMAT_COMPONENTS[style].copy()}    # ! @TODO To be ANDed with calling refdata database component info, for true accuracy.
+    def build(cls, refdata, has_component, style):
+        print(refdata)
+        # Build each CitationElement according to style
+        elements = {
+            element: ElementBuilder.build(element)(refdata, cls._STYLE_CONFIG[style][element]) for element in CitationElement
+        }
+        # Determine contained components
+        has_components = {
+            rc: (cls._FORMAT_REFERENCE_COMPONENTS[style][rc] and has_component[rc]) for rc in cls._FORMAT_REFERENCE_COMPONENTS[style]
+        }
+        # Combine elements according to style
+        citation = cls._LAYOUT[style](**elements)
+
+        return {
+            "citation": citation,
+            "has_component": has_components
+        }
 
     @classmethod
-    def build_all(cls, refdata):
-        return {style: cls.build(refdata, style) for style in FormatStyle}
+    def build_all(cls, refdata, has_component):
+        return {style: cls.build(refdata, has_component, style) for style in FormatStyle}
 
 if __name__ == "__main__":
     import h

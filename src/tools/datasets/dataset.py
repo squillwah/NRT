@@ -63,7 +63,10 @@ def make_dataset(refdata_source, duplicate=0):
 # Compile references in format styles.
 # Average mutation severity scores.
 def bake_dsentry(entry):
-    entry["reference"] = Formats.build_all(entry["data"])
+    entry["reference"] = Formats.build_all(entry["data"], entry["has_component"])   # Pass included components, so formatters can accurately return has_component of the citation.
+     
+
+
 #    for form in entry["format"]    @TODO AND with refdata COMPONENTS (once that's synced with mutations)
 
 # Should severity be higher or lower numbers? Probably higher, since it's multiplied by weight. Although it might not matter either way, as long as consistent. Higher is more intuitive though.
