@@ -14,19 +14,19 @@ from tools.datasets.mutators import EntryMutator, SeverityClass
 # The way to actually do it is sum the priorities, and divide by that, not the total count of references
 
 COMPONENT_WEIGHT_PRIORITY = {
-    ReferenceComponent.AUTHORS: 10,
-    ReferenceComponent.TITLE: 10,
-    ReferenceComponent.JOURNAL_NAME: 10,
-    ReferenceComponent.JOURNAL_VOLUME: 5,
-    ReferenceComponent.JOURNAL_ISSUE: 3,
-    ReferenceComponent.JOURNAL_PAGE: 3,
-    ReferenceComponent.ELOCATOR: 3,
+    ReferenceComponent.AUTHORS: 5,
+    ReferenceComponent.TITLE: 5,
+    ReferenceComponent.JOURNAL_NAME: 5,
+    ReferenceComponent.JOURNAL_VOLUME: 4,
+    ReferenceComponent.JOURNAL_ISSUE: 2,
+    ReferenceComponent.JOURNAL_PAGE: 1,
+    ReferenceComponent.ELOCATOR: 2,
     ReferenceComponent.PUBLICATION_DATE: 3,
-    ReferenceComponent.DOI: 8,
-    ReferenceComponent.URL_ABSTRACT: 5,
-    ReferenceComponent.URL_DIRECT: 5,
-    ReferenceComponent.PMCID: 7,
-    ReferenceComponent.PMID: 7
+    ReferenceComponent.DOI: 4,
+    ReferenceComponent.URL_ABSTRACT: 3,
+    ReferenceComponent.URL_DIRECT: 3,
+    ReferenceComponent.PMCID: 3,
+    ReferenceComponent.PMID: 3
 }
 
 # The layout of dataset entries.
@@ -78,8 +78,9 @@ def bake_dsentry(entry):
     c_severities = {component: entry["mut_severity"]["component"][component] for component in ReferenceComponent if entry["mut_severity"]["component"][component]} # Components with existing scores in the dsentry.
     severity = entry["mut_severity"]["entire"]
     severity[0] = all(c_severities[c][0] for c in c_severities)
-    normalize = 1/len(c_severities) # By number of components present, added or mutated or anything.
-    severity[1] = sum([c_severities[c][1]*normalize*COMPONENT_WEIGHT_RATIOS[c] for c in c_severities])/len(c_severities)
+    normalize = sum([COMPONENT_WEIGHT_PRIORITY[c] for c in c_severities])        # by sum of priorities     ##### By number of components present, added or mutated or anything.
+    weights = {c: COMPONENT_WEIGHT_PRIORITY[c]/normalize for c in c_severities}
+    severity[1] = sum([c_severities[c][1]*weights[c] for c in c_severities])#/len(c_severities)
 #    for form in entry["format"]    @TODO AND with refdata COMPONENTS (once that's synced with mutations)
     print(severity)
 # Should severity be higher or lower numbers? Probably higher, since it's multiplied by weight. Although it might not matter either way, as long as consistent. Higher is more intuitive though.
