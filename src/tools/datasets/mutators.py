@@ -424,7 +424,8 @@ class EntryMutator:
     # Apply a mutation.
     def mutate(self, ds_entry, component, mutation): 
         # @TODO Add overwrite avoidance here (checking bitcode against bitflag[component][mutation]) or in the curves definition?
-        success = self._MUTATION_DISPATCH[component][mutation](ds_entry)
+        mutator = self._MUTATION_DISPATCH[component][mutation].__get__(self)
+        success = mutator(ds_entry)
         if success: self._flag(ds_entry, component, mutation)
         return success
     
