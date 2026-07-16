@@ -72,7 +72,7 @@ class EntryMutator:
             (M.HALLUCINATION,   S.MAJOR_ERROR),
             (M.OMISSION,        S.MINOR_ERROR)
         ],
-        C.PUBLICATION_DATE: [                       # @TODO If we put in a check before applying a mutation (if entry["data"]["pub"] == none), that wouldn't work... Has_component should work right? One rule should be: don't apply omissions if has_component, and don't apply any other errors if has omission? How might that effect the dataset in an unexpected way?
+        C.PUBLICATION_DATE: [                       # @TODO If we put in a check before applying a mutation (if entry["ref_data"]["pub"] == none), that wouldn't work... Has_component should work right? One rule should be: don't apply omissions if has_component, and don't apply any other errors if has omission? How might that effect the dataset in an unexpected way?
             (M.HALLUCINATION,   S.MAJOR_ERROR),
             (M.OMISSION,        S.AMBIGUOUS_ERROR)
         ],                                                                    
@@ -126,7 +126,7 @@ class EntryMutator:
         
         # Flag the component as EXISTING or NOT EXISTING depending on mutation type:
         if mutation in (M.HALLUCINATION, M.MISMATCH): ds_entry["has_component"][component] = True      # @TODO Bring in gabe's omission stuff, then do the ANDing with reference specific component data in the bake.
-        #elif mutation in (M.OMISSION): ds_entry["data"]["_meta"]["has_component"][component] = False
+        #elif mutation in (M.OMISSION): ds_entry["ref_data"]["_meta"]["has_component"][component] = False
         
         # Lower or introduce score + severity class 
         #print(ds_entry["scores"]["component"][component])
@@ -155,7 +155,7 @@ class EntryMutator:
         #  - Compounding typo's follow the natural halving of the probability (2: 1/8, 3: 1/16, so on)
         #  - Fatfingers are twice as likely as swaps (moved into typofier.fatswap)
         TYPO_CHANCE = 1/3
-        authors = ds_entry["data"]["authors"]
+        authors = ds_entry["ref_data"]["authors"]
         for author_i, name in enumerate(authors):
             first_three_guarantee = author_i > 2
             while random.random() <= TYPO_CHANCE or not first_three_guarantee:
@@ -168,22 +168,24 @@ class EntryMutator:
         return True
 
     def _author_shuffle(self, ds_entry):
-        random.shuffle(ds_entry["data"]["authors"])
+        random.shuffle(ds_entry["ref_data"]["authors"])
         return True
 
     def _author_mismatch(self, ds_entry):
-        ds_entry["data"]["authors"] = self._randcopy(self._COMPONENTS["authors"])
+        ds_entry["ref_data"]["authors"] = self._randcopy(self._COMPONENTS["authors"])
         return True
 
     def _author_hallucination(self, ds_entry):
         # A random sample of authors, from 1 to len(authors)+5 < len(fake_authors)
-        l1, l2 = len(ds_entry["data"]["authors"]) + 5, len(self._FAKE_AUTHORS)
-        ds_entry["data"]["authors"] = deepcopy(random.sample(self._FAKE_AUTHORS, random.randint(1, l1 if l1 < l2 else l2)))
+        l1, l2 = len(ds_entry["ref_data"]["authors"]) + 5, len(self._FAKE_AUTHORS)
+        ds_entry["ref_data"]["authors"] = deepcopy(random.sample(self._FAKE_AUTHORS, random.randint(1, l1 if l1 < l2 else l2)))
         return True
 
     def _author_omission(self, ds_entry):
-        ds_entry["data"]["authors"] = None
-        return True
+        authors = ds_entry["ref_data"]["authors"]
+        omittable = authors is not None and len(authors) > 0
+        if omittable: ds_entry["ref_data"]["authors"] = None
+        return omittable
     
     _MUTATION_DISPATCH[C.AUTHORS][M.TYPO] = _author_typo
     _MUTATION_DISPATCH[C.AUTHORS][M.SHUFFLE] = _author_shuffle
@@ -192,20 +194,21 @@ class EntryMutator:
     _MUTATION_DISPATCH[C.AUTHORS][M.OMISSION] = _author_omission
 
     def _title_typo(self, ds_entry):
-        ds_entry["data"]["title"] = T.typofy(ds_entry["data"]["title"])
+        ds_entry["ref_data"]["title"] = T.typofy(ds_entry["ref_data"]["title"])
         return True
     
     def _title_mismatch(self, ds_entry):
-        ds_entry["data"]["title"] = self._randcopy(self._COMPONENTS["title"])
+        ds_entry["ref_data"]["title"] = self._randcopy(self._COMPONENTS["title"])
         return True
     
     def _title_hallucination(self, ds_entry):
-        ds_entry["data"]["title"] = self._randcopy(self._FAKE_TITLES)
+        ds_entry["ref_data"]["title"] = self._randcopy(self._FAKE_TITLES)
         return True
     
     def _title_omission(self, ds_entry):
-        ds_entry["data"]["title"] = None
-        return True
+        omittable = bool(ds_entry["ref_data"]["title"])
+        if omittable: ds_entry["ref_data"]["title"] = None
+        return omittable
     
     _MUTATION_DISPATCH[C.TITLE][M.TYPO] = _title_typo
     _MUTATION_DISPATCH[C.TITLE][M.MISMATCH] = _title_mismatch
@@ -213,21 +216,22 @@ class EntryMutator:
     _MUTATION_DISPATCH[C.TITLE][M.OMISSION] = _title_omission
 
     def _journal_name_typo(self, ds_entry):
-        ds_entry["data"]["journal"]["name"]["short"] = T.typofy(ds_entry["data"]["journal"]["name"]["short"])
-        ds_entry["data"]["journal"]["name"]["full"] = T.typofy(ds_entry["data"]["journal"]["name"]["full"])
+        ds_entry["ref_data"]["journal"]["name"]["short"] = T.typofy(ds_entry["ref_data"]["journal"]["name"]["short"])
+        ds_entry["ref_data"]["journal"]["name"]["full"] = T.typofy(ds_entry["ref_data"]["journal"]["name"]["full"])
         return True
     
     def _journal_name_mismatch(self, ds_entry):
-        ds_entry["data"]["journal"]["name"] = self._randcopy([jname for jname in self._COMPONENTS["sets"]["journal_name"] if jname != ds_entry["data"]["journal"]["name"]])
+        ds_entry["ref_data"]["journal"]["name"] = self._randcopy([jname for jname in self._COMPONENTS["sets"]["journal_name"] if jname != ds_entry["ref_data"]["journal"]["name"]])
         return True
     
     def _journal_name_hallucination(self, ds_entry):
-        ds_entry["data"]["journal"]["name"] = self._randcopy(self._FAKE_JOURNALS)
+        ds_entry["ref_data"]["journal"]["name"] = self._randcopy(self._FAKE_JOURNALS)
         return True
     
     def _journal_name_omission(self, ds_entry):
-        ds_entry["data"]["journal"]["name"] = None
-        return True
+        omittable = bool(ds_entry["ref_data"]["journal"]["name"])
+        if omittable: ds_entry["ref_data"]["journal"]["name"] = None
+        return omittable
     
     _MUTATION_DISPATCH[C.JOURNAL_NAME][M.TYPO] = _journal_name_typo
     _MUTATION_DISPATCH[C.JOURNAL_NAME][M.MISMATCH] = _journal_name_mismatch
@@ -235,33 +239,35 @@ class EntryMutator:
     _MUTATION_DISPATCH[C.JOURNAL_NAME][M.OMISSION] = _journal_name_omission
 
     def _journal_volume_hallucination(self, ds_entry):
-        if (vol := ds_entry["data"]["journal"]["volume"]):  # Not all references contain vol/iss data.
+        if (vol := ds_entry["ref_data"]["journal"]["volume"]):  # Not all references contain vol/iss data.
             vol = int(vol)
-            ds_entry["data"]["journal"]["volume"] = random.choice([v for v in range(int(vol*.5), int(vol*1.5)) if v != vol]) # Arbitrary. Randomization range is the volume +/- half
+            ds_entry["ref_data"]["journal"]["volume"] = random.choice([v for v in range(int(vol*.5), int(vol*1.5)) if v != vol]) # Arbitrary. Randomization range is the volume +/- half
         else:
-            ds_entry["data"]["journal"]["volume"] = random.randint(0,500)
-            print(f" ! empty vol in {ds_entry["id"]} {ds_entry["id_source"]}, setting to niave random: {ds_entry["data"]["journal"]["volume"]}")
+            ds_entry["ref_data"]["journal"]["volume"] = random.randint(0,500)
+            print(f" ! empty vol in {ds_entry["id"]} {ds_entry["id_source"]}, setting to niave random: {ds_entry["ref_data"]["journal"]["volume"]}")
         return True
     
     def _journal_volume_omission(self, ds_entry):
-        ds_entry["data"]["journal"]["volume"] = None
-        return True
+        omittable = bool(ds_entry["ref_data"]["journal"]["volume"])
+        if omittable: ds_entry["ref_data"]["journal"]["volume"] = None
+        return omittable
     
     _MUTATION_DISPATCH[C.JOURNAL_VOLUME][M.HALLUCINATION] = _journal_volume_hallucination
     _MUTATION_DISPATCH[C.JOURNAL_VOLUME][M.OMISSION] = _journal_volume_omission
 
     def _jiss_hallucination(self, ds_entry):
-        if (iss := ds_entry["data"]["journal"]["issue"]):
+        if (iss := ds_entry["ref_data"]["journal"]["issue"]):
             iss = int(iss)
-            ds_entry["data"]["journal"]["issue"] = random.choice([i for i in range(int(iss*.5), int(iss*1.5)) if i != iss])
+            ds_entry["ref_data"]["journal"]["issue"] = random.choice([i for i in range(int(iss*.5), int(iss*1.5)) if i != iss])
         else:
-            ds_entry["data"]["journal"]["issue"] = random.randint(0,1500)
-            print(f" ! empty iss in {ds_entry["id"]} {ds_entry["id_source"]}, setting to niave random: {ds_entry["data"]["journal"]["issue"]}")
+            ds_entry["ref_data"]["journal"]["issue"] = random.randint(0,1500)
+            print(f" ! empty iss in {ds_entry["id"]} {ds_entry["id_source"]}, setting to niave random: {ds_entry["ref_data"]["journal"]["issue"]}")
         return True
     
     def _jiss_omission(self, ds_entry):
-        ds_entry["data"]["journal"]["issue"] = None
-        return True
+        omittable = bool(ds_entry["ref_data"]["journal"]["issue"])
+        if omittable: ds_entry["ref_data"]["journal"]["issue"] = None
+        return omittable
     
     _MUTATION_DISPATCH[C.JOURNAL_ISSUE][M.HALLUCINATION] = _jiss_hallucination
     _MUTATION_DISPATCH[C.JOURNAL_ISSUE][M.OMISSION] = _jiss_omission
@@ -269,29 +275,32 @@ class EntryMutator:
     def _journal_page_hallucination(self, ds_entry):
         spage = random.randint(23, 1184)    # Completely arbitrary randomness.
         length = random.randint(3, 51)
-        ds_entry["data"]["journal"]["page"]["start"] = spage
-        ds_entry["data"]["journal"]["page"]["end"] = spage+length
+        ds_entry["ref_data"]["journal"]["page"]["start"] = spage
+        ds_entry["ref_data"]["journal"]["page"]["end"] = spage+length
         return True
     
     def _journal_page_omission(self, ds_entry):
-        ds_entry["data"]["journal"]["page"] = None
-        return True
+        page = ds_entry["ref_data"]["journal"]["page"] 
+        omittable = page is not None and (bool(page["start"]) or bool(page["end"])) # Because page is a dict of two strings.
+        if omittable: ds_entry["ref_data"]["journal"]["page"] = None
+        return omittable
     
     _MUTATION_DISPATCH[C.JOURNAL_PAGE][M.HALLUCINATION] = _journal_page_hallucination
     _MUTATION_DISPATCH[C.JOURNAL_PAGE][M.OMISSION] = _journal_page_omission
 
     def _elocator_mismatch(self, ds_entry):
-        ds_entry["data"]["journal"]["elocator"] = self._randcopy([eloc for eloc in self._COMPONENTS["sets"]["journal_elocator"] if eloc != ds_entry["data"]["journal"]["elocator"]])
+        ds_entry["ref_data"]["journal"]["elocator"] = self._randcopy([eloc for eloc in self._COMPONENTS["sets"]["journal_elocator"] if eloc != ds_entry["ref_data"]["journal"]["elocator"]])
         return True
 
     def _elocator_hallucination(self, ds_entry):
         num = str(random.randint(1, 999999))
-        ds_entry["data"]["journal"]["elocator"] = "e"+"0"*(6-len(num))+num
+        ds_entry["ref_data"]["journal"]["elocator"] = "e"+"0"*(6-len(num))+num
         return True
     
     def _elocator_omission(self, ds_entry):
-        ds_entry["data"]["journal"]["elocator"] = None
-        return True
+        omittable = bool(ds_entry["ref_data"]["journal"]["elocator"])
+        if omittable: ds_entry["ref_data"]["journal"]["elocator"] = None
+        return omittable
     
     _MUTATION_DISPATCH[C.ELOCATOR][M.MISMATCH] = _elocator_mismatch
     _MUTATION_DISPATCH[C.ELOCATOR][M.HALLUCINATION] = _elocator_hallucination
@@ -299,8 +308,8 @@ class EntryMutator:
 
     def _publication_date_hallucination(self, ds_entry, *, y=True, m=True, d=True):
         if y or m or d:
-            pub = ds_entry["data"]["pub"]
-            epub = ds_entry["data"]["epub"]
+            pub = ds_entry["ref_data"]["pub"]
+            epub = ds_entry["ref_data"]["epub"]
             if y:
                 pub["y"] = random.randint(*self._RAND_YEAR_RANGE)
                 epub["y"] = pub["y"]
@@ -314,15 +323,17 @@ class EntryMutator:
         return False
 
     def _publication_date_omission(self, ds_entry):
-        ds_entry["data"]["pub"] = None      # Both pubs should really be under the same thing ...
-        ds_entry["data"]["epub"] = None
-        return True
+        omittable = bool(ds_entry["ref_data"]["pub"]) or bool(ds_entry["ref_data"]["epub"])
+        if omittable:
+            ds_entry["ref_data"]["pub"] = None      # Both pubs should really be under the same thing ...
+            ds_entry["ref_data"]["epub"] = None
+        return omittable
     
     _MUTATION_DISPATCH[C.PUBLICATION_DATE][M.HALLUCINATION] = _publication_date_hallucination
     _MUTATION_DISPATCH[C.PUBLICATION_DATE][M.OMISSION] = _publication_date_omission
    
     def _doi_typo(self, ds_entry):
-        doi = ds_entry["data"]["doi"]
+        doi = ds_entry["ref_data"]["doi"]
         doi["prefix"] = T.typo_swapletter(doi["prefix"], random.choice([i for i, char in enumerate(doi["prefix"]) if char != "0"])) # Swap one char in the prefix (not zeros).
         doi["suffix"] = T.typofy(doi["suffix"]) # Just run the standard typo procedure on the suffix.
         return True
@@ -330,20 +341,22 @@ class EntryMutator:
     # @TODO Better randomization of suffix vs prefix mismatching / hallucinating?
 
     def _doi_mismatch(self, ds_entry):
-        ds_entry["data"]["doi"]["prefix"] = self._randcopy([p for p in self._COMPONENTS["sets"]["doi_prefix"] if p != ds_entry["data"]["doi"]["prefix"]])
-        ds_entry["data"]["doi"]["suffix"] = self._randcopy([s for s in self._COMPONENTS["sets"]["doi_suffix"] if s != ds_entry["data"]["doi"]["suffix"]])
+        ds_entry["ref_data"]["doi"]["prefix"] = self._randcopy([p for p in self._COMPONENTS["sets"]["doi_prefix"] if p != ds_entry["ref_data"]["doi"]["prefix"]])
+        ds_entry["ref_data"]["doi"]["suffix"] = self._randcopy([s for s in self._COMPONENTS["sets"]["doi_suffix"] if s != ds_entry["ref_data"]["doi"]["suffix"]])
         return True
         
     def _doi_hallucination(self, ds_entry):
         # 10.random1000->9999 + .random0->10or100or1000 (0-2x)
-        ds_entry["data"]["doi"]["prefix"] = ".".join(["10", str(random.randint(1000, 9999))] + [str(random.randint(0, 10**random.randint(1, 3))) for i in range(random.randint(0,2))])
+        ds_entry["ref_data"]["doi"]["prefix"] = ".".join(["10", str(random.randint(1000, 9999))] + [str(random.randint(0, 10**random.randint(1, 3))) for i in range(random.randint(0,2))])
         # 1-3 groups of 3 to 8 random numbers and letters
-        ds_entry["data"]["doi"]["suffix"] = "-".join(["".join([random.choice("abcdefghijklmnopqrstuvwxyz,./12345678900987654321") for i in range(random.randint(3, 8))]) for i in range(random.randint(1, 3))])
+        ds_entry["ref_data"]["doi"]["suffix"] = "-".join(["".join([random.choice("abcdefghijklmnopqrstuvwxyz,./12345678900987654321") for i in range(random.randint(3, 8))]) for i in range(random.randint(1, 3))])
         return True
 
     def _doi_omission(self, ds_entry):
-        ds_entry["data"]["doi"] = None
-        return True
+        doi = ds_entry["ref_data"]["doi"]
+        omittable = doi is not None and (bool(doi["prefix"]) or bool(doi["suffix"])) # Because DOI is a dictionary of two strings.
+        if omittable: ds_entry["ref_data"]["doi"] = None
+        return omittable
     
     _MUTATION_DISPATCH[C.DOI][M.TYPO] = _doi_typo
     _MUTATION_DISPATCH[C.DOI][M.MISMATCH] = _doi_mismatch
@@ -355,7 +368,7 @@ class EntryMutator:
     def _pmid_typo(self, ds_entry):
         # Only one typo.
         # 50/50 chance between positional swap or ++/-- error.
-        ID = ds_entry["data"]["pmid"]
+        ID = ds_entry["ref_data"]["pmid"]
         li = random.randrange(0, len(ID))
         if random.random() <= .5:
             ID = T.typo_swapletter(ID, li)
@@ -365,19 +378,20 @@ class EntryMutator:
             elif num == 0: num = num + 1
             else: num = num + random.choice([-1,1])
             ID = ID[0:li]+str(num)+ID[li+1:] if li < len(ID)-1 else ID[0:li]+str(num)
-        ds_entry["data"]["pmid"] = ID
+        ds_entry["ref_data"]["pmid"] = ID
         return True
 
     def _pmid_mismatch(self, ds_entry):
-        ds_entry["data"]["pmid"] = self._randcopy([ID for ID in self._COMPONENTS["pmid"] if ID != ds_entry["data"]["pmid"]])
+        ds_entry["ref_data"]["pmid"] = self._randcopy([ID for ID in self._COMPONENTS["pmid"] if ID != ds_entry["ref_data"]["pmid"]])
         return True
 
     def _pmid_hallucination(self, ds_entry):
-        ds_entry["data"]["pmid"] = str(random.randint(1, 999999999)) # Up to 9 digits.
+        ds_entry["ref_data"]["pmid"] = str(random.randint(1, 999999999)) # Up to 9 digits.
         return True
 
     def _pmid_omission(self, ds_entry):
-        ds_entry["data"]["pmid"] = None
+        omittable = bool(ds_entry["ref_data"]["pmid"])
+        if omittable: ds_entry["ref_data"]["pmid"] = None
         return True
     
     _MUTATION_DISPATCH[C.PMID][M.TYPO] = _pmid_typo
@@ -387,7 +401,7 @@ class EntryMutator:
 
     # Basically all exact same.
     def _pmcid_typo(self, ds_entry):
-        ID = ds_entry["data"]["pmcid"]
+        ID = ds_entry["ref_data"]["pmcid"]
         li = random.randrange(3, len(ID))   # Avoid PMC prefix
         if random.random() <= .5:
             ID = T.typo_swapletter(ID, li)
@@ -397,20 +411,21 @@ class EntryMutator:
             elif num == 0: num = num + 1
             else: num = num + random.choice([-1,1])
             ID = ID[0:li]+str(num)+ID[li+1:] if li < len(ID)-1 else ID[0:li]+str(num)
-        ds_entry["data"]["pmcid"] = ID
+        ds_entry["ref_data"]["pmcid"] = ID
         return True
     
     def _pmcid_mismatch(self, ds_entry):
-        ds_entry["data"]["pmcid"] = self._randcopy([ID for ID in self._COMPONENTS["pmcid"] if ID != ds_entry["data"]["pmcid"]])
+        ds_entry["ref_data"]["pmcid"] = self._randcopy([ID for ID in self._COMPONENTS["pmcid"] if ID != ds_entry["ref_data"]["pmcid"]])
         return True
 
     def _pmcid_hallucination(self, ds_entry):
-        ds_entry["data"]["pmcid"] = "PMC"+str(random.randint(1, 99999999)) # Up to 8 digits. Plus PMC prefix.
+        ds_entry["ref_data"]["pmcid"] = "PMC"+str(random.randint(1, 99999999)) # Up to 8 digits. Plus PMC prefix.
         return True
     
     def _pmcid_omission(self, ds_entry):
-        ds_entry["data"]["pmcid"] = None
-        return True
+        omittable = bool(ds_entry["ref_data"]["pmcid"])
+        if omittable: ds_entry["ref_data"]["pmcid"] = None    # Doing none checks on data before running omission. Refdata inits to either null or "" depending on component, but both null and "" are Falsey so it should work out always. Return false if omission couldn't apply (component already absent, nothing to omit).
+        return omittable
     
     _MUTATION_DISPATCH[C.PMCID][M.TYPO] = _pmcid_typo
     _MUTATION_DISPATCH[C.PMCID][M.MISMATCH] = _pmcid_mismatch
