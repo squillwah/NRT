@@ -80,17 +80,7 @@ def write_all_csv(inputted_json):
 #         reader = csv.reader(file)
 #         csv_lines = [row for row in reader]
 
-def create_avg_list(value_list, headers_list, divisor_factor, models):
-    for i, element in enumerate(value_list):
-        for cell in element:
-            cell = cell / divisor_factor
-        # value_list.insert(i, models[i])
 
-    headers_list.remove(headers_list[1])
-
-    value_list.insert(0, headers_list)
-
-    return value_list
 
 
 
@@ -104,7 +94,8 @@ def write_xlsx():
 
     inputted_csv = input("Please enter the csv file path: ")
 
-    avg_total_divisor = 0
+    avg_total_divisor_acc = 0
+    avg_total_divisor_conf = 0
 
     avg_accuracy = []
     avg_confidence = []
@@ -114,7 +105,6 @@ def write_xlsx():
 
     while inputted_csv != "end":
 
-        avg_total_divisor += 1
 
         burner_list = []
 
@@ -127,10 +117,12 @@ def write_xlsx():
 
 
 
-            # need to fix scope for avg_accuracy_calc and avg_confidence_calc, separate into other lists
 
             if "accuracy" in csv_id:
-                if avg_total_divisor <= 1:
+
+                avg_total_divisor_acc += 1
+
+                if avg_total_divisor_acc <= 1:
                     avg_accuracy.append(csv_lines[0])
                     for k in range(1, len(csv_lines)):
                         avg_accuracy_calc.append(csv_lines[k][2:])
@@ -144,12 +136,12 @@ def write_xlsx():
                 for i, row in enumerate(burner_list):
                     for j , cell in enumerate(row):
                         if "True" in cell:
-                            if avg_total_divisor > 1:
+                            if avg_total_divisor_acc > 1:
                                 avg_accuracy_calc[i][j] += 1
                             else:
                                 avg_accuracy_calc[i][j] = 1
                         elif "False" in cell:
-                            if avg_total_divisor > 1:
+                            if avg_total_divisor_acc > 1:
                                 avg_accuracy_calc[i][j] += 0
                             else:
                                 avg_accuracy_calc[i][j] = 0
@@ -157,18 +149,27 @@ def write_xlsx():
                             continue
 
             elif "confidence" in csv_id:
-                if avg_total_divisor <= 1:
+
+                avg_total_divisor_conf += 1
+
+                if avg_total_divisor_conf <= 1:
                     avg_confidence.append(csv_lines[0])
+
+                    for k in range(1, len(csv_lines)):
+                        avg_confidence_calc.append(csv_lines[k][2:])
+
                     for l in range(1, len(csv_lines)):
                         models.append(csv_lines[l][0])
+
                 for k in range(1, len(csv_lines)):
                     burner_list.append(csv_lines[k][2:])
+
                 for i, row in enumerate(burner_list):
                     for j, cell in enumerate(row):
-                        if avg_total_divisor > 1:
-                            avg_confidence_calc[i][j] += cell
+                        if avg_total_divisor_conf > 1:
+                            avg_confidence_calc[i][j] += float(cell)
                         else:
-                            avg_confidence_calc[i][j] = cell
+                            avg_confidence_calc[i][j] = float(cell)
 
 
 
@@ -205,10 +206,10 @@ def write_xlsx():
         inputted_csv = input("Enter another csv file path or enter 'end': ")
 
 
+    xlsx_header.remove(xlsx_header[1])
 
-
-    avg_accuracy_list = create_avg_list(avg_accuracy_calc, xlsx_header, avg_total_divisor, models)
-    avg_confidence_list = create_avg_list(avg_confidence_calc, xlsx_header, avg_total_divisor, models)
+    avg_accuracy_list = create_avg_list(avg_accuracy_calc, xlsx_header, avg_total_divisor_acc, models)
+    avg_confidence_list = create_avg_list(avg_confidence_calc, xlsx_header, avg_total_divisor_conf, models)
 
     # ---------------- Make avg_accuracy sheet --------------------------------
 
@@ -279,6 +280,17 @@ def write_xlsx():
 
     wb.save(filename="full_results.xlsx")
 
+
+def create_avg_list(value_list, headers_list, divisor_factor, models):
+    for i, element in enumerate(value_list):
+        for k, cell in enumerate(element):
+            value_list[i][k] = cell / divisor_factor
+        value_list[i].insert(0, models[i])
+
+
+    value_list.insert(0, headers_list)
+
+    return value_list
 # def make_sheet(input_list, sheet_name):
 #     avg_header = input_list[0]
 #
@@ -330,15 +342,15 @@ def write_xlsx():
     # wb.save(filename="output.xlsx")
 
 
-test_data = [
-    [{"Overall": "Fake", "Author": "Real", "Journal": "Real", "Publish Date": "Fake", "Author Order": "Real", "Publisher": "Real", "Percentage of Confidence": 95.00001, "Model": "Chat-GPT"},
-    {"Overall": "Fake", "Author": "Real", "Journal": "Real", "Publish Date": "Fake", "Author Order": "Real", "Publisher": "Real", "Percentage of Confidence": 95.00001, "Model": "Gemini"}],
-    [{"Overall": "Real", "Author": "Real", "Journal": "Real", "Publish Date": "Fake", "Author Order": "Real", "Publisher": "Real", "Percentage of Confidence": 95.00001, "Model": "Chat-GPT"},
-    {"Overall": "Fake", "Author": "Real", "Journal": "Real", "Publish Date": "Fake", "Author Order": "Real", "Publisher": "Real", "Percentage of Confidence": 95.00001, "Model": "Gemini"}]
-]
+test_data = [[1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+test_avg_accuracy = ['model', 'format', 'authors', 'title', 'journal_name', 'journal_volume', 'journal_issue', 'journal_page', 'elocator', 'publication_date', 'doi', 'pmcid', 'pmid', 'REFERENCE']
+test_models = ['deepseek/deepseek-v4-flash', 'nvidia/nemotron-3-super-120b-a12b:free', 'xiaomi/mimo-v2.5', 'google/gemini-3-flash-preview']
+
+
 
 pmids = ["65sd4f3654f", "4d441dsf44"]
 
 if __name__ == "__main__":
+    # create_avg_list(test_data, test_avg_accuracy, 1, test_models)
     write_xlsx()
     # write_all_csv("all.json")
