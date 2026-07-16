@@ -13,20 +13,22 @@ from tools.datasets.mutators import EntryMutator, SeverityClass
 
 # The way to actually do it is sum the priorities, and divide by that, not the total count of references
 
-COMPONENT_WEIGHT_PRIORITY = {
-    ReferenceComponent.AUTHORS: 5,
-    ReferenceComponent.TITLE: 50,
-    ReferenceComponent.JOURNAL_NAME: 5,
-    ReferenceComponent.JOURNAL_VOLUME: 5,
-    ReferenceComponent.JOURNAL_ISSUE: 5,
-    ReferenceComponent.JOURNAL_PAGE: 5,
-    ReferenceComponent.ELOCATOR: 5,
-    ReferenceComponent.PUBLICATION_DATE: 5,
-    ReferenceComponent.DOI: 5,
-    ReferenceComponent.URL_ABSTRACT: 0,
-    ReferenceComponent.URL_DIRECT: 0,
-    ReferenceComponent.PMCID: 5,
-    ReferenceComponent.PMID: 5
+# How important should components (and their validity/mutation severity) be?
+# Note: these weights strictly apply only when components are included. So: don't be afraid to set a high value for something that's both very important and optional (like a DOI).
+COMPONENT_WEIGHTS = {
+    ReferenceComponent.AUTHORS:          1.0,
+    ReferenceComponent.TITLE:            2.0,
+    ReferenceComponent.JOURNAL_NAME:     0.9,
+    ReferenceComponent.JOURNAL_VOLUME:   0.45,
+    ReferenceComponent.JOURNAL_ISSUE:    0.25,
+    ReferenceComponent.JOURNAL_PAGE:     0.3,
+    ReferenceComponent.ELOCATOR:         0.45,
+    ReferenceComponent.PUBLICATION_DATE: 0.45,
+    ReferenceComponent.DOI:              0.9,    # Pretty dang important, if it's included ... If absent, then not important. And the mutation type factors in too... So, an omission mutation on DOI has a severity of COMMON_VARIATION (low), to that'll lower the effect of weight here. Or vice versa. The number will be lower. Conversely, a doi hallucination has max severity of MAJOR_ERROR, so then the numbers would come at full force. The system is making sense?
+    ReferenceComponent.URL_ABSTRACT:     0.75,
+    ReferenceComponent.URL_DIRECT:       0.75,
+    ReferenceComponent.PMCID:            0.75,
+    ReferenceComponent.PMID:             0.75
 }
     
     # @? Why is have less for just title but shouldnt have more cause it is half? Still not sure how weighting works... How say title always be worth half? Can even? Why? want?
@@ -39,20 +41,35 @@ def dsentry(rd, ID=None, ID_src=None):    #, *, ID=None):
         "id": ID,               # Internal ID + original PMCID         IDs now stored as keys in the flat dataset dict. Categories can persist as per component/holistic tags (replacement for "suggested confidence" silliness)
         "id_source": ID_src,    # Changed from PMCID to relative dataset ID. Use dataset[entry["src_id"]]["data"]["pmcid"]
         "has_component": ref_metadata["has_component"],
-        "has_component_source": deepcopy(ref_metadata["has_component"]),    # Copy is kept for weighting of omitting mutations vs truly absent components (absent from source). ! May not be necessary if ["mut_severity"]["component"] infers this with NULLs. (never modified or always absent components default to NULL scores)
+        #"has_component_source": deepcopy(ref_metadata["has_component"]),    # Copy is kept for weighting of omitting mutations vs truly absent components (absent from source). ! May not be necessary if ["mut_severity"]["component"] infers this with NULLs. (never modified or always absent components default to NULL scores)
         "mut_code": 0b00000000, # Describes specific mutations.
         "mut_labels": [],
         "mut_severity": {
-            "entire": [True, SeverityClass.NONE],   # Default holistic score to True
-            "format": {
-                style: None for style in FormatStyle    # Initialize style scores but leave NULL for bake.
+            "component": {  # Initialize component severity scores to True, leaving nonexistent ones (not in has_component) NULL. The NULL avoids caring about components that never existed and where never mutated (mutated components have an entry added to replace the NULL).
+                comp: (
+                    [ True, SeverityClass.NONE ] if ref_metadata["has_component"][comp] else None   # Default component scores to True, but set nonexistent components to NULL. True as in 'valid' (real, not erroneous), float for severity 0 -> 1 (most).
+                ) for comp in ReferenceComponent
             },
-            "component": {
-                comp: ([True, SeverityClass.NONE] if ref_metadata["has_component"][comp] else None) for comp in ReferenceComponent  # Default component scores to True, but set nonexistent components to NULL
-            }
+            "holistic": {
+                "complete": {
+                    "score": None,  # Averaged scores are calculated on bake.   
+                    "includes": []  # List of components included in score average calculation. Components used must be present in the reference data, with the excpetion of omitted components (but depending on the element, the omission severity may be quite low anyways). Used in evaluating LLM responses, seeing which components "contributed" to the reference they were given.
+                },
+                "format": {
+                    style: {
+                        "score": None,  # [True/False, SeverityClass]
+                        "includes": []  # [authors, title, journal_name, ...]
+                    } for style in FormatStyle    # Initialize style scores but leave NULL for bake.
+                }
+            },
         },
-        "reference": {},        # All format styles generated at baking step. 
-        "data": ref_data
+        "ref_citation": {       # All format styles are generated at baking step. 
+            style: {
+                "text": None,
+                "components": None   # Include meta of which components are included in the reference text. ! This is the ultimate thing, shows what 'data' was actually given to the LLM after all this processing.
+            } for style in FormatStyle
+        },
+        "ref_data": ref_data
     }
 
 # Create a set of set entries from a list of reference data.
@@ -68,15 +85,76 @@ def make_dataset(refdata_source, duplicate=0):
             dataset[duplicate_id] = dsentry(refdata, ID=duplicate_id, ID_src=source_id)
     return dataset
 
+def weighted_average_of_component_scores(scores):
+    normalizer = sum(COMPONENT_WEIGHTS[c] for c in scores)
+    weights = {c: COMPONENT_WEIGHTS[c]/normalizer for c in scores}
+    avg_validity = all(s[0] for s in scores.values())               # ANDing all component validities together.
+    avg_severity = sum(scores[c][1]*weights[c] for c in scores)     # Weighting component severities and summing.
+    return [avg_validity, avg_severity]
+
 # Compile references in format styles.
 # Average mutation severity scores.
 def bake_dsentry(entry):
-    entry["reference"] = Formats.build_all(entry["data"], entry["has_component"])   # Pass included components, so formatters can accurately return has_component of the citation.
+    # 1 Render citations in all format styles.
+    for style, citation in Formats.build_all(entry["ref_data"]).items():
+        entry["ref_citation"][style]["text"] = citation
+        #entry["ref_citation"][style]["components"] = {c: entry["has_component"][c] and Formats.components_in_style(style)[c] for c in ReferenceComponent}   # AND reference data has_component with components included in style, trimming any components that would never be included (never in style)
+        entry["ref_citation"][style]["components"] = [c for c in ReferenceComponent if entry["has_component"][c] and Formats.components_in(style)[c]] # Alternatively, a list. Would have no Falses
+
+    # 2 Average / weight severity scores     
+    scores = {comp: score for comp, score in entry["mut_severity"]["component"].items() if score is not None}
+    entry["mut_severity"]["holistic"]["complete"] = weighted_average_of_component_scores(scores)
+    print(1, entry["mut_severity"]["holistic"]["complete"])
+   
+    scores_fmt = {style: {c: s for c, s in scores.items() if Formats.components_in(style)[c]} for style in FormatStyle}     # Trim severity scores never present within FormatStyle
+    for style, scores in scores_fmt.items():
+        entry["mut_severity"]["holistic"]["format"][style] = weighted_average_of_component_scores(scores)
+    
+    c_severities = {component: entry["mut_severity"]["component"][component] for component in ReferenceComponent if entry["mut_severity"]["component"][component]} # Components with existing scores in the dsentry.
+    severity = [None, None] #entry["mut_severity"]["entire"]
+    severity[0] = all(c_severities[c][0] for c in c_severities)
+    normalize = sum([COMPONENT_WEIGHTS[c] for c in c_severities])        # by sum of priorities     ##### By number of components present, added or mutated or anything.
+    weights = {c: COMPONENT_WEIGHTS[c]/normalize for c in c_severities}
+    severity[1] = sum([c_severities[c][1]*weights[c] for c in c_severities])#/len(c_severities)
+    print(2, severity)
+        
+    for style, score in entry["mut_severity"]["holistic"]["format"].items():
+        print(style, score)
+
+"""
+    score = all(scores[c][0] for 
+
+
+    severity = entry["mut_severity"]["entire"]
+    severity[0] = all(c_severities[c][0] for c in c_severities)
+    normalize = sum([COMPONENT_WEIGHT_PRIORITY[c] for c in c_severities])        # by sum of priorities     ##### By number of components present, added or mutated or anything.
+    weights = {c: COMPONENT_WEIGHT_PRIORITY[c]/normalize for c in c_severities}
+    severity[1] = sum([c_severities[c][1]*weights[c] for c in c_severities])#/len(c_severities)
+    #entry["ref_citation"] = Formats.build_all(entry["ref_data"], entry["has_component"])   # Pass included components, so formatters can accurately return has_component of the citation.
     #mut_severity  
     #mut_severity_exclude_omissions # OR is this just the same as the reference severities?
 
     # ALSO THINK ABOUT how maybe we do need the format has_components PRE ANDing with entry has_components, so we know which "omissions" to include? Ughhh who caaarrressss.....
 
+    # If a component was present in the source reference, or had any mutation applied to it at all (such as a mutation which brought it into being), it has a severity score entry.
+    # By this, we can go through the non NULL severity scores and just calculate their weighted average (according to normalized component priorities defined above).
+    # The one excpetion to this, is that depending on the reference style some present components may have been excluded regardless, so we could be averaging with a bias from am absent component the chatbot would never have a chance to analyze (other than noting its absence).
+    # So, with each built format comes a dict describing which components it tried to include (though this describes the template per format, not necessarily what is contained given what may have been ommitted. For that, just AND the true 'has_components' with the format style's)
+    # Plus we'll also grade against some non mandatory components marked as (ommitted), but their severity score weights should be set accordingly so that it's within an 'acceptable' level of severity (very low).
+
+    # Also, to avoid the error of flagging omissions on true nonexistent components (and thereby including in the average), omission mutations are not applied if the thing is already None or empty. (None vs empty depends on component, holdover from earlier implementation ideas)
+
+    # Components which which are present in the source reference, and/or components 
+
+
+    # Different reference style types include different components too. Not all components are included in every style, even when they're present in the entry.
+
+    # 1 extract components to include in average
+    scores = {component: score for component, score in entry["mut_severity"]["component"].values() if score}
+    # 2 mask components not included by default inside the reference style (for example, PMCIDs and URLs in our code for Harvard, APA, and vancouver). 
+    # Because their ommitted by nature of the reference structure, it makes no sense to grade against them. There exists no case where the model would face the component in the specified reference style
+
+    scores_fmt = {format_style: {component: score for component, score in scores.values() if format_style["has_component"][component]} for format_style in entry["reference"]
 
     c_severities = {component: entry["mut_severity"]["component"][component] for component in ReferenceComponent if entry["mut_severity"]["component"][component]} # Components with existing scores in the dsentry.
     severity = entry["mut_severity"]["entire"]
@@ -84,6 +162,10 @@ def bake_dsentry(entry):
     normalize = sum([COMPONENT_WEIGHT_PRIORITY[c] for c in c_severities])        # by sum of priorities     ##### By number of components present, added or mutated or anything.
     weights = {c: COMPONENT_WEIGHT_PRIORITY[c]/normalize for c in c_severities}
     severity[1] = sum([c_severities[c][1]*weights[c] for c in c_severities])#/len(c_severities)
+
+
+
+
 #    for form in entry["format"]    @TODO AND with refdata COMPONENTS (once that's synced with mutations)
     print(severity)
 # Should severity be higher or lower numbers? Probably higher, since it's multiplied by weight. Although it might not matter either way, as long as consistent. Higher is more intuitive though.
@@ -99,7 +181,7 @@ def bake_dsentry(entry):
     # @TODO Doing the averaging logic different in a way that doesn't bias from component count? ?
     # Note the getting of the format score thing is really only relevant if we really care to evaluate model responses within our specific arbitrary framework. It's not the big focus.
     # It's all a bit meaningless honestly. When going component by component. The model would have to identify the original reference amid all the other clutter, and see that it doesn't line up. Quite the task. When the reference is so garbled to be entirely 'hallucinated', what really makes an 'unmutated' page number more 'real' than 'fake'?
-
+"""
 
 #    for style in FormatStyles:
 #        score = entry["scores"]["byformat"][style]
