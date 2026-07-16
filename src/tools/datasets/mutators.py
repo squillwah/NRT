@@ -14,12 +14,13 @@ class MutationType(StrEnum):
     OMISSION = "omission"
 
 # Severity goes kind of exponential?
+# The catastrophic MAJOR_ERRORS, kinda of represent big enough errors that the ref should be detectable obviously
 class SeverityClass(float, Enum):
-    NONE = 0.0
-    COMMON_VARIATION = 0.001  # For acceptable omissions? Like no PMCID, PMID, DOI...
-    MINOR_ERROR = 0.01          # Slight errors, indicative of human style mistakes. Typos, small omissions.
-    AMBIGUOUS_ERROR = 0.1      # More severe errors, cloud be human or machine. Author shuffle, small mismatches, larger omissions.
-    MAJOR_ERROR = 1.0           # Most severe errors, definitively machinistic. Hallucinations, large mismatches, large omissions.
+    NONE             = 0.000000
+    COMMON_VARIATION = 0.000001                         # For acceptable omissions? Like no PMCID, PMID, DOI...
+    MINOR_ERROR      = 0.001000                                 # Slight errors, indicative of human style mistakes. Typos, small omissions.
+    AMBIGUOUS_ERROR  = 0.100000                          # More severe errors, cloud be human or machine. Author shuffle, small mismatches, larger omissions.
+    MAJOR_ERROR      = 1.000000                                  # Most severe errors, definitively machinistic. Hallucinations, large mismatches, large omissions.
 
 C, M, S, T = ReferenceComponent, MutationType, SeverityClass, Typofier  # Enum and utility aliases
 
