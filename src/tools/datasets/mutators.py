@@ -27,8 +27,8 @@ C, M, S, T = ReferenceComponent, MutationType, SeverityClass, Typofier  # Enum a
 # Class of methods to mutate dataset entries.
 class EntryMutator:
     
-    # Supported mutations. Map of {ReferenceComponent: [<supported MutationType>, ...]}
-    _MUTATIONS = {}
+    # Supported mutations. Map of {ReferenceComponent: [<supported MutationType>, ...]} and list of [(ReferenceComponent, MutationType)]
+    _MUTATIONS, _MUTATIONS_FLAT = {}, []
     # Severities of unique mutations. Map of {RC: {MT: <SeverityClass>, ...}, ...}
     _MUTATION_SEVERITIES = {}
     # Unique mutation bitflags / IDs + human readable labels. Map of {RC: {MT: 0b00, ...}, ...} + {0b00: <"label">}
@@ -104,6 +104,7 @@ class EntryMutator:
         _MUTATIONS[comp] = [m[0] for m in muts] # List of MutationTypes
         _MUTATION_SEVERITIES[comp], _MUTATION_BITFLAGS[comp], _MUTATION_DISPATCH[comp] = {}, {}, {}
         for (mut, severity) in muts:
+            _MUTATIONS_FLAT.append((comp, mut))
             _MUTATION_SEVERITIES[comp][mut], _MUTATION_BITFLAGS[comp][mut], _MUTATION_DISPATCH[comp][mut], = severity, bit, None
             _CONVENIENCE_LABELS[bit] = f"{comp}::{mut}"
             bit = bit << 1
@@ -467,6 +468,9 @@ class EntryMutator:
     @classmethod
     def mutations(cls, component=None):
         return cls._MUTATIONS[component] if component else cls._MUTATIONS
+    @classmethod
+    def mutations(cls, *, flat):
+        return cls._MUTATIONS_FLAT if flat else cls._MUTATIONS
 
     @classmethod
     def has_mutation(cls, ds_entry, component, mutation):
