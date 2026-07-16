@@ -75,6 +75,25 @@ def write_all_csv(inputted_json):
                             csv_f.write(",")
                         csv_f.write("\n")
 
+# def make_average_csv(inputted_csv):
+#     with open(inputted_csv, 'r', encoding='utf-8') as file:
+#         reader = csv.reader(file)
+#         csv_lines = [row for row in reader]
+
+def create_avg_list(value_list, headers_list, divisor_factor, models):
+    for i, element in enumerate(value_list):
+        for cell in element:
+            cell = cell / divisor_factor
+        # value_list.insert(i, models[i])
+
+    headers_list.remove(headers_list[1])
+
+    value_list.insert(0, headers_list)
+
+    return value_list
+
+
+
 def write_xlsx():
 
     wb = openpyxl.Workbook()
@@ -85,17 +104,73 @@ def write_xlsx():
 
     inputted_csv = input("Please enter the csv file path: ")
 
+    avg_total_divisor = 0
+
+    avg_accuracy = []
+    avg_confidence = []
+    avg_accuracy_calc = []
+    avg_confidence_calc = []
+    models = []
+
     while inputted_csv != "end":
+
+        avg_total_divisor += 1
+
+        burner_list = []
 
         with open(inputted_csv, 'r', encoding='utf-8') as file:
             reader = csv.reader(file)
-            # csv_id = str(inputted_csv.replace('.csv', ''))
             csv_id = re.sub(r'[^a-zA-Z0-9]', '', inputted_csv)
             csv_id = csv_id.replace("CUsersmastePycharmProjectsNRTsrc", '')
             csv_id = csv_id.replace("csv", '')
             csv_lines = [row for row in reader]
 
-            csv_lines.remove(csv_lines[1])
+
+
+            # need to fix scope for avg_accuracy_calc and avg_confidence_calc, separate into other lists
+
+            if "accuracy" in csv_id:
+                if avg_total_divisor <= 1:
+                    avg_accuracy.append(csv_lines[0])
+                    for k in range(1, len(csv_lines)):
+                        avg_accuracy_calc.append(csv_lines[k][2:])
+
+                    for l in range(1, len(csv_lines)):
+                        models.append(csv_lines[l][0])
+
+                for k in range(1, len(csv_lines)):
+                    burner_list.append(csv_lines[k][2:])
+
+                for i, row in enumerate(burner_list):
+                    for j , cell in enumerate(row):
+                        if "True" in cell:
+                            if avg_total_divisor > 1:
+                                avg_accuracy_calc[i][j] += 1
+                            else:
+                                avg_accuracy_calc[i][j] = 1
+                        elif "False" in cell:
+                            if avg_total_divisor > 1:
+                                avg_accuracy_calc[i][j] += 0
+                            else:
+                                avg_accuracy_calc[i][j] = 0
+                        else:
+                            continue
+
+            elif "confidence" in csv_id:
+                if avg_total_divisor <= 1:
+                    avg_confidence.append(csv_lines[0])
+                    for l in range(1, len(csv_lines)):
+                        models.append(csv_lines[l][0])
+                for k in range(1, len(csv_lines)):
+                    burner_list.append(csv_lines[k][2:])
+                for i, row in enumerate(burner_list):
+                    for j, cell in enumerate(row):
+                        if avg_total_divisor > 1:
+                            avg_confidence_calc[i][j] += cell
+                        else:
+                            avg_confidence_calc[i][j] = cell
+
+
 
             xlsx_header = csv_lines[0]
 
@@ -103,11 +178,10 @@ def write_xlsx():
 
             ws.append(xlsx_header)
 
-            header_font = Font(name="Calibri", size=11, bold=True, color="FFFFFF")
+            header_font = Font(name="Calibri", size=11, bold=True, color="000000")
             header_fill = PatternFill(start_color="1F4E78", end_color="1F4E78", fill_type="solid")  # Dark Blue
             header_align = Alignment(horizontal="center", vertical="center")
 
-            # 4. Apply styling to row 1, freeze panes, and enable print titles
             for cell in ws[1]:
                 cell.font = header_font
                 cell.fill = header_fill
@@ -130,8 +204,110 @@ def write_xlsx():
 
         inputted_csv = input("Enter another csv file path or enter 'end': ")
 
+
+
+
+    avg_accuracy_list = create_avg_list(avg_accuracy_calc, xlsx_header, avg_total_divisor, models)
+    avg_confidence_list = create_avg_list(avg_confidence_calc, xlsx_header, avg_total_divisor, models)
+
+    # ---------------- Make avg_accuracy sheet --------------------------------
+
+    sheet_name = "avg_accuracy"
+
+    avg_header = avg_accuracy_list[0]
+
+    ws = wb.create_sheet(title=sheet_name)
+
+    ws.append(avg_header)
+
+    header_font = Font(name="Calibri", size=11, bold=True, color="000000")
+    header_fill = PatternFill(start_color="1F4E78", end_color="1F4E78", fill_type="solid")  # Dark Blue
+    header_align = Alignment(horizontal="center", vertical="center")
+
+    for cell in ws[1]:
+        cell.font = header_font
+        cell.fill = header_fill
+        cell.alignment = header_align
+
+    for row in avg_accuracy_list[1:]:
+        ws.append(row)
+
+    for col in ws.columns:
+        max_len = 0
+        column = col[0].column
+        for cell in col:
+            if cell.value:
+                max_len = max(max_len, len(str(cell.value)))
+
+        # Set width with buffer, min width 10
+        adjusted_width = (max_len + 3)
+        ws.column_dimensions[get_column_letter(column)].width = adjusted_width
+
+    # ---------------- Make avg_confidence sheet --------------------------------
+
+    sheet_name = "avg_confidence"
+
+    avg_header = avg_confidence_list[0]
+
+    ws = wb.create_sheet(title=sheet_name)
+
+    ws.append(avg_header)
+
+    header_font = Font(name="Calibri", size=11, bold=True, color="000000")
+    header_fill = PatternFill(start_color="1F4E78", end_color="1F4E78", fill_type="solid")  # Dark Blue
+    header_align = Alignment(horizontal="center", vertical="center")
+
+    for cell in ws[1]:
+        cell.font = header_font
+        cell.fill = header_fill
+        cell.alignment = header_align
+
+    for row in avg_confidence_list[1:]:
+        ws.append(row)
+
+    for col in ws.columns:
+        max_len = 0
+        column = col[0].column
+        for cell in col:
+            if cell.value:
+                max_len = max(max_len, len(str(cell.value)))
+
+        # Set width with buffer, min width 10
+        adjusted_width = (max_len + 3)
+        ws.column_dimensions[get_column_letter(column)].width = adjusted_width
+
+
     wb.save(filename="full_results.xlsx")
 
+# def make_sheet(input_list, sheet_name):
+#     avg_header = input_list[0]
+#
+#     ws = wb.create_sheet(title=sheet_name)
+#
+#     ws.append(avg_header)
+#
+#     header_font = Font(name="Calibri", size=11, bold=True, color="000000")
+#     header_fill = PatternFill(start_color="1F4E78", end_color="1F4E78", fill_type="solid")  # Dark Blue
+#     header_align = Alignment(horizontal="center", vertical="center")
+#
+#     for cell in ws[1]:
+#         cell.font = header_font
+#         cell.fill = header_fill
+#         cell.alignment = header_align
+#
+#     for row in input_list[1:]:
+#         ws.append(row)
+#
+#     for col in ws.columns:
+#         max_len = 0
+#         column = col[0].column
+#         for cell in col:
+#             if cell.value:
+#                 max_len = max(max_len, len(str(cell.value)))
+#
+#         # Set width with buffer, min width 10
+#         adjusted_width = (max_len + 3)
+#         ws.column_dimensions[get_column_letter(column)].width = adjusted_width
 
 
     # # 2. Iterate through the list of dictionaries
