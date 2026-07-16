@@ -309,10 +309,13 @@ class Formats:
     # Defining which components are present by default inside a given format.
     # Has no effect on the rendering of the format. 
     # Is ANDed database COMPONENTS array, for accurate absent component marking.
-    _FORMAT_REFERENCE_COMPONENTS = {
+
+    # Some foramts (as we've implemented them) will never include certain reference components.
+    # To avoid weighting mutations of those components unfairly later on, we define such components here (by style).
+    _STYLE_COMPONENT_MASK = {
         FormatStyle.VANCOUVER: {
             ReferenceComponent.AUTHORS          : True,
-            ReferenceComponent.TITLE            : True,
+            ReferenceComponent.TITLE            : True,     # I'm sure what this is all getting at can be expressed more intellgently as some part of _Layout or something similar. But who cares ... ?
             ReferenceComponent.JOURNAL_NAME     : True,
             ReferenceComponent.JOURNAL_VOLUME   : True,
             ReferenceComponent.JOURNAL_ISSUE    : True,
@@ -357,31 +360,35 @@ class Formats:
         }
     }
 
+    @classmethod
+    def components_in(cls, style): 
+        return cls._STYLE_COMPONENT_MASK[style]
+
     # For omissions, just mark them in the dataset. Make sure to set it false in REFERENCES metacomponent.
     # Omission are handled before this, by setting the ds element to None. Any missing components are caught and not added here.
 
     # Return dict of formatted reference and bools for the components contained.
     @classmethod
-    def build(cls, refdata, has_component, style):
+    def build(cls, refdata, style):
         # Build each CitationElement according to style
         elements = {
             element: ElementBuilder.build(element)(refdata, cls._STYLE_CONFIG[style][element]) for element in CitationElement
         }
-        # Determine contained components
-        has_components = {
-            rc: (cls._FORMAT_REFERENCE_COMPONENTS[style][rc] and has_component[rc]) for rc in cls._FORMAT_REFERENCE_COMPONENTS[style]
-        }
+        # # Determine contained components
+        # has_components = {
+        #     rc: (cls._FORMAT_REFERENCE_COMPONENTS[style][rc] and has_component[rc]) for rc in cls._FORMAT_REFERENCE_COMPONENTS[style]
+        # }
         # Combine elements according to style
         citation = cls._LAYOUT[style](**elements)
-
-        return {
-            "citation": citation,
-            "has_component": has_components
-        }
+        return citation
+        #return {
+        #    "citation": citation,
+        #    "has_component": has_components
+        #}
 
     @classmethod
-    def build_all(cls, refdata, has_component):
-        return {style: cls.build(refdata, has_component, style) for style in FormatStyle}
+    def build_all(cls, refdata):
+        return {style: cls.build(refdata, style) for style in FormatStyle}
 
 if __name__ == "__main__":
     import h

@@ -13,11 +13,12 @@ class MutationType(StrEnum):
     SHUFFLE = "shuffle"
     OMISSION = "omission"
 
+# Severity goes kind of exponential?
 class SeverityClass(float, Enum):
     NONE = 0.0
-    ACCEPTABLE = 0.1        # For acceptable omissions? Like no PMCID, PMID, DOI...
-    MINOR_ERROR = 0.33          # Slight errors, indicative of human style mistakes. Typos, small omissions.
-    AMBIGUOUS_ERROR = 0.66      # More severe errors, cloud be human or machine. Author shuffle, small mismatches, larger omissions.
+    COMMON_VARIATION = 0.001  # For acceptable omissions? Like no PMCID, PMID, DOI...
+    MINOR_ERROR = 0.01          # Slight errors, indicative of human style mistakes. Typos, small omissions.
+    AMBIGUOUS_ERROR = 0.1      # More severe errors, cloud be human or machine. Author shuffle, small mismatches, larger omissions.
     MAJOR_ERROR = 1.0           # Most severe errors, definitively machinistic. Hallucinations, large mismatches, large omissions.
 
 C, M, S, T = ReferenceComponent, MutationType, SeverityClass, Typofier  # Enum and utility aliases
@@ -80,19 +81,19 @@ class EntryMutator:
             (M.TYPO,            S.MINOR_ERROR), 
             (M.MISMATCH,        S.MAJOR_ERROR), 
             (M.HALLUCINATION,   S.MAJOR_ERROR),
-            (M.OMISSION,        S.MINOR_ERROR)      # Or should it be NONE? Not all references have PMCIDs... But that's handled elsewhere right? It is not included in the average if the original refdata was missing a PMCID, but it is included if it was ommitted. But! All our references have pmcids, so they're all included. The problem is that none of the references include the PMCID... so they're all going to have this error applied. If we set this error as a NONE severity, then what others should we set as NONE?
-        ],                                          # If we set them as NONE, then they'll still be included in the average, and thus bias the average less severe. It should just not be included in the average. Should we have a 'don't include these components in average when ommitted' list? Or is that too specific. Is all of this stupid?
-        C.PMID: [                                   # Could instead have another SeverityClass with low severity (.1 or .01) which represents these omissions...
+            (M.OMISSION,        S.COMMON_VARIATION) # Or should it be NONE? Not all references have PMCIDs... But that's handled elsewhere right? It is not included in the average if the original refdata was missing a PMCID, but it is included if it was ommitted. But! All our references have pmcids, so they're all included. The problem is that none of the references include the PMCID... so they're all going to have this error applied. If we set this error as a NONE severity, then what others should we set as NONE?
+        ],                                              # If we set them as NONE, then they'll still be included in the average, and thus bias the average less severe. It should just not be included in the average. Should we have a 'don't include these components in average when ommitted' list? Or is that too specific. Is all of this stupid?
+        C.PMID: [                                       # Could instead have another SeverityClass with low severity (.1 or .01) which represents these omissions...
             (M.TYPO,            S.MINOR_ERROR),
             (M.MISMATCH,        S.MAJOR_ERROR),
             (M.HALLUCINATION,   S.MAJOR_ERROR),
-            (M.OMISSION,        S.MINOR_ERROR),     # S.ACCEPTABLE ?
+            (M.OMISSION,        S.COMMON_VARIATION), # S.ACCEPTABLE ?
         ],
         C.DOI: [ 
             (M.TYPO,            S.AMBIGUOUS_ERROR), 
             (M.MISMATCH,        S.MAJOR_ERROR), 
             (M.HALLUCINATION,   S.MAJOR_ERROR), 
-            (M.OMISSION,        S.MINOR_ERROR)
+            (M.OMISSION,        S.COMMON_VARIATION)
         ]
     }
 
@@ -124,8 +125,11 @@ class EntryMutator:
     def _flag(cls, ds_entry, component, mutation):
         ds_entry["mut_code"] = ds_entry["mut_code"] | cls._MUTATION_BITFLAGS[component][mutation]
         
+        # If we've come this far (calling through mutate() dispatcher), then we should be guaranteed that the component does or did exist.
         # Flag the component as EXISTING or NOT EXISTING depending on mutation type:
-        if mutation in (M.HALLUCINATION, M.MISMATCH): ds_entry["has_component"][component] = True      # @TODO Bring in gabe's omission stuff, then do the ANDing with reference specific component data in the bake.
+        ds_entry["has_component"][component] = not (mutation == M.OMISSION)
+        
+        #if mutation in (M.HALLUCINATION, M.MISMATCH): ds_entry["has_component"][component] = True      # @TODO Bring in gabe's omission stuff, then do the ANDing with reference specific component data in the bake.
         #elif mutation in (M.OMISSION): ds_entry["ref_data"]["_meta"]["has_component"][component] = False
         
         # Lower or introduce score + severity class 
@@ -439,6 +443,13 @@ class EntryMutator:
     # Apply a mutation.
     def mutate(self, ds_entry, component, mutation): 
         # @TODO Add overwrite avoidance here (checking bitcode against bitflag[component][mutation]) or in the curves definition?
+        # Should there be a check her to make sure typos don't get executed on absent components, or is that handled elsewhere? Or is it just such an edge case it will never happen...
+        
+#        if m is omission but component is not in set or already omitted, do not allow.
+#        if m is typo or shuffle, but comonent is not in set or ommitted, do not allow
+#        if m has a mutation applied that will be wiped by new one (typo wiped by mismatch), rerun the one being wiped to preserve accuracy.
+        success = False 
+
         mutator = self._MUTATION_DISPATCH[component][mutation].__get__(self)
         success = mutator(ds_entry)
         if success: self._flag(ds_entry, component, mutation)
@@ -461,7 +472,7 @@ class EntryMutator:
         return bool(ds_entry["mut_code"] & cls._MUTATION_BITFLAGS[component][mutation])
    
 
-if __name__ == "__main__" or True:
+if __name__ == "__main__":
     import json
     print(json.dumps(EntryMutator._MUTATIONS, indent=2))
     print()
