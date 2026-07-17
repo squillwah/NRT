@@ -18,7 +18,7 @@ import json
 MUTATED_SOURCE_RATIO = 1   # Fill the set with ten mutated references from every source.
 
 DIR_OUTPUT = Path("./data/")
-DIR_REFERENCES = Path("./data/source/references1")
+DIR_REFERENCES = Path("./data/source/references5")
 DIR_EXTRA = Path("./data/source/extra/")
 
 refs = h.read_json(DIR_REFERENCES / "refdata.json")
