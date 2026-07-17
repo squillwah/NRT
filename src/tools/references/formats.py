@@ -26,6 +26,7 @@ class FormatStyle(StrEnum):
     APA = "apa"
     HARVARD = "harvard"
     VANCOUVER = "vancouver"
+    NLM = "nlm"
     #ELSEVIER  = "elsevier",
     #NATURE    = "nature",
     #OXFORD    = "oxford",
@@ -210,6 +211,21 @@ class Formats:
             doi = idents["doi"] # We've never encountered a reference without a DOI in the RIS. How would this break if it's absent?
             return f"Available at: doi:{doi["prefix"]}/{doi["suffix"]}" if doi else None
 
+        # NLM Stylers
+        # meta and pubdates same as vancouver
+        def nlm_identifiers(**idents):
+            doi, pmid, pmcid = idents["doi"], idents["pmid"], idents["pmcid"]
+            doi = f"doi: {doi["prefix"]}/{doi["suffix"]}. " if doi else ""
+            pmid = f"PMID: {pmid}" if pmid else ""
+            pmcid = f"PMCID: {pmcid}" if pmcid else ""
+            pms = ""
+            if pmid or pmcid:
+                if pmid and pmcid: pms = "; ".join([pmid, pmcid])
+                elif pmcid: pms = pmcid
+                else: pms = pmid
+                pms = pms+"."
+            return doi+pms
+
     # Ordering/combining of rendered citation elements      # This is probabaly where the omission checking would come in?
     def _layout_vancouver(authors, title, journal_name, publication_date, journal_meta, identifiers):   # ! Argument names should match CitationElement strings (so unwrapped CitationElement: "element" dicts can be used)
         # authors. title. jname. pubdate;jmeta. identifiers
@@ -243,10 +259,21 @@ class Formats:
         return au+pd+ti+jn+jm+ids
     #return f"{authors} {publication_date}. {title}. {journal_name}, {journal_meta}. {identifiers}"
     
+    def _layout_nlm(authors, title, journal_name, publication_date, journal_meta, identifiers):
+        # authors. title. journal (abv). fulldate;vol(iss):page-page. doi: doi. Epub epub, PMID: pmid; PMCID: pmcid.
+        au = check_none(authors, ". ") 
+        ti = check_none(title, ". ")
+        jn = check_none(journal_name, ". ")
+        pd = check_none(publication_date, ";")
+        jm = check_none(journal_meta, ". ")
+        ids = check_none(identifiers, "")
+        return au+ti+jn+pd+jm+ids
+    
     _LAYOUT = {
         FormatStyle.VANCOUVER: _layout_vancouver,
         FormatStyle.APA: _layout_apa,
-        FormatStyle.HARVARD: _layout_harvard
+        FormatStyle.HARVARD: _layout_harvard,
+        FormatStyle.NLM: _layout_nlm
     }
 
     # Styling configuration of citation elements
@@ -306,6 +333,23 @@ class Formats:
             CitationElement.JOURNAL_META:     { "styler": ElementStylers.harvard_journal_meta },
             CitationElement.PUBLICATION_DATE: { "styler": ElementStylers.harvard_publication_date },
             CitationElement.IDENTIFIERS:      { "styler": ElementStylers.harvard_identifiers }
+        },
+        FormatStyle.NLM: {
+            CitationElement.AUTHORS: {
+                "etal": None, 
+                "etal_threshold": None,
+                "delim_authors": ", ",
+                "delim_initials": "",
+                "delim_lastfirst": " ",
+                "initialize": True,
+                "initialize_periods": False,
+                "penultimate_and": "",       # Include comma at start for oxford comma. ", and " or " & " or ", & "  etc.
+            },
+            CitationElement.TITLE:            { "quotes": False },
+            CitationElement.JOURNAL_NAME:     { "abbreviate": True },
+            CitationElement.JOURNAL_META:     { "styler": ElementStylers.vancouver_journal_meta },      # They the same.
+            CitationElement.PUBLICATION_DATE: { "styler": ElementStylers.vancouver_publication_date },
+            CitationElement.IDENTIFIERS:      { "styler": ElementStylers.nlm_identifiers }
         }
     }
 
@@ -360,6 +404,21 @@ class Formats:
             ReferenceComponent.URL_DIRECT       : False,
             ReferenceComponent.PMCID            : False,
             ReferenceComponent.PMID             : False
+        }, 
+        FormatStyle.NLM: {
+            ReferenceComponent.AUTHORS          : True,
+            ReferenceComponent.TITLE            : True,
+            ReferenceComponent.JOURNAL_NAME     : True,
+            ReferenceComponent.JOURNAL_VOLUME   : True,
+            ReferenceComponent.JOURNAL_ISSUE    : True,
+            ReferenceComponent.JOURNAL_PAGE     : True,
+            ReferenceComponent.ELOCATOR         : True,
+            ReferenceComponent.PUBLICATION_DATE : True,
+            ReferenceComponent.DOI              : True,
+            ReferenceComponent.URL_ABSTRACT     : False,
+            ReferenceComponent.URL_DIRECT       : False,
+            ReferenceComponent.PMCID            : True,
+            ReferenceComponent.PMID             : True
         }
     }
 
