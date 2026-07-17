@@ -14,7 +14,7 @@ class ProtoSchemas:
                 "validity": {
                     "type": "boolean",
                     #"description": f"True if {thing} is real, false if {thing} is fake."
-                    "description": f"True if {thing} is real, false if {thing} is generated."   # ! GENERATED or FAKE ?
+                    "description": f"True if {thing} is valid, false if {thing} is invalid."   # ! GENERATED or FAKE ?
                 },
                 "validity_confidence": {
                     "type": "number",
@@ -23,7 +23,7 @@ class ProtoSchemas:
                     #"description": f"Confidence value (0.0 -> 1.0) of {thing} being real."   # Authentic, legitimate, exists? 
                     #"description": f"Confidence value (0.0 -> 1.0) in the classification 'real' for {thing}."   # Authentic, legitimate, exists? 
                     #"description": f"A floating point confidence value between 0.0 -> 1.0, denoting your confidence in {thing} being valid. High 'valid' confidence is 1.0, and high 'generated' confidence is 0.0."
-                    "description": f"A floating point confidence value between 0.0 -> 1.0, denoting your confidence in {thing} being valid."
+                    "description": f"A floating point confidence value between 0.0 -> 1.0." #denoting your confidence in {thing} being valid."
                 },
             },
             "required": ["reasoning", "validity", "validity_confidence"],
