@@ -48,6 +48,7 @@ def test():
     from tools.datasets.mutators import EntryMutator, MutationType
     from tools.datasets.curves import MutationCurves
     import matplotlib.pyplot as plt
+    import random
     
 #    print(*[m for m in EntryMutator.mutations(flat=True)], sep="\n")
 #    print(*[m for m in MutationCurves], sep="\n")
@@ -55,12 +56,13 @@ def test():
 
     MP = MutationProbability(1000, MutationCurves)
     MP.plot(plt)
-    #plt.show()
 
     for i in range(0, 1001, 25):
         p = MP.probability(ReferenceComponent.TITLE, MutationType.HALLUCINATION, i)
-        print(p)
+        print(random.random() < p)
+    
+    plt.show()
 
-test()
+#test()
 
 

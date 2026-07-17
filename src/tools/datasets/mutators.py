@@ -111,12 +111,12 @@ class EntryMutator:
     del bit
 
     # Instanced resources for hallucination and mismatch mutations
-    def __init__(self, *, component_set, h_titles, h_authors, h_journals, rand_year_range):
-        self._COMPONENTS = component_set
-        self._FAKE_TITLES = h_titles
-        self._FAKE_AUTHORS = h_authors
-        self._FAKE_JOURNALS = h_journals
-        self._RAND_YEAR_RANGE = (rand_year_range[0], rand_year_range[1])
+    def __init__(self, *, compset, htitles, hauthors, hjournals, hyear_range):
+        self._COMPONENTS = compset
+        self._FAKE_TITLES = htitles
+        self._FAKE_AUTHORS = hauthors
+        self._FAKE_JOURNALS = hjournals
+        self._RAND_YEAR_RANGE = (hyear_range[0], hyear_range[1])
 
 # -------------------
 # Helpers and Utility
