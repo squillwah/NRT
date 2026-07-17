@@ -18,9 +18,8 @@ def get_reference_data(journals, *, v=False, saveall=True):
 
     # Testing to verify some stuff about formats.
     if saveall:
-        extra = h.mkdir(DIRECTORY / "extra")
-        _json_filer(raw_ris, extra / "reference_ris.json")
-        _json_filer(get_ref(*pmcids), extra / "reference_formatted.json")
+        _json_filer(raw_ris, DIRECTORY / "ris.json")
+        _json_filer(get_ref(*pmcids), DIRECTORY / "formatted.json")
 
     if v: print(f"Formalizing {len(raw_ris)} RIS entries...")
     ref_data = [ristoref(ris) for ris in raw_ris]
@@ -44,7 +43,7 @@ if __name__ == "__main__":
                 "Nature": 25,
                 "Lancet": 25,
                 "NEJM": 25}
-    DIRECTORY = h.mkdir("./data/reference_source")
+    DIRECTORY = h.mkdir("./data/source/references")
 
     ref_data = get_reference_data(JOURNALS, v=True)
     print("Writing reference data to file...")
