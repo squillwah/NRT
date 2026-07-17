@@ -15,7 +15,7 @@ import json
 
 # Generating a mutated reference set from source reference data.
 
-MUTATED_SOURCE_RATIO = 1   # Fill the set with ten mutated references from every source.
+MUTATED_SOURCE_RATIO = 10   # Fill the set with ten mutated references from every source.
 
 DIR_OUTPUT = Path("./data/")
 DIR_REFERENCES = Path("./data/source/references5")

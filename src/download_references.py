@@ -54,6 +54,7 @@ if __name__ == "__main__":
     ref_data = get_reference_data(JOURNALS, SORT, MINDATE, MAXDATE, v=True)
     print("Writing reference data to file...")
     _json_filer(ref_data, DIRECTORY / "refdata.json")
+    print(len(ref_data))
 
     print("Writing component set to file...")
     _json_filer(component_set(*ref_data), DIRECTORY / "compset.json")

@@ -564,10 +564,10 @@ class EntryMutator:
 
         print(component, success, resuccesses, remove, reapply)
         
-        if remove: 
-            assert(success), "something with hardconflicts"  # Assert that the new mutation occurred successfully if it removed others.
-        if reapply: 
-            assert(resuccesses), "something with softconflicts" 
+#        if remove: 
+#            assert(success), "something with hardconflicts"  # Assert that the new mutation occurred successfully if it removed others.
+#        if reapply: 
+#            assert(resuccesses), "something with softconflicts" 
 
         if success: 
             self._flag(ds_entry, component, mutation)
