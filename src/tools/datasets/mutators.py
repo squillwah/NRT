@@ -130,8 +130,7 @@ class EntryMutator:
         # If we've come this far (calling through mutate() dispatcher), then we should be guaranteed that the component does or did exist.
         # Flag the component as EXISTING or NOT EXISTING depending on mutation type:
         ds_entry["has_component"][component] = not (mutation == M.OMISSION)
-        
-        #if mutation in (M.HALLUCINATION, M.MISMATCH): ds_entry["has_component"][component] = True      # @TODO Bring in gabe's omission stuff, then do the ANDing with reference specific component data in the bake.
+        #if mutation in (M.HALLUCINATION, M.MISMATCH): ds_entry["has_component"][component] = True
         #elif mutation in (M.OMISSION): ds_entry["ref_data"]["_meta"]["has_component"][component] = False
         
         # Lower or introduce score + severity class 
@@ -551,6 +550,10 @@ class EntryMutator:
             print(self.explain_mutcode(ds_entry["mut_code"]))
             #print(bin(ds_entry["mut_code"]))
             print()
+        
+        if remove:
+            # Manually set the sevscore
+            ds_entry["mut_severity"]["component"][component] = (False, cls._MUTATION_SEVERITIES[component][mutation])
 
         # Apply requested mutation
         success = mutator(ds_entry)
@@ -561,8 +564,10 @@ class EntryMutator:
 
         print(component, success, resuccesses, remove, reapply)
         
-        if remove: assert(success), "something with hardconflicts"  # Assert that the new mutation occurred successfully if it removed others.
-        if reapply: assert(resuccesses), "something with softconflicts" 
+        if remove: 
+            assert(success), "something with hardconflicts"  # Assert that the new mutation occurred successfully if it removed others.
+        if reapply: 
+            assert(resuccesses), "something with softconflicts" 
 
         if success: 
             self._flag(ds_entry, component, mutation)
