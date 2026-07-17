@@ -16,11 +16,11 @@ class MutationType(StrEnum):
 # Severity goes kind of exponential?
 # The catastrophic MAJOR_ERRORS, kinda of represent big enough errors that the ref should be detectable obviously
 class SeverityClass(float, Enum):
-    NONE             = 0.000000
-    COMMON_VARIATION = 0.000001                         # For acceptable omissions? Like no PMCID, PMID, DOI...
-    MINOR_ERROR      = 0.001000                                 # Slight errors, indicative of human style mistakes. Typos, small omissions.
-    AMBIGUOUS_ERROR  = 0.100000                          # More severe errors, cloud be human or machine. Author shuffle, small mismatches, larger omissions.
-    MAJOR_ERROR      = 1.000000                                  # Most severe errors, definitively machinistic. Hallucinations, large mismatches, large omissions.
+    NONE             = 0.00
+    COMMON_VARIATION = 0.02                         # For acceptable omissions? Like no PMCID, PMID, DOI...
+    MINOR_ERROR      = 0.15                                 # Slight errors, indicative of human style mistakes. Typos, small omissions.
+    AMBIGUOUS_ERROR  = 0.45                          # More severe errors, cloud be human or machine. Author shuffle, small mismatches, larger omissions.
+    MAJOR_ERROR      = 1.00                                  # Most severe errors, definitively machinistic. Hallucinations, large mismatches, large omissions.
 
 C, M, S, T = ReferenceComponent, MutationType, SeverityClass, Typofier  # Enum and utility aliases
 
@@ -553,7 +553,7 @@ class EntryMutator:
         
         if remove:
             # Manually set the sevscore
-            ds_entry["mut_severity"]["component"][component] = (False, cls._MUTATION_SEVERITIES[component][mutation])
+            ds_entry["mut_severity"]["component"][component] = (False, self._MUTATION_SEVERITIES[component][mutation])
 
         # Apply requested mutation
         success = mutator(ds_entry)

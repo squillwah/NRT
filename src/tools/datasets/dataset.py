@@ -16,19 +16,20 @@ from tools.datasets.mutators import EntryMutator, SeverityClass
 # How important should components (and their validity/mutation severity) be?
 # Note: these weights strictly apply only when components are included. So: don't be afraid to set a high value for something that's both very important and optional (like a DOI).
 COMPONENT_WEIGHTS = {
-    ReferenceComponent.AUTHORS:         1.000000,
-    ReferenceComponent.TITLE:           1.000000,               # @TODO (seriously) tweak these + the severityclass numbers. The ratios can be better.
-    ReferenceComponent.JOURNAL_NAME:    0.100000,
-    ReferenceComponent.JOURNAL_VOLUME:  0.00001000,
-    ReferenceComponent.JOURNAL_ISSUE:   0.00000100,
-    ReferenceComponent.JOURNAL_PAGE:    0.00000100,
-    ReferenceComponent.ELOCATOR:        0.00001000,
-    ReferenceComponent.PUBLICATION_DATE:0.00001000,
-    ReferenceComponent.DOI:             1.00000000,   
-    ReferenceComponent.URL_ABSTRACT:    1.00000000,
-    ReferenceComponent.URL_DIRECT:      1.00000000,
-    ReferenceComponent.PMCID:           0.00100000,
-    ReferenceComponent.PMID:            0.00100000,
+    ReferenceComponent.AUTHORS:         1.00,
+    ReferenceComponent.TITLE:           1.00,               # @TODO (seriously) tweak these + the severityclass numbers. The ratios can be better.
+    ReferenceComponent.DOI:             0.90,   
+    ReferenceComponent.JOURNAL_NAME:    0.80,
+    ReferenceComponent.PMCID:           0.65,
+    ReferenceComponent.PMID:            0.65,
+    ReferenceComponent.PUBLICATION_DATE:0.40,
+    ReferenceComponent.JOURNAL_VOLUME:  0.25,
+    ReferenceComponent.JOURNAL_ISSUE:   0.20,
+    ReferenceComponent.JOURNAL_PAGE:    0.10,
+    ReferenceComponent.ELOCATOR:        0.10,
+    # URLs not supported :(
+    ReferenceComponent.URL_ABSTRACT:    0.50,
+    ReferenceComponent.URL_DIRECT:      0.50
 } # Pretty dang important, if it's included ... If absent, then not important. And the mutation type factors in too... So, an omission mutation on DOI has a severity of COMMON_VARIATION (low), to that'll lower the effect of weight here. Or vice versa. The number will be lower. Conversely, a doi hallucination has max severity of MAJOR_ERROR, so then the numbers would come at full force. The system is making sense?
     
     # @? Why is have less for just title but shouldnt have more cause it is half? Still not sure how weighting works... How say title always be worth half? Can even? Why? want?
