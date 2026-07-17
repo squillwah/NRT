@@ -44,7 +44,6 @@ dataset = make_dataset(refs, MUTATED_SOURCE_RATIO)  # Initializing dataset of re
 # For each entry in the mutated subset, chance each mutation using their probabilties along the set gradient.
 
 mutations = EM.mutations(flat=True) # (Component, Mutation) tuples, complete list of all possible
-
 # Reorder mutations so omissions are checked first.
 # Once an omission is applied, nothing else can be ... ?
 
@@ -57,12 +56,13 @@ mutations = EM.mutations(flat=True) # (Component, Mutation) tuples, complete lis
 
 
 for x, ID in enumerate(range(len(refs), len(dataset))):
+    random.shuffle(mutations)   # Shuffle to avoid bias from sequence (mutations can negate others)
     h.log(ID, dataset[ID]["id_source"]) 
-    for component, mutation in MUTATIONS:
+    for component, mutation in mutations:
         p = MP.probability(component, mutation, x)
         if random.random() < p:
             # Apply it.
-            EM.mutate(dataset[ID], component, mutation)
+            EM.mutate(dataset, ID, component, mutation)
 
 # Render citation format styles, score component severities... other stuff probably.
 bake_dataset(dataset)
