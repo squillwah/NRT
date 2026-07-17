@@ -20,6 +20,7 @@ ENDPOINT_IDCONVERTER = "https://pmc.ncbi.nlm.nih.gov/tools/idconv/api/v1/article
 
 # Make requests compliant with service guidelines.
 def kindly_get(url, params):
+    print('\n', params, '\n')
     time.sleep(REQUEST_DELAY)
     return requests.get(url, params=({"tool":REQUEST_IDENTIFIER_TOOL, "email":REQUEST_IDENTIFIER_EMAIL} | params))
 
@@ -35,12 +36,13 @@ def all_ids(*pmcids):
     return id_lists
 
 # Returns PMCIDs within OA subset corresponding to given search term.
-def get_papers_filter(count, terms):
+def get_papers_filter(count, terms, sort, mindate, maxdate):
     # Max of 100,000 for one search request
     EXCLUDE = ("articletypeexpressionofconcern", "articletypecorrection", "articletyperetraction")
     request = kindly_get(ENDPOINT_ESEARCH, params={
-        "db":"pmc", "sort":"pubdate", "format":"json",
+        "db":"pmc", "sort":sort, "format":"json",
         "term":f"open_access[Filter]{terms} NOT ({" OR ".join(EXCLUDE)})",
+        "datetype":"pdat", "mindate":mindate, "maxdate":maxdate,
         "retmax":count})
     #return ["PMC"+ID for ID in request.json()["esearchresult"]["idlist"]]
     return request.json()["esearchresult"]["idlist"]
