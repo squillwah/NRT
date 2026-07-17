@@ -143,10 +143,11 @@ class Formats:
             styled = ""
             styled += str(vol) if vol else ""
             styled += f"({iss})" if iss else ""
-            if page["start"] and page["end"]:
-                styled += f":{page["start"]}-{page["end"]}"
-            elif page["start"] or page["end"]:
-                styled += f":{page["start"] if page["start"] else page["end"]}"
+            if page:    # Some omissions will set page to None, so subscripting throws errors.
+                if page["start"] and page["end"]:
+                    styled += f":{page["start"]}-{page["end"]}"
+                elif page["start"] or page["end"]:
+                    styled += f":{page["start"] if page["start"] else page["end"]}"
             if elocator:
                 styled += f":{elocator}"
             return styled if styled else None   # ! Return None when styled elements are empty. This signals not to include anything (avoiding double periods and strangeness)
@@ -168,10 +169,11 @@ class Formats:
             styled = ""
             styled += str(vol) if vol else ""
             styled += f"({iss})" if iss else ""
-            if page["start"] and page["end"]:
-                styled += f", {page["start"]}-{page["end"]}"
-            elif page["start"] or page["end"]:
-                styled += f", {page["start"] if page["start"] else page["end"]}"
+            if page:
+                if page["start"] and page["end"]:
+                    styled += f", {page["start"]}-{page["end"]}"
+                elif page["start"] or page["end"]:
+                    styled += f", {page["start"] if page["start"] else page["end"]}"
             if elocator:
                 styled += f", {elocator}"
             return styled if styled else None
@@ -190,10 +192,11 @@ class Formats:
             styled = ""
             styled += str(vol) if vol else ""
             styled += f"({iss})" if iss else ""
-            if page["start"] and page["end"]:
-                styled += f", pp. {page["start"]}-{page["end"]}"
-            elif page["start"] or page["end"]:
-                styled += f", pp. {page["start"] if page["start"] else page["end"]}"
+            if page:
+                if page["start"] and page["end"]:
+                    styled += f", pp. {page["start"]}-{page["end"]}"
+                elif page["start"] or page["end"]:
+                    styled += f", pp. {page["start"] if page["start"] else page["end"]}"
             if elocator:
                 styled += f", article {elocator}"
             return styled if styled else None

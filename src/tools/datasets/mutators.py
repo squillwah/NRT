@@ -174,8 +174,9 @@ class EntryMutator:
         return True
 
     def _author_shuffle(self, ds_entry):
-        random.shuffle(ds_entry["ref_data"]["authors"])
-        return True
+        shuffleable = len(ds_entry["ref_data"]["authors"]) > 1
+        if shuffleable: random.shuffle(ds_entry["ref_data"]["authors"])
+        return shuffleable
 
     def _author_mismatch(self, ds_entry):
         ds_entry["ref_data"]["authors"] = self._randcopy(self._COMPONENTS["authors"])
@@ -183,8 +184,11 @@ class EntryMutator:
 
     def _author_hallucination(self, ds_entry):
         # A random sample of authors, from 1 to len(authors)+5 < len(fake_authors)
-        l1, l2 = len(ds_entry["ref_data"]["authors"]) + 5, len(self._FAKE_AUTHORS)
-        ds_entry["ref_data"]["authors"] = deepcopy(random.sample(self._FAKE_AUTHORS, random.randint(1, l1 if l1 < l2 else l2)))
+        max_sample = len(self._FAKE_AUTHORS)
+        if ds_entry["ref_data"]["authors"] is not None:
+            l1, l2 = len(ds_entry["ref_data"]["authors"]) + 5, max_sample
+            max_sample = l1 if l1 < l2 else l2
+        ds_entry["ref_data"]["authors"] = deepcopy(random.sample(self._FAKE_AUTHORS, random.randint(1, max_sample)))
         return True
 
     def _author_omission(self, ds_entry):
@@ -281,8 +285,7 @@ class EntryMutator:
     def _journal_page_hallucination(self, ds_entry):
         spage = random.randint(23, 1184)    # Completely arbitrary randomness.
         length = random.randint(3, 51)
-        ds_entry["ref_data"]["journal"]["page"]["start"] = spage
-        ds_entry["ref_data"]["journal"]["page"]["end"] = spage+length
+        ds_entry["ref_data"]["journal"]["page"] = { "start": spage, "end": spage+length }
         return True
     
     def _journal_page_omission(self, ds_entry):
@@ -312,21 +315,17 @@ class EntryMutator:
     _MUTATION_DISPATCH[C.ELOCATOR][M.HALLUCINATION] = _elocator_hallucination
     _MUTATION_DISPATCH[C.ELOCATOR][M.OMISSION] = _elocator_omission
 
-    def _publication_date_hallucination(self, ds_entry, *, y=True, m=True, d=True):
-        if y or m or d:
-            pub = ds_entry["ref_data"]["pub"]
-            epub = ds_entry["ref_data"]["epub"]
-            if y:
-                pub["y"] = random.randint(*self._RAND_YEAR_RANGE)
-                epub["y"] = pub["y"]
-            if m:
-                pub["m"] = random.randint(1, 12)
-                epub["m"] = pub["m"] + random.randint((pub["m"] > 1)*-1, (pub["m"] < 12)*1) # Sometimes offset epub month by 1.
-            if d:
-                pub["d"] = random.randint(1, 31)  # Hmmm
-                epub["d"] = pub["d"] + random.randint((pub["d"] > 5)*-5, (pub["m"] < 27)*5) # Sometimes offset epub day by up to 5.
-            return True
-        return False
+    def _publication_date_hallucination(self, ds_entry): # *, y=True, m=True, d=True):
+        pub = { "y": random.randint(*self._RAND_YEAR_RANGE),
+                "m": random.randint(1, 12),
+                "d": random.randint(1, 31) } # Hmmm
+        epub = { "y": pub["y"], 
+                 "m": pub["m"] + random.randint((pub["m"] > 1)*-1, (pub["m"] < 12)*1),  # Sometimes offset epub month by 1.
+                 "d": pub["d"] + random.randint((pub["d"] > 5)*-5, (pub["m"] < 27)*5) } # Sometimes offset epub day by up to 5.
+        ds_entry["ref_data"]["pub"] = pub
+        ds_entry["ref_data"]["epub"] = epub
+        return True
+
 
     def _publication_date_omission(self, ds_entry):
         omittable = bool(ds_entry["ref_data"]["pub"]) or bool(ds_entry["ref_data"]["epub"])
@@ -347,15 +346,16 @@ class EntryMutator:
     # @TODO Better randomization of suffix vs prefix mismatching / hallucinating?
 
     def _doi_mismatch(self, ds_entry):
-        ds_entry["ref_data"]["doi"]["prefix"] = self._randcopy([p for p in self._COMPONENTS["sets"]["doi_prefix"] if p != ds_entry["ref_data"]["doi"]["prefix"]])
-        ds_entry["ref_data"]["doi"]["suffix"] = self._randcopy([s for s in self._COMPONENTS["sets"]["doi_suffix"] if s != ds_entry["ref_data"]["doi"]["suffix"]])
+        doi = ds_entry["ref_data"]["doi"]
+        ds_entry["ref_data"]["doi"] = { "prefix": self._randcopy([p for p in self._COMPONENTS["sets"]["doi_prefix"] if doi is None or p != doi["prefix"]]),
+                                        "suffix": self._randcopy([s for s in self._COMPONENTS["sets"]["doi_suffix"] if doi is None or s != doi["suffix"]]) }
         return True
         
     def _doi_hallucination(self, ds_entry):
-        # 10.random1000->9999 + .random0->10or100or1000 (0-2x)
-        ds_entry["ref_data"]["doi"]["prefix"] = ".".join(["10", str(random.randint(1000, 9999))] + [str(random.randint(0, 10**random.randint(1, 3))) for i in range(random.randint(0,2))])
-        # 1-3 groups of 3 to 8 random numbers and letters
-        ds_entry["ref_data"]["doi"]["suffix"] = "-".join(["".join([random.choice("abcdefghijklmnopqrstuvwxyz,./12345678900987654321") for i in range(random.randint(3, 8))]) for i in range(random.randint(1, 3))])
+        # prefix == 10.random1000->9999 + .random0->10or100or1000 (0-2x)
+        # suffix == 1-3 groups of 3 to 8 random numbers and letters
+        ds_entry["ref_data"]["doi"] = { "prefix": ".".join(["10", str(random.randint(1000, 9999))] + [str(random.randint(0, 10**random.randint(1, 3))) for i in range(random.randint(0,2))]),
+                                        "suffix": "-".join(["".join([random.choice("abcdefghijklmnopqrstuvwxyz,./12345678900987654321") for i in range(random.randint(3, 8))]) for i in range(random.randint(1, 3))]) }
         return True
 
     def _doi_omission(self, ds_entry):
@@ -442,19 +442,131 @@ class EntryMutator:
 # Interface
 # ---------
 
+    _MUTATION_CONFLICTS = {
+        # The mapped mutations must be reapplied after the new.
+        "soft": {
+            M.TYPO: [],     # Typo and shuffle just rearrange existings.
+            M.SHUFFLE: [],
+            M.MISMATCH: [M.TYPO, M.SHUFFLE],
+            M.HALLUCINATION: [M.TYPO], # A hallucinated shuffle is meaningless.
+            M.OMISSION: []
+        },
+        # The mapped mutations must be deflagged/removed after the new (if the new is successful, of course)
+        "hard": {
+            M.TYPO: [M.OMISSION],
+            M.SHUFFLE: [M.OMISSION], # How to undo an omission?     ! Biggish change: now pass dataset into mutate, with the ID separate. That way the source can be accessed. Kinda stupid but eh.
+            M.MISMATCH: [M.OMISSION, M.HALLUCINATION],
+            M.HALLUCINATION: [M.OMISSION, M.MISMATCH, M.SHUFFLE],
+            M.OMISSION: [M.TYPO, M.SHUFFLE, M.MISMATCH, M.HALLUCINATION]
+        }
+    }
+
     # Apply a mutation.
-    def mutate(self, ds_entry, component, mutation): 
+    def mutate(self, dataset, entry_id, component, mutation): 
         # @TODO Add overwrite avoidance here (checking bitcode against bitflag[component][mutation]) or in the curves definition?
         # Should there be a check her to make sure typos don't get executed on absent components, or is that handled elsewhere? Or is it just such an edge case it will never happen...
-        
+       
+        # All mutations should be allowed to be applied.
+
+        # Some mutations conflict requiring either 
+        # 1. reapplication of first mutation after second (typo -> mismatch -> (reapply typo))  (IF the mutations are compatible)
+        # 2. removing a past mutation (typo -> omission -> (remove typo flag))  (IF the mutations are fundamentally in conflict)
+        # Truly the best way to have done all of this would have cache all requested mutations, and the only commit them on the bake step. But since we've done it in place, we gotta do all this do undo do remove business.
+    
+        # Now the tricky part for 2 is which ones overwrite which?
+
+        # The concern is that iterating through a database and applying some mutations would bias a mutation, despite the curves.
+        # I think the solution is to randomize the sequence of mutation iteration in generate_dataset.py, and just guarantee "last applied mutation priority" (last one deletes). That should be sufficiently random?
+        # Fuck it.
+
+        # Two cases of mutation conflict:
+        # Soft conflict: mutation 2 undoes mutation 1, but mutation 1 can be still reapplied atop mutation 2. Ex: A typo and a mismatch
+        # Hard conflict: both mutations are fundamentally incompatible: Ex: A mismatch and an omission, a hallucination and a mismatch
+
+        # If requested mutation is mapped to mutation in this, then the mapped mutation must be reapplied after the requested mutation.
+        # A mutation needs to be reapplied if
+        # New: [soft conflicts]
+        # If mutcode & [softconflict] reapply softconflict
+        # Still return
+
+         
+
+
 #        if m is omission but component is not in set or already omitted, do not allow.
 #        if m is typo or shuffle, but comonent is not in set or ommitted, do not allow
 #        if m has a mutation applied that will be wiped by new one (typo wiped by mismatch), rerun the one being wiped to preserve accuracy.
-        success = False 
+        
+        ds_entry, mutator = dataset[entry_id], self._MUTATION_DISPATCH[component][mutation].__get__(self)
+        
+        # Checking for conflicts
+        # Softs (remutate after new mutation):
+        remove, reapply = [], []
+        isflagged = lambda e, c, m: (m in self._MUTATION_BITFLAGS[c]) and (bool(e["mut_code"] & self._MUTATION_BITFLAGS[c][m]))   # if (component supports mutation) and (mutation is flagged)
+        print(f"{ds_entry["mut_code"] & 0xFFFFFFFFFFFFFFFF:064b}")
+        for softconflictor in self._MUTATION_CONFLICTS["soft"][mutation]:
+            if isflagged(ds_entry, component, softconflictor):
+                assert softconflictor in (M.TYPO, M.SHUFFLE), f"Mystery soft conflict {softconflictor}"
+                if softconflictor not in reapply: reapply.append(softconflictor)
+        # Hards (remove completely before new mutation):
+        hctest = False
+        for hardconflictor in self._MUTATION_CONFLICTS["hard"][mutation]:
+            if isflagged(ds_entry, component, hardconflictor):
+                if hardconflictor not in remove: remove.append(hardconflictor)
+                # If it is a mismatch or hallucination, then the conflicting flags can just be removed.
+                # If it is a typo or shuffle, then the original component must be restored and the mutation applied. We should assert that the typo/shuffle then, cause I'm unsure of that edge case possibilty.
+                # If it is an omission, then again the conflicting flags just can be removed.
+                #if mutation in (M.TYPO, M.SHUFFLE):
+                    # Restore component from dataset[ds_entry["id_source"]][component]
+                    # Apply self.mutate
+                    # Assert that it worked (if it didn't, then chache the mutations before reset and restore.
+                #else: #(M.MISMATCH, M.HALLUCINATION, M.OMISSION):
+                #    # Mask self._MUTATION_BITCODES[component][hardconflictor]  # Just fall through ...
 
-        mutator = self._MUTATION_DISPATCH[component][mutation].__get__(self)
+                ## Try again
+                #success = mutator(ds_entry)
+                hctest = True
+        
+                #self.mutate(dataset, entry_id, component, softconflictor)
+                ##mutator = self._MUTATION_DISPATCH[component][softconflictor].__get__(self)
+                ##mutator(ds_entry)
+        for mut in remove:
+            # Source must be restored for new typo / shuffle to be applied.
+            if mutation in (M.TYPO, M.SHUFFLE):
+                source = deepcopy(dataset[ds_entry["id_source"]]["ref_data"])
+                match component:    # Because access to component in refdata still isn't standardized...
+                    case C.AUTHORS:      ds_entry["ref_data"]["authors"] = source["authors"]
+                    case C.TITLE:        ds_entry["ref_data"]["title"] = source["title"]
+                    case C.JOURNAL_NAME: ds_entry["ref_data"]["journal"]["name"] = source["journal"]["name"]
+                    case C.DOI:          ds_entry["ref_data"]["doi"] = source["doi"]
+                    case C.PMCID:        ds_entry["ref_data"]["pmcid"] = source["pmcid"]
+                    case C.PMID:         ds_entry["ref_data"]["pmid"] = source["pmid"]
+                    # No other componts support typo or shuffle
+            # Zero the flag
+            print()
+            print(f"{ds_entry["mut_code"] & 0xFFFFFFFFFFFFFFFF:064b}")
+            ds_entry["mut_code"] = ds_entry["mut_code"] & ~self._MUTATION_BITFLAGS[component][mut]
+            print(f"{self._MUTATION_BITFLAGS[component][mut] & 0xFFFFFFFFFFFFFFFF:064b}")
+            print(f"{~self._MUTATION_BITFLAGS[component][mut] & 0xFFFFFFFFFFFFFFFF:064b}")
+            print(f"{ds_entry["mut_code"] & 0xFFFFFFFFFFFFFFFF:064b}")
+            print(self.explain_mutcode(ds_entry["mut_code"]))
+            #print(bin(ds_entry["mut_code"]))
+            print()
+
+        # Apply requested mutation
         success = mutator(ds_entry)
-        if success: self._flag(ds_entry, component, mutation)
+       
+        resuccesses = True
+        for mut in reapply:
+            resuccesses = resuccesses and self.mutate(dataset, entry_id, component, mut)
+
+        print(component, success, resuccesses, remove, reapply)
+        
+        if remove: assert(success), "something with hardconflicts"  # Assert that the new mutation occurred successfully if it removed others.
+        if reapply: assert(resuccesses), "something with softconflicts" 
+
+        if success: 
+            self._flag(ds_entry, component, mutation)
+
         return success
     
     # See mutations applied to an entry.
