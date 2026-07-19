@@ -1,4 +1,4 @@
 model,style,REFERENCE,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid
 gemini-3-flash-preview,nlm,True,True,False,True,False,,,True,True,False,True,True
-minimax-m3,apa,True,True,True,True,False,,,True,True,True,True,True
+minimax-m3,apa,True,True,True,True,False,,,True,True,True,,
 nemotron-3-super-120b-a12b,nlm,True,False,False,True,False,,,True,True,False,True,True

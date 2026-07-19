@@ -60,7 +60,7 @@
     "elocator": null,
     "publication_date": false,
     "doi": false,
-    "pmcid": true,
-    "pmid": true
+    "pmcid": null,
+    "pmid": null
   }
 ]

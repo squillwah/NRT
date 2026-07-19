@@ -1,6 +1,6 @@
 model,style,REFERENCE,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid
-deepseek-v4-flash,vancouver,True,False,True,True,False,False,False,,False,False,False,False
-gemini-3-flash-preview,vancouver,True,False,True,False,False,False,False,,True,True,False,False
+deepseek-v4-flash,vancouver,True,False,True,True,False,False,False,,False,False,,
+gemini-3-flash-preview,vancouver,True,False,True,False,False,False,False,,True,True,,
 mimo-v2.5,nlm,True,False,True,True,False,False,False,,False,False,False,False
 minimax-m3,nlm,True,False,True,True,False,False,False,,False,False,False,False
 nemotron-3-super-120b-a12b,nlm,True,True,True,True,False,False,False,,False,False,False,False

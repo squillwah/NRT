@@ -44,7 +44,8 @@ for refID, responses in ref_responses.items():
         for component in COMPONENTS:
             try:
                 answer[i][component] = response["content"][component]["validity"]
-                accuracy[i][component] = response["content"][component]["validity"] == dataset[refID]["mut_severity"]["component"][component][0] if dataset[refID]["mut_severity"]["component"][component] else None  # If this is NULL, then the component never existed within the source reference or by a mutation.
+                grade_if = dataset[refID]["mut_severity"]["component"][component] is not None and component in dataset[refID]["mut_severity"]["holistic"]["format"][response["citation_style"]]["includes"]
+                accuracy[i][component] = response["content"][component]["validity"] == dataset[refID]["mut_severity"]["component"][component][0] if grade_if else None  # If this is NULL, then the component never existed within the source reference or by a mutation, or is just not standardly included within the given format style.
                 confidence[i][component] = response["content"][component]["validity_confidence"]
                 reasoning[i][component] = response["content"][component]["reasoning"]
             except Exception as e: 

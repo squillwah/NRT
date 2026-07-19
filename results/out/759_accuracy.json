@@ -12,8 +12,8 @@
     "elocator": true,
     "publication_date": true,
     "doi": false,
-    "pmcid": true,
-    "pmid": false
+    "pmcid": null,
+    "pmid": null
   },
   {
     "model": "gemini-3-flash-preview",

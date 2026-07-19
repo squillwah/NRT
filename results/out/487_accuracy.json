@@ -28,8 +28,8 @@
     "elocator": true,
     "publication_date": false,
     "doi": true,
-    "pmcid": false,
-    "pmid": true
+    "pmcid": null,
+    "pmid": null
   },
   {
     "model": "minimax-m3",

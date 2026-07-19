@@ -28,8 +28,8 @@
     "elocator": null,
     "publication_date": false,
     "doi": true,
-    "pmcid": true,
-    "pmid": false
+    "pmcid": null,
+    "pmid": null
   },
   {
     "model": "mimo-v2.5",
@@ -44,8 +44,8 @@
     "elocator": null,
     "publication_date": false,
     "doi": true,
-    "pmcid": false,
-    "pmid": true
+    "pmcid": null,
+    "pmid": null
   },
   {
     "model": "nemotron-3-super-120b-a12b",
@@ -60,7 +60,7 @@
     "elocator": null,
     "publication_date": false,
     "doi": true,
-    "pmcid": true,
-    "pmid": false
+    "pmcid": null,
+    "pmid": null
   }
 ]

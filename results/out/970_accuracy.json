@@ -44,7 +44,7 @@
     "elocator": true,
     "publication_date": true,
     "doi": false,
-    "pmcid": true,
-    "pmid": true
+    "pmcid": null,
+    "pmid": null
   }
 ]

@@ -44,8 +44,8 @@
     "elocator": true,
     "publication_date": false,
     "doi": true,
-    "pmcid": true,
-    "pmid": false
+    "pmcid": null,
+    "pmid": null
   },
   {
     "model": "nemotron-3-super-120b-a12b",
@@ -60,7 +60,7 @@
     "elocator": true,
     "publication_date": false,
     "doi": true,
-    "pmcid": true,
-    "pmid": false
+    "pmcid": null,
+    "pmid": null
   }
 ]

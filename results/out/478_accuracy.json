@@ -76,7 +76,7 @@
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": null,
+    "pmid": null
   }
 ]

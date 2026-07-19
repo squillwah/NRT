@@ -12,8 +12,8 @@
     "elocator": false,
     "publication_date": true,
     "doi": true,
-    "pmcid": true,
-    "pmid": true
+    "pmcid": null,
+    "pmid": null
   },
   {
     "model": "gemini-3-flash-preview",
@@ -28,8 +28,8 @@
     "elocator": true,
     "publication_date": false,
     "doi": true,
-    "pmcid": true,
-    "pmid": true
+    "pmcid": null,
+    "pmid": null
   },
   {
     "model": "mimo-v2.5",
