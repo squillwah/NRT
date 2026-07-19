@@ -1,0 +1,5 @@
+model,format,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid,REFERENCE
+deepseek/deepseek-v4-flash,springer,False,False,False,False,False(null),False(null),False,False,False,False,False,False
+nvidia/nemotron-3-super-120b-a12b:free,nature,False,False,True,False,False(null),False(null),False,False,False,False,False,False
+xiaomi/mimo-v2.5,nature,True,True,True,True,False(null),False(null),False,False,True,False,False,False
+google/gemini-3-flash-preview,harvard,True,False,True,False,False(null),False(null),False,False,False,False,False,False

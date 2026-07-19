@@ -1,0 +1,464 @@
+{
+  "request_json": {
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a citation classifier. Determine the authenticity of references and their individual components."
+      },
+      {
+        "role": "user",
+        "content": "Nakamura DS, Tattersall RE, Warburton TV, Weber SK, Flint RT, Romano FS, Bracken YA, McGregor CD, Saito YM, Lockwood BD, Gosling SU, Varney KM, Rutherford OQ, Grimshaw DF, Sutherland ER, Wendell LN, Rinaldi MS. Adrenal Aldosterone Synthase Expression Imaging in Primary Aldosteronism. Ann Intern Med AI. 2026;255(986):. doi:10.1136/bmj-2025-089213"
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "reference_evaluation",
+        "strict": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "authors": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the author list is real, false if the author list is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the author list being valid. High 'valid' confidence is 1.0, and high 'generated' confidence is 0.0."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "title": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the article title is real, false if the article title is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the article title being valid. High 'valid' confidence is 1.0, and high 'generated' confidence is 0.0."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "journal_name": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the journal is real, false if the journal is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the journal being valid. High 'valid' confidence is 1.0, and high 'generated' confidence is 0.0."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "journal_volume": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the journal volume is real, false if the journal volume is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the journal volume being valid. High 'valid' confidence is 1.0, and high 'generated' confidence is 0.0."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "journal_issue": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the journal issue is real, false if the journal issue is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the journal issue being valid. High 'valid' confidence is 1.0, and high 'generated' confidence is 0.0."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "journal_page": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the page number is real, false if the page number is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the page number being valid. High 'valid' confidence is 1.0, and high 'generated' confidence is 0.0."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "elocator": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the elocator is real, false if the elocator is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the elocator being valid. High 'valid' confidence is 1.0, and high 'generated' confidence is 0.0."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "publication_date": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the publishing date is real, false if the publishing date is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the publishing date being valid. High 'valid' confidence is 1.0, and high 'generated' confidence is 0.0."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "doi": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the doi is real, false if the doi is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the doi being valid. High 'valid' confidence is 1.0, and high 'generated' confidence is 0.0."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "pmid": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the pmid is real, false if the pmid is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the pmid being valid. High 'valid' confidence is 1.0, and high 'generated' confidence is 0.0."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "pmcid": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the pmcid is real, false if the pmcid is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the pmcid being valid. High 'valid' confidence is 1.0, and high 'generated' confidence is 0.0."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "REFERENCE": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the reference is real, false if the reference is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the reference being valid. High 'valid' confidence is 1.0, and high 'generated' confidence is 0.0."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "authors",
+            "title",
+            "journal_name",
+            "journal_volume",
+            "journal_issue",
+            "journal_page",
+            "elocator",
+            "publication_date",
+            "doi",
+            "pmid",
+            "pmcid",
+            "REFERENCE"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "plugins": [
+      {
+        "id": "response-healing"
+      }
+    ]
+  },
+  "response_text": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1783444129-i5EgxYm2BXFprRxMeyFK\",\"object\":\"chat.completion\",\"created\":1783444129,\"model\":\"nvidia/nemotron-3-super-120b-a12b-20230311:free\",\"provider\":\"Nvidia\",\"system_fingerprint\":null,\"service_tier\":null,\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"authors\\\":{\\\"reasoning\\\":\\\"The author list contains many implausible initials and combinations (e.g., \\\\\\\"Nakamura DS\\\\\\\", \\\\\\\"Tattersall RE\\\\\\\", \\\\\\\"Warburton TV\\\\\\\", \\\\\\\"Weber SK\\\\\\\", \\\\\\\"Flint RT\\\\\\\", \\\\\\\"Romano FS\\\\\\\", \\\\\\\"Bracken YA\\\\\\\", \\\\\\\"McGregor CD\\\\\\\", \\\\\\\"Saito YM\\\\\\\", \\\\\\\"Lockwood BD\\\\\\\", \\\\\\\"Gosling SU\\\\\\\", \\\\\\\"Varney KM\\\\\\\", \\\\\\\"Rutherford OQ\\\\\\\", \\\\\\\"Grimshaw DF\\\\\\\", \\\\\\\"Sutherland ER\\\\\\\", \\\\\\\"Wendell LN\\\\\\\", \\\\\\\"Rinaldi MS\\\\\\\\)). Such a pattern is atypical for real publications and suggests fabrication.\\\",\\\"validity\\\":false,\\\"validity_confidence\\\":0.95},\\\"title\\\":{\\\"reasoning\\\":\\\"\\\\\\\"Adrenal Aldosterone Synthase Expression Imaging in Primary Aldosteronism\\\\\\\" is a plausible-sounding title, but without verification in PubMed or other databases, its authenticity cannot be confirmed. Given the other red flags, it is likely fabricated.\\\",\\\"validity\\\":false,\\\"validity_confidence\\\":0.8},\\\"journal_name\\\":{\\\"reasoning\\\":\\\"\\\\\\\"Ann Intern Med AI\\\\\\\" is not a recognized journal. The correct title is \\\\\\\"Annals of Internal Medicine\\\\\\\" (often abbreviated \\\\\\\"Ann Intern Med\\\\\\\\\\\",\\\"validity\\\":false,\\\"validity_confidence\\\":0.99},\\\"journal_volume\\\":{\\\"reasoning\\\":\\\"Volume 255 of Annals of Internal Medicine is implausible; as of 2024 the journal is around volume 180. Volume 255 would not occur until far in the future, making the citation suspect.\\\",\\\"validity\\\":false,\\\"validity_confidence\\\":0.98},\\\"journal_issue\\\":{\\\"reasoning\\\":\\\"Issue 986 is extraordinarily high; Annals of Internal Medicine does not use such high issue numbers. This further indicates fabrication.\\\",\\\"validity\\\":false,\\\"validity_confidence\\\":0.97},\\\"journal_page\\\":{\\\"reasoning\\\":\\\"Page numbers are missing entirely (shown as \\\\\\\"\\\\\\\\)). A legitimate article would have a page range or article number.\\\",\\\"validity\\\":false,\\\"validity_confidence\\\":0.99},\\\"elocator\\\":{\\\"reasoning\\\":\\\"No electronic locator (e.g., article ID) is provided, which is unusual for a recent article.\\\",\\\"validity\\\":false,\\\"validity_confidence\\\":0.9},\\\"publication_date\\\":{\\\"reasoning\\\":\\\"Year 2026 is in the future relative to the current date (2025). While journals can publish ahead-of-print articles, a 2026 date combined with other inconsistencies is highly suspicious.\\\",\\\"validity\\\":false,\\\"validity_confidence\\\":0.95},\\\"doi\\\":{\\\"reasoning\\\":\\\"The DOI prefix \\\\\\\"10.1136/\\\\\\\" belongs to BMJ Publishing Group (e.g., BMJ, Gut), not to Annals of Internal Medicine (which uses \\\\\\\"10.7326/\\\\\\\" or similar). The suffix \\\\\\\"bmj-2025-089213\\\\\\\" further indicates a BMJ article. This mismatch between journal and DOI is a clear sign of fabrication.\\\",\\\"validity\\\":false,\\\"validity_confidence\\\":0.99},\\\"pmid\\\":{\\\"reasoning\\\":\\\"No PMID provided; even if present, it would need to be checked against PubMed.\\\",\\\"validity\\\":false,\\\"validity_confidence\\\":0.8},\\\"pmcid\\\":{\\\"reasoning\\\":\\\"No PMCID provided.\\\",\\\"validity\\\":false,\\\"validity_confidence\\\":0.8},\\\"REFERENCE\\\":{\\\"reasoning\\\":\\\"Multiple components are inconsistent: journal title mismatch with DOI, implausible volume/issue/future date, missing pages, and suspicious author initials. Collectively, these indicate the reference is fabricated.\\\",\\\"validity\\\":false,\\\"validity_confidence\\\":0.99}}\",\"refusal\":null,\"reasoning\":\"We need to determine authenticity: check if this article exists. The citation: \\\"Nakamura DS, Tattersall RE, Warburton TV, Weber SK, Flint RT, Romano FS, Bracken YA, McGregor CD, Saito YM, Lockwood BD, Gosling SU, Varney KM, Rutherford OQ, Grimshaw DF, Sutherland ER, Wendell LN, Rinaldi MS. Adrenal Aldosterone Synthase Expression Imaging in Primary Aldosteronism. Ann Intern Med AI. 2026;255(986):. doi:10.1136/bmj-2025-089213\\\"\\n\\nSome issues: Ann Intern Med is a journal; AI suffix maybe \\\"Ann Intern Med\\\". Volume 255, issue 986? Not plausible: Ann Intern Med volumes are around 170-something currently; volume 255 far future. Issue 986 unrealistic. Page numbers missing. DOI prefix: 10.1136/bmj-2025-089213 suggests BMJ journal, not Ann Intern Med. So mismatch. Likely fabricated.\\n\\nThus answer: reference is inauthentic. Provide explanation.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"We need to determine authenticity: check if this article exists. The citation: \\\"Nakamura DS, Tattersall RE, Warburton TV, Weber SK, Flint RT, Romano FS, Bracken YA, McGregor CD, Saito YM, Lockwood BD, Gosling SU, Varney KM, Rutherford OQ, Grimshaw DF, Sutherland ER, Wendell LN, Rinaldi MS. Adrenal Aldosterone Synthase Expression Imaging in Primary Aldosteronism. Ann Intern Med AI. 2026;255(986):. doi:10.1136/bmj-2025-089213\\\"\\n\\nSome issues: Ann Intern Med is a journal; AI suffix maybe \\\"Ann Intern Med\\\". Volume 255, issue 986? Not plausible: Ann Intern Med volumes are around 170-something currently; volume 255 far future. Issue 986 unrealistic. Page numbers missing. DOI prefix: 10.1136/bmj-2025-089213 suggests BMJ journal, not Ann Intern Med. So mismatch. Likely fabricated.\\n\\nThus answer: reference is inauthentic. Provide explanation.\\n\\n\",\"format\":\"unknown\",\"index\":0}]}}],\"usage\":{\"prompt_tokens\":163,\"completion_tokens\":1090,\"total_tokens\":1253,\"cost\":0,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0,\"upstream_inference_prompt_cost\":0,\"upstream_inference_completions_cost\":0},\"completion_tokens_details\":{\"reasoning_tokens\":216,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "response_json": {
+    "id": "gen-1783444129-i5EgxYm2BXFprRxMeyFK",
+    "object": "chat.completion",
+    "created": 1783444129,
+    "model": "nvidia/nemotron-3-super-120b-a12b-20230311:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"authors\":{\"reasoning\":\"The author list contains many implausible initials and combinations (e.g., \\\"Nakamura DS\\\", \\\"Tattersall RE\\\", \\\"Warburton TV\\\", \\\"Weber SK\\\", \\\"Flint RT\\\", \\\"Romano FS\\\", \\\"Bracken YA\\\", \\\"McGregor CD\\\", \\\"Saito YM\\\", \\\"Lockwood BD\\\", \\\"Gosling SU\\\", \\\"Varney KM\\\", \\\"Rutherford OQ\\\", \\\"Grimshaw DF\\\", \\\"Sutherland ER\\\", \\\"Wendell LN\\\", \\\"Rinaldi MS\\\\)). Such a pattern is atypical for real publications and suggests fabrication.\",\"validity\":false,\"validity_confidence\":0.95},\"title\":{\"reasoning\":\"\\\"Adrenal Aldosterone Synthase Expression Imaging in Primary Aldosteronism\\\" is a plausible-sounding title, but without verification in PubMed or other databases, its authenticity cannot be confirmed. Given the other red flags, it is likely fabricated.\",\"validity\":false,\"validity_confidence\":0.8},\"journal_name\":{\"reasoning\":\"\\\"Ann Intern Med AI\\\" is not a recognized journal. The correct title is \\\"Annals of Internal Medicine\\\" (often abbreviated \\\"Ann Intern Med\\\\\",\"validity\":false,\"validity_confidence\":0.99},\"journal_volume\":{\"reasoning\":\"Volume 255 of Annals of Internal Medicine is implausible; as of 2024 the journal is around volume 180. Volume 255 would not occur until far in the future, making the citation suspect.\",\"validity\":false,\"validity_confidence\":0.98},\"journal_issue\":{\"reasoning\":\"Issue 986 is extraordinarily high; Annals of Internal Medicine does not use such high issue numbers. This further indicates fabrication.\",\"validity\":false,\"validity_confidence\":0.97},\"journal_page\":{\"reasoning\":\"Page numbers are missing entirely (shown as \\\"\\\\)). A legitimate article would have a page range or article number.\",\"validity\":false,\"validity_confidence\":0.99},\"elocator\":{\"reasoning\":\"No electronic locator (e.g., article ID) is provided, which is unusual for a recent article.\",\"validity\":false,\"validity_confidence\":0.9},\"publication_date\":{\"reasoning\":\"Year 2026 is in the future relative to the current date (2025). While journals can publish ahead-of-print articles, a 2026 date combined with other inconsistencies is highly suspicious.\",\"validity\":false,\"validity_confidence\":0.95},\"doi\":{\"reasoning\":\"The DOI prefix \\\"10.1136/\\\" belongs to BMJ Publishing Group (e.g., BMJ, Gut), not to Annals of Internal Medicine (which uses \\\"10.7326/\\\" or similar). The suffix \\\"bmj-2025-089213\\\" further indicates a BMJ article. This mismatch between journal and DOI is a clear sign of fabrication.\",\"validity\":false,\"validity_confidence\":0.99},\"pmid\":{\"reasoning\":\"No PMID provided; even if present, it would need to be checked against PubMed.\",\"validity\":false,\"validity_confidence\":0.8},\"pmcid\":{\"reasoning\":\"No PMCID provided.\",\"validity\":false,\"validity_confidence\":0.8},\"REFERENCE\":{\"reasoning\":\"Multiple components are inconsistent: journal title mismatch with DOI, implausible volume/issue/future date, missing pages, and suspicious author initials. Collectively, these indicate the reference is fabricated.\",\"validity\":false,\"validity_confidence\":0.99}}",
+          "refusal": null,
+          "reasoning": "We need to determine authenticity: check if this article exists. The citation: \"Nakamura DS, Tattersall RE, Warburton TV, Weber SK, Flint RT, Romano FS, Bracken YA, McGregor CD, Saito YM, Lockwood BD, Gosling SU, Varney KM, Rutherford OQ, Grimshaw DF, Sutherland ER, Wendell LN, Rinaldi MS. Adrenal Aldosterone Synthase Expression Imaging in Primary Aldosteronism. Ann Intern Med AI. 2026;255(986):. doi:10.1136/bmj-2025-089213\"\n\nSome issues: Ann Intern Med is a journal; AI suffix maybe \"Ann Intern Med\". Volume 255, issue 986? Not plausible: Ann Intern Med volumes are around 170-something currently; volume 255 far future. Issue 986 unrealistic. Page numbers missing. DOI prefix: 10.1136/bmj-2025-089213 suggests BMJ journal, not Ann Intern Med. So mismatch. Likely fabricated.\n\nThus answer: reference is inauthentic. Provide explanation.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to determine authenticity: check if this article exists. The citation: \"Nakamura DS, Tattersall RE, Warburton TV, Weber SK, Flint RT, Romano FS, Bracken YA, McGregor CD, Saito YM, Lockwood BD, Gosling SU, Varney KM, Rutherford OQ, Grimshaw DF, Sutherland ER, Wendell LN, Rinaldi MS. Adrenal Aldosterone Synthase Expression Imaging in Primary Aldosteronism. Ann Intern Med AI. 2026;255(986):. doi:10.1136/bmj-2025-089213\"\n\nSome issues: Ann Intern Med is a journal; AI suffix maybe \"Ann Intern Med\". Volume 255, issue 986? Not plausible: Ann Intern Med volumes are around 170-something currently; volume 255 far future. Issue 986 unrealistic. Page numbers missing. DOI prefix: 10.1136/bmj-2025-089213 suggests BMJ journal, not Ann Intern Med. So mismatch. Likely fabricated.\n\nThus answer: reference is inauthentic. Provide explanation.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 163,
+      "completion_tokens": 1090,
+      "total_tokens": 1253,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 216,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "content": {
+    "authors": {
+      "reasoning": "The author list contains many implausible initials and combinations (e.g., \"Nakamura DS\", \"Tattersall RE\", \"Warburton TV\", \"Weber SK\", \"Flint RT\", \"Romano FS\", \"Bracken YA\", \"McGregor CD\", \"Saito YM\", \"Lockwood BD\", \"Gosling SU\", \"Varney KM\", \"Rutherford OQ\", \"Grimshaw DF\", \"Sutherland ER\", \"Wendell LN\", \"Rinaldi MS\\)). Such a pattern is atypical for real publications and suggests fabrication.",
+      "validity": false,
+      "validity_confidence": 0.95
+    },
+    "title": {
+      "reasoning": "\"Adrenal Aldosterone Synthase Expression Imaging in Primary Aldosteronism\" is a plausible-sounding title, but without verification in PubMed or other databases, its authenticity cannot be confirmed. Given the other red flags, it is likely fabricated.",
+      "validity": false,
+      "validity_confidence": 0.8
+    },
+    "journal_name": {
+      "reasoning": "\"Ann Intern Med AI\" is not a recognized journal. The correct title is \"Annals of Internal Medicine\" (often abbreviated \"Ann Intern Med\\",
+      "validity": false,
+      "validity_confidence": 0.99
+    },
+    "journal_volume": {
+      "reasoning": "Volume 255 of Annals of Internal Medicine is implausible; as of 2024 the journal is around volume 180. Volume 255 would not occur until far in the future, making the citation suspect.",
+      "validity": false,
+      "validity_confidence": 0.98
+    },
+    "journal_issue": {
+      "reasoning": "Issue 986 is extraordinarily high; Annals of Internal Medicine does not use such high issue numbers. This further indicates fabrication.",
+      "validity": false,
+      "validity_confidence": 0.97
+    },
+    "journal_page": {
+      "reasoning": "Page numbers are missing entirely (shown as \"\\)). A legitimate article would have a page range or article number.",
+      "validity": false,
+      "validity_confidence": 0.99
+    },
+    "elocator": {
+      "reasoning": "No electronic locator (e.g., article ID) is provided, which is unusual for a recent article.",
+      "validity": false,
+      "validity_confidence": 0.9
+    },
+    "publication_date": {
+      "reasoning": "Year 2026 is in the future relative to the current date (2025). While journals can publish ahead-of-print articles, a 2026 date combined with other inconsistencies is highly suspicious.",
+      "validity": false,
+      "validity_confidence": 0.95
+    },
+    "doi": {
+      "reasoning": "The DOI prefix \"10.1136/\" belongs to BMJ Publishing Group (e.g., BMJ, Gut), not to Annals of Internal Medicine (which uses \"10.7326/\" or similar). The suffix \"bmj-2025-089213\" further indicates a BMJ article. This mismatch between journal and DOI is a clear sign of fabrication.",
+      "validity": false,
+      "validity_confidence": 0.99
+    },
+    "pmid": {
+      "reasoning": "No PMID provided; even if present, it would need to be checked against PubMed.",
+      "validity": false,
+      "validity_confidence": 0.8
+    },
+    "pmcid": {
+      "reasoning": "No PMCID provided.",
+      "validity": false,
+      "validity_confidence": 0.8
+    },
+    "REFERENCE": {
+      "reasoning": "Multiple components are inconsistent: journal title mismatch with DOI, implausible volume/issue/future date, missing pages, and suspicious author initials. Collectively, these indicate the reference is fabricated.",
+      "validity": false,
+      "validity_confidence": 0.99
+    }
+  }
+}

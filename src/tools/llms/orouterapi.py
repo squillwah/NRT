@@ -15,6 +15,7 @@ def make_payload_completions(model, ref, schema):
             { "role": "user", "content": ref }
         ],
         #"provider": { "order": ["google-ai-studio"], "require_parameters": True }, # Force providers that support response_format (all stated parameters)
+        "require_parameters": True, 
         "response_format": schema,
         "plugins": [ { "id": "response-healing" } ] # Server-side mending of malformed JSON responses.
     }

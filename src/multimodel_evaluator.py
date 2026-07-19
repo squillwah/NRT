@@ -69,7 +69,7 @@ def _evaluate_task(entry, model, style):
     return evaluate(entry, model, form=style)
 
 
-TARGET_DIR = "./mme"
+TARGET_DIR = "./data/model_responses"
 DATASET = "REFERENCES_NOSUG.json"
 MODELS = (
     "deepseek/deepseek-v4-flash",                   # A couple of the most popular models (and nemotron) with text capabilities + response_format parameter support.

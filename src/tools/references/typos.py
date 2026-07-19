@@ -8,7 +8,7 @@ import random
 class Typofier:
 
     _FATSWAP_RATIO = 2/3        # Fatfingers are twice as likely as swaps.
-    _TYPOFY_FREQUENCY = 1/10    # 1 + len(string)*tf typos (1 + 1 per 10 chars).
+    _TYPOFY_FREQUENCY = 1/20    # 1 + len(string)*tf typos (1 + 1 per 10 chars).
 
     # Swap char at index with adjacent key (on the keyboard).
     @staticmethod

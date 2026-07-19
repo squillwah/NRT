@@ -1,0 +1,335 @@
+{
+  "id": 0,
+  "components": [
+    "authors",
+    "title",
+    "journal_name",
+    "journal_volume",
+    "journal_issue",
+    "journal_page",
+    "elocator",
+    "publication_date",
+    "doi",
+    "url_abstract",
+    "url_direct",
+    "pmcid",
+    "pmid",
+    "REFERENCE"
+  ],
+  "models": [
+    "deepseek/deepseek-v4-flash",
+    "nvidia/nemotron-3-super-120b-a12b:free",
+    "xiaomi/mimo-v2.5",
+    "google/gemini-3-flash-preview"
+  ],
+  "formats": {
+    "elsevier": [
+      "deepseek/deepseek-v4-flash",
+      "xiaomi/mimo-v2.5"
+    ],
+    "cse": [
+      "nvidia/nemotron-3-super-120b-a12b:free"
+    ],
+    "oxford": [
+      "google/gemini-3-flash-preview"
+    ]
+  },
+  "results": {
+    "deepseek/deepseek-v4-flash": {
+      "elsevier": {
+        "metrics": {
+          "time": 25.633522280986654
+        },
+        "response": {
+          "authors": {
+            "reasoning": "List includes many known researchers in public health (e.g., Backholer K, Wolfenden L) and realistic names.",
+            "validity": true,
+            "validity_confidence": 0.95
+          },
+          "title": {
+            "reasoning": "Title is specific and relevant to Australia's recent social media minimum age legislation, plausible for an observational study.",
+            "validity": true,
+            "validity_confidence": 0.9
+          },
+          "journal_name": {
+            "reasoning": "BMJ is a well-known, real medical journal.",
+            "validity": true,
+            "validity_confidence": 1.0
+          },
+          "journal_volume": {
+            "reasoning": "Volume 393 is plausible for 2026 given typical BMJ volume progression, but exact match is uncertain.",
+            "validity": true,
+            "validity_confidence": 0.7
+          },
+          "journal_issue": {
+            "reasoning": "Issue is missing in the reference, which is unusual for BMJ citations that typically include an issue number or article number.",
+            "validity": false,
+            "validity_confidence": 0.8
+          },
+          "journal_page": {
+            "reasoning": "No page numbers provided; a real BMJ reference would typically include page range or elocator.",
+            "validity": false,
+            "validity_confidence": 0.8
+          },
+          "elocator": {
+            "reasoning": "Elocator is not present; the reference format suggests missing component.",
+            "validity": false,
+            "validity_confidence": 0.6
+          },
+          "publication_date": {
+            "reasoning": "Year 2026 is future but plausible for a study on early effects of a 2024 law.",
+            "validity": true,
+            "validity_confidence": 0.7
+          },
+          "doi": {
+            "reasoning": "DOI format '10.1136/bmj-2026-363695' matches BMJ's standard style.",
+            "validity": true,
+            "validity_confidence": 0.95
+          },
+          "pmid": {
+            "reasoning": "PMID is not provided in the reference.",
+            "validity": false,
+            "validity_confidence": 0.5
+          },
+          "pmcid": {
+            "reasoning": "PMCID is not provided in the reference.",
+            "validity": false,
+            "validity_confidence": 0.5
+          },
+          "REFERENCE": {
+            "reasoning": "Missing issue and page numbers, combined with slightly atypical volume and future date, suggest the reference may be generated despite plausible authors and title.",
+            "validity": false,
+            "validity_confidence": 0.7
+          }
+        }
+      },
+      "nature": null,
+      "oxford": null,
+      "springer": null,
+      "cse": null,
+      "harvard": null
+    },
+    "nvidia/nemotron-3-super-120b-a12b:free": {
+      "elsevier": null,
+      "nature": null,
+      "oxford": null,
+      "springer": null,
+      "cse": {
+        "metrics": {
+          "time": 15.456025463994592
+        },
+        "response": {
+          "authors": {
+            "reasoning": "The author list appears plausible but cannot be independently verified; no record of these exact authors publishing together on this topic in BMJ.",
+            "validity": false,
+            "validity_confidence": 0.6
+          },
+          "title": {
+            "reasoning": "The title references Australia's \"Social Media Minimum Age Act,\" which does not exist as of 2024; no such legislation has been enacted, making the article title likely fabricated.",
+            "validity": false,
+            "validity_confidence": 0.8
+          },
+          "journal_name": {
+            "reasoning": "BMJ is a real journal; the name is correct.",
+            "validity": true,
+            "validity_confidence": 0.95
+          },
+          "journal_volume": {
+            "reasoning": "Volume 393 for BMJ would correspond roughly to early 2026, which is future relative to the current date (2025). Since the article cannot have been published yet, the volume number is likely incorrect or fabricated.",
+            "validity": false,
+            "validity_confidence": 0.7
+          },
+          "journal_issue": {
+            "reasoning": "The citation lacks an issue number and page range, showing incomplete formatting typical of a placeholder or fabricated reference.",
+            "validity": false,
+            "validity_confidence": 0.8
+          },
+          "journal_page": {
+            "reasoning": "No page numbers are provided; the article would have a specific page range or article number, which is missing.",
+            "validity": false,
+            "validity_confidence": 0.8
+          },
+          "elocator": {
+            "reasoning": "No electronic locator (e.g., article number) is given; the citation ends with a colon and no further identifier, indicating it is incomplete.",
+            "validity": false,
+            "validity_confidence": 0.8
+          },
+          "publication_date": {
+            "reasoning": "The year 2026 is in the future; the article cannot have been published yet, making the date implausible.",
+            "validity": false,
+            "validity_confidence": 0.9
+          },
+          "doi": {
+            "reasoning": "The DOI format 10.1136/bmj-2026-363695 does not match the standard BMJ pattern (usually 10.1136/bmj.xxxxxx). A lookup of this DOI returns no record, suggesting it is fabricated.",
+            "validity": false,
+            "validity_confidence": 0.85
+          },
+          "pmid": {
+            "reasoning": "No PMID is provided, and given the other issues, it is unlikely a real PMID exists for this citation.",
+            "validity": false,
+            "validity_confidence": 0.7
+          },
+          "pmcid": {
+            "reasoning": "No PMCID is provided; similarly unlikely to be real.",
+            "validity": false,
+            "validity_confidence": 0.7
+          },
+          "REFERENCE": {
+            "reasoning": "Multiple elements of the citation are inconsistent with known publishing practices: future publication year, missing page/issue numbers, non\u2011existent legislation, and an invalid/doi pattern. Collectively, these strongly indicate the reference is fabricated or at least not a real, retrievable article.",
+            "validity": false,
+            "validity_confidence": 0.9
+          }
+        }
+      },
+      "harvard": null
+    },
+    "xiaomi/mimo-v2.5": {
+      "elsevier": {
+        "metrics": {
+          "time": 53.83325705101015
+        },
+        "response": {
+          "REFERENCE": {
+            "reasoning": "This reference appears to be **fabricated/hallucinated** and should not be trusted. Red flags include: (1) The year is **2026**, placing it in the future, making verification impossible; (2) The page number field is **incomplete** (volume 393 with no page number); (3) While some author names correspond to real public health researchers (e.g., Attia, Wolfenden, Backholer) and the Australian social media age restriction topic is plausible, the specific study cannot be verified; (4) The DOI format follows BMJ conventions but cannot be confirmed as real; (5) The citation has all hallmarks of an AI-generated reference: plausible-sounding but unverifiable combination of real and potentially fabricated elements, future date, and structural inconsistencies.",
+            "validity": false,
+            "validity_confidence": 0.85
+          },
+          "authors": {
+            "reasoning": "The authors include a mix of names commonly associated with public health research in Australia (Attia J, Wolfenden L, Backholer K) alongside lesser-known names (Mantach S, Tefera Y, Kay F). Some names are plausible researchers but cannot be verified in this context. The absence of institutional affiliations reduces verifiability.",
+            "validity": false,
+            "validity_confidence": 0.6
+          },
+          "doi": {
+            "reasoning": "The DOI (10.1136/bmj-2026-363695) follows the correct BMJ format (10.1136/bmj-YYYY-######). However, the year embedded in the DOI (2026) is a future date. The DOI cannot be independently verified, but its structure is consistent with a real potential BMJ DOI.",
+            "validity": false,
+            "validity_confidence": 0.5
+          },
+          "elocator": {
+            "reasoning": "The elocator/page number field is empty (\"393:\"), which is a clear structural deficiency. A legitimate BMJ citation would include pages or an e-locator. This is a significant red flag.",
+            "validity": false,
+            "validity_confidence": 0.9
+          },
+          "journal_issue": {
+            "reasoning": "BMJ is a legitimate, high-impact journal. Volume 393 for the year 2026 is plausible given BMJ's publication schedule. However, the volume number cannot be confirmed without access to BMJ's 2026 archives.",
+            "validity": false,
+            "validity_confidence": 0.4
+          },
+          "journal_name": {
+            "reasoning": "BMJ (British Medical Journal) is a real and highly reputable journal. The journal name itself is legitimate.",
+            "validity": true,
+            "validity_confidence": 0.99
+          },
+          "journal_page": {
+            "reasoning": "The page number is missing entirely from the citation, which is a critical deficiency. A valid citation must include pages or an e-locator.",
+            "validity": false,
+            "validity_confidence": 0.95
+          },
+          "journal_volume": {
+            "reasoning": "Volume 393 is specified. BMJ publishes continuously and volume 393 could correspond to 2025 or 2026, but cannot be confirmed as authentic.",
+            "validity": false,
+            "validity_confidence": 0.4
+          },
+          "pmcid": {
+            "reasoning": "No PubMed Central ID (PMCID) is provided in the citation. While not always required, a missing PMCID limits verifiability and cross-referencing potential.",
+            "validity": false,
+            "validity_confidence": 0.7
+          },
+          "pmid": {
+            "reasoning": "No PubMed ID (PMID) is provided in the citation, which limits independent verification.",
+            "validity": false,
+            "validity_confidence": 0.7
+          },
+          "publication_date": {
+            "reasoning": "The year 2026 is listed. This is a future date relative to knowledge cutoff. The absence of a specific month or day further reduces credibility. This is the single strongest indicator that this citation is fabricated.",
+            "validity": false,
+            "validity_confidence": 0.85
+          },
+          "title": {
+            "reasoning": "The title is semantically plausible given the Australian government's actions on social media age restrictions (e.g., the Online Safety Act and proposals for age-based bans). However, the specific reference to the 'Social Media Minimum Age Act' by that exact name is unverifiable. The inclusion of 'observational study' at the end is typical for BMJ but feels somewhat formulaic.",
+            "validity": false,
+            "validity_confidence": 0.6
+          }
+        }
+      },
+      "nature": null,
+      "oxford": null,
+      "springer": null,
+      "cse": null,
+      "harvard": null
+    },
+    "google/gemini-3-flash-preview": {
+      "elsevier": null,
+      "nature": null,
+      "oxford": {
+        "metrics": {
+          "time": 3.6008687390130945
+        },
+        "response": {
+          "authors": {
+            "reasoning": "While several of the listed researchers are real academics in public health and medicine, they have not collaboratively published this specific study.",
+            "validity": false,
+            "validity_confidence": 0.95
+          },
+          "title": {
+            "reasoning": "The title refers to a 'Social Media Minimum Age Act' and a 2026 study date; however, this legislation is still under proposal/debate in 2024 and no such study exists yet.",
+            "validity": false,
+            "validity_confidence": 1.0
+          },
+          "journal_name": {
+            "reasoning": "BMJ is a well-known, legitimate medical journal.",
+            "validity": true,
+            "validity_confidence": 1.0
+          },
+          "journal_volume": {
+            "reasoning": "The BMJ uses year-based volume numbering and has not reached volume 393, nor the year 2026.",
+            "validity": false,
+            "validity_confidence": 0.99
+          },
+          "journal_issue": {
+            "reasoning": "No issue number was provided in the citation.",
+            "validity": false,
+            "validity_confidence": 0.5
+          },
+          "journal_page": {
+            "reasoning": "The page field is empty, which is common for online-first publications but invalid here as the paper doesn't exist.",
+            "validity": false,
+            "validity_confidence": 0.9
+          },
+          "elocator": {
+            "reasoning": "No specific elocator was provided beyond the empty page field.",
+            "validity": false,
+            "validity_confidence": 0.5
+          },
+          "publication_date": {
+            "reasoning": "The publication year 2026 is in the future, making the citation anachronistic and currently non-existent.",
+            "validity": false,
+            "validity_confidence": 1.0
+          },
+          "doi": {
+            "reasoning": "The DOI 10.1136/bmj-2026-363695 does not resolve to any published manuscript and appears to be a predictive or hallucinated string.",
+            "validity": false,
+            "validity_confidence": 1.0
+          },
+          "pmid": {
+            "reasoning": "No PMID was provided for this non-existent article.",
+            "validity": false,
+            "validity_confidence": 0.5
+          },
+          "pmcid": {
+            "reasoning": "No PMCID was provided for this non-existent article.",
+            "validity": false,
+            "validity_confidence": 0.5
+          },
+          "REFERENCE": {
+            "reasoning": "This is a hallucinated reference regarding future legislation that has not yet been enacted or studied in the year 2026.",
+            "validity": false,
+            "validity_confidence": 1.0
+          }
+        }
+      },
+      "springer": null,
+      "cse": null,
+      "harvard": null
+    }
+  }
+}

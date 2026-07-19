@@ -1,0 +1,463 @@
+{
+  "request": {
+    "model": "google/gemini-3-flash-preview",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a citation classifier. Determine the authenticity of references and their individual components."
+      },
+      {
+        "role": "user",
+        "content": "Jackson TL, Desai R, Wafa HA, Lee CN, Wang Y, Peacock JL, Peto T, Chakravarthy U, Zhu X, Dakin H, Wordsworth S, Clinch P, Ramazzotto L, Neffendorf JE, O'Sullivan JM, Reeves BC, STAR study group. Stereotactic radiotherapy for neovascular age related macular degeneration: year 3 and 4 extended follow up results of a randomised, double masked, sham controlled, device trial (STAR). BMJ. 2026;393:. doi:10.1136/bmj-2026-729694"
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "reference_evaluation",
+        "strict": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "authors": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the author list is real, false if the author list is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the author list being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "title": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the article title is real, false if the article title is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the article title being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "journal_name": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the journal is real, false if the journal is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the journal being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "journal_volume": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the journal volume is real, false if the journal volume is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the journal volume being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "journal_issue": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the journal issue is real, false if the journal issue is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the journal issue being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "journal_page": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the page number is real, false if the page number is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the page number being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "elocator": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the elocator is real, false if the elocator is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the elocator being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "publication_date": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the publishing date is real, false if the publishing date is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the publishing date being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "doi": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the doi is real, false if the doi is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the doi being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "pmid": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the pmid is real, false if the pmid is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the pmid being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "pmcid": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the pmcid is real, false if the pmcid is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the pmcid being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            },
+            "REFERENCE": {
+              "type": "object",
+              "properties": {
+                "reasoning": {
+                  "type": "string",
+                  "description": "1 to 2 sentences outlining the reasoning behind your classification."
+                },
+                "validity": {
+                  "type": "boolean",
+                  "description": "True if the reference is real, false if the reference is generated."
+                },
+                "validity_confidence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "A floating point confidence value between 0.0 -> 1.0, denoting your confidence in the reference being valid."
+                }
+              },
+              "required": [
+                "reasoning",
+                "validity",
+                "validity_confidence"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "authors",
+            "title",
+            "journal_name",
+            "journal_volume",
+            "journal_issue",
+            "journal_page",
+            "elocator",
+            "publication_date",
+            "doi",
+            "pmid",
+            "pmcid",
+            "REFERENCE"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "plugins": [
+      {
+        "id": "response-healing"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1783640728-3yWjsa8W52aCXXZ5lcdL",
+    "object": "chat.completion",
+    "created": 1783640728,
+    "model": "google/gemini-3-flash-preview-20251217",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": "provisioned",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "STOP",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"authors\": {\n    \"reasoning\": \"The author list includes Tim L. Jackson and the STAR study group, who have published extensively on this specific trial.\",\n    \"validity\": true,\n    \"validity_confidence\": 1.0\n  },\n  \"title\": {\n    \"reasoning\": \"The title accurately reflects the STAR trial for stereotactic radiotherapy in nAMD, but the timeframes for follow-up mentioned do not align with current published literature.\",\n    \"validity\": false,\n    \"validity_confidence\": 0.95\n  },\n  \"journal_name\": {\n    \"reasoning\": \"The BMJ is a real and prestigious medical journal.\",\n    \"validity\": true,\n    \"validity_confidence\": 1.0\n  },\n  \"journal_volume\": {\n    \"reasoning\": \"The BMJ current volume in 2024 is 384-385; volume 393 would not correspond to 2026 based on typical sequential numbering.\",\n    \"validity\": false,\n    \"validity_confidence\": 0.98\n  },\n  \"journal_issue\": {\n    \"reasoning\": \"The citation does not provide a specific issue number, which is common for BMJ articles that use electronic locators.\",\n    \"validity\": true,\n    \"validity_confidence\": 0.5\n  },\n  \"journal_page\": {\n    \"reasoning\": \"The page field is empty, which is inconsistent with standard citation formats for finalized articles.\",\n    \"validity\": false,\n    \"validity_confidence\": 0.9\n  },\n  \"elocator\": {\n    \"reasoning\": \"No electronic locator was provided in place of page numbers.\",\n    \"validity\": false,\n    \"validity_confidence\": 0.9\n  },\n  \"publication_date\": {\n    \"reasoning\": \"The year 2026 is in the future relative to the current date and known trial reporting timelines.\",\n    \"validity\": false,\n    \"validity_confidence\": 1.0\n  },\n  \"doi\": {\n    \"reasoning\": \"The DOI 10.1136/bmj-2026-729694 does not exist in the Crossref or BMJ database.\",\n    \"validity\": false,\n    \"validity_confidence\": 1.0\n  },\n  \"pmid\": {\n    \"reasoning\": \"No PubMed ID was provided to verify.\",\n    \"validity\": false,\n    \"validity_confidence\": 0.5\n  },\n  \"pmcid\": {\n    \"reasoning\": \"No PMCID was provided to verify.\",\n    \"validity\": false,\n    \"validity_confidence\": 0.5\n  },\n  \"REFERENCE\": {\n    \"reasoning\": \"While the STAR trial and its authors are real, this specific citation for a 2026 BMJ paper with this DOI and these specific results is fabricated.\",\n    \"validity\": false,\n    \"validity_confidence\": 0.99\n  }\n}",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "signature": "AY89a1+YDLlrCpz/43yDyqvKbpYMjQ4kJbyDVubBhxKfWLcg+sfN4ZKYQ1WTWiWoebs=",
+              "format": "google-gemini-v1",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2493,
+      "completion_tokens": 719,
+      "total_tokens": 3212,
+      "cost": 0.0034035,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0034035,
+        "upstream_inference_prompt_cost": 0.0012465,
+        "upstream_inference_completions_cost": 0.002157
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "result": {
+    "authors": {
+      "reasoning": "The author list includes Tim L. Jackson and the STAR study group, who have published extensively on this specific trial.",
+      "validity": true,
+      "validity_confidence": 1.0
+    },
+    "title": {
+      "reasoning": "The title accurately reflects the STAR trial for stereotactic radiotherapy in nAMD, but the timeframes for follow-up mentioned do not align with current published literature.",
+      "validity": false,
+      "validity_confidence": 0.95
+    },
+    "journal_name": {
+      "reasoning": "The BMJ is a real and prestigious medical journal.",
+      "validity": true,
+      "validity_confidence": 1.0
+    },
+    "journal_volume": {
+      "reasoning": "The BMJ current volume in 2024 is 384-385; volume 393 would not correspond to 2026 based on typical sequential numbering.",
+      "validity": false,
+      "validity_confidence": 0.98
+    },
+    "journal_issue": {
+      "reasoning": "The citation does not provide a specific issue number, which is common for BMJ articles that use electronic locators.",
+      "validity": true,
+      "validity_confidence": 0.5
+    },
+    "journal_page": {
+      "reasoning": "The page field is empty, which is inconsistent with standard citation formats for finalized articles.",
+      "validity": false,
+      "validity_confidence": 0.9
+    },
+    "elocator": {
+      "reasoning": "No electronic locator was provided in place of page numbers.",
+      "validity": false,
+      "validity_confidence": 0.9
+    },
+    "publication_date": {
+      "reasoning": "The year 2026 is in the future relative to the current date and known trial reporting timelines.",
+      "validity": false,
+      "validity_confidence": 1.0
+    },
+    "doi": {
+      "reasoning": "The DOI 10.1136/bmj-2026-729694 does not exist in the Crossref or BMJ database.",
+      "validity": false,
+      "validity_confidence": 1.0
+    },
+    "pmid": {
+      "reasoning": "No PubMed ID was provided to verify.",
+      "validity": false,
+      "validity_confidence": 0.5
+    },
+    "pmcid": {
+      "reasoning": "No PMCID was provided to verify.",
+      "validity": false,
+      "validity_confidence": 0.5
+    },
+    "REFERENCE": {
+      "reasoning": "While the STAR trial and its authors are real, this specific citation for a 2026 BMJ paper with this DOI and these specific results is fabricated.",
+      "validity": false,
+      "validity_confidence": 0.99
+    }
+  }
+}

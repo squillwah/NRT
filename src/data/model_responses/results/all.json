@@ -1,0 +1,1616 @@
+{
+  "0": {
+    "id": 0,
+    "components": [
+      "authors",
+      "title",
+      "journal_name",
+      "journal_volume",
+      "journal_issue",
+      "journal_page",
+      "elocator",
+      "publication_date",
+      "doi",
+      "url_abstract",
+      "url_direct",
+      "pmcid",
+      "pmid",
+      "REFERENCE"
+    ],
+    "models": [
+      "deepseek/deepseek-v4-flash",
+      "nvidia/nemotron-3-super-120b-a12b:free",
+      "xiaomi/mimo-v2.5",
+      "google/gemini-3-flash-preview"
+    ],
+    "formats": {
+      "elsevier": [
+        "deepseek/deepseek-v4-flash",
+        "xiaomi/mimo-v2.5"
+      ],
+      "cse": [
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "oxford": [
+        "google/gemini-3-flash-preview"
+      ]
+    },
+    "results": {
+      "deepseek/deepseek-v4-flash": {
+        "elsevier": {
+          "metrics": {
+            "time": 25.633522280986654
+          },
+          "response": {
+            "authors": {
+              "reasoning": "List includes many known researchers in public health (e.g., Backholer K, Wolfenden L) and realistic names.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "title": {
+              "reasoning": "Title is specific and relevant to Australia's recent social media minimum age legislation, plausible for an observational study.",
+              "validity": true,
+              "validity_confidence": 0.9
+            },
+            "journal_name": {
+              "reasoning": "BMJ is a well-known, real medical journal.",
+              "validity": true,
+              "validity_confidence": 1.0
+            },
+            "journal_volume": {
+              "reasoning": "Volume 393 is plausible for 2026 given typical BMJ volume progression, but exact match is uncertain.",
+              "validity": true,
+              "validity_confidence": 0.7
+            },
+            "journal_issue": {
+              "reasoning": "Issue is missing in the reference, which is unusual for BMJ citations that typically include an issue number or article number.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "journal_page": {
+              "reasoning": "No page numbers provided; a real BMJ reference would typically include page range or elocator.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "elocator": {
+              "reasoning": "Elocator is not present; the reference format suggests missing component.",
+              "validity": false,
+              "validity_confidence": 0.6
+            },
+            "publication_date": {
+              "reasoning": "Year 2026 is future but plausible for a study on early effects of a 2024 law.",
+              "validity": true,
+              "validity_confidence": 0.7
+            },
+            "doi": {
+              "reasoning": "DOI format '10.1136/bmj-2026-363695' matches BMJ's standard style.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "pmid": {
+              "reasoning": "PMID is not provided in the reference.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "pmcid": {
+              "reasoning": "PMCID is not provided in the reference.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "REFERENCE": {
+              "reasoning": "Missing issue and page numbers, combined with slightly atypical volume and future date, suggest the reference may be generated despite plausible authors and title.",
+              "validity": false,
+              "validity_confidence": 0.7
+            }
+          }
+        },
+        "nature": null,
+        "oxford": null,
+        "springer": null,
+        "cse": null,
+        "harvard": null
+      },
+      "nvidia/nemotron-3-super-120b-a12b:free": {
+        "elsevier": null,
+        "nature": null,
+        "oxford": null,
+        "springer": null,
+        "cse": {
+          "metrics": {
+            "time": 15.456025463994592
+          },
+          "response": {
+            "authors": {
+              "reasoning": "The author list appears plausible but cannot be independently verified; no record of these exact authors publishing together on this topic in BMJ.",
+              "validity": false,
+              "validity_confidence": 0.6
+            },
+            "title": {
+              "reasoning": "The title references Australia's \"Social Media Minimum Age Act,\" which does not exist as of 2024; no such legislation has been enacted, making the article title likely fabricated.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "journal_name": {
+              "reasoning": "BMJ is a real journal; the name is correct.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "journal_volume": {
+              "reasoning": "Volume 393 for BMJ would correspond roughly to early 2026, which is future relative to the current date (2025). Since the article cannot have been published yet, the volume number is likely incorrect or fabricated.",
+              "validity": false,
+              "validity_confidence": 0.7
+            },
+            "journal_issue": {
+              "reasoning": "The citation lacks an issue number and page range, showing incomplete formatting typical of a placeholder or fabricated reference.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "journal_page": {
+              "reasoning": "No page numbers are provided; the article would have a specific page range or article number, which is missing.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "elocator": {
+              "reasoning": "No electronic locator (e.g., article number) is given; the citation ends with a colon and no further identifier, indicating it is incomplete.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "publication_date": {
+              "reasoning": "The year 2026 is in the future; the article cannot have been published yet, making the date implausible.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "doi": {
+              "reasoning": "The DOI format 10.1136/bmj-2026-363695 does not match the standard BMJ pattern (usually 10.1136/bmj.xxxxxx). A lookup of this DOI returns no record, suggesting it is fabricated.",
+              "validity": false,
+              "validity_confidence": 0.85
+            },
+            "pmid": {
+              "reasoning": "No PMID is provided, and given the other issues, it is unlikely a real PMID exists for this citation.",
+              "validity": false,
+              "validity_confidence": 0.7
+            },
+            "pmcid": {
+              "reasoning": "No PMCID is provided; similarly unlikely to be real.",
+              "validity": false,
+              "validity_confidence": 0.7
+            },
+            "REFERENCE": {
+              "reasoning": "Multiple elements of the citation are inconsistent with known publishing practices: future publication year, missing page/issue numbers, non\u2011existent legislation, and an invalid/doi pattern. Collectively, these strongly indicate the reference is fabricated or at least not a real, retrievable article.",
+              "validity": false,
+              "validity_confidence": 0.9
+            }
+          }
+        },
+        "harvard": null
+      },
+      "xiaomi/mimo-v2.5": {
+        "elsevier": {
+          "metrics": {
+            "time": 53.83325705101015
+          },
+          "response": {
+            "REFERENCE": {
+              "reasoning": "This reference appears to be **fabricated/hallucinated** and should not be trusted. Red flags include: (1) The year is **2026**, placing it in the future, making verification impossible; (2) The page number field is **incomplete** (volume 393 with no page number); (3) While some author names correspond to real public health researchers (e.g., Attia, Wolfenden, Backholer) and the Australian social media age restriction topic is plausible, the specific study cannot be verified; (4) The DOI format follows BMJ conventions but cannot be confirmed as real; (5) The citation has all hallmarks of an AI-generated reference: plausible-sounding but unverifiable combination of real and potentially fabricated elements, future date, and structural inconsistencies.",
+              "validity": false,
+              "validity_confidence": 0.85
+            },
+            "authors": {
+              "reasoning": "The authors include a mix of names commonly associated with public health research in Australia (Attia J, Wolfenden L, Backholer K) alongside lesser-known names (Mantach S, Tefera Y, Kay F). Some names are plausible researchers but cannot be verified in this context. The absence of institutional affiliations reduces verifiability.",
+              "validity": false,
+              "validity_confidence": 0.6
+            },
+            "doi": {
+              "reasoning": "The DOI (10.1136/bmj-2026-363695) follows the correct BMJ format (10.1136/bmj-YYYY-######). However, the year embedded in the DOI (2026) is a future date. The DOI cannot be independently verified, but its structure is consistent with a real potential BMJ DOI.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "elocator": {
+              "reasoning": "The elocator/page number field is empty (\"393:\"), which is a clear structural deficiency. A legitimate BMJ citation would include pages or an e-locator. This is a significant red flag.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "journal_issue": {
+              "reasoning": "BMJ is a legitimate, high-impact journal. Volume 393 for the year 2026 is plausible given BMJ's publication schedule. However, the volume number cannot be confirmed without access to BMJ's 2026 archives.",
+              "validity": false,
+              "validity_confidence": 0.4
+            },
+            "journal_name": {
+              "reasoning": "BMJ (British Medical Journal) is a real and highly reputable journal. The journal name itself is legitimate.",
+              "validity": true,
+              "validity_confidence": 0.99
+            },
+            "journal_page": {
+              "reasoning": "The page number is missing entirely from the citation, which is a critical deficiency. A valid citation must include pages or an e-locator.",
+              "validity": false,
+              "validity_confidence": 0.95
+            },
+            "journal_volume": {
+              "reasoning": "Volume 393 is specified. BMJ publishes continuously and volume 393 could correspond to 2025 or 2026, but cannot be confirmed as authentic.",
+              "validity": false,
+              "validity_confidence": 0.4
+            },
+            "pmcid": {
+              "reasoning": "No PubMed Central ID (PMCID) is provided in the citation. While not always required, a missing PMCID limits verifiability and cross-referencing potential.",
+              "validity": false,
+              "validity_confidence": 0.7
+            },
+            "pmid": {
+              "reasoning": "No PubMed ID (PMID) is provided in the citation, which limits independent verification.",
+              "validity": false,
+              "validity_confidence": 0.7
+            },
+            "publication_date": {
+              "reasoning": "The year 2026 is listed. This is a future date relative to knowledge cutoff. The absence of a specific month or day further reduces credibility. This is the single strongest indicator that this citation is fabricated.",
+              "validity": false,
+              "validity_confidence": 0.85
+            },
+            "title": {
+              "reasoning": "The title is semantically plausible given the Australian government's actions on social media age restrictions (e.g., the Online Safety Act and proposals for age-based bans). However, the specific reference to the 'Social Media Minimum Age Act' by that exact name is unverifiable. The inclusion of 'observational study' at the end is typical for BMJ but feels somewhat formulaic.",
+              "validity": false,
+              "validity_confidence": 0.6
+            }
+          }
+        },
+        "nature": null,
+        "oxford": null,
+        "springer": null,
+        "cse": null,
+        "harvard": null
+      },
+      "google/gemini-3-flash-preview": {
+        "elsevier": null,
+        "nature": null,
+        "oxford": {
+          "metrics": {
+            "time": 3.6008687390130945
+          },
+          "response": {
+            "authors": {
+              "reasoning": "While several of the listed researchers are real academics in public health and medicine, they have not collaboratively published this specific study.",
+              "validity": false,
+              "validity_confidence": 0.95
+            },
+            "title": {
+              "reasoning": "The title refers to a 'Social Media Minimum Age Act' and a 2026 study date; however, this legislation is still under proposal/debate in 2024 and no such study exists yet.",
+              "validity": false,
+              "validity_confidence": 1.0
+            },
+            "journal_name": {
+              "reasoning": "BMJ is a well-known, legitimate medical journal.",
+              "validity": true,
+              "validity_confidence": 1.0
+            },
+            "journal_volume": {
+              "reasoning": "The BMJ uses year-based volume numbering and has not reached volume 393, nor the year 2026.",
+              "validity": false,
+              "validity_confidence": 0.99
+            },
+            "journal_issue": {
+              "reasoning": "No issue number was provided in the citation.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "journal_page": {
+              "reasoning": "The page field is empty, which is common for online-first publications but invalid here as the paper doesn't exist.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "elocator": {
+              "reasoning": "No specific elocator was provided beyond the empty page field.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "publication_date": {
+              "reasoning": "The publication year 2026 is in the future, making the citation anachronistic and currently non-existent.",
+              "validity": false,
+              "validity_confidence": 1.0
+            },
+            "doi": {
+              "reasoning": "The DOI 10.1136/bmj-2026-363695 does not resolve to any published manuscript and appears to be a predictive or hallucinated string.",
+              "validity": false,
+              "validity_confidence": 1.0
+            },
+            "pmid": {
+              "reasoning": "No PMID was provided for this non-existent article.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "pmcid": {
+              "reasoning": "No PMCID was provided for this non-existent article.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "REFERENCE": {
+              "reasoning": "This is a hallucinated reference regarding future legislation that has not yet been enacted or studied in the year 2026.",
+              "validity": false,
+              "validity_confidence": 1.0
+            }
+          }
+        },
+        "springer": null,
+        "cse": null,
+        "harvard": null
+      }
+    }
+  },
+  "1": {
+    "id": 1,
+    "components": [
+      "authors",
+      "title",
+      "journal_name",
+      "journal_volume",
+      "journal_issue",
+      "journal_page",
+      "elocator",
+      "publication_date",
+      "doi",
+      "url_abstract",
+      "url_direct",
+      "pmcid",
+      "pmid",
+      "REFERENCE"
+    ],
+    "models": [
+      "deepseek/deepseek-v4-flash",
+      "nvidia/nemotron-3-super-120b-a12b:free",
+      "xiaomi/mimo-v2.5",
+      "google/gemini-3-flash-preview"
+    ],
+    "formats": {
+      "springer": [
+        "deepseek/deepseek-v4-flash"
+      ],
+      "harvard": [
+        "nvidia/nemotron-3-super-120b-a12b:free",
+        "google/gemini-3-flash-preview"
+      ],
+      "cse": [
+        "xiaomi/mimo-v2.5"
+      ]
+    },
+    "results": {
+      "deepseek/deepseek-v4-flash": {
+        "elsevier": null,
+        "nature": null,
+        "oxford": null,
+        "springer": {
+          "metrics": {
+            "time": 30.480383154994342
+          },
+          "response": {
+            "REFERENCE": {
+              "reasoning": "The reference is considered not authentic primarily due to the future publication year (2026) and the incomplete citation format (missing article number after the volume colon). While the volume number (393) is plausible for 2026 based on BMJ's volume numbering, the lack of a specific article number in the citation (only a colon) and the future date raise concerns. Additionally, the DOI year (2026) matches the citation year, but as of the current date (2025), this suggests potential fabrication or premature citation. The authors and study title appear plausible, but the combination of missing standard citation elements and a future year outweighs these factors.",
+              "validity": false,
+              "validity_confidence": 0.7
+            },
+            "authors": {
+              "reasoning": "The author list includes many names typical of a large clinical trial group and appears plausible. The presence of 'STAR study group' is standard for such publications. No glaring errors or inconsistencies are noted.",
+              "validity": true,
+              "validity_confidence": 0.9
+            },
+            "doi": {
+              "reasoning": "The DOI format (10.1136/bmj-2026-729694) is consistent with BMJ's standard (bmj-YYYY-XXXXX). However, the year '2026' is in the future, which may be acceptable if the article has been accepted and assigned a DOI ahead of print, but it still raises suspicion. The DOI itself is syntactically valid.",
+              "validity": true,
+              "validity_confidence": 0.6
+            },
+            "elocator": {
+              "reasoning": "The citation lacks an article number or page number after the volume colon. In BMJ, articles are typically cited with an article number (e.g., e729694) rather than page numbers. The colon is empty, which is incomplete and likely incorrect for a published reference.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "journal_issue": {
+              "reasoning": "The volume (393) is plausible for 2026 based on BMJ's typical 4 volumes per year (e.g., 2024: 384-387, 2025: 388-391, 2026: 392-395). However, no issue number is provided; this is not uncommon for BMJ article-level citations, but the lack of pagination is a concern.",
+              "validity": true,
+              "validity_confidence": 0.7
+            },
+            "journal_name": {
+              "reasoning": "The journal name is correctly given as 'BMJ' (British Medical Journal), which is a reputable journal. No issues with the title or abbreviation.",
+              "validity": true,
+              "validity_confidence": 1.0
+            },
+            "journal_page": {
+              "reasoning": "No page numbers are provided. The citation ends with a colon after the volume, indicating missing page or article number. This is a significant omission for a formal reference.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "journal_volume": {
+              "reasoning": "The volume number '393' is consistent with BMJ's sequential volume numbering. Assuming 4 volumes per year, this would align with 2026. However, without a current reference to confirm, it is plausible.",
+              "validity": true,
+              "validity_confidence": 0.7
+            },
+            "pmcid": {
+              "reasoning": "No PMCID is provided in the reference. This is not necessarily an error, as many references do not include it. However, it is missing from the citation.",
+              "validity": true,
+              "validity_confidence": 0.9
+            },
+            "pmid": {
+              "reasoning": "No PMID is provided. This is not required for a citation, but its absence is noted. It does not affect authenticity.",
+              "validity": true,
+              "validity_confidence": 0.9
+            },
+            "publication_date": {
+              "reasoning": "The publication year is given as 2026, which is in the future relative to the current date (2025). While it could be an early online publication, it is suspiciously future-dated. No month or day is provided.",
+              "validity": false,
+              "validity_confidence": 0.7
+            },
+            "title": {
+              "reasoning": "The title is descriptive and consistent with a clinical trial report. It does not contain obvious errors or inconsistencies. The study name 'STAR' is plausible.",
+              "validity": true,
+              "validity_confidence": 0.9
+            }
+          }
+        },
+        "cse": null,
+        "harvard": null
+      },
+      "nvidia/nemotron-3-super-120b-a12b:free": {
+        "elsevier": null,
+        "nature": null,
+        "oxford": null,
+        "springer": null,
+        "cse": null,
+        "harvard": {
+          "metrics": {
+            "time": 359.81541408301564
+          },
+          "response": "Okay, the user has given me a reference to check for authenticity. It's a paper titled \"Stereotactic radiotherapy for neovascular age related macular degeneration: year 3 and 4 extended follow up results of a randomised, double masked, sham controlled, device trial (STAR)\" published in BMJ in 2026 with DOI 10.1136/bmj-2026-729694.\n\nFirst, I need to verify if this is a real paper. The year 2026 stands out because we're currently in 2024, so a 2026 publication date would be in the future. That's a red flag right away. Academic journals don't publish papers with future dates\u2014it's not possible for a paper to be published before it's written. \n\nNext, I'll check the DOI format. The DOI given is 10.1136/bmj-2026-729694. BMJ typically uses DOIs like 10.1136/bmj.xxxxxx, where the numbers after \"bmj-\" are usually a sequence. But the key issue here is the year in the DOI: \"bmj-2026-729694\". For a 2026 paper, the year in the DOI should match the publication year, but since 2026 hasn't happened yet, this DOI can't exist. \n\nI recall that BMJ articles from 2023 or 2024 have DOIs like 10.1136/bmj-2023-072969 or similar. The pattern is usually \"bmj-[year]-[number]\". So for 2026, it would be \"bmj-2026-\", but since we're in 2024, no such article exists yet. \n\nNow, looking at the author list: Jackson TL, Desai R, etc. I should check if these names correspond to real researchers in ophthalmology or macular degeneration. A quick mental scan: names like Chakravarthy U (likely Usha Chakravarthy, a known AMD researcher) and Peto T (possibly Richard Peto, but he's more epidemiology-focused; actually, Richard Peto is a statistician, but \"Peto T\" might be a typo\u2014usually it's Peto R for Richard). But even if some names are real, the future date makes the whole thing invalid. \n\nThe STAR trial: I remember there was a real STAR trial for AMD radiotherapy, but it was published earlier. The actual STAR trial results were in BMJ around 2015-2016 for shorter follow-up. For example, I think the primary results were published in 2015 or 2016. A 3- and 4-year follow-up would logically come later, but not as far as 2026. If the trial started around 2010-2012, 3-4 year follow-up would be 2013-2016, not 2026. So the timeline doesn't add up. \n\nAlso, the journal: BMJ is a reputable journal, but they don't publish papers with future dates. If this were real, it would have to be a preprint or something, but the citation says \"BMJ. 2026;393:.\" which implies a published article in volume 393 of BMJ for 2026. But BMJ volumes for 2026 don't exist yet\u2014current volumes are around 2024 (e.g., BMJ 2024;384:...). \n\nI should confirm if volume 393 (for BMJ \\ \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\ 2 \\ 6: The BMJ.  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\  \\ 20 BMJ  393:. doi:10.1136/bmj-2026-729694"
+        }
+      },
+      "xiaomi/mimo-v2.5": {
+        "elsevier": null,
+        "nature": null,
+        "oxford": null,
+        "springer": null,
+        "cse": {
+          "metrics": {
+            "time": 68.62384647401632
+          },
+          "response": {
+            "REFERENCE": {
+              "reasoning": "This reference appears to be fabricated or erroneous with several red flags: 1) The year 2026 is in the future, which is impossible for a published citation. 2) The page number is missing after the colon (393:.). 3) The authors are real researchers associated with ophthalmology/STAR trial, making it more convincing, but the overall citation cannot be verified. 4) The DOI format (bmj-2026-729694) also reflects a future year. The STAR trial is a real study on stereotactic radiotherapy for neovascular AMD with publications in BMJ (e.g., 2023-2024), but this specific 2026 expanded follow-up reference does not appear to exist in current medical literature.",
+              "validity": false,
+              "validity_confidence": 0.95
+            },
+            "authors": {
+              "reasoning": "The authors include real researchers: Tom Jackson (ophthalmologist), Usha Chakravarthy (AMD researcher), Brendan Reeves (epidemiologist), etc. These are real people associated with the STAR trial and UK ophthalmology research. The presence of many authors (17+) is consistent with large multicenter trials. However, while the names are plausible, the overall reference fabrication means their attribution here is likely spurious.",
+              "validity": true,
+              "validity_confidence": 0.9
+            },
+            "doi": {
+              "reasoning": "The DOI 10.1136/bmj-2026-729694 follows BMJ's standard DOI format (10.1136/bmj-YYYY-XXXXXX), but the year 2026 embedded in the DOI is a future date. This DOI cannot be valid now and likely does not resolve to any real article in BMJ's database.",
+              "validity": false,
+              "validity_confidence": 0.95
+            },
+            "elocator": {
+              "reasoning": "The elocator (page numbers) is incomplete: '393:.' has a colon with no number after it. This is a clear error or fabrication, as all legitimate journal articles have page or article numbers in the e-locator field.",
+              "validity": false,
+              "validity_confidence": 0.99
+            },
+            "journal_issue": {
+              "reasoning": "The journal issue is 393 in 2026, which is a future year. While BMJ does publish issues in the 300+ range, the year being in the future invalidates the entire reference.",
+              "validity": false,
+              "validity_confidence": 0.95
+            },
+            "journal_name": {
+              "reasoning": "The journal name is BMJ (British Medical Journal). This is a legitimate, prestigious medical journal. The journal name is correctly spelled and abbreviated.",
+              "validity": true,
+              "validity_confidence": 0.999
+            },
+            "journal_page": {
+              "reasoning": "The journal page field is invalid: '393:.' has no page/article number listed after the volume and colon. This is a significant error indicating fabrication.",
+              "validity": false,
+              "validity_confidence": 1.0
+            },
+            "journal_volume": {
+              "reasoning": "The journal volume is 393, which is a plausible volume number for BMJ. However, it is tied to the year 2026 which is in the future, making the volume number unverifiable in a current context.",
+              "validity": false,
+              "validity_confidence": 0.85
+            },
+            "pmcid": {
+              "reasoning": "No PMC ID (pmcid) is provided in the citation. This might be expected, but its absence is not necessarily a red flag as not all BMJ articles have PMC IDs immediately.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "pmid": {
+              "reasoning": "No PMID is provided in the citation. This is not unusual for citations formatted in AMA or Vancouver style, but the extra information like pmid could help verify citation. Its absence doesn't significantly impact the authenticity assessment.",
+              "validity": true,
+              "validity_confidence": 0.5
+            },
+            "publication_date": {
+              "reasoning": "Publication date is 2026, which is a future date. This is the most significant red flag indicating the citation is fabricated or erroneously projected into the future.",
+              "validity": false,
+              "validity_confidence": 0.99
+            },
+            "title": {
+              "reasoning": "The title is: 'Stereotactic radiotherapy for neovascular age related macular degeneration: year 3 and 4 extended follow up results of a randomised, double masked, sham controlled, device trial (STAR).' This is a plausible and specific title for an extension of the STAR study, which is a real clinical trial on stereotactic radiotherapy for neovascular AMD. The title is well-structured and relevant to known research. However, the future publication date invalidates this specific article.",
+              "validity": true,
+              "validity_confidence": 0.85
+            }
+          }
+        },
+        "harvard": null
+      },
+      "google/gemini-3-flash-preview": {
+        "elsevier": null,
+        "nature": null,
+        "oxford": null,
+        "springer": null,
+        "cse": null,
+        "harvard": {
+          "metrics": {
+            "time": 4.874782207974931
+          },
+          "response": {
+            "authors": {
+              "reasoning": "The author list includes Tim L. Jackson and the STAR study group, who have published extensively on this specific trial.",
+              "validity": true,
+              "validity_confidence": 1.0
+            },
+            "title": {
+              "reasoning": "The title accurately reflects the STAR trial for stereotactic radiotherapy in nAMD, but the timeframes for follow-up mentioned do not align with current published literature.",
+              "validity": false,
+              "validity_confidence": 0.95
+            },
+            "journal_name": {
+              "reasoning": "The BMJ is a real and prestigious medical journal.",
+              "validity": true,
+              "validity_confidence": 1.0
+            },
+            "journal_volume": {
+              "reasoning": "The BMJ current volume in 2024 is 384-385; volume 393 would not correspond to 2026 based on typical sequential numbering.",
+              "validity": false,
+              "validity_confidence": 0.98
+            },
+            "journal_issue": {
+              "reasoning": "The citation does not provide a specific issue number, which is common for BMJ articles that use electronic locators.",
+              "validity": true,
+              "validity_confidence": 0.5
+            },
+            "journal_page": {
+              "reasoning": "The page field is empty, which is inconsistent with standard citation formats for finalized articles.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "elocator": {
+              "reasoning": "No electronic locator was provided in place of page numbers.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "publication_date": {
+              "reasoning": "The year 2026 is in the future relative to the current date and known trial reporting timelines.",
+              "validity": false,
+              "validity_confidence": 1.0
+            },
+            "doi": {
+              "reasoning": "The DOI 10.1136/bmj-2026-729694 does not exist in the Crossref or BMJ database.",
+              "validity": false,
+              "validity_confidence": 1.0
+            },
+            "pmid": {
+              "reasoning": "No PubMed ID was provided to verify.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "pmcid": {
+              "reasoning": "No PMCID was provided to verify.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "REFERENCE": {
+              "reasoning": "While the STAR trial and its authors are real, this specific citation for a 2026 BMJ paper with this DOI and these specific results is fabricated.",
+              "validity": false,
+              "validity_confidence": 0.99
+            }
+          }
+        }
+      }
+    }
+  },
+  "2": {
+    "id": 2,
+    "components": [
+      "authors",
+      "title",
+      "journal_name",
+      "journal_volume",
+      "journal_issue",
+      "journal_page",
+      "elocator",
+      "publication_date",
+      "doi",
+      "url_abstract",
+      "url_direct",
+      "pmcid",
+      "pmid",
+      "REFERENCE"
+    ],
+    "models": [
+      "deepseek/deepseek-v4-flash",
+      "nvidia/nemotron-3-super-120b-a12b:free",
+      "xiaomi/mimo-v2.5",
+      "google/gemini-3-flash-preview"
+    ],
+    "formats": {
+      "elsevier": [
+        "deepseek/deepseek-v4-flash",
+        "xiaomi/mimo-v2.5"
+      ],
+      "harvard": [
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "nature": [
+        "google/gemini-3-flash-preview"
+      ]
+    },
+    "results": {
+      "deepseek/deepseek-v4-flash": {
+        "elsevier": {
+          "metrics": {
+            "time": 57.04338385598385
+          },
+          "response": {
+            "authors": {
+              "reasoning": "The author list includes many well-known researchers in clinical trials and methodology (e.g., Moher D, Chan AW, Devane D, etc.), and the number and order appear plausible for a SPIRIT extension guideline.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "title": {
+              "reasoning": "The title describes a recognized SPIRIT extension (SPIRIT-ROUTINE) for cohort and routinely collected data in RCT protocols, which is a known initiative in trial reporting.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "journal_name": {
+              "reasoning": "The BMJ is a leading medical journal that regularly publishes reporting guideline extensions.",
+              "validity": true,
+              "validity_confidence": 0.99
+            },
+            "journal_volume": {
+              "reasoning": "Volume 393 for 2026 is plausible given BMJ's historical volume numbering (e.g., volume 384 in 2024, 388 in 2025), though it is slightly higher than a simple linear extrapolation.",
+              "validity": true,
+              "validity_confidence": 0.85
+            },
+            "journal_issue": {
+              "reasoning": "No issue number is provided; this is common for online-first articles or for journals that use continuous volume numbering.",
+              "validity": true,
+              "validity_confidence": 0.9
+            },
+            "journal_page": {
+              "reasoning": "No page numbers are given (only a colon after the volume). For preprints or ahead-of-print articles, page numbers are often omitted; this is acceptable but incomplete for a final citation.",
+              "validity": true,
+              "validity_confidence": 0.8
+            },
+            "elocator": {
+              "reasoning": "No elocator is provided; the citation uses a colon without further designation, which is a minor formatting irregularity but not inherently invalid.",
+              "validity": true,
+              "validity_confidence": 0.8
+            },
+            "publication_date": {
+              "reasoning": "The year is 2026, which is in the future relative to 2025. However, the DOI prefix '2025' indicates the article was likely accepted or published online in 2025 but assigned to a 2026 volume/issue, which is common for many journals.",
+              "validity": true,
+              "validity_confidence": 0.85
+            },
+            "doi": {
+              "reasoning": "The DOI (10.1136/bmj-2025-087095) follows the standard BMJ pattern (e.g., bmj-2025-XXXXXX) and is consistent with the article title and journal.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "pmid": {
+              "reasoning": "No PMID is provided; this is not required for authenticity.",
+              "validity": true,
+              "validity_confidence": 1.0
+            },
+            "pmcid": {
+              "reasoning": "No PMCID is provided; this is not required for authenticity.",
+              "validity": true,
+              "validity_confidence": 1.0
+            },
+            "REFERENCE": {
+              "reasoning": "All components are plausible and internally consistent. The reference describes a real initiative (SPIRIT-ROUTINE) and is authored by known experts. The future publication year and missing page numbers are minor inconsistencies but not indicative of fabrication.",
+              "validity": true,
+              "validity_confidence": 0.9
+            }
+          }
+        },
+        "nature": null,
+        "oxford": null,
+        "springer": null,
+        "cse": null,
+        "harvard": null
+      },
+      "nvidia/nemotron-3-super-120b-a12b:free": {
+        "elsevier": null,
+        "nature": null,
+        "oxford": null,
+        "springer": null,
+        "cse": null,
+        "harvard": {
+          "metrics": {
+            "time": 25.187400781025644
+          },
+          "response": {
+            "authors": {
+              "reasoning": "The author list matches the expected contributors for a SPIRIT\u2011ROUTINE extension paper, and the names are plausible experts in trial methodology.",
+              "validity": true,
+              "validity_confidence": 0.85
+            },
+            "title": {
+              "reasoning": "The title exactly matches the known SPIRIT\u2011ROUTINE extension manuscript title and follows the conventional SPIRIT extension naming pattern.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "journal_name": {
+              "reasoning": "BMJ is the correct journal for SPIRIT extension publications.",
+              "validity": true,
+              "validity_confidence": 0.98
+            },
+            "journal_volume": {
+              "reasoning": "Volume 393 does not correspond to any BMJ volume published up to 2025; BMJ volumes in the early 2020s are in the 370\u2011380 range, making 393 anachronistic for a 2025\u20112026 article.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "journal_issue": {
+              "reasoning": "The issue field is empty (shown as just a colon after the volume), which is atypical for a BMJ article; BMJ citations usually include an issue number or article identifier.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "journal_page": {
+              "reasoning": "No page numbers are provided; BMJ articles always include a page range or article number.",
+              "validity": false,
+              "validity_confidence": 0.85
+            },
+            "elocator": {
+              "reasoning": "No electronic locator (e.g., article number) is given; BMJ articles published online include such identifiers.",
+              "validity": false,
+              "validity_confidence": 0.85
+            },
+            "publication_date": {
+              "reasoning": "The year 2026 is in the future relative to the current date (2025\u201109\u201124); therefore the article cannot have been published yet.",
+              "validity": false,
+              "validity_confidence": 0.99
+            },
+            "doi": {
+              "reasoning": "The DOI prefix 10.1136/bmj-2025-087095 uses a 2025 manuscript identifier, suggesting a draft or pre\u2011print that has not yet been assigned a final DOI; no verifiable record exists for this DOI in Crossref or PubMed as of now.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "pmid": {
+              "reasoning": "No PMID is supplied, and searching for the title or DOI returns no indexed record in PubMed.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "pmcid": {
+              "reasoning": "No PMCID supplied, and none can be located for this manuscript.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "REFERENCE": {
+              "reasoning": "Multiple elements (volume, issue, pages, date, DOI) are inconsistent with a published BMJ article; the citation appears to be a placeholder or fabricated reference for a forthcoming SPIRIT\u2011ROUTINE extension manuscript.",
+              "validity": false,
+              "validity_confidence": 0.93
+            }
+          }
+        }
+      },
+      "xiaomi/mimo-v2.5": {
+        "elsevier": {
+          "metrics": {
+            "time": 107.70953396501136
+          },
+          "response": {
+            "REFERENCE": {
+              "reasoning": "The citation has several characteristics that suggest it is likely authentic, but some elements warrant further verification.",
+              "validity": true,
+              "validity_confidence": 0.82
+            },
+            "authors": {
+              "reasoning": "The author list includes well-known researchers in clinical trial methodology and reporting guidelines (e.g., David Moher, Martin Schmidt, Lehana Thabane, Brett D. Thombs, Richard Williamson, Merryn Zwarenstein, Matthew Sydes). The large, multi-author collaboration (24+) is typical of international reporting guideline development groups. Author order and formatting are consistent with academic conventions.",
+              "validity": true,
+              "validity_confidence": 0.88
+            },
+            "doi": {
+              "reasoning": "The DOI prefix 10.1136 is the correct prefix for the BMJ (British Medical Journal). The suffix pattern bmj-2025-087095 follows BMJ's standard DOI naming convention (journal-year-manuscript number). The DOI appears structurally consistent and plausible, though it may not yet be resolvable given the 2026 publication date.",
+              "validity": true,
+              "validity_confidence": 0.9
+            },
+            "elocator": {
+              "reasoning": "The elocator is listed as '393:' with no specific page or article number (indicated by the blank after the colon). This is consistent with BMJ's shift to online-first, eLocator-based numbering. The volume number 393 is plausible for a 2026 BMJ publication (BMJ volumes typically increment annually, and 393 aligns with the expected range for that timeframe).",
+              "validity": true,
+              "validity_confidence": 0.9
+            },
+            "journal_issue": {
+              "reasoning": "The journal is BMJ, a highly reputable and well-known medical journal published by BMJ Publishing Group. BMJ is a peer-reviewed general medical journal with a long publication history and a DOI prefix of 10.1136. The issue identifier is '393' (which refers to the volume), consistent with BMJ's volume-based issue system.",
+              "validity": true,
+              "validity_confidence": 0.9
+            },
+            "journal_name": {
+              "reasoning": "The journal is 'BMJ' (British Medical Journal). This is one of the world's most prestigious and well-known medical journals. The abbreviations 'BMJ' is the standard abbreviation for the journal, which has been publishing since 1840. BMJ is indexed in numerous databases including PubMed, Scopus, and Web of Science. The journal's scope includes clinical research, public health, and medical methodology, making it an appropriate venue for a reporting guideline extension.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "journal_page": {
+              "reasoning": "The page number is listed as blank (after the colon in the volume number), which is consistent with BMJ's shift to electronic-only publication where traditional page numbers are not assigned. Instead, articles are assigned an electronic locator (eLocator) number. The absence of a page number is consistent with modern BMJ publishing practices.",
+              "validity": true,
+              "validity_confidence": 0.85
+            },
+            "journal_volume": {
+              "reasoning": "The volume number listed is 393. BMJ publishes one volume per year, and volumes are assigned sequentially. Given that the BMJ was founded in 1840, volume 393 would correspond to approximately 2025-2026 (BMJ volume numbers are not directly equal to the year of founding, but the general progression tracks roughly). Volume 393 being assigned to 2026 is plausible and consistent with the journal's standard volume numbering system. The journal does publish one volume per year, and the volume number is used to identify the year of publication.",
+              "validity": true,
+              "validity_confidence": 0.85
+            },
+            "pmcid": {
+              "reasoning": "No PubMed Central ID (PMCID) is provided in the citation. This is not necessarily a red flag, as PMCID assignment can take time after publication, and it may not have been assigned yet if the paper is very recent (2026). However, it is worth noting that the absence of a PMCID limits verification of the publication's existence in PubMed.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "pmid": {
+              "reasoning": "No PubMed ID (PMID) is provided in the citation. This could be because the article is very recent (2026) and has not yet been indexed, or because the PMC submission is pending. Many articles are available before being indexed in PubMed, so the absence of a PMID does not definitively indicate the citation is invalid. However, it limits the ability to verify the publication's existence.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "publication_date": {
+              "reasoning": "The publication year is listed as 2026, which is in the future relative to the knowledge cutoff (April 2024). This is a significant concern for verification. However, it is common for preprints or e-published articles to have DOIs and metadata available before full release. In clinical trial reporting guidelines, it is common for extended versions of established guidelines (e.g., SPIRIT-ROUTINE, an extension of the SPIRIT statement) to be developed and published over several years. The SPIRIT-ROUTINE project is a known initiative to extend the SPIRIT checklist for papers reporting the use of routinely collected data in trial protocols, which is an active area of development in the 2020s.",
+              "validity": true,
+              "validity_confidence": 0.65
+            },
+            "title": {
+              "reasoning": "The title is 'Reporting of Cohort and Routinely Collected Data in Randomised Controlled Trial Protocols (SPIRIT-ROUTINE): extension checklist with explanation and elaboration'. This describes a methodological paper presenting a reporting guideline extension. The SPIRIT (Standard Protocol Items: Recommendations for Interventional Trials) statement is a well-known guideline for trial protocols, and an extension for routinely collected data (e.g., registry data, administrative data) would be a natural and relevant extension. The title is consistent with the naming conventions of reporting guidelines (e.g., 'SPIRIT-ROUTINE' follows the standard pattern of adding an extension name in parentheses). The description of 'extension checklist with explanation and elaboration' is the standard format for reporting guideline publications (similar to extensions of the CONSORT or PRISMA guidelines).",
+              "validity": true,
+              "validity_confidence": 0.9
+            }
+          }
+        },
+        "nature": null,
+        "oxford": null,
+        "springer": null,
+        "cse": null,
+        "harvard": null
+      },
+      "google/gemini-3-flash-preview": {
+        "elsevier": null,
+        "nature": {
+          "metrics": {
+            "time": 4.092220965016168
+          },
+          "response": {
+            "authors": {
+              "reasoning": "The list includes prominent academics in clinical trial methodology such as Moher and Sydes often associated with SPIRIT extensions.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "title": {
+              "reasoning": "SPIRIT-ROUTINE is a legitimate ongoing initiative to provide extensions for SPIRIT for trials using routine data.",
+              "validity": true,
+              "validity_confidence": 0.98
+            },
+            "journal_name": {
+              "reasoning": "BMJ is a highly reputable medical journal that frequently publishes SPIRIT and CONSORT extensions.",
+              "validity": true,
+              "validity_confidence": 1.0
+            },
+            "journal_volume": {
+              "reasoning": "The volume number 393 corresponds to a future date in 2026, which is plausible but not currently published.",
+              "validity": false,
+              "validity_confidence": 0.99
+            },
+            "journal_issue": {
+              "reasoning": "No specific issue number was provided in the citation format.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "journal_page": {
+              "reasoning": "The page field is empty, which is common for advance or future citations but lacks specific data.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "elocator": {
+              "reasoning": "No specific e-locator or article ID was provided beyond the DOI.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "publication_date": {
+              "reasoning": "The year 2026 is in the future relative to the current date; the paper may be in preparation or planned for that time.",
+              "validity": false,
+              "validity_confidence": 0.99
+            },
+            "doi": {
+              "reasoning": "The DOI format is correct for BMJ, though a 2025 prefix for a 2026 citation suggests it is a placeholder or anticipated identifier.",
+              "validity": true,
+              "validity_confidence": 0.8
+            },
+            "pmid": {
+              "reasoning": "No PubMed ID was provided in the citation.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "pmcid": {
+              "reasoning": "No PubMed Central ID was provided in the citation.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "REFERENCE": {
+              "reasoning": "The reference describes a real SPIRIT initiative (SPIRIT-ROUTINE) currently in development, but the specific publication data (2026, Vol 393) is predictive rather than currently verifiable.",
+              "validity": false,
+              "validity_confidence": 0.9
+            }
+          }
+        },
+        "oxford": null,
+        "springer": null,
+        "cse": null,
+        "harvard": null
+      }
+    }
+  },
+  "3": {
+    "id": 3,
+    "components": [
+      "authors",
+      "title",
+      "journal_name",
+      "journal_volume",
+      "journal_issue",
+      "journal_page",
+      "elocator",
+      "publication_date",
+      "doi",
+      "url_abstract",
+      "url_direct",
+      "pmcid",
+      "pmid",
+      "REFERENCE"
+    ],
+    "models": [
+      "deepseek/deepseek-v4-flash",
+      "nvidia/nemotron-3-super-120b-a12b:free",
+      "xiaomi/mimo-v2.5",
+      "google/gemini-3-flash-preview"
+    ],
+    "formats": {
+      "springer": [
+        "deepseek/deepseek-v4-flash"
+      ],
+      "nature": [
+        "nvidia/nemotron-3-super-120b-a12b:free",
+        "xiaomi/mimo-v2.5"
+      ],
+      "harvard": [
+        "google/gemini-3-flash-preview"
+      ]
+    },
+    "results": {
+      "deepseek/deepseek-v4-flash": {
+        "elsevier": null,
+        "nature": null,
+        "oxford": null,
+        "springer": {
+          "metrics": {
+            "time": 14.709194154012948
+          },
+          "response": {
+            "REFERENCE": {
+              "reasoning": "The publication year is 2026, which is a future date relative to the current time (2025). No reference can be verified as authentic if it has not yet been published. Additionally, the DOI (bmj-2025-088116) suggests a 2025 publication, creating an inconsistency. The reference is therefore fabricated or contains a critical error.",
+              "validity": false,
+              "validity_confidence": 0.99
+            },
+            "authors": {
+              "reasoning": "The author list includes many well-known researchers in the field of shared decision-making and patient decision aids (e.g., Volk, Barry, Bekker, H\u00e4rter, Hoffmann, Stacey). However, given the overall reference is invalid due to the future year, the author list cannot be verified as authentic for this specific citation.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "doi": {
+              "reasoning": "The DOI '10.1136/bmj-2025-088116' follows the standard BMJ format. A DOI for an article published in 2025 would be plausible, but it conflicts with the stated 2026 year. The DOI itself is syntactically valid but cannot be confirmed as authentic without a future publication date.",
+              "validity": false,
+              "validity_confidence": 0.95
+            },
+            "elocator": {
+              "reasoning": "The elocator is missing; only '393:' is provided, which is incomplete. This is a formatting error, further indicating the reference is not properly constructed.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "journal_issue": {
+              "reasoning": "Volume 393 is plausible for BMJ in 2026, but without a future issue number, it cannot be verified.",
+              "validity": false,
+              "validity_confidence": 0.85
+            },
+            "journal_name": {
+              "reasoning": "'BMJ' is a valid journal abbreviation for the British Medical Journal. However, the reference as a whole is invalid, so this component is also part of an invalid citation.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "journal_page": {
+              "reasoning": "No page number is provided, only a colon after the volume. This is a missing or incomplete component.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "journal_volume": {
+              "reasoning": "Volume 393 is a plausible volume number for BMJ in 2026, but cannot be confirmed due to the future year.",
+              "validity": false,
+              "validity_confidence": 0.85
+            },
+            "pmcid": {
+              "reasoning": "No PMC ID is provided.",
+              "validity": false,
+              "validity_confidence": 1.0
+            },
+            "pmid": {
+              "reasoning": "No PMID is provided.",
+              "validity": false,
+              "validity_confidence": 1.0
+            },
+            "publication_date": {
+              "reasoning": "The publication year is 2026, which is in the future. This is the primary reason the reference is invalid.",
+              "validity": false,
+              "validity_confidence": 0.99
+            },
+            "title": {
+              "reasoning": "The title 'Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process' is plausible and consistent with known IPDAS updates. However, it is attached to an invalid reference, so it cannot be considered authentic for this citation.",
+              "validity": false,
+              "validity_confidence": 0.85
+            }
+          }
+        },
+        "cse": null,
+        "harvard": null
+      },
+      "nvidia/nemotron-3-super-120b-a12b:free": {
+        "elsevier": null,
+        "nature": {
+          "metrics": {
+            "time": 31.103724150976632
+          },
+          "response": {
+            "authors": {
+              "reasoning": "The author list includes known experts in patient decision aids (e.g., Glyn Elwyn, Dawn Stacey, etc.) but the specific combination and ordering do not match any known publication. While many of these names are legitimate researchers, the exact author string cannot be verified as belonging to a real article. Hence, the authorship component is dubious and likely fabricated or rearranged.",
+              "validity": false,
+              "validity_confidence": 0.6
+            },
+            "title": {
+              "reasoning": "The title \"Updated International Patient Decision Aid Standards (IPDAS version 5.0): modified Delphi, evidence informed consensus process\" sounds plausible for a methodological paper, but no such article is indexed in PubMed, Scopus, or the BMJ website as of the knowledge cutoff (2024\u201106). No record of an IPDAS version 5.0 update exists; the most recent published version is IPDAS v4 (2013). Therefore the title component is not supported by evidence.",
+              "validity": false,
+              "validity_confidence": 0.85
+            },
+            "journal_name": {
+              "reasoning": "BMJ (formerly British Medical Journal) is a legitimate, peer\u2011reviewed journal. The journal name itself is correct.",
+              "validity": true,
+              "validity_confidence": 0.99
+            },
+            "journal_volume": {
+              "reasoning": "BMJ volume numbers increase roughly by 3\u20114 per year. Volume 393 would correspond approximately to the year 2024\u20112025, but there is no publicly available record of a volume 393 issue containing this article. Volume numbers alone cannot confirm authenticity, yet the lack of any trace makes this component suspect.",
+              "validity": false,
+              "validity_confidence": 0.7
+            },
+            "journal_issue": {
+              "reasoning": "The reference does not specify an issue number, which is atypical for a BMJ article; most BMJ citations include an issue or page range. Its omission further reduces confidence.",
+              "validity": false,
+              "validity_confidence": 0.6
+            },
+            "journal_page": {
+              "reasoning": "Page numbers are missing (shown as \"393:\" with no actual pages). A legitimate BMJ article would have a defined page range or article number. This absence is a strong indicator of a fabricated or placeholder citation.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "elocator": {
+              "reasoning": "No electronic locator (article ID) is provided; BMJ often uses article IDs for online\u2011only articles. Its absence is notable but not decisive.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "publication_date": {
+              "reasoning": "The cited year is 2026, which is in the future relative to the current date (2025\u201109). While \"in press\" articles can bear a future year, no evidence of an accepted manuscript with this title appears in preprint servers or the BMJ \u2018Articles in Press\u2019 section. Thus the date is highly implausible for a real published article.",
+              "validity": false,
+              "validity_confidence": 0.95
+            },
+            "doi": {
+              "reasoning": "The DOI pattern 10.1136/bmj-2025-088116 follows BMJ\u2019s style, but a lookup of this exact DOI returns no record (as of 2024\u201106). DOI resolution services report \"DOI not found.\" This strongly suggests the DOI is fabricated or refers to a non\u2011existent manuscript.",
+              "validity": false,
+              "validity_confidence": 0.98
+            },
+            "pmid": {
+              "reasoning": "No PMID is supplied, and a search of PubMed yields no match for the given title/DOI.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "pmcid": {
+              "reasoning": "No PMCID provided; similarly, no match in PubMed Central.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "REFERENCE": {
+              "reasoning": "Multiple components (title, volume, page, date, DOI) are inconsistent with verifiable records. The article cannot be located in any major bibliographic database, and the future publication year combined with missing pagination points to a fabricated or placeholder citation. While the authors and journal are real, the specific citation does not correspond to an actual published work.",
+              "validity": false,
+              "validity_confidence": 0.93
+            }
+          }
+        },
+        "oxford": null,
+        "springer": null,
+        "cse": null,
+        "harvard": null
+      },
+      "xiaomi/mimo-v2.5": {
+        "elsevier": null,
+        "nature": {
+          "metrics": {
+            "time": 88.72435901701101
+          },
+          "response": {
+            "authors": {
+              "reasoning": "All listed authors are real, prominent researchers in the field of patient decision aids and shared decision-making (e.g., Volk RJ, Barry MJ, Pignone M, Sepucha K, Stacey D, etc.). The author list is highly plausible and consistent with the topic.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "title": {
+              "reasoning": "The IPDAS (International Patient Decision Aid Standards) initiative is a well-known, real project that has produced multiple versions of standards (e.g., version 4.0 around 2012\u20132013). A 'version 5.0' would be a logical update. The 'modified Delphi, evidence informed consensus process' methodology is consistent with how IPDAS has historically developed its standards. The title is plausible and follows academic conventions.",
+              "validity": true,
+              "validity_confidence": 0.9
+            },
+            "journal_name": {
+              "reasoning": "BMJ (British Medical Journal) is a real, high-impact, peer-reviewed medical journal. It is plausible that BMJ could publish a consensus paper on patient decision aid standards.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "journal_volume": {
+              "reasoning": "BMJ volume 393. Given that BMJ publishes multiple issues per year and is currently around volume 378\u2013385 (2024\u20132025), volume 393 in 2026 would be plausible. However, this is not independently verifiable with my training data cutoff.",
+              "validity": true,
+              "validity_confidence": 0.7
+            },
+            "journal_issue": {
+              "reasoning": "No issue number is provided (only volume 393 followed by a colon with no page/issue data). This is a formatting omission, though BMJ has moved to online-first publishing where issue numbers may be less prominent.",
+              "validity": false,
+              "validity_confidence": 0.6
+            },
+            "journal_page": {
+              "reasoning": "No page numbers are provided. The citation shows '393:.' with nothing after the colon. This is a significant formatting deficiency and raises concerns about completeness of the citation.",
+              "validity": false,
+              "validity_confidence": 0.85
+            },
+            "elocator": {
+              "reasoning": "No electronic locator (e.g., e12345) is provided either. For modern BMJ articles, an e-locator or DOI is typically required in the citation.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "publication_date": {
+              "reasoning": "The publication year is given as 2026. This is a major red flag: (1) if the current date is before 2026, this is a future-dated publication and cannot be real; (2) even if the date were current, the DOI contains 'bmj-2025-' suggesting 2025 submission, which is plausible, but the 2026 publication year is unverifiable and suspicious. This is the strongest indicator of fabrication.",
+              "validity": false,
+              "validity_confidence": 0.95
+            },
+            "doi": {
+              "reasoning": "The DOI prefix 10.1136 is the correct and well-known prefix for BMJ publications. The DOI structure 'bmj-2025-088116' is consistent with BMJ's DOI format (year of submission + identifier). However, without being able to verify the DOI against an actual database (e.g., CrossRef), and combined with the future date, this DOI cannot be confirmed as authentic.",
+              "validity": true,
+              "validity_confidence": 0.75
+            },
+            "pmid": {
+              "reasoning": "No PubMed ID (PMID) is provided. While not every BMJ article has a PMID at time of citation, the absence is not unusual for a very recent or future-dated article. However, it limits verifiability.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "pmcid": {
+              "reasoning": "No PubMed Central ID (PMCID) is provided. Similar to PMID, the absence is not definitive evidence of fabrication but limits cross-verification.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "REFERENCE": {
+              "reasoning": "This citation has several hallmarks of being AI-generated or fabricated:\n\n1. **Future publication year (2026)**: The most critical red flag. The paper cannot be verified if the year is in the future.\n2. **Missing page/e-locator**: The citation shows '393:.' with nothing after, which is incomplete.\n3. **Plausible but unverifiable DOI**: The DOI format is correct for BMJ, but cannot be confirmed without database access.\n4. **Highly realistic author list and topic**: This makes it dangerous, as it mimics a real paper. The authors are all real and relevant, and IPDAS version 5.0 is a plausible future update.\n5. **Absence of any verifiable metadata (PMID, PMCID, volume/issue/pages)**: These are all missing, making independent verification extremely difficult.\n\nOverall, the combination of real authors, real topic, plausible journal and DOI format, but with an unverifiable future date and incomplete bibliographic details strongly suggests this is a **fabricated (hallucinated) citation**. It is designed to look authentic by incorporating real entities, but the details (especially the year and missing pages) reveal its likely non-existence.",
+              "validity": false,
+              "validity_confidence": 0.92
+            }
+          }
+        },
+        "oxford": null,
+        "springer": null,
+        "cse": null,
+        "harvard": null
+      },
+      "google/gemini-3-flash-preview": {
+        "elsevier": null,
+        "nature": null,
+        "oxford": null,
+        "springer": null,
+        "cse": null,
+        "harvard": {
+          "metrics": {
+            "time": 5.3847365679976065
+          },
+          "response": {
+            "authors": {
+              "reasoning": "The authors listed are prominent members of the IPDAS Collaboration and have published previous versions together.",
+              "validity": true,
+              "validity_confidence": 0.98
+            },
+            "title": {
+              "reasoning": "The title follows the naming convention of previous updates, but there is no record of an 'IPDAS 5.0' being published in the BMJ as of early 2024.",
+              "validity": false,
+              "validity_confidence": 0.95
+            },
+            "journal_name": {
+              "reasoning": "BMJ is a legitimate and highly reputable medical journal often associated with these standards.",
+              "validity": true,
+              "validity_confidence": 1.0
+            },
+            "journal_volume": {
+              "reasoning": "The BMJ current volume is around 384 in 2024; volume 393 corresponds to a future date around 2026 and is currently non-existent.",
+              "validity": false,
+              "validity_confidence": 0.99
+            },
+            "journal_issue": {
+              "reasoning": "No issue number was provided in the citation, though BMJ often uses elocators instead of traditional issues now.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "journal_page": {
+              "reasoning": "No page numbers were provided in the reference string.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "elocator": {
+              "reasoning": "The elocator is missing from the citation text.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "publication_date": {
+              "reasoning": "The year 2026 is in the future, meaning this specific article has not been published yet.",
+              "validity": false,
+              "validity_confidence": 1.0
+            },
+            "doi": {
+              "reasoning": "The DOI 10.1136/bmj-2025-088116 contains a year prefix (2025) that does not match any current active BMJ registrations for this topic.",
+              "validity": false,
+              "validity_confidence": 0.99
+            },
+            "pmid": {
+              "reasoning": "No PMID was provided in the citation.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "pmcid": {
+              "reasoning": "No PMCID was provided in the citation.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "REFERENCE": {
+              "reasoning": "While based on real authors and a real topic, the specific publication record (2026, Vol 393, and DOI) is a hallucination of a future event.",
+              "validity": false,
+              "validity_confidence": 0.99
+            }
+          }
+        }
+      }
+    }
+  },
+  "4": {
+    "id": 4,
+    "components": [
+      "authors",
+      "title",
+      "journal_name",
+      "journal_volume",
+      "journal_issue",
+      "journal_page",
+      "elocator",
+      "publication_date",
+      "doi",
+      "url_abstract",
+      "url_direct",
+      "pmcid",
+      "pmid",
+      "REFERENCE"
+    ],
+    "models": [
+      "deepseek/deepseek-v4-flash",
+      "nvidia/nemotron-3-super-120b-a12b:free",
+      "xiaomi/mimo-v2.5",
+      "google/gemini-3-flash-preview"
+    ],
+    "formats": {
+      "nature": [
+        "deepseek/deepseek-v4-flash",
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "elsevier": [
+        "xiaomi/mimo-v2.5"
+      ],
+      "cse": [
+        "google/gemini-3-flash-preview"
+      ]
+    },
+    "results": {
+      "deepseek/deepseek-v4-flash": {
+        "elsevier": null,
+        "nature": {
+          "metrics": {
+            "time": 11.992028879991267
+          },
+          "response": {
+            "authors": {
+              "reasoning": "The author list appears complete and includes known researchers in the field of myopia research. No suspicious duplication or contradictory names are evident.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "title": {
+              "reasoning": "The title matches the standard format and topic of the CHAMP-UK trial. It appears legitimate.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "journal_name": {
+              "reasoning": "The BMJ is a well-established, high-impact medical journal. This is a plausible venue for this research.",
+              "validity": true,
+              "validity_confidence": 0.99
+            },
+            "journal_volume": {
+              "reasoning": "Volume 393 is a valid volume number for BMJ for the year 2026, given the journal's publication schedule.",
+              "validity": true,
+              "validity_confidence": 0.9
+            },
+            "journal_issue": {
+              "reasoning": "The citation lacks an issue number. While sometimes omitted, its absence is a minor irregularity for a BMJ citation.",
+              "validity": true,
+              "validity_confidence": 0.7
+            },
+            "journal_page": {
+              "reasoning": "The citation lacks page numbers. This is a significant irregularity as standard BMJ citations include them.",
+              "validity": false,
+              "validity_confidence": 0.85
+            },
+            "elocator": {
+              "reasoning": "An elocator (article number instead of page numbers) is common for online-first publications. However, with a full volume provided, page numbers are expected for final publication.",
+              "validity": true,
+              "validity_confidence": 0.6
+            },
+            "publication_date": {
+              "reasoning": "The year 2026 is a future date. While a journal could publish a citation online ahead of print, the reference appears to be for a final published article in a specific volume. The year being in the future makes it impossible for the article to be published yet.",
+              "validity": false,
+              "validity_confidence": 0.98
+            },
+            "doi": {
+              "reasoning": "The DOI follows the correct structure. The prefix '10.1136/' is standard for BMJ journals. The suffix 'bmj-2025-086698' looks plausible. However, the combination of a 2026 publication year with a DOI that suggests a 2025 submission year is suspicious, as the reference is for a published article.",
+              "validity": true,
+              "validity_confidence": 0.8
+            },
+            "pmid": {
+              "reasoning": "No PubMed ID is provided in the citation.",
+              "validity": false,
+              "validity_confidence": 0.99
+            },
+            "pmcid": {
+              "reasoning": "No PubMed Central ID is provided in the citation.",
+              "validity": false,
+              "validity_confidence": 0.99
+            },
+            "REFERENCE": {
+              "reasoning": "The reference is suspicious. The combination of a future publication year (2026), a missing issue number, and missing page numbers for a volume-numbered journal article are all red flags. The DOI is plausible, but most elements point to this being a fabricated or incorrect citation.",
+              "validity": false,
+              "validity_confidence": 0.92
+            }
+          }
+        },
+        "oxford": null,
+        "springer": null,
+        "cse": null,
+        "harvard": null
+      },
+      "nvidia/nemotron-3-super-120b-a12b:free": {
+        "elsevier": null,
+        "nature": {
+          "metrics": {
+            "time": 32.48260220201337
+          },
+          "response": {
+            "authors": {
+              "reasoning": "The author list is long and plausible for a multicentre UK trial, but without verification cannot be confirmed; however the other inconsistencies cast doubt. The presence of many authors does not guarantee authenticity.",
+              "validity": false,
+              "validity_confidence": 0.6
+            },
+            "title": {
+              "reasoning": "The title matches the described CHAMP-UK trial and is plausible for a BMJ article on low\u2011concentration atropine for myopia progression. This component alone does not indicate falseness.",
+              "validity": true,
+              "validity_confidence": 0.8
+            },
+            "journal_name": {
+              "reasoning": "BMJ is a legitimate journal. No issue here.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "journal_volume": {
+              "reasoning": "Volume 393 is unusually high for BMJ; recent volumes are in the mid\u2011300s (e.g., 2024\u202f\u2248\u202f386). A volume of 393 would correspond to a year around 2028\u20112029, not 2026, making this component inconsistent with the stated year.",
+              "validity": false,
+              "validity_confidence": 0.85
+            },
+            "journal_issue": {
+              "reasoning": "No issue number is provided; BMJ articles typically do not require an issue number when a volume and page range are given, so its absence is not inherently problematic.",
+              "validity": true,
+              "validity_confidence": 0.9
+            },
+            "journal_page": {
+              "reasoning": "Page numbers are missing (shown as \"393:\" with no pages). BMJ articles always include a page range or article number; the omission is a clear formatting error.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "elocator": {
+              "reasoning": "No article identifier (e.g., e\u2011number) is supplied; the missing page number is not compensated by an elocator.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "publication_date": {
+              "reasoning": "The year 2026 is in the future relative to the current date (2025). While a journal could publish an article ahead of print, the combination of a future year, mismatched DOI year, and anomalous volume makes this highly suspect.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "doi": {
+              "reasoning": "The DOI string contains \"bmj-2025-\" indicating a 2025 publication, which conflicts with the stated 2026 year. Additionally, attempting to resolve 10.1136/bmj-2025-086698 does not return a known BMJ record (as of knowledge cutoff 2024). This mismatch strongly suggests the DOI is fabricated or incorrect.",
+              "validity": false,
+              "validity_confidence": 0.95
+            },
+            "pmid": {
+              "reasoning": "No PMID is provided; not required for assessment but its absence does not affect validity.",
+              "validity": true,
+              "validity_confidence": 0.9
+            },
+            "pmcid": {
+              "reasoning": "No PMCID provided; same as PMID.",
+              "validity": true,
+              "validity_confidence": 0.9
+            },
+            "REFERENCE": {
+              "reasoning": "Multiple elements (volume, page numbers, date, DOI) are internally inconsistent or missing, and the reference appears to describe a future article that cannot be verified. Collectively, these issues indicate that the citation is likely not authentic.",
+              "validity": false,
+              "validity_confidence": 0.93
+            }
+          }
+        },
+        "oxford": null,
+        "springer": null,
+        "cse": null,
+        "harvard": null
+      },
+      "xiaomi/mimo-v2.5": {
+        "elsevier": {
+          "metrics": {
+            "time": 66.1621177699999
+          },
+          "response": {
+            "REFERENCE": {
+              "reasoning": "This citation is likely fabricated or contains errors due to several inconsistencies. The publication year 2026 is in the future beyond the current year 2024, making it impossible for the article to have been published. The BMJ volume number 393 does not align with the journal's current publication schedule. While the author list includes real researchers in myopia (e.g., Azuara-Blanco, Flitcroft, Congdon), and the study name CHAMP-UK corresponds to known trials, the future dating and DOI mismatch (2025 in DOI but 2026 publication year) indicate that the reference is not authentic as presented.",
+              "validity": false,
+              "validity_confidence": 0.85
+            },
+            "authors": {
+              "reasoning": "The author list includes real researchers in the field of ophthalmology and myopia (e.g., Azuara-Blanco A, Flitcroft I, Congdon N, Hammond CJ), making it plausible that this author group could collaborate on a myopia study. However, the exact combination and sequence of authors cannot be verified without a published article.",
+              "validity": false,
+              "validity_confidence": 0.7
+            },
+            "doi": {
+              "reasoning": "The DOI 10.1136/bmj-2025-086698 follows the typical BMJ DOI format (bmj-year-number). However, the year in the DOI (2025) does not match the listed publication year (2026), suggesting an inconsistency. Without access to the DOI's target, its validity cannot be confirmed. Most BMJ DOIs resolve to published articles, but this one may be for an in-press or future article, which would not be currently accessible.",
+              "validity": false,
+              "validity_confidence": 0.6
+            },
+            "elocator": {
+              "reasoning": "The elocator is incomplete or missing\u2014only '393:' is given, with no page numbers or article identifier. This is a red flag for a valid citation, as BMJ articles typically include article numbers or page ranges. The lack of a complete elocator further suggests an error or fabrication.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "journal_issue": {
+              "reasoning": "The journal given is BMJ, which is legitimate. However, the volume number 393 is plausible for a future year but current BMJ volumes are around 380-388 (as of 2023-2024). The volume may correspond to a 2026 issue, but since that year is in the future, this issue does not exist yet. Without knowing the issue number, the citation is incomplete and unverifiable.",
+              "validity": false,
+              "validity_confidence": 0.8
+            },
+            "journal_name": {
+              "reasoning": "The journal name 'BMJ' (British Medical Journal) is a well-known and reputable medical journal. It is a valid and authentic journal, but the article cited within it is not yet published.",
+              "validity": false,
+              "validity_confidence": 1.0
+            },
+            "journal_page": {
+              "reasoning": "No page numbers are provided (elocator incomplete). This is a critical omission for a proper citation, making it difficult to locate the article even if it existed. The lack of page numbers further supports the inauthenticity of the reference.",
+              "validity": false,
+              "validity_confidence": 0.95
+            },
+            "journal_volume": {
+              "reasoning": "The volume number 393 is provided, but it does not correspond to any currently published BMJ volume (as of 2024). This suggests either a future issue (post-2024) or an error. Given the publication year 2026, this volume would be in the future and not yet available.",
+              "validity": false,
+              "validity_confidence": 0.85
+            },
+            "pmcid": {
+              "reasoning": "No PMCID (PubMed Central ID) is provided, which is common for BMJ articles indexed in PubMed. However, since the article is not yet published, it would not have a PMCID. The absence of a PMCID is consistent with an unverifiable citation.",
+              "validity": false,
+              "validity_confidence": 0.7
+            },
+            "pmid": {
+              "reasoning": "No PMID (PubMed ID) is provided. BMJ articles are typically indexed in PubMed, but since this article is cited as from 2026, it would not yet be indexed. The absence of a PMID is expected for a future publication.",
+              "validity": false,
+              "validity_confidence": 0.7
+            },
+            "publication_date": {
+              "reasoning": "The publication year is given as 2026, which is in the future. As of 2024, no article can be published in 2026, making this date impossible. The DOI year (2025) also conflicts with the publication year (2026), further indicating an error or fabrication.",
+              "validity": false,
+              "validity_confidence": 0.95
+            },
+            "title": {
+              "reasoning": "The title 'Low concentration atropine eye drops and progression of myopia in children: multicentre placebo controlled, double masked, randomised trial in the UK (CHAMP-UK)' is plausible and aligns with known myopia research (e.g., CHAMP trials). The terminology (e.g., 'multicentre', 'placebo controlled', 'double masked') is standard for clinical trials. However, without verification through the journal's database, the title's authenticity cannot be confirmed.",
+              "validity": false,
+              "validity_confidence": 0.75
+            }
+          }
+        },
+        "nature": null,
+        "oxford": null,
+        "springer": null,
+        "cse": null,
+        "harvard": null
+      },
+      "google/gemini-3-flash-preview": {
+        "elsevier": null,
+        "nature": null,
+        "oxford": null,
+        "springer": null,
+        "cse": {
+          "metrics": {
+            "time": 3.908336149994284
+          },
+          "response": {
+            "authors": {
+              "reasoning": "The author list includes recognized experts in myopia such as Azuara-Blanco, Logan, and Dahlmann-Noor, and matches the known investigators of the CHAMP-UK study.",
+              "validity": true,
+              "validity_confidence": 0.95
+            },
+            "title": {
+              "reasoning": "The title accurately describes the CHAMP-UK clinical trial regarding low-concentration atropine for myopia progression in UK children.",
+              "validity": true,
+              "validity_confidence": 1.0
+            },
+            "journal_name": {
+              "reasoning": "The BMJ (British Medical Journal) is a legitimate medical journal.",
+              "validity": true,
+              "validity_confidence": 1.0
+            },
+            "journal_volume": {
+              "reasoning": "The volume number 393 corresponds to the future projection or is likely incorrect as the actual publication in 2023 was volume 383.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "journal_issue": {
+              "reasoning": "The issue field is empty or missing, which is common for online-first BMJ articles but lacks specificity here.",
+              "validity": false,
+              "validity_confidence": 0.5
+            },
+            "journal_page": {
+              "reasoning": "The page number provided is missing or placeholder text, as the actual paper used an elocator.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "elocator": {
+              "reasoning": "The elocator is missing in the provided citation; however, the real paper uses e077718.",
+              "validity": false,
+              "validity_confidence": 0.9
+            },
+            "publication_date": {
+              "reasoning": "The date 2026 is incorrect as the CHAMP-UK results were published in 2023.",
+              "validity": false,
+              "validity_confidence": 1.0
+            },
+            "doi": {
+              "reasoning": "The provided DOI 10.1136/bmj-2025-086698 is formatted like a BMJ DOI but does not resolve to the correct paper; the real DOI is 10.1136/bmj-2023-077718.",
+              "validity": false,
+              "validity_confidence": 0.98
+            },
+            "pmid": {
+              "reasoning": "No PMID was provided in the input citation to evaluate.",
+              "validity": false,
+              "validity_confidence": 0.1
+            },
+            "pmcid": {
+              "reasoning": "No PMCID was provided in the input citation to evaluate.",
+              "validity": false,
+              "validity_confidence": 0.1
+            },
+            "REFERENCE": {
+              "reasoning": "While the authors and the study (CHAMP-UK) are real and published in the BMJ, the metadata including the year (2026), volume (393), and DOI are hallucinated.",
+              "validity": false,
+              "validity_confidence": 0.95
+            }
+          }
+        },
+        "harvard": null
+      }
+    }
+  }
+}

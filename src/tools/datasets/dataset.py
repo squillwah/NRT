@@ -1,77 +1,129 @@
 
-#import reftools.ref_formatters as RB
 from copy import deepcopy
-from enum import StrEnum, Enum
-from tools.references.typos import Typofier
+from enum import Enum
 from tools.references.refdata import ReferenceComponent
-import tools.references.formats as Formats
-import random
+from tools.references.formats import FormatStyle, Formats
+from tools.datasets.mutators import EntryMutator, SeverityClass
 
-class MutationType(StrEnum):
-    TYPO = "typo"
-    MISMATCH = "mismatch"
-    HALLUCINATION = "hallucination"
-    SHUFFLE = "shuffle"
+# Used for averaging of component mutation severities (in bake_dataset step).
+# Weights are relative to eachother, and normalized to reference count on per reference basis (different references comprise varied assortments of components).
+# Weights only take effect in the arbitrary holistic mutation severity classification. Only components present or mutated are considered in the weighted average.
 
-class SeverityClass(float, Enum):
-    REAL = 1.0
-    MINOR_ERROR = .75
-    AMBIGUOUS = .5
-    MAJOR_ERROR = .25
-    FAKE = 0.0
+# i dont think it makes a difference really, weather they be above 1 or below idk. do they gotta add up ? :(
 
-# Enum and utility aliases
-C = ReferenceComponent
-M = MutationType
-S = SeverityClass
-T = Typofier
+# The way to actually do it is sum the priorities, and divide by that, not the total count of references
 
-# Create a set entry from reference data
-def dsentry(rd, ID=None):    #, *, ID=None):
+# How important should components (and their validity/mutation severity) be?
+# Note: these weights strictly apply only when components are included. So: don't be afraid to set a high value for something that's both very important and optional (like a DOI).
+COMPONENT_WEIGHTS = {
+    ReferenceComponent.AUTHORS:         1.00,
+    ReferenceComponent.TITLE:           1.00,               # @TODO (seriously) tweak these + the severityclass numbers. The ratios can be better.
+    ReferenceComponent.DOI:             0.90,   
+    ReferenceComponent.JOURNAL_NAME:    0.80,
+    ReferenceComponent.PMCID:           0.65,
+    ReferenceComponent.PMID:            0.65,
+    ReferenceComponent.PUBLICATION_DATE:0.40,
+    ReferenceComponent.JOURNAL_VOLUME:  0.25,
+    ReferenceComponent.JOURNAL_ISSUE:   0.20,
+    ReferenceComponent.JOURNAL_PAGE:    0.10,
+    ReferenceComponent.ELOCATOR:        0.10,
+    # URLs not supported :(
+    ReferenceComponent.URL_ABSTRACT:    0.50,
+    ReferenceComponent.URL_DIRECT:      0.50
+} # Pretty dang important, if it's included ... If absent, then not important. And the mutation type factors in too... So, an omission mutation on DOI has a severity of COMMON_VARIATION (low), to that'll lower the effect of weight here. Or vice versa. The number will be lower. Conversely, a doi hallucination has max severity of MAJOR_ERROR, so then the numbers would come at full force. The system is making sense?
+    
+    # @? Why is have less for just title but shouldnt have more cause it is half? Still not sure how weighting works... How say title always be worth half? Can even? Why? want?
+
+# The layout of dataset entries.
+def dsentry(rd, ID=None, ID_src=None):    #, *, ID=None):
+    ref_data = deepcopy(rd)
+    ref_metadata = ref_data.pop("_meta")
     return {
         "id": ID,               # Internal ID + original PMCID         IDs now stored as keys in the flat dataset dict. Categories can persist as per component/holistic tags (replacement for "suggested confidence" silliness)
-        "src_id": rd["pmcid"],
-        "mutcode": 0b00000000,  # Describes specific mutations.
-        "mutlabels": [],
-        "data": deepcopy(rd),
-        "format": {},           # All format styles generated at baking step. 
-        "scores": {
-            "holistic_complete": [True, S.REAL],                                    # Default holistic score to True
-            "holistic_formatted": {style: None for style in Formats.FormatStyle},   # Initialize style scores but leave NULL for bake.
-            "component": {comp: ([True, S.REAL] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}    # Default component scores to True, but set nonexistent components to NULL
-        }
+        "id_source": ID_src,    # Changed from PMCID to relative dataset ID. Use dataset[entry["src_id"]]["data"]["pmcid"]
+        "has_component": ref_metadata["has_component"],
+        #"has_component_source": deepcopy(ref_metadata["has_component"]),    # Copy is kept for weighting of omitting mutations vs truly absent components (absent from source). ! May not be necessary if ["mut_severity"]["component"] infers this with NULLs. (never modified or always absent components default to NULL scores)
+        "mut_code": 0b00000000, # Describes specific mutations.
+        "mut_labels": [],
+        "mut_severity": {
+            "component": {  # Initialize component severity scores to True, leaving nonexistent ones (not in has_component) NULL. The NULL avoids caring about components that never existed and where never mutated (mutated components have an entry added to replace the NULL).
+                comp: (
+                    [ True, SeverityClass.NONE ] if ref_metadata["has_component"][comp] else None   # Default component scores to True, but set nonexistent components to NULL. True as in 'valid' (real, not erroneous), float for severity 0 -> 1 (most).
+                ) for comp in ReferenceComponent
+            },
+            "holistic": {
+                "complete": {
+                    "score": None,  # Averaged scores are calculated on bake.   
+                    "includes": []  # List of components included in score average calculation. Components used must be present in the reference data, with the excpetion of omitted components (but depending on the element, the omission severity may be quite low anyways). Used in evaluating LLM responses, seeing which components "contributed" to the reference they were given.
+                },
+                "format": {
+                    style: {
+                        "score": None,  # [True/False, SeverityClass]
+                        "includes": []  # [authors, title, journal_name, ...]
+                    } for style in FormatStyle    # Initialize style scores but leave NULL for bake.
+                }
+            },
+        },
+        "ref_citation": {       # All format styles are generated at baking step. 
+            style: {
+                "text": None,
+                "components": None   # Include meta of which components are included in the reference text. ! This is the ultimate thing, shows what 'data' was actually given to the LLM after all this processing.
+            } for style in FormatStyle
+        },
+        "ref_data": ref_data
     }
 
-# Scores are in two parts:
-#  - Valid/Invalid (True if it's original, False if it's a mutated component)
-#  - Arbitary Severity (A number in a range (or class alternatively) denoting our own classification of severity for a bad component)
-#
-# The score is applied to single components and the entire references.
-
-# Create a set of set entries from a list of reference data
-def make_dataset(refdata_list, *, v=False):
-    dataset = {ID: dsentry(refdata, ID) for ID, refdata in enumerate(refdata_list)}
+# Create a set of set entries from a list of reference data.
+# 'duplicate' specifies how many copies of the source should be included
+def make_dataset(refdata_source, duplicate=0):
+    dataset = {}
+    source_size = len(refdata_source)
+    for i, refdata in enumerate(refdata_source):
+        source_id = i
+        dataset[source_id] = dsentry(refdata, ID=source_id, ID_src=None)
+        for j in range(1, duplicate+1):                         # Extend duplicates with source IDs attached (0, None) ... (99, None) | (100, 0), (101, 1), etc
+            duplicate_id = source_id + j*source_size
+            dataset[duplicate_id] = dsentry(refdata, ID=duplicate_id, ID_src=source_id)
     return dataset
 
-def bake_dsentry(entry):
-    entry["format"] = Formats.compile_all(entry["data"])
-    entry["mutlabels"] = EntryMutator.explain_mutcode(entry["mutcode"])
-    # Averaging holistic score
-    c_scores = {component: entry["scores"]["component"][component] for component in ReferenceComponent if entry["scores"]["component"][component]} # Components with existing scores in the dsentry.
-    score = entry["scores"]["holistic_complete"]
-    classes, confidences = zip(*[c_scores[c] for c in c_scores])    # Lists of all classification bools and confidence values for all components.
-    score[0] = classes and all(classes)                             # AND every class           @TODO May want to weight these somehow? Or should even the tiniest typo make it "false"? If so, then the binary score means a slightly different thing than confidence. Probably good that way? Maybe not, a confusing case would be a False (invalid) class due to a type but a very high (.95) confidence value. It would make sense on the component level (since we shouldn't set default conf values above .5), but not when maintaining that negative bool for the average. ANDing booleans is not the same as averaging. Do we even need the True/False at this step? Probably, something to mark the mutation. Otherwise setting the suggested confidences will be tricky and precise, we open ourselves up to clearly mutated/hallucinated references being marked True when the average works out > .5
-    score[1] = sum(confidences)/len(confidences)                    # Average all confidences   ... probably need a zero check here ...
-    # @TODO Averaging the formatted scores (exlcuding absent components)
-    # @TODO Doing the averaging logic different in a way that doesn't bias from component count? ?
-    # Note the getting of the format score thing is really only relevant if we really care to evaluate model responses within our specific arbitrary framework. It's not the big focus.
-    # It's all a bit meaningless honestly. When going component by component. The model would have to identify the original reference amid all the other clutter, and see that it doesn't line up. Quite the task. When the reference is so garbled to be entirely 'hallucinated', what really makes an 'unmutated' page number more 'real' than 'fake'?
+def weighted_average_of_component_scores(scores):
+    normalizer = sum(COMPONENT_WEIGHTS[c] for c in scores)
+    weights = {c: COMPONENT_WEIGHTS[c]/normalizer for c in scores}
+    avg_validity = all(s[0] for s in scores.values())               # ANDing all component validities together.
+    avg_severity = sum(scores[c][1]*weights[c] for c in scores)     # Weighting component severities and summing.
+    return [avg_validity, avg_severity]
 
-#    for style in FormatStyles:
-#        score = entry["scores"]["byformat"][style]
-#        classes, confidences = zip(*[c_scores[c] for c in c_scores if entry["format"][style]["components"][c])  # Do not include scores absent from the formatted reference (detailed by "components" element with the formatted string.
-#        score[0] = score[0] and all(c_scores[0])
-#        score[1] = sum(c_scores[1])/len(c_scores[1])
+# Compile references in format styles.
+# Average mutation severity scores.
+def bake_dsentry(entry):
+    # 1 Render citations in all format styles.
+    for style, citation in Formats.build_all(entry["ref_data"]).items():
+        entry["ref_citation"][style]["text"] = citation
+        #entry["ref_citation"][style]["components"] = {c: entry["has_component"][c] and Formats.components_in_style(style)[c] for c in ReferenceComponent}   # AND reference data has_component with components included in style, trimming any components that would never be included (never in style)
+        entry["ref_citation"][style]["components"] = [c for c in ReferenceComponent if entry["has_component"][c] and Formats.components_in(style)[c]] # Alternatively, a list. Would have no Falses
+
+    # 2 Average / weight severity scores     
+    scores = {comp: score for comp, score in entry["mut_severity"]["component"].items() if score is not None}
+    entry["mut_severity"]["holistic"]["complete"]["score"] = weighted_average_of_component_scores(scores)
+    entry["mut_severity"]["holistic"]["complete"]["includes"] = weighted_average_of_component_scores(scores)
+   
+    # Mask components not included by default inside the reference style (for example, PMCIDs and URLs in our code for Harvard, APA, and vancouver). 
+    # Because their ommitted by nature of the reference structure, it makes no sense to grade against them. There exists no case where the model would face the component in the specified reference style
+    scores_fmt = {style: {c: s for c, s in scores.items() if Formats.components_in(style)[c]} for style in FormatStyle}     # Trim severity scores never present within FormatStyle
+    for style, scores in scores_fmt.items():
+        entry["mut_severity"]["holistic"]["format"][style]["score"] = weighted_average_of_component_scores(scores)
+        entry["mut_severity"]["holistic"]["format"][style]["includes"] = list(scores.keys())
+    
+    
+    entry["mut_labels"] = EntryMutator.explain_mutcode(entry["mut_code"])
+
+    # If a component was present in the source reference, or had any mutation applied to it at all (such as a mutation which brought it into being), it has a severity score entry.
+    # By this, we can go through the non NULL severity scores and just calculate their weighted average (according to normalized component priorities defined above).
+    # The one excpetion to this, is that depending on the reference style some present components may have been excluded regardless, so we could be averaging with a bias from am absent component the chatbot would never have a chance to analyze (other than noting its absence).
+    # So, with each built format comes a dict describing which components it tried to include (though this describes the template per format, not necessarily what is contained given what may have been ommitted. For that, just AND the true 'has_components' with the format style's)
+    # Plus we'll also grade against some non mandatory components marked as (ommitted), but their severity score weights should be set accordingly so that it's within an 'acceptable' level of severity (very low).
+    # Also, to avoid the error of flagging omissions on true nonexistent components (and thereby including in the average), omission mutations are not applied if the thing is already None or empty. (None vs empty depends on component, holdover from earlier implementation ideas)
+    # It's all a bit meaningless honestly. When going component by component. The model would have to identify the original reference amid all the other clutter, and see that it doesn't line up. Quite the task. When the reference is so garbled to be entirely 'hallucinated', what really makes an 'unmutated' page number more 'real' than 'fake'?
 
 # Bake mutation labels, reference formats, and suggested reference scores every entry in a dataset.
 def bake_dataset(dataset):
@@ -79,400 +131,3 @@ def bake_dataset(dataset):
         bake_dsentry(dataset[entryID])
 
 
-# Class of methods to mutate dataset entries using ref_mutator functions.
-class EntryMutator:
-
-    # Mutation flags. Composed into a 'mutation code'. Unique bits describe exactly which modifications were performed on a dsentry. Not all mutations are combinable (overwrites). Also, be wary in the setting flags. A wrongly set flag will not reveal itself.
-
-    _MUTFLAG = {}   # Map to the unique bit identifier of all defined mutations.
-    _MUTCONF = {}   # Map to the suggested confidence value of all defined mutations.
-    _MUTLABELS = {} # Human readable convenience labels for each bit identifier.
-
-    # Define possible mutations and their arbitrary severity classes.
-    _MUTMAP = {
-        C.AUTHORS:          [ (M.TYPO, S.MINOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE), (M.SHUFFLE, S.AMBIGUOUS) ],     # @ this is kind of like the 'weight' stuff with scoring, but applied to how much (thing being wrong) tarnishes the "validity" of a reference.
-        C.TITLE:            [ (M.TYPO, S.MINOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE) ],
-        C.JOURNAL_NAME:     [ (M.TYPO, S.AMBIGUOUS), (M.MISMATCH, S.MAJOR_ERROR), (M.HALLUCINATION, S.FAKE) ],                         # Right now all typos are .5 confidence, aka ambiguous on the generated -> authentic scale (invalid -> valid?).
-        C.JOURNAL_VOLUME:   [ (M.HALLUCINATION, S.MAJOR_ERROR) ],                                                                       # We could have it change depending on element, perhaps author typos are less suspect, so a confidence of .75 instead?  @TODO fine tune
-        C.JOURNAL_ISSUE:    [ (M.HALLUCINATION, S.MAJOR_ERROR) ],
-        C.JOURNAL_PAGE:     [ (M.HALLUCINATION, S.AMBIGUOUS) ],                                                                         # @todo we REALLY need to add the 'missing component' thing. Maybe. That would give reason for more variety in the weighting (not just .5 typos and 0 all else)
-        C.ELOCATOR:         [ (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.MAJOR_ERROR) ],
-        C.PUBLICATION_DATE: [ (M.HALLUCINATION, S.MAJOR_ERROR) ],                                                                       # @ consider, when would it be above .5? Never really, cause we know it's been modified. Above .5 would incentivize confidence in the wrong answer... Right?
-        C.PMCID:            [ (M.TYPO, S.MAJOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE) ],                               # How are we going to compare their scores against this? Will it just be closeness, or does the funny business around the .5 interfere with that?
-        C.PMID:             [ (M.TYPO, S.MAJOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE) ],
-        C.DOI:              [ (M.TYPO, S.MAJOR_ERROR), (M.MISMATCH, S.FAKE), (M.HALLUCINATION, S.FAKE) ]                                # @TODO Reconsile the split DOI prefix/suffix mutation inconsistency.
-        #"url_abstract":     ("typo", "mismatch", "hallucinate"),
-        #"url_direct":       ("typo", "mismatch", "hallucinate"),
-        # @TODO Still need those missing mutations. Would add complexity to the classfying.
-    }
-
-    # Construct static maps to bits, confidences, and convenience labels.
-    bit = 1
-    for comp, muts in _MUTMAP.items():
-        _MUTFLAG[comp] = {}
-        _MUTCONF[comp] = {}
-        for (mut, conf) in muts:
-            _MUTFLAG[comp][mut] = bit
-            _MUTCONF[comp][mut] = conf
-            _MUTLABELS[bit] = f"{comp}::{mut}"
-            bit = bit << 1
-    del bit
-
-    def __init__(self, *, component_set, h_titles, h_authors, h_journals, rand_year_range):
-        # Resources for hallucination and mismatch mutations
-        self._COMPONENTS = component_set            # Alternatively, if we think a hallucination sample for every component is a good idea:
-        self._FAKE_TITLES = h_titles                # self._REAL_COMPONENTS
-        self._FAKE_AUTHORS = h_authors              # self._FAKE_COMPONENTS
-        self._FAKE_JOURNALS = h_journals            # The issue is, how fake can a date, DOI, or PMCID get? Fake enough to warrant that?
-        self._RAND_YEAR_RANGE = (rand_year_range[0], rand_year_range[1])
-
-### little helpers
-
-    # Return list of mutation labels from a mutcode.
-    @classmethod
-    def explain_mutcode(cls, code):
-        return [cls._MUTLABELS[bit] for bit in cls._MUTLABELS if (code & bit)]
-
-    # Sets mutation flags, adjusts component scores.
-    @classmethod
-    def _flag(cls, ds_entry, component, mutation):
-        ds_entry["mutcode"] = ds_entry["mutcode"] | cls._MUTFLAG[component][mutation]
-        # Lower or introduce score + severity class 
-        print(ds_entry["scores"]["component"][component])
-        if not ds_entry["scores"]["component"][component] or ds_entry["scores"]["component"][component][1] > cls._MUTCONF[component][mutation]:
-            print(ds_entry["scores"]["component"][component])
-            ds_entry["scores"]["component"][component] = (False, cls._MUTCONF[component][mutation])
-            print(ds_entry["scores"]["component"][component])
-
-    # Return deepcopy of random item from collection.
-    @staticmethod
-    def _randcopy(collection):
-        return deepcopy(random.choice(collection))
-
-### AUTHORS
-
-    # For no good reason, author typo logic is different from T.typofy().
-    def author_typo(self, ds_entry):
-        # ! Regarding typos, the question is which kind and how many. What range of randomness do we want and why?      # Perhaps (if we care), there is a paper. 
-        # As a completely arbitrary heuristic, let it be that:                                                          # This one? https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7546536
-        #  - There is a 1/4 chance for a typo to appear in an author's name. 
-        #  - Some considerations are made for appearing in the final formats:
-        #    - Typos are added to both the last and first names simultaneously.
-        #    - The first three authors are guaranteed to have at least one typo.
-        #  - Compounding typo's follow the natural halving of the probability (2: 1/8, 3: 1/16, so on)
-        #  - Fatfingers are twice as likely as swaps (moved into typofier.fatswap)
-        TYPO_CHANCE = 1/3
-        authors = ds_entry["data"]["authors"]
-        for author_i, name in enumerate(authors):
-            first_three_guarantee = author_i > 2
-            while random.random() <= TYPO_CHANCE or not first_three_guarantee:
-                for part in name:
-                    if name[part]: # Skip over empty names.
-                        print(" ? ", name, part)
-                        letter_i = random.choice([i for i, letter in enumerate(name[part])]) # if letter.isalpha()]) # Don't bother with spaces.    !!! Alpha check was causing oobs and empty set errors when following a fatfinger that added nonalphas or perhaps just some other weird RIS bugs.
-                        #name[part] = RM.typo_fatfinger(name[part], letter_i) if random.random() <= FATSWAP_RATIO else RM.typo_swapletter(name[part], letter_i)
-                        name[part] = T.fatswap(name[part], letter_i)
-                first_three_guarantee = True
-        self._flag(ds_entry, C.AUTHORS, M.TYPO)
-        return ds_entry # Note: Reference returns are for convenience. They are not copies.
-
-    def author_shuffle(self, ds_entry):
-        random.shuffle(ds_entry["data"]["authors"])
-        self._flag(ds_entry, C.AUTHORS, M.SHUFFLE)
-        return ds_entry
-
-    def author_mismatch(self, ds_entry):
-        ds_entry["data"]["authors"] = self._randcopy(self._COMPONENTS["authors"])
-        self._flag(ds_entry, C.AUTHORS, M.MISMATCH)
-        return ds_entry
-
-    def author_hallucinate(self, ds_entry):
-        #ds_entry["data"]["authors"] = self._randcopy(self._FAKE_AUTHORS)    # It needs to be a list of fake authors.
-        ds_entry["data"]["authors"] = deepcopy(random.sample(self._FAKE_AUTHORS, len(ds_entry["data"]["authors"])))    # Making it the same length. Could be different. Who cares?
-        self._flag(ds_entry, C.AUTHORS, M.HALLUCINATION)
-        return ds_entry
-
-### TITLES
-
-    def title_typo(self, ds_entry):
-        ds_entry["data"]["title"] = T.typofy(ds_entry["data"]["title"])
-        self._flag(ds_entry, C.TITLE, M.TYPO)
-        return ds_entry
-    def title_mismatch(self, ds_entry):
-        #RM.set_title(ds_entry["data"], random.choice(self._COMPONENTS["title"]))   # Screw the ref_mutator shit
-        ds_entry["data"]["title"] = self._randcopy(self._COMPONENTS["title"])
-        self._flag(ds_entry, C.TITLE, M.MISMATCH)
-        return ds_entry
-    def title_hallucinate(self, ds_entry):
-        #RM.set_title(ds_entry["data"], random.choice(self._FAKE_TITLES))
-        ds_entry["data"]["title"] = self._randcopy(self._FAKE_TITLES)
-        self._flag(ds_entry, C.TITLE, M.HALLUCINATION)
-        return ds_entry
-
-### JOURNAL NAMES                                               # @todo: Think about: Should we be bothering with replacing each journal element like this, or should we just mismatch the whole thing together (name, date, volume, iss, pages)?
-
-    def jname_typo(self, ds_entry):
-        ds_entry["data"]["journal"]["name"]["short"] = T.typofy(ds_entry["data"]["journal"]["name"]["short"])
-        ds_entry["data"]["journal"]["name"]["full"] = T.typofy(ds_entry["data"]["journal"]["name"]["full"])
-        self._flag(ds_entry, C.JOURNAL_NAME, M.TYPO)
-        return ds_entry
-    def jname_mismatch(self, ds_entry):
-        ds_entry["data"]["journal"]["name"] = self._randcopy([jname for jname in self._COMPONENTS["sets"]["journal_name"] if jname != ds_entry["data"]["journal"]["name"]])
-        self._flag(ds_entry, C.JOURNAL_NAME, M.MISMATCH)
-        return ds_entry
-    def jname_hallucinate(self, ds_entry):
-        ds_entry["data"]["journal"]["name"] = self._randcopy(self._FAKE_JOURNALS)    # @todo: !! Make sure the fake_journal source contains both full and short names, and that the file is parsed into the proper dict format!
-        self._flag(ds_entry, C.JOURNAL_NAME, M.HALLUCINATION)
-        return ds_entry
-
-### JOURNAL VOLUME / ISSUE
-
-    def jvol_hallucinate(self, ds_entry):             # @todo: Consider: Should we bother doing mismatches / hallucinations for the numerics?
-        if (vol := ds_entry["data"]["journal"]["volume"]):  # Not all references contain vol/iss data.
-            vol = int(vol)
-            ds_entry["data"]["journal"]["volume"] = random.choice([v for v in range(int(vol*.5), int(vol*1.5)) if v != vol]) # Arbitrary. Randomization range is the volume +/- half
-        else:
-            ds_entry["data"]["journal"]["volume"] = random.randint(0,500)
-            print(f" ! empty vol in {ds_entry["id"]} {ds_entry["src_id"]}, setting to niave random: {ds_entry["data"]["journal"]["volume"]}")
-        self._flag(ds_entry, C.JOURNAL_VOLUME, M.HALLUCINATION)
-        return ds_entry
-
-    def jiss_hallucinate(self, ds_entry):
-        if (iss := ds_entry["data"]["journal"]["issue"]):
-            iss = int(iss)
-            ds_entry["data"]["journal"]["issue"] = random.choice([i for i in range(int(iss*.5), int(iss*1.5)) if i != iss])
-        else:
-            # @todo: If we want to ensure that we create a database subset with vols and iss randomizations, we could return a None to signal.
-            #        ALTERNATIVE would be to fail around it, and put some random number anyways.
-            #ds_entry["data"]["journal"]["issue"] = random.choice(self._COMPONENTS["journal"])["issue"] # !! It must be that the same empties exist in the compset. SO, just do a random number.
-            ds_entry["data"]["journal"]["issue"] = random.randint(0,1500)
-            print(f" ! empty iss in {ds_entry["id"]} {ds_entry["src_id"]}, setting to niave random: {ds_entry["data"]["journal"]["issue"]}")
-        self._flag(ds_entry, C.JOURNAL_ISSUE, M.HALLUCINATION)
-        return ds_entry
-
-    # Could also perchance do a jissvol_mismatch (if one of our classifications implies it)
-
-### JOURNAL PAGE NUMBERS
-
-    def jpage_hallucinate(self, ds_entry):
-        spage = random.randint(23, 1184)    # Completely arbitrary randomness.
-        length = random.randint(3, 51)
-        ds_entry["data"]["journal"]["page"]["start"] = spage
-        ds_entry["data"]["journal"]["page"]["end"] = spage+length
-        self._flag(ds_entry, C.JOURNAL_PAGE, M.HALLUCINATION)
-        return ds_entry
-
-    # Other possibilities: mismatch, nonesense_randomize (end < start)
-    # If we do mismatches for these ones, that would make a big jALL_mismatch easy. Though it would be regardless, cause of compset structure. Whatever.
-
-    # @todo still
-    # elocator mismatch, randomize, typo? For typo, what about off by one and swaps?
-    # URL typo, mismatch, randomize?
-    def elocator_mismatch(self, ds_entry):  # @Consider: What about when an article doesn't have an elocator (or any other thing), should the mismatch still occur?
-        ds_entry["data"]["journal"]["elocator"] = self._randcopy([eloc for eloc in self._COMPONENTS["sets"]["journal_elocator"] if eloc != ds_entry["data"]["journal"]["elocator"]])
-        self._flag(ds_entry, C.ELOCATOR, M.MISMATCH)
-        return ds_entry
-
-    def elocator_hallucinate(self, ds_entry):
-        num = str(random.randint(1, 999999))
-        ds_entry["data"]["journal"]["elocator"] = "e"+"0"*(6-len(num))+num
-        self._flag(ds_entry, C.ELOCATOR, M.HALLUCINATION)
-        return ds_entry
-
-### JOURNAL / DIGITAL PUBLICATION DATES
-
-    #def pub_mismatch(self, ds_entry):
-    #def epub_mismatch(self, ds_entry): pass
-
-    def pubs_hallucinate(self, ds_entry, *, y=True, m=True, d=True):                           # @Consider: Or should both pub and epub be done at once, with only a few days between?
-        if y or m or d:
-            pub = ds_entry["data"]["pub"]
-            epub = ds_entry["data"]["epub"]
-            if y:
-                pub["y"] = random.randint(*self._RAND_YEAR_RANGE)
-                epub["y"] = pub["y"]
-            if m:
-                pub["m"] = random.randint(1, 12)
-                epub["m"] = pub["m"] + random.randint((pub["m"] > 1)*-1, (pub["m"] < 12)*1) # Sometimes offset epub month by 1.
-            if d:
-                pub["d"] = random.randint(1, 31)  # Hmmm
-                epub["d"] = pub["d"] + random.randint((pub["d"] > 5)*-5, (pub["m"] < 27)*5) # Sometimes offset epub day by up to 5.
-            self._flag(ds_entry, C.PUBLICATION_DATE, M.HALLUCINATION)
-        return ds_entry
-#    def epub_randomize(self, ds_entry, *, y=True, m=True, d=True):
-#        if y: ds_entry["data"]["epub"]["y"] = random.randint(*self._RAND_YEAR_RANGE)
-#        if m: ds_entry["data"]["epub"]["m"] = random.randint(1, 12)
-#        if d: ds_entry["data"]["epub"]["d"] = random.randint(1, 31)
-#        if y or m or d: self._flag(ds_entry, "epub_randomize")
-#        return ds_entry
-
-### DOI
-
-    def doi_typo(self, ds_entry):                       # @todo: Consider: If we do typo's on numerics, should they include fatfinger or only swap? The assumption is that fatfinger typos are too rare in this case (letters in a number would be seen and fixed).
-        doi = ds_entry["data"]["doi"]
-        doi["prefix"] = T.typo_swapletter(doi["prefix"], random.choice([i for i, char in enumerate(doi["prefix"]) if char != "0"])) # Swap one char in the prefix (not zeros).
-        doi["suffix"] = T.typofy(doi["suffix"]) # Just run the standard typo procedure on the suffix.
-        self._flag(ds_entry, C.DOI, M.TYPO)
-        return ds_entry
-
-    def doi_mismatch_prefix(self, ds_entry):
-        ds_entry["data"]["doi"]["prefix"] = self._randcopy([p for p in self._COMPONENTS["sets"]["doi_prefix"] if p != ds_entry["data"]["doi"]["prefix"]])
-        #self._flag(ds_entry, "doi_mismatch_prefix")
-        self._flag(ds_entry, C.DOI, M.MISMATCH)         # Prefix and suffix used to be seperate, now aren't. Should they?
-        return ds_entry
-
-    def doi_mismatch_suffix(self, ds_entry):
-        ds_entry["data"]["doi"]["suffix"] = self._randcopy([s for s in self._COMPONENTS["sets"]["doi_suffix"] if s != ds_entry["data"]["doi"]["suffix"]])
-        #self._flag(ds_entry, "doi_mismatch_suffix")
-        self._flag(ds_entry, C.DOI, M.MISMATCH)
-        return ds_entry
-
-    def doi_hallucinate_prefix(self, ds_entry):
-        # 10.random1000->9999 + .random0->10or100or1000 (0-2x)
-        ds_entry["data"]["doi"]["prefix"] = ".".join(["10", str(random.randint(1000, 9999))] + [str(random.randint(0, 10**random.randint(1, 3))) for i in range(random.randint(0,2))])
-        #self._flag(ds_entry, "doi_hallucinate_prefix")
-        self._flag(ds_entry, C.DOI, M.HALLUCINATION)
-        return ds_entry
-
-    def doi_hallucinate_suffix(self, ds_entry):
-        # 1-3 groups of 3 to 8 random numbers and letters
-        ds_entry["data"]["doi"]["suffix"] = "-".join(["".join([random.choice("abcdefghijklmnopqrstuvwxyz,./12345678900987654321") for i in range(random.randint(3, 8))]) for i in range(random.randint(1, 3))])
-        #self._flag(ds_entry, "doi_hallucinate_suffix")
-        self._flag(ds_entry, C.DOI, M.HALLUCINATION)
-        return ds_entry
-
-### URLS
-
-    # ...       @todo something with the URLs???
-
-### PMIDS / PMCIDS
-
-    def pmid_typo(self, ds_entry):
-        # Only one typo.
-        # 50/50 chance between positional swap or ++/-- error.
-        ID = ds_entry["data"]["pmid"]
-        li = random.randrange(0, len(ID))
-        if random.random() <= .5:
-            ID = T.typo_swapletter(ID, li)
-        else:
-            num = int(ID[li])
-            if num == 9: num = num - 1
-            elif num == 0: num = num + 1
-            else: num = num + random.choice([-1,1])
-            ID = ID[0:li]+str(num)+ID[li+1:] if li < len(ID)-1 else ID[0:li]+str(num)
-        ds_entry["data"]["pmid"] = ID
-        self._flag(ds_entry, C.PMID, M.TYPO)
-        return ds_entry
-
-    def pmid_mismatch(self, ds_entry):
-        ds_entry["data"]["pmid"] = self._randcopy([ID for ID in self._COMPONENTS["pmid"] if ID != ds_entry["data"]["pmid"]])
-        self._flag(ds_entry, C.PMID, M.MISMATCH)
-        return ds_entry
-
-    def pmid_hallucinate(self, ds_entry):
-        ds_entry["data"]["pmid"] = str(random.randint(1, 999999999)) # Up to 9 digits.
-        self._flag(ds_entry, C.PMID, M.HALLUCINATION)
-        return ds_entry
-
-    # Basically all exact same.
-    def pmcid_typo(self, ds_entry):
-        ID = ds_entry["data"]["pmcid"]
-        li = random.randrange(3, len(ID))   # Avoid PMC prefix
-        if random.random() <= .5:
-            ID = T.typo_swapletter(ID, li)
-        else:
-            num = int(ID[li])
-            if num == 9: num = num - 1
-            elif num == 0: num = num + 1
-            else: num = num + random.choice([-1,1])
-            ID = ID[0:li]+str(num)+ID[li+1:] if li < len(ID)-1 else ID[0:li]+str(num)
-        ds_entry["data"]["pmcid"] = ID
-        self._flag(ds_entry, C.PMCID, M.TYPO)
-        return ds_entry
-
-    def pmcid_mismatch(self, ds_entry):
-        ds_entry["data"]["pmcid"] = self._randcopy([ID for ID in self._COMPONENTS["pmcid"] if ID != ds_entry["data"]["pmcid"]])
-        self._flag(ds_entry, C.PMCID, M.MISMATCH)
-        return ds_entry
-
-    def pmcid_hallucinate(self, ds_entry):
-        ds_entry["data"]["pmcid"] = "PMC"+str(random.randint(1, 99999999)) # Up to 8 digits. Plus PMC prefix.
-        self._flag(ds_entry, C.PMCID, M.HALLUCINATION)
-        return ds_entry
-
-
-# @todo: Consider: Should we just blanket each element with the same boilerplate mutation methods, even when it might not make complete sense? (such as mismatches on vol/iss, or hallucinating page numbers?)
-
-
-# @todo: Consider: What about mutations which work on the final format itself? Like swaping a full journal name with an abreviation or vice versa? 
-#                  Is such an error to minute to test, will it make a difference?
-#                  We could just set the flag. Then it would be the format baker's responsibility to read it and bake accordingly.
-
-
-
-
-    # Mutation level. Or, the classification of a reference based on the sum of it's mutations.
-    # Differentiates between ambigious "human-esque" reference mistakes, and undeniably "chatbot-esque" hallucinations.
-
-
-# @Consider: One thing with the score totalling, is journal_page/journal_volume vs elocator can change scores. When one substitutes the other in the ref, even though both are valid. Because page + vol are 2 values, the 'weight' of them combined is heavier than elocator, even though they're subsituting each other.
-
-
-
-# @CONSIDER: Sometimes the true/false and the confidence score wont line up. Should the True/False be more of a "was this modified thing" or stay the same as the conf. Probably stay the same. Idk just think about it. There's something there.
-# @CONSIDER !! What about adding hallucinated/mismatch components to references which never had one in the first place?
-#  The question is: Should we only mutate a component when it already exists (refdataCOMPONENTS = True), or should we always mutate?
-#  how address in scoring?
-#  should we keep list of modified components?
-#  we have comp score list at init already, with Trues and Nones when no component.
-#  so, we set that value during the check. scores modified in place during mutation
-#  then if we do or dont want mutating of absent components, we just disable it on the None check instead of creating new.
-
-            #""combined": [True, 1.0],        # @ These two are where some kind of weight would come in, but right now they don't matter at all.
-            #""byformat": {"ama": None},                                                                              # @TODO {form: None for form in FormatStyles}. Different holistic scores per format addresses the issue of absent components bias.
-            #""component": {comp: ([True, 1.0] if rd["COMPONENTS"][comp] else None) for comp in ReferenceComponent}   # @RECONSIDER: The holistic score totalling nonsense is convoluted and an overcomplication.
-
-
-if __name__ == "__main__":
-    import json
-    import dstools.configurations as setconfig
-
-    r = None
-    with open("testrefs.json") as f: r = json.load(f)
-
-    ds = make_dataset(r)
-    bake_dataset(ds)
-    print(json.dumps(ds, indent=4))
-
-
-    DIR = "./reference_source"
-    #with open(f"{DIR}/refdata.json", "r") as f: refdata_src = json.load(f)
-    with open(f"testrefs.json", "r") as f: refdata_src = json.load(f)
-    with open(f"{DIR}/compset.json", "r") as f: compset_src = json.load(f)
-    with open(f"{DIR}/h_titles.txt", "r") as f: h_title_src = [line.strip() for line in f if line.strip()]
-    with open(f"{DIR}/h_authors.txt", "r") as f:
-        h_author_src = [{"l": "FAKEAUTH", "f": "FAKEAUTH"}]*200 #{ "l": name, "f": name for name in [line.strip() for line in f if line.strip()]} # Placeholder. Either parse by ', ' or have source generate a json of last and first.
-    with open(f"{DIR}/h_journals.txt", "r") as f:
-        h_journal_src = [{"full": "FAKEJOURN", "short": "FAKEJOURN"}]*200 #{ "full": name, "short": name for name in [line.strip() for line in f if line.strip()]} # Placeholder. Have the source be a JSON with {full, short}
-
-    srcds = make_dataset(refdata_src*5)
-    ds = { "source":        srcds[:100],
-           "minor_mderror": srcds[100:200],
-           "major_mderror": srcds[200:300],
-           "plausible_fab": srcds[300:400],
-           "human_review":  srcds[400:] }
-    setconfig.init(h_titles=h_title_src, h_authors=h_author_src, h_journals=h_journal_src, component_set=compset_src, rand_year_range=(2024, 2026))
-    setconfig.test_typos(ds["source"])
-    bake_dataset(ds["source"])
-    print(json.dumps(ds["source"], indent=2))
-    #quit()
-
-
-    setconfig.l1_metadata_error(ds["minor_mderror"])
-    setconfig.l2_serious_metadata_error(ds["major_mderror"])
-    setconfig.l3_plausible_fabricated(ds["plausible_fab"])
-    setconfig.l4_needs_human_review(ds["human_review"])
-
-    for label in ds: bake_dataset(ds[label])
-
-    print(json.dumps(ds, indent=2))

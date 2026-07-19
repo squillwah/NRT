@@ -1,5 +1,0 @@
-model,format,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid,REFERENCE
-deepseek/deepseek-v4-flash,elsevier,True,True,True,True,True(null),True(null),True,True,True,True,True,True
-nvidia/nemotron-3-super-120b-a12b:free,harvard,True,True,True,False,False(null),False(null),False,False,False,False,False,False
-xiaomi/mimo-v2.5,elsevier,True,True,True,True,True(null),True(null),True,True,True,False,False,True
-google/gemini-3-flash-preview,nature,True,True,True,False,False(null),False(null),False,False,True,False,False,False

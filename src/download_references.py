@@ -1,28 +1,29 @@
 
 from tools.references.api import get_papers_filter, get_ris, get_ref
 from tools.references.refdata import ristoref, component_set
+import tools.help as h
 import json
 
 # Takes dict of {journal : count}, returns list of refdata dicts.
-def get_reference_data(journals, *, v=False, saveall=True):
+def get_reference_data(journals, sort, mindate, maxdate, *, v=False, saveall=True):
     pmcids = []
     for j in journals:
         if v: print(f"Fetching {journals[j]} latest articles from {j}...")
-        pmcids.extend(get_papers_filter(journals[j], f"{j}[Journal]"))  # Grabs most recent. Can add sort functionality later depending on goals.
+        pmcids.extend(get_papers_filter(journals[j], f"{j}[Journal]", sort, mindate, maxdate))  # Grabs most recent. Can add sort functionality later depending on goals.
     if v: print(f"Total source pmcids: {len(pmcids)}")
 
     if v: print("Fetching RIS data...")
     raw_ris = get_ris(*pmcids)
-    if v: print(*raw_ris)
+    #if v: print(*raw_ris)
 
     # Testing to verify some stuff about formats.
     if saveall:
-        _json_filer(raw_ris, f"{DIRECTORY}/extra/reference_ris.json")
-        _json_filer(get_ref(*pmcids), f"{DIRECTORY}/extra/reference_formatted.json")
+        _json_filer(raw_ris, DIRECTORY / "ris.json")
+        _json_filer(get_ref(*pmcids), DIRECTORY / "formatted.json")
 
     if v: print(f"Formalizing {len(raw_ris)} RIS entries...")
     ref_data = [ristoref(ris) for ris in raw_ris]
-    if v: print(json.dumps(ref_data, indent=2))
+    #if v: print(json.dumps(ref_data, indent=2))
 
     return ref_data
 
@@ -38,17 +39,24 @@ def _json_filer(data, filename):
 
 if __name__ == "__main__":
     # Journals and their count in the set
-    JOURNALS = {"BMJ": 25,
-                "Nature": 25,
-                "Lancet": 25,
-                "NEJM": 25}
-    DIRECTORY = "./reference_source"
+    # Picked from https://tools.niehs.nih.gov/srp/publications/highimpactjournals.cfm
+    # https://pmc.ncbi.nlm.nih.gov/search/?term=Cell%5BJournal%5D&sort=relevance&size=10&display_snippets=show&filter=dates.2000-2021
+    JOURNALS = {"BMJ": 20,
+                "Nature": 20,
+                "Lancet": 20,
+                "NEJM": 20,
+                "JAMA": 20,
+                "Science": 20, 
+                "Cell": 20}
+    SORT, MINDATE, MAXDATE = "relevance", "1990", "2021"
+    DIRECTORY = h.mkdir("./data/source/references")
 
-    ref_data = get_reference_data(JOURNALS, v=True)
+    ref_data = get_reference_data(JOURNALS, SORT, MINDATE, MAXDATE, v=True)
     print("Writing reference data to file...")
-    _json_filer(ref_data, f"{DIRECTORY}/refdata.json")
+    _json_filer(ref_data, DIRECTORY / "refdata.json")
+    print(len(ref_data))
 
     print("Writing component set to file...")
-    _json_filer(component_set(*ref_data), f"{DIRECTORY}/compset.json")
+    _json_filer(component_set(*ref_data), DIRECTORY / "compset.json")
 
 
