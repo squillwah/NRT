@@ -1,0 +1,6 @@
+model,style,REFERENCE,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid
+deepseek-v4-flash,nlm,0.9,0.85,0.95,0.7,0.9,0.9,1.0,1.0,1.0,0.6,0.6,0.7
+gemini-3-flash-preview,harvard,0.85,0.95,0.9,0.8,0.99,0.99,0.7,0.5,0.9,1.0,1.0,1.0
+mimo-v2.5,nlm,0.85,0.75,0.95,0.85,0.7,0.85,0.9,0.5,0.85,0.9,0.85,0.9
+minimax-m3,harvard,0.7,0.6,0.85,0.9,0.75,0.65,0.95,0.95,0.9,0.5,0.95,0.95
+nemotron-3-super-120b-a12b,apa,0.92,0.85,0.9,0.75,0.6,0.6,0.5,0.5,0.5,0.9,0.8,0.85

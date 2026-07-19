@@ -1,0 +1,6 @@
+model,style,REFERENCE,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid
+deepseek-v4-flash,nlm,False,True,False,True,True,True,True,True,False,True,True,False
+gemini-3-flash-preview,apa,False,True,False,True,True,True,False,True,False,True,False,False
+mimo-v2.5,apa,True,True,True,True,True,True,True,True,True,True,True,True
+minimax-m3,apa,False,True,False,True,True,True,True,True,False,True,False,False
+nemotron-3-super-120b-a12b,apa,False,False,False,True,False,False,False,False,False,False,False,False

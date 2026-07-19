@@ -1,0 +1,4 @@
+model,style,REFERENCE,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid
+deepseek-v4-flash,apa,True,False,False,False,False,False,True,,True,False,False,False
+gemini-3-flash-preview,apa,True,False,False,False,False,False,False,,False,False,False,False
+minimax-m3,apa,False,False,False,False,False,False,True,,True,False,False,False

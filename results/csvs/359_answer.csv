@@ -1,0 +1,5 @@
+model,style,REFERENCE,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid
+deepseek-v4-flash,harvard,False,True,True,False,True,False,True,False,False,False,False,False
+gemini-3-flash-preview,nlm,True,True,True,True,True,False,True,True,True,False,True,False
+mimo-v2.5,vancouver,False,False,False,False,False,False,False,False,False,False,False,False
+nemotron-3-super-120b-a12b,nlm,False,True,True,False,True,False,False,False,False,False,True,True

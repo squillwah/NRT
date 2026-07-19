@@ -1,0 +1,113 @@
+model,style,REFERENCE,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid
+deepseek-v4-flash,vancouver,"The citation contains numerous spelling and formatting errors that render it invalid. Key issues include misspelled title words ('hypertensoin', 'tura.', 'iow-income', 'cross-sestional', 'stuey', 'participantd'), incorrect journal abbreviation ('BMn.' instead of 'BMJ'), and a malformed DOI ('01.1136/bmi.n59' instead of '10.1136/bmj.n59'). These errors are beyond typical typographical mistakes and strongly suggest fabrication or corruption.","Author names appear plausible and follow standard formatting, but given the overall corruption of the reference, they cannot be independently verified. No obvious errors in the author list.","The title contains multiple severe misspellings and grammatical errors ('hypertensoin', 'tura.', 'iow-income', 'cross-sestional', 'stuey', 'participantd'), making it inconsistent with a legitimate published article.","Should be 'BMJ' (British Medical Journal), but written as 'BMn.' – a clear error.","Volume '372' is plausible for 2021 BMJ, but the journal name error makes verification difficult.","The journal is listed as 'BMn.' which is clearly a typo for 'BMJ'. The volume '372' is correct for 2021 BMJ, but the abbreviation error undermines the reference.","No page numbers provided; instead an article number 'e065653' is given. This is acceptable for online journals, but the overall reference is unreliable.","The article identifier 'e065653' is plausible for a BMJ article, but given the surrounding errors, it may also be incorrect. Without verification, it is uncertain.","Date '2021 Jan 22' is formatted correctly and plausible, but the rest of the reference is unreliable.","The DOI is incorrectly formatted: '01.1136' is not a valid DOI prefix (should be '10.1136'), and 'bmi.n59' is likely a mistranscription of 'bmj.n59' or similar. This is a critical error.","No PMC ID provided, so no assessment possible.","No PMID provided, so no assessment possible."
+gemini-3-flash-preview,nlm,"The reference is a hallucination that mixes real identifiers (PMID 33483301, BMJ Vol 372) with incorrect titles, authors, and typo-ridden metadata.","The listed authors include known global health researchers, but they are not the authors of the paper associated with the provided PMID or title.","The title provided is a garbled version of a study on hypertension, but it does not match the actual title associated with BMJ 2021;372:n59 or the PMID provided.","'BMn' appears to be a typo for 'BMJ' (British Medical Journal), which is a legitimate journal.",Volume 372 corresponds to the year 2021 for the BMJ.,"BMJ does not typically use standard issue numbers in this format, focusing instead on volume and elocators.",The section 'e065653' is likely an elocator rather than a traditional page number.,The elocator e065653 does not exist for volume 372 of BMJ; the correct elocator for that date/volume is usually 'n59'.,"January 22, 2021, is a valid date that corresponds to BMJ Volume 372.","The DOI prefix '01.1136' is a typo for '10.1136', and the suffix 'bmi.n59' is a typo for 'bmj.n59'.",PMCID PMC11095661 is not a valid or existing PubMed Central ID for 2021.,"PMID 33483301 is a real identifier, but it corresponds to a different paper regarding WHO and global health, not hypertension."
+mimo-v2.5,harvard,"**Conclusion: NOT AUTHENTIC — the citation appears to be fabricated or severely corrupted.**
+
+| Component | Assessment |
+|---|---|
+| **Author** | 'Tomson, G. et al.' — does not match any well-known hypertension/epidemiology researchers. The landmark 2021 BMJ prevalence study is by **Mills KT et al.**, not Tomson. |
+| **Title** | Riddled with typographic errors: 'hypertensoin' (hypertension), 'tura.' (rural), 'iow-income' (low-income), 'cross-sestional stuey' (cross-sectional study), 'participantd' (participants). This suggests OCR corruption or deliberate fabrication. |
+| **Journal** | 'BMJ (Clinical resesrfh ed.)' — misspelled 'research'. The real journal is 'BMJ' or 'BMJ (Clinical research edition)' — format is acceptable but misspelled. |
+| **Volume/Article** | Vol. 372 is plausible for 2021, but article number 'e065653' doesn't correspond to a known BMJ paper in this area. |
+| **DOI** | **'doi:01.1136/bmi.n59'** is entirely wrong. Valid BMJ DOIs use the prefix '10.1136/bmj.XXXXX'. '01.1136' is not a valid DOI prefix; 'bmi' should be 'bmj'; 'n59' doesn't match any known BMJ article. |
+| **Date** | 2021 Jan 22 — plausible timeframe. |
+
+**Summary of red flags:**
+1. ✏️ Multiple typographical errors throughout the title and metadata suggest it was not properly transcribed from an official source.
+2. ❌ The DOI is invalid and does not resolve to any real article.
+3. ❌ The author does not correspond to any published hypertension epidemiology research.
+4. ❌ No verifiable record exists of this exact article in BMJ or any other index.
+
+This reference cannot be trusted as a factual source.","The author field lists 'Tomson, G. et al.' with no other identified authors. 'Tomson' is not a recognized author in the field of global hypertension epidemiology. For example, the most cited 2021 study on hypertension prevalence in low- and middle-income countries is authored by **Mills KT, Stefanescu A, and He J** (published in *The Lancet Public Health*, 2021). No author named 'Tomson, G.' has published this specific title. The 'et al.' suggests additional authors but none are provided — a telltale sign of incomplete or fabricated references.","**Assessment: NOT AUTHENTIC — full of typographic errors and likely fabricated.**
+
+The title provided is:
+'Prevalence, awareness ,treatment, and control of hypertensoin in tura. versus urban regions of iow-income nations: a cross-sestional stuey o f150,000 participantd'\n
+**Corrections required:**
+| Issue | Correct Form | Original |
+|---|---|---|
+| Clinical term | hypertension | hypertensoin |
+| Comparison | rural | tura. |
+| Economic term | low-income | iow-income |
+| Design | cross-sectional study | cross-sestional stuey |
+| Preposition | of | o f |
+| Noun | participants | participantd |
+
+**Additional concerns:**
+- No authoritative biomedical database (PubMed, Scopus, etc.) lists this title for the author 'Tomson, G.' and BMJ.
+- The most similar real article is by **Mills KT et al. (2021)** in *The Lancet Public Health* (not BMJ), which covers hypertension prevalence in LMICs.
+- The title contains multiple errors that suggest it was either: (a) deliberately fabricated, or (b) OCR-corrupted from a poor scan, or (c) paraphrased incorrectly.
+
+**Conclusion:** This title is not verifiable and is riddled with errors. It cannot be relied upon as an actual published source.","**Assessment: Not fully authentic — name is corrupted.**
+
+The full journal name provided is: `BMJ (Clinical resesrfh ed.)`
+
+The real journal name is: **`BMJ (Clinical Research Edition)`** or simply **`BMJ`**.
+
+The word `resesrfh` is a nonsensical corruption of `research`. While one could argue this is an OCR error or typo, the deliberate use of incorrect spelling throughout the citation (combined with other red flags like the invalid DOI) suggests this is an intentionally fabricated or deliberately altered citation.
+
+BMJ is a legitimate, well-known journal, but in this citation the name is misspelled, which undermines its credibility.","**Assessment: Plausible but unverifiable given the invalid DOI.**
+
+The volume cited is **372**. BMJ Volume 372 corresponds to early 2021 (January–March), which aligns with the stated publication date of 2021 Jan 22. However:
+
+- The article number `e065653` is not a known BMJ volume 372 article.
+- The DOI `01.1136/bmi.n59` is invalid and cannot be resolved.
+- No known hypertension study in BMJ Vol. 372 matches the title provided.
+
+While 372 is technically a valid BMJ volume number for 2021, the context in which it appears (in a fabricated citation with numerous errors) makes it unreliable.","**Journal:** 'BMJ (Clinical resesrfh ed.)' — The real journal is 'BMJ' (British Medical Journal), sometimes styled as 'BMJ (Clinical research edition)' or 'The BMJ.' The spelling 'resesrfh' is a clear typographic error, suggesting the citation was not copy-pasted directly from an official source.
+
+**Volume:** '372' — Volume 372 of BMJ corresponds to January–March 2021, which is plausible for the stated date (2021 Jan 22).
+
+**Article number:** 'e065653' — BMJ does use sequential article numbers with 'e' prefix for electronic articles, but this specific number does not match any known hypertension study in BMJ's 2021 volume 372.
+
+**Overall assessment:** The journal name is corrupted but plausible as a transcription; the volume is plausible; the article number is fabricated.","**Assessment: Not authentic.**
+
+The journal page/article locator is provided as `article e065653`. There is no page number in this citation — only an article number, which is common for electronic-only articles.
+
+However, `e065653` does not correspond to any known article published in BMJ in 2021. The format `eXXXXXX` is used in BMJ, but this specific number has not been linked through any known database to the authors or the topic described.
+
+Additionally, the DOI (`doi:01.1136/bmi.n59`) does not match the article number `e065653` — a real citation would have consistent DOI and article identifiers.
+
+**Conclusion:** The article locator is fabricated.","The element locator (DOI format) is **invalid** and prevents any attempt to retrieve or verify the cited document. The correct format for a BMJ article DOI would be:
+
+- `doi:10.1136/bmj.e065653` (if using the element number)
+- `doi:10.1136/bmj.XXXXXXX`
+
+The provided citation uses `'doi:01.1136/bmi.n59'` — every part of this string is incorrect:
+1. **01.1136** → should be **10.1136** (this is a critical failure — the '10' is the DOI resolver namespace and cannot be '01')
+2. **bmi** → should be **bmj**
+3. **n59** → not a valid BMJ article number
+
+This means the DOI cannot be used to locate the document. **The DOI is non-functional and fabricated.**","**Assessment: Plausible but unverified.**
+
+The date provided is **2021 Jan 22**. 
+
+BMJ published a significant global hypertension prevalence study in 2021 with a similar topic. The date of January 22 is plausible as it falls within the range of BMJ articles published in early 2021. However, no actual article matching the title (or similar) published on that exact date in BMJ can be verified.
+
+The date format `(2021 Jan 22)` is also slightly atypical — it would more commonly appear as `(2021 Jan 22)` or `(2021-01-22)` in Cambridge style or ISO 8601 format. But BMJ articles are sometimes cited with shorter date formats.
+
+**Overall:** The date is **plausible but unverifiable** due to the corrupted title and invalid DOI.","The DOI provided is **'doi:01.1136/bmi.n59'**, which is entirely invalid:
+
+| Issue | Detail |
+|---|---|
+| **Prefix** | '01.1136' is not a valid DOI prefix. BMJ uses prefix **'10.1136'** — the leading '0' and misplaced '1' are erroneous. |
+| **Journal abbreviation** | 'bmi' should be 'bmj' (British Medical Journal). 'BMI' would refer to *Biomedical Imaging*, which is unrelated. |
+| **Article number** | 'n59' does not match BMJ article numbering (BMJ uses formats like 'e065653', 'bmj.XXXXX', 'bmj.kXXXXX', etc.). |
+| **Format** | A proper DOI should be '10.1136/bmj.XXXXXXXX'. This DOI cannot resolve to any article. |
+
+Since the DOI is invalid, the article is effectively unverifiable. No real DOI exists that could be traced back to this reference.","**Not provided — not applicable.**
+
+No PubMed Central ID (PMCID) is included in the citation. This is not unusual in itself (not all references include a PMCID), but given the multiple other errors in this citation, the absence of a PMCID is another indication that the author did not thoroughly verify the reference through official databases.
+
+A valid BMJ article from 2021 would likely have a PMCID (e.g., `PMCID: PMCXXXXXXX`) that could be used to verify its authenticity. The absence of one is a minor but consistent red flag.","**Not provided — not applicable.**
+
+No PubMed ID (PMID) is included in the citation. This is not unusual in all citations, but in conjunction with:
+
+- The invalid DOI
+- The highly corrupted title with multiple typos
+- The unverified author ""Tomson, G.""
+
+The absence of a PMID further undermines the credibility of this citation. A legitimate published article in BMJ would have a valid PMID that could be cross-referenced.
+
+**Conclusion: The citation is not verifiable through PubMed.**"
+minimax-m3,apa,"This reference appears to be fabricated or highly corrupted. Multiple red flags exist: (1) The title about hypertension does not match the authors' actual research area (AI ethics in health research), (2) The DOI format is incorrect with multiple errors, (3) The article number format doesn't match BMJ conventions, (4) The title contains numerous typos suggesting it was artificially generated or scrambled, (5) The author 'A.E. Yamin' is known for work on human rights and health, not hypertension studies. The reference appears to be a fake citation, possibly generated by AI or a citation generator with errors.","The author names appear to be a reasonable list of researchers. However, the formatting is inconsistent with typical citation styles. Let me check each name: Tomson, G., Causevic, S., Ottersen, O.P., Swartling Peterson, S., Rashid, S., Wanyenze, R.K., & Yamin, A.E. These are plausible author names, though the formatting doesn't follow standard conventions.","The title contains numerous errors/typos: 'hypertensoin' should be 'hypertension', 'tura' is unclear, 'versus' is acceptable but context is off, 'iow-income' should be 'low-income', 'cross-sestional' should be 'cross-sectional', 'stuey' should be 'study', 'participantd' should be 'participants'. The title appears to be about hypertension prevalence in rural vs urban regions of low-income nations. The actual BMJ paper by Tomson et al. is about 'The ethics of AI in health research: A mapping review', not about hypertension. So this title does not match the authors' real work. Additionally, the DOI doesn't match BMJ's standard format.",'BMJ (Clinical research ed.)' is a real journal (British Medical Journal). The abbreviation 'BMJ (Clinical resesrfh ed.)' has typos ('resesrfh' should be 'research') but references the legitimate BMJ journal.,"BMJ volume 372 would be from 2021, which is consistent with the publication year given. However, the specific issue/article number 'e065653' format doesn't match BMJ's typical article numbering. BMJ uses article e-numbers but they have a different format (e.g., e065653 would be possible but this specific format is unusual for BMJ).","No specific issue number is provided, only volume 372. BMJ's volume 372 corresponds to 2021. The volume number is plausible.","BMJ typically uses article numbers (e-numbers) rather than page numbers. The 'e065653' format is not standard for BMJ articles. BMJ article numbers typically follow a pattern like 'n59', 'm3326', etc.",The elocator 'e065653' does not match BMJ's typical article numbering scheme. BMJ articles use shorter elocators.,"The year 2021 is provided, which is consistent with BMJ volume 372. However, no specific date (month/day) is given.","The DOI '01.1136/bmi.n59' contains multiple errors: (1) DOIs should start with '10.' not '01.', (2) the journal identifier should be 'bmj' not 'bmi', (3) the suffix 'n59' is plausible but incomplete. This DOI does not match the standard format and cannot be verified as a real BMJ DOI.",No PMCID is provided in the citation.,No PMID is provided in the citation.
+nemotron-3-super-120b-a12b,nlm,"The citation contains multiple typographical errors and formatting problems: the journal abbreviation is given as 'BMn' (should be 'BMJ'), the DOI is malformed ('01.1136/bmi.n59' instead of the correct '10.1136/bmj.n59'), the title is garbled ('tura. versus urban regions of iow-income nations: a cross-sestional stuey o f150,000 participantd'), the volume and page numbers do not match a known BMJ article from 2021, and the PMCID appears implausibly high. While the PMID 33483301 exists for a different article, the combination of elements does not correspond to any real publication. Therefore the reference is not authentic.",The author list appears plausible but cannot be verified due to the other errors.,"The title is heavily garbled; the intended title likely refers to hypertension prevalence in rural vs urban low‑income nations, but as written it is not recognizable.",The journal is intended to be BMJ but is printed as 'BMn'.,"Volume 372 is plausible for BMJ in early 2021, but the reference as a whole is not authentic.","BMJ 2021;372:e065653 would be a plausible format, yet the journal name is misspelled as 'BMn' and the DOI is wrong, making the issue unverifiable.","Page information is embedded in the elocator; no separate page numbers are provided, which is acceptable for BMJ articles but the overall reference is still invalid.","The article identifier 'e065653' could be valid for a BMJ article, but combined with the incorrect DOI and journal abbreviation it does not correspond to a real record.","The date '2021 Jan 22' could be correct for a BMJ article, but the rest of the citation is inconsistent.",The DOI string '01.1136/bmi.n59' lacks the required '10.' prefix and uses an incorrect journal identifier.,PMCID 'PMC11095661' is unusually high and does not match any known record for the purported article.,PMID 33483301 exists for a different article; it does not belong to the purported hypertension study.

@@ -1,0 +1,6 @@
+model,style,REFERENCE,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid
+deepseek-v4-flash,vancouver,0.95,0.98,0.99,1.0,0.95,0.98,0.95,1.0,0.95,0.99,1.0,1.0
+gemini-3-flash-preview,apa,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.95,1.0,1.0,0.99,0.99
+mimo-v2.5,harvard,0.9953350195288658,0.99,0.995,0.995,0.995,0.99,0.995,0.99,0.99,0.995,0.25,0.25
+minimax-m3,harvard,0.97,0.95,0.97,0.99,0.98,0.97,0.96,0.95,0.98,0.99,0.99,0.99
+nemotron-3-super-120b-a12b,vancouver,0.99,0.98,1.0,1.0,0.99,0.99,0.99,1.0,0.99,1.0,1.0,0.95
