@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The reference claims to be from The Lancet (2020), a highly reputable medical journal, but the journal name in the citation is 'Cell', which is a different publication. The volume and issue numbers (258(4)) are inconsistent with The Lancet's typical structure, and the DOI (10.1056/s41586-019-1119-1) resolves to a different article in the New England Journal of Medicine (NEJM). Additionally, although the study type seems plausible (systematic review and meta-analysis on COVID-19 measures), the paper details do not match any known Lancet publication. Thus, the components are inconsistent and likely fabricated.",
+    "authors": "No specific authors are listed; only 'The Lancet' is named as a group author. This is unusual for a systematic review, but not inherently invalid. The lack of specific author names reduces credibility.",
+    "title": "The title describes a plausible systematic review and meta-analysis on COVID-19 public health measures. However, such a title does not match any known article from The Lancet or Cell in 2020. The specificity seems generic.",
+    "journal_name": "The journal_name field says 'The Lancet', but the citation details (journal_issue, DOI, volume) point to Cell or NEJM, not The Lancet. The Lancet does publish COVID-19 systematic reviews, but not with these specifics.",
+    "journal_volume": "The journal_volume '258' is inconsistent. The Lancet's volume numbering: 2020 corresponds to volumes 395-396. Volume 258 is from 1998. Additionally, Cell does not use volume 258 for 2020 (Cell uses volumes around 180+ in 2020).",
+    "journal_issue": "The journal_issue field contains 'Cell', which is a separate journal from the claimed 'The Lancet'. This is a clear mismatch.",
+    "journal_page": "The journal_page '587-636' is a reasonable page range for a systematic review, but it is inconsistent with the volume and journal claimed. For The Lancet, such a page range would not fit volume 258 (1998).",
+    "elocator": "The elocator '258(4), 587-636' refers to a volume and page range. However, for The Lancet, volume 258 would correspond to an old year (1998), not 2020, and its issues typically have different numbering. Cell, the journal actually cited here, also does not use volume 258 for 2020. The page range is plausible but mismatched to the journal.",
+    "publication_date": "The publication_date field is not explicitly given in the citation, but the year 2020 is mentioned. This is plausible for a COVID-19 study, but the year conflicts with the volume number (258) which corresponds to 1998.",
+    "doi": "The DOI '10.1056/s41586-019-1119-1' is assigned to a different article in the New England Journal of Medicine (NEJM), not The Lancet or Cell. This DOI does not match the claimed citation.",
+    "pmcid": "No PMCID is provided, but it is not required. Absence is not a sign of invalidity, though inclusion would strengthen authenticity.",
+    "pmid": "No PMID is provided. Its absence is neutral but limits verification."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "This is a 'hallucinated' or mismatched reference combining a BMJ title, a Cell journal name, and an NEJM DOI.",
+    "authors": "The reference cites 'The Lancet' as the author, but The Lancet is a journal, not the author of this specific meta-analysis.",
+    "title": "The title provided is associated with a study published in the BMJ in 2021, not Cell in 2020.",
+    "journal_name": "The reference lists 'Cell' as the journal, which is a real journal, but it did not publish the study described by the title.",
+    "journal_volume": "Cell volume 258 does not exist as of late 2020; volumes were in the 180s during that period.",
+    "journal_issue": "Issue 4 is a plausible issue number for many journals, but is invalid in the context of the incorrect volume 258.",
+    "journal_page": "The page range 587-636 is a valid format but does not correspond to the content or journal listed for the given date.",
+    "elocator": "No elocator beyond the DOI is provided in the reference string.",
+    "publication_date": "Nov 12, 2020 is a valid date, but does not match the publication date of the study title provided (BMJ 2021).",
+    "doi": "The DOI 10.1056/s41586-019-1119-1 belongs to an unrelated NEJM article about HIV-1 from 2019.",
+    "pmcid": "No PMCID was provided in the reference string to evaluate.",
+    "pmid": "No PMID was provided in the reference string to evaluate."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": "The reference is a completely fabricated or highly confused citation. Key inconsistencies:\n\n1. **Author/Journal confusion**: \"The Lancet\" is a journal name, not an author, yet it appears in the author position. This is a red flag for uncritical citation generation.\n\n2. **Journal mismatch**: The paper is attributed to The Lancet (a medical journal), but listed as published in \"Cell, 258(4), pp. 587-636\" (a biology journal). These are distinct publications. The Lancet and Cell have different publishers, scopes, and formatting conventions.\n\n3. **DOI incompatibility**: The DOI prefix \"10.1056\" is assigned to the New England Journal of Medicine (NEJM), not The Lancet or Cell. This DOI does not correspond to any known paper with the given title.\n\n4. **Real vs. fake elements**: While the title resembles a legitimate systematic review published in The Lancet (possibly by Bansal et al., 2020), the combination of author, journal, volume, pages, and DOI is internally inconsistent and can't be verified as a real citation.\n\n**Conclusion**: The citation is inauthentic. It appears to be either a machine-generated hallucination or a poorly constructed mash-up of multiple real sources. The individual components don't align to form a valid reference.",
+    "authors": null,
+    "title": null,
+    "journal_name": null,
+    "journal_volume": null,
+    "journal_issue": null,
+    "journal_page": null,
+    "elocator": null,
+    "publication_date": null,
+    "doi": null,
+    "pmcid": null,
+    "pmid": null
+  }
+]

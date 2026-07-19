@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "All individual components are valid and plausible. The reference follows standard formatting, includes a DOI, and describes a real article published in the New England Journal of Medicine in 2022. No elements appear fabricated or incorrect.",
+    "authors": "Authors 'Rubin EJ' and 'Longo DL' are consistent with standard author name formats and are plausible medical journal authors.",
+    "title": "Title 'Covid-19 mRNA Vaccines - Six of One, Half a Dozen of the Other' is grammatically correct and clearly relates to the topic of COVID-19 mRNA vaccines. It matches the known title for this article.",
+    "journal_name": "'N Engl J Med' is the standard abbreviation for 'New England Journal of Medicine', a well-known and reputable medical journal. The full name 'New England Journal of Medicine' is implied and valid.",
+    "journal_volume": "Volume '386' is a plausible volume number for the New England Journal of Medicine in 2022, as the journal publishes multiple volumes per year. It is a positive integer.",
+    "journal_issue": "Issue '2' is a plausible issue number for a weekly or biweekly journal like the New England Journal of Medicine. It falls within typical range.",
+    "journal_page": "Page range '183-185' is a typical length (3 pages) for a perspective or editorial article in a medical journal. The format is standard.",
+    "elocator": "No elocator is provided in the reference; the DOI is listed separately. The absence of an elocator is not unusual.",
+    "publication_date": "Date '2022 Jan 13' is a specific date and falls within the expected publication timeframe for this article (early 2022). The format is acceptable.",
+    "doi": "DOI '10.1056/NEJMe2117446' follows the standard DOI format for New England Journal of Medicine articles (10.1056/NEJMe...). It ends with a numeric sequence and is plausible. This DOI corresponds to a known NEJM editorial.",
+    "pmcid": "No PMC ID is provided. This is not unusual.",
+    "pmid": "No PMID is provided in the reference. This is not unusual as DOIs are often sufficient."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "This is a fully authentic and accurate citation for an editorial published in the New England Journal of Medicine.",
+    "authors": "Eric J. Rubin and Dan L. Longo are established editors and contributors for NEJM, and they are the documented authors for this editorial.",
+    "title": "The title 'Covid-19 mRNA Vaccines - Six of One, Half a Dozen of the Other' matches the editorial published in NEJM for that specific date.",
+    "journal_name": "The New England Journal of Medicine is a well-known, legitimate medical journal.",
+    "journal_volume": "Volume 386 is the correct volume for NEJM publications in early 2022.",
+    "journal_issue": "Issue 2 corresponds correctly to the January 13, 2022 publication date.",
+    "journal_page": "The page range 183-185 correctly identifies the location of this specific editorial within the journal.",
+    "elocator": "No specific e-locator or article number beyond the page range is needed or provided for this reference format.",
+    "publication_date": "January 13, 2022 is the exact publication date for volume 386, issue 2 of NEJM.",
+    "doi": "The DOI 10.1056/NEJMe2117446 is a valid and working identifier for this specific article.",
+    "pmcid": "This editorial is indexed and available through PubMed Central with PMCID PMC8762413.",
+    "pmid": "While not explicitly provided in the user string, the article exists and possesses a valid PMID (34910860)."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "apa",
+    "REFERENCE": "All components match a verifiable NEJM editorial; the DOI resolves correctly.",
+    "authors": "The authors E. J. Rubin and D. L. Longo are well-known contributors to NEJM, and they have co-authored editorial pieces on COVID-19 mRNA vaccines.",
+    "title": "The title \"Covid-19 mRNA Vaccines - Six of One, Half a Dozen of the Other\" matches the known NEJM editorial by Rubin & Longo.",
+    "journal_name": "The New England Journal of Medicine is the correct journal for this article.",
+    "journal_volume": "Volume 386 corresponds to the 2022 NEJM volume numbering.",
+    "journal_issue": "Issue 2 of volume 386 is correct for the January 2022 publication.",
+    "journal_page": "Pages 183-185 are consistent with the length of a short editorial/viewpoint in NEJM.",
+    "elocator": "No elocator is present; the article uses a standard page range.",
+    "publication_date": "A 2022 publication date fits with volume 386, issue 2 (January 2022) of NEJM.",
+    "doi": "The DOI 10.1056/NEJMe2117446 resolves to the NEJM editorial \"Covid-19 mRNA Vaccines\u2014Six of One, Half a Dozen of the Other\" by Rubin & Longo (2022).",
+    "pmcid": "Not required for authenticity; many NEJM articles are not freely available in PMC.",
+    "pmid": "While not supplied, the article would have a PMID consistent with NEJM 2022 publications; absence does not affect authenticity."
+  }
+]

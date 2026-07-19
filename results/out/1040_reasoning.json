@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference contains multiple issues: an implausible issue number (7189) and a non-standard DOI. These strongly suggest the reference is fabricated.",
+    "authors": "The author name 'Lane, R.' is generally valid as an author name, but it's incomplete (no full first name or initial), which is acceptable.",
+    "title": "The title 'Obligations in a global health emergency' appears plausible for a scholarly article.",
+    "journal_name": "'Cell' is a well-known, reputable scientific journal.",
+    "journal_volume": "Volume 374 is a plausible volume number for Cell in 2021.",
+    "journal_issue": "Issue numbers for Cell usually do not reach 7189; Cell typically publishes around 12\u201324 issues per year. This number is extremely high and likely fabricated.",
+    "journal_page": "Article numbers like 'e704479' are plausible for online journals, but combining an implausible issue number with this article ID reduces trust. Still, the page/article ID alone could be valid.",
+    "elocator": "Not explicitly provided separately; article e704479 is considered under 'journal_page'.",
+    "publication_date": "The date '2021 Dec 10' is formatted as a specific day, which is acceptable for online publications.",
+    "doi": "The DOI '10.9045.52/yeci-o8a4' uses an unusual prefix '10.9045.52' and suffix 'yeci-o8a4'. Standard DOIs have a format like 10.xxxx/xxxx. This structure is non-standard and likely invalid.",
+    "pmcid": "No PMCID provided.",
+    "pmid": "No PMID provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "The citation is a hallucination; it combines a real author and journal but provides an impossible volume number and a fake DOI.",
+    "authors": "Richard Lane is a real author who often writes for medical journals like The Lancet, but his name is rarely associated with lead research in Cell.",
+    "title": "The title 'Obligations in a global health emergency' appears plausible but does not exist in any index for the journal Cell.",
+    "journal_name": "Cell is a highly reputable peer-reviewed journal in the life sciences.",
+    "journal_volume": "Cell volumes are sequential and reached approximately volume 184-185 in 2021; volume 374 is far beyond the current publication range.",
+    "journal_issue": "Cell does not typically use issue numbers like 7189, which are structures more common to journals like Nature or The Lancet.",
+    "journal_page": "No page range is provided, but since the volume and issue are incorrect, this component is invalid.",
+    "elocator": "The article number e704479 does not follow the standard numbering format used by Cell Press.",
+    "publication_date": "December 10, 2021 is a valid calendar date, though it did not coincide with a known Cell issue containing this content.",
+    "doi": "The DOI 10.9045.52/yeci-o8a4 is syntactically malformed and does not resolve to any registered publication.",
+    "pmcid": "No PMCID was provided in the citation.",
+    "pmid": "No PMID was provided in the citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": "The components of this citation have multiple inconsistencies. The journal 'Cell' is real, but the volume number (374) is implausible for a 2021 issue\u2014Cell's actual volume numbers in 2021 were around 184. The article number format (e704479) resembles use in the European Journal of Cell Biology, not typically Cell. The DOI prefix (10.9045) does not correspond to any recognized publisher (Cell Press/Elsevier uses 10.1016). The date format and author formatting (trailing period after 'Lane, R..') are also non-standard. No evidence exists that this article was published in Cell. This citation appears to be fabricated.",
+    "authors": "The author is listed as 'Lane, R..' which includes an extra trailing period after the initial. While 'R. Lane' could refer to a plausible author name, the formatting is non-standard and the extra period suggests a formatting error or fabrication.",
+    "title": "The title 'Obligations in a global health emergency' sounds plausible as a medical/ethics topic, but there is no evidence this specific article exists in Cell or any other journal under this exact title. The title is likely fabricated.",
+    "journal_name": "'Cell' is a real and well-known scientific journal published by Cell Press (an imprint of Elsevier). The journal name itself is correct.",
+    "journal_volume": "Volume 374 in 2021 is implausible for Cell. Cell's volume numbering in 2021 was approximately 184. The volume number is clearly incorrect.",
+    "journal_issue": "The issue number 7189 is inconsistent with Cell's issue numbering system. Cell issues typically number roughly 1\u201352 per volume. An issue number of 7189 is fabricated.",
+    "journal_page": "Cell does not use page numbers in the traditional sense for many modern articles, relying on article numbers instead. No page range is provided here, which could be acceptable, but the overall format is incorrect for Cell.",
+    "elocator": "The elocator/article number 'e704479' with an 'e' prefix is not typical for Cell journal, which uses different article numbering conventions.",
+    "publication_date": "The date '2021 Dec 10' is written in an unusual format (year month day with month abbreviated and day appended). Standard Vancouver formatting would use just the year or a different date format. While the date itself isn't obviously impossible, its formatting is non-standard and contributes to the suspicion of fabrication.",
+    "doi": "The DOI prefix 10.9045 does not correspond to any known publisher registry. A legitimate DOI for Cell would use the prefix 10.1016 (Elsevier/Cell Press). The DOI string '10.9045.52/yeci-o8a4' does not follow standard DOI conventions for the journal in question and does not resolve to a real article.",
+    "pmcid": "No PMCID (PubMed Central ID) is provided in this citation.",
+    "pmid": "No PMID (PubMed ID) is provided in this citation."
+  }
+]

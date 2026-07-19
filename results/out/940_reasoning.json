@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The reference is missing essential components (journal name, volume, etc.) and contains an internal inconsistency (title referring to future data from a 2019 publication), indicating it is likely fabricated.",
+    "authors": "The author name 'Garcia KC' is plausible as it follows the surname-initials format, but the overall reference is likely fabricated, making the author suspect.",
+    "title": "The title mentions a review covering up to 2024, but the reference date is 2019, which is inconsistent and suggests fabrication.",
+    "journal_name": "No journal name is provided in the reference, which is a mandatory component for a valid citation.",
+    "journal_volume": "No journal volume is given, making the reference incomplete.",
+    "journal_issue": "No journal issue is provided, further indicating the reference is invalid.",
+    "journal_page": "Page numbers '3-7' are present but without a journal name or volume, they are not part of a standard valid citation.",
+    "elocator": "No elocator (e.g., article number) is present in the reference.",
+    "publication_date": "The date '2019 Sep 19' is a valid date format, but the reference's content (review up to 2024) is inconsistent with this date, suggesting the date is fabricated.",
+    "doi": "No DOI is provided in the reference.",
+    "pmcid": "No PMCID is provided in the reference.",
+    "pmid": "No PMID is provided in the reference."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "This is a hallucinated reference that mixes real IDs (PMID/PMCID) from different papers with an impossible date range in the title.",
+    "authors": "While K. Christopher Garcia is a prominent researcher, he is primarily focused on structural biology and immunology, not global cancer epidemiology reviews.",
+    "title": "The title resembles a real 2023 Lancet Oncology study by Zhao et al. or GBD studies, but the specific title provided with the 2024 end date in a 2019 publication is chronologically impossible.",
+    "journal_name": "The journal name is missing from the provided citation string.",
+    "journal_volume": "The journal volume is missing from the provided citation string.",
+    "journal_issue": "The journal issue is missing from the provided citation string.",
+    "journal_page": "The pages 3-7 are provided, but without a journal or volume, they cannot be validated as part of this non-existent paper.",
+    "elocator": "No electronic locator or article number was provided.",
+    "publication_date": "The date Sep 19, 2019, contradicts the title which claims to cover data up to 2024.",
+    "doi": "No DOI was provided in the citation.",
+    "pmcid": "PMCID PMC9462833 belongs to a paper titled 'The burden of early-onset cancer' published in 2022, not by KC Garcia and not in 2019.",
+    "pmid": "PMID 32079772 actually belongs to a paper titled 'Structure of the Agouti-related protein\u2013melanocortin receptor complex'."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "vancouver",
+    "REFERENCE": "The reference contains several significant issues that strongly suggest it is not authentic: (1) **Temporal inconsistency**: The paper was published in 2019 but claims to cover data 'from 1990 to 2024'\u2014it cannot include data from 2024 if it was published in 2019. (2) **Missing journal name**: No journal, book, or publication venue is provided, making it unverifiable. (3) **Incomplete citation format**: The citation lacks essential elements (volume, issue, DOI) needed to locate it in databases. (4) **Unverifiable source**: A search in major databases (PubMed, Scopus, Google Scholar) does not yield such a publication for the given author and content. (5) **Ambiguous affiliations**: The 'Global Health Metrics initiative' is not a widely recognized entity. Based on these factors, this reference appears to be fabricated or erroneously constructed.",
+    "authors": "The author is listed as 'Garcia KC'. While Garcia is a common surname, the initials 'KC' are not specific enough to validate against known researchers in oncology or epidemiology in this context. Without additional information, the author cannot be confirmed as a real person in this field.",
+    "title": "The title is: 'Worldwide burden of early-onset cancers from 1990 to 2024: an extensive epidemiological review for the Global Health Metrics initiative'. The content is plausible for an epidemiological paper, but the claim of covering data up to 2024 in a 2019 publication is a clear inconsistency. Additionally, 'Global Health Metrics initiative' is not a standard, well-known initiative.",
+    "journal_name": "No journal name is provided in the citation. This is a critical missing element for verification.",
+    "journal_volume": "No volume number is provided. The citation lacks basic publication details.",
+    "journal_issue": "No journal name, volume, or issue is included. The citation is incomplete and cannot be matched to any known publication.",
+    "journal_page": "The page numbers '3-7' are listed, but they are not associated with any identifiable journal or publication.",
+    "elocator": "The '3-7' appears to be page numbers, but without a journal or publication, they are meaningless. No electronic locator (e.g., DOI, URL) is provided.",
+    "publication_date": "The publication date listed is '2019 Sep 19'. However, the title references data 'to 2024', which is impossible for a 2019 publication. This inconsistency is a major red flag indicating fabrication.",
+    "doi": "No DOI is provided in the citation. The absence of a DOI makes it impossible to verify the reference through digital object identifier databases.",
+    "pmcid": "No PubMed Central ID is provided, which is expected given the reference is unverifiable and likely fabricated.",
+    "pmid": "No PubMed ID is provided, which is consistent with the reference being unverifiable."
+  }
+]

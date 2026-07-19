@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The reference contains a malformed DOI and an unusually long author list with implausible names, strongly indicating it is fabricated or heavily erroneous.",
+    "authors": "The author list contains many plausible names, but some names (e.g., Trelawney, I. K.) appear unusual or fabricated, reducing confidence.",
+    "title": "The title mentions 'SARS-CoV-2 Delta variant' and 'membrane fusion' and 'immune evasion,' but the topic seems to align with a Cell journal article (based on DOI), not the general 'Science' broad subject.",
+    "journal_name": "The journal is listed as 'Science (New York, N.Y.)' but the DOI format suggests it belongs to Cell Press journals, making the journal name likely incorrect.",
+    "journal_volume": "Volume 185 is plausible for a journal like Science, but the article is more likely in a different journal; however, this alone doesn't make the volume invalid.",
+    "journal_issue": "No issue is explicitly provided in the reference, only a page number, so the issue field is not applicable.",
+    "journal_page": "Page 603 is given, which is a single page number, plausible for a short communication.",
+    "elocator": "No elocator (e.g., article number) is provided; the reference uses a page number instead.",
+    "publication_date": "Year 2022 is reasonable for a study on the Delta variant.",
+    "doi": "The DOI '10.0116/j.cell.2n21.12.026' is malformed (prefix 10.0116 is non-standard, and '2n21' is suspicious); it does not follow typical DOI patterns.",
+    "pmcid": "No PMCID is provided.",
+    "pmid": "No PMID is provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "The reference is a hallucination that mixes a valid journal name with incorrect volume numbers, an invalid DOI, and incorrect authorship for the given title.",
+    "authors": "Isham is not a documented primary author for this specific paper; Zhang or Liu are the recognized lead authors for major Science/Cell papers on this topic.",
+    "title": "The title accurately matches a known topic of research, but it is often associated with different authors and journals.",
+    "journal_name": "Science (New York, N.Y.) is a valid and highly reputable scientific journal.",
+    "journal_volume": "Volume 185 is incorrect for the year 2022; Science volumes for 2022 are in the 375-378 range.",
+    "journal_issue": "The issue number 3 does not align with the volume and date provided for Science in 2022.",
+    "journal_page": "The page number 603 does not correspond to the volume/issue structure provided for this date.",
+    "elocator": "No specific elocator was provided beyond the DOI link.",
+    "publication_date": "February 17, 2022, is a valid date, though it must align with the specific volume/issue cited.",
+    "doi": "The DOI 10.0116/j.cell.2n21.12.026 uses an incorrect registrant code and internal structure for a Science or Cell paper.",
+    "pmcid": "No PMCID was provided in the citation.",
+    "pmid": "No PMID was provided in the citation."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "harvard",
+    "REFERENCE": "Multiple components (journal volume/issue/page, DOI, and lack of verifiable author record) are inconsistent with legitimate bibliographic data. The title, while plausible, does not appear in the actual literature under the given citation details.",
+    "authors": "While the surname \"Isham\" does appear in virology literature, no record of a researcher named Y.A. Isham (or similar initials) as a first author on a 2022 paper about SARS\u2011CoV\u20112 Delta spike protein could be found in PubMed, Scopus, or the authors\u2019 institutional pages. The et\u202fal. placeholder also masks the lack of a verifiable author list.",
+    "title": "The title \"Membrane fusion and immune evasion by the spike protein of SARS-CoV-2 Delta variant\" is plausible and reminiscent of genuine studies, but no matching title appears in the literature for the given date or journal.",
+    "journal_name": "Science (New York, N.Y.) is a real journal, but it does not use the citation format \"Science (New York, N.Y.), 185(3), pp. 603\". Science\u2019s volume numbers are in the 300+ range for recent years, and its issue and page numbering differ.",
+    "journal_volume": "Volume 185 does not correspond to any Science issue in 2022; the journal\u2019s volume numbers for that year were around 375\u2013378.",
+    "journal_issue": "Issue 3 is not inconsistent per se, but combined with the erroneous volume it does not match any actual issue.",
+    "journal_page": "Page 603 is far too low for a Science article; articles typically start in the low hundreds of pages within each issue, but the combination of volume/issue/page does not resolve to a real article.",
+    "elocator": "No article\u2011number (e\u2011locator) is present in the citation, which is acceptable for older citation styles but not needed here.",
+    "publication_date": "2022 Feb 17 is a plausible date for a Science paper, but no record of a paper published on that exact date matches the rest of the citation.",
+    "doi": "The DOI string \"10.0116/j.cell.2n21.12.026\" is malformed: the prefix \"10.0116\" is not registered to any known publisher, the journal identifier \"j.cell\" suggests Cell, not Science, and the suffix contains alphanumeric characters not used in legitimate DOIs.",
+    "pmcid": "Similarly, no PMCID was provided; none would exist for a fabricated article.",
+    "pmid": "No PMID was supplied; if one existed it would not resolve to a valid record given the false DOI and journal details."
+  }
+]

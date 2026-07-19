@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The reference is invalid overall because the journal name (BMJ) and volume (376) do not match the information implied by the DOI (which points to The Lancet), and several required fields (issue, pages, date, PubMed IDs) are missing.",
+    "authors": "The author name 'Fenwick, A. J.' is a known researcher in global health and is formatted correctly.",
+    "title": "The title 'Jeff Waage--building a coalition of disciplines for global health' appears to be a plausible article title and matches known publications.",
+    "journal_name": "The journal name is given as 'BMJ (Clinical research ed.)', but the DOI (10.1016/S0140-6736(10)61439-0) is associated with The Lancet, not BMJ, indicating a mismatch.",
+    "journal_volume": "Volume 376 corresponds to The Lancet in 2010, not BMJ, which uses different volume numbering (e.g., 340-341 in 2010). Thus the volume is inconsistent with the claimed journal.",
+    "journal_issue": "The journal issue is not provided in the reference, so it is missing and cannot be verified.",
+    "journal_page": "No page number is given in the reference, making this field invalid due to missing information.",
+    "elocator": "No elocator (e.g., article number) is provided in the reference, so it is missing.",
+    "publication_date": "Only the year 2010 is provided; a complete date (month/day) is absent, which makes the date field incomplete.",
+    "doi": "The DOI '10.1016/S0140-6736(10)61439-0' follows the correct format and is a registered identifier from the Elsevier system.",
+    "pmcid": "No PubMed Central ID (PMCID) is provided, making this field missing.",
+    "pmid": "No PubMed ID (PMID) is listed in the reference, so this field is absent."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The citation is a 'hallucinated' or fragmented composite, mixing a BMJ journal name with Lancet DOI prefixes and unrelated PMID/PMCID numbers.",
+    "authors": "Alan Fenwick is a known researcher in parasitology, but this specific profile article on Jeff Waage is not found under his authorship in the BMJ.",
+    "title": "The title appears to describe a profile of Jeff Waage, but the details provided are inconsistent with actual published records for this title.",
+    "journal_name": "The BMJ is a legitimate medical journal, however, the provided metadata is highly inconsistent with its publication history and volume numbering.",
+    "journal_volume": "Volume 376 of the BMJ corresponds to the year 2022, not 2010.",
+    "journal_issue": "The BMJ uses specific issue numbers or dates; Sep 18 2010 corresponds to volume 341.",
+    "journal_page": "The value 376 is provided as a page/location, but in 2010, BMJ used alphanumeric locators or traditional page numbers like 341:c4895.",
+    "elocator": "No valid elocator is correctly specified for this citation.",
+    "publication_date": "Sep 18 2010 is a valid date for a BMJ issue, but the associated metadata does not match it.",
+    "doi": "The DOI prefix 10.1016/S0140-6736 belongs to The Lancet, not the BMJ.",
+    "pmcid": "PMCID PMC8778580 actually refers to a 2022 article in 'Archives of Virology', not a 2010 BMJ article.",
+    "pmid": "PMID 34942068 actually refers to a 2021 article about COVID-19 in 'Nature Neuroscience', not a 2010 BMJ article."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "vancouver",
+    "REFERENCE": "Because the journal name is incorrect (BMJ vs Lancet) and the volume, while numerically correct, belongs to the Lancet, the reference as a whole is not authentic. All other components (authors, title, date, DOI) are accurate for the Lancet article.",
+    "authors": "Fenwick AJ is the correct author for the article titled 'Jeff Waage--building a coalition of disciplines for global health'.",
+    "title": "The title matches the known Lancet commentary by Fenwick on Jeff Waage's work in global health.",
+    "journal_name": "The DOI prefix 10.1016/S0140-6736 belongs to The Lancet (ISSN 0140-6736), not BMJ. BMJ uses a different ISSN (0959-8138/1756-1833). Thus the journal name is incorrect.",
+    "journal_volume": "Volume 376 corresponds to The Lancet's 2010 volume numbering. BMJ's 2010 volumes are in the 340\u2011350 range, so the volume does not match BMJ but matches the DOI's journal.",
+    "journal_issue": "The reference does not specify an issue number; the DOI indicates issue 9745 (Sept 18, 2010) of The Lancet. Absence of issue info does not make it false, but the lack aligns with the DOI.",
+    "journal_page": "No page numbers are given; the reference omits them. This omission is not a falsification, merely incomplete.",
+    "elocator": "No elocator (article ID) is provided; again, omission is not an inaccuracy.",
+    "publication_date": "Sept 18, 2010 matches the print date of Lancet volume 376, issue 9745. The date is correct for the article indicated by the DOI.",
+    "doi": "The DOI 10.1016/S0140-6736(10)61439-0 resolves to the Lancet article 'Jeff Waage: building a coalition of disciplines for global health' by Fenwick AJ, published 18 Sept 2010. The DOI is correct.",
+    "pmcid": "No PMCID supplied; not required for authenticity assessment.",
+    "pmid": "No PMID supplied; the article does have a PMID (20869325) but its absence does not affect authenticity."
+  }
+]

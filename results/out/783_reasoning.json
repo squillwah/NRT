@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "Overall, multiple critical components (authors, journal name, DOI) are clearly fabricated or contain severe errors, indicating the entire reference is artificial.",
+    "authors": "Multiple author names contain spelling errors or are structured incorrectly (e.g., 'Esposipt', 'Odqll', 'Huagn', 'Garnivlle', 'zl-tarhi' with lowercase 'z', 'Ostertaus' instead of Ostertag). These indicate inauthenticity.",
+    "title": "The title 'A single bacterial genus maintains root growth in a complex microbiome' appears plausible and follows standard scientific naming conventions. No obvious errors.",
+    "journal_name": "The journal name 'J Antimixrob Reqist Genom' contains multiple spelling errors ('Antimixrob' instead of Antimicrobial, 'Reqist' instead of Registry, 'Genom' instead of Genomics/Genome). This is likely fabricated.",
+    "journal_volume": "Volume '286' and issue '1' are typical formats. No obvious reason to doubt this component alone.",
+    "journal_issue": "Issue '1' is a standard format. No obvious errors.",
+    "journal_page": "Pages '107-118' are a standard page range. No obvious errors.",
+    "elocator": "An elocator (doi) is provided; the format '10.9676/0u5o.a54' is unusual/not standard for a DOI, containing characters like underscores and letters in atypical patterns. Likely fabricated.",
+    "publication_date": "Date '2021 Jul 8' is a standard format. No obvious errors.",
+    "doi": "The DOI '10.9676/0u5o.a54' does not conform to standard DOI structure (e.g., reserved publisher prefix). Highly suspicious.",
+    "pmcid": "The PMCID 'PMC10765478' is a plausible format. However, given overall context, it is likely fabricated. Weak reliability.",
+    "pmid": "The PMID '34106556' falls within a plausible range but is likely fabricated due to other errors; however, the number itself is structurally valid. Not clearly invalid."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "This reference is fabricated, containing misspelled author names, a non-existent journal, and a fake DOI.",
+    "authors": "The author names contain numerous typographical errors and are not associated with any known published study on this topic.",
+    "title": "The title appears to be a modification of a known paper published in Nature (2020) by Finkel et al., rather than an original work by the listed authors.",
+    "journal_name": "The journal name provided is misspelled and does not exist in reputable indexing databases.",
+    "journal_volume": "Volume 286 is inconsistent with the existence of the non-existent journal provided.",
+    "journal_issue": "Issue 1 paired with volume 286 for this fabricated journal cannot be verified.",
+    "journal_page": "Page numbers 107-118 are generic and belong to a fabricated citation.",
+    "elocator": "No elocator was provided in the source string.",
+    "publication_date": "The date 2021 does not correspond to a valid publication of this title by these authors.",
+    "doi": "The DOI prefix 10.9676 is not associated with any legitimate scientific publisher of this type of research.",
+    "pmcid": "No PMCID was provided for this fabricated citation.",
+    "pmid": "No PMID was provided for this fabricated citation."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "harvard",
+    "REFERENCE": "Multiple critical components (journal name, DOI) are clearly erroneous or non\u2011existent, strongly indicating the reference is fabricated or heavily corrupted.",
+    "authors": "The author list 'Esposipt, L.M. et al.' appears to be a misspelling of a plausible name (e.g., Esposito, L.M.), but without a verifiable source we cannot confirm the exact spelling or contribution.",
+    "title": "The title 'A single bacterial genus maintains root growth in a complex microbiome' is plausible and could exist, but there is no record of it under the given journal and DOI.",
+    "journal_name": "'Journal of Antimirdobial Resistance Genomjcs' contains multiple obvious spelling errors ('Antimirdobial', 'Genomjcs'). No such journal exists in recognized bibliographic databases.",
+    "journal_volume": "While volume numbers in the 200s are possible for some journals, the combination with the malformed journal name and DOI makes this entry unreliable.",
+    "journal_issue": "Issue '1' is syntactically correct but cannot be verified due to the invalid journal title.",
+    "journal_page": "Page range '107-118' is a typical format, but again cannot be confirmed without a legitimate source.",
+    "elocator": "No elocator provided; the reference relies on page numbers.",
+    "publication_date": "The date '2021 Jul 8' is a valid format, but the lack of a verifiable source prevents confirmation.",
+    "doi": "'10.9676/0u5o.a54' does not follow the standard DOI pattern (prefix.suffix) and resolves to nothing when queried; it is not a valid DOI.",
+    "pmcid": "No PMCID supplied; similar to PMID.",
+    "pmid": "No PMID supplied; absence does not indicate inauthenticity but prevents cross\u2011checking."
+  }
+]

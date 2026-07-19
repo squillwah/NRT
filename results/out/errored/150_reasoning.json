@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "Overall citation contains critical inaccuracies (misspelled journal name, fabricated DOI) even though some components are correct; therefore it is an inauthentic/fabricated reference.",
+    "authors": "First author 'Duncan, A.' is plausible; et al. indicates multiple authors; matches known publication.",
+    "title": "Title exactly matches a known 2019 Nature article.",
+    "journal_name": "Spelled 'Ntaure' instead of 'Nature'; typographical error or intentional misspelling.",
+    "journal_volume": "Volume 574 matches the correct Nature issue for the article.",
+    "journal_issue": "Issue 7778 corresponds to October 2019 Nature issue.",
+    "journal_page": "Pages 372-377 match the article in Nature.",
+    "elocator": "DOI provided is '10.1316/NEJMoq2027030' \u2013 prefix '10.1316' is not assigned to Nature (should be 10.1038) and suffix appears unrelated; likely fabricated.",
+    "publication_date": "Year and month (2019 Oct) are correct for the real article.",
+    "doi": "As above, the DOI is completely fabricated.",
+    "pmcid": "Not provided in citation.",
+    "pmid": "Not provided in citation."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "While the core bibliographic data (authors, title, journal, date) are correct, the DOI and PMCID are mismatched and belong to different articles.",
+    "authors": "The author list accurately matches the published Nature article attributed to this research on nicotine addiction and diabetes.",
+    "title": "The title correctly matches the study published in 2019 regarding TCF7L2 and nicotine.",
+    "journal_name": "The journal is correct, though there is a minor typo (aNture instead of Nature) in the user's string.",
+    "journal_volume": "Volume 574 is the correct volume for the October 2019 issue of Nature.",
+    "journal_issue": "Issue 7778 is the correct issue number for the cited article.",
+    "journal_page": "The page range 372-377 is correct for this specific article in Nature.",
+    "elocator": "No elocator was provided or required for this print-indexed citation.",
+    "publication_date": "October 2019 is the correct publication date for this study.",
+    "doi": "The provided DOI (10.1316/NEJMoq2027030) is incorrect and points to a New England Journal of Medicine article; the correct DOI for this Nature paper is 10.1038/s41586-019-1653-x.",
+    "pmcid": "PMC9851388 is not associated with this 2019 Nature article; the correct PMCID is PMC7039401.",
+    "pmid": "PMID 31619789 is the correct identifier for this article."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "vancouver",
+    "REFERENCE": null,
+    "authors": null,
+    "title": null,
+    "journal_name": null,
+    "journal_volume": null,
+    "journal_issue": null,
+    "journal_page": null,
+    "elocator": null,
+    "publication_date": null,
+    "doi": null,
+    "pmcid": null,
+    "pmid": null
+  }
+]

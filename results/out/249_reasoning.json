@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference contains multiple severe spelling errors in the title, rendering it invalid despite other components being potentially correct.",
+    "authors": "Authors listed as 'Lhopitallier, L. et al.' follow standard academic formatting and appear valid.",
+    "title": "The title has numerous spelling mistakes (e.g., 'ultrasongoraohy', 'determune', 'lowerlrsepiratoryjtracy', 'pirmary csre', 'pragmatid clister') and is thus invalid.",
+    "journal_name": "Journal name 'BMJ (Clinical research ed.)' is a known variant of the British Medical Journal and is valid.",
+    "journal_volume": "Volume '374' is provided and appears reasonable for BMJ, though no further verification is performed.",
+    "journal_issue": "No issue number is mentioned in the reference, so it is missing and thus invalid.",
+    "journal_page": "No page numbers or elocator are explicitly stated; the provided doi suggests an article number, but page field is absent.",
+    "elocator": "An elocator is not explicitly provided; the doi suffix 'n2132' might serve as one but is not formatted as a standard elocator in the reference.",
+    "publication_date": "Publication date '2021 Sep 21' is a valid date format and plausible.",
+    "doi": "The doi '10.1136/bmj.n2132' follows the standard DOI structure and is likely valid.",
+    "pmcid": "No PubMed Central ID (PMCID) is provided in the reference.",
+    "pmid": "No PubMed ID (PMID) is provided in the reference."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "The reference point to a real, verifiable trial; however, it contains substantial spelling errors in the title.",
+    "authors": "Lhopitallier is the real first author for this specific study published in the BMJ in 2021.",
+    "title": "The title contains several typographical errors ('ultrasongoraohy', 'determune', 'lowerlrsepiratoryjtracy', 'pirmary', 'pragmatid', 'clister'), though the core name is recognizable.",
+    "journal_name": "BMJ (Clinical research ed.) is the correct official name for the British Medical Journal in citation databases.",
+    "journal_volume": "Volume 374 is the correct volume for papers published in the BMJ during 2021.",
+    "journal_issue": "The citation does not provide a specific issue number, which is common for BMJ's continuous publication model.",
+    "journal_page": "The page/identifier for this article in BMJ is n2132, which matches the elocator rather than traditional pagination.",
+    "elocator": "The identifier n2132 is the correct electronic locator for this specific study in the BMJ.",
+    "publication_date": "The study was indeed published on September 21, 2021.",
+    "doi": "The DOI 10.1136/bmj.n2132 is the accurate and functional digital object identifier for this paper.",
+    "pmcid": "The PMCID was not provided in the input string.",
+    "pmid": "The PMID was not provided in the input string, but the reference itself is otherwise verifiable."
+  },
+  {
+    "model": "minimax-m3",
+    "style": "apa",
+    "REFERENCE": "Overall, this reference appears to be a real BMJ paper from 2021, but it contains numerous typographical errors or OCR errors in the title. The DOI, journal, and general topic are consistent with a real publication. The paper is about a pragmatic cluster randomized trial using procalcitonin and lung ultrasonography point-of-care testing to determine antibiotic prescription in patients with lower respiratory tract infection in primary care.",
+    "authors": "The authors list appears to be plausible and consistent with the topic of the paper. The names look like real researchers, and the ordering seems typical for a multi-author research paper. However, I cannot verify each individual author from my knowledge.",
+    "title": "The title contains multiple OCR or typographical errors: 'ultrasongoraohy' instead of 'ultrasonography', 'determune' instead of 'determine', 'lowerlrsepiratoryjtracy' instead of 'lower respiratory tract', 'pirmary csre' instead of 'primary care', 'pragmatid clister' instead of 'pragmatic cluster'. Despite the typos, the intended meaning is clear and the paper appears to be a real study on using procalcitonin and lung ultrasonography point-of-care testing to guide antibiotic prescription in primary care.",
+    "journal_name": "The journal 'BMJ (Clinical research ed.)' is the British Medical Journal's Clinical Research Edition, which is a well-known and legitimate medical journal. This is a valid journal for publishing clinical research.",
+    "journal_volume": "The paper is published in BMJ volume 374. BMJ volume 374 corresponds to 2021, which is consistent with the publication year. This appears to be valid.",
+    "journal_issue": "No specific issue number is provided. BMJ articles in this format typically don't include issue numbers in this citation style, but this is not necessarily a problem.",
+    "journal_page": "No page number is provided. BMJ articles are often cited with article numbers rather than page numbers, which is consistent with the DOI format provided.",
+    "elocator": "No elocator is provided. BMJ articles are typically cited using article numbers rather than elocators in this format.",
+    "publication_date": "The publication year is 2021, which is consistent with BMJ volume 374 being published in 2021. However, the specific month/date is not provided.",
+    "doi": "The DOI '10.1136/bmj.n2132' follows the BMJ's standard DOI format (10.1136/bmj.). This DOI pattern is consistent with BMJ articles from 2021. The DOI appears to be in the correct format.",
+    "pmcid": "No PMCID is provided in the citation.",
+    "pmid": "No PMID is provided in the citation."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The reference is fabricated. The authors 'Ciancoi, G. & Jyeey, J. M.' are not real; the journal name 'International Journal of Proteomic Research' is incorrect for the given title and DOI; the DOI 10.1016/S0140-6736(20)32290-X belongs to a Lancet article, but the actual Lancet article has different authors and title. The title itself appears to be a misrepresentation of a real study, but the components are inconsistent and likely generated.",
+    "authors": "The authors 'Ciancoi, G. & Jyeey, J. M.' do not appear in legitimate academic databases. The names are unusual and likely fabricated.",
+    "title": "The title 'Procalcitonin and lung ultrasonography point-of-care testing to determine antibiotic prescription in patients with lower respiratory tract infection in primary care: pragmatic cluster randomised trial' matches a real study that was published in The Lancet (2021, vol 397, e.g., by Briel et al. or similar). However, the actual authors are different (e.g., Briel et al. or others). The title itself is accurate for a real study, but it is misattributed here.",
+    "journal_name": "The journal name 'International Journal of Proteomic Research' does not exist in standard databases. There is a 'Journal of Proteome Research' but not this name. It is likely a fabricated title.",
+    "journal_volume": "The volume '374' is given. The actual Lancet article volume is 397, not 374. This is inconsistent.",
+    "journal_issue": "The journal 'International Journal of Proteomic Research' is not a real journal; it may be a spoofed name. The title suggests a clinical trial, which would not be published in a proteomics journal. The DOI points to The Lancet, not this journal.",
+    "journal_page": "The page '192' is given. The actual Lancet article has pages 1132-1143, so '192' is incorrect for this DOI.",
+    "elocator": "The elocator '374(192)' is included in the reference. The actual Lancet article with this DOI is from 2021, volume 397, issue 10281, pages 1132-1143, so '374(192)' is not a valid volume/issue for The Lancet. This is inconsistent with the DOI.",
+    "publication_date": "The year '2021' is given. The actual Lancet article was published in 2021, so the year is correct. However, the full date is not provided, but the year matches the DOI.",
+    "doi": "The DOI 10.1016/S0140-6736(20)32290-X is valid and resolves to a genuine Lancet article, but the article's actual authors, title, and journal do not match the reference provided. The DOI is misattributed here.",
+    "pmcid": "No PMCID is provided in the reference, so it is not applicable. However, the reference does not include a PMCID.",
+    "pmid": "No PMID is provided in the reference, so it is not applicable."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "The reference is a hallucination that combines fake authors and a fake title with a real DOI that actually belongs to a COVID-19 vaccine study.",
+    "authors": "The names 'Ciancoi G' and 'Jyeey JM' do not appear as authors of any published medical research and seem to be hallucinated.",
+    "title": "The title is a hybrid of several real studies but does not exist as an actual publication under this name or journal.",
+    "journal_name": "'Int J Proteomic Res' exists but is not the publisher of the study associated with the provided DOI or general medical trials of this nature.",
+    "journal_volume": "Volume 374 is inconsistent with the typical volume numbering of the cited journal for the year 2021.",
+    "journal_issue": "Issue (192) combined with volume 374 does not follow standard academic journal formatting for the specified year.",
+    "journal_page": "The page or locator '192' appears to be an arbitrary number rather than a valid page range or e-locator.",
+    "elocator": "No valid e-locator is provided; the number 192 is used as a page/issue placeholder.",
+    "publication_date": "The date 2021 Sep 21 does not match the metadata of the provided DOI.",
+    "doi": "The DOI 10.1016/S0140-6736(20)32290-X belongs to a different study titled 'Safety and efficacy of the ChAdOx1 nCoV-19 vaccine' published in The Lancet.",
+    "pmcid": "No PubMed Central ID was provided in the reference.",
+    "pmid": "No PubMed ID was provided in the reference."
+  },
+  {
+    "model": "minimax-m3",
+    "style": "vancouver",
+    "REFERENCE": "While the title closely matches a real study published in The Lancet, multiple critical components are incorrect: the author names are wrong, the journal name is wrong, the volume/issue information is incorrect, and the DOI appears fabricated. This reference contains multiple inaccuracies that significantly compromise its authenticity. It appears to be a fabricated or heavily modified citation attempting to reference a real study.",
+    "authors": "The author names 'Ciancoi G, Jyeey JM' do not match the actual authors of this study. The real authors of this trial are Llor C, Molist G, and others, or specifically, the published version lists Bjerrum L, et al. The given author names appear fabricated or incorrect.",
+    "title": "The title 'Procalcitonin and lung ultrasonography point-of-care testing to determine antibiotic prescription in patients with lower respiratory tract infection in primary care: pragmatic cluster randomised trial' closely matches the actual published study title, which is 'Procalcitonin and lung ultrasonography point-of-care testing to determine antibiotic prescription in patients with lower respiratory tract infection in primary care: a pragmatic cluster randomised trial' published in The Lancet.",
+    "journal_name": "The journal name 'Int J Proteomic Res' is incorrect. The actual journal of publication is The Lancet (Lancet). The given journal name appears fabricated.",
+    "journal_volume": "The volume and issue information '374(192)' appears unusual. The actual Lancet publication of this study is in volume 398, issue 10309, page 1341. The given volume information is incorrect.",
+    "journal_issue": "Cannot validate separately as it's embedded in the volume field. The issue number provided appears incorrect based on the actual publication.",
+    "journal_page": "No specific page numbers provided in the citation. The actual paper is published on page 1341 of The Lancet.",
+    "elocator": "The DOI provided '10.1016/S0140-6736(20)32290-X' is a Lancet DOI format, but this specific DOI does not appear to match the actual publication. The real DOI for this study would be different (likely 10.1016/S0140-6736(21)01455-8 or similar). The DOI appears fabricated or incorrect.",
+    "publication_date": "The date '2021 Sep 21' is plausible for this study (the actual study was published in 2021), but needs verification against the actual publication date.",
+    "doi": "The DOI '10.1016/S0140-6736(20)32290-X' does not appear to be the correct DOI for this study. The actual DOI for this Lancet paper is different. This DOI appears fabricated.",
+    "pmcid": "No PMCID provided in the citation.",
+    "pmid": "No PMID provided in the citation."
+  }
+]

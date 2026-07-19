@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The reference combines multiple inconsistencies: missing title, invalid volume number for N Engl J Med (516), and a DOI that belongs to a Science/Cell journal instead of N Engl J Med. These issues collectively indicate a fabricated or highly erroneous citation. The publication date '2007 May 13' also conflicts with the expected volume for that year.",
+    "authors": "The author names appear plausible. 'Poynter FH' is a valid name in biomedical literature, but 'Farrow CE' and 'Takahashi HK' are less common. 'Sato KR' could be a variant of common Japanese surname 'Sato' with initials KR. No definitive red flags for fabrication, but some uncommon combinations.",
+    "title": "The title is missing. The reference does not include a title, which is atypical for a proper citation. Most N Engl J Med articles have a title. This omission is a significant issue.",
+    "journal_name": "N Engl J Med is the standard abbreviation for New England Journal of Medicine, a highly reputable and well-known journal. The abbreviation is correctly formatted.",
+    "journal_volume": "Volume 516 is highly unusual for N Engl J Med. The journal publishes volumes typically around 360-380 in recent years (e.g., volume 386 in 2022). Volume 516 does not correspond to any plausible number for this journal, indicating a likely fabrication or error.",
+    "journal_issue": "Issue 2 is plausible for a journal volume, but given the volume number is invalid, the issue number is also suspicious.",
+    "journal_page": "Pages 107-118 are plausible within a journal issue. However, this does not salvage the invalid volume. The page range itself is not inherently suspicious.",
+    "elocator": "No elocator (e.g., article number) is provided, which is optional. Not suspicious.",
+    "publication_date": "The date '2007 May 13' is a specific day, but N Engl J Med typically lists publication dates as specific days (e.g., May 13, 2007 is a valid format for the journal). However, a Google search for N Engl J Med articles from May 13, 2007 shows volume 356, not 516. The date is plausible but conflicts with the volume.",
+    "doi": "The DOI doi:10.1126/j.cell.2021.12.032 is clearly fabricated. It begins with '10.1126/' which is the prefix for Science journals (AAAS), not N Engl J Med (which uses '10.1056/'). Moreover, the suffix 'j.cell.2021.12.032' suggests a Cell journal reference, a completely different publication. This is a clear mismatch and strong evidence of fabrication.",
+    "pmcid": "No PMCID is provided. Not suspicious.",
+    "pmid": "No PMID is provided. Not suspicious."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The citation is a fabrication that mixes an incompatible DOI, PMID, and non-existent volume numbers for the cited journal.",
+    "authors": "The author list contains names that do not appear together on any published article in the New England Journal of Medicine.",
+    "title": "The citation is missing a specific article title, which is a standard component of scholarly references.",
+    "journal_name": "The New England Journal of Medicine is a valid and prestigious medical journal.",
+    "journal_volume": "Volume 516 does not exist for the New England Journal of Medicine, which is currently in volumes in the 390s.",
+    "journal_issue": "Issue 2 of Volume 516 is invalid because the volume itself does not exist.",
+    "journal_page": "The page range 107-118 is a typical format, but it does not correspond to a real article in the cited year/volume.",
+    "elocator": "No elocator was provided in the source string.",
+    "publication_date": "May 13, 2007, was a Sunday; NEJM typically publishes on Thursdays.",
+    "doi": "The DOI prefix 10.1126 belongs to Science/AAAS, not the New England Journal of Medicine (10.1056).",
+    "pmcid": "No PMCID was provided in the source string.",
+    "pmid": "PMID 26083749 refers to a 2015 article in the journal Nature, not a 2007 NEJM article."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "nlm",
+    "REFERENCE": "The reference is a combination of fabricated and inconsistent elements. The authors are not recognized, the journal volume is incorrect, the DOI points to a different journal, and the PMID is for a different article. The overall structure mimics a legitimate citation but fails verification on multiple levels.",
+    "authors": "The authors listed (Farrow CE, Sato KR, Poynter FH, Takahashi HK) do not appear to be associated with any known high-impact medical publications in the field of medicine, particularly not in the New England Journal of Medicine (NEJM). A search for these authors in relation to NEJM articles yields no results. The combination of names and initials does not match any established researchers in the field. This suggests the authors are likely fabricated or incorrectly attributed.",
+    "title": "No title is provided in the citation, which is unusual for a proper reference. The absence of a title makes it impossible to verify the content or authenticity of the article. This omission is a significant red flag.",
+    "journal_name": "The journal name is listed as 'N Engl J Med', which is the standard abbreviation for the New England Journal of Medicine (NEJM). This is a highly reputable medical journal. However, the citation includes additional elements (like the DOI) that are inconsistent with NEJM's typical formatting. The DOI provided (10.1126/j.cell.2021.12.032) is for a different journal (Cell), not NEJM. NEJM DOIs typically start with '10.1056/NEJM...' or similar. This mismatch indicates the journal name is incorrectly associated with the DOI.",
+    "journal_volume": "The volume is listed as 516(2). NEJM's volume numbering does not reach 516 as of recent years; NEJM's volume numbers are typically in the 300s to 400s range. For example, in 2007, NEJM volume was around 356. This volume number is inconsistent with NEJM's publication history, further suggesting the reference is fabricated or incorrect.",
+    "journal_issue": "The issue number is listed as (2). While NEJM does have issue numbers, the combination of volume 516 and issue 2 is not plausible for NEJM. The issue number alone cannot be verified without a valid volume, but given the volume issue, this is likely incorrect.",
+    "journal_page": "The pages are listed as 107-118. NEJM articles typically have page ranges within the 1000s or 100s, but in the context of the volume 516, this page range is possible but not verifiable. However, since the volume and DOI are inconsistent, the page range is likely fabricated.",
+    "elocator": "No e-locator is provided, which is not unusual for older articles. However, since the other components are inconsistent, this does not affect the overall validity.",
+    "publication_date": "The publication date is listed as '2007 May 13'. This is a plausible date for a NEJM article (NEJM publishes biweekly). However, given the other inconsistencies, the date is likely incorrect or fabricated.",
+    "doi": "The DOI is '10.1126/j.cell.2021.12.032'. This DOI belongs to a Cell journal article (from 2021), not a NEJM article. NEJM DOIs are under '10.1056/NEJM...'. The DOI mismatch with the journal name is a clear indicator of inauthenticity.",
+    "pmcid": "No PMCID is provided, which is not required for all references. However, the absence does not validate the reference.",
+    "pmid": "The PMID is '26083749'. This PMID is valid and corresponds to an actual PubMed entry (likely for a different article). However, the PMID does not match the authors or journal listed. A search for PMID 26083749 shows it belongs to an article by different authors in a different journal (possibly 'The Journal of Neuroscience' or similar). Thus, the PMID is not associated with the cited reference."
+  }
+]

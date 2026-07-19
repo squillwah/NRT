@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The reference claims the article was published in Cell (volume 373, issue 6562), but the correct journal is Science. Additionally, the DOI belongs to Science. This mismatch makes the entire reference invalid.",
+    "authors": "The author list includes names that correspond to the real authors of the Science article 'Vaccine nationalism and the dynamics and control of SARS-CoV-2', and the format is correct.",
+    "title": "The title exactly matches the known title of a 2021 Science article by Baker et al., so it is valid.",
+    "journal_name": "The journal name is given as 'Cell', but the article was actually published in Science. This is a clear mismatch, making the journal name invalid.",
+    "journal_volume": "Volume 373 is valid for the Science article, but it does not correspond to a Cell volume (Cell uses different volume numbering). Given the incorrect journal, the volume is not valid for this reference.",
+    "journal_issue": "Issue 6562 is the correct issue number for the Science article, but it is not a Cell issue. It is invalid in the context of the given journal.",
+    "journal_page": "No page number is provided in the reference. The absence of a page number does not constitute an error; it is simply missing but not invalid.",
+    "elocator": "No elocator is provided in the reference. The article has an elocator (eabj7364), but its absence is not an error in the citation.",
+    "publication_date": "The year 2021 is correct for the actual publication date of this article.",
+    "doi": "The DOI 10.1126/science.abj7364 is valid for the Science article, but it is inconsistent with the journal name 'Cell' given in the reference, making the DOI invalid in this context.",
+    "pmcid": "No PMCID is provided in the reference; it is not required and its absence does not indicate an error.",
+    "pmid": "No PMID is provided in the reference; it is not required and its absence does not indicate an error."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The reference is a 'hallucinated' hybrid that mixes the title and DOI of a Science paper with the wrong journal name and incorrect IDs.",
+    "authors": "The list includes actual researchers in infectious diseases, but they are not the authors of a paper with this title in 'Cell'.",
+    "title": "The title 'Vaccine nationalism and the dynamics and control of SARS-CoV-2' is a real article published in Science, not Cell.",
+    "journal_name": "The provided title was published in Science, whereas this citation incorrectly lists Cell.",
+    "journal_volume": "Volume 373 belongs to Science in 2021, not Cell (which was volume 184).",
+    "journal_issue": "Issue 6562 is a standard issue number for Science, but does not correspond to the journal Cell.",
+    "journal_page": "The citation provides an issue number in the page field or omits standard page ranges for Cell.",
+    "elocator": "No elocator is explicitly provided in the text.",
+    "publication_date": "The date September 24, 2021, is the correct publication date for the Science article of this title.",
+    "doi": "The DOI 10.1126/science.abj7364 is real and matches the Science article but contradicts the 'Cell' journal claim.",
+    "pmcid": "PMCID PMC8835930 does not exist or correspond to this specific research work in PubMed Central.",
+    "pmid": "PMID 33714382 actually points to a different paper in the journal 'Diabetes Research and Clinical Practice'."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "apa",
+    "REFERENCE": "The reference incorrectly lists the journal as Cell instead of Science and lacks the article identifier (eabj7364).",
+    "authors": "The author list matches the known Science article.",
+    "title": "Title matches the known article.",
+    "journal_name": "The article was published in Science, not Cell.",
+    "journal_volume": "Volume 373 is correct for Science 2021 issue.",
+    "journal_issue": "Issue 6562 corresponds to the Science issue.",
+    "journal_page": "The article is an electronic article with article number eabj7364, not a traditional page range; the reference omitted the article identifier.",
+    "elocator": "Missing the article number eabj7364.",
+    "publication_date": "Year 2021 is correct; month/day not provided but acceptable.",
+    "doi": "DOI matches the article.",
+    "pmcid": "No PMCID provided; not required.",
+    "pmid": "No PMID provided; not required for correctness."
+  }
+]

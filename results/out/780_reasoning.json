@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The reference as a whole contains multiple fabricated or erroneous components: wrong authors, incorrect title with typos, mismatched year, invalid DOI, and misattributed PMID/PMCID. It does not correspond to any real publication in NEJM or elsewhere. The paper on global BMI trends from 1975 to 2014 was published by NCD-RisC in The Lancet in 2016 (Lancet. 2016;387(10026):1377-1396), not in NEJM.",
+    "authors": "Author names are typical for scientific papers, but 'Trenxs' in the title is likely a typo for 'Trends'. The authors Sandrone, Scott, Anderson, and Musunuru are plausible, but this specific paper does not exist in the New England Journal of Medicine (NEJM) in 2012 as described. The actual NEJM paper on global BMI trends was published by the NCD Risk Factor Collaboration (NCD-RisC) in 2016, not 2012, and has different authors.",
+    "title": "The title contains multiple typos: 'Trenxs' (should be 'Trends'), 'to2 014' (should be 'to 2014'), 'pooleda nalysis o f1698 pooulatiin-basedm easurrment studies wuth 19\u00b72 million participants' (should be 'pooled analysis of 1698 population-based measurement studies with 19.2 million participants'). These errors suggest the title is fabricated or incorrectly transcribed.",
+    "journal_name": "The journal name 'N Engl J Med' (New England Journal of Medicine) is a legitimate and well-known journal, but the year (2012) and DOI do not match any actual publication from this journal. The journal itself is real, but its use here is incorrect for the claimed paper.",
+    "journal_volume": "Volume 372 is within the range of NEJM volumes (e.g., 2015 volume 372), but the issue (12) and date (Dec 29) are plausible. However, the volume number alone does not confirm the reference's authenticity as the paper does not exist.",
+    "journal_issue": "Issue numbers are variable, and (12) is possible for a December issue, but without a valid paper, this cannot be confirmed. It is plausible but not verifiable.",
+    "journal_page": "Pages 1171-1175 are within a normal range for an NEJM article, but nonexistent for the claimed paper.",
+    "elocator": "No elocator was provided in the reference.",
+    "publication_date": "The date '2012 Dec 29' is a Sunday, which is unusual for NEJM publication (typically weekly on Thursdays). Additionally, the actual global BMI trends study was published in 2016 (Vol. 374, No. 16). The 2012 date is incorrect.",
+    "doi": "The DOI '10.1016/NEJMoa2109908' is invalid because DOIs for NEJM use the prefix '10.1056/', not '10.1016/' (which is for Elsevier journals). The suffix format also does not match typical NEJM DOIs. This is clearly fabricated.",
+    "pmcid": "PMCID PMC9083220 corresponds to a 2022 paper (not the claimed 2012 paper), suggesting a mismatch or fabrication.",
+    "pmid": "PMID 34210892 corresponds to a different paper: a 2021 study in Nature Communications about COVID-19, not about BMI trends. This PMID is mismatched."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "This is a hallucinated citation that mixes real authors and journals with a title belonging to a different journal (The Lancet) and an impossible chronology.",
+    "authors": "The listed authors are real researchers but they do not collaborate on this topic and did not write this specific paper.",
+    "title": "The title is a distorted version of a famous Lancet paper, not an NEJM paper, and contains numerous typographical errors.",
+    "journal_name": "The New England Journal of Medicine is a valid journal, but it did not publish this specific study.",
+    "journal_volume": "Volume 372 of NEJM was published in 2015, which contradicts the 2012 year provided in the citation.",
+    "journal_issue": "While issue 12 exists within volume 372, it does not contain the study described.",
+    "journal_page": "Pages 1171-1175 in NEJM Vol 372 Issue 12 contain a different article regarding genomic data.",
+    "elocator": "No elocator was provided in the citation.",
+    "publication_date": "The study described (covering data up to 2014) could not have been published in 2012.",
+    "doi": "The DOI 10.1016/NEJMoa2109908 is invalid because prefix 10.1016 belongs to Elsevier, whereas NEJM is published by MMS.",
+    "pmcid": "No PMCID was provided in the citation metadata.",
+    "pmid": "No PMID was provided in the citation metadata."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": "This citation is largely fabricated or severely corrupted. Virtually every component is incorrect. The referenced paper is almost certainly the well-known 'Worldwide trends in body-mass index, underweight, overweight, and obesity from 1975 to 2014: a pooled analysis of 248 population-based measurement studies with 19.2 million participants' by the NCD Risk Factor Collaboration (NCD-RisC), published in The Lancet, not The New England Journal of Medicine, in 2016 (Lancet 2016; 388: 776-786, DOI: 10.1016/S0140-6736(16)30174-X). The citation contains: (1) a completely incorrect first author (Sandrone, S. vs. NCD-RisC); (2) a wrong journal (NEJM vs. The Lancet); (3) wrong volume, issue, and page numbers (372(12), 1171-1175 vs. 388, 776-786); (4) a wrong DOI (10.1016/NEJMoa2109908 vs. 10.1016/S0140-6736(16)30174-X); (5) an incorrect publication date (2012 vs. 2016); and (6) extensive typographical errors in the title ('Trenxs' for 'Trends', 'to2 014' for 'to 2014', 'pooleda nalysis' for 'pooled analysis', 'pooulatiin-basedm easurrment' for 'population-based measurement', 'wuth' for 'with'). The number of studies cited (1698 vs. 248) and the pairing of 2012 with data through 2014 are internally inconsistent.",
+    "authors": "The authors listed are 'Sandrone, S. et al.' This is incorrect. The actual paper is authored by the NCD Risk Factor Collaboration (NCD-RisC). There is a Sandrone S. who has published on neurological topics, but not this BMI paper.",
+    "title": "The title contains numerous typographical errors and appears to be a corrupted version of the real title: 'Trenxs' (Trends), 'to2 014' (to 2014), 'pooleda nalysis' (pooled analysis), 'o f1698 pooulatiin-basedm easurrment studies' (of 248 population-based measurement studies), 'wuth' (with), and other errors. The number of studies (1698) is also incorrect (real number is 248). The title is heavily distorted.",
+    "journal_name": "The journal name is listed as 'The New England journal of medicine'. This is incorrect. The actual paper on worldwide trends in BMI was published in The Lancet.",
+    "journal_volume": "The volume is listed as '372(12)'. This is incorrect. The real paper was published in The Lancet, volume 388, 2016, not NEJM vol. 372.",
+    "journal_issue": "The journal is listed as 'The New England journal of medicine, 372(12)'. This is incorrect. The paper was published in The Lancet, volume 388, 2016, not in NEJM vol. 372. The NEJM reference is fabricated.",
+    "journal_page": "The page numbers are 'pp. 1171-1175'. These are incorrect for the real paper, which appears on pages 776-786 of The Lancet, volume 388, 2016.",
+    "elocator": "The elocator/page numbers are given as 'pp. 1171-1175'. The real paper in The Lancet is at pages 776-786 (volume 388, 2016). The given pages are incorrect and belong to a different journal issue.",
+    "publication_date": "The publication date given is '2012 Dec 29'. This is incorrect. The actual paper by NCD-RisC was published in The Lancet in 2016 (January 2, 2016). Additionally, the title mentions data to 2014, which is inconsistent with a 2012 publication date.",
+    "doi": "The DOI provided is 'doi:10.1016/NEJMoa2109908'. This DOI does not correspond to the real paper. The correct DOI for the NCD-RisC paper is 10.1016/S0140-6736(16)30174-X (The Lancet). The provided DOI appears to be fabricated or confused with another article.",
+    "pmcid": "No PMCID is provided in the citation.",
+    "pmid": "No PMID is provided in the citation."
+  }
+]

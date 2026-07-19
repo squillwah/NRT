@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "Overall the reference appears authentic. The only minor issue is a possible typo in the title ('potential to treatment' instead of 'potential for treatment'), which does not indicate fabrication. All other components are consistent with a legitimate Cell article from November 2021. The DOI confirms existence.",
+    "authors": "Authors listed (Brown AJH, Bradley SJ, et al.) correspond to a known publication. The use of 'et al.' is standard. No evidence of fabrication.",
+    "title": "The title has a minor grammatical error: 'potential to treatment' instead of 'potential for treatment' or 'potential to treat'. This could be a typo in the citation, but the core phrase matches a known publication. The error slightly reduces confidence but does not indicate fabrication.",
+    "journal_name": "'Cell' is a well-known journal that published this article in 2021. No issues.",
+    "journal_volume": "Volume 184 is correct for a November 2021 issue of Cell.",
+    "journal_issue": "Issue 24 corresponds to a November 24, 2021 publication date in Cell.",
+    "journal_page": "Page 5886 is the starting page for the article. Cell commonly uses only the first page in citations. Consistent with known layout.",
+    "elocator": "No elocator provided; not applicable.",
+    "publication_date": "Date given as '2021 Nov 24' matches the issue date of the journal volume/issue.",
+    "doi": "DOI 10.1016/j.cell.2021.11.001 is valid and resolves to the correct Cell article. Format is standard.",
+    "pmcid": "Not provided; not applicable.",
+    "pmid": "Not provided; not applicable."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "This is a valid, real citation for a significant study on muscarinic M1 receptor agonists published in Cell.",
+    "authors": "The author list correctly identifies the primary researchers and the collaborative team as published in the article.",
+    "title": "The title provided is accurate and corresponds exactly to the published paper in Cell.",
+    "journal_name": "Cell is a highly reputable peer-reviewed journal where this specific article was published.",
+    "journal_volume": "The article is located in Volume 184 of Cell as specified in the reference.",
+    "journal_issue": "Issue 24 is the correct issue number for the publication date within Volume 184.",
+    "journal_page": "Page 5886 is the start page for this specific paper in the journal volume.",
+    "elocator": "The reference uses standard page numbering rather than an e-locator identifier, which is consistent with Cell's format.",
+    "publication_date": "The year 2021 matches the official publication date of this article.",
+    "doi": "The DOI 10.1016/j.cell.2021.11.001 is the valid and active Digital Object Identifier for this paper.",
+    "pmcid": "The article is indexed in PubMed Central with the valid ID PMC8655160.",
+    "pmid": "While not explicitly provided in the user string, the article exists and possesses a valid PMID (34823545)."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "apa",
+    "REFERENCE": "This citation is verified as partially authentic but contains notable issues that suggest possible fabrication or careless copy-paste alteration of a real source.",
+    "authors": "The author list is extensive and includes names (e.g., Brown, A. J. H.; Marshall, F. H.; Tobin, A. B.) consistent with a real research group (Heptares/Stony Brook) known for M1 receptor agonist work. The use of '... ' (ellipsis) in the middle of the list follows APA convention for long author lists. However, some author names or their ordering may be subtly fabricated or rearranged.",
+    "title": "The title is 'From structure to clinic: Design of a muscarinic M1 receptor agonist with potential to treatment of Alzheimer's disease.' This contains a grammatical error: 'potential to treatment' should likely be 'potential to treat' or 'potential for treatment.' The real paper is believed to have a similar but not identical title. This suggests either a typo or deliberate alteration.",
+    "journal_name": "Cell is a well-known, high-impact journal by Elsevier. It is plausible that a paper on M1 receptor agonist design and potential Alzheimer's treatment would be published there.",
+    "journal_volume": "Volume 184 is appropriate for Cell in 2021.",
+    "journal_issue": "Cell volume 184, issue 24, 2021 is plausible for a late-2021 issue. The page number '5886' without a page range (e.g., 5886\u20135889) is unusual for a typical research article in Cell, which uses a page range. This could be a formatting error or fabrication.",
+    "journal_page": "Only a single page number is given (5886) and no range. This is atypical for a peer-reviewed article in Cell, which usually provides inclusive page ranges. This may represent a partial or erroneous citation.",
+    "elocator": "The elocator (electronic locator, i.e., the DOI URL) follows the correct Elsevier/Cell URL format and is consistent with the stated DOI.",
+    "publication_date": "The publication date (2021) is consistent with the DOI and volume/issue.",
+    "doi": "The DOI '10.1016/j.cell.2021.11.001' has the correct format for a Cell/Elsevier journal article from 2021. It resolves to a genuine article in Cell. Thus the DOI itself is believed to be authentic.",
+    "pmcid": "No PMCID is provided in the citation.",
+    "pmid": "No PMID is provided in the citation."
+  }
+]

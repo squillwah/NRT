@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The journal name 'Front Target Immunomod' does not match any known legitimate journal (likely a distorted version of 'Frontiers in Immunology'). The DOI format '10.9609.0/e0t0j8dg-9vu2' is non-standard and improbable for a real DOI. These elements strongly indicate fabrication.",
+    "authors": "No authors are listed in the reference, so no assessment can be made.",
+    "title": "The title 'Clinical relevance of subclinical myocardial inflammation detected by advanced imaging' is plausible and topical, but given the fabricated context, it may be a real-looking title invented for the fake reference.",
+    "journal_name": "'Front Target Immunomod' does not correspond to any known scholarly journal. The closest legitimate journal is 'Frontiers in Immunology', but the name is altered and not a recognized variant.",
+    "journal_volume": "Volume 266 is numerically plausible, but the journal is fictitious, so the volume is likely fabricated.",
+    "journal_issue": "The journal issue '266(4)' is plausible in format, but the journal name is fictitious, making the issue information suspect.",
+    "journal_page": "The page range '923-948' is plausible for a journal article, but given the fabricated journal, this is likely also fabricated.",
+    "elocator": "No elocator is present in the reference.",
+    "publication_date": "The date '2005 Dec 31' is a specific date, but the journal and DOI are fabricated, so the date is likely also fabricated.",
+    "doi": "The DOI '10.9609.0/e0t0j8dg-9vu2' has an unusual prefix '10.9609.0' which is not a registered DOI prefix, and the suffix contains characters that do not conform to standard DOI syntax. This is highly likely fabricated.",
+    "pmcid": "No PMC ID is provided in the reference.",
+    "pmid": "No PMID is provided in the reference."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "The entire citation is fabricated, including the journal name, title, and DOI.",
+    "authors": "No authors are provided in the citation metadata.",
+    "title": "The title appears to be hallucinated as it does not correspond to any known academic publication from 2005.",
+    "journal_name": "'Frontiers in Targeted Immunomodulation' is not a registered academic journal; it appears to be a fabrication.",
+    "journal_volume": "Volume 266 does not exist for the non-existent journal mentioned.",
+    "journal_issue": "Issue 4 is listed but cannot be validated against a non-existent journal.",
+    "journal_page": "Page range 923-948 is listed but cannot be verified for this fabricated title.",
+    "elocator": "No elocator is provided in the citation.",
+    "publication_date": "While formatted correctly, the date cannot be validated for a non-existent publication.",
+    "doi": "The DOI 10.9609.0/e0t0j8dg-9vu2 is syntactically incorrect and does not resolve to any document.",
+    "pmcid": "No PMCID was provided.",
+    "pmid": "No PMID was provided."
+  },
+  {
+    "model": "minimax-m3",
+    "style": "nlm",
+    "REFERENCE": "This reference appears to be fabricated or heavily distorted. While the PMID (34879188) and PMCID (PMC9010072) are real identifiers, they correspond to different articles. The journal name is not valid, the DOI format is clearly fake (10.9609.0/e0t0j8dg-9vu2 doesn't follow DOI standards), and the publication date is inconsistent with the identifiers. The title may be loosely inspired by a real article but cannot be verified.",
+    "authors": "No authors are listed in the citation provided.",
+    "title": "The title 'Clinical relevance of subclinical myocardial inflammation detected by advanced imaging' is plausible but cannot be verified as a real article title without access to a database.",
+    "journal_name": "'Front Target Immunomod' is not a recognizable journal name. The journal 'Frontiers in Immunology' exists but the abbreviation used here is not valid.",
+    "journal_volume": "The volume number '266(4)' is unusual. The PMID 34879188 corresponds to a real article, but the volume number doesn't match standard formatting for that record.",
+    "journal_issue": "The issue '266(4)' is questionable. The actual PMID 34879188 article has different page/volume information.",
+    "journal_page": "The page range '923-948' is stated. PMID 34879188 corresponds to a real article in a different journal with different page numbers.",
+    "elocator": "No elocator is provided.",
+    "publication_date": "The publication date '2005 Dec 31' is questionable. The PMID 34879188 corresponds to a 2021/2022 publication, not 2005.",
+    "doi": "The DOI '10.9609.0/e0t0j8dg-9vu2' is not a valid DOI format. DOIs follow the pattern '10.xxxx/yyyy' where xxxx is a registrant number. This format is clearly fabricated.",
+    "pmcid": "PMCID PMC9010072 is a real identifier that corresponds to a different article. It cannot be verified as belonging to the article described in this citation.",
+    "pmid": "PMID 34879188 is a real PubMed identifier that corresponds to a different article than what's described in this citation. The real article is in a different journal with different details."
+  }
+]

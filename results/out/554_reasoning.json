@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The reference has a garbled title and missing key identifiers (DOI, PMID, issue), so it is likely fabricated or heavily corrupted.",
+    "authors": "The author names are formatted correctly with last names and initials, and appear to be real researchers. The format follows APA style.",
+    "title": "The title contains nonsensical words like 'iex of Onw' and 'Dozen ofkthe Other', indicating likely typographical corruption. Therefore the title is invalid.",
+    "journal_name": "The BMJ is a well-known medical journal, so the journal name is valid.",
+    "journal_volume": "Volume 386 is a plausible volume number for The BMJ in 2022, so it is valid.",
+    "journal_issue": "No issue number is provided in the reference, making the issue component invalid.",
+    "journal_page": "The page range 183-185 is a standard format and appears valid.",
+    "elocator": "The e-locator e066952 follows the typical format used by The BMJ, so it is valid.",
+    "publication_date": "The year 2022 is a plausible publication date, so it is valid.",
+    "doi": "No DOI is provided, so the DOI component is invalid.",
+    "pmcid": "No PMCID is provided, so the PMCID component is invalid.",
+    "pmid": "No PMID is provided, so the PMID component is invalid."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "This reference is a fabrication that mixes real names and journal titles with incorrect volume numbers and a garbled, non-existent article title.",
+    "authors": "Dan L. Longo and Eric J. Rubin are prominent editors associated with the New England Journal of Medicine, but they are not the authors of this specific piece.",
+    "title": "The title 'Covid-19 mRNA Vaccines - iex of Onw, Half a Dozen ofkthe Other' appears to be a garbled version of a common idiom and is not a legitimate medical publication title.",
+    "journal_name": "The BMJ is a real medical journal, however, the provided metrics do not align with its publication history for the year 2022.",
+    "journal_volume": "Volume 386 for The BMJ corresponds to publications from 2024, not January 2022.",
+    "journal_issue": "The BMJ did not use these specific issue identifiers in 2022 that match the pagination provided.",
+    "journal_page": "The BMJ uses a continuous numbering system or unique e-locators; pages 183-185 in volume 386 do not exist for the year 2022.",
+    "elocator": "The e-locator e066952 belongs to a different paper published in 2021 regarding COVID-19 vaccines in a different journal context.",
+    "publication_date": "January 13, 2022, is a valid date, but the content and volume number provided do not exist on this date.",
+    "doi": "No DOI was provided in the source text to evaluate.",
+    "pmcid": "No PMCID was provided in the source text to evaluate.",
+    "pmid": "No PMID was provided in the source text to evaluate."
+  },
+  {
+    "model": "minimax-m3",
+    "style": "vancouver",
+    "REFERENCE": "Based on the analysis of individual components, this reference appears to be fabricated or heavily corrupted. While there is a real editorial by Longo and Rubin in NEJM about COVID-19 mRNA vaccines, this specific citation contains garbled text, incorrect journal name, and inconsistent identifiers. The authors are real, the topic is real, but the specific citation details appear fictional or corrupted beyond reliable use.",
+    "authors": "The author names appear garbled. The correct authors are likely Dan L. Longo and Eric J. Rubin, both well-known medical professionals. However, the names as provided contain unusual characters ('iex', 'Onw', 'kthe') that don't correspond to standard name components.",
+    "title": "The title is clearly garbled with inserted nonsensical text. The actual title appears to be about COVID-19 mRNA vaccines, but the exact original title is unclear. This appears to be 'Covid-19 mRNA Vaccines - Six of One, Half a Dozen of the Other' or similar, but the title as given contains corrupted text.",
+    "journal_name": "The journal is cited as 'BMJ'. However, this paper does not appear to be a BMJ publication - it's more likely from the New England Journal of Medicine (NEJM), where both Longo and Rubin have published extensively. BMJ is a UK-based medical journal that would typically have different formatting.",
+    "journal_volume": "The volume '386' doesn't match BMJ's volume numbering. BMJ volumes in 2022 would be different. Also, NEJM volume 386 corresponds to 2022 issues.",
+    "journal_issue": "No issue number is provided.",
+    "journal_page": "The page numbers '183-185' seem plausible for a short editorial/commentary, but without verification against actual records, this cannot be confirmed. The inclusion of 'e066952' suggests this might be an article ID or DOI suffix that doesn't match standard BMJ page numbering format.",
+    "elocator": "No elocator (specific article identifier) is provided in a standard format.",
+    "publication_date": "The date '2022 Jan 13' is plausible. NEJM does publish weekly on Thursdays, and January 13, 2022 was a Thursday. However, BMJ publishes on different days.",
+    "doi": "No DOI is explicitly provided.",
+    "pmcid": "No PMCID is provided.",
+    "pmid": "No PMID is provided."
+  }
+]

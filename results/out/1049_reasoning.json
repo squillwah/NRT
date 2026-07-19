@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "Overall, the reference has missing journal name, a suspicious DOI, and missing journal name/issue context. It is likely not a valid published reference.",
+    "authors": "Author 'Cohn, B. A.' appears plausible. 'Cirillo, P. M.' plausible. 'Murphy, C. C.' plausible. 'Krigbaum, N. Y.' plausible. 'Wallace, A. W.' plausible. None are known fabricated authors, but without cross-checking against known databases (e.g., PubMed), they cannot be fully confirmed.",
+    "title": "The title 'Machine learning identification of hidden phenotypes in chronic obstructive pulmonary disease' sounds like a plausible medical research article title, consistent with typical ML-in-medicine studies. No obvious red flags.",
+    "journal_name": "No journal name is explicitly provided in the citation. The string '375(9355)' could be a volume and issue number, but without a journal title, this component is missing.",
+    "journal_volume": "Volume '375' is plausible but incomplete without a journal name to verify.",
+    "journal_issue": "Issue '9355' is plausible but incomplete without journal name; also unusually high issue number could be suspicious.",
+    "journal_page": "Pages '236-265' are plausible for a typical journal article.",
+    "elocator": "No e-locator (e.g., article number) is provided in the citation.",
+    "publication_date": "Year '2022' is plausible and consistent with modern publication dates.",
+    "doi": "The DOI '10.3498.95/6nizq-6ag29648-492rnjnl' is highly suspicious. Standard DOIs use format 10.xxxx/xxxxx; the structure '10.3498.95/...' with a period after 3498 is nonstandard. The suffix '6nizq-6ag29648-492rnjnl' looks like random characters, not a typical DOI suffix. Likely fabricated.",
+    "pmcid": "No PMCID (PubMed Central ID) is provided.",
+    "pmid": "No PMID (PubMed ID) is provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "The citation is entirely fabricated, combining a real author's name with a non-existent title, missing journal name, and a malformed DOI.",
+    "authors": "While B.A. Cohn is a real researcher, there is no record of them authoring a paper on COPD phenotypes in 2022 with this specific title.",
+    "title": "Though COPD phenotype research is common, this specific title does not match any existing publications in major medical databases for the year 2022.",
+    "journal_name": "No journal name was provided in the citation, making it impossible to verify as a valid publication outlet.",
+    "journal_volume": "Volume 375 and Issue 9355 are characteristic of the 'The Lancet' but do not align with any article by these authors or on this topic.",
+    "journal_issue": "Issue 9355 is specific to certain high-frequency journals, but does not correspond to the content or date provided.",
+    "journal_page": "The page range 236-265 for a machine learning paper in early 2022 does not correlate with known literature in this field.",
+    "elocator": "No electronic locator or article number was specified.",
+    "publication_date": "The date January 21, 2022, is valid as a calendar date but does not correspond to the publication of the referenced work.",
+    "doi": "The DOI format provided (10.3498.95/...) is syntactically incorrect and does not resolve to any known academic object.",
+    "pmcid": "No PubMed Central ID was provided in the citation.",
+    "pmid": "No PubMed ID was provided in the citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "apa",
+    "REFERENCE": "This reference contains multiple red flags indicating it is likely fabricated or AI-hallucinated.",
+    "authors": "The listed authors (Cohn, Cirillo, Murphy, Krigbaum, Wallace) are real researchers, but they are primarily known for environmental epidemiology research (e.g., Child Health and Development Studies at UC Berkeley, DDT/breast cancer). Their expertise does not align with 'machine learning identification of hidden phenotypes in COPD.' This mismatch is a common hallmark of hallucinated citations.",
+    "title": "The title 'Machine learning identification of hidden phenotypes in chronic obstructive pulmonary disease' is somewhat generic but plausible-sounding. However, the combination with irrelevant authors and an invalid DOI strongly suggests it is fabricated, possibly by an AI system.",
+    "journal_name": "Missing entirely. A properly formatted citation must include a journal name. This omission alone strongly suggests the reference is fabricated.",
+    "journal_volume": "Volume 375 attempt might reference The Lancet or BMJ, but without a journal name and with a non-standard DOI, this is unreliable.",
+    "journal_issue": "No journal name is given at all. This is a critical component of any citation and its absence is a severe red flag.",
+    "journal_page": "Page range 236\u2013265 (30 pages) is unusually long for most journals. Without a journal name, this cannot be verified, but the combination of all issues points to fabrication.",
+    "elocator": "Volume 375, issue 9355, pages 236\u2013265 is mentioned, but no journal name is provided. A positive 30-page article with no journal title is a major omission. Volume 375 could correspond to The Lancet or BMJ, but neither matches this DOI or topic/author combination.",
+    "publication_date": "Year 2022 is provided, but without a journal name or valid DOI, this cannot be verified against a specific publication.",
+    "doi": "The DOI format '10.3498.95/6nizq-6ag29648-492rnjnl' is highly irregular. Standard DOIs begin with a registrant code (e.g., 10.1016, 10.1038) and are not assigned by publisher '3498.' The suffix appears random. The DOI does not resolve to any known legitimate publication.",
+    "pmcid": "No PMCID is provided.",
+    "pmid": "No PMID is provided."
+  }
+]

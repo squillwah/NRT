@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The reference contains multiple errors: author name is ambiguous, journal name is misspelled, DOI is likely invalid, and several components are missing. Therefore, the reference is not valid.",
+    "authors": "The author listing 'Lane R. Gagandeep Kang' is ambiguous and does not follow standard author formatting; it likely misrepresents the intended author names.",
+    "title": "The title 'Gagandeep Kang: helping to shape a healthier India' appears to be a plausible article title and is well-formed.",
+    "journal_name": "The journal name is spelled 'Sciecne', which is a typo; the correct name should be 'Science'.",
+    "journal_volume": "The volume number '398' is a valid numeric volume for a journal.",
+    "journal_issue": "No issue number is provided in the reference; it is missing.",
+    "journal_page": "The page range '947-947' is a valid page number format indicating a single page.",
+    "elocator": "No elocator (e.g., article number) is present in the reference.",
+    "publication_date": "The date '2021 Sep 11' is a valid date format, though non-standard; it corresponds to September 11, 2021.",
+    "doi": "The DOI '10.1038/science.abi9310' uses the prefix '10.1038' associated with Nature journals, not Science (AAAS), and is likely invalid or mismatched.",
+    "pmcid": "No PubMed Central ID (PMCID) is provided in the reference.",
+    "pmid": "No PubMed ID (PMID) is provided in the reference."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The reference is a hallucinated hybrid, mixing the author/title/volume/page of a Lancet article with a misspelled journal name and a mismatched DOI prefix.",
+    "authors": "Richard Lane is a known author for profile pieces in major medical journals like The Lancet.",
+    "title": "The title refers to Gagandeep Kang, a prominent Indian scientist, which matches the subject of known profiles by this author.",
+    "journal_name": "The string 'Sciejce (NewY ork, N.Y.)' is a corrupted version of 'Science' or 'The Lancet'.",
+    "journal_volume": "Volume 398 is consistent with The Lancet in 2021, but not the journal 'Science'.",
+    "journal_issue": "No specific issue number was provided in the citation string beyond the volume and page.",
+    "journal_page": "Page 947 in Volume 398 of The Lancet correctly corresponds to the profile of Gagandeep Kang.",
+    "elocator": "No elocator was provided in the citation.",
+    "publication_date": "The year 2021 is the correct publication year for this profile in The Lancet.",
+    "doi": "The DOI prefix 10.1038 belongs to Nature, and 'science.abi9310' is formatted like a Science DOI; however, this article is actually in The Lancet (DOI 10.1016/S0140-6736(21)02035-1).",
+    "pmcid": "No PMCID was provided in the citation.",
+    "pmid": "No PMID was provided in the citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "nlm",
+    "REFERENCE": "The reference has several suspicious elements indicating it may be fabricated or significantly altered.",
+    "authors": "The author is listed as 'Lane R.' which is a plausible short form, possibly referring to Richard Lane, a known profile writer for Science magazine. However, the format is incomplete (no full first name). No major red flags, but completeness is lacking.",
+    "title": "'Gagandeep Kang: helping to shape a healthier India.' - Gagandeep Kang is a real and prominent Indian virologist (elected to Royal Society in 2022). A Science profile of her is plausible, and the title format is consistent with Science's 'Biomedicine' or profile articles.",
+    "journal_name": "'Sciecne' is misspelled. The correct journal name is 'Science'. This is a critical flaw.",
+    "journal_volume": "Volume 398 is cited with September 2021 date, but Science volume 398 is approximately October 2022. This is a significant mismatch.",
+    "journal_issue": "The journal name is misspelled as 'Sciecne' instead of 'Science'. This is a clear and significant error. Additionally, the date September 2021 with volume 398 is inconsistent; Science volume 398 would correspond to approximately late 2022, not September 2021. September 2021 would align with volume ~374.",
+    "journal_page": "Page 947 of Science is not unreasonable for a single-page feature, but context is missing to fully verify.",
+    "elocator": "Article pages listed as '947-947' (single page). This is plausible for a short profile/obituary piece but unusual without more context.",
+    "publication_date": "'2021 Sep 11' with volume 398 creates an inconsistency. Science volume 398 is in 2022. September 2021 would correspond to volume ~373-374.",
+    "doi": "'10.1038/science.abi9310' uses the DOI prefix 10.1038 (Nature Publishing Group). Science magazine (AAAS) typically uses the prefix '10.1126/science.XXXXXX'. This prefix mismatch is a notable red flag, though not impossible. The DOI format also looks plausible at first glance.",
+    "pmcid": "'PMC9757805' appears to be a valid PMCID format, but without live verification against PubMed Central, its authenticity cannot be confirmed. The number range is plausible for 2022-2023.",
+    "pmid": "'34590223' is a plausible PMID number for 2021. Without checking against PubMed, it cannot be definitively verified, but the format is correct."
+  }
+]

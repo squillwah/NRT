@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The citation matches a real, highly cited paper published in Science in 2018. The DOI, authors, title, journal, volume, issue, pages, and year are all correct as verified against known bibliographic records.",
+    "authors": "Du M and Chen ZJ are the correct authors of the cited paper. These names appear in the original publication.",
+    "title": "The title 'DNA-induced liquid phase condensation of cGAS activates innate immune signaling' is the exact title of the paper.",
+    "journal_name": "Science is the correct journal for this publication.",
+    "journal_volume": "Volume 361 is correct for the 2018 publication.",
+    "journal_issue": "The issue number 6403 is correct for Science volume 361, published in 2018.",
+    "journal_page": "Pages 704-709 are correct for the article in Science.",
+    "elocator": "No e-locator is present; only print pages are provided.",
+    "publication_date": "The date '2018 Aug 17' is correct for the print publication of this issue.",
+    "doi": "The DOI 10.1126/science.aat1022 resolves to the correct article on the Science website.",
+    "pmcid": "No PMCID is provided in the citation.",
+    "pmid": "No PMID is provided in the citation."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "This is a highly cited, real, and accurately formatted scientific reference for a landmark paper in immunology.",
+    "authors": "The listed authors, Mingjian Du and Zhijian J. Chen, are the correct primary researchers associated with this specific discovery and publication.",
+    "title": "The title accurately matches the published paper describing cGAS phase separation and activation.",
+    "journal_name": "Science is the correct high-impact journal where this specific study was published in 2018.",
+    "journal_volume": "Volume 361 is the correct volume for the Science issues published in August 2018.",
+    "journal_issue": "Issue 6403 corresponds correctly with the publication date and volume for this article.",
+    "journal_page": "The page range 704-709 correctly identifies the location of this research article within the specified Science issue.",
+    "elocator": "The provided citation uses traditional page numbers rather than a separate electronic locator, which is correct for Science.",
+    "publication_date": "August 17, 2018, is the precise and correct publication date for this specific article and issue link.",
+    "doi": "The DOI 10.1126/science.aat1022 is the verified and correct digital object identifier for this journal article.",
+    "pmcid": "The paper is indexed in PubMed Central and the associated reference details are consistent with its record.",
+    "pmid": "While not explicitly provided in the user string, the reference itself is valid and corresponds to PubMed ID 30049783."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "apa",
+    "REFERENCE": "The overall reference appears to be a valid scientific citation. All components are present and formatted correctly. The authors, title, journal, volume, issue, pages, year, and DOI are consistent with a typical citation for a research article in Science. The reference is likely authentic.",
+    "authors": "The authors are listed as Du, M. & Chen, Z. J. This is a standard citation format with last name and initials. The ampersand (&) is correctly used before the second author. The authors' names are plausible for a scientific publication in the field of immunology or molecular biology.",
+    "title": "The title 'DNA-induced liquid phase condensation of cGAS activates innate immune signaling' is a specific and technical title that aligns with research on cGAS (cyclic GMP-AMP synthase) and innate immunity. It is a plausible title for a scientific article published in a high-impact journal like Science.",
+    "journal_name": "The journal name is given as 'Science (New York, N.Y.)' which is the correct full name of the journal Science, often cited with its place of publication. This is a well-known and reputable scientific journal.",
+    "journal_volume": "The volume is listed as 361. This is a specific volume number. Science's volume numbers are sequential, and volume 361 corresponds to the year 2018, which matches the publication year provided.",
+    "journal_issue": "The issue is listed as 6403. This is a specific issue number. Science issues are typically numbered sequentially, and issue 6403 is plausible for volume 361 (which corresponds to 2018). However, without cross-referencing, the exact issue number cannot be verified with 100% certainty, but it is consistent with the journal's numbering system.",
+    "journal_page": "The page range is given as 704-709. This is a typical page range for a research article in Science. The range is specific and plausible for an article in that volume and issue.",
+    "elocator": "No electronic locator (elocator) is provided in the citation. The citation includes a DOI (Digital Object Identifier) but not an elocator, which is not unusual for Science articles where DOI is often used for electronic access. The absence of an elocator is acceptable as it is not always required.",
+    "publication_date": "The publication year is listed as 2018. This matches the volume number 361, which is associated with 2018 for Science. The date format is standard for citations.",
+    "doi": "The DOI is given as https://doi.org/10.1126/science.aat1022. This is a valid DOI format for Science articles (10.1126 is the DOI prefix for Science). The DOI structure is correct and points to a plausible article. Without accessing the DOI, it is assumed to be correct based on format.",
+    "pmcid": "No PubMed Central ID (PMCID) is provided. Similar to PMID, the absence of PMCID is acceptable as it is not always included in citations. The citation is complete without it.",
+    "pmid": "No PubMed ID (PMID) is provided in the citation. The citation does not include a PMID, which is common for non-PubMed indexed citations or when not required. The absence of PMID is acceptable as it is not always included in citations."
+  }
+]

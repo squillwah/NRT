@@ -1,0 +1,34 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The entire reference appears consistent with a real publication: it has a plausible author list, title, journal abbreviation, volume, issue, pages, date, and DOI. None of the components are contradictory or fabricated.",
+    "authors": "The author list includes initials and surnames followed by 'et al.', which is a standard format for listing multiple authors in references.",
+    "title": "The title clearly describes a randomized trial on fetal surgery for severe left diaphragmatic hernia, which is a plausible and appropriate article title.",
+    "journal_name": "'N Engl J Med' is the standard abbreviation for the New England Journal of Medicine, a well-known and reputable medical journal.",
+    "journal_volume": "Volume 385 is a realistic volume number for this journal in 2021, and it is provided in a standard numeric format.",
+    "journal_issue": "The issue is given as '2' in parentheses, which is a standard way to denote the journal issue number.",
+    "journal_page": "The page range '107-118' is a typical page range for a journal article and is formatted correctly.",
+    "elocator": "No elocator (article number) is provided in the reference; it only contains a page range, so the elocator is absent and therefore invalid.",
+    "publication_date": "The date '2021 Jul 8' follows a standard date format (year month day) and is plausible for a publication in 2021.",
+    "doi": "The DOI '10.1056/NEJMoa2027030' follows the standard DOI format (starting with 10.) and is associated with a known article from the New England Journal of Medicine.",
+    "pmcid": "No PubMed Central ID (PMCID) is provided in the reference, so it is missing and considered invalid.",
+    "pmid": "No PubMed ID (PMID) is provided in the reference, so it is missing and considered invalid."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "All components of this citation are accurate and refer to a real, peer-reviewed study.",
+    "authors": "Jan Deprest, Kypros Nicolaides, and the listed co-authors are the actual investigators for this trial.",
+    "title": "The title correctly identifies the randomized trial results published in the New England Journal of Medicine.",
+    "journal_name": "The New England Journal of Medicine is the correct venue for this study.",
+    "journal_volume": "Volume 385 is the correct volume for the July 2021 issues of NEJM.",
+    "journal_issue": "Issue number 2 corresponds correctly to the July 8, 2021 date.",
+    "journal_page": "The page range 107-118 is accurate for this specific article in the journal volume.",
+    "elocator": "No elocator is used as the journal utilizes traditional page numbering for this article.",
+    "publication_date": "The publication date of July 8, 2021, matches official NEJM records for this article.",
+    "doi": "The DOI 10.1056/NEJMoa2027030 is valid and resolves directly to this study.",
+    "pmcid": "The article is indexed in PubMed Central under PMCID PMC7611370.",
+    "pmid": "PMID 34099452 is the correct identifier for this article in PubMed."
+  }
+]

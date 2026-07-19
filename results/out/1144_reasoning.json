@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The citation appears inauthentic. The journal name 'J Digit Clin Diagn' is not a recognized or established journal. The DOI format '10.7520.86.6/j8r-i0d5' is non-standard and does not match typical DOI structures. Additionally, the volume number (279) is unusually high for a new or niche journal, and the page range includes an 'e899541' article number in an inconsistent format. These inconsistencies strongly indicate fabrication.",
+    "authors": "Author names appear plausible and are not inherently suspicious, but without verification against known publications, they cannot be confirmed as authentic. However, given the overall inauthenticity of the citation, the authors are likely fabricated as well.",
+    "title": "The title 'Beyond COVID-19: scaling up and sustaining mobile health in Africa' is plausible and relevant to the subject. However, given the overall context, it is likely fabricated.",
+    "journal_name": "'J Digit Clin Diagn' is not a recognized journal in databases such as PubMed, Scopus, or Web of Science. There is no credible journal with this exact title. The abbreviation is also non-standard.",
+    "journal_volume": "Volume 279 is unusually high. Most journals, especially niche ones, do not reach such high volumes. This suggests the volume number is fabricated.",
+    "journal_issue": "The journal issue is not specified; only a date '2021 Jul 8' is given. Journals typically indicate volume and issue numbers, not just a specific date. The lack of issue number and the specific date format are atypical.",
+    "journal_page": "The page range '119-129' is plausible, but combined with the suspicious e-locator and volume, it is likely fabricated. The page numbers themselves are not inherently invalid.",
+    "elocator": "The page range '119-129:e899541' includes an 'e899541' component after a colon. While some journals use article numbers, this format is inconsistent and does not match standard e-locator patterns (e.g., 'e899541' alone). The combination of page numbers and an e-locator is unusual.",
+    "publication_date": "The date '2021 Jul 8' is unusually specific. Most journal articles list a month and year, not a precise day unless it is an online-first publication. This specificity is suspicious but not impossible.",
+    "doi": "The DOI '10.7520.86.6/j8r-i0d5' is not in a standard DOI format. Proper DOIs follow a pattern like '10.xxxx/xxxxx', with a prefix and suffix separated by a slash. The prefix '10.7520' is unusual, and the suffix '.86.6/j8r-i0d5' contains extra dots and characters not typical for DOIs.",
+    "pmcid": "No PMCID is provided in the citation. The citation includes a DOI but no PubMed Central ID, which is not necessarily suspicious, but its absence is noted.",
+    "pmid": "No PMID is provided. The citation lacks a PubMed ID, which is common for fabricated citations."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "This is a hallucinated citation consisting of a mix of real author names and entirely fabricated journal titles and identifiers.",
+    "authors": "Barbara Cohn and P.M. Cirillo are real researchers, but they typically publish on prenatal exposures and health, not African mHealth scaling.",
+    "title": "The title appears fabricated and does not appear in any academic databases in association with these authors.",
+    "journal_name": "'Journal of Digital Clinical Diagnosis' (J Digit Clin Diagn) is not a real registered medical journal.",
+    "journal_volume": "The volume number 279 combined with the year 2021 and these specific authors is inconsistent with any existing publication records.",
+    "journal_issue": "No issue number was explicitly provided, though the string 'e899541' acts as an elocator.",
+    "journal_page": "The page range 119-129 is provided but is associated with a non-existent journal and article.",
+    "elocator": "The elocator e899541 does not correspond to any known publication from the provided authors.",
+    "publication_date": "The specific date of July 8, 2021, is provided for a fictional article.",
+    "doi": "The DOI 10.7520.86.6/j8r-i0d5 is incorrectly formatted and does not resolve to any document or existing prefix.",
+    "pmcid": "No PMCID was provided in the reference string.",
+    "pmid": "No PMID was provided in the reference string."
+  },
+  {
+    "model": "minimax-m3",
+    "style": "harvard",
+    "REFERENCE": "Overall, this reference has multiple red flags indicating it is likely fabricated or contains significant errors: (1) The journal name 'Journal of Digital Clinical Diagnostics' does not correspond to a real, reputable journal; (2) The volume number '279' is implausibly high; (3) The issue field contains page numbers instead of an issue number; (4) The DOI format is invalid/non-standard. While the title and publication date seem plausible for the topic, the combination of these inconsistencies strongly suggests this reference is not authentic.",
+    "authors": "The author 'B.A. Cohn' is plausible as a real name but there is no widely known prominent researcher by this exact name associated with a major publication on mobile health in Africa. The abbreviated initials format is common but the specific author cannot be verified.",
+    "title": "The title 'Beyond COVID-19: scaling up and sustaining mobile health in Africa' is plausible and sounds like a realistic article title for the given topic and time period (2021). It fits with the trend of mHealth research in Africa.",
+    "journal_name": "The journal name 'Journal of Digital Clinical Diagnostics' does not appear to be a real journal. This name seems fabricated. There are journals like 'Journal of Clinical Diagnostics' or 'Digital Diagnostics' but the specific combination given does not match known reputable publications.",
+    "journal_volume": "The volume number '279' is unusually high for a clinical/diagnostics journal. Most journals in this field have volumes in single or double digits, or occasionally in the hundreds if they have been publishing for many decades. A volume of 279 would imply an extremely old journal or this is fabricated.",
+    "journal_issue": "The issue number '119-129' appears to be a page range rather than an issue number. This is a formatting error - issues are typically single or double digit numbers, while '119-129' looks like page numbers.",
+    "journal_page": "The page range '119-129' has been incorrectly used as an issue number. Page ranges in this format are plausible (11 pages), but the assignment is wrong since this appears in the issue field.",
+    "elocator": "The article eLocator 'e899541' has an unusual format. While PubMed uses eLocators like 'eXXXXXX', this specific number seems potentially fabricated.",
+    "publication_date": "The date '2021 Jul 8' is plausible for the topic discussed (mobile health during/after COVID-19). However, specific article publication dates in this format are less common.",
+    "doi": "The DOI '10.7520.86.6/j8r-i0d5' has an invalid structure. DOIs typically start with '10.' followed by a registrant code (usually 4+ digits) and a slash. The format '10.7520.86.6' with multiple periods is not standard, and 'j8r-i0d5' is not a typical DOI suffix. This appears to be a fabricated DOI.",
+    "pmcid": "No PMCID was provided in the reference.",
+    "pmid": "No PMID was provided in the reference."
+  }
+]

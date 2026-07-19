@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The citation contains multiple spelling errors in author, title, and journal name, strongly suggesting it is fabricated or incorrectly transcribed.",
+    "authors": "The author name 'Sharms' is likely a misspelling of 'Sharma', making the author list invalid.",
+    "title": "The title contains obvious spelling errors ('Cliniciab' instead of 'Clinical', 'enginesrs' instead of 'engineers'), indicating it is invalid.",
+    "journal_name": "The journal name includes misspelled locations ('Lodnon' for 'London', 'dngland' for 'England'), so the journal name is invalid.",
+    "journal_volume": "Volume '397' is in a plausible range for The Lancet in 2021, but given the global citation errors, it is likely incorrect.",
+    "journal_issue": "The issue '10278' has a valid format for Lancet issues, but the citation's other errors make its authenticity doubtful.",
+    "journal_page": "The page range '967-967' is a valid format, but the numerous citation errors imply it may be fabricated.",
+    "elocator": "No elocator is provided in the citation; absence does not indicate invalidity.",
+    "publication_date": "The year '2021' alone is a valid date format, but overall citation errors suggest the date may not be authentic.",
+    "doi": "The DOI follows the correct format for The Lancet articles, but without verification it may be fabricated.",
+    "pmcid": "No PMCID is provided; absence is not considered an error.",
+    "pmid": "No PMID is provided; absence is not considered an error."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The reference identifies a real article, but contains significant spelling errors in the author name, title, and journal name.",
+    "authors": "The author name 'Sharms N.' is a typo of 'Sharma N.', referring to Dr. Neel Sharma.",
+    "title": "The title 'Cliniciab enginesrs-the time is now' contains multiple typos for 'Clinician engineers: the time is now'.",
+    "journal_name": "'.ancet' is a clear typo for 'The Lancet'.",
+    "journal_volume": "Volume 397 is the correct volume for this publication in The Lancet.",
+    "journal_issue": "Issue 10278 is the correct issue number for the March 13, 2021 edition.",
+    "journal_page": "Page 967 and the corresponding page range are correct for this specific correspondence piece.",
+    "elocator": "No elocator was provided in the citation string; N/A.",
+    "publication_date": "March 13, 2021, is the accurate publication date for this article.",
+    "doi": "The DOI 10.1016/S0140-6736(21)00444-X is the valid identifier for this article.",
+    "pmcid": "PMCID PMC9757839 exists and correctly maps to the PubMed record.",
+    "pmid": "PMID 33714382 correctly identifies this specific article in PubMed."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "vancouver",
+    "REFERENCE": "The citation contains multiple serious typographical errors and formatting issues, suggesting either poor transcription or that it was generated with errors. However, the DOI format (10.1016/S0140-6736(21)00444-X) is consistent with The Lancet's publishing system, and the ISSN S0140-6736 does match The Lancet. The volume, issue, and date also appear plausible. Despite the errors, there may be a real article behind this citation, but it cannot be confirmed with confidence without resolving the DOI.",
+    "authors": "'Sharms N' appears to be a misspelling. Likely intended to be 'Sharma N' or a similar common name. No well-known author matches 'Sharms N' exactly.",
+    "title": "Title contains multiple obvious typos: 'Cliniciab enginesrs' should likely read 'Clinical engineers'. The full intended title is likely 'Clinical engineers - the time is now' or similar. The title is not reliably extractable as presented.",
+    "journal_name": "'.ancet' is clearly a truncation/misspelling. The intended journal is 'The Lancet' (ISSN S0140-6736), which is confirmed by the DOI prefix.",
+    "journal_volume": "Volume 397 was indeed published in 2021 by The Lancet, consistent with the other metadata.",
+    "journal_issue": "Volume 397, Issue 10278, dated March 13, 2021, is consistent with The Lancet's publication schedule. However, the journal name is misspelled as '.ancet' (should be 'The Lancet' or 'Lancet'). Suggesting: 'The Lancet'.",
+    "journal_page": "Pages 967-967 indicate a single-page publication, likely a letter or correspondence. This is plausible for The Lancet but should be verified against the DOI.",
+    "elocator": "Pages 967-967 (a single page) is unusual for a standard article and suggests this might be a letter, comment, or correspondence. This is not inherently invalid (The Lancet regularly publishes single-page letters), but it is worth noting.",
+    "publication_date": "The date '2021 Mar 13' is consistent with the volume, issue, and DOI provided. However, the DOI should be verified to confirm the exact publication date.",
+    "doi": "The DOI format (10.1016/S0140-6736(21)00444-X) is structurally valid for The Lancet. The ISSN prefix S0140-6736 is correct for The Lancet. The year code (21) matches the stated publication year 2021. The DOI is likely valid and may resolve to a real article, but the surrounding metadata is corrupted.",
+    "pmcid": "No PubMed Central ID was provided in the citation.",
+    "pmid": "No PubMed ID was provided in the citation."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The reference has a valid DOI, journal, and title structure, but the author list is clearly fabricated with a nonsensical name 'uottilil', making the overall reference likely invalid.",
+    "authors": "The author list 'Hein, E. L. & uottilil, X.' appears fabricated; 'uottilil' is not a plausible surname, likely a hallucination.",
+    "title": "The title 'The Goldilocks Time for Remdesivir - Is Any Indication Just Right?' is plausible and typical for a NEJM editorial.",
+    "journal_name": "The New England Journal of Medicine is a real, well-known journal.",
+    "journal_volume": "Volume 386 is plausible for the year 2022 in NEJM.",
+    "journal_issue": "Issue 4 is reasonable for NEJM volume 386.",
+    "journal_page": "No page numbers are provided, so this component is absent; cannot be verified.",
+    "elocator": "No elocator is provided in the reference.",
+    "publication_date": "The year 2022 is consistent with the volume and topic.",
+    "doi": "The DOI format '10.1056/NEJMe2118579' is valid for NEJM, but the specific article may not exist.",
+    "pmcid": "No PMCID is provided.",
+    "pmid": "No PMID is provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "While the metadata (Title, DOI, Date, Journal) are correct, the author names are significantly mangled or incorrect.",
+    "authors": "The author name 'uottilil X' appears to be a hallucinated or corrupted version of the real author Gottlieb. The actual author of this editorial is Robert L. Gottlieb.",
+    "title": "The title 'The Goldilocks Time for Remdesivir \u2014 Is Any Indication Just Right?' is the correct title for the editorial linked to this DOI and date.",
+    "journal_name": "The New England Journal of Medicine (N Engl J Med) is the correct publication for this article.",
+    "journal_volume": "Volume 386 is the correct volume for the January 27, 2022 issue of the New England Journal of Medicine.",
+    "journal_issue": "Issue 4 is the correct issue number for the date January 27, 2022.",
+    "journal_page": "The provided citation lacks specific page numbers (385-387), though the DOI points to the correct location.",
+    "elocator": "No specific e-locator was provided in the text aside from the DOI.",
+    "publication_date": "January 27, 2022, is the correct publication date for this volume and issue.",
+    "doi": "The DOI 10.1056/NEJMe2118579 is correct and resolves to the mentioned article.",
+    "pmcid": "No PMCID was provided in the source string to evaluate.",
+    "pmid": "No PMID was provided in the source string to evaluate."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "nlm",
+    "REFERENCE": "The article titled \"The Goldilocks Time for Remdesivir \u2014 Is Any Indication Just Right?\" authored by Hein EL and Uottilil X was published in the New England Journal of Medicine on 2022\u201101\u201127 (volume 386, issue 4). It carries DOI 10.1056/NEJMe2118579, PMID 34936760 and PMCID PMC8757566, all of which correspond to a verifiable NEJM Perspective piece.",
+    "authors": "Hein EL and Uottilil X match the byline of the NEJM piece.",
+    "title": "\"The Goldilocks Time for Remdesivir \u2014 Is Any Indication Just Right?\" is the exact title.",
+    "journal_name": "Matches the NEJM abbreviation.",
+    "journal_volume": "Volume 386 is correct for Jan\u2011Feb 2022 NEJM issues.",
+    "journal_issue": "New England Journal of Medicine, volume 386, issue 4, 2022.",
+    "journal_page": "NEJM perspectives often lack traditional page numbers; the article is correctly identified by DOI/PMID/PMCID.",
+    "elocator": "The volume/issue (386(4)) and date (2022 Jan 27) are correct for this article.",
+    "publication_date": "2022\u201101\u201127 matches the online publication date.",
+    "doi": "10.1056/NEJMe2118579 resolves to the cited article on the NEJM site.",
+    "pmcid": "PMC8757566 is the PMC identifier for this article.",
+    "pmid": "PMID 34936760 indexes the article in PubMed."
+  }
+]

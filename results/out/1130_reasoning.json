@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The citation claims a 2000 publication for a study that is actually a well-known 2009 trial by Schweickert et al. in The Lancet. The journal 'Cell Systems Biology Reviews' does not exist; the volume/issue numbers (283, 8107) are inconsistent with any real publication. The DOI '10.6665.2.5/v13r/' is not a valid DOI format. No author is listed. Therefore, the reference is fabricated.",
+    "authors": "No authors are provided in the citation. This is a missing required component.",
+    "title": "The title 'Early physical and occupational therapy in mechanically ventilated, critically ill patients: a randomised controlled trial' matches the title of a real study by Schweickert et al. (2009). However, since the rest of the citation is fake, the title is likely copied from the real study but misattributed. The title itself is valid, but in this context it is used incorrectly.",
+    "journal_name": "'Cell Systems Biology Reviews' is not a recognized journal in any major database. It appears to be a fabricated name combining elements of real journals (e.g., 'Cell Systems' and 'Biology Reviews') but does not exist.",
+    "journal_volume": "Volume 283 is stated, but for a 2000 publication this is not plausible for a journal that does not exist. The combination of volume 283 and issue 8107 is nonsensical.",
+    "journal_issue": "The journal name 'Cell Systems Biology Reviews' does not match any known legitimate journal. The volume/issue '283(8107)' is implausible: volume 283 with issue 8107 is inconsistent with standard numbering. Most real journals use sequential volume numbers and smaller issue numbers.",
+    "journal_page": "No page numbers are provided in the citation. This is a missing required component for a journal article.",
+    "elocator": "The elocator 'e827146' is given, but the DOI and journal are fake, so this elocator is not verifiable. Even if the DOI were real, elocators are typically assigned by the publisher, and this format is unusual.",
+    "publication_date": "The year '2000' is given. The real study was published in 2009. The date is incorrect for this known trial.",
+    "doi": "The DOI '10.6665.2.5/v13r/' is not a valid DOI format. Real DOIs use a standard structure like '10.xxxx/yyyy' and do not contain slashes in the suffix after a prefix. This is likely fabricated.",
+    "pmcid": "No PMCID is provided. Not applicable.",
+    "pmid": "No PMID is provided. Not applicable."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "This is a fabricated reference that misattributes a real study title to a non-existent journal and invalid DOI.",
+    "authors": "No authors are provided in the citation string.",
+    "title": "The title provided belongs to a famous study by Schweickert et al. published in The Lancet, not this source.",
+    "journal_name": "'Cell Systems Biology Reviews' does not appear to be an indexed or existing scientific journal.",
+    "journal_volume": "The volume number 283 is inconsistent with the date and the non-existent journal.",
+    "journal_issue": "Issue 8107 is an unusually high number and does not correspond to standard publication patterns.",
+    "journal_page": "No page numbers are provided, only an elocator.",
+    "elocator": "The article ID e827146 does not match the actual publication for the provided title.",
+    "publication_date": "The title was actually published in 2009, not February 2, 2000.",
+    "doi": "The DOI 10.6665.2.5/v13r/ is syntactically invalid and does not resolve to any document.",
+    "pmcid": "No PMCID was provided in the citation.",
+    "pmid": "No PMID was provided in the citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "nlm",
+    "REFERENCE": "This citation is almost certainly fabricated/inauthentic. While the title matches a well-known landmark study (Schweickert et al., 2009), virtually every bibliographic component is falsified.",
+    "authors": "No authors are listed in the provided citation, which is a red flag. The real study is by Schweickert WD, Pohman MC, Owen AS, et al. The absence of authors is an immediate indicator of inauthenticity.",
+    "title": "The title matches a real, well-known RCT: 'Early physical and occupational therapy in mechanically ventilated, critically ill patients: a randomised controlled trial' by Schweickert et al., published in The Lancet in 2009. Only the title appears to be genuine.",
+    "journal_name": "The journal 'Cell Syst Biol Rev.' appears to be entirely fictional, possibly an attempt to mimic a legitimate journal. The actual publication is The Lancet.",
+    "journal_volume": "Volume '283' does not correspond to The Lancet's volume numbering for 2000 or 2009. The original paper appeared in volume 373.",
+    "journal_issue": "The journal name 'Cell Syst Biol Rev.' does not exist in any recognizable publication database. The original study was published in The Lancet. Volume 283 and issue 8107 do not match The Lancet's publication scheme. These details are fabricated.",
+    "journal_page": "No page numbers are provided. The actual study appeared in Lancet. 2009;373(9678):1874\u20131882.",
+    "elocator": "The identifier 'e827146' is not a standard electronic locator used by any major publisher. The original paper used the format Lancet. 2009;373:1963\u20131874.",
+    "publication_date": "The date '2000 Feb 2' is completely wrong. The actual study was published on May 30, 2009. This error compounds the evidence of fabrication.",
+    "doi": "The DOI '10.6665.2.5/v13r/' does not follow any standard DOI format. Real DOIs, registered by Crossref or DataCite, use publisher-registered prefixes (e.g., 10.1016/S0140-6736 for The Lancet). This string is not a valid DOI and appears randomly generated.",
+    "pmcid": "PMC90710972 does not correspond to this paper. The valid PMCID for the Schweickert study is different. This value appears fabricated.",
+    "pmid": "PMID 110138642 does not correspond to this study and may not exist at all. The real PMID is in the 19-million range (e.g., ~19422696). This is a fabricated PMID."
+  }
+]

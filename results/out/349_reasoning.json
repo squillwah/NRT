@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The reference contains multiple invalid components (title typos, missing volume and pages, invalid DOI), making the overall reference invalid.",
+    "authors": "The author list contains one name 'Peirks JWM' which appears to be a valid author name format (last name and initials). No obvious errors.",
+    "title": "The title 'pne world, one helath' likely contains typographical errors ('pne' should be 'one', 'helath' should be 'health'), making it invalid.",
+    "journal_name": "The journal name 'BMJ' is a well-known abbreviation for the British Medical Journal, which is a valid journal.",
+    "journal_volume": "No volume number is provided in the reference; only an issue number '(8)' is present. Volume is missing, hence invalid.",
+    "journal_issue": "The issue number '(8)' is presented in parentheses and is a plausible issue number for a 2021 BMJ issue, though its exact validity is uncertain.",
+    "journal_page": "No page numbers are provided in the reference, making the page component invalid.",
+    "elocator": "No elocator (article number) is present in the reference.",
+    "publication_date": "The date '2021 Apr 15' is a valid date format and appears plausible for a publication.",
+    "doi": "The DOI '01.1016/.jcell.2021.03.021' has an incorrect prefix ('01.' instead of '10.') and contains an extra slash, making it invalid.",
+    "pmcid": "The PMCID 'PMC8935930' follows the standard format of 'PMC' followed by digits, so it is structurally valid.",
+    "pmid": "The PMID '33831373' is an 8-digit number in the typical PubMed ID format, so it is structurally valid."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "This is a fabricated reference containing typos in the title, a non-existent author, and a malformed DOI that points to a different publisher.",
+    "authors": "The author name appears to be a hallucination or misspelling; no record exists for a researcher named Peirks with these initials in medical literature.",
+    "title": "The title 'pne world, one helath' contains obvious typographical errors for 'One World, One Health' and does not match any BMJ publication.",
+    "journal_name": "The BMJ is a legitimate medical journal, though the associated metadata in this citation is incorrect.",
+    "journal_volume": "The citation lacks a volume number, providing only an issue number in parentheses.",
+    "journal_issue": "The BMJ uses continuous weekly numbering rather than simple single-digit issue numbers like (8) for a yearly cycle.",
+    "journal_page": "No page numbers are provided in the citation.",
+    "elocator": "No electronic locator or article ID was provided.",
+    "publication_date": "The year 2021 is a valid calendar year, but no specific article with this metadata was published in the BMJ that year.",
+    "doi": "The DOI prefix 01.1016 is invalid (standard is 10.xxxx) and the suffix .jcell suggests the journal Cell, not The BMJ.",
+    "pmcid": "No PMCID was provided in the citation.",
+    "pmid": "No PMID was provided in the citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "apa",
+    "REFERENCE": "This reference appears to be fabricated and not authentic.",
+    "authors": "The author name 'Peirks, J. W. M.' does not correspond to any known researcher associated with the BMJ or the 'One World, One Health' concept. The name itself appears unusual and potentially invented.",
+    "title": "The title 'pne world, one helath' contains obvious misspellings and appears to be a corrupted version of the concept 'One World, One Health.' A legitimate BMJ publication would not have such errors in its title as presented in a citation. This strongly suggests the title was fabricated or poorly transcribed.",
+    "journal_name": "The journal name 'The BMJ' (British Medical Journal) is authentic and is a real, high-impact medical journal. However, the article details provided do not match any known publication in this journal.",
+    "journal_volume": "The volume is not properly specified. BMJ references require a volume number, not just a number in parentheses without context.",
+    "journal_issue": "The journal name 'The BMJ' is authentic; it is a legitimate, well-known publication. However, the associated issue/volume/format (8) does not correctly correspond to BMJ's publication structure.",
+    "journal_page": "No page numbers are provided in the reference. A complete BMJ citation would typically include pagination (e.g., e05447 for an article).",
+    "elocator": "The 'elocator' (the (8) after the journal name) is rendered incorrectly. BMJ articles typically use a structured volume/issue/pagination format (e.g., 2021;372:n7852). A solitary '(8)' is not a valid BMJ elocator or issue notation.",
+    "publication_date": "The year '2021' is a plausible publication year, but it cannot be verified without a specific month/day for this (likely non-existent) article.",
+    "doi": "The DOI is clearly malformed. Legitimate DOIs begin with '10.' not '01.' The prefix '1016' is associated with Elsevier, but the structure '.jcell.2021.03.021' does not follow standard DOI formatting for any known journal. This is not a valid, resolvable DOI.",
+    "pmcid": "No PMCID (PubMed Central ID) is provided in the reference.",
+    "pmid": "No PMID (PubMed ID) is provided in the reference."
+  }
+]

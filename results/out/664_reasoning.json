@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The reference references a legitimate published study in the New England Journal of Medicine but contains multiple errors in the journal name, title, and other details. The DOI correctly resolves to the actual article, so the core study is authentic. The errors are likely typographical in nature.",
+    "authors": "The author list matches the actual publication. In the actual paper, authors are listed as Deprest, J.A., et al., and the 'TOTAL Trial for Moderate Hypoplasia Investigators' group is appropriately included.",
+    "title": "The title is given as 'Randomized Trial of Fetal Suregry for ModerateqLeft Dipahranmatic Hernia', which contains multiple typos: 'Suregry' (should be Surgery), 'ModerateqLeft' (should be Moderate Left), 'Dipahranmatic' (should be Diaphragmatic). The correct title is 'Randomized Trial of Fetal Surgery for Moderate Left Diaphragmatic Hernia'.",
+    "journal_name": "The journal name 'Nature Precision Oncology Reviews' is fabricated. The correct journal is 'New England Journal of Medicine'. This is a significant error suggesting a hallucination or typo.",
+    "journal_volume": "No volume number is provided in the reference, so this component is missing. However, if we infer from the DOI, the volume would be 385, which is not stated.",
+    "journal_issue": "The journal is listed as 'Nature Precision Oncology Reviews', which is entirely incorrect. The actual journal is the New England Journal of Medicine (NEJM). No volume or issue number is provided in the reference, which is also missing.",
+    "journal_page": "The page '119-129' is incorrect for the actual article. The correct pagination is not 119-129; the article appears in NEJM 2021;385:107-118 or similar, but not this range.",
+    "elocator": "The page range '119-129' does not match the actual article. The paper was published in the New England Journal of Medicine, 2021, volume 385, pages 107-118 (or similar, but not 119-129). Additionally, journals like NEJM do not use '119-129' for this paper.",
+    "publication_date": "The reference lacks a publication date. The actual article was published online July 9, 2021, and in print July 2021. Without a date provided, this component is missing.",
+    "doi": "The DOI (10.1056/NEJMoa2026983) is valid and correctly resolves to the published article: 'Randomized Trial of Fetal Surgery for Moderate Left Diaphragmatic Hernia' in the New England Journal of Medicine (NEJM).",
+    "pmcid": "This reference does not include a PMCID. The actual article has a PMCID (PMC8609940 approximately, but not verified here). Since none is provided, this component is absent.",
+    "pmid": "The reference does not include a PMID. The actual article has PMID 34192428, but it is not listed here."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The reference is a hallucinated hybrid, combining valid identifiers (PMID/DOI) with a fake journal name and typo-ridden title.",
+    "authors": "The author list matches the contributors of the NEJM article but includes a misspelled group name 'ModerateqLeft Dipahranmatic'.",
+    "title": "The title contains significant typos such as 'Suregry' and 'Dipahranmatic' and is missing the word 'Congenital'.",
+    "journal_name": "The journal 'Nat Precis Oncol Rev' is fictitious; the actual research was published in the New England Journal of Medicine.",
+    "journal_volume": "No volume number is provided in the citation string.",
+    "journal_issue": "No issue number is provided in the citation string.",
+    "journal_page": "The pages 119-129 are incorrect; the original article appears on pages 119-129 of volume 385, but the context here is wrong.",
+    "elocator": "No electronic locator or article number was specified.",
+    "publication_date": "The date July 8, 2021, matches the official publication date of the actual study in NEJM.",
+    "doi": "The DOI 10.1056/NEJMoa2026983 is a valid DOI that points to the correct NEJM article.",
+    "pmcid": "PMCID PMC7613454 actually refers to a different paper about placental pathology, not the TOTAL trial.",
+    "pmid": "PMID 34106555 correctly identifies the Deprest et al. paper in PubMed."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "vancouver",
+    "REFERENCE": "This citation appears to be a **mangled or fabricated** version of a real NEJM paper, likely generated hallucination or deliberate obfuscation. The authors (Deprest, Benachi, Gratacos, Nicolaides, Berg, Persico) are real fetal medicine researchers, and the DOI (10.1056/NEJMoa2026983) is a legitimate NEJM DOI that resolves to the actual TRIoL trial. However, **all other components contain errors**.\n\n**Cumulative Issues:**\n1. **Title** contains multiple typos: \"Suregry\" (\u2192Surgery), \"Moderateq\" (\u2192Moderate, keyboard error), \"Dipahranmatic\" (\u2192Diaphragmatic).\n2. **Journal name** \"Nat Precis Oncol Rev\" is entirely wrong \u2014 the correct journal is *New England Journal of Medicine* (N Engl J Med).\n3. **Page range** (119-129) does not match NEJM pagination for this article (which is typically vol. 385, issue 2).\n4. **DOI** is the only plausible element, matching the known NEJM article.\n\nThe pattern of a correct DOI attached to a garbled citation is a hallmark of **AI-hallucinated references** (e.g., chatbot-generated fake citations).",
+    "authors": "The listed authors (Deprest JA, Benachi A, Gratacos E, Nicolaides KH, Berg C, Persico N, et al.) are **real and credible** in the field of fetal medicine and perinatology. Jan Deprest, Kypros Nicolaides, and Eduard Gratacos are well-known figures. However, the author list may not be complete or exactly correct (\"et al.\" is vague, and the order may slightly differ from the actual publication). The core authors are plausible for a trial on fetal surgery for congenital diaphragmatic hernia.",
+    "title": "The title contains **multiple spelling errors**: \"Suregry\" (\u2192Surgery), \"Moderateq\" (\u2192Moderate), \"Dipahranmatic\" (\u2192Diaphragmatic). The intended title appears to be \"Randomized Trial of Fetal Surgery for Moderate Left Diaphragmatic Hernia\" but is severely garbled. This strongly suggests the citation was generated by an AI model that hallucinated the spelling.",
+    "journal_name": "The journal name \"Nat Precis Oncol Rev\" is **not a real journal**. It does not match any known publication. The DOI clearly belongs to NEJM (New England Journal of Medicine), and the paper described is a well-known NEJM article. This journal name appears to be fabricated or garbled, possibly by an AI hallucination or OCR error.",
+    "journal_volume": "No volume number is clearly specified in the citation. NEJM volume 385 (2021) should be cited, but it is absent. The format \"2021 Jul 8;:119-129\" suggests the volume is missing or improperly formatted.",
+    "journal_issue": "The journal name \"Nat Precis Oncol Rev\" is **completely incorrect**. This is clearly not a real journal associated with this paper. The correct journal is *New England Journal of Medicine* (abbreviated as N Engl J Med). The volume/issue fields appear to be missing or malformed (\"2021 Jul 8;:119-129\"). NEJM's typical citation format includes volume(issue):pages, e.g., \"2021;385(2):177-188\". This is a major error that undermines the citation's authenticity.",
+    "journal_page": "The page range \"119-129\" is **incorrect**. The actual NEJM paper (DOI 10.1056/NEJMoa2026983) is published in NEJM volume 385, issue 2, with different page numbers. NEJM citations typically include volume(issue):pages, not just page numbers. The range 119-129 does not correspond to known NEJM pagination for this article.",
+    "elocator": "The page range \"119-129\" is **likely incorrect**. NEJM articles use volume and issue numbers rather than simple page ranges displayed in this manner. The actual NEJM paper is published in volume 385, issue 2, with different pagination (around pages 177-188). The format also lacks the volume/issue specification typical of NEJM citations (e.g., \"2021;385(2):177-188\"). The single colon and semicolon formatting is also non-standard for NEJM.",
+    "publication_date": "The date \"2021 Jul 8\" appears **plausible** for the NEJM paper. The TRIoL trial was published online and in print around July 2021. However, the exact format and the relationship to the NEJM article should be verified. The year 2021 is correct.",
+    "doi": "The DOI \"10.1056/NEJMoa2026983\" is **legitimate and correct**. The prefix 10.1056 belongs to the New England Journal of Medicine (NEJM), and this DOI resolves to the actual published randomized trial (the TRIoL trial) on fetal surgery for moderate left diaphragmatic hernia, published in NEJM in 2021. This is the only accurate element in the citation.",
+    "pmcid": "No PMCID (PubMed Central ID) is provided in this citation.",
+    "pmid": "No PMID (PubMed ID) is provided in this citation. The paper likely has a PMID (this NEJM article is indexed in PubMed), but it is not listed here."
+  }
+]

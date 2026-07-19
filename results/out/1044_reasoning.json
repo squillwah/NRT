@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference is questionable due to four main issues: (1) The journal title 'Nature Metabolism and Disease' does not exist as a legitimate journal. (2) Topol, E.J. (a prominent cardiologist) is unlikely to author a paper on muscarinic M1 receptor agonists for Alzheimer's disease. (3) The title appears to be a reworded version of a real paper (M1 receptor agonist design), but the journal and volume/page details do not match any known publication. (4) The article number 'e878192' is not a standard format for this supposed journal.",
+    "authors": "The author 'Topol, E.J.' is a real, credible researcher (Eric J. Topol), but his known expertise is in cardiology, genomics, and digital health, not drug design for Alzheimer's disease. While he could theoretically co-author on interdisciplinary work, the specific topic here is outside his established publication record, making it suspicious.",
+    "title": "The title 'From structure to clinic: Design of a muscarinic M1 receptor agonist with potential to treatment of Alzheimer's disease' contains grammatical errors ('potential to treatment'). The genuine paper from 2021 by other authors is titled 'Design of a Muscarinic M1 Receptor Agonist for the Treatment of Alzheimer\u2019s Disease' (Molecular Psychiatry), not this version.",
+    "journal_name": "The journal name 'Nature Metabolism and Disease' is not a legitimate publication. Springer Nature publishes 'Nature Metabolism' (established 2019) and 'Nature Medicine', but no combined 'Metabolism and Disease' title.",
+    "journal_volume": "The volume number '374' is plausible and consistent with Nature journals' volume numbering (Nature uses volumes around 374 in the 1990s; Nature Metabolism would not have volume 374). This alone does not verify authenticity.",
+    "journal_issue": "The journal 'Nature Metabolism and Disease' does not exist in the Springer Nature portfolio. No known journal with this exact name is indexed in major databases. This is likely a fabricated or misremembered title.",
+    "journal_page": "The page range '1353-1360' is plausible for a research article, but the journal itself is fictitious, making the page numbers meaningless.",
+    "elocator": "The elocator 'e878192' is an unusual format for articles in Nature-branded journals. Nature journals typically use page numbers or single article numbers like '1234', not alphanumeric strings starting with 'e'. This format resembles PMID or manuscript IDs rather than a standard article number.",
+    "publication_date": "The date '2021 Dec 10' is a standard format, but no known article matching this description was published on that date in a legitimate journal.",
+    "doi": "No DOI is provided in the reference. Without a DOI, the authenticity of the article cannot be verified through this component.",
+    "pmcid": "No PMCID is provided.",
+    "pmid": "No PMID is provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "The citation is entirely hallucinated, combining a real author's name with a fake journal and metadata belonging to a different journal (Science).",
+    "authors": "Eric J. Topol is a real cardiologist and researcher, but his work is focused on digital medicine and genomics, not the pharmacological design of muscarinic agonists.",
+    "title": "The title appears to be a hallucinated blend of structural biology and clinical trials that does not correspond to any known publication by the cited author.",
+    "journal_name": "There is no journal titled 'Nature Metabolism and Disease'; it likely conflates 'Nature Metabolism' and 'Nature Communications' or similar titles.",
+    "journal_volume": "Volume 374 is characteristic of the journal Science, not a Nature-branded journal which typically uses smaller single or double-digit volume numbers annually.",
+    "journal_issue": "The issue number 6573 is consistent with Science (e.g., Dec 2021) and appears to have been copied from a Science citation and misattributed here.",
+    "journal_page": "The pagination 1353-1360 exists in Science Vol 374 Issue 6573, but for a completely different paper by an author named Brown et al.",
+    "elocator": "The article number e878192 does not follow standard nomenclature for the cited journals or the metadata provided.",
+    "publication_date": "While Dec 10, 2021 was a Friday when Science published Issue 6573, the date is associated with a fake paper in a non-existent journal.",
+    "doi": "No DOI was provided in the prompt, but the combination of metadata suggests a non-existent digital object.",
+    "pmcid": "There is no PubMed Central ID for this hallucinated entry.",
+    "pmid": "There is no PubMed ID associated with this title or the combination of author and fictitious journal."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": "This citation contains multiple indicators of fabrication. (1) The journal 'Nature Metabolism and Disease' does not exist. While journals like Nature Metabolism, Nature Medicine, and Nature Neuroscience exist, this combined title is fictional. (2) Volume 374 issue 6573 is internally inconsistent: volume 374 would correspond to approximately 2003 for a Nature-branded journal (Nature's own volume was ~489 in 2021), contradicting the 2021 publication year. (3) Eric J. Topol (E.J. Topol) is a real and prominent researcher, but his expertise lies primarily in digital medicine, cardiology, and artificial intelligence in medicine\u2014not in muscarinic receptor pharmacology or Alzheimer's drug design. (4) 'article e878192' does not follow a standard DOI format (which begins with 10.xx/...). The citation appears to be entirely or largely fabricated.",
+    "authors": "Eric J. Topol is a real, well-known researcher (Scripps Research, previously Cleveland Clinic). However, he is not known for work in muscarinic M1 receptor agonist design or Alzheimer's drug design. Misattribution of the author to an irrelevant paper topic is a strong indicator of fabrication.",
+    "title": "The title 'From structure to clinic: Design of a muscarinic M1 receptor agonist with potential to treatment of Alzheimer's disease' is grammatically awkward ('with potential to treatment' should be 'with potential to treat' or 'with potential for the treatment'). While the topic is plausible in principle, no such paper exists by Topol.",
+    "journal_name": "The journal 'Nature Metabolism and Disease' does not exist. This is a fabricated journal name combining elements of real Nature publications.",
+    "journal_volume": "Volume 374 is incompatible with a 2021 publication. For Nature, volume 374 would correspond to approximately 2003.",
+    "journal_issue": "Volume 374 issue 6573 is inconsistent with a 2021 publication date for any Nature-branded journal. Nature's volume number in 2021 was approximately 589\u2013594. The issue number 6573 is plausible for Nature's online numbering but contradicts the volume number. The journal name itself is non-existent.",
+    "journal_page": "Pages 1353-1360 are plausible for a Nature journal, but since the journal itself is fictional, the pages cannot be verified.",
+    "elocator": "The e-locator 'e878192' does not follow standard DOI formats used by Nature or other publishers.",
+    "publication_date": "The date '2021 Dec 10' is a plausible publication date format, but the entire citation is fabricated, so the date cannot be verified as authentic.",
+    "doi": "The string 'article e878192' is not a valid DOI. DOIs follow the format 10.xxxx/... (e.g., 10.1038/xxx). This appears to be a fabricated article identifier.",
+    "pmcid": "No PMCID is provided or extractable from this citation.",
+    "pmid": "No PMID is provided or extractable from this citation."
+  }
+]

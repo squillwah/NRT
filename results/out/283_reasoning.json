@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference contains multiple invalid components (title, journal name, volume, DOI, and anachronistic content) indicating it is fabricated or severely corrupted.",
+    "authors": "The author 'NCD Risk Factor Collaboration (NCD-RisC)' is a recognized collaborative group, commonly cited in health studies.",
+    "title": "The title contains numerous typographical errors and anachronistically mentions early COVID-19 in a 2016 publication, making it implausible and invalid.",
+    "journal_name": "The journal name 'hature' is a misspelling of 'Nature', which is not valid as given.",
+    "journal_volume": "Volume 387 of Nature corresponds to 1997, not 2016, so it is inconsistent with the publication date and likely incorrect.",
+    "journal_issue": "No journal issue is provided in the reference, which is typically required for citations; its absence makes it invalid.",
+    "journal_page": "No page numbers are provided in the reference, making this component invalid.",
+    "elocator": "No elocator is provided in the reference, so it is considered invalid.",
+    "publication_date": "The date '(2016 Apr 2)' is valid in format but inconsistent with the volume and anachronistic subject matter (COVID-19), suggesting fabrication.",
+    "doi": "The DOI '01.1016/S0140-6736(16)0s054-X' begins with '01.' instead of '10.' and contains a misspelling ('0s'), making it invalid.",
+    "pmcid": "No PMCID is provided in the reference, so it is invalid.",
+    "pmid": "No PMID is provided in the reference, so it is invalid."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The reference is a hallucinated hybrid; it combines the metadata of a 2016 Lancet BMI study with a fictitious, typo-ridden COVID-19 title and a misspelled journal name.",
+    "authors": "NCD Risk Factor Collaboration (NCD-RisC) is a legitimate research group, however, they typically publish on height, weight, and blood pressure rather than COVID-19 trials.",
+    "title": "The title refers to COVID-19 in a 2016 publication date, which is a chronological impossibility; the text also contains numerous typos.",
+    "journal_name": "Natyre is a misspelling of Nature, and the volume number provided (387) corresponds to Nature in 1997, not 2016.",
+    "journal_volume": "Volume 387 of Nature was published in 1997, not 2016. For The Lancet (implied by the DOI), volume 387 was published in 2016.",
+    "journal_issue": "No specific issue number was provided in the citation string.",
+    "journal_page": "No page range is provided, and the number 387 is used as the volume.",
+    "elocator": "No electronic locator suffix was identified in the citation.",
+    "publication_date": "April 2016 is an existing date, but it is inconsistent with the subject matter (COVID-19).",
+    "doi": "The DOI 10.1016/S0140-6736(16)00054-X (correcting for typos) belongs to a Lancet paper on BMI, not a COVID-19 trial in Nature.",
+    "pmcid": "No PMCID was provided in the reference.",
+    "pmid": "PMID 27115820 refers to a 2016 Lancet paper on BMI by NCD-RisC, not a paper about COVID-19."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": "This reference is **not authentic** and appears to be fabricated or severely corrupted. Multiple critical issues are present:\n\n1. **Impossible timeline**: The publication year is 2016, but COVID-19 did not emerge until late 2019. A clinical trial on COVID-19 cannot have been published in 2016.\n\n2. **Author group mismatch**: The NCD Risk Factor Collaboration (NCD-RisC) is a well-known consortium that studies global trends in non-communicable disease risk factors (e.g., blood pressure, obesity). They do not conduct COVID-19 clinical trials.\n\n3. **Severely garbled title**: The title contains numerous typos and nonsensical strings: \"PEP flure,\" \"im\" (instead of \"in\"), \"ynon-drug,\" \"randomisedocontrolled,\" \"tdial\" (instead of \"trial\"), \"vanish communit ysetting\" \u2014 none of which are coherent.\n\n4. **Journal name is corrupted**: \"hature\" appears to be a garbled reference to *Nature* or *The Lancet*.\n\n5. **DOI is malformed**: The DOI \"doi:01.1016/S0140-6736(16)0s054-X\" contains errors: an extraneous \"01.\" prefix, the ID \"0s054\" is non-standard, and it combines elements suggesting *The Lancet* (ISSN 0140-6736) but is otherwise nonsensical.\n\n**Verdict**: This reference is fabricated/non-existent. It exhibits hallmarks of AI hallucination or deliberate construction with intentional errors.",
+    "authors": "NCD Risk Factor Collaboration (NCD-RisC) is a real research consortium credited with publications in *The Lancet* and other journals, typically on global trends in cardiovascular and metabolic risk factors. However, they are not associated with COVID-19 clinical trials. The group does not match the described study.",
+    "title": "The title is garbled with numerous typographical errors: 'PEP flure' (unrecognizable), 'im' (should be 'in'), 'ynon-drug' (garbled), 'randomisedocontrolled' (corrupted), 'tdial' (should be 'trial'), 'vanish communit ysetting' (nonsensical). This is not a valid scholarly title.",
+    "journal_name": "The provided journal name 'hature' is not a real journal. The DOI structure suggests *The Lancet* (ISSN 0140-6736). This is incoherent.",
+    "journal_volume": "Volume 387 is mentioned. The Lancet did have a volume 387 in 2016, but the COVID-19 context makes this impossible.",
+    "journal_issue": "The journal name 'hature' is corrupted and does not match any known publication. It may be a garbled version of *Nature* or *The Lancet*. Cannot be verified.",
+    "journal_page": "No page number is provided.",
+    "elocator": "387 is a plausible volume number for The Lancet, but given the other errors, it cannot be verified.",
+    "publication_date": "The date '2016 Apr 2' is impossible for a COVID-19 study. COVID-19 was first identified in December 2019.",
+    "doi": "The DOI '10.1016/S0140-6736(16)0s054-X' is malformed. While 10.1016 is the correct Elsevier prefix and 0140-6736 is *The Lancet*'s ISSN, the identifier contains errors: '01.' is extraneous, and '0s054' is not a valid DOI suffix. This DOI does not resolve to any real publication.",
+    "pmcid": "No PMCID is provided.",
+    "pmid": "No PMID is provided."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference contains multiple errors. The journal title 'International Journal of Robotic Surgery' does not match the doi prefix 10.1056 (which belongs to New England Journal of Medicine). The article title contains gibberish ('Cortica; responses hi touch revlect subcortical integration of LTMR signals'), and the given surname structure 'Greene, J.A. and Riggs, K.R..' has an extra period after initials. The DOI format and volume/pages are also inconsistent with the presumed source. Overall, this reference is fabricated or highly unreliable.",
+    "authors": "Author names appear plausible but the formatting error (double period after initials) is minor and does not definitively invalidate them. No clear evidence of fabrication exists for authors alone.",
+    "title": "The title contains nonsensical text ('Cortica; responses hi touch revlect subcortical integration of LTMR signals'), which is clearly erroneous and not a valid scientific title.",
+    "journal_name": "The journal name 'International Journal of Robotic Surgery' is not the journal of the given DOI (which is New England Journal of Medicine). This is a clear mismatch.",
+    "journal_volume": "'372' is a valid NEJM volume number, but the journal name should be NEJM, not the given one. The volume number itself is plausible for NEJM.",
+    "journal_issue": "'372(12)' is consistent with typical volume/issue formatting, but the journal name 'International Journal of Robotic Surgery' does not match the DOI's source (NEJM). The issue element itself (volume 372, issue 12) exists for NEJM, but the journal context is wrong.",
+    "journal_page": "The page range '1171-1175' is provided but does not match the actual article associated with the DOI. Also, it is inconsistent with the journal named.",
+    "elocator": "The elocator (page range) 'pp. 1171-1175' is provided but does not correspond to the given DOI; the actual article with this DOI has different pagination. It is not a valid elocator for this citation.",
+    "publication_date": "The date '(2015 Mar 19)' is a plausible publication date, but it does not correspond to the DOI's actual publication date (which is different). The date format is acceptable.",
+    "doi": "The DOI '10.1056/NEJMms1411398' is valid and belongs to the New England Journal of Medicine. However, the article metadata does not match the given citation (title, journal other than NEJM, year, pages). The DOI itself is real.",
+    "pmcid": "No PMCID is listed in the citation.",
+    "pmid": "No PMID is listed in the citation."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "The reference is a 'chimera' combining real authors and a real DOI with a completely fabricated title and journal name.",
+    "authors": "Jeremy A. Greene and Kevin R. Riggs are real medical historians/researchers, but they didn't author this specific content.",
+    "title": "The title appears to be a hallucinated blend of neurobiology and robotic surgery descriptors not authored by the listed individuals.",
+    "journal_name": "The International Journal of Robotic Surgery exists, but is not associated with the provided DOI or metadata.",
+    "journal_volume": "Volume 372 is inconsistent with the International Journal of Robotic Surgery and actually belongs to the NEJM metadata.",
+    "journal_issue": "Issue 12 is part of the metadata for the NEJM DOI provided, but doesn't apply to the hallucinated robotic surgey citation.",
+    "journal_page": "The pages 1171-1175 match the NEJM paper associated with the DOI, but not the title or journal provided.",
+    "elocator": "No elocator was provided in the reference string.",
+    "publication_date": "The date March 19, 2015, matches the NEJM publication for the DOI provided but not the robotic surgery title.",
+    "doi": "The DOI 10.1056/NEJMms1411398 is real but belongs to a paper by Greene and Riggs titled 'Why Is This Product Still on the Market?'.",
+    "pmcid": "No PMCID was provided in the reference string.",
+    "pmid": "No PMID was provided in the reference string."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "apa",
+    "REFERENCE": "This citation contains multiple significant errors and inconsistencies that indicate it is **fabricated or heavily corrupted**.",
+    "authors": "The authors listed as Greene, J. A. & Riggs, K. R. are not known as the authors of a paper matching this title or journal. The identity of these authors in this context cannot be verified.",
+    "title": "The title 'Cortica; responses hi touch revlect subcortical integration of LTMR signals' is riddled with obvious typos: 'Cortica;' should be 'Cortical,' 'hi' should be 'to,' 'revlect' should be 'reflect.' The term 'LTMR' (Low-Threshold Mechanoreceptors) is a legitimate neuroscience term, but the title is clearly corrupted.",
+    "journal_name": "The stated journal is 'International Journal of Robotic Surgery,' but the DOI prefix and volume numbering point to the **New England Journal of Medicine (NEJM)**. This is a critical inconsistency indicating the citation is fabricated or badly corrupted.",
+    "journal_volume": "Volume 372 is consistent with NEJM's volume numbering but not with 'International Journal of Robotic Surgery.' This further confirms the journal is misidentified.",
+    "journal_issue": "The journal 'International Journal of Robotic Surgery' is a real journal, but the subject matter of the title (cortical responses to touch, subcortical integration of LTMR signals) is a **neuroscience topic** and is completely incongruent with a robotic surgery journal.",
+    "journal_page": "The page range 1171-1175 is plausible for a journal article but cannot be verified against the stated journal due to the journal/DOI mismatch. The pages are consistent with NEJM's formatting rather than the stated robotic surgery journal.",
+    "elocator": "The volume number 372, issue 12 and page range 1171-1175 are plausible in isolation (consistent with NEJM numbering), but they do not match the stated journal 'International Journal of Robotic Surgery,' which would not have such a high volume number.",
+    "publication_date": "The year 2015 is listed, but given the overall fabrication of this citation, it cannot be verified.",
+    "doi": "The DOI prefix '10.1056' is associated with the **New England Journal of Medicine (NEJM)**, not with the stated journal 'International Journal of Robotic Surgery.' This is a fundamental mismatch. The DOI itself does not correspond to the cited components.",
+    "pmcid": "No PMCID is provided in this citation.",
+    "pmid": "No PMID is provided in this citation."
+  }
+]

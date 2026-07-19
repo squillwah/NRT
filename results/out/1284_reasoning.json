@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The reference combines a plausible title and author format with a fabricated journal, invalid DOI, and improbable identifiers, making it overall invalid.",
+    "authors": "The author names (e.g., Lennox XZ, Northwood KM) follow a plausible format for scientific citations, but the combination seems unusual and likely fabricated.",
+    "title": "The title 'Long-term safety of anti-TNF therapies in pediatric inflammatory bowel disease: a multi-country, registry-based cohort study' is a plausible and valid title for a medical study.",
+    "journal_name": "The journal name 'AIDS HIV Pathogen Transcript' is not a known, legitimate journal; it appears fabricated.",
+    "journal_volume": "Volume 88 is plausible but arbitrary without a valid journal context.",
+    "journal_issue": "Issue 7502 is highly unusual and unlikely for a real journal volume; it suggests fabrication.",
+    "journal_page": "Pages 350-363 are reasonable for a journal article.",
+    "elocator": "No elocator (e.g., article number) is present in the reference.",
+    "publication_date": "The date '2011 Feb 11' is plausible but inconsistent with the fabricated journal and identifiers.",
+    "doi": "The DOI '10.5265/nw2-18o349' does not follow standard DOI format (e.g., missing prefix like 10.1000) and is likely invalid.",
+    "pmcid": "The PMCID 'PMC27672406' is in a valid format but is likely fabricated given other inconsistencies; moreover, it doesn\u2019t correspond to a known article.",
+    "pmid": "The PMID '303068214' exceeds the valid range (up to about 40 million as of 2025), indicating it is invalid."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The reference is entirely hallucinated; the title, journal, and DOI do not exist in academic databases.",
+    "authors": "The author list appears to be a composite of unrelated names and does not correspond to any known academic collaboration for the cited topic.",
+    "title": "The title discusses pediatric inflammatory bowel disease, which is clinically unrelated to the journal focus on AIDS and HIV pathogenesis.",
+    "journal_name": "The journal name appears to be a fabrication or a combination of niche sub-topics rather than a recognized peer-reviewed periodical.",
+    "journal_volume": "The volume and issue numbers (88 and 7502) are inconsistent with standard journal pagination and indexing practices.",
+    "journal_issue": "Issue 7502 is highly improbable for a standard academic journal published in 2011.",
+    "journal_page": "While the page range 350-363 is a realistic format, it belongs to a non-existent article.",
+    "elocator": "No specific elocator was provided beyond standard page numbers and a DOI.",
+    "publication_date": "There is no record of an article with this title or author set published in 2011.",
+    "doi": "The DOI '10.5265/nw2-18o349' does not resolve to any known publication and the prefix 10.5265 is not registered to a major medical publisher.",
+    "pmcid": "No PMCID is provided, and the study does not exist in the PubMed Central repository.",
+    "pmid": "No PMID is provided for this citation, and it cannot be found in the PubMed database."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "vancouver",
+    "REFERENCE": "Multiple components (journal title, issue number, DOI) are inconsistent with legitimate bibliographic records. The reference appears to be fabricated.",
+    "authors": "The author list could be plausible, but no verifiable record matches these exact names in the cited article.",
+    "title": "The title describes a legitimate\u2011sounding study, but it does not appear in any indexed biomedical literature under this wording.",
+    "journal_name": "\"AIDS HIV Pathogen Transcript\" is not a recognized journal; no ISSN or indexing information exists for this title.",
+    "journal_volume": "Volume 88 is possible for many journals, but combined with issue 7502 it is implausible.",
+    "journal_issue": "Issue number 7502 is extraordinarily high and not used by any reputable periodical.",
+    "journal_page": "Page range 350\u2011363 could be realistic, but without a valid journal it cannot be verified.",
+    "elocator": "No electronic locator is provided; the reference relies solely on page numbers.",
+    "publication_date": "The date 11\u202fFeb\u202f2011 is syntactically correct, but the surrounding bibliographic data are inconsistent.",
+    "doi": "The DOI \"10.5265/nw2-18o349\" does not resolve to any known record; the prefix 10.5265 is not assigned to a legitimate publisher for this suffix pattern.",
+    "pmcid": "No PMCID is supplied, and no matching record exists in PubMed Central.",
+    "pmid": "No PMID is supplied, and a search of PubMed yields no matching entry."
+  }
+]

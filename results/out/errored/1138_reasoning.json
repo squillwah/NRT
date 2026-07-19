@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The citation contains multiple inconsistencies: the journal 'Lung Cancer Translational Genomics' does not exist and is unrelated to the paper's topic on sugar-sweetened beverage taxes and childhood obesity; the volume number '(14200)' is implausible; the pages '785-785' are suspicious; and the DOI uses the prefix for the New England Journal of Medicine (10.1056) but has a suffix referencing BMJ and a year (2021) that does not match the claimed publication year (2008).",
+    "authors": "The author names appear plausible but are not verifiable. However, the overall citation is clearly fabricated, so the authors are likely also fabricated or misattributed.",
+    "title": "The title 'Impact of a nationwide sugar-sweetened beverage tax on childhood obesity rates: an interrupted time-series analysis' is plausible and well-formed, but it is placed in a completely unrelated journal, indicating it is likely fabricated or misattributed.",
+    "journal_name": "The journal 'Lung Cancer Translational Genomics' does not exist in standard databases. There is no such journal; the topic of the paper (sugar-sweetened beverage tax and childhood obesity) is completely unrelated to lung cancer, confirming it is fabricated.",
+    "journal_volume": "The volume number '14200' is implausibly high and not a standard format. This is clearly fabricated.",
+    "journal_issue": "The issue number '(14200)' is an implausibly high volume number, unlikely for any journal. This is a strong indicator of fabrication.",
+    "journal_page": "Same as elocator: page range '785-785' is identical, which is suspicious and likely fabricated.",
+    "elocator": "The page numbers '785-785' are identical, which is unusual and often indicates a placeholder or error. Combined with the fake journal, this is likely fabricated.",
+    "publication_date": "The year 2008 is stated, but the DOI suggests a 2021 publication, and the journal is fake, so the date is likely fabricated.",
+    "doi": "The DOI '10.1056/bmj-2021-066952' is inconsistent: the prefix 10.1056 belongs to the New England Journal of Medicine, but the suffix 'bmj-2021-066952' suggests a BMJ article from 2021, conflicting with the claimed 2008 publication. This is a clear sign of fabrication.",
+    "pmcid": "No PMCID is provided in the citation.",
+    "pmid": "No PMID is provided in the citation."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "This is a hallucinated citation combining unrelated authors, an impossible journal title, and inconsistent identifiers.",
+    "authors": "The listed authors do not appear to have co-authored a paper with this title or in this journal.",
+    "title": "The title discusses beverage taxes and obesity, which is completely unrelated to the journal's focus on Lung Cancer.",
+    "journal_name": "Lung Cancer Translational Genomics is not a recognized major medical journal or indexed publication name.",
+    "journal_volume": "The volume provided (14200) is atypically large and the journal itself appears nonexistent.",
+    "journal_issue": "No specific issue number was provided in the citation.",
+    "journal_page": "The page range 785-785 is usually associated with abstracts or is a placeholder in fabricated citations.",
+    "elocator": "No elocator was provided in the citation.",
+    "publication_date": "The date 2008 conflicts with the DOI which suggests the year 2021.",
+    "doi": "The DOI 10.1056/bmj-2021-066952 is invalid; NEJM uses 10.1056 while BMJ uses 10.1136.",
+    "pmcid": "No PMCID was provided for this citation.",
+    "pmid": "No PMID was provided for this citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "apa",
+    "REFERENCE": null,
+    "authors": null,
+    "title": null,
+    "journal_name": null,
+    "journal_volume": null,
+    "journal_issue": null,
+    "journal_page": null,
+    "elocator": null,
+    "publication_date": null,
+    "doi": null,
+    "pmcid": null,
+    "pmid": null
+  }
+]

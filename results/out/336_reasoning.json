@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "Overall, the reference is partially authentic: the title, journal, volume, issue, pages, publication date, and PMID are correct, but the DOI and PMCID are erroneous. The missing authors and incorrect identifiers reduce its authenticity. While the article exists, the citation as presented contains significant inaccuracies.",
+    "authors": "The citation does not list authors. The provided string starts with the title, omitting authors. This is a component error, but the reference could still be authentic if authors are known to exist. However, missing authors in a formal citation is a significant deficiency.",
+    "title": "The title 'DNA-induced liquid phase condensation of cGAS activates innate immune signaling' matches the known publication by Du and Chen (Science, 2018).",
+    "journal_name": "'Science' is the correct journal for this article.",
+    "journal_volume": "Volume 361 matches the publication year (2018) and is correct.",
+    "journal_issue": "Issue 6403 is correct for August 17, 2018 issue of Science.",
+    "journal_page": "Pages 704-709 are confirmed as correct for this article.",
+    "elocator": "No elocator provided; not applicable.",
+    "publication_date": "'2018 Aug 17' matches the online publication date of this Science article.",
+    "doi": "The DOI '01.1126/science.aato022' is incorrect. The correct DOI is '10.1126/science.aat1022'. '01.1126' is a typo for '10.1126', and the article ID 'aato022' is likely a misprint of 'aat1022'. This component is invalid.",
+    "pmcid": "PMCID PMC9417938 is incorrect. The correct PMCID for this article is PMC6102410 (or PMC8309929 for a later version, but not PMC9417938). The provided PMCID appears fabricated or belongs to a different publication.",
+    "pmid": "PMID 29975794 is correct and matches the article."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "While the core bibliographic data (title, journal, volume, pages) is correct, the DOI is formatted incorrectly and authors are missing.",
+    "authors": "The provided citation snippet does not list authors, though the actual paper was written by Du and Chen or Ming-Jie Li et al. (depending on the specific group).",
+    "title": "The title matches the publication from 2018 regarding cGAS and liquid phase condensation perfectly.",
+    "journal_name": "Science (New York, N.Y.) is a valid and correct journal name for this article.",
+    "journal_volume": "Volume 361 is the correct volume for the August 2018 issues of Science.",
+    "journal_issue": "Issue 6403 is the correct issue number for the specified date and volume.",
+    "journal_page": "The page range 704-709 correctly identifies the location of this specific article within the issue.",
+    "elocator": "No specific elocator (like an e-number) is provided, but standard page numbers are used.",
+    "publication_date": "August 17, 2018, is the correct publication date for Science Issue 6403.",
+    "doi": "The DOI 01.1126/science.aato022 is a hallucination or typo; the real DOI starts with '10.1126'.",
+    "pmcid": "The PMC ID was not provided in the citation string.",
+    "pmid": "The PubMed ID was not provided in the citation string."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "apa",
+    "REFERENCE": "The citation contains multiple inaccuracies: missing author list, incorrectly formatted DOI (missing '10.'), and nonstandard placement of the year. These defects indicate the reference is not a genuine, correctly formatted citation.",
+    "authors": "The citation omits any author names, listing only the year in parentheses before the title. A genuine journal article would include the authors (e.g., Wang et al.) before the year.",
+    "title": "The title 'DNA-induced liquid phase condensation of cGAS activates innate immune signaling' matches a known 2018 Science paper, so the title itself is correct.",
+    "journal_name": "'Science (New York, N.Y.)' is the correct full name for the journal Science, so this component is accurate.",
+    "journal_volume": "Volume 361 is correct for the 2018 Science issue containing this article.",
+    "journal_issue": "Issue 6403 corresponds to the August 2018 issue of Science where the article appeared, making this correct.",
+    "journal_page": "The page range 704-709 matches the actual pages of the article in that issue.",
+    "elocator": "No electronic locator (e.g., article number) is present or needed for this article; the field is correctly absent.",
+    "publication_date": "The year 2018 is correct, though it is placed oddly before the title instead of after the authors. The year itself is accurate.",
+    "doi": "The DOI is malformed: it lacks the required '10.' prefix (shows '01.1126/science.aato022' instead of '10.1126/science.aato022'). This makes the DOI invalid and unresolvable.",
+    "pmcid": "No PMCID is provided; again, its absence alone does not imply falseness.",
+    "pmid": "No PMID is provided, and while many Science articles have one, its absence does not indicate inauthenticity. The field is simply missing."
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The citation claims to be from BMJ, but the DOI (10.1126/science.abd3623) corresponds to an article in Science. The authors, title, year, volume, and pages match the Science article exactly, but the journal name is incorrect. Therefore, the reference is not authentic due to the journal component.",
+    "authors": "The author list matches the actual Science publication (Otten R, P\u00e1dua RAP, Bunzel HA, Nguyen V, Pitsawong W, Patterson M, et al.).",
+    "title": "The title 'How directed evolution reshapes the energy landscape in an enzyme to boost catalysis' is exactly the same as the Science article.",
+    "journal_name": "The journal name is BMJ, but the actual journal is Science. This is a critical error.",
+    "journal_volume": "Volume 370 is correct for the Science article.",
+    "journal_issue": "The journal is incorrectly listed as BMJ; the correct journal is Science.",
+    "journal_page": "Pages 1442-1446 match the Science article.",
+    "elocator": "The pages 1442-1446 are correct for the Science article (Vol. 370, Issue 6519).",
+    "publication_date": "The date '2020 Dec 18' matches the Science article's publication date.",
+    "doi": "The DOI 10.1126/science.abd3623 is valid and points to the correct article in Science.",
+    "pmcid": "No PMCID provided in the citation. Not applicable.",
+    "pmid": "No PMID provided. Not applicable."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The reference is a 'hallucinated' mixture of a real paper's metadata with the wrong journal name (BMJ instead of Science).",
+    "authors": "The listed authors correctly correspond to the original Science publication but are incorrectly attributed to a BMJ citation.",
+    "title": "The title matches the publication by Otten et al. (2020) found in Science magazine, not BMJ.",
+    "journal_name": "The journal BMJ (Clinical research ed.) is a medical journal and does not include this biochemistry research; it was published in Science.",
+    "journal_volume": "Volume 370 is for Science in 2020, but BMJ volume 370 contains different medical research.",
+    "journal_issue": "The citation does not specify an issue number, though it is usually required for clear identification.",
+    "journal_page": "Pages 1442-1446 are correct for the Science publication but do not match the BMJ indexing system.",
+    "elocator": "No elocator is provided in the citation string.",
+    "publication_date": "The year 2020 is correct for the publication of this specific work in Science.",
+    "doi": "The DOI 10.1126/science.abd3623 is a valid DOI for Science and leads to the correct paper.",
+    "pmcid": "No PMCID was provided in the citation string.",
+    "pmid": "No PMID was provided in the citation string."
+  }
+]

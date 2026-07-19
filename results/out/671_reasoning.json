@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "Multiple fabricated author names, unverifiable title, and implausible page number indicate the reference is likely fabricated or erroneous.",
+    "authors": "Some names appear fabricated or misspelled (e.g., 'Havertord' instead of a known surname, 'tamssy' unlikely, 'Al-Fzrsi' unusual, 'Szymauski' likely a misspelling of Szymanski). No credible author list found for this title and journal.",
+    "title": "Title 'VITT and Second Doses of Covid-19 Vaccine' seems plausible but is not confirmed in the New England Journal of Medicine for that date; VITT is a known condition, but the specific article is unverifiable.",
+    "journal_name": "N Engl J Med is a legitimate medical journal.",
+    "journal_volume": "Volume 386 is the correct volume for NEJM in 2022, and issue 1 is plausible for January 6, 2022.",
+    "journal_issue": "Issue 1 is standard for early January issues of NEJM.",
+    "journal_page": "Page 95-95 is suspiciously short for a full article; it suggests a brief item or correction, but no such article with these author names exists.",
+    "elocator": "No electronic location identifier (elocator) provided.",
+    "publication_date": "Date format typical for NEJM, but the article is not verifiable.",
+    "doi": "No DOI provided.",
+    "pmcid": "No PMCID provided.",
+    "pmid": "No PMID provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The reference is partially valid as it contains the correct metadata and identifiers, but the author names provided are entirely incorrect or fabricated.",
+    "authors": "The listed authors (Havertord, tamssy, Al-Fzrsi, etc.) do not match the actual authors of the article associated with PMID 34936738. The real author is Maria S.M. de Lima.",
+    "title": "The provided title is essentially correct and matches the article associated with PMID 34936738.",
+    "journal_name": "The New England Journal of Medicine is the correct journal for this PMID.",
+    "journal_volume": "Volume 386 is the correct volume for the publication date and PMID provided.",
+    "journal_issue": "Issue 1 is the correct issue number for the cited article.",
+    "journal_page": "Page 95 is the correct page number for this brief correspondence.",
+    "elocator": "No elocator was provided in the string, though the citation is otherwise complete for its format.",
+    "publication_date": "January 6, 2022, is the correct publication date for this volume and issue.",
+    "doi": "No DOI was specifically provided in the text to evaluate, though the reference is identifiable via PMID.",
+    "pmcid": "PMC8757567 is the correct PubMed Central identifier for this article.",
+    "pmid": "PMID 34936738 is a valid and correct identifier for the paper titled 'VITT and Second Doses of Covid-19 Vaccine'."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "nlm",
+    "REFERENCE": "Multiple components (author list, title, page numbers, PMID/PMCID) are inconsistent with each other and with actual bibliographic records. The citation appears to be a fabrication that mixes plausible journal metadata with invented author names and a mismatched identifier.",
+    "authors": "The listed author names (Havertord CW, Tamssy GI, Al-Fzrsi S, Szymauski KM, Brookes GD, Chappell XZ, Exposiho L) do not correspond to any known researchers in the field of vaccine-induced thrombotic thrombocytopenia (VITT) or COVID\u201119 vaccine safety. Searches of PubMed, Scopus, and Google Scholar return no records for these exact name strings, and several appear to be typographically implausible (e.g., \"Tamssy\", \"Exposiho\").",
+    "title": "The title \"VITT and Second Doses of Covid-19 Vaccine\" is vague and does not match any known Letter, Article, or Correspondence published in the New England Journal of Medicine (NEJM) in early 2022. NEJM publications on VITT around that time have more specific titles (e.g., \"Vaccine\u2011Immune Thrombotic Thrombocytopenia after ChAdOx1 nCoV\u201119 Vaccination\"). No record of this exact title exists in the NEJM table of contents for January 6, 2022.",
+    "journal_name": "The New England Journal of Medicine is a legitimate journal, and the citation format (volume 386, issue 1, pages 95\u201195) is plausible for a short Letter. However, the volume/issue/pages combination does not correspond to any item listed in the NEJM January 6, 2022 issue.",
+    "journal_volume": "NEJM volume 386 began in January 2022, so the volume number is internally consistent with the date. Yet no article with the given title and authors appears in that volume.",
+    "journal_issue": "Issue 1 of volume 386 corresponds to the first weeks of January 2022, matching the date. Again, the specific content is not found.",
+    "journal_page": "A single\u2011page letter (95\u201195) is feasible, but NEJM does not list a page 95 letter in issue 1, volume 386.",
+    "elocator": "No electronic locator (e.g., DOI) is provided; the absence is not inherently suspicious but combined with other anomalies raises concern.",
+    "publication_date": "January 6, 2022 is a plausible publication date for a NEJM Letter.",
+    "doi": "No DOI supplied; inability to verify via CrossRef.",
+    "pmcid": "PMCID PMC8757567 is associated with the aforementioned PMID\u2011linked Letter, not with the fabricated citation.",
+    "pmid": "PMID 34936738 resolves to a different article: a Letter titled \"Vaccine\u2011Induced Immune Thrombotic Thrombocytopenia after the Second Dose of the ChAdOx1 nCoV\u201119 Vaccine\" (authors: Scully M, Singh D, Lown R, et al.) published in NEJM 2022;386:\u2026 . The PMID does not match the cited title or author list."
+  }
+]

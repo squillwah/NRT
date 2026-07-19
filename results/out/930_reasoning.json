@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The reference appears fabricated because the article title corresponds to a NEJM trial, the DOI prefix is incorrect for Science, and the page range is unusually long.",
+    "authors": "While the author list follows standard formatting, the authors do not correspond to any known publication on this topic in Science; the entire reference is fabricated.",
+    "title": "The title accurately describes a known clinical trial, but it was actually published in NEJM, not Science; within this fabricated context it is invalid.",
+    "journal_name": "Science is a real journal, but it did not publish this article; the reference is fabricated.",
+    "journal_volume": "Volume 373 is a valid Science volume for 2021, but no such article exists in that volume.",
+    "journal_issue": "Issue 6562 corresponds to a real issue of Science, but the article is not present.",
+    "journal_page": "The page range 1026-1069 is implausibly long for a typical Science research article, which usually spans 5-10 pages.",
+    "elocator": "No elocator is provided in the reference, making it invalid.",
+    "publication_date": "The publication year 2021 is plausible, but the real trial was published in 2022 in NEJM; the reference is fabricated.",
+    "doi": "The DOI uses prefix 10.1038, which is reserved for Nature, not Science; the suffix does not correspond to any known article.",
+    "pmcid": "No PMCID is provided in the reference.",
+    "pmid": "No PMID is provided in the reference."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "This is a hallucinated citation that mixes a real paper title (from NEJM) with an incorrect author, incorrect journal (Science), and a fake DOI.",
+    "authors": "The author P.R. Dewhurst is not associated with this study; the actual primary author of the New England Journal of Medicine paper on this topic is Robert L. Gottlieb.",
+    "title": "The title is real but belongs to a study published in the New England Journal of Medicine, not Science.",
+    "journal_name": "The study was published in the New England Journal of Medicine (NEJM), not the journal Science.",
+    "journal_volume": "Volume 373 of Science exists, but it does not contain this article; the actual NEJM volume for this paper is 386.",
+    "journal_issue": "Issue 6562 of Science is unrelated to this clinical trial.",
+    "journal_page": "The pages 1026-1069 do not exist for this article title, which appeared later in NEJM.",
+    "elocator": "No elocator was provided in the citation string beyond the DOI.",
+    "publication_date": "The date Sept 24, 2021, is incorrect; the landmark NEJM paper was published online in December 2021 and in print in 2022.",
+    "doi": "The DOI 10.1038/science.abj3321 is invalid; Science uses the prefix 10.1126, and Nature uses 10.1038.",
+    "pmcid": "No PMCID was provided in the source text to evaluate.",
+    "pmid": "No PMID was provided in the source text to evaluate."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": "This citation contains multiple serious red flags indicating it is likely fabricated or heavily corrupted.",
+    "authors": "The first author 'Dewhurst, P.R.' does not match any known major author of a remdesivir outpatient trial. The well-known study on early remdesivir in outpatients is by Gottlieb RL et al., published in the New England Journal of Medicine.",
+    "title": "The title 'Early Remdesivir to Prevent Progression to Severe Covid-19 in Outpatients' closely matches the title of the Gottlieb et al. (2022) paper in NEJM, but the citation attributes it to the wrong authors, journal, DOI, and possibly date.",
+    "journal_name": "The paper described \u2014 'Early Remdesivir to Prevent Progression to Severe Covid-19 in Outpatients' \u2014 was published in the New England Journal of Medicine (NEJM) by Gottlieb et al. (2022), not in Science.",
+    "journal_volume": "Volume 373 of Science corresponds to 2021, which is consistent with the year given but does not validate the citation given the other errors.",
+    "journal_issue": "While Science does publish issues in the 373 range around 2021, and 6562 is a plausible issue number, the volume/issue pairing cannot be verified as correct given the DOI and author mismatches.",
+    "journal_page": "The page range 1026-1069 is suspiciously wide for a single article and does not correspond to any known remdesivir outpatient study.",
+    "elocator": "The page range '1026-1069' spans 44 pages, which is extraordinarily long for a single research article in Science or any major journal.",
+    "publication_date": "The date '2021 Sep 24' uses an inconsistent format (might be meant as September 24, 2021). It does not match the publication date of the actual remdesivir outpatient study (February 16, 2022 in NEJM).",
+    "doi": "The DOI '10.1038/science.abj3321' uses the prefix 10.1038, which is assigned to Nature Publishing Group. Science magazine is published by AAAS, whose DOI prefix is 10.1126. This is a fundamental mismatch \u2014 a Science paper would never carry a 10.1038 DOI.",
+    "pmcid": "No PubMed Central ID is provided in this citation.",
+    "pmid": "No PubMed ID is provided in this citation, which is a limitation but not an error per se."
+  }
+]

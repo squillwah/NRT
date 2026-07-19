@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The reference is fabricated (fraudulent) because the author list does not match the actual paper. The title, journal, DOI, PMID, and PMCID are all real and accurately copied from a genuine publication, but the authors are completely wrong. The Consortium of Universities for Global Health Executive Board is a real entity, but its members are not the authors of this molecular biology study.",
+    "authors": "The author list 'Koplan JP, Bond TC, Merson MH, Reddy KS, Rodriguez MH, Sewankambo NK, Wasserheit JN, Consortium of Universities for Global Health Executive Board' is fabricated. The paper referenced (Nature. 2019 Sep;573(7772):144-148) is actually about DEAD-box ATPases and phase-separated organelles, with completely different authors (e.g., Hondele M, Sachdev R, Heinrich S, et al.). The Consortium of Universities for Global Health Executive Board is a real group but has no connection to this molecular biology topic.",
+    "title": "The title 'DEAD-box ATPases are global regulators of phase-separated organelles' is correct for the Nature paper cited, but it does not match the listed authors. This is a textbook case of a fraudulent reference where the title and journal details are stolen from a real paper.",
+    "journal_name": "Nature is a legitimate scientific journal. The issue and volume (2019 Sep;573(7772):144-148) match a real publication in Nature. However, the authors are mismatched.",
+    "journal_volume": "Volume 573, issue 7772, pages 144-148 are correct for the real Nature paper on DEAD-box ATPases.",
+    "journal_issue": "Issue 7772 is correct for that specific Nature issue in September 2019.",
+    "journal_page": "Pages 144-148 correspond to the legitimate DEAD-box ATPases paper.",
+    "elocator": "No elocator (article number) is provided; only page numbers are given. This field is absent, so it may be considered not applicable.",
+    "publication_date": "September 2019 is correct for the real Nature paper.",
+    "doi": "doi: 10.1038/s41586-019-1502-y is the correct DOI for the DEAD-box ATPases paper.",
+    "pmcid": "PMCID: PMC10476062 is correct for the same paper.",
+    "pmid": "PMID: 31619789 is correctly associated with the DEAD-box ATPases paper."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "While most bibliographic details (title, journal, volume, pages, DOI) are correct, the author attribution ('Koplan, J.P.') is entirely incorrect.",
+    "authors": "The actual authors of the paper associated with this DOI and title are Honigmann, A. et al., whereas Koplan, J.P. is a public health expert not associated with this cellular biology paper.",
+    "title": "The title matches the publication associated with the DOI and journal information provided.",
+    "journal_name": "Nature is the correct journal for the provided title and article identifiers.",
+    "journal_volume": "Volume 573 is the correct volume for the September 2019 issue of Nature.",
+    "journal_issue": "Issue 7772 is the correct issue number for the cited article published in 2019.",
+    "journal_page": "The page range 144-148 accurately reflects the location of the article in the printed volume.",
+    "elocator": "No specific elocator (like an e-number) is used for this traditional page-based citation, but none was provided to be invalid.",
+    "publication_date": "September 2019 is the correct publication month and year for this article.",
+    "doi": "The DOI 10.1038/s41586-019-1502-y correctly resolves to the cited article title in Nature.",
+    "pmcid": "No PMCID was provided in the input citation to verify.",
+    "pmid": "No PMID was provided in the input citation to verify."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "vancouver",
+    "REFERENCE": "The citation follows the correct format for a Nature article (volume 573, issue 7772, pages 144\u2011148, September 2019). The DOI 10.1038/s41586-019-1502-y resolves to a Nature paper titled \"DEAD\u2011box ATPases are global regulators of phase\u2011separated organelles\" with the author list Koplan JP, Bond TC, Merson MH, Reddy KS, Rodriguez MH, Sewankambo NK, et al., which matches the reference provided. No discrepancies in journal, year, volume, issue, page range, or DOI are evident.",
+    "authors": "The author string \"Koplan JP, Bond TC, Merson MH, Reddy KS, Rodriguez MH, Sewankambo NK, et al.\" matches the author list retrieved from the DOI for this article.",
+    "title": "The title \"DEAD-box ATPases are global regulators of phase-separated organelles\" exactly matches the title returned by the DOI.",
+    "journal_name": "\"Nature\" is the correct journal for the DOI and the cited article.",
+    "journal_volume": "Volume 573 is correct for the September 2019 issue of Nature.",
+    "journal_issue": "Nature volume 573, issue 7772, September 2019 is correct for the given pages and DOI.",
+    "journal_page": "Pages 144\u2011148 correspond to the article retrieved via the DOI.",
+    "elocator": "No electronic locator (e.g., article ID, PII) is provided or needed; the reference uses standard volume\u2011issue\u2011page citation.",
+    "publication_date": "September 2019 matches the publication date indicated by the volume/issue and DOI.",
+    "doi": "The DOI 10.1038/s41586-019-1502-y is correctly formatted and resolves to the cited Nature article.",
+    "pmcid": "No PMCID is provided in the reference, and one is not required for a Nature article.",
+    "pmid": "No PMID is supplied; while the article likely has a PMID, its absence does not affect the validity of the citation."
+  }
+]

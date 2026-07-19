@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference combines a real-sounding title with false author, date, journal, volume, page, and DOI. It is a fabricated or heavily erroneous citation that does not point to any actual published article matching its components.",
+    "authors": "The author name 'Kirby, T.' is plausible and commonly formatted, but this author is not known for the study described; the actual study is by Hubau et al. (2020) in Nature. Thus, while the name format is valid, the attribution is likely fabricated.",
+    "title": "The title 'Asynchronous carbon sink saturation in African and Amazonian tropical forests' closely matches a real study, but the year, journal, volume, and DOI are all incorrect. The real title is from Hubau et al. (2020) in Nature, not from 2015. The title itself is valid as a scientific title.",
+    "journal_name": "The journal is indicated only by the DOI prefix (10.1136), which corresponds to The BMJ, not the actual journal where the study appeared (Nature). Even if the journal name were given, the information is inconsistent. The DOI domain is valid for a real journal, but not for this article.",
+    "journal_volume": "The volume number '(6559)' is cited but not accompanied by an actual journal name. This volume number does not match any known journal for this topic, and the parenthetical placement is odd. Without a journal, volume is unverifiable.",
+    "journal_issue": "No issue number is provided in the reference. The parentheses around '6559' might be misinterpreted as an issue, but it is given as a volume. Thus, issue is absent.",
+    "journal_page": "The page is given as 'article e727699'. This format (e plus number) is typical for some online journals, but the article number does not match any real publication. The DOI points to a different article, making the page invalid.",
+    "elocator": "The citation includes 'article e727699' which is an elocator format, but it is not consistent with the DOI or real publication. It appears fabricated for this reference.",
+    "publication_date": "The date '2015 Mar 13' is given, but the actual study by Hubau et al. was published in 2020. The year is incorrect, making the date invalid.",
+    "doi": "The DOI '10.1136/science.abd3623' is a valid DOI format but points to a completely different article (likely a BMJ or Science paper) unrelated to the tropical forest carbon sink topic. The prefix '10.1136' is for BMJ, not for the actual article cited here.",
+    "pmcid": "No PubMed Central ID is provided. This field is absent.",
+    "pmid": "No PubMed ID is provided in the reference. This field is absent."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "This is a hallucinated citation that mixes a real title (Hubau et al., Nature 2020) with an incorrect author, incorrect date, and a malformed DOI.",
+    "authors": "Tony Kirby is a medical journalist, but he is not the author of this specific scientific study on tropical carbon sinks.",
+    "title": "The title 'Asynchronous carbon sink saturation in African and Amazonian tropical forests' is a real article title, but it was published in Nature, not Science.",
+    "journal_name": "The DOI prefix 10.1136 belongs to the British Medical Journal (BMJ), not Science, and the citation text implies it was published in Science.",
+    "journal_volume": "The value 6559 appears to be a Science magazine issue number, but the volume is missing and the number provided is misused as a volume/issue.",
+    "journal_issue": "The number 6559 corresponds to a Science issue from 2021, not 2015.",
+    "journal_page": "The citation provides an e-locator instead of a page number range.",
+    "elocator": "The e-locator e727699 does not correspond to the real Nature article (which appeared in Vol 579) or any Science article in that period.",
+    "publication_date": "The actual study by Hubau et al. was published in March 2020, not March 2015.",
+    "doi": "The DOI 10.1136/science.abd3623 is invalid; the prefix 10.1136 is for BMJ, and the suffix abd3623 belongs to a Science paper (Vol 370) by different authors.",
+    "pmcid": "No PMCID was provided in the input citation.",
+    "pmid": "No PMID was provided in the input citation."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "nlm",
+    "REFERENCE": "Multiple components (authors, year, journal, volume/issue/page, DOI, PMID, PMCID) are incorrect or fabricated. Only the title string matches a real article, but it is attributed to the wrong authors and journal.",
+    "authors": "The paper \"Asynchronous carbon sink saturation in African and Amazonian tropical forests\" was actually published by W. Hubau et al. in *Nature* (2020). There is no record of a first\u2011author Kirby\u202fT. on this work.",
+    "title": "The title matches the genuine Hubau et al. article, so the title string itself is correct.",
+    "journal_name": "The reference cites a journal implied by the DOI prefix 10.1136 (BMJ) and the fragment \"science.abd3623\", which does not correspond to any known journal. The authentic article appeared in *Nature*.",
+    "journal_volume": "The volume/issue notation \"(6559):e727699\" is not a valid format for any major journal; the real article uses volume 579, pages 80\u201183 (Nature 2020).",
+    "journal_issue": "See volume comment; the issue number is missing/misplaced.",
+    "journal_page": "The page identifier \"e727699\" does not match the genuine article\u2019s page range.",
+    "elocator": "No valid electronic locator is provided; the string \"e727699\" is not a proper e\u2011locator for the claimed journal.",
+    "publication_date": "The authentic article was published online 4\u202fMarch\u202f2020 (print 5\u202fMarch\u202f2020). The supplied date 13\u202fMar\u202f2015 is incorrect.",
+    "doi": "The DOI prefix 10.1136 belongs to BMJ journals, and the suffix \"science.abd3623\" is not a valid Science DOI (Science uses 10.1126/science...). The real article\u2019s DOI is 10.1038/s41586-020-2035-7.",
+    "pmcid": "PMCID PMC9836006 does not match any known PMC record for this title; the authentic article is not freely available in PMC under that ID.",
+    "pmid": "PMID 31019317 corresponds to a 2019\u20112020 PubMed entry unrelated to this paper; the genuine article\u2019s PMID is ~320\u2026 (e.g., 32025028)."
+  }
+]

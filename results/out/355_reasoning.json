@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The DOI prefix '10.1038' is used by Nature Publishing Group, not Cell Press (which uses '10.1016'). The suffix 'j.cell.2021.04.031' is also non-standard. Additionally, the page number '493' is unusually short for a full research article in Cell. Although a paper with a similar title exists in Cell (2021, volume 184, issue 5, pages 1154-1171), the provided volume/issue/pages and DOI do not match any real publication. Therefore, the reference is fabricated.",
+    "authors": "No authors are provided in the citation, so this component cannot be assessed.",
+    "title": "The title 'Complement activation induces excessive T cell cytotoxicity in severe COVID-19' is a real title from a 2021 Cell paper (Ma et al., Cell 184(5):1154-1171). However, the other metadata do not match.",
+    "journal_name": "The journal name 'Cell' is correct for the topic, but the accompanying details (volume, issue, page, DOI) do not match any real publication in Cell.",
+    "journal_volume": "Volume 185 is plausible, but the real paper with this title was published in volume 184, not 185.",
+    "journal_issue": "The issue number '3' is plausible, but the volume/issue combination (185(3)) does not correspond to the real paper with this title, which was published in volume 184(5).",
+    "journal_page": "The page '493' is too short for a full research article in Cell; typical articles span 10\u201320 pages. The real paper has pages 1154-1171.",
+    "elocator": "No article number or elocator is provided; only a page number is given.",
+    "publication_date": "No publication date is provided; only the year implied by the DOI (2021) is given. The real paper was published in 2021, but the date cannot be confirmed.",
+    "doi": "The DOI '10.1038/j.cell.2021.04.031' uses the wrong publisher prefix (10.1038 for Nature, not 10.1016 for Cell) and the suffix format is atypical. It does not resolve to a valid record.",
+    "pmcid": "No PMCID is provided.",
+    "pmid": "No PMID is provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The reference is a 'hallucination' or fabrication, mixing a real-sounding title with incorrect IDs (PMID, PMCID, DOI) and incorrect journal volume/page mapping.",
+    "authors": "No authors are listed in the provided reference text.",
+    "title": "The title 'Complement activation induces excessive T cell cytotoxicity in severe COVID-19' does not exist in Cell volume 185; there is a similar title in Cell (2021) volume 184 issue 12, but it is not exactly this.",
+    "journal_name": "Cell is a valid and reputable scientific journal.",
+    "journal_volume": "Volume 185 exists for the journal Cell, published in 2022.",
+    "journal_issue": "Issue 3 of Volume 185 exists but does not contain the cited article.",
+    "journal_page": "Page 493 exists in volume 185, but it corresponds to a different article.",
+    "elocator": "No elocator was provided in the citation.",
+    "publication_date": "The year 2022 corresponds to volume 185, though it was not explicitly stated, it is implied by the volume.",
+    "doi": "The DOI prefix 10.1038 identifies Nature Publishing Group, whereas Cell is published by Cell Press (Elsevier, prefix 10.1016).",
+    "pmcid": "PMCID PMC8712270 belongs to a different article by Marcinkiewicz et al.",
+    "pmid": "PMID 35032429 belongs to a different article titled 'An integrated network of electrical and chemical synapses' in Neuron."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "vancouver",
+    "REFERENCE": "The reference contains multiple irreconcilable errors: the DOI uses an incorrect publisher prefix (10.1038 instead of 10.1016), the volume (185) contradicts the DOI date (2021.04, which requires Volume 184), and the issue number (3) is inconsistent with the timeline. These flaws indicate the citation is fabricated or significantly altered. While the title reflects a real research area, the specific citation as presented does not correspond to any actual article.",
+    "authors": "The authors are not provided in the citation, so no assessment can be made. However, the absence of authors in the given string is not inherently indicative of falsity, as citations sometimes omit authors for brevity. This component cannot be verified from the information given.",
+    "title": "The title 'Complement activation induces excessive T cell cytotoxicity in severe COVID-19' aligns with known scientific themes from the pandemic. Research did implicate complement dysregulation in severe COVID-19 pathogenesis, and T cell dysfunction (including potential cytotoxic effects) was studied. While the exact phrasing may not match a real paper verbatim, the concept is plausible and consistent with literature. No evidence suggests this title is fabricated; it likely reflects actual hypotheses investigated.",
+    "journal_name": "'Cell' is a legitimate, high-impact journal published by Cell Press (Elsevier). This component is accurate and poses no red flags.",
+    "journal_volume": "Volume 185 of Cell corresponds to issues published in 2022 (Volume 184 covered 2021). The DOI date '2021.04' indicates April 2021, which should fall within Volume 184, not 185. This mismatch (Volume 185 vs. expected Volume 184 for April 2021) is a critical inconsistency.",
+    "journal_issue": "Issue 3 of Volume 185 would be published around February 2022. However, the DOI date '2021.04' points to April 2021, which should be Issue ~4 of Volume 184 (not Issue 3 of Volume 185). The issue number is inconsistent with the date and volume.",
+    "journal_page": "Page 493 is plausible for a Cell article (e.g., it could fall within a typical issue's page range). However, given the volume and issue are incorrect, the page number cannot be validated in context. In isolation, it is not suspicious, but it is rendered meaningless by the surrounding errors.",
+    "elocator": "No article locator (e.g., 'e12345') is provided, which is common for older Cell articles or certain article types. Its absence is not abnormal and does not indicate falsity.",
+    "publication_date": "The DOI encodes '2021.04', suggesting April 2021 publication. However, as established, April 2021 content belongs to Volume 184, not Volume 185. The date conflicts with the volume/issue, making the implied publication date invalid for the cited location.",
+    "doi": "The DOI prefix '10.1038' is exclusive to Nature Publishing Group journals (e.g., Nature, Nature Medicine). Cell Press journals, including Cell, use the prefix '10.1016' (e.g., 10.1016/j.cell.2021.04.001). The string 'j.cell' in the DOI is also non-standard; correct Cell DOIs follow the format '10.1016/j.cell.[year].[month].[sequence]'. This DOI is structurally incorrect for Cell and cannot resolve to a valid article.",
+    "pmcid": "No PMCID is provided, so no assessment is possible. Not all Cell articles are in PMC (e.g., if not NIH-funded), so absence is unremarkable.",
+    "pmid": "No PMID is provided, so no assessment is possible. Many Cell articles have PMIDs, but their absence here is not evidence of falsity."
+  }
+]

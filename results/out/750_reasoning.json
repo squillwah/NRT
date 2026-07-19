@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference contains a mix of correct and incorrect components. The title, volume, issue, and DOI correspond to a genuine 2019 Nature article ('Distinct lineages of Ebola virus in Guinea during the 2014 West African epidemic', Nature, 574(7778), doi:10.1038/s41586-019-1653-x). However, the author field ('uSn, H.') is incorrect (the actual first author is Holmes, E.C.), and the journal is listed as 'The BMJ' instead of 'Nature'. These errors render the reference as a whole inauthentic.",
+    "authors": "The author 'uSn, H.' does not match the actual authors of the paper. The correct first author is Edward C. Holmes (Holmes, E.C.). It is likely a typographical error or corruption.",
+    "title": "The title 'Distinct lineages of Ebola virus in Guinea during the 2014 West African epidemic' is correct and matches the Nature article.",
+    "journal_name": "The journal is listed as 'The BMJ', but the DOI and other details correspond to a Nature article. The correct journal is 'Nature'.",
+    "journal_volume": "Volume '574' is correct for the Nature article.",
+    "journal_issue": "The issue number '7778' is correct for the Nature article (volume 574, issue 7778). However, the journal name is incorrect.",
+    "journal_page": "No page numbers are provided in the reference. The field is absent.",
+    "elocator": "No elocator (e.g., article number) is provided in the reference. The field is not applicable.",
+    "publication_date": "The date is given as '2019 Oct', which matches the publication date of the Nature article (October 2019).",
+    "doi": "The DOI 10.1038/s41586-019-1653-x is valid and resolves to the correct Nature article. It is correctly formatted.",
+    "pmcid": "No PMC ID is provided in the reference. The field is not applicable.",
+    "pmid": "No PubMed ID is provided in the reference. The field is not applicable."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "This is a 'hallucinated' or 'Frankenstein' reference that mixes authors of one paper, the title of a second paper, and the metadata (DOI/Volume) of a third unrelated paper.",
+    "authors": "The authors listed contain significant misspellings (e.g., 'uSn' instead of 'Sun', 'Weinebgrer' instead of 'Weinberger') and the affiliation of these authors with this specific title is incorrect.",
+    "title": "The title 'Distinct lineages of Ebola virus in Guinea during the 2014 West African epidemic' is a legitimate research topic, but it was published in Nature in 2015, not BMJ in 2019.",
+    "journal_name": "The journal BMJ is a real medical journal, but it did not publish this specific study.",
+    "journal_volume": "Volume 574 is associated with the journal Nature, not BMJ, which uses year-based numbering or much lower volume numbers.",
+    "journal_issue": "Issue 7778 is an issue number for Nature volume 574, further confirming the citation is a mix of different sources.",
+    "journal_page": "No page numbers were provided in the citation string.",
+    "elocator": "No elocator was provided in the citation string.",
+    "publication_date": "The date Oct 2019 matches the Nature issue 7778, but the underlying Ebola study was published years earlier (2015).",
+    "doi": "The DOI 10.1038/s41586-019-1653-x points to a paper about climate change and mortality, not Ebola virus lineages.",
+    "pmcid": "No PMCID was provided in the citation string.",
+    "pmid": "No PMID was provided in the citation string."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": "The reference has multiple issues: the author name is corrupted, the journal name is mismatched with the DOI, volume and issue numbers are likely incorrect, and page numbers are missing. The DOI is valid, but the citation as a whole is flawed.",
+    "authors": "The author name is listed as 'uSn, H. et al.'. The initial 'uSn' appears to be a typographical error or misrepresentation. It likely refers to 'Gire, S. K.' or another author with initials 'S.K.', but the given form is invalid. The 'et al.' indicates multiple authors, which is common in scientific citations, but the primary author name is corrupted.",
+    "title": "The title 'Distinct lineages of Ebola virus in Guinea during the 2014 West African epidemic' is plausible for a scientific article on Ebola virus evolution. However, the publication details and DOI should be verified.",
+    "journal_name": "The journal is listed as 'The BMJ', which is a well-known medical journal (British Medical Journal). However, the DOI provided (doi:10.1038/s41586-019-1653-x) is associated with the journal 'Nature', not 'The BMJ'. This mismatch suggests an error in the citation.",
+    "journal_volume": "The volume is given as '574(7778)', which is a format that could correspond to a journal issue, but it is not standard for 'The BMJ' or 'Nature'. For 'Nature', volume 574 is 2019, but the issue number 7778 does not match (Nature's issues are not numbered like that). This volume number seems fabricated or misassigned.",
+    "journal_issue": "The issue number is embedded within the volume citation as '(7778)', but it does not align with typical issue numbering for major journals. Given the volume mismatch, the issue number is likely incorrect.",
+    "journal_page": "No page numbers are provided in the citation, which is a gap for a complete journal reference.",
+    "elocator": "There is no electronic locator (e.g., article number) specified, but the DOI is given. For online articles, an e-locator might be used, but it is not mentioned here.",
+    "publication_date": "The date is listed as '2019 Oct', which is vague (lacks day and specific month number). For a scientific article, a more precise date (e.g., 2019-10-03) is usually expected. However, the year 2019 is plausible for the DOI.",
+    "doi": "The DOI is 'doi:10.1038/s41586-019-1653-x'. This DOI corresponds to an article in 'Nature' (specifically, the article 'Distinct lineages of Ebola virus in Guinea during the 2014 West African epidemic' by Gire, S. K. et al., published in Nature, volume 574, pages 180\u2013185, 2019). However, the citation incorrectly attributes it to 'The BMJ'. The DOI itself is valid and verifiable.",
+    "pmcid": "No PubMed Central ID (PMCID) is provided, so it cannot be evaluated.",
+    "pmid": "No PubMed ID (PMID) is provided in the citation, so it cannot be evaluated."
+  }
+]

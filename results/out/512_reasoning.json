@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The citation contains a mix of authentic and inauthentic components. The authors, title, journal, year, volume, issue, pages, and DOI are correct for the Nature article 'Speech synthesis from neural decoding of spoken sentences' (published 2019). However, the PMID (33483336) and PMCID (PMC10601608) are incorrect; the genuine PMID is 30971825 and the genuine PMCID is PMC6532920. Since the PMID and PMCID are essential identifiers and are false, the reference as a whole is inauthentic.",
+    "authors": "Authors G.K. Anumanchipalli, J. Chartier, and E.F. Chang are correct for this work.",
+    "title": "Title 'Speech synthesis from neural decoding of spoken sentences' is exact.",
+    "journal_name": "Nature is the correct journal.",
+    "journal_volume": "Volume 568 is correct.",
+    "journal_issue": "Issue 7753 corresponds to Nature volume 568, 2019.",
+    "journal_page": "Pages 493-498 are correct for the article.",
+    "elocator": "No e-locator provided; not applicable.",
+    "publication_date": "Date '2019 Apr' is correct for the Nature publication.",
+    "doi": "The DOI 10.1038/s41586-019-1119-1 matches the authentic article.",
+    "pmcid": "PMCID PMC10601608 is not associated with this article; the correct PMCID is PMC6532920.",
+    "pmid": "PMID 33483336 belongs to a different publication; the correct PMID is 30971825."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "This is a highly cited and valid peer-reviewed article with all metadata components correctly matching official records.",
+    "authors": "Gopala K. Anumanchipalli, Josh Chartier, and Edward F. Chang are the correct authors for this publication.",
+    "title": "The title 'Speech synthesis from neural decoding of spoken sentences' matches the official publication record.",
+    "journal_name": "'Nature' is the correct journal where this work was published.",
+    "journal_volume": "Volume 568 is the correct volume for the April 2019 issue of Nature.",
+    "journal_issue": "Issue 7753 is the correct issue number for the specified volume and date.",
+    "journal_page": "The page range 493-498 correctly identifies the location of the article in the printed volume.",
+    "elocator": "The article does not use an e-locator as its primary identifier in this citation format, but the metadata is consistent.",
+    "publication_date": "The publication date of April 2019 (specifically April 24, 2019) is correct.",
+    "doi": "The DOI 10.1038/s41586-019-1119-1 is the valid and functional identifier for this paper.",
+    "pmcid": "The PubMed Central identifier is not provided in the input, but the reference itself is valid.",
+    "pmid": "The PubMed identifier is not provided in the input, but the reference itself is valid."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": "The reference appears to be a valid citation for the paper 'Speech synthesis from neural decoding of spoken sentences' by Anumanchipalli et al., published in Nature in 2019. All major components (authors, title, journal, volume, pages, date, DOI) are correct and consistent with the known publication. The only minor issue is the inclusion of the issue number, which is not always necessary but not incorrect. The citation is authentic and accurately represents the referenced work.",
+    "authors": "The authors are listed as 'Anumanchipalli, G.K., Chartier, J. and Chang, E.F.' which matches the known authors of the cited paper. The initials 'G.K.', 'J.', and 'E.F.' are correct as per the original publication. There are no discrepancies in author names or ordering.",
+    "title": "The title 'Speech synthesis from neural decoding of spoken sentences' exactly matches the title of the known paper published in Nature. The capitalization and wording are consistent with the original source.",
+    "journal_name": "The journal is listed as 'Nature', which is correct. The paper was indeed published in Nature, a well-known scientific journal.",
+    "journal_volume": "The volume is given as '568', which matches the volume number of the Nature issue in which this paper was published. This is accurate according to bibliographic records.",
+    "journal_issue": "The issue is specified as '(7753)'. While the issue number is not always included in citations for Nature, it is not incorrect. The paper was published in volume 568, and the issue number 7753 corresponds to the appropriate issue. This is consistent with the publication details.",
+    "journal_page": "The pages are given as 'pp. 493-498'. This matches the page range of the article in Nature, volume 568, issue 7753. The page numbers are correct.",
+    "elocator": "No eLocator is provided in the citation. This is acceptable as not all citations require an eLocator, especially when page numbers are given. The absence of eLocator does not invalidate the citation.",
+    "publication_date": "The date is given as '2019 Apr'. The paper was published in April 2019, so this is accurate. The format '2019 Apr' is a common way to represent the year and month, and it matches the publication date of the paper.",
+    "doi": "The DOI is 'doi:10.1038/s41586-019-1119-1'. This is the correct DOI for the paper. It resolves to the correct article on the Nature website. The DOI format is standard, starting with 'doi:' followed by the number. No issues with the DOI itself.",
+    "pmcid": "No PMCID is provided in the citation. This is acceptable as not all citations include a PMCID, especially for articles that are not open access in PubMed Central. The absence of PMCID does not invalidate the citation.",
+    "pmid": "No PMID is provided in the citation. This is acceptable as not all citations include a PMID, especially for journal articles that are not primarily in the PubMed database. The absence of PMID does not invalidate the citation."
+  }
+]

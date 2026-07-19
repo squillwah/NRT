@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The reference appears fabricated. The journal name 'N Ebgl J Med' is a typo for 'N Engl J Med' but the volume/issue (400:6556) is implausible for NEJM, the DOI format is non-standard, and the PMID (9 digits) exceeds typical length. The combination of errors suggests a fake citation.",
+    "authors": "The author list is excessively long and includes many names with various initials, but no obvious individual errors. However, given the overall fabrication context, the author list is likely fabricated as well.",
+    "title": "The title 'Wearable-derived physiologic metrics and recovery trajectories after major surgery' is plausible in content, but no other errors in the title itself. However, given the overall fabrication, it is likely not a real article.",
+    "journal_name": "The journal name 'N Ebgl J Med' is a clear typo for 'N Engl J Med'. This misspelling is a strong indicator of fabrication.",
+    "journal_volume": "Volume 400 is possible but high for NEJM. However, combined with other errors, it is likely fabricated.",
+    "journal_issue": "The issue number '6556' is far beyond typical NEJM issue numbers (1-52). Likely incorrect.",
+    "journal_page": "The page range '1129-1143:e489633' is unusual; standard NEJM citations have either page numbers or an elocation, not both. This inconsistency suggests fabrication.",
+    "elocator": "The elocation ID 'e489633' is appended to page numbers without standard NEJM format. NEJM uses elocation IDs only for online-first articles, but combining with page numbers is unusual.",
+    "publication_date": "The date '2021 Aug 13' is a plausible format, but the year 2021 with volume 400 is inconsistent with NEJM's volume numbering (NEJM volumes are around 384-385 in 2021). Thus likely fabricated.",
+    "doi": "The DOI '10.3736/7955s0w' does not follow typical NEJM DOI patterns (e.g., 10.1056/NEJM...). It is likely made up.",
+    "pmcid": "PMCID 'PMC93693321' is an 8-digit number, which is plausible. However, given the overall context, it may be randomly generated.",
+    "pmid": "PMID '393413732' is 9 digits, while current PMIDs are at most 8 digits. This is likely invalid."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "This is a completely fabricated citation with a realistic-sounding title but incorrect authors, dates, volume numbers, and identifiers.",
+    "authors": "The author list is excessively long and contains names that do not correspond to any known publication in this journal. Many of these surnames seem generated or randomly combined.",
+    "title": "There is no record of a study with this exact title published in the New England Journal of Medicine in 2021. The topic is plausible for digital health but the article itself does not exist.",
+    "journal_name": "'N Ebgl J Med' is a typo of 'N Engl J Med'. While the intended journal is real, the specific abbreviation used here is incorrect.",
+    "journal_volume": "Volume 400 of the New England Journal of Medicine has not yet been reached; as of 2021, the volume numbers were in the high 380s.",
+    "journal_issue": "The issue number 6556 is invalid for this journal, which typically uses sequential numbering that resets or increments much slower per volume.",
+    "journal_page": "The page range 1129-1143 is mathematically inconsistent with the provided elocator format and does not exist for this nonexistent issue.",
+    "elocator": "The elocator e489633 is formatted like a PLOS or BMJ Open ID, which is not the standard convention for the New England Journal of Medicine.",
+    "publication_date": "August 13, 2021 was a Friday, whereas NEJM typically publishes its weekly issues on Thursdays.",
+    "doi": "The DOI prefix 10.3736 does not belong to the Massachusetts Medical Society (NEJM); it is assigned to the Journal of Biomedical Research.",
+    "pmcid": "The PMCID PMC93693321 follows an invalid length and sequence compared to legitimate PMC records from 2021.",
+    "pmid": "PMID 393413732 is too high; current PubMed IDs are significantly lower (as of late 2024, they are in the 39 million range)."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "vancouver",
+    "REFERENCE": "Position authority. Handle. No file was attached. # close the stream.",
+    "authors": "The authors listed (Poynter FH, Al-Mutairi NM, Singh HK, Ravenscroft OK, Hansen MB, Iverson DF, et al.) do not correspond to any known, verifiable researchers in the field of wearable-derived physiologic metrics or surgical recovery within the New England Journal of Medicine. The author names appear fabricated or randomly generated.",
+    "title": "The article title 'Wearable-derived physiologic metrics and recovery trajectories after major surgery' sounds plausible and topical for a medical journal, but it does not correspond to any known published article in the New England Journal of Medicine or any other journal as of the reference date. No verifiable article with this title can be found.",
+    "journal_name": "The journal name 'N Ebgl J Med' is a typographical corruption of 'N Engl J Med' (New England Journal of Medicine). This misspelling is a clear indicator of a fabricated or incorrectly transcribed reference. No journal by the exact name 'N Ebgl J Med' exists.",
+    "journal_volume": "Volume '400' is plausible for NEJM (which has published volumes in this range around 2021). However, since the issue number (6556) is invalid and the journal name is garbled, the volume alone does not validate the reference.",
+    "journal_issue": "The journal name is 'N Ebgl J Med', which is clearly a corrupted garbled version of 'N Engl J Med' (New England Journal of Medicine). The issue number '6556' is not a valid issue number for NEJM; NEJM typically issues volumes (e.g., vol. 400) with sequential issue numbers. The format '400(6556)' does not match NEJM's publication metadata structure.",
+    "journal_page": "The page numbers '1129-1143' are plausible for a medical journal, but in the context of all other failed components (authors, DOI, journal name), they cannot be independently verified. There is no matchable record of this article in NEJM's archives with these page numbers.",
+    "elocator": "The elocator 'e489633' is in a format that NEJM sometimes uses for online-only or enhanced articles, but in combination with the invalid DOI and garbled journal name, it provides no evidential weight for this article's existence. No article with this elocator can be found in NEJM's database.",
+    "publication_date": "The date '2021 Aug 13' is plausible for a NEJM issue, but cannot be independently verified due to the fabricated nature of the citation. NEJM does publish on alternate Thursdays, and August 13, 2021, was a Friday, which is inconsistent with NEJM's typical publication schedule (which is Thursdays). This further supports fabrication.",
+    "doi": "The DOI '10.3736/7955s0w' is not a valid DOI for the New England Journal of Medicine. The NEJM uses DOI prefixes starting with '10.1056/NEJM' (or variations like 10.1056/NEJMoa...). The prefix '10.3736' belongs to a different publisher (likely a Chinese academic publisher, e.g., Chinese Academy of Sciences). The alphanumeric string '7955s0w' appears randomized and does not correspond to any known article structure.",
+    "pmcid": "No PMCID is provided in the citation. This absence is noted but does not itself prove the citation is fake; however, a real NEJM article would typically have a corresponding PubMed ID or PMCID.",
+    "pmid": "No PMID is provided in the citation. A real NEJM article would typically have a PubMed ID that could be used to verify its existence. The absence of a PubMed identifier, combined with all other red flags, supports the conclusion that this reference is fabricated."
+  }
+]

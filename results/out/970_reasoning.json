@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The provided text contains multiple errors and inconsistencies: 'specufic' instead of 'specific', 'witg' instead of 'with', 'wnd' instead of 'and', 'head wnd neckc ancer' instead of 'head and neck cancer', 'Ntaure' instead of 'Nature'. Additionally, the volume and page numbers (375:949-1000) are inconsistent with the article number and DOI format, and the DOI and PMID/PMCID belong to a different article (BMJ article, not Nature). These errors indicate the reference is fabricated or heavily corrupted.",
+    "authors": "'Cell Editorial Team' is a plausible author for a journal editorial, but the surrounding text errors and overall reference invalidity make this specific instance untrustworthy.",
+    "title": "The title 'Defining HPV-specufic B cell responses in patients witg head wnd neckc ancer' contains multiple misspellings ('specufic', 'witg', 'wnd', 'neckc'), making it unreliable. A valid scientific title would not contain such errors.",
+    "journal_name": "The journal name 'Ntaure' is a misspelling of 'Nature'. While Nature is a real journal, the spelling error here indicates the reference is corrupted.",
+    "journal_volume": "Volume 375 of Nature corresponds to the year 1994-1995, not 2002 as stated. This mismatch suggests fabrication or error.",
+    "journal_issue": "The volume and issue (375:949-1000) are provided, but they are unrealistic for a Nature article from 2002 (Nature volume 375 covers a different year). Also, the page range is too large for a single article.",
+    "journal_page": "The page range '949-1000' is excessive for a single article and does not align with the article number or typical pagination.",
+    "elocator": "'e355201' appears to be an article number, but the format is inconsistent with typical Nature article numbers and does not match the DOI's originating journal.",
+    "publication_date": "The date '2002 Mar 14' is specific, but it conflicts with the volume number (Nature volume 375 was published in 1994-1995, not 2002). This inconsistency suggests fabrication.",
+    "doi": "The DOI '10.1136/bmj-2021-067873' is valid and resolves to a BMJ article, but it does not match the purported journal (Nature), the title, or the author. This mismatch indicates the DOI is incorrectly assigned to this reference.",
+    "pmcid": "PMCID 'PMC51272396' is invalid because PMCIDs typically have format like PMCXXXXXXX (7 digits), and this value (8 digits) does not exist in PubMed Central records.",
+    "pmid": "PMID '33278353' is a valid PubMed identifier, but it corresponds to a different article (a BMJ publication about COVID-19), not the described HPV-related cancer article. This mismatch indicates incorrect assignment."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "This is a hallucinated citation that combines metadata from at least three different sources (Cell, BMJ, and Nature) with numerous typos.",
+    "authors": "Cell Editorial Team is not credited for this research; the actual authors of the referenced PMID include Wieland et al.",
+    "title": "The title contains extreme typographic errors and is falsely attributed to Nature rather than the actual journal Cell.",
+    "journal_name": "Nature is listed as the publisher, but the provided PMID corresponds to the journal Cell.",
+    "journal_volume": "Volume 375 does not exist for Nature in 2002; the real article is in Cell volume 184.",
+    "journal_issue": "The issue information provided is inconsistent with the publishing history of the listed journals.",
+    "journal_page": "The page range 949-1000 is incorrect for the cited study and the elocator provided is malformed.",
+    "elocator": "The elocator e355201 is associated with a BMJ article, not the Nature or Cell articles described.",
+    "publication_date": "The year 2002 is incorrect as the study on HPV-specific B cells was published in 2021.",
+    "doi": "The DOI 10.1136/bmj-2021-067873 belongs to a British Medical Journal article, not a Nature or Cell paper.",
+    "pmcid": "PMCID PMC51272396 is an invalid ID format as it exceeds the typical length for PMC IDs.",
+    "pmid": "PMID 33278353 corresponds to a paper in Cell (2021) regarding HPV B-cell responses, confirming the citation merges conflicting data."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "apa",
+    "REFERENCE": "The entire reference is highly problematic: the author is a 'Cell Editorial Team', which is not a standard author for a research article; the title has multiple spelling errors; the journal name is misspelled ('Natkre'); the DOI points to a completely different journal (BMJ) and a different year (2021 vs 2002); the volume and page numbers are inconsistent with Nature. This reference is almost certainly fabricated or contains major errors.",
+    "authors": "The author is listed as 'Cell Editorial Team', which is not a standard author for a research article. This is a red flag for a fabricated or misattributed citation. Additionally, there are spelling errors in the author's name.",
+    "title": "The title contains significant spelling errors: 'HPV-specufic' (should be 'HPV-specific'), 'witg' (should be 'with'), 'wnd neckc ancer' (should be 'head and neck cancer'). These errors suggest the citation is likely fabricated or contains major typos.",
+    "journal_name": "The journal is listed as 'Natkre' (should likely be 'Nature'), but with a spelling error. The journal 'Nature' is a high-impact journal, and the issue/volume/page numbers do not match typical formatting for Nature articles. This is highly suspicious.",
+    "journal_volume": "The volume is listed as '375', but the page range '949-1000' and article ID 'e355201' are inconsistent with Nature's standard formatting. Nature articles typically have sequential page numbers, and this range is too broad. The 'e355201' looks like an electronic article ID but is not standard for Nature.",
+    "journal_issue": "No issue number is provided, which is common for online journals, but given the other errors, this is not a point of validation.",
+    "journal_page": "The page range '949-1000' is unusually wide for a single article, and the article ID 'e355201' is not a standard page number. This is inconsistent with typical journal formatting.",
+    "elocator": "The eLocator is given as 'e355201', which might resemble an electronic article ID, but it is not standard for Nature. The format is inconsistent.",
+    "publication_date": "The year is 2002, which is plausible for a research article, but given the other errors, it is likely fabricated.",
+    "doi": "The DOI is given as 'https://doi.org/10.1136/bmj-2021-067873', which points to a BMJ article (British Medical Journal), not Nature. The DOI prefix '10.1136' is associated with BMJ, and the suffix 'bmj-2021-067873' suggests it is from 2021, not 2002. This is a major inconsistency.",
+    "pmcid": "No PMCID is provided in the citation.",
+    "pmid": "No PMID is provided in the citation."
+  }
+]

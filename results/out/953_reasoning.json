@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference contains multiple errors: the title is garbled ('b yBhT162b2 foodter' instead of 'by BNT162b2 booster'), the journal volume (115) is incorrect for NEJM, the page numbers are inconsistent (4480 and article e065653), and the DOI (10.1126/bmj.n2848) points to a different journal (BMJ) and uses an incorrect prefix. These errors indicate the reference is not authentic.",
+    "authors": "The authors Rubin, E.J. and Longo, D.L. are plausible names, but the garbled title and other errors suggest the entire reference is fabricated. However, the authors themselves are not demonstrably invalid.",
+    "title": "The title contains obvious typographical errors: 'b yBhT162b2 foodter' instead of 'by BNT162b2 booster'. This is a clear indicator of fabrication or corruption.",
+    "journal_name": "The journal name is given as 'The New England journal of medicine' with incorrect capitalization, but the name itself is recognizable. However, the other errors render the overall reference invalid.",
+    "journal_volume": "The volume '115' is incorrect for NEJM in 2021; the actual volume for that year is around 384-385. This is a clear error.",
+    "journal_issue": "The journal issue '115(17)' is incorrect for The New England Journal of Medicine; NEJM volumes in 2021 were around 384-385, and the volume is far too low.",
+    "journal_page": "The page 'pp. 4480' is unusual for NEJM, which typically uses page ranges (e.g., 1234-1235). The number 4480 is plausible but inconsistent with the rest of the reference.",
+    "elocator": "The reference includes both a page number (4480) and an article number (e065653), which is inconsistent. The format suggests a mix-up, and the article number does not correspond to a known NEJM article.",
+    "publication_date": "The date '2021 Aug 19' is plausible for a NEJM article, but the other errors in the reference make it unreliable.",
+    "doi": "The DOI '10.1126/bmj.n2848' is invalid because '10.1126' is the prefix for Science journals, not BMJ (which uses '10.1136'). Additionally, the suffix 'bmj.n2848' does not match any known NEJM article.",
+    "pmcid": "No PMC ID is provided in the reference.",
+    "pmid": "No PMID is provided in the reference."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "This citation is a hallucination that mixes NEJM editors, incorrect metadata, and a BMJ DOI.",
+    "authors": "Eric J. Rubin and Dan L. Longo are both editors at NEJM, but they are not the authors of this specific study.",
+    "title": "The title appears to be a hallucinated blend of 'Protection against Covid-19 by BNT162b2 Booster across Age Groups' with typos like 'b yBhT162b2 foodter'.",
+    "journal_name": "The New England Journal of Medicine is a valid and highly cited medical journal.",
+    "journal_volume": "NEJM volumes in 2021 were 384 and 385; Volume 115 is incorrect for this journal and year.",
+    "journal_issue": "While NEJM has an issue 17 in volume 385, it is not associated with volume 115 as cited here.",
+    "journal_page": "The page number 4480 is unlikely for a standard NEJM issue, and it is followed by an elocator-style code.",
+    "elocator": "The code e065653 is formatted like a BMJ elocator, not one typically used by NEJM.",
+    "publication_date": "August 19, 2021, was a Thursday when NEJM issues are typically published, but it does not contain the cited article.",
+    "doi": "DOI 10.1126/bmj.n2848 corresponds to a BMJ news article, not an NEJM research paper.",
+    "pmcid": "No PMCID was provided in the source citation string.",
+    "pmid": "No PMID was provided in the source citation string."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "harvard",
+    "REFERENCE": "Multiple elements (title garbling, volume/issue/page numbers, DOI prefix/suffix) are inconsistent with the claimed source. The only correct items are the journal name and the authors (who are real NEJM editors but not authors of this piece). Consequently the reference as a whole is not authentic.",
+    "authors": "Eric J. Rubin and Dan L. Longo are real NEJM editors, but they did not co\u2011author a research article with this exact title in August\u202f2021. Their joint publications are usually editorials or commentaries, not primary research papers of the form described.",
+    "title": "The string \"Protection against Covid-19 b yBhT162b2 foodter across Age Groups\" is garbled; the intended title would likely be something like \"Protection against COVID-19 by BNT162b2 across age groups\". No NEJM article published on 19\u202fAug\u202f2021 matches this title.",
+    "journal_name": "The New England Journal of Medicine is a real journal.",
+    "journal_volume": "NEJM volumes in 2021 were in the high\u2011300s (e.g., 384, 385). Volume\u202f115 does not exist for NEJM.",
+    "journal_issue": "Issue\u202f17 is plausible, but combined with the impossible volume it makes the citation invalid.",
+    "journal_page": "Page\u202f4480 is far beyond the typical page range of a NEJM issue (usually a few hundred pages total).",
+    "elocator": "Article identifier \"e065653\" does not correspond to any NEJM article from 2021.",
+    "publication_date": "19\u202fAug\u202f2021 is a plausible date for a NEJM paper, but the rest of the citation does not match any article published on that date.",
+    "doi": "DOI prefix 10.1126 belongs to the journal *Science* (AAAS). The suffix \"bmj.n2848\" is characteristic of a *BMJ* article. Neither matches a NEJM DOI, which would start with 10.1056/NEJM\u2026 . Hence the DOI is incorrect.",
+    "pmcid": "No PMCID can be derived; the DOI does not resolve to a NEJM article.",
+    "pmid": "No PMID can be inferred from the supplied data; searching for the given DOI or title returns no match."
+  }
+]

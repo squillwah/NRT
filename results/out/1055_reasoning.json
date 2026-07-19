@@ -1,0 +1,34 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "Multiple critical errors: impossible volume and issue for Science, anachronistic publication date (2010 for COVID-19 origins), grossly malformed DOI. These are strong indicators that the entire reference is fabricated or contains deliberate errors. The reference is likely fraudulent.",
+    "authors": "The authors are listed with initials following standard convention, which is plausible, but the combination of initials (e.g., 'ZT', 'HJ', 'IK') is inconsistent with typical author initials, which are usually single letters (e.g., 'Z.T.', 'H.J.'). This suggests possible fabrication or error.",
+    "title": "The title 'Investigate the origins of COVID-19' is plausible given the topic, but the imperative 'Investigate' is ungrammatical as a title (should be 'Investigation' or 'Investigating'). This subtle oddity raises suspicion, but is not definitive.",
+    "journal_name": "'Science' is a well-known and reputable journal. The name is valid, so no issues here.",
+    "journal_volume": "Volume 224 is plausible for Science, which has volumes numbering in the hundreds. However, Science typically publishes around 50 volumes per year? Actually, Science has numbered volumes sequentially since 1880; volume 224 would correspond to an early 20th-century date, not 2010. The volume number is inconsistent with the stated year.",
+    "journal_issue": "Issue 6543 is impossibly high for Science; Science issues are typically numbered around 1-52 per volume, not into the thousands. This is clearly fabricated.",
+    "journal_page": "Page range 92-96 is plausible for a short article, but given other major inconsistencies, this may be coincidental. No specific error, but context-dependent suspicion.",
+    "elocator": "No elocator (e.g., article number) is provided; this field is absent. Should not be evaluated as present, but its absence is not an error per se.",
+    "publication_date": "The date '2010 Oct 3' is given, but COVID-19 originated in late 2019, so a 2010 article on its origins is anachronistic. Additionally, Science does not typically release issues on specific days like October 3; dates are usually months or weeks. The day-specific date is suspicious.",
+    "doi": "The DOI '10.5244.426/qxhs' is malformed: standard DOIs use a prefix and suffix separated by a slash, but '10.5244.426' is not a valid registrant code; DOIs typically have a single dot in the prefix (e.g., 10.xxxx). Also, the suffix '/qxhs' is non-standard. This is clearly fabricated.",
+    "pmcid": "No PMC ID is provided; absent. Not evaluable as invalid.",
+    "pmid": "No PMID is provided; this field is absent. Not evaluable as invalid, but missing data."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The reference is a complete hallucination, citing a 2019 virus in 2010 with incorrect volume and DOI data.",
+    "authors": "The massive list of authors contains many fabricated or unlikely names that do not correspond to any known publication in 2010.",
+    "title": "COVID-19 was not identified until late 2019, making a publication about it in 2010 chronologically impossible.",
+    "journal_name": "Science (New York, N.Y.) is a real and prestigious scientific journal.",
+    "journal_volume": "In 2010, Science was published in volumes 327 to 330; volume 224 corresponds to 1984.",
+    "journal_issue": "Issue 6543 corresponds to the actual Science volume released in May 2021, not 2010.",
+    "journal_page": "The page numbers 92-96 are standard for the journal but do not contain this title or author set.",
+    "elocator": "No specific electronic locator was provided in the text besides the DOI.",
+    "publication_date": "The 2010 date is anachronistic for the subject matter of COVID-19.",
+    "doi": "The DOI 10.5244.426/qxhs is malformed and does not follow the standard Science journal prefix of 10.1126.",
+    "pmcid": "No PubMed Central ID was provided in the citation to evaluate.",
+    "pmid": "No PubMed ID was provided in the citation to evaluate."
+  }
+]

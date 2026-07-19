@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The citation contains multiple inconsistencies. The journal 'Science (New York, N.Y.)' with volume 446 is implausible (Science volumes are typically in the 300-400 range, with 446 corresponding to around 2014, but the journal's volume numbering does not reach that high in recent years). The DOI provided (10.1056/NEJMoa2116846) belongs to the New England Journal of Medicine, not Science. No known article matching the title exists in either journal. The page range (358-404) and article number (e604493) are also atypical for Science. Therefore, the citation is fabricated.",
+    "authors": "The citation does not include author names, so no assessment can be made. However, the absence of authors in a supposedly published article is suspicious.",
+    "title": "The title 'Global incidence, prevalence, and years lived with disability due to osteoarthritis from 1995 to 2025: a systematic modeling study' is stylistically similar to Global Burden of Disease studies, but the specific year range (1995-2025) is unusual. The most similar real study covers 1990-2020 or 1990-2019. No known publication matches this exact title. The title is likely fabricated.",
+    "journal_name": "The journal name 'Science (New York, N.Y.)' is correctly spelled, but the rest of the citation elements do not match this journal. The journal name itself is real, but its use here is fraudulent due to the mismatched details.",
+    "journal_volume": "Volume 446 is not a valid volume number for Science in the 21st century. Science's volume numbers are sequential and currently around 387-390 (2025). Volume 446 would be from the 2000s, but the title suggests a modeling study from 1995-2025, which would be more recent. The volume is fabricated.",
+    "journal_issue": "The journal 'Science (New York, N.Y.)' with volume 446, issue 3, is highly improbable. Science's volume numbers are lower (e.g., 2024 volumes are in the 380s). Volume 446 would correspond to an earlier decade, but the publication year is not mentioned. The issue number 3 is plausible, but the overall combination is inconsistent with known Science publications.",
+    "journal_page": "The page range '358-404' is plausible for a journal article, but it is not verified for the given journal and volume. Given the other inconsistencies, these pages are likely fabricated.",
+    "elocator": "The article number 'e604493' is consistent with NEJM's article numbering system, but it is associated with a DOI from NEJM, not Science. Additionally, Science does not typically use 'e' prefixed article numbers for research articles.",
+    "publication_date": "No explicit publication date is given. The year range in the title (1995-2025) suggests a recent study, but the volume number (446) contradicts a recent publication. The date is absent, which is suspicious.",
+    "doi": "The DOI 10.1056/NEJMoa2116846 is a valid DOI format for the New England Journal of Medicine, but it does not match the journal 'Science' or the cited title. The DOI likely refers to a different article (e.g., a clinical trial or review unrelated to osteoarthritis burden).",
+    "pmcid": "No PMCID is provided in the citation, so no assessment is possible.",
+    "pmid": "No PMID is provided in the citation, so no assessment is possible."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The reference is a hallucinated composite: the DOI belongs to NEJM, the title is fictional/incorrectly dated, and the volume number is non-existent.",
+    "authors": "No authors are listed in the provided reference text.",
+    "title": "The title appears to be a hallucinated variation of GBD studies; no article with this exact title exists in Science.",
+    "journal_name": "Science (New York, N.Y.) is a valid journal, but its typical formatting and content do not match this entry.",
+    "journal_volume": "Volume 446 does not exist for Science as of 2024; current volumes are in the 380s.",
+    "journal_issue": "Issue 3 within a volume is a valid numbering, but it does not correspond to the existing volume or the provided data.",
+    "journal_page": "Pages 358-404 in volume 446 of Science are invalid because the volume itself does not exist.",
+    "elocator": "The elocator e604493 is not a standard format for Science and does not match the DOI or title.",
+    "publication_date": "A study covering data up to 2025 is impossible for a past or current publication date in this context.",
+    "doi": "The DOI 10.1056/NEJMoa2116846 actually belongs to a New England Journal of Medicine article about Covid-19, not Science or osteoarthritis.",
+    "pmcid": "No PMCID was provided in the reference string to evaluate.",
+    "pmid": "No PMID was provided in the reference string to evaluate."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": "This citation contains multiple critical inconsistencies that indicate it is **not authentic**: 1) **Journal mismatch**: The journal is listed as 'Science (New York, N.Y.)', yet the DOI prefix `10.1056` belongs exclusively to the **New England Journal of Medicine (NEJM)**, not Science. 2) **DOI mismatch**: The DOI `10.1056/NEJMoa2116846` points to a real **NEJM** article (likely unrelated to osteoarthritis, given NEJM's 2021 COVID-era publications), not to a Science article. 3) **Volume and page range implausibility**: Science volume 446 corresponds to approximately **1994**, not 2021. Additionally, pages 358\u2013404 (47 pages) is far longer than a typical Science article. 4) **Article number format**: 'e604493' does not follow Science's article numbering conventions. **Conclusion**: The citation is **fraudulent** \u2014 it wilfully or erroneously conflates an NEJM DOI and Science journal attribution, and the metadata is internally contradictory.",
+    "authors": "No authors are listed in the citation. While a real article would attribute authors, their absence here does not directly prove forgery but adds to the incomplete and unreliable nature of this reference.",
+    "title": "The title 'Global incidence, prevalence, and years lived with disability due to osteoarthritis from 1995 to 2025: a systematic modeling study' sounds like a plausible study title, potentially from a real Public Health or Epidemiology journal (e.g., The Lancet, BMJ). However, the cited source is neither Science nor NEJM (as the DOI and journal conflict suggest). It is likely the title was taken from a real study and misattributed.",
+    "journal_name": "The journal name 'Science (New York, N.Y.)' is presented as the journal, but the DOI clearly belongs to the **New England Journal of Medicine**, not Science. This is a fundamental misattribution and makes the citation fraudulent.",
+    "journal_volume": "Volume 446 of Science corresponds to approximately 1994. This is inconsistent with the likely publication year of the article (2021, suggested by the DOI). Therefore, the volume number is erroneous.",
+    "journal_issue": "The journal is listed as 'Science (New York, N.Y.)' which is the ISSN catalog name, but the volume and issue (446(3)) correspond to an old issue of Science (circa 1994). More critically, the DOI and the article content associate it with NEJM. The page range of 358-404 is unusually long for a Science article. This entire block is inconsistent with both the journal and the DOI.",
+    "journal_page": "Pages 358\u2013404 of this supposed Science article are unrealistic (a very long article for Science) and, more importantly, inconsistent with the NEJM DOI provided. The page range is not credible for Science.",
+    "elocator": "The article number 'e604493' does not conform to the electronic locator format of *Science*. Science articles use digital object identifiers and specific referencing formats that do not typically include this numbering pattern in conjunction with volume/issue/pp numbers in the manner presented.",
+    "publication_date": "No publication date is provided. The absence of a date is problematic but not a direct sign of forgery, as it could be an oversight. However, the combination of all the other errors makes this reference unreliable.",
+    "doi": "The DOI 10.1056/NEJMoa2116846 uses the prefix 10.1056, which is assigned to the **New England Journal of Medicine (NEJM)** by the International DOI Foundation. This DOI does not correspond to a Science article. The 'oa' in the suffix may indicate an 'online ahead of print' designation from NEJM. The article linked by this DOI is almost certainly from NEJM, not Science, and is unlikely to be about osteoarthritis.",
+    "pmcid": "No PubMed Central ID (PMCID) is provided. While its absence does not inherently invalidate a citation, it is another omission that adds to the unreliability of this reference.",
+    "pmid": "No PubMed ID (PMID) is provided. As with the PMCID, its absence is a minor issue but contributes to the overall incompleteness."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": 0.8,
+    "authors": 0.4,
+    "title": 0.9,
+    "journal_name": 1.0,
+    "journal_volume": 0.8,
+    "journal_issue": 0.7,
+    "journal_page": 0.6,
+    "elocator": 0.7,
+    "publication_date": 0.8,
+    "doi": 0.9,
+    "pmcid": 1.0,
+    "pmid": 1.0
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": 0.95,
+    "authors": 0.95,
+    "title": 1.0,
+    "journal_name": 1.0,
+    "journal_volume": 1.0,
+    "journal_issue": 1.0,
+    "journal_page": 0.99,
+    "elocator": 0.8,
+    "publication_date": 1.0,
+    "doi": 1.0,
+    "pmcid": 1.0,
+    "pmid": 1.0
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "vancouver",
+    "REFERENCE": 0.99,
+    "authors": 0.6,
+    "title": 0.8,
+    "journal_name": 0.99,
+    "journal_volume": 0.95,
+    "journal_issue": 0.9,
+    "journal_page": 0.98,
+    "elocator": 0.97,
+    "publication_date": 0.9,
+    "doi": 0.99,
+    "pmcid": 0.99,
+    "pmid": 0.99
+  }
+]

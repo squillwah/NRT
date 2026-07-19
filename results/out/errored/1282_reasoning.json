@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "Multiple components are clearly invalid; the reference is fabricated.",
+    "authors": "Names are plausible, but no immediate red flags.",
+    "title": "The title is typical for a neuroscience/biology paper.",
+    "journal_name": "Current Opinion in Biomedical Engineering did not exist in 2000; it was first published in 2017.",
+    "journal_volume": "Volume 360 is implausible for a journal that started in 2017; volume numbers typically start at 1.",
+    "journal_issue": "Issue 360 is also implausible; issues usually start at 1.",
+    "journal_page": "Page format '77-91:e269230' is nonstandard; pages and article numbers are usually separate.",
+    "elocator": "e269230 does not match typical elocator formats.",
+    "publication_date": "Date '2000 May 11' is before the journal's existence.",
+    "doi": "DOI prefix 10.7247 is not a valid CrossRef prefix; suffix is random and nonstandard.",
+    "pmcid": "PMC8802628 has a valid format but is unverifiable; likely fake given other inconsistencies.",
+    "pmid": "PMID 854897030 is 9 digits, exceeding the maximum (currently 8 digits)."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "The reference is a complete hallucination, combining a future journal name with an old date and a fake DOI.",
+    "authors": "The listed authors do not appear as a group in any academic literature, and their names seem randomly generated.",
+    "title": "While the title sounds plausible for neuroscience, it does not exist in any database or search index.",
+    "journal_name": "Current Opinion in Biomedical Engineering is a real journal, but it was established in 2017, not 2000.",
+    "journal_volume": "Volume 360 is inconsistent with the journal's actual volume numbering which began in 2017.",
+    "journal_issue": "The provided text does not contain a specific issue number, and the metadata provided is inconsistent with standard bibliographic records.",
+    "journal_page": "The page range 77-91 followed by e269230 is contradictory and does not exist for this title.",
+    "elocator": "The e-locator e269230 does not correspond to a valid article within this journal category.",
+    "publication_date": "The journal did not exist in May 2000; the date is anachronistic.",
+    "doi": "The DOI prefix 10.7247 is non-standard and the suffix is gibberish; it does not resolve to any document.",
+    "pmcid": "A PMCID was not provided in the citation string.",
+    "pmid": "A PubMed ID was not provided in the citation string."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": "This reference exhibits multiple hallmarks of fabrication. The journal 'Current Opinion in Biomedical Engineering' is not a recognized Current Opinion title (Elsevier publishes Current Opinion journals, but this specific title either doesn't exist or is extremely obscure). Volume '360' is inconsistent with the low-volume numbering typical of Current Opinion journals. The DOI prefix '10.7247' does not correspond to any major publisher (Elsevier uses 10.1016, etc.), and the DOI path itself ('1.sky-/14-zrz1') appears nonsensical. The author 'Irving, F.H.' is not readily identifiable in hypothalamic or behavioral neuroscience literature. The page range (77\u201391, 15 pages) is abnormally long for a Current Opinion article, which are typically concise reviews. The article number format (e269230) is inconsistent with known formatting. Taken together, these errors strongly suggest the reference is impure/counterfeit and was likely fabricated by a language model.",
+    "authors": null,
+    "title": null,
+    "journal_name": null,
+    "journal_volume": null,
+    "journal_issue": null,
+    "journal_page": null,
+    "elocator": null,
+    "publication_date": null,
+    "doi": null,
+    "pmcid": null,
+    "pmid": null
+  }
+]

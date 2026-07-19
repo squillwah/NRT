@@ -1,0 +1,34 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "All components of the reference are verified as authentic and accurate. The citation matches a real, well-known study published in Science.",
+    "authors": "Authors listed (Elliott P, Haw D, Wang H, Eales O, Walters CE, Ainslie KEC, et al.) are plausible and commonly appear in pandemic modeling studies.",
+    "title": "The title 'Exponential growth, high prevalence of SARS-CoV-2, and vaccine effectiveness associated with the Delta variant' matches a known study published in Science in December 2021.",
+    "journal_name": "Science is a reputable, high-impact journal that indeed published this paper.",
+    "journal_volume": "Volume 374 is correct for Science in 2021; the issue number 6574 aligns with December 17, 2021 publication.",
+    "journal_issue": "Issue 6574 is consistent with the date and volume.",
+    "journal_page": "No page numbers are provided; the citation only gives volume and issue. This is acceptable for online-first or article number format.",
+    "elocator": "No elocator (e.g., article number) is given; it's not required for validity.",
+    "publication_date": "The date '2021 Dec 17' matches the publication date of this Science article.",
+    "doi": "The DOI 10.1126/science.abl9551 resolves to the correct article on the Science website.",
+    "pmcid": "No PMCID is given; it's not required for citation validity.",
+    "pmid": "No PMID is given; it's not required for citation validity."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "This is a valid, real-world scientific citation with highly accurate metadata matching official records.",
+    "authors": "The listed authors correctly match the primary investigators and consortium members for this study published in Science.",
+    "title": "The title accurately reflects the published work regarding the Delta variant prevalence and vaccine effectiveness.",
+    "journal_name": "Science (New York, N.Y.) is the official full name for the journal Science where this was published.",
+    "journal_volume": "Volume 374 is the correct volume for the December 2021 issue of Science.",
+    "journal_issue": "Issue 6574 corresponds correctly to the specific publication date of December 17, 2021.",
+    "journal_page": "The reference provided does not list page numbers, but the article uses an e-locator/article ID.",
+    "elocator": "The e-locator 'eabl9551' is typically used for this article, though it is represented by the DOI suffix here.",
+    "publication_date": "2021 is the correct publication year for this paper.",
+    "doi": "The DOI 10.1126/science.abl9551 is the valid and active permanent identifier for this article.",
+    "pmcid": "The PMCID was not provided in the input string, so it cannot be validated as present.",
+    "pmid": "The PMID was not provided in the input string, so it cannot be validated as present."
+  }
+]

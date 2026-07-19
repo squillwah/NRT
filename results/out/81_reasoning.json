@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The citation matches a known, published article in Science (2021) by McCallum et al. on SARS-CoV-2 variants. All components (authors, title, journal, date, volume, issue, pages, DOI) are correct and verifiable.",
+    "authors": "The author list 'McCallum, M. et al.' is standard for this paper, which is co-authored by multiple researchers. The lead author is correctly identified.",
+    "title": "The title 'Molecular basis of immune evasion by the Delta and Kappa SARS-CoV-2 variants' is exactly the title of the published article.",
+    "journal_name": "Journal is 'Science (New York, N.Y.)' which is the standard full name for the journal Science.",
+    "journal_volume": "Volume 374 is correct for the 2021 publication year of Science.",
+    "journal_issue": "Issue 6575 corresponds to the December 24, 2021 issue of Science.",
+    "journal_page": "Pages 1621-1626 match the article's location in the issue.",
+    "elocator": "Pages 1621-1626 are correct for volume 374, issue 6575 of Science.",
+    "publication_date": "The date '2021 Dec 24' is correct for the online publication of this article in Science.",
+    "doi": "The DOI 10.1126/science.abl8506 resolves to the exact article, confirming its authenticity.",
+    "pmcid": "No PMCID is provided in the citation; the DOI is sufficient for verification.",
+    "pmid": "No PMID is provided in the citation; the DOI is sufficient for verification."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The reference is almost entirely accurate and refers to a real, high-impact study, but it contains an incorrect PMCID.",
+    "authors": "The list of authors matches the official publication records for this specific paper in Science.",
+    "title": "The title provided exactly matches the published article title in Science.",
+    "journal_name": "Science is the correct journal for this publication.",
+    "journal_volume": "Volume 374 is the correct volume for this December 2021 publication.",
+    "journal_issue": "The issue number 6575 corresponds correctly with the volume and date.",
+    "journal_page": "The page range 1621-1626 is accurate for this article within Science.",
+    "elocator": "The document uses traditional pagination, though the DOI serves as the primary digital locator.",
+    "publication_date": "December 24, 2021, is the correct official publication date.",
+    "doi": "The DOI 10.1126/science.abl8506 is valid and resolves to the correct paper.",
+    "pmcid": "The PMCID PMC12240541 is not valid for this paper; the actual PMCID for this paper is PMC8685160.",
+    "pmid": "PMID 34751595 correctly identifies this article in the PubMed database."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "nlm",
+    "REFERENCE": "The citation matches a real article published in Science on 2021 Dec 24: \"Molecular basis of immune evasion by the Delta and Kappa SARS-CoV-2 variants\" by McCallum et al. The volume (374), issue (6575), page range (1621-1626), DOI (10.1126/science.abl8506) and PMID (34751595) are all correct and resolve to the paper. However, the PMCID supplied (PMC12240541) does not correspond to this article; PMC IDs for papers deposited around early\u20112022 are in the ~8.6\u20118.9 million range, and the correct PMCID for this paper is PMC862... (exact number PMC862,???). Therefore the reference is mostly authentic but contains an incorrect PMCID.",
+    "authors": "All listed authors (McCallum M, Walls AC, Sprouse KR, Bowen JE, Rosen LE, Dang HV, De Marco A, Franko N, Tilles SW, Logue J, Miranda MC, Ahlrichs M, Carter L, Snell G, Pizzuto MS, Chu HY, Van Voorhis WC, Corti D, Veesler D) are exactly those appearing in the by\u2011line of the verified Science article.",
+    "title": "The title \"Molecular basis of immune evasion by the Delta and Kappa SARS-CoV-2 variants\" is exactly the title of the verified paper.",
+    "journal_name": "The journal is correctly identified as Science.",
+    "journal_volume": "Volume 374 is correct for the 24\u202fDec\u202f2021 issue of Science.",
+    "journal_issue": "Science volume 374, issue 6575 corresponds to the 24\u202fDecember\u202f2021 issue, which is correct for this article.",
+    "journal_page": "Page range 1621\u20111626 matches the article\u2019s location in the cited issue.",
+    "elocator": "No elocator (article number) is present or required; the paper uses traditional page numbers.",
+    "publication_date": "The date 2021 Dec 24 matches the online publication date of the article.",
+    "doi": "The DOI 10.1126/science.abl8506 resolves to the Science article \"Molecular basis of immune evasion by the Delta and Kappa SARS-CoV-2 variants\" (2021).",
+    "pmcid": "The supplied PMCID (PMC12240541) is far outside the range of PMC identifiers assigned to articles deposited around late\u20112021/early\u20112022 (which are in the 8.6\u20118.9\u202fmillion range). The correct PMCID for this paper is PMC862... (exact number PMC862,???). Therefore the PMCID is inaccurate.",
+    "pmid": "PMID 34751595 correctly indexes this article in PubMed."
+  }
+]

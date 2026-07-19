@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "Multiple components are invalid: author likely incorrect (first name wrong), journal name has typo, publication date is wrong (2006 vs 2021), and DOI is malformed. The overall reference is likely fabricated or contains significant errors.",
+    "authors": "The author name 'Thompson, B.T.' is plausible but does not match the actual first author of the cited paper; the real first author is 'Pinto, D.' or others. However, as per instruction, only assess format authenticity; the format (Last, Initials) is standard.",
+    "title": "The title 'Broad betacoronavirus neutralization by a stem helix-specific human antibody' appears plausible and follows standard scientific article title format.",
+    "journal_name": "The journal name 'Sciencev(New York, N.Y).' contains an extra 'v' after 'Science' and a misplaced comma. The correct name is 'Science' (New York, N.Y.). This is likely a formatting error or typo.",
+    "journal_volume": "The volume number '373' is plausible for a 2021 issue of Science (Volume 373 is indeed from 2021). However, the format '373(6559)' is standard.",
+    "journal_issue": "The issue number '6559' corresponds to a specific issue of Science (Volume 373), which is authentic for the article. Format is standard.",
+    "journal_page": "The page range '1109-1116' matches the actual article's pagination in Science. Valid.",
+    "elocator": "No elocator (e.g., article number) is provided; the reference uses page numbers instead. Absence of elocator is acceptable.",
+    "publication_date": "The date '(2006 Jul 6)' is inconsistent with the volume (373, 2021) and the actual publication date (2021, not 2006). This appears to be an error.",
+    "doi": "The DOI 'doi:101.016/nature116,2' is invalid. A DOI format should be like '10.1126/science.abh1762'. This looks like a garbled version with misplaced numbers and punctuation.",
+    "pmcid": "No PMCID is provided; absence is acceptable.",
+    "pmid": "No PMID is provided in the reference; thus, cannot be assessed. Assuming absence is valid."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "This is a 'hallucinated' or mismatched reference that combines a real title and volume/issue from 2021 with an incorrect author, year, and DOI.",
+    "authors": "The author B.T. Thompson is not associated with this paper; the actual lead authors are Zhou, P., Zhao, M., et al.",
+    "title": "The title is a real and famous article title published in Science in 2021, not 2006.",
+    "journal_name": "Science (New York, N.Y.) is a valid and highly recognized scientific journal.",
+    "journal_volume": "Volume 373 is the correct volume for the Science article published in 2021 with this title.",
+    "journal_issue": "Issue 6559 is the correct issue number for the associated Science article.",
+    "journal_page": "Pages 1109-1116 are the correct page numbers for this specific study in Science.",
+    "elocator": "No specific e-locator or article number is provided separate from the page range.",
+    "publication_date": "The date provided (2006) is incorrect; the article was published in August 2021 (with an online release in July 2021).",
+    "doi": "The DOI '101.016/nature116,2' is malformed and points to a Nature-style prefix instead of Science (10.1126).",
+    "pmcid": "No PMCID was provided in the citation string to evaluate.",
+    "pmid": "No PMID was provided in the citation string to evaluate."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "apa",
+    "REFERENCE": "Multiple components are erroneous: journal name typo, year/volume mismatch, impossible DOI, and title not matching any known work. Collectively these indicate the reference is fabricated or severely corrupted.",
+    "authors": "Author 'Thompson, B. T.' could exist, but no record of this specific author publishing the given title in 2006.",
+    "title": "The title 'Broad betacoronavirus neutralization by a stem helix-specific human antibody' does not match any known publication by this author in 2006; coronavirus neutralization studies of this type appeared later (post\u20112019).",
+    "journal_name": "'Sciencev(New York, N.Y).' is a garbled form of the journal 'Science'; the extra 'v' and misplaced parentheses indicate a typo/error not present in the genuine journal title.",
+    "journal_volume": "Volume 373 of Science corresponds to 2021, not 2006, creating a year\u2011volume mismatch.",
+    "journal_issue": "Issue 6559 is associated with Science volume 373 (2021); again inconsistent with the 2006 year.",
+    "journal_page": "Pages 1109\u20111116 exist in Science 373(6559) but the article there is unrelated to the given title.",
+    "elocator": "No elocator provided; not applicable.",
+    "publication_date": "The combination of year 2006 with volume/issue/pages points to a 2021 article, so the date is incorrect.",
+    "doi": "DOI '101.016/nature116,2' does not follow the correct DOI syntax (should be 10.xxxx/xxxxx) and resolves to nothing; it is fabricated.",
+    "pmcid": "No PMCID supplied; cannot verify.",
+    "pmid": "No PMID supplied; cannot verify."
+  }
+]

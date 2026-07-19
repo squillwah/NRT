@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The citation contains multiple indicators of fabrication. The journal name 'Diabetes Metab Syndr Rev' is not a recognized standard abbreviation. The volume number 502 is implausible for a journal that started in 2007. The DOI '10.7033.4/pai695,-5tf247' is not in a valid format and the prefix is not registered. The PMID '538068793' is 9 digits, exceeding the maximum 8-digit PMID range. The PMCID 'PMC92886299' is also suspicious given the other inconsistencies. Therefore, the reference is not authentic.",
+    "authors": "The author names appear plausible but no further verification is possible. However, given the overall fabrication, the credibility of the authors is compromised.",
+    "title": "The title 'Urban heat exposure and hospitalization risk among medically vulnerable populations' sounds plausible for a public health study, but no verification is possible. Given the other fabricated elements, it is likely fabricated.",
+    "journal_name": "The journal name 'Diabetes Metab Syndr Rev' is not a standard abbreviation. The correct journal is likely 'Diabetes & Metabolic Syndrome: Clinical Research & Reviews', but the 'Rev' is erroneous. This suggests fabrication.",
+    "journal_volume": "The volume number is not explicitly stated. The number '502' may be interpreted as volume, but it is implausible for a journal that started in 2007. Therefore, it is likely fabricated.",
+    "journal_issue": "No issue number is provided.",
+    "journal_page": "No page numbers are provided.",
+    "elocator": "The entry '502' is given after the date, but the volume is unstated. If it is a volume number, it is implausibly high (502). If it is an article number, it is unusual. Likely fabricated.",
+    "publication_date": "The date '2009 Jun 6' is given but the format is unusual. The year 2009 is plausible, but overall fabrication suggests it is not a real publication date.",
+    "doi": "The DOI '10.7033.4/pai695,-5tf247' is not in standard format (invalid characters, no slash, comma, extra dash) and the prefix 10.7033 is not registered. Therefore, it is fake.",
+    "pmcid": "The PMCID 'PMC92886299' is 8 digits, which is plausible, but given the other fabricated elements, it is likely not a real ID. No verification available.",
+    "pmid": "The PMID '538068793' is 9 digits, which exceeds the maximum 8-digit PMID length. This is invalid."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "This citation is completely fabricated; the title, journal name, and DOI do not correspond to any real scientific publication.",
+    "authors": "A.J. Fenwick is a legitimate researcher in cardiology, but the 'et al.' group is associated with a non-existent study here.",
+    "title": "The title appears to be a hallucinated synthesis of urban health and medical vulnerability themes not linked to this author or journal.",
+    "journal_name": "The journal title 'Diabetes & Metabolic Syndrome Reviews' appears to be a confusion of 'Diabetes & Metabolic Syndrome: Clinical Research & Reviews'.",
+    "journal_volume": "The citation provides 502, but the actual journal mentioned does not reach such high volume numbers for that time period.",
+    "journal_issue": "No specific issue number was provided in the citation string beyond the page/volume placeholder.",
+    "journal_page": "The number 502 appears as a page or volume marker but does not correspond to a known article of this naming.",
+    "elocator": "No valid e-locator or electronic identifying code was provided.",
+    "publication_date": "June 6, 2009, is a specific date, but no article with this title and author exists for this date.",
+    "doi": "The DOI '10.7033.4/pai695,-5tf247' is syntactically invalid and does not resolve in the CrossRef or DOI databases.",
+    "pmcid": "No PubMed Central ID was provided for validation.",
+    "pmid": "No PubMed ID was provided for validation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "nlm",
+    "REFERENCE": "This reference contains multiple significant red flags indicating it is **fabricated** (likely AI-generated or fabricated by the user):",
+    "authors": "The author names (Fenwick AJ, Lennox XZ, O'Reilly ME, Sato KR) appear plausible but cannot be verified. No known authors match this combination in this journal/context.",
+    "title": "The title 'Urban heat exposure and hospitalization risk among medically vulnerable populations' is plausible in structure and topic but the associated journal, DOI, and identifiers are all invalid, casting doubt on the entire reference.",
+    "journal_name": "The journal name 'Diabetes Metab Syndr Rev' is potentially recognizable as 'Diabetes & Metabolic Syndrome: Clinical Research & Reviews' but the abbreviation is off and does not match standard abbreviations exactly.",
+    "journal_volume": "No explicit volume given; '502' cannot be reliably interpreted as a volume number.",
+    "journal_issue": "'Diabetes Metab Sybd Rev' does not clearly match a known, legitimate journal title. A plausible candidate might be 'Diabetes & Metabolic Syndrome: Clinical Research & Reviews', but the abbreviation 'Rev' is unusual and the formatting is inconsistent.",
+    "journal_page": "'502' is not a valid or typical page number for a journal article; it could be a volume number, but this is not clearly stated and is unusual.",
+    "elocator": "'502' is listed as page/volume/information but is ambiguous and does not match standard journal numbering conventions.",
+    "publication_date": "The date '2009 Jun 6' is plausible in format but cannot be verified against a real article.",
+    "doi": "The DOI '10.7033.4/pai695,-5tf247' is invalid. It does not follow the standard DOI format (prefix '10.' followed by a DOI agency code). The prefix '10.7033.4' does not correspond to any known DOI registration agency. The suffix includes unusual characters (comma) inconsistent with DOI patterns.",
+    "pmcid": "The PMC ID 'PMC92886299' has 9 digits after 'PMC'. Valid PMC IDs are typically 7 or 8 digits, and '92886299' is unusually high and does not match known ranges. It cannot be verified in PubMed Central.",
+    "pmid": "The PMID '538068793' is a 9-digit number. Valid PMIDs are up to 8 digits (currently around 36\u201340 million as of 2024). A PMID of 538 million is far beyond any existing PMID; this is clearly fabricated."
+  }
+]

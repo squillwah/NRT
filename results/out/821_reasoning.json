@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The reference has several issues: missing article title, malformed DOI, and possibly inaccurate author names. These inconsistencies suggest the reference is likely fabricated or seriously flawed.",
+    "authors": "The author list appears to be a realistic sequence of authors for a biomedical paper, but the name 'Brown, A. J. H.' is unusual as it contains two sets of initials separated by a middle initial, though it could be valid. Typically, author names have one or two initials. The pattern 'Brown, J.' repeats, which is suspicious. However, without strong evidence of fabrication, it might be plausible.",
+    "title": "The title is missing; the string 'Cell' is likely the journal name, not the article title. The presence of volume and issue suggests the reference is misformatted, but the article title itself is absent, making it invalid.",
+    "journal_name": "'Cell' is a well-known and prestigious scientific journal, making it a valid journal name.",
+    "journal_volume": "The volume number '184' is plausible for many journals, including Cell, and follows standard numeric format.",
+    "journal_issue": "'24' is a plausible issue number for a journal volume, following standard numbering conventions.",
+    "journal_page": "'5886' is a typical page number format for a specific article in a journal volume.",
+    "elocator": "'e068302' resembles an article elocator number (e.g., e-pub ID), which is valid for some modern journals.",
+    "publication_date": "The year '2021' is provided, which is valid and common for such references, though it is incomplete without a month or day.",
+    "doi": "The DOI '10.6018.10.9/sg' is malformed; DOIs typically start with '10.' and contain a prefix/suffix separated by a slash, but '10.6018.10.9' is not a standard structure, and 'sg' is ambiguous. This appears invalid.",
+    "pmcid": "No PMCID is provided in the reference string, so it is missing.",
+    "pmid": "No PMID is provided in the reference string, so it is missing."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The reference is invalid because it lacks a title, contains an incorrect DOI, and includes an invalid elocator.",
+    "authors": "The list includes prominent researchers like Andrew J.H. Brown and Andrew B. Tobin who collaborated on a 2021 study.",
+    "title": "The provided text does not contain a title for the research article, which is a required component of a citation.",
+    "journal_name": "Cell is a highly reputable medical and biological journal.",
+    "journal_volume": "Volume 184 is consistent with the publication schedule of Cell for the year 2021.",
+    "journal_issue": "Issue 24 was published in late 2021, matching the metadata for this specific research paper.",
+    "journal_page": "The number 5886 correctly corresponds to the starting page of the article by Brown et al.",
+    "elocator": "The e-locator 'e068302' does not match the standard pagination or elocator format for Cell volume 184 issue 24.",
+    "publication_date": "2021 is the correct year of publication for this specific study on M1 muscarinic receptors.",
+    "doi": "The DOI provided '10.6018.10.9/sg' is malformed and does not resolve to the article; the correct DOI for this paper is 10.1016/j.cell.2021.10.030.",
+    "pmcid": "No PubMed Central ID was provided in the input citation.",
+    "pmid": "No PubMed ID was provided in the input citation."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "vancouver",
+    "REFERENCE": "The combination of a plausible journal, volume, issue, and date with an impossible page range, a malformed DOI, and the lack of a verifiable article in PubMed/Crossref indicates that this citation is fabricated or contains significant errors.",
+    "authors": "While the individual surnames (Brown, Bradley, Marshall, Bennett) are common and could belong to real scientists, there is no verifiable record of a paper with exactly this author list in the journal *Cell* for the given date.",
+    "title": "No article title is supplied in the citation, which is unusual for a reference to a primary research article.",
+    "journal_name": "*Cell* is a legitimate, peer\u2011reviewed journal published by Cell Press.",
+    "journal_volume": "Volume 184 of *Cell* was published in 2021, so the volume number itself is plausible.",
+    "journal_issue": "Issue 24 of volume 184 exists (it corresponds to the June\u2011July 2021 issue).",
+    "journal_page": "The page range \"5886:e068302\" is not a valid format for *Cell*; articles in *Cell* are identified by an article number or a continuous page range, not a colon\u2011separated page:e\u2011number pattern.",
+    "elocator": "The string \"e068302\" resembles an article identifier used by some journals, but combined with the preceding \"5886:\" it does not match any known *Cell* article.",
+    "publication_date": "November 24, 2021 falls within the timeframe of volume 184, issue 24 of *Cell*, so the date is plausible.",
+    "doi": "A valid DOI must begin with \"10.\" followed by a registrant code, a slash, and then a suffix that contains no spaces or disallowed characters. \"10.6018.10.9/sg\" does not conform to the DOI syntax (the registrant code \"6018.10.9\" is not a valid Crossref prefix and the suffix \"sg\" is insufficient).",
+    "pmcid": "No PMCID is provided, and no matching article is found in PubMed Central.",
+    "pmid": "No PMID is provided, and a search of PubMed for the given authors, journal, volume, issue, or the putative DOI returns no matching record."
+  }
+]

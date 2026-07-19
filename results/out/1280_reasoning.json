@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The citation contains multiple suspicious elements: an implausibly high issue number (4157), an unusual date format ('Sep 2' embedded in the volume/issue field), and a DOI string that does not conform to any standard DOI pattern (e.g., '10.9586.782.158/2a0e/cno-1tan-/wdll'). These inconsistencies strongly indicate the reference is fabricated or erroneous.",
+    "authors": "Author names are plausible but cannot be verified without external sources. Given the overall fabrication, they are likely also fictitious.",
+    "title": "The title appears plausible, but without external verification, it may be a generic-sounding fabrication.",
+    "journal_name": "No journal name is provided in the citation. This omission is suspicious but not conclusive on its own.",
+    "journal_volume": "Volume 223 is high but not impossible for a long-running journal. However, combined with the other issues, it is likely fabricated.",
+    "journal_issue": "Same as above: the issue number is implausibly high, indicating fabrication.",
+    "journal_page": "Pages 486\u2013501 are plausible, but in the context of other fabricated elements, they may be randomly assigned.",
+    "elocator": "The issue number 4157 is far beyond realistic journal issue numbering (typically 1\u201312 per volume). This is a clear red flag.",
+    "publication_date": "The date '2016 Sep 2' is oddly formatted, and the presence of a specific day in a journal citation is unusual. It may be a fabrication.",
+    "doi": "The DOI is malformed and does not match any known DOI registry format. Real DOIs use a structure like '10.xxxx/yyyyy', whereas this string contains arbitrary characters and multiple slashes/periods in unusual positions.",
+    "pmcid": "No PMC ID is provided; not applicable.",
+    "pmid": "No PMID is provided; not applicable."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The reference is fabricated; it lacks a journal title, uses a broken DOI, and the content does not exist in any reputable index.",
+    "authors": "While Jensen and Saito are common academic surnames, there is no record of these specific authors co-authoring a paper on this topic in 2016.",
+    "title": "The title follows a predictable academic structure but does not appear in any major medical or bibliographic databases.",
+    "journal_name": "The journal name is missing entirely from the citation, providing only volume and page numbers.",
+    "journal_volume": "The volume '223' and issue '4157' are inconsistent with typical journal numbering for medical publications.",
+    "journal_issue": "The issue number 4157 is extremely high and unlikely for a standard scientific journal.",
+    "journal_page": "The page range 486-501 is plausible for an article, but doesn't exist for a non-existent journal title.",
+    "elocator": "No elocator was provided in the citation.",
+    "publication_date": "2016 is a plausible year but does not correspond to a real publication of this name.",
+    "doi": "The DOI format (10.9586.782.158/...) is invalid and does not resolve in the Crossref or DOI.org systems.",
+    "pmcid": "No PubMed Central ID was provided for this citation.",
+    "pmid": "No PubMed ID was provided for this citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "vancouver",
+    "REFERENCE": "The citation contains multiple red flags indicating it is likely fabricated or severely malformed.",
+    "authors": "Author names 'Jensen KH, Saito YM' are plausible but cannot be verified without additional context such as institutional affiliations or a legitimate journal.",
+    "title": "The title 'Comparative effectiveness of remote and clinic-based hypertension management' is plausible as a medical research topic, but cannot be verified without a legitimate journal and DOI.",
+    "journal_name": "The citation is entirely missing a journal or publication name, making it impossible to verify its existence.",
+    "journal_volume": "Volume 223 is plausible for some journals, but combined with the other issues, it cannot be validated.",
+    "journal_issue": "No journal title is provided anywhere in the citation. This is a critical omission. The numbering (223(4157)) is unusual and does not match typical journal vol/issue formatting.",
+    "journal_page": "Page range 486-501 (16 pages) is plausible in length, but without a verified journal, the pages cannot be authenticated.",
+    "elocator": "The volume (223), issue (4157), and page range (486-501) are suspiciously large issue numbers and seem improbable for a standard journal.",
+    "publication_date": "The date format '2016 Sep 2' and volume/issue structure are inconsistent with known publication patterns. The format appears structurally valid but unverifiable without a real journal.",
+    "doi": "The DOI '10.9586.782.158/2a0e/cno-1tan-/wdll' does not conform to the standard DOI format (10.XXXX/suffix). It contains non-standard punctuation, multiple periods in the prefix, and a nonsensical suffix. This DOI appears fabricated and cannot be resolved.",
+    "pmcid": "No PubMed Central ID is provided in the citation.",
+    "pmid": "No PubMed ID is provided in the citation."
+  }
+]

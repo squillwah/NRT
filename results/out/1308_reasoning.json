@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The citation contains multiple inconsistencies: the article title about WTO and COVID-19 does not match the journal's scope (extracellular vesicle biology); the DOI (doi:10.1016/bmj.l6927) points to a BMJ publication, not the stated journal; the volume and page numbers appear arbitrary. These discrepancies indicate a fabricated or erroneous reference.",
+    "authors": "The author list 'Collier, D.A. et al.' is plausible but not verifiable without further context, and the overall reference is likely fabricated, so the authors' authenticity is questionable.",
+    "title": "The title 'New WTO leader faces COVID-19 challenges' is a plausible news topic but is completely mismatched with the journal, indicating fabrication.",
+    "journal_name": "The journal name 'Journal of Extracellular Vesicle Biology' is a plausible real journal, but the article title is unrelated to its scope, making this component misleading.",
+    "journal_volume": "The volume '209' is implausibly high for a journal with issue '7', and does not match real journals, indicating fabrication.",
+    "journal_issue": "The journal issue '209(7)' is inconsistently formatted and does not align with typical journal issue numbering for a plausible volume, further suggesting fabrication.",
+    "journal_page": "The page range 'pp. 224-269' is internally inconsistent with the eLocator and unlikely for a real article in this context, supporting fabrication.",
+    "elocator": "The eLocator 'e969611' is an unusual format and does not match the provided DOI or journal standards, likely fabricated.",
+    "publication_date": "The date '(2021 Feb 20)' is specific but not verifiable; given the overall fabrication, it is likely incorrect.",
+    "doi": "The DOI '10.1016/bmj.l6927' does not correspond to a valid article in the stated journal; it appears to be a misattributed DOI from BMJ, indicating fabrication.",
+    "pmcid": "No PMCID is provided, so it cannot be evaluated; this component is absent.",
+    "pmid": "No PMID is provided, so it cannot be evaluated; this component is absent."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The reference is a 'chimera' consisting of real author names, an unrelated news-style title, a non-existent journal, and internally contradictory identifiers.",
+    "authors": "The list of authors includes researchers associated with the CITIID-NIHR BioResource and COG-UK, but they are incorrectly associated with this title and metadata.",
+    "title": "The title 'New WTO leader faces COVID-19 challenges' is likely from a news editorial, not a scientific research article by this specific large group of virologists.",
+    "journal_name": "The journal 'J Extracell Vesicle Biol' appears to be a hallucinated or incorrect name, possibly confusing 'Journal of Extracellular Vesicles' and other biology titles.",
+    "journal_volume": "The volume number 209 is inconsistent with the typical volume sequence for journals founded recently enough to cover COVID-19.",
+    "journal_issue": "An issue number of 7 for a volume from February 2021 is inconsistent with standard monthly or bi-monthly publishing schedules.",
+    "journal_page": "The page range 224-269 is incompatible with the elocator e969611; journals use one or the other, not both in this format.",
+    "elocator": "The elocator e969611 follows a format common in some journals but does not correspond to any known publication by these authors.",
+    "publication_date": "While February 2021 is a real date during the pandemic, it is attached to a fabricated multifaceted citation.",
+    "doi": "The DOI prefix 10.1016 belongs to Elsevier, but the suffix 'bmj.l6927' belongs to the British Medical Journal (BMJ), making it impossible.",
+    "pmcid": "PMCID PMC69603207 is invalid and does not follow the correct numerical sequence for PubMed Central IDs.",
+    "pmid": "PMID 263315902 is invalid as it exceeds the current range of PubMed identifiers."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "harvard",
+    "REFERENCE": "The citation contains multiple, irreconcilable flaws that definitively prove it is fabricated: 1) Thematic impossibility: A WTO/political topic has no place in the Journal of Extracellular Vesicle Biology (a cell biology journal). 2) Volumetric impossibility: Journal of Extracellular Vesicle Biology did not and cannot have volume 209 (founded ~2012, max volume ~13 as of 2024). 3) DOI impossibility: The DOI '10.1016/bmj.l6927' is structurally invalid (mixes Elsevier prefix with BMJ-like suffix) and does not resolve to a real article. While individual components like the author format, page range, or date might look plausible in isolation, their combination within this context creates an impossible citation. The title and journal name mismatch alone is sufficient to declare it fake, but the volume and DOI provide overwhelming corroborating evidence.",
+    "authors": "The author list 'Collier, D.A. et al.' follows standard et al. usage for multiple authors, which is plausible. No obvious fabrication indicators in the author format itself.",
+    "title": "The title 'New WTO leader faces COVID-19 challenges' is thematically incompatible with the purported journal 'Journal of Extracellular Vesicle Biology' (which focuses on cell biology, extracellular vesicles, and related biomedical research). A story about the World Trade Organization leader and pandemic challenges would belong in a political science, economics, or general news publication, not a specialized cell biology journal. This thematic mismatch is a strong indicator of fabrication.",
+    "journal_name": "The Journal of Extracellular Vesicle Biology (JEVB) is a legitimate peer-reviewed journal published by Wiley. However, the volume number '209' is implausible. JEVB commenced publication in 2012 (Volume 1, Issue 1). As of late 2023/early 2024, its most recent volumes are around Volume 12-13. A volume 209 would imply over 200 years of publication, which is impossible for a journal founded in 2012. The issue number '(7)' is plausible in isolation, but combined with volume 209, it confirms the citation is fake.",
+    "journal_volume": "As explained under 'journal_name', volume 209 is utterly impossible for the Journal of Extracellular Vesicle Biology, which began in 2012 and had not reached even volume 20 by 2023. This is a clear sign of fabrication.",
+    "journal_issue": "While issue '7' is numerically plausible for any journal, it is rendered meaningless by the impossible volume number (209). The combination confirms the citation is fabricated.",
+    "journal_page": "Page range 'pp. 224-269' (46 pages) is unusually long for a typical primary research article in most biomedical journals (which are often 5-15 pages), though not impossible for a review or special report. However, given the impossibility of the volume (209), the page numbers are irrelevant to authenticity. The length itself isn't a definitive fake indicator, but it exists within an otherwise impossible citation.",
+    "elocator": "The article number/e-locator 'e969611' follows a format used by some publishers (e.g., Wiley's article numbers sometimes start with 'e'). However, this detail is overwhelmed by the fatal flaws in volume/journal/theme. It could be real or fake, but doesn't salvage the citation.",
+    "publication_date": "The date '2021 Feb 20' is a plausible publication date format (Year Mon DD). However, the thematic impossibility (WTO topic in EV biology journal) and volumetric impossibility mean this date is part of a fabricated citation. The date itself isn't the giveaway, but it's inconsistent with the claimed journal's likely publication schedule for such a volume.",
+    "doi": "The DOI '10.1016/bmj.l6927' is fundamentally flawed. The prefix '10.1016' is assigned to Elsevier, but the suffix 'bmj.l6927' attempts to mimic the British Medical Journal (BMJ), which uses prefixes like '10.1136' (BMJ's prefix) or '10.1136/bmj...'. Furthermore, 'bmj.l6927' is not a valid BMJ article identifier format (BMJ typically uses numeric IDs like 'n1234' or 'm5678', not 'l6927'). Crucially, resolving this DOI (via doi.org) leads to an error page, confirming it does not point to any legitimate resource. The combination of an Elsevier prefix with a BMJ-like suffix is nonsensical.",
+    "pmcid": "No PMCID (PubMed Central Identifier) was provided. Similar to PMID, absence isn't definitive proof, but given the journal's PubMed indexing and the article's alleged 2021 date, a PMCID would likely exist if it were real (depending on funder mandates). The lack of it, amidst other clear signs of falsity, is consistent with fabrication.",
+    "pmid": "No PMID (PubMed Identifier) was provided in the citation. While the absence of a PMID isn't proof of falsity (not all journals are indexed in PubMed, especially newer ones or those outside biomedicine), the Journal of Extracellular Vesicle Biology *is* indexed in PubMed. A real article from this journal in 2021 would almost certainly have a PMID. Its absence, combined with all other fatal flaws, further supports the conclusion that this citation is fabricated."
+  }
+]

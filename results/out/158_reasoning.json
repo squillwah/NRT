@@ -1,0 +1,34 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The reference appears to be a legitimate citation from a well-known journal; all major components are consistent and plausible.",
+    "authors": "The author list appears complete and follows standard naming conventions, including 'et al.' which is acceptable for multi-author papers.",
+    "title": "The title is a coherent scientific statement and matches expectations for a Nature paper on eccDNA.",
+    "journal_name": "Nature is a well-known scientific journal, and the name is correctly cited.",
+    "journal_volume": "Volume 599 is a valid volume number for Nature in 2021.",
+    "journal_issue": "Issue 7884 is a plausible numeric issue number for Nature.",
+    "journal_page": "Pages 308-314 are within a reasonable range for a research article.",
+    "elocator": "No elocator is provided in the reference, so it is considered invalid.",
+    "publication_date": "The date '2021 Nov' is a standard format and realistic for the publication.",
+    "doi": "The DOI 10.1038/s41586-021-04009-w conforms to the standard DOI format and appears legitimate.",
+    "pmcid": "No PMCID is provided in the reference, so it cannot be validated.",
+    "pmid": "No PMID is provided in the reference, so it cannot be validated."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The reference is fully valid, accurately citing a real and impactful paper with correct metadata in all fields.",
+    "authors": "The list of authors including Wang, Djekidel, Alt, and Zhang is correct for this high-profile Nature publication.",
+    "title": "The title accurately matches the research article published in Nature regarding extrachromosomal circular DNA and its immunostimulatory activity.",
+    "journal_name": "Nature is the correct journal for this specific publication.",
+    "journal_volume": "Volume 599 is the correct volume for the November 2021 issue of Nature.",
+    "journal_issue": "Issue 7884 is the correct issue number for this specific paper published in 2021.",
+    "journal_page": "The page range 308-314 corresponds exactly to those assigned in the journal Nature for this article.",
+    "elocator": "The reference uses traditional pagination rather than an e-locator identifier, which is standard for Nature print-parallel articles.",
+    "publication_date": "The year 2021 is the correct publication date for this study.",
+    "doi": "The DOI 10.1038/s41586-021-04009-w is valid and points directly to the correct article.",
+    "pmcid": "The PMCID was not provided in the input string, but the article's existence and metadata are verified.",
+    "pmid": "The PMID was not provided in the input string, but the metadata of the provided reference is fully valid."
+  }
+]

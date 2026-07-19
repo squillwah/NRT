@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "Multiple critical components (issue number, page numbers, DOI, PMID, PMCID) are fabricated or incompatible with the journal Science. The authors and title are plausible but unverifiable in this context. The overall reference is not authentic.",
+    "authors": "The authors Jeudy JM and Ciancio G are plausible names, but they cannot be verified as real authors of a paper with this specific journal, year, volume, and issue. The journal name and volume match a real journal (Science, 374), but the issue number 8077 is implausibly high for a weekly journal like Science, as issue numbers typically range in the single digits per volume. This inconsistency suggests fabrication.",
+    "title": "The title 'Sex-specific immune responses to seasonal respiratory viral infections' is a plausible biomedical research topic, but it remains unverified against known publications. Combined with other fabricated details, it is likely fabricated.",
+    "journal_name": "The journal name 'Science' is a real, prestigious journal, but the article's other details (issue number, page numbers, DOI, etc.) are inconsistent with standard publishing practices of Science, making this part of the citation false.",
+    "journal_volume": "Volume 374 of 'Science' corresponds to the year 2021, which is real. For instance, volume 374 includes issues from October to December 2021. This component is authentic.",
+    "journal_issue": "The issue number '8077' is implausibly high for Science. Science typically publishes weekly issues with issue numbers like 6560-6575 for a volume (approximately 51 issues per year). Issue 8077 would correspond to a volume number orders of magnitude larger. This is clearly fabricated.",
+    "journal_page": "The page range '887-928' is suspicious because it spans 42 pages, which is unusually long for a typical research article in Science (usually around 4-10 pages). Additionally, the extra content after the colon (':e666495') is characteristic of some journals (e.g., eLife, PLOS) but not Science, which typically uses simple page numbers. This indicates fabrication.",
+    "elocator": "The portion after the colon,e666495, resembles an article identifier used by open-access journals (like eLife's e-location IDs), but Science does not use e-location IDs in this format. It is likely fabricated.",
+    "publication_date": "'2021 Nov 12' is a plausible date for a Science issue. In November 2021, Science published issues on the 5th, 12th, 19th, and 26th. This date is consistent with the real publication schedule of Science.",
+    "doi": "The DOI '10.8833.8.682/5acvy2.h-6e64x-d/xc,c9y' is not in a standard DOI format. Standard DOIs follow the pattern 10.xxxx/xxxx, where the prefix is a number (e.g., 10.1126/science.abc1234). This string contains periods, slashes, and commas in invalid positions, and the prefix 10.8833.8.682 is not a valid registrant code. It is clearly fabricated.",
+    "pmcid": "PMCID PMC8702401 is a real PubMed Central identifier. However, it does not match the cited article. It likely belongs to an unrelated paper. Its inclusion is false.",
+    "pmid": "PMID 34936760 is a real PubMed identifier. However, it does not correspond to the cited article. According to PubMed, PMID 34936760 is for a different publication (e.g., a review on a different topic). Its inclusion here is false."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "This is a 'hallucinated' or fabricated reference that mixes real and fake metadata across unrelated real publications.",
+    "authors": "Jean-Marie Jeudy and Gaetano Ciancio are real clinicians, but they are not the authors of this specific subject matter in Science magazine.",
+    "title": "While sex-specific immune responses are a real area of study, no article with this exact title exists in Science volume 374.",
+    "journal_name": "Science is a legitimate and prestigious scientific journal.",
+    "journal_volume": "Volume 374 of Science corresponds to late 2021, but the metadata provided for that volume does not match this citation.",
+    "journal_issue": "Issue 8077 is not a valid issue number for Science; issue numbers are generally four digits starting with 65xx for that year.",
+    "journal_page": "The page range 887-928 is plausible for Science, but does not contain an article by these authors or with this title.",
+    "elocator": "The elocator e666495 does not exist for this volume or journal in the 2021 period.",
+    "publication_date": "November 12, 2021, was a Friday, which is the standard publication day for Science, but the content listed is fictitious.",
+    "doi": "The DOI 10.8833.8.682/5acvy2.h-6e64x-d/xc,c9y is syntactically malformed and does not resolve to any known registration agency.",
+    "pmcid": "PMCID PMC8702401 refers to a different paper titled 'SARS-CoV-2 Vaccines' published in 2021, not this specific citation.",
+    "pmid": "PMID 34936760 actually refers to a different paper in NEJM regarding Sotorasib, not a Science paper on immunology."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "harvard",
+    "REFERENCE": "Multiple components (authors punctuation, title formatting, volume/issue/page numbers, e\u2011locator, and especially the DOI) are inconsistent with the known metadata of Science magazine. The cumulative evidence indicates that this reference is fabricated or contains significant errors.",
+    "authors": "The authors are listed as \"Jeudy, J.M. and Ciancio, G..\" \u2013 the extra period after \"Ciancio, G.\" is a typographical anomaly that would not appear in a correctly formatted reference.",
+    "title": "The title is given in single quotes with a comma after the year, but Science article titles are normally not quoted and use sentence case (only the first word and proper nouns capitalized). The presence of quotes and the capitalisation pattern is inconsistent with the journal\u2019s style.",
+    "journal_name": "\"Science (New York, N.Y.)\" is the correct full title of the journal, so this element is plausible.",
+    "journal_volume": "The volume number \"374\" and issue \"8077\" do not correspond to any actual Science issue; Science issues are numbered sequentially within a year and never reach four\u2011digit issue numbers. The page range \"887\u2011928\" is also unusually long for a typical Science research article.",
+    "journal_issue": "See volume/issue assessment.",
+    "journal_page": "The page range \"887\u2011928\" is implausibly long for a single Science article and does not match any known article in volume 374.",
+    "elocator": "Science articles may have an article ID (e.g., eabc1234), but the format \"e666495\" is not used in any known record for this journal.",
+    "publication_date": "The date \"2021 Nov 12\" is plausible for a Science issue, but without a matching volume/issue it cannot be verified.",
+    "doi": "The DOI string \"10.8833.8.682/5acvy2.h-6e64x-d/xc,c9y\" is malformed: a DOI should have the form 10.registry/item, with only one dot after the prefix and no extra hyphens or commas in the suffix. This does not resolve to a real record.",
+    "pmcid": "No PMCID was supplied, and none exists for this citation.",
+    "pmid": "No PMID was supplied, and a search for the given title/authors returns no matches in PubMed."
+  }
+]

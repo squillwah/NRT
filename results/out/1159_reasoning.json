@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "Given the fabricated journal name and invalid DOI, the entire reference is likely fake.",
+    "authors": "The author list includes plausible first names and last names (e.g., Zhang J, Xiao T, Cai Y) and a common et al. abbreviation; no immediate red flags.",
+    "title": "The title describes a typical clinical trial (Metformin vs. placebo for cognitive decline prevention in type 2 diabetes with mild cognitive impairment). Appears well-structured and specific.",
+    "journal_name": "'N Engl J Mol Pathol' is suspicious. The New England Journal of Medicine is a real journal but with different name; 'J Mol Pathol' does not exist. This combination appears fabricated.",
+    "journal_volume": "Volume 211 is unusually high, although not impossible if the journal has existed for many years; however, given the fake journal name, it's part of the fabrication.",
+    "journal_issue": "Issue 10 is plausible format; but given the context of a fake journal, it's also likely fabricated.",
+    "journal_page": "Page range 509-520 is plausible; however, the appended 'e943897' is unusual (often for article numbers, not pages). This suggests fabrication or confusion.",
+    "elocator": "The string 'e943897' might be intended as an elocator but is placed after page range and lacks proper formatting. Unlikely to be valid.",
+    "publication_date": "Date format (2022 Feb 10) is plausible. No immediate reason to doubt.",
+    "doi": "The doi '10.4136.713.29/6vhxn/-zbttad' does not conform to standard DOI structure (seems random). Typical DOIs have format like 10.xxxx/xxxxx. This is invalid.",
+    "pmcid": "No PMCID is provided.",
+    "pmid": "No PMID is provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "The entire citation is a hallucination with a non-existent journal, a fake DOI, and a title not found in any academic database.",
+    "authors": "Some authors like Zhang, Xiao, and Cai are common in medical literature, but the list appears fabricated within this specific context.",
+    "title": "The title follows a standard clinical trial format but does not correspond to any known published study in any medical database.",
+    "journal_name": "The journal 'N Engl J Mol Pathol' does not exist; it appears to be a hallucinated combination of the New England Journal of Medicine and other pathology journals.",
+    "journal_volume": "Since the journal does not exist, the volume number 211 is considered invalid in this context.",
+    "journal_issue": "No issue number was provided in the citation format beyond the date.",
+    "journal_page": "The page range 509-520 is formatted like a real citation but is associated with a non-existent journal and article.",
+    "elocator": "The elocator e943897 is part of a non-existent or hallucinated reference.",
+    "publication_date": "The date is February 10, 2022, but no such article exists for this date in the cited journal (which itself is invalid).",
+    "doi": "The DOI 10.4136.713.29/6vhxn/-zbttad is syntactically incorrect and does not resolve to any digital object.",
+    "pmcid": "No PMCID was provided in the source citation string.",
+    "pmid": "No PMID was provided in the source citation string."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "apa",
+    "REFERENCE": "This citation contains multiple significant red flags indicating it is likely fabricated or AI-generated.",
+    "authors": "The long author list is formatted in a standard academic manner but is difficult to verify directly without searching databases. The authors do not have an obvious connection to the topic when cross-referenced.",
+    "title": "The title 'Metformin versus placebo for the prevention of cognitive decline in patients with type 2 diabetes and mild cognitive impairment: a randomized controlled trial' describes a plausible RCT, likely based on the real DREAM-IT trial (byDur\u00e1n et al., 2023, published in JAMA). The title appears to be an AI-generated synthesis or paraphrase. It does not match any known publication exactly.",
+    "journal_name": "The journal 'New England Journal of Molecular Pathology' is not a recognized journal. It appears to be a fabricated name inspired by the 'New England Journal of Medicine'.",
+    "journal_volume": "Volume 211 is plausible for a well-established journal, but since the journal name is fabricated, the volume number cannot be validated.",
+    "journal_issue": "The title 'New England Journal of Molecular Pathology' is likely fabricated, possibly intended to mimic the well-known 'New England Journal of Medicine'. No prominent journal of this exact name exists in major academic databases.",
+    "journal_page": "The page range '509-520' is plausible in isolation, but when combined with the synthetic journal name, volume number (211), and unusual e-locator, it loses credibility.",
+    "elocator": "The string 'e943897' appended after the page numbers is non-standard and does not conform to typical journal formatting.",
+    "publication_date": "The year 2022 is noted, but without a specific month/day, it is difficult to verify. Overall, the citation is likely fabricated, rendering the date unreliable.",
+    "doi": "The DOI (https://doi.org/10.4136.713.29/6vhxn/-zbttad) uses the prefix 10.4136, which does not correspond to any major academic publisher. Major publishers like Springer (10.1007), Wiley (10.1002), or NEJM (10.1056) have well-known prefixes. The format of the suffix also appears contrived. The DOI appears fabricated.",
+    "pmcid": "No PMC ID is included in the citation.",
+    "pmid": "No PubMed ID is included in the citation."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The reference appears to describe a real study (Schweickert et al., 2009, Lancet), but the DOI is clearly corrupted: '01.1016/S0140-6736uj9)60658-9' instead of the correct '10.1016/S0140-6736(09)60658-9'. This makes the reference as a whole not authentic because the DOI is a key identifier and is fabricated.",
+    "authors": "The author list matches the known real study. No obvious fabrication.",
+    "title": "The title 'Early physical and occupational therapy in mechanically ventilated, critically ill patients: a randomised controlled trial' matches the real article.",
+    "journal_name": "'Lancet (London, England)' is the correct journal name for this publication.",
+    "journal_volume": "Volume '373' matches the real article.",
+    "journal_issue": "No issue number is provided; only volume and pages. Not applicable.",
+    "journal_page": "Pages '1874-1882' match the real article.",
+    "elocator": "No elocator (e.g., article number, e.g., e1) is provided in this reference.",
+    "publication_date": "The year '2009' is correct for this study.",
+    "doi": "The DOI '01.1016/S0140-6736uj9)60658-9' is not a valid DOI format; it contains '01.' instead of '10.', and 'uj9)' instead of '(09)'. This is clearly fabricated.",
+    "pmcid": "No PMCID is provided.",
+    "pmid": "No PMID is provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The core bibliographic information is accurate and identifies a real, major study, despite a corrupted DOI string.",
+    "authors": "The author list accurately represents the research team led by researchers from the University of Chicago and meets the published record for this study.",
+    "title": "The title matches the exact wording of the landmark randomized controlled trial published regarding early mobilisation in ICU settings.",
+    "journal_name": "The Lancet is the correct prestigious medical journal where this study was published.",
+    "journal_volume": "Volume 373 is the correct volume for the citation year 2009 in The Lancet.",
+    "journal_issue": "Issue 9678 is the correct identifier for the specific publication of this article.",
+    "journal_page": "The page range 1874-1882 accurately reflects the article's location within the journal volume.",
+    "elocator": "The Lancet traditionally uses page numbers rather than unique e-locators for this volume; none were provided or required.",
+    "publication_date": "The publication year 2009 is correct for this clinical trial record.",
+    "doi": "The provided DOI string contains typos '01.' and 'uj9)' which do not follow standard DOI formats; the correct DOI is 10.1016/S0140-6736(09)60658-9.",
+    "pmcid": "No PubMed Central ID was provided in the input string to evaluate.",
+    "pmid": "No PubMed ID was provided in the input string to evaluate."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": "The citation references a well-known RCT by Schweickert et al. (2009) published in The Lancet about early physical/occupational therapy in critically ill patients. The authors, title, journal, volume/issue/pages, and general year are accurate. However, the DOI is clearly malformed: 'doi:01.1016/S0140-6736uj9)60658-9' contains errors ('01.' prefix is wrong; 'uj9)' should be '(09)'). The correct DOI is 10.1016/S0140-6736(09)60658-9. The article is otherwise verifiable and authentic, with only the DOI requiring correction.",
+    "authors": "The lead author Schweickert, W.D. is correct and is the first author of this study. The use of 'et al.' is appropriate as there are multiple authors.",
+    "title": "The title 'Early physical and occupational therapy in mechanically ventilated, critically ill patients: a randomised controlled trial' is a verbatim match for the actual article title.",
+    "journal_name": "The Lancet is correctly identified, and the designation '(London, England)' correctly indicates its place of publication.",
+    "journal_volume": "Volume 373 is correct for The Lancet in 2009.",
+    "journal_issue": "Volume 373, issue 9678 is correct for The Lancet 2009. The journal name 'The Lancet (London, England)' is accurate.",
+    "journal_page": "Pages 1874-1882 are correct for this article.",
+    "elocator": "The pages 1874-1882 in volume 373, issue 9678 of The Lancet are correct. The issue number and page range match the known publication.",
+    "publication_date": "The date '2009 May 30' corresponds to the publication date of this article in The Lancet. This is accurate.",
+    "doi": "The DOI is clearly corrupted/incorrect. It contains extraneous characters ('01.', 'uj9)') that do not match the standard DOI format or the actual DOI of this article. The correct DOI is 10.1016/S0140-6736(09)60658-9.",
+    "pmcid": "No PubMed Central ID is provided in the citation.",
+    "pmid": "No PubMed ID is provided in the citation. The PMID for this article is 19446200."
+  }
+]

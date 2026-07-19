@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "Multiple components (volume, page/elocator combination, DOI) are clearly fabricated or erroneous. The overall reference is not authentic.",
+    "authors": "The author list appears plausible and follows standard formatting. No obvious errors detected.",
+    "title": "The title 'Randomized Trial of Fetal Surgery for Moderate Left Diaphragmatic Hernia' is similar to a known clinical trial (TOTAL trial) but not an exact match. It might be fabricated or a slight misremembering.",
+    "journal_name": "'BMJ (Clinical research ed.)' is a real journal, but the abbreviation and edition are acceptable.",
+    "journal_volume": "BMJ volume 413 is not consistent with the year 2021; in 2021 BMJ volumes were around 372-373. Volume 413 likely does not exist for that year.",
+    "journal_issue": "Issue number 1 is plausible, but given the volume is false, the overall component is suspect.",
+    "journal_page": "Having both a page range (1168-1195) and an article number (e009915) is atypical for BMJ. Modern BMJ articles use a single article number, not both.",
+    "elocator": "The e009915 format is plausible for BMJ e-locators, but combined with page numbers raises suspicion.",
+    "publication_date": "The year 2021 is standard but no month provided; overall plausible.",
+    "doi": "'10.8198/v5hhb-fjcc437-0w.s/v' is not a valid DOI format. DOIs start with 10. followed by a prefix/suffix, but this string contains unusual characters and does not resolve. Also, the prefix '10.8198' is not a known DOI prefix.",
+    "pmcid": "No PMC ID provided; cannot evaluate.",
+    "pmid": "No PMID provided; cannot evaluate."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "This is a hallucinated citation that mixes real author names from the field of infectious diseases with a surgical study title and fabricated metadata.",
+    "authors": "The listed authors, such as Khitam Muhsen and Ron Dagan, are real researchers, but their expertise is in epidemiology and infectious diseases, not fetal surgery.",
+    "title": "The title refers to fetal surgery for diaphragmatic hernia, which is a real medical topic (often associated with the TOTAL trial), but it is not an article published by these authors.",
+    "journal_name": "The BMJ is a legitimate medical journal, however, the volume and numbering provided do not align with its actual output.",
+    "journal_volume": "The BMJ uses year-based volume numbering or specific sequential numbers; volume 413 does not correspond correctly to the year 2021.",
+    "journal_issue": "The issue number provided does not exist for the BMJ in the specified year.",
+    "journal_page": "The page range provided (1168-1195) combined with an e-locator is inconsistent with BMJ's standard citation format.",
+    "elocator": "The electronic locator e009915 does not correspond to a paper by these authors or on this topic in the BMJ.",
+    "publication_date": "While July 8, 2021, was a publication date for major fetal surgery trials (like the TOTAL trial in NEJM), it does not apply to this fabricated BMJ entry.",
+    "doi": "The DOI format '10.8198/v5hhb...' is invalid and does not resolve to any scholarly object; legitimate DOIs follow standard prefix/suffix registrations.",
+    "pmcid": "No PMCID was provided in the source citation to evaluate.",
+    "pmid": "PMID 607709067 is invalid as current PMIDs have not reached 9-digit numbers starting with 600 million; they are currently in the 30-40 million range."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "vancouver",
+    "REFERENCE": "The citation contains multiple elements that do not conform to known bibliographic standards for BMJ (British Medical Journal) articles, and a search of the literature reveals no matching record. Specific red flags include:\n\n1. **Journal and Volume/Issue** \u2013 BMJ volumes in 2021 were in the mid\u2011300s (e.g., volume\u202f372, issue\u202f\u2026); a volume\u202f413 does not exist for that year.\n2. **Page Range and Article Identifier** \u2013 The format \u201c1168\u20111195:e009915\u201d mixes a continuous page range with an article\u2011ID style suffix that BMJ does not use; BMJ articles are cited either by page numbers or by an article number (e.g.,\u202fn1234), not both.\n3. **DOI** \u2013 The string \u201c10.8198/v5hhb-fjcc437-0w.s/v\u201d is not a valid DOI prefix for BMJ (BMJ uses the 10.1136 prefix). The prefix 10.8198 belongs to other repositories (e.g., Figshare, Zenodo\u2011like services) and the suffix does not resolve to a known record.\n4. **Title** \u2013 While fetal surgery for diaphragmatic hernia is a genuine research area, no randomized trial titled exactly \u201cRandomized Trial of Fetal Surgery for Moderate Left Diaphragmatic Hernia\u201d appears in PubMed, Web of Science, or the BMJ archive for 2021.\n5. **Author List** \u2013 The names provided do not correspond to any known author group on a BMJ fetal\u2011surgery paper; a quick author\u2011name search yields no hits.\n\nTaken together, these inconsistencies indicate that the reference is fabricated or incorrectly assembled.",
+    "authors": "No verifiable publication matches this author combination in the BMJ or elsewhere for the given title and year. The names appear plausible but are not associated with a real article.",
+    "title": "No matching title appears in the literature; the title is likely fabricated.",
+    "journal_name": "BMJ is the correct journal name, but the surrounding bibliographic data are false, making the overall citation inaccurate.",
+    "journal_volume": "Volume\u202f413 is implausible for BMJ in 2021.",
+    "journal_issue": "BMJ volume\u202f413, issue\u202f1 does not exist for the year 2021; actual BMJ volumes in 2021 were around 372\u2011373.",
+    "journal_page": "Page range 1168\u20111195:e009915 is not a valid BMJ citation format.",
+    "elocator": "The combination of a page range and an article ID (e009915) is not a format used by BMJ, and no such locator exists for the purported article.",
+    "publication_date": "While BMJ publishes weekly, the date 8\u202fJuly\u202f2021 could be a real issue date; however, the surrounding volume/issue data are false, so the date cannot be verified as correct for this article.",
+    "doi": "DOI prefix 10.8198 is not assigned to BMJ; the suffix does not resolve to a legitimate record. Hence the DOI is invalid.",
+    "pmcid": "No PMCID was supplied, and none can be derived from the false DOI.",
+    "pmid": "No PMID was supplied, and none can be located for this citation."
+  }
+]

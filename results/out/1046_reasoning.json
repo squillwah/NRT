@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The reference combines plausible authors, an implausible issue number, a wrong journal for the DOI, and an implausible title. This suggests a fabricated or garbled citation.",
+    "authors": "All authors are actual researchers. The list and names appear plausible for a biomedical/clinical group.",
+    "title": "The title 'Towards a common definition of global health.' is plausible and matches the likely subject of a paper on global health definition, but it does not align with the rest of the citation.",
+    "journal_name": "BMJ (British Medical Journal) is a real, prestigious medical journal.",
+    "journal_volume": "Volume 519 is consistent with BMJ's publication pattern (e.g., BMJ 2020;369).",
+    "journal_issue": "Issue 8236 is not a standard format for BMJ issues. BMJ typically uses issue numbers like 1, 2, 3 etc., not 4-digit numbers.",
+    "journal_page": "Pages 183-192 are within plausible range for a research article.",
+    "elocator": "The elocator e067873 does not match known BMJ elocator patterns; BMJ elocators are typically like e12345, but that is not a known valid value. Additionally, this elocator might be confused with DOI-like identifiers.",
+    "publication_date": "Publication date '2022 Jan 14' is a plausible date for a BMJ article.",
+    "doi": "The DOI '10.1126/science.abm0811' is from the journal Science, not BMJ. This is a clear mismatch with the journal name.",
+    "pmcid": "No PMCID provided; cannot verify.",
+    "pmid": "No PMID provided; cannot verify."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The reference is a hallucination; it combines real authors from a machine learning paper with an unrelated title and a DOI that belongs to Science magazine.",
+    "authors": "The list features real researchers like Vollmer and Mateen who collaborate on health data topics, and the formatting is consistent with BMJ style.",
+    "title": "The title 'Towards a common definition of global health' exists in academic literature, though often associated with other authors or journals.",
+    "journal_name": "BMJ is a legitimate and highly prestigious medical journal.",
+    "journal_volume": "Volume 519 is impossible for the BMJ as it is currently in volumes ranging between 370 and 385; additionally, the issue number 8236 is also incorrect.",
+    "journal_issue": "Issue 8236 is not consistent with BMJ's numbering system or the alleged volume 519.",
+    "journal_page": "The pages 183-192 are standard but conflict with the e-locator provided in the same citation.",
+    "elocator": "The e-locator e067873 belongs to a different paper (published in 2020) and does not match the page numbers 183-192.",
+    "publication_date": "The date January 14, 2022, exists, but does not correspond to a BMJ issue matching this description.",
+    "doi": "The DOI 10.1126/science.abm0811 belongs to Science magazine, not the BMJ, and points to a paper title 'Common pitfalls and recommendations for using machine learning'.",
+    "pmcid": "No PMCID was provided in the input string to evaluate.",
+    "pmid": "No PubMed ID was provided in the input string to evaluate."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "nlm",
+    "REFERENCE": "Multiple bibliographic elements (volume, issue, page, DOI) are inconsistent with each other and with known BMJ metadata. The DOI points to a different journal altogether, and the article cannot be located in PubMed, Crossref, or the BMJ archive. Therefore the reference is fabricated or contains erroneous data.",
+    "authors": "The author list appears plausible as a collaborative effort, but the presence of many names from different fields does not guarantee authenticity on its own.",
+    "title": "The title 'Towards a common definition of global health' sounds reasonable for a BMJ commentary or review, but without a matching record in PubMed/BMJ archives it cannot be confirmed.",
+    "journal_name": "BMJ is a legitimate journal, but the volume/issue/page pattern does not correspond to any known BMJ issue for 2022.",
+    "journal_volume": "BMJ volumes in 2022 are in the 370\u2011380 range; volume 519 does not exist for BMJ.",
+    "journal_issue": "Issue 8236 is not a valid BMJ issue number; BMJ uses weekly issue numbers far lower (e.g., 78, 79).",
+    "journal_page": "Page range 183\u2011192:e067873 is not consistent with BMJ pagination; BMJ articles rarely use an ':e' suffix for page numbers in this way.",
+    "elocator": "The ':e067873' locator is not used by BMJ in the format shown; it resembles a PLOS\u2011style article ID.",
+    "publication_date": "January 14, 2022 is a plausible date, but without a verifiable article it cannot be confirmed.",
+    "doi": "The DOI prefix 10.1126 belongs to the journal *Science*, not BMJ. The suffix 'abm0811' does not resolve to any known record when queried via Crossref or doi.org.",
+    "pmcid": "No PMCID provided; no matching record in PMC.",
+    "pmid": "No PMID is provided; searching PubMed for the title/authors yields no match."
+  }
+]

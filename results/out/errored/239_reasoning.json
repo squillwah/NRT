@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The journal name is misspelled as 'Cel.' instead of 'Cell', which makes the reference invalid as a whole.",
+    "authors": "Author names are listed with initials and last names, consistent with standard format.",
+    "title": "The title 'Deciphering cell signaling networks with massively multiplexed biosensor barcoding.' appears plausible and well-formed.",
+    "journal_name": "The journal name 'Cel.' is likely a misspelling of 'Cell', a known journal; thus it is invalid.",
+    "journal_volume": "Volume number 184 is a plausible volume for Cell.",
+    "journal_issue": "Issue number 25 is typical for weekly journals like Cell.",
+    "journal_page": "Page number 6193 is provided, though typically a range is given; it could be the starting page.",
+    "elocator": "No elocator provided in the reference.",
+    "publication_date": "The publication year 2021 is provided; this is acceptable as a valid date.",
+    "doi": "DOI 10.1016/j.cell.2021.11.005 follows the standard format for Cell.",
+    "pmcid": "PMCID not provided.",
+    "pmid": "PMID not provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "Despite a small typo in the journal name abbreviation, all metadata correctly identifies a real and valid scientific publication.",
+    "authors": "The listed authors correctly correspond to the published paper in the journal Cell.",
+    "title": "The title matches the official title of the article published in 2021.",
+    "journal_name": "The journal name listed as Ce.l. is a slightly typo-laden or abbreviated version of the valid journal 'Cell'.",
+    "journal_volume": "Volume 184 is the correct volume for this publication in 2021.",
+    "journal_issue": "Issue 25 is the correct issue number for the specified date and volume.",
+    "journal_page": "Page 6193 is the correct starting page for this article.",
+    "elocator": "No specific e-locator or article number other than the page range is typically used for this citation format.",
+    "publication_date": "The date December 9, 2021, is the correct print publication date.",
+    "doi": "The DOI 10.1016/j.cell.2021.11.005 is valid and links to the correct article.",
+    "pmcid": "The PMCID was not provided in the input, but the other data points are valid.",
+    "pmid": "The PMID was not provided in the input, but the other data points are valid."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "nlm",
+    "REFERENCE": null,
+    "authors": null,
+    "title": null,
+    "journal_name": null,
+    "journal_volume": null,
+    "journal_issue": null,
+    "journal_page": null,
+    "elocator": null,
+    "publication_date": null,
+    "doi": null,
+    "pmcid": null,
+    "pmid": null
+  }
+]

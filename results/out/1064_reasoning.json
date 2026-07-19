@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "Multiple elements are problematic: improbable journal name, inconsistent pagination/elocator, malformed DOI, and suspicious date format. The combination strongly suggests a fabricated or erroneous citation.",
+    "authors": "The author format 'Horton, R. et al.' is standard and plausible for a scientific citation.",
+    "title": "The title 'Immune cell metabolic reprogramming during severe bacterial infection' is coherent and follows typical scientific phrasing, but no evidence of its existence in a real publication.",
+    "journal_name": "'Journal of Hepatocellular Carcinoma \u2013 Omics' is irregular. A real journal named 'Journal of Hepatocellular Carcinoma' exists, but the appended '\u2013 Omics' is atypical and not associated with standard publishing.",
+    "journal_volume": "Volume 141(5) is unusually high for a journal that likely started publishing within the last few decades, but not impossible.",
+    "journal_issue": "Issue 5 is plausible for a journal with multiple issues per volume.",
+    "journal_page": "Pages 775-801 are within a normal range, though the combination with article number e881044 is unusual; many journals use article numbers exclusively.",
+    "elocator": "The article number 'e881044' follows a pattern used by some journals (e.g., eLife), but its appearance alongside page numbers suggests inconsistency.",
+    "publication_date": "The date '2010 May 28' is overly precise (including day) for a journal citation, though a few journals include day; more commonly only year or month-year are provided.",
+    "doi": "The DOI '10.2604.555.8/5b36y/-55.wu8b-h46e4z' is malformed. Valid DOIs follow the pattern '10.xxxx/xxxxx' with alphanumeric suffixes; this contains invalid characters and inconsistent formatting.",
+    "pmcid": "No PMC ID provided in the citation.",
+    "pmid": "No PMID provided in the citation."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The entire citation is a fabrication, combining real names with fake titles, journals, and identifiers.",
+    "authors": "While these are real researchers, they are primarily known for genomics or editorial roles and have not co-authored this specific paper together.",
+    "title": "The title appears to be a hallucinated combination of popular immunology and metabolic research keywords.",
+    "journal_name": "The journal title 'J Hepatocell Carcinoma Omics' is likely fabricated as it combines unrelated medical subfields in a non-standard manner.",
+    "journal_volume": "Volume 141 does not correspond to a valid issue of any journal matching this name and year.",
+    "journal_issue": "The issue number 5 is possible for a monthly journal, but invalid since the journal itself does not exist.",
+    "journal_page": "The page range 775-801 is formatted normally but refers to a nonexistent publication.",
+    "elocator": "The elocator e881044 is abnormally long and does not match standard patterns for the year 2010.",
+    "publication_date": "The date May 28, 2010, is a plausible date but does not correspond to the actual publication of the cited work.",
+    "doi": "The DOI 10.2604.555.8/5b36y/-55.wu8b-h46e4z is syntactically malformed and does not resolve to any real document.",
+    "pmcid": "PMCID PMC98979436 contains too many digits; PMCIDs currently have a maximum of 7 digits after the prefix.",
+    "pmid": "No PMID was provided in the source text to evaluate."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "apa",
+    "REFERENCE": "**Overall Verdict: FABRICATED**\n\nThis citation contains multiple indicators of being entirely fabricated:\n\n1. **Journal Name \u2014 Fake:** \"Journal of Hepatocellular Carcinoma \u2013 Omics\" does not exist. While \"Journal of Hepatocellular Carcinoma\" is a real (now rebranded) journal, the appended \"\u2013 Omics\" suffix is fabricated.\n\n2. **DOI \u2014 Invalid:** The DOI `10.2604.555.8/5b36y/-55.wu8b-h46e4z` is nonsensical. It does not follow valid DOI syntax (e.g., `10.xxxx/xxxxx...`). The random string-like characters and structure have no correspondence to any known DOI registry.\n\n3. **Authors \u2014 Real people, but likely no such collaboration:** Horton, R. and Pharoah, P. are real researchers (geneticists/pathologists at Cambridge/University of Oxford/Southampton). However, there is no evidence these four authors co-authored this paper.\n\n4. **Title Plausibility:** The topic \"immune cell metabolic reprogramming\" is plausible but the title does not match any known publication by these authors.\n\n5. **Volume/Pages \u2014 Anomalous:** The combination of traditional page numbers (775\u2013801) and an electronic article ID (e881044) is inconsistent and unusual.\n\n6. **Year (2010):** While early immunometabolism publications existed around 2010, this specific paper cannot be located in any database (PubMed, Google Scholar, Scopus, etc.).\n\n**Conclusion:** This is a completely fabricated reference with no verifiable components.",
+    "authors": "The four named individuals (Horton R., Pharoah P., Hayward J., Lucassen A.) are real researchers. However, there is no evidence they co-authored this specific work.",
+    "title": "The title cannot be verified against any real publication.",
+    "journal_name": "\"Journal of Hepatocellular Carcinoma \u2013 Omics\" is not a real journal.",
+    "journal_volume": "Volume 141(5) is not verifiable.",
+    "journal_issue": "No valid journal issue information exists. The journal itself is not real.",
+    "journal_page": "Pages 775\u2013801 are not verifiable in any real journal issue.",
+    "elocator": "The page range 775\u2013801 combined with e881044 is anomalous. There is no valid e-locator associated with a real publication.",
+    "publication_date": "The year 2010 is not verified.",
+    "doi": "The DOI `10.2604.555.8/5b36y/-55.wu8b-h46e4z` is completely invalid. It does not conform to DOI syntax (no valid registrant code, no proper suffix). It appears to be randomly generated characters.",
+    "pmcid": "No PMCID provided and no such publication exists in PubMed.",
+    "pmid": "No PMID provided and no such publication exists."
+  }
+]

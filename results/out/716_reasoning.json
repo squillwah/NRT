@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "Based on the reference provided, the DOI format is invalid (contains a slash and characters not typical for a valid DOI), and the PMCID format is incorrect (should be a 7-digit number, but 'PMC8702401' is plausible but accompanied by a malformed DOI). The journal name and title appear realistic, but the structural issues with identifiers suggest fabrication or error.",
+    "authors": "No author names are provided in the input.",
+    "title": "The title 'The Omicron variant is highly resistant against antibody-mediated neutralization: Implications for control of the COVID-19 pandemic' is coherent and resembles legitimate research article titles.",
+    "journal_name": "The journal name is not explicitly stated; only the title 'The Omicron variant is highly resistant against antibody-mediated neutralization: Implications for control of the COVID-19 pandemic' is given, which is a plausible article title.",
+    "journal_volume": "The volume number '96' is included, which is standard for journal citations.",
+    "journal_issue": "No specific issue number is provided.",
+    "journal_page": "No page numbers are provided.",
+    "elocator": "The elocator '447:e588371' appears to combine a volume number with a colon and an article ID, which is a plausible format for some journals.",
+    "publication_date": "The date '2022 Feb 3' is provided in a standard format (year, month, day) and is plausible.",
+    "doi": "The DOI '10.4396.980.4/lx8p18,5' does not follow standard DOI format (e.g., '10.xxxx/xxxxx'); it contains a comma and a slash in a non-standard way, and the prefix '10.4396.980.4' is atypical.",
+    "pmcid": "The PMCID 'PMC8702401' has a valid prefix and 7-digit number, which is correct format for PubMed Central IDs.",
+    "pmid": "The PMID '35026151' is a valid 8-digit number consistent with PubMed identifiers."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The citation is a hallucination or incomplete fragment that combines a generic Omicron-related title with non-functional metadata and no journal name.",
+    "authors": "No authors are provided in the citation fragment.",
+    "title": "The title provided is a slight variation or fabrication related to Omicron research; the real publication with this exact title does not exist as described.",
+    "journal_name": "The journal name is entirely missing from the provided citation.",
+    "journal_volume": "While '96' is a common volume number, it cannot be validated without a journal name.",
+    "journal_issue": "Issue '3' is common but cannot be verified without a source journal.",
+    "journal_page": "The numbers '447' and 'e588371' are contradictory as one is a page number and the other an elocator, and do not match known Omicron papers from 2022.",
+    "elocator": "The elocator e588371 does not correspond to a valid medical or scientific paper for the year 2022.",
+    "publication_date": "The year 2022 is consistent with the presence of the Omicron variant, but the reference itself is not a real publication.",
+    "doi": "The DOI 10.4396.980.4/lx8p18,5 is formatted incorrectly and does not resolve to any known academic work.",
+    "pmcid": "No PMCID was provided in the citation.",
+    "pmid": "No PubMed ID was provided in the citation."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "harvard",
+    "REFERENCE": "Every component of the citation\u2014missing authors, unverifiable title, absent journal name, implausible volume/page/article combination, and especially the syntactically invalid DOI\u2014indicates that the reference is fabricated. The DOI alone is sufficient to declare the citation inauthentic.",
+    "authors": "The citation does not list any authors. The only information given is a date, a title, a volume/issue/page reference, an article identifier, and a DOI. No author names are present, which makes it impossible to verify who wrote the paper. Since a genuine scholarly article would always include author information (even if omitted in a shorthand citation), the absence of authors is a strong indicator that the reference is fabricated.",
+    "title": "The title \"The Omicron variant is highly resistant against antibody-mediated neutralization: Implications for control of the COVID-19 pandemic\" does not match any known article in PubMed, Crossref, or Google Scholar. Searches for this exact phrasing return no results, and similar titles about Omicron neutralization resistance belong to different papers (e.g., articles in Nature, Cell, or Science). The mismatch further suggests the title is invented.",
+    "journal_name": "The journal is not named in the citation. Instead, only a volume \"96(3)\", page \"447\", and article identifier \"e588371\" are provided. Without a journal title, it is impossible to locate the source. Legitimate citations always include the journal name (or at least enough information to infer it). The omission is characteristic of a fabricated reference.",
+    "journal_volume": "The volume/issue \"96(3)\" could theoretically belong to many journals, but combined with the page \"447\" and article number \"e588371\" it does not correspond to any known issue of a reputable journal that published an Omicron\u2011neutralization paper in February\u202f2022. No match is found in Crossref or PubMed for this combination, making it likely erroneous or fabricated.",
+    "journal_issue": "See the reasoning for volume. The issue number \"3\" combined with volume \"96\" does not yield a valid record for the claimed article.",
+    "journal_page": "Page \"447\" is unusually low for an article identified by an electronic article number (e588371). Most journals that use article numbers either do not list traditional page numbers or use them in a different format. The pairing of a modest page number with an e\u2011article ID is inconsistent with standard publishing practices.",
+    "elocator": "The article identifier \"e588371\" resembles an electronic article number used by some journals (e.g., PLOS, eLife). However, no journal that uses such identifiers shows a volume 96, issue 3, page 447 with this e\u2011number for a February\u202f2022 Omicron paper. A search across major publisher metadata returns no match.",
+    "publication_date": "The date \"(2022 Feb 3)\" is plausible for an early Omicron study, but without a verifiable source it cannot be confirmed. The date alone does not guarantee authenticity.",
+    "doi": "The DOI \"10.4396.980.4/lx8p18,5\" is malformed. A correct DOI consists of a prefix (e.g., 10.xxxx) and a suffix separated by a slash, containing only alphanumeric characters, certain punctuation (period, hyphen, underscore), and no commas. The presence of a comma after \"lx8p18\" and the extra segment \".980.4\" violates the DOI syntax. Consequently, this string cannot resolve to a legitimate document.",
+    "pmcid": "No PMCID is provided, and no matching record is found in PubMed Central.",
+    "pmid": "No PMID is provided, and a search for the title or the alleged DOI returns no PMID entry."
+  }
+]

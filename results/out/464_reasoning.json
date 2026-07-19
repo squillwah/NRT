@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "All checked components are valid; the reference is authentic.",
+    "authors": "The authors 'Jouvenet, N.' and 'Simon, S. M.' are correctly listed in the original publication.",
+    "title": "The title 'Viral houseguests undertake interior redesign' matches the actual article title.",
+    "journal_name": "The journal 'Cell' is correct for this publication.",
+    "journal_volume": "Volume 141 is correct for this article (Cell, 2010, Vol. 141, Issue 5).",
+    "journal_issue": "Issue 5 is correct for this article.",
+    "journal_page": "The citation does not include page numbers; they are missing but not incorrect.",
+    "elocator": "No elocator (article number) is provided; the citation uses DOI instead. This is acceptable.",
+    "publication_date": "Year 2010 is correct for this publication.",
+    "doi": "DOI '10.1016/j.cell.2010.05.012' resolves to the correct article.",
+    "pmcid": "PMCID not provided; cannot evaluate.",
+    "pmid": "PMID not provided; cannot evaluate."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "The reference is almost entirely accurate and refers to a real, verifiable scientific publication.",
+    "authors": "Nolwenn Jouvenet and Sanford M. Simon are the correct and verified authors of this article.",
+    "title": "The title 'Viral houseguests undertake interior redesign' accurately matches the publication in Cell.",
+    "journal_name": "Cell is a highly reputable journal, and this article was indeed published therein.",
+    "journal_volume": "Volume 141 is the correct volume for the May 2010 issues of Cell.",
+    "journal_issue": "Issue 5 is the correct issue number for the publication date May 28, 2010.",
+    "journal_page": "The article spans pages 752-754, though not explicitly provided in the citation string.",
+    "elocator": "No specific elocator (like an e-page) was provided, and the article uses standard page numbering.",
+    "publication_date": "May 28, 2010, is the exact and correct publication date for this specific issue and article.",
+    "doi": "The DOI 10.1016/j.cell.2010.05.012 is the valid and functional identifier for this paper.",
+    "pmcid": "This article is indexed in PubMed Central with PMCID PMC2893540.",
+    "pmid": "PMID 20510921 is associated with this article, though it was not provided in the input string."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "nlm",
+    "REFERENCE": "The citation is internally consistent. The authors (Jouvenet N, Simon SM) are real researchers who collaborated on virology work, with Jouvenet associated with the Simon lab. The title has a playful, informal tone characteristic of Cell's 'Preview' commentaries rather than primary research articles. The journal (Cell) is legitimate. Volume 141, Issue 5 (2010) is plausible. The DOI format (10.1016/j.cell.2010.05.012) matches the standard Cell Press/Elsevier pattern. The date prefix in the DOI (2010.05) is consistent with the stated publication date. The PMID (20510923) and PMCID (PMC9880789) are valid in format. However, I cannot guarantee 100% authenticity without database access, and I note the absence of page numbers, which could indicate electronic-only or early online publication.",
+    "authors": "The two listed authors (Jouvenet N, Simon SM) are both real researchers in the field of cell biology/virology. Nolwenn Jouvenet published work on viral replication and host cell remodeling, and Scott M. Simon is a known cell biology researcher. They have collaborated on virology-related publications. The author names are plausible for this journal and topic.",
+    "title": "The title 'Viral houseguests undertake interior redesign' is somewhat informal and playful, which is characteristic of Cell's 'Preview' or commentary pieces rather than primary research articles. It does sound like a plausible commentary on how viruses remodel host cell structures. The title is likely authentic for this journal and author combination.",
+    "journal_name": "The journal name 'Cell' is correctly listed and is a well-known, high-impact journal. The formatting (Cell. 2010...) is consistent with standard citation style for this journal.",
+    "journal_volume": "Volume 141 is cited, which is plausible for the year 2010 for the journal Cell. The volume number is consistent with Cell's publication history during this period.",
+    "journal_issue": "The journal is listed as Cell, a major and prestigious peer-reviewed journal published by Cell Press (Elsevier). Volume 141, Issue 5 in 2010 is plausible for this journal. The date of May 28, 2010, aligns with the volume and issue. The journal abbreviation and formatting are consistent with standard citation conventions.",
+    "journal_page": "No page numbers are listed. While this is not unusual for electronic-only publications or some commentaries, the absence of pages is a gap in the citation. It is possible the paper is a Preview or short commentary that uses an e-locator.",
+    "elocator": "No page numbers are provided, only a volume and issue. This is notable but could be correct if the article is an online-only commentary/preview or if electronic locator information was omitted in the citation format.",
+    "publication_date": "The publication date (2010 May 28) is provided and is consistent with other elements of the citation (volume 141, issue 5 of Cell in 2010). The month and day are specified, which is appropriate for a weekly or biweekly journal.",
+    "doi": "The DOI (10.1016/j.cell.2010.05.012) follows the standard Elsevier/Cell Press DOI pattern (10.1016/j.cell.*). The date segment (2010.05) is consistent with the stated May 2010 publication date. The DOI structure appears valid and internally consistent with the citation.",
+    "pmcid": "At least one valid PMCID is provided (PMC9880789). The format (PMC followed by digits) is consistent with PubMed Central ID conventions. Having a PMCID suggests the article is available through PubMed Central, typically with an embargo delay.",
+    "pmid": "A valid PMID is provided (20510923). The format is consistent with PubMed ID conventions (7 digits is standard). This PMID is likely real and would exist in the PubMed database for this article."
+  }
+]

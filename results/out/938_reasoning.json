@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The DOI is clearly incompatible with the journal and publication year. The Lancet article from 2007 would not have a DOI from the Nature Publishing Group (10.1038) nor a suffix referencing a Cell journal article from 2021. Additionally, the volume and page numbers (373:889-895) do not correspond to any known real publication with this author list and title. The entire reference appears to be fabricated.",
+    "authors": "The author list appears plausible but is likely fabricated as part of the overall false reference. No independent verification supports these authors for this specific article.",
+    "title": "The title is plausible but does not match any real article in Lancet. Fabricated.",
+    "journal_name": "The journal name 'Lancet' is a real journal, but the article is not published there as claimed.",
+    "journal_volume": "Volume 373 of Lancet is real (2007-2008), but the specific article does not exist in that volume.",
+    "journal_issue": "The journal issue (August 6, 2007) is not typical for Lancet; the journal usually publishes weekly issues. The specific date may be fabricated.",
+    "journal_page": "The page range '889-895' does not match any known Lancet article with this title and authors. Fabricated.",
+    "elocator": "No elocator (e.g., article number) is provided; only volume and page numbers are given. No issue of authenticity beyond the overall false reference.",
+    "publication_date": "The date '2007 Aug 6' is inconsistent with the DOI and likely fabricated.",
+    "doi": "The DOI '10.1038/j.cell.2021.03.021' is from a different publisher (Nature/Cell) and year (2021) than the claimed Lancet article (2007). It is clearly incorrect.",
+    "pmcid": "No PMC ID provided; not applicable.",
+    "pmid": "No PMID provided; not applicable."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "The citation is a hallucination that combines a fictitious author/title with a mismatched Lancet volume and a real DOI that actually belongs to a 2021 paper in the journal Cell.",
+    "authors": "There is no record of an author 'A.T. Schneider' publishing a multicentre Phase 3 study on recombinant factor IX in the Lancet during this period.",
+    "title": "The title provided describes a Phase 3 study for factor IX, but the dates and journal metadata do not align with any known published trial under this specific name.",
+    "journal_name": "The Lancet is a valid and highly reputable medical journal.",
+    "journal_volume": "Volume 373 of the Lancet was published in 2009, not 2007.",
+    "journal_issue": "An issue number was not explicitly provided in the citation string though it is often required for specific identification.",
+    "journal_page": "Pages 889-895 in volume 373 of the Lancet correspond to articles published in 2009, such as research on stroke or mental health, not hemophilia.",
+    "elocator": "No specific e-locator was provided in the text.",
+    "publication_date": "The Lancet is a weekly journal, and August 6, 2007, was a Monday; the provided year does not match the volume/page metadata provided.",
+    "doi": "The DOI 10.1038/j.cell.2021.03.021 belongs to the journal Cell (published by Elsevier/Cell Press) and was issued in 2021, not the Lancet in 2007.",
+    "pmcid": "No PubMed Central ID was provided in the citation.",
+    "pmid": "No PubMed ID was provided in the citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "apa",
+    "REFERENCE": "Suspicious Author List: The author list contains 17 authors, several of which appear fabricated or drawn from fiction. Notably, **Trelawney, I. K.** is a clear reference to the Harry Potter character (Sybill Trelawney). Other names exhibit patterns suggesting random generation or literary allusion (e.g., Yeats, W. J.).\n\nDOI Mismatch: The DOI (10.1038/j.cell.2021.03.021) points to **Nature Publishing Group/Springer Nature** (prefix 10.1038), not **Elsevier** (which publishes **The Lancet**, using prefix 10.1016). Additionally, the DOI contains `2021`, contradicting the 2007 publication date. The suffix `j.cell` also suggests the **Cell** journal, not **The Lancet**.\n\nVolume/Date Inconsistency: The Lancet's volume 373 corresponds to early **2008**, not 2007, creating an internal inconsistency.\n\nToo Many Authors for a Pharmacology Study: While multi-centre trials can have many authors, 17 authors with such unusual names is unusual for a hemophilia B factor IX trial. The original real study on this topic likely has different authors.\n\nPlausible Title but Likely Fabricated Details: The title itself is realistic and in the style of a clinical trial publication. However, the combination of suspicious author names and the mismatched DOI strongly indicates that this reference is **hallucinated** (i.e., fabricated by an AI language model with a mix of real and invented details).",
+    "authors": "Author #12 'Trelawney, I. K.' is a direct reference to the Harry Potter character (Sybill Trelawney). Several other names appear literary or randomly generated.",
+    "title": "The title is plausible as a clinical trial for hemophilia B treatment but cannot be verified as a real Lancet article due to the other fabricated elements.",
+    "journal_name": "The journal name is real (The Lancet), but the citation as a whole is fabricated.",
+    "journal_volume": "The Lancet volume 373 corresponds to 2008, not the stated 2007.",
+    "journal_issue": "Lancet volume 373 corresponds to 2008, not 2007. This inconsistency strongly suggests the citation is fabricated.",
+    "journal_page": "Page range 889-895 is plausible for The Lancet article, but cannot be confirmed.",
+    "elocator": "The page numbers 889-895 are within a plausible range for The Lancet, but without verification of the exact article, they cannot be confirmed as authentic.",
+    "publication_date": "The stated year 2007 does not match the volume 373, which corresponds to 2008.",
+    "doi": "The DOI 10.1038/j.cell.2021.03.021 uses Springer Nature's prefix (10.1038) and appears to reference the journal Cell, not The Lancet (which uses 10.1016). The year 2021 in the DOI contradicts the stated 2007 publication date.",
+    "pmcid": "No PMCID is present in the citation.",
+    "pmid": "No PMID is present in the citation."
+  }
+]

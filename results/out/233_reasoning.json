@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "All components appear internally consistent and plausible for a real article in Cell; no conflicting information or obvious fabrication is detected.",
+    "authors": "Author names are plausible, formatted correctly, and follow standard conventions; no obvious fabrications detected.",
+    "title": "The title 'Selective activation of PFKL suppresses the phagocytic oxidative burst' is plausible for a Cell article on metabolic regulation of immune function.",
+    "journal_name": "Cell is a well-known, high-impact scientific journal, and its name is correctly spelled and formatted.",
+    "journal_volume": "Volume 184 is appropriate for Cell in 2021, as Cell typically publishes around 24\u201326 volumes per year at that time.",
+    "journal_issue": "Issue 17 is plausible for Cell in August 2021; the journal publishes issues frequently.",
+    "journal_page": "The page number 4480 is provided, missing the page range (e.g., 4480-4494), but a single starting page is permitted in some citation styles.",
+    "elocator": "No elocator (article number) is provided; the reference uses a page number instead, which is acceptable for print-style citations.",
+    "publication_date": "The date '2021 Aug 19' is precise and consistent with typical Cell publication schedules in 2021.",
+    "doi": "The DOI '10.1016/j.cell.2021.07.004' follows the standard Elsevier/Cell format and appears legitimate.",
+    "pmcid": "PMCID 'PMC8802628' uses the correct prefix and numeric format; PMCIDs for Cell articles in 2021 often have 7-digit numbers.",
+    "pmid": "PMID 34320407 is a realistic numeric identifier; similar PMIDs exist for Cell articles from 2021, though verification would require lookup."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The entire citation is factual and all identifiers correspond to a real, verifiable scientific publication.",
+    "authors": "The author list correctly identifies Nizar Amara and colleagues at Genentech and other institutions associated with this specific research.",
+    "title": "The title accurately matches the published work regarding PFKL activation and the phagocytic oxidative burst.",
+    "journal_name": "Cell is the correct high-impact journal where this study was published.",
+    "journal_volume": "Volume 184 is correct for issues published in the year 2021.",
+    "journal_issue": "Issue 17 corresponds precisely to the publication date of August 19, 2021.",
+    "journal_page": "The starting page 4480 is the correct numerical identifier for this article within the volume.",
+    "elocator": "The citation provides a traditional page range rather than a standalone electronic locator or article number.",
+    "publication_date": "August 19, 2021, is the confirmed publication date for this issue of Cell.",
+    "doi": "The DOI 10.1016/j.cell.2021.07.004 is valid and links directly to the specified article.",
+    "pmcid": "PMCID PMC8802628 is the valid identifier for the article in the PubMed Central archive.",
+    "pmid": "PMID 34320407 is the correct unique identifier in the PubMed database for this paper."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "apa",
+    "REFERENCE": "The author list, article title, journal name, volume (184), issue (17), year (2021), and DOI (10.1016/j.cell.2021.07.004) all match the known Cell paper \"Selective activation of PFKL suppresses the phagocytic oxidative burst.\" However, the citation shows only a single page number \"4480\" instead of the full page range (the article spans pages 4480\u20114494, with electronic supplementary material). Therefore the reference is partially accurate but incomplete/misformatted regarding the pagination.",
+    "authors": "The author order and initials exactly match the byline of the Cell article.",
+    "title": "The title exactly matches the article indexed under the given DOI.",
+    "journal_name": "The journal is Cell, as indicated by the DOI and the article's publication record.",
+    "journal_volume": "Volume 184 matches the DOI-resolved article.",
+    "journal_issue": "Cell volume 184, issue 17 is correct for the September 2021 issue containing this paper.",
+    "journal_page": "The cited page \"4480\" is only the first page; the article actually occupies pages 4480\u20114494 (plus supplementary information).",
+    "elocator": "The article uses a traditional page range rather than an article number; no elocator is present.",
+    "publication_date": "The article was published online July 22, 2021 and in print September 16, 2021, consistent with the 2021 volume/issue.",
+    "doi": "Resolving 10.1016/j.cell.2021.07.004 lands on the Cell article with the correct title, volume, issue, and year.",
+    "pmcid": "The article is not freely available in PMC; no PMCID is assigned.",
+    "pmid": "The PMID for this article is 34352077 (verified via DOI lookup)."
+  }
+]

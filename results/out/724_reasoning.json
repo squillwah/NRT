@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The reference is incomplete and likely erroneous (author name is malformed, missing title, but other components like journal and date seem valid). Overall, it is not a fully authentic reference.",
+    "authors": "The author name is incomplete; it appears to be 'Joyce' or similar, but only ';ane R.' is provided, suggesting a typo or missing data.",
+    "title": "No title is provided in the reference.",
+    "journal_name": "BMJ (British Medical Journal) is a valid, well-known journal abbreviation.",
+    "journal_volume": "Volume 375 is within the expected range for BMJ (which publishes multiple volumes per year).",
+    "journal_issue": "No issue number is provided; only volume and page numbers are present.",
+    "journal_page": "Page number 'e066232' appears to be an article number or electronic page identifier for BMJ articles, which is plausible.",
+    "elocator": "The string 'e066232' is likely an elocator, but it is provided in the page position, and elocators are not standard for all references. Given BMJ uses article numbers, this is acceptable.",
+    "publication_date": "The date '2021 Nov 17' is a fully specified date with year, month, and day, and is plausible for a recent BMJ article.",
+    "doi": "No DOI is provided in the reference.",
+    "pmcid": "No PMC ID is provided.",
+    "pmid": "No PMID is provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "The reference is partially valid as the journal, date, and elocator match a real paper, but the author name is corrupted and the title is entirely missing.",
+    "authors": "The author name ';ane, R.' is malformed and contains a semicolon instead of a letter, likely a typo for Lane, R..",
+    "title": "The article title is missing from the provided citation string.",
+    "journal_name": "'BMJ (Clinical research ed.)' is a legitimate peer-reviewed medical journal.",
+    "journal_volume": "Volume 375 is consistent with the BMJ publication schedule for late 2021.",
+    "journal_issue": "No specific issue number is provided, though BMJ often uses elocators for specific articles in recent years.",
+    "journal_page": "No traditional page range is provided, as the citation uses an elocator instead.",
+    "elocator": "The elocator e066232 exists and corresponds to a 2021 BMJ article titled 'Long covid\u2014how to define it and how to manage it'.",
+    "publication_date": "The date Nov 17, 2021, matches the official publication date for the article associated with elocator e066232.",
+    "doi": "No DOI was provided in the raw citation string.",
+    "pmcid": "No PMCID was provided in the raw citation string.",
+    "pmid": "No PMID was provided in the raw citation string."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "vancouver",
+    "REFERENCE": "The citation is incomplete and malformed. The author name is truncated/corrupted (';ane R.'), making it impossible to identify the author or verify the article. While the journal name (BMJ), date, and article ID format are plausible and consistent with a real BMJ article, the incomplete author field significantly undermines the citation's reliability. Without the full author name, title, or DOI, the reference cannot be authenticated.",
+    "authors": "The author name appears truncated or corrupted. It reads ';ane R.' which is clearly incomplete \u2014 likely missing the beginning of a first name (e.g., 'Jane R.' or similar). Cannot be verified in its current form.",
+    "title": "No title is provided in the citation.",
+    "journal_name": "BMJ (British Medical Journal) is a well-known, highly reputable peer-reviewed medical journal.",
+    "journal_volume": "Volume 375 is consistent with BMJ's 2021 publication year. BMJ publishes multiple volumes per year, and 375 is plausible for late 2021.",
+    "journal_issue": "No specific issue number is provided, which is common for BMJ's online-first article format.",
+    "journal_page": "No page number is provided; instead an article ID 'e066232' is given, which is consistent with BMJ's electronic article numbering system.",
+    "elocator": "The e-locator 'e066232' is in a format consistent with BMJ's electronic article identifiers.",
+    "publication_date": "The date '2021 Nov 17' is in a valid and consistent format for BMJ citations.",
+    "doi": "No DOI is provided in the citation, which would be needed to fully verify the article.",
+    "pmcid": "No PMCID is provided.",
+    "pmid": "No PMID is provided."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The reference has multiple invalid components: impossible volume number for Cell (368 instead of ~180), abnormal page structure with 'e650911' after standard pages, and an invalid DOI format. These strongly indicate the reference is fabricated.",
+    "authors": "The author list is plausible, as machine learning and AI in healthcare are fields where these names could appear, and using 'et al.' after 6 authors is standard in Cell formatting.",
+    "title": "The title is highly plausible for a Cell paper on AI in healthcare, covering topics like transparency and ethics, matching the journal's scope.",
+    "journal_name": "Cell is a legitimate, well-known scientific journal.",
+    "journal_volume": "The volume number 368 is plausible for 2020 (Cell volumes are typically around 180-185 per year, impossible to have 368 in 2020), making this highly suspicious.",
+    "journal_issue": "The issue 'Mar 20' is plausible as a date format.",
+    "journal_page": "The page range 745-786 is typical for a research article, but the additional ':e650911' is unusual for Cell (which uses article numbers, but not typically with an 'e' prefix after pages), making it likely fabricated.",
+    "elocator": "e650911 is plausible format for an article identifier, but combined with the abnormal page numbers and volume, it seems fabricated.",
+    "publication_date": "March 20, 2020 is a plausible date.",
+    "doi": "The DOI '10.8189.8.5/f0x87230-576' does not follow standard DOI format (which uses 10.xxxx/xxxxx format, with numbers and slashes, not periods and hyphens arbitrarily), making it invalid.",
+    "pmcid": "No PMC ID is provided; the reference omits this, which is not inherently invalid but requires checking.",
+    "pmid": "No PubMed ID is provided; the reference omits this, which is not inherently invalid but requires checking."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "While the title and authors are real, the journal name, elocator, and DOI are completely fabricated.",
+    "authors": "Sebastian Vollmer and colleagues are the actual authors of the paper with this title.",
+    "title": "The title exists but is correctly associated with a BMJ publication, not a Cell publication.",
+    "journal_name": "The article was published in 'The BMJ' (British Medical Journal), not in the journal 'Cell'.",
+    "journal_volume": "The correct volume for this 2020 BMJ article is 368.",
+    "journal_issue": "No issue number was provided in the citation string.",
+    "journal_page": "The BMJ uses elocators (l67); pages 745-786 are incorrect for this article.",
+    "elocator": "The actual elocator for this article is l67, not e650911.",
+    "publication_date": "The article was published on March 20, 2020.",
+    "doi": "The actual DOI is 10.1136/bmj.l67; the provided DOI is syntactically malformed and incorrect.",
+    "pmcid": "No PMCID was provided in the citation.",
+    "pmid": "No PMID was provided in the citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "apa",
+    "REFERENCE": "The overall citation is highly suspicious due to the malformed DOI, unusual page numbers, and incorrect elocator placement. While the authors and title are plausible, the technical components (DOI, page numbers) are not consistent with standard formats, and the DOI is likely fake.",
+    "authors": "The author list is extensive and includes names commonly associated with machine learning and medical research (e.g., Ioannidis, Collins, Moons, Holmes, Hemingway). However, the DOI is malformed and inconsistent with standard DOI patterns, raising concerns about the authenticity of the citation.",
+    "title": "The title 'Machine learning and artificial intelligence research for patient benefit: 20 critical questions on transparency, replicability, ethics, and effectiveness' appears plausible and aligns with the known work in this field. However, the authors list and DOI issues cast doubt on the entire citation.",
+    "journal_name": "The journal name 'Cell' is a reputable scientific journal, but the volume and page numbers are unusual for Cell (typical articles have shorter page ranges). The DOI is malformed, suggesting the citation may not be accurate.",
+    "journal_volume": "The volume '368' is within a plausible range for Cell, but the page numbers (745-786, e650911) are inconsistent with typical article formatting. Cell articles usually have more concise page numbers.",
+    "journal_issue": "No issue number is provided, which is acceptable for some journals, but combined with other issues in the citation, it adds to the uncertainty.",
+    "journal_page": "The page numbers '745-786, e650911' are inconsistent with standard academic citation formats. The 'e650911' appears to be an article identifier or e-pub ID, but it is incorrectly placed after the page range. This is a major red flag.",
+    "elocator": "The elocator 'e650911' is provided, but it is not correctly formatted or placed. Typically, e-locators are used for online articles without page numbers, but here it is appended to the page range, which is unconventional.",
+    "publication_date": "The year '2020' is provided, which is plausible for an article on machine learning in healthcare. However, the lack of month/day and the other issues in the citation make it less reliable.",
+    "doi": "The DOI '10.8189.8.5/f0x87230-576' is malformed. Standard DOIs typically start with '10.' followed by a registrant code (e.g., 10.1016 for Elsevier) and then a unique identifier. This DOI does not match any known standard format or pattern. It appears to be fictitious or incorrectly formatted.",
+    "pmcid": "No PubMed Central ID (PMCID) is provided. Similar to PMID, this is not always required, but its absence does not affect the validity of the citation per se.",
+    "pmid": "No PubMed ID (PMID) is provided in the citation. This is not uncommon, but given the other issues, it does not help verify the citation."
+  }
+]

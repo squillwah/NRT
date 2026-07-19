@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "Due to multiple invalid components (volume, DOI, title timeline), the reference is invalid.",
+    "authors": "The author list appears well-formatted with initials and surnames, but the volume and DOI anomalies suggest the reference is fabricated, so the author list is likely fabricated as well.",
+    "title": "The title references data up to 2024, which is 14 years after the publication year 2010, making it implausible.",
+    "journal_name": "Lancet (London, England) is a recognized journal, but the volume number 514 is not valid for 2010, indicating the journal name may be used incorrectly.",
+    "journal_volume": "Volume 514 is not a valid Lancet volume for 2010; Lancet volumes in 2010 were around 375-376.",
+    "journal_issue": "No issue number is provided, and the reference includes a page range and an elocator, but the missing issue in a journal that typically has issues suggests invalidity.",
+    "journal_page": "The page range 340-370 is plausible in format, but the overall context of the reference being fake makes it likely invalid.",
+    "elocator": "e901701 is a plausible elocator format, but without verification and given other problems, it is likely fabricated.",
+    "publication_date": "The year 2010 is a valid date, but the title's future date range makes it inconsistent.",
+    "doi": "The DOI 10.6440.99.2/uy52-ee13-8z4.84f does not follow the standard DOI format (e.g., 10.xxxx/yyyy) and is thus invalid.",
+    "pmcid": "No PMCID is provided; similar reasoning.",
+    "pmid": "No PMID is provided in the reference; absence is not inherently invalid but suggests incomplete information."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The reference is a complete fabrication containing anachronistic data (2024 data in a 2010 paper) and invalid volume numbers.",
+    "authors": "The list of authors appears to be a generated set of names that do not correspond to any known academic collaboration in The Lancet for this topic.",
+    "title": "The title includes the year 2024 in a publication dated 2010, which is chronologically impossible for a retrospective epidemiological review.",
+    "journal_name": "The Lancet (London, England) is a real journal, but it is typically referred to simply as The Lancet in citations.",
+    "journal_volume": "As of 2024, The Lancet has not yet reached volume 514; in 2010, the volumes were in the late 370s.",
+    "journal_issue": "No issue number was provided in the citation, though Lancet issues are usually numbered sequentially.",
+    "journal_page": "While the page range format is standard, these pages in volume 514 do not exist for the year 2010.",
+    "elocator": "The e-locator format provided does not match the standard article numbering system used by The Lancet.",
+    "publication_date": "The year 2010 is a valid year, but it contradicts the content of the title which claims to cover data up to 2024.",
+    "doi": "The DOI prefix 10.6440 is not assigned to Elsevier/The Lancet and the suffix format is non-standard.",
+    "pmcid": "No PubMed Central ID was provided in the source string.",
+    "pmid": "No PubMed ID was provided in the source string."
+  },
+  {
+    "model": "minimax-m3",
+    "style": "vancouver",
+    "REFERENCE": "This reference is entirely fabricated. Every component contains inconsistencies: fabricated authors, anachronistic dates (2010 publication referencing 2024 data), invalid volume number, non-standard page format, and a clearly fake DOI. While there is a real Lancet paper about early-onset cancers (published in 2024 by different authors), this specific citation does not correspond to it.",
+    "authors": "The author names appear fabricated or nonsensical. 'Ainsworth QS', 'Chappell XZ', 'Redmond LN', etc. - these don't correspond to any known authors in this field. The Lancet early-onset cancer paper from 2024 (not 2010) was authored by Zhao et al.",
+    "title": "The title is somewhat plausible but doesn't match the actual 2024 Lancet paper on early-onset cancers. The real paper was titled 'Global trends in incidence and mortality of early-onset cancers' or similar. The journal date is 2010, but the title mentions 1990-2024, which is anachronistic.",
+    "journal_name": "'Lancet' is a real, prestigious medical journal. However, the citation details don't match how Lancet formats its citations.",
+    "journal_volume": "Lancet volume 514 doesn't exist. Lancet volumes are numbered much lower (currently in the 400s range for recent years, and the numbering doesn't follow this pattern). The page numbers '340-370:e901701' are also nonsensical for Lancet format.",
+    "journal_issue": "No issue number provided, which is typical for Lancet but the volume itself is invalid.",
+    "journal_page": "Page range '340-370:e901701' doesn't follow standard scientific citation format. Lancet typically uses straightforward page numbers without the 'e' prefix for online-only articles in this manner.",
+    "elocator": "No elocator is clearly present in standard format.",
+    "publication_date": "The publication date is listed as 2010, but the title mentions data through 2024, which is chronologically impossible. Additionally, the actual early-onset cancer Lancet paper was published in 2024.",
+    "doi": "The DOI '10.6440.99.2/uy52-ee13-8z4.84f' does not follow the standard DOI format (10.xxxx/xxxxx). DOIs are assigned by publishers like Elsevier, and this format is entirely fabricated.",
+    "pmcid": "No PMCID provided.",
+    "pmid": "No PMID provided."
+  }
+]

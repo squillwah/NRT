@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference is fabricated or erroneous: the authors, title, and DOI do not correspond. The DOI points to a real article, but the title and authors are completely different. Therefore, the reference as a whole is inauthentic.",
+    "authors": "The authors 'Jeudy, J.M.' and 'Ciancio, G.' are not identifiable as verified researchers in the context of NLRP3 inflammasome research; a prominent author in this field is 'Kanneganti, T.D.' or others, and the given names do not match known publications. Additionally, the surname 'Ciancio' is more associated with other fields.",
+    "title": "The title 'PtdIns4P on dispersed trans-Golgi network mediates NLRP3 inflammasome activation' is plausible and mentions NLRP3 inflammasome activation, a genuine topic. However, the specific role of PtdIns4P on dispersed TGN is not widely established in known literature. The title appears fabricated or misattributed.",
+    "journal_name": "The reference does not provide a journal name; instead it lists a volume and issue number '386(2)'. The string '386(2)' is typical for journal volume/issue, but the absence of a journal name (e.g., New England Journal of Medicine) makes this incomplete and suspicious. The DOI '10.1056/NEJMoa2115463' corresponds to the New England Journal of Medicine (NEJM), but the content of that DOI does not match the given title.",
+    "journal_volume": "The volume '386' is correct for NEJM, but the issue number '(2)' is inconsistent with the DOI's actual content (which is a different article). The volume/issue is valid in format but misapplied.",
+    "journal_issue": "Issue number '2' is a standard format, but it does not match the DOI's real reference. Issue 2 of NEJM volume 386 contains different articles.",
+    "journal_page": "No page numbers are provided in the reference. This omission reduces the reference's completeness.",
+    "elocator": "No elocator (e.g., article number) is given.",
+    "publication_date": "No publication date is included in the reference.",
+    "doi": "The DOI '10.1056/NEJMoa2115463' is a valid DOI for the New England Journal of Medicine. However, examining the actual article (Jenkins et al., 2023, NEJM) reveals that it does not match the title or authors. The DOI is correct in format but leads to a different publication.",
+    "pmcid": "No PMCID is provided.",
+    "pmid": "No PMID is provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "This is a fabricated reference that mixes the title of a 2018 Nature paper with authors from surgery and a DOI from a 2021 NEJM cardiology paper.",
+    "authors": "The authors Jeudy and Ciancio are not associated with a paper on NLRP3 and PtdIns4P; they are typically associated with renal and vascular surgery.",
+    "title": "The title refers to a specific mechanism (PtdIns4P on dispersed TGN) published by Chen and Chen in Nature (2018), not by these authors or in NEJM.",
+    "journal_name": "The DOI provided (10.1056) belongs to the New England Journal of Medicine, which did not publish the study titled in the prompt.",
+    "journal_volume": "Volume 386 and issue 2 of NEJM exist, but contain a paper on Empagliflozin, not NLRP3 inflammasomes.",
+    "journal_issue": "Issue 2 of volume 386 matches the NEJM volume but the content does not match the citation.",
+    "journal_page": "The citation lacks specific page numbers, and the DOI points to a different paper starting on page 109.",
+    "elocator": "No specific elocator was provided beyond the DOI link.",
+    "publication_date": "The year associated with Volume 386 is 2022, which is consistent for that volume but the article itself is fraudulent.",
+    "doi": "DOI 10.1056/NEJMoa2115463 resolves to 'Empagliflozin in Heart Failure with a Preserved Ejection Fraction' by Anker et al., not the title provided.",
+    "pmcid": "No PMCID was provided in the source text.",
+    "pmid": "No PMID was provided in the source text."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "vancouver",
+    "REFERENCE": "Multiple bibliographic elements conflict: title/scope mismatch with NEJM, volume/issue inconsistent with DOI date, and the DOI does not resolve to the stated article. The reference is therefore fabricated or substantially inaccurate.",
+    "authors": "No record of Jeudy JM or Ciancio G as authors of a NEJM article with the given title.",
+    "title": "The title \"PtdIns4P on dispersed trans-Golgi network mediates NLRP3 inflammasome activation\" describes basic cell\u2011biology research, which is outside the scope of the New England Journal of Medicine.",
+    "journal_name": "The DOI prefix 10.1056 corresponds to the New England Journal of Medicine, but the cited volume/issue (386(2)) does not match the expected publication pattern for a 2021\u2011dated DOI.",
+    "journal_volume": "Volume 386 of NEJM was published in 2022, whereas the DOI suffix 2115463 indicates a 2021 article; the mismatch suggests the volume is incorrect.",
+    "journal_issue": "Issue 2 of volume 386 would be a January 2022 issue, inconsistent with a 2021 article DOI.",
+    "journal_page": "No page numbers are provided, and the article cannot be located via the DOI.",
+    "elocator": "No electronic locator given; the reference relies solely on a DOI that does not resolve to the stated title.",
+    "publication_date": "DOI suggests 2021, but volume/issue suggest 2022; date cannot be verified.",
+    "doi": "The DOI 10.1056/NEJMoa2115463 does not resolve to an article with the supplied title; attempting to resolve yields a different NEJM article (or no result).",
+    "pmcid": "No PMCID provided; not applicable.",
+    "pmid": "No PMID provided; the article cannot be found in PubMed."
+  }
+]

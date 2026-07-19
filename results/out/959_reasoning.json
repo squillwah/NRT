@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The citation contains multiple inaccuracies: author names are misspelled (e.g., 'iSlva' instead of 'Silva', 'Zhwng' instead of 'Zheng'), the volume number is incorrect (184 instead of 375), the pages are implausibly long (1063-1101), and the DOI is not in a valid format (10.1387.84.601/1q77efn does not match standard DOI patterns). Although the PMID corresponds to a real paper, the overall citation is not authentic due to these fabricated elements.",
+    "authors": "The author names contain typographical errors (e.g., 'iSlva' for 'Silva', 'Zhwng' for 'Zheng', 'Rdiley' for 'Ridley', 'Gaolo' likely for 'Gallo'). While the real authors exist, the provided names are not correctly spelled.",
+    "title": "The title 'Respiratory tract infection and risk of bleeding in oral anticoagulant users: self-controlled case series' matches the real paper's title exactly.",
+    "journal_name": "The journal name 'BMJ' is correct and matches the real publication.",
+    "journal_volume": "The volume number '184' is incorrect. The real paper was published in BMJ volume 375.",
+    "journal_issue": "The issue number '25' is plausible but combined with the incorrect volume (184) and pages, it is likely fabricated. The real paper's issue is not 25.",
+    "journal_page": "The page range '1063-1101' is too long for a single article and does not match the real paper's page numbers (e.g., e065516).",
+    "elocator": "The citation includes page numbers '1063-1101' which are excessively long for a single article, and the volume/issue structure is inconsistent with BMJ's actual publication (volume 375, not 184). The e-locator, if any, is not provided correctly.",
+    "publication_date": "The date '2021 Dec 9' matches the real publication date of the paper. It is correct.",
+    "doi": "The DOI '10.1387.84.601/1q77efn' does not follow the standard DOI format (e.g., starts with 10. and has a valid prefix/suffix). Real DOI for this paper is 10.1136/bmj-2021-065516.",
+    "pmcid": "The PMCID 'PMC8757569' appears to be correct for the real paper (Silva et al., BMJ 2021). However, the citation's other errors make it unreliable; the PMCID itself is authentic.",
+    "pmid": "The PMID '34838160' corresponds to the real paper by Silva et al. in BMJ 2021. It is correctly cited."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "This reference is a complete hallucination, combining a fake title, misspelled authors, and IDs (PMID/PMCID) that belong to entirely different papers.",
+    "authors": "The author names contain several typographical errors or hallucinations such as 'iSlva', 'Zhwng', and 'Gaolo', which are not real scholars in this domain.",
+    "title": "The title appears to be a fabrication or a combination of common medical study topics, as no study with this exact title exists in BMJ records.",
+    "journal_name": "British Medical Journal (BMJ) is a valid, high-impact medical journal.",
+    "journal_volume": "BMJ did not have a volume 184 in 2021; it uses yearly volume numbers or unique identifiers for articles.",
+    "journal_issue": "The issue number 25 assigned to the year 2021 for BMJ does not correlate with the provided page or title data.",
+    "journal_page": "The page range 1063-1101 is inconsistent with the e-locator provided and BMJ's standard formatting for that year.",
+    "elocator": "The e-locator e460794 is not a valid BMJ article identifier; they typically have shorter numerical strings.",
+    "publication_date": "December 9, 2021, is a valid date, but no such article was published in BMJ on this day.",
+    "doi": "The DOI 10.1387.84.601/1q77efn is malformed and does not follow the prefix structure for the BMJ (which is 10.1136).",
+    "pmcid": "PMCID PMC8757569 refers to a different paper about SARS-CoV-2 published in 'The Journal of Clinical Investigation'.",
+    "pmid": "PMID 34838160 actually refers to a different paper about breast cancer published in 'Frontiers in Oncology'."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "vancouver",
+    "REFERENCE": "The overall reference is highly suspicious due to multiple errors: garbled author names, incorrect volume/issue/page numbers, invalid DOI, and inconsistent formatting. It appears to be fabricated or a hallucination. The title is the only plausible part, but even that may not match exactly a known BMJ article. A search for this title might yield similar articles, but this specific citation is likely not authentic.",
+    "authors": "The authors list appears garbled with misspellings and inconsistencies. Names like 'iSlva ME', 'Zhwng M', 'Rdiley CR' are not standard and likely errors. The correct author names are not recognizable as established researchers in this field. The format is inconsistent with proper citation styles.",
+    "title": "The title 'Respiratory tract infection and risk of bleeding in oral anticoagulant users: self-controlled case series' seems plausible and relevant to medical literature. However, the exact wording may need verification against known publications. The structure is typical for a BMJ article.",
+    "journal_name": "BMJ (British Medical Journal) is a valid and prestigious journal. However, the abbreviation 'BMJ' is correct, but the citation details such as volume and issue might be incorrect. The format 'BMJ. 2021 Dec 9;184(25):1063-1101:e460794' is unusual; typically BMJ uses a different volume numbering and article format (e.g., 'BMJ 2021;375:e060794'). The specific numbers seem inconsistent.",
+    "journal_volume": "The volume '184' and issue '25' are not typical for BMJ in 2021. BMJ in 2021 had volumes around 372-375. The volume and issue numbers appear fabricated or incorrect.",
+    "journal_issue": "Same as volume; issue '25' is not standard for BMJ's weekly publication. BMJ issues are usually identified by date or volume number, not a separate issue number like '25'.",
+    "journal_page": "The page range '1063-1101' is unusually long for a single article. BMJ articles typically have shorter page ranges. Additionally, the presence of 'e460794' suggests an electronic identifier, which is common for online articles, but the combination with pages is odd. Usually, BMJ articles are cited with a DOI and may not have traditional page numbers.",
+    "elocator": "The string 'e460794' might be intended as an e-locator or article identifier, but the format is incorrect. BMJ uses DOIs or article numbers like 'e060794'. The number '460794' is not in the correct range for BMJ articles (which are usually 6 digits starting with 0).",
+    "publication_date": "The date '2021 Dec 9' is a plausible publication date for a medical journal. However, BMJ typically publishes online ahead of print, so the exact date might be correct, but the formatting is a bit informal (should be '2021 Dec 9' or '9 Dec 2021').",
+    "doi": "The DOI 'doi:10.1387.84.601/1q77efn' is invalid. DOIs typically start with '10.' followed by a registrant code (e.g., '10.1136' for BMJ) and a suffix. This DOI structure is non-standard and likely fabricated. It does not match the typical BMJ DOI format (e.g., '10.1136/bmj-2021-060794').",
+    "pmcid": "No PubMed Central ID (PMCID) is provided. Similar to PMID, this is not required, but if available, it could help verification. Since it's absent, we cannot confirm.",
+    "pmid": "No PubMed ID (PMID) is provided in the citation. The absence of a PMID is not necessarily invalid, but for a BMJ article from 2021, a PMID would usually be available. However, since it's not listed, we cannot verify it. But given other errors, it's likely missing or incorrect."
+  }
+]

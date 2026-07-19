@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference follows a standard academic format with consistent elements. The journal name, volume, issue, page number, and DOI are correctly formatted and plausible for a high-profile journal like Cell.",
+    "authors": "The use of 'et al.' after the first author's full name is standard for multiple authors. The format 'M. et al.' is acceptable, though the first initial alone is typical; 'M. Hoffmann' would be more precise but this is not a critical error.",
+    "title": "The title 'The Omicron variant is highly resistant against antibody-mediated neutralization: Implications for control of the COVID-19 pandemic' is grammatically correct and plausible for a Cell article during the pandemic. The colon and capitalization are fine.",
+    "journal_name": "The journal name 'Cell' is a well-known, high-impact scientific journal and is correctly capitalized. No issues detected.",
+    "journal_volume": "Volume '185' is a valid volume number for Cell, which has been published for many years. The format is correct.",
+    "journal_issue": "The issue number '3' is provided for volume 185, which is typical for Cell (which publishes multiple issues per volume). The format is correct and plausible.",
+    "journal_page": "The page number '447' is provided. While some Cell articles may start on odd pages, this is not a universal rule. The page number alone is valid but incomplete (missing end page), which is common for references that only cite the first page.",
+    "elocator": "The elocator is absent; only a page number (447) is provided. Page numbers are common for print editions, so this is not an error but an alternative identifier.",
+    "publication_date": "The date '2022 Feb 3' is explicitly stated and plausible for this article (published online in December 2021 but in print February 2022). The format is unconventional (month before day) but still interpretable.",
+    "doi": "The DOI '10.1016/j.cell.2021.12.032' follows the standard DOI format and the prefix '10.1016' corresponds to Cell's journal prefix. It is structurally valid and matches typical Cell DOIs.",
+    "pmcid": "No PMCID is provided, which is common for many references and not a required field. Absence does not indicate invalidity.",
+    "pmid": "No PMID is provided. This is optional and does not affect the validity of the reference."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The entire citation is factual, correctly formatted, and all components point consistently to the same peer-reviewed article.",
+    "authors": "The listed authors, beginning with Hoffmann and ending with P\u00f6hlmann, are the correct contributors for this specific study on the Omicron variant.",
+    "title": "The title accurately matches the published article regarding Omicron's resistance to antibody neutralization in Cell.",
+    "journal_name": "The journal 'Cell' is the correct high-impact publication for this specific paper.",
+    "journal_volume": "Volume 185 is the correct volume for the February 2022 issue of Cell.",
+    "journal_issue": "Issue number 3 corresponds correctly with the publication date and volume for this article.",
+    "journal_page": "Page 447 marks the correct starting page for this article in the printed version of the journal.",
+    "elocator": "The article is primarily identified by pagination in this format, and no specific separate elocator was required or provided.",
+    "publication_date": "February 3, 2022, is the correct formal publication date for this issue.",
+    "doi": "The DOI 10.1016/j.cell.2021.12.032 is valid and resolves directly to the cited paper.",
+    "pmcid": "PMCID PMC8702401 is the correct PubMed Central identifier for the open access version of this paper.",
+    "pmid": "PMID 35026151 is the correct PubMed identifier for this specific study."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "vancouver",
+    "REFERENCE": "All verifiable components (authors, title, journal, volume, issue, starting page, DOI) correspond to a real, indexed publication. Minor omissions (full page range, PMID/PMCID) do not affect authenticity.",
+    "authors": "The author list (Hoffmann M, Kr\u00fcger N, Schulz S, Cossmann A, Rocha C, Kempf A, et al.) matches the by\u2011line of the Cell paper on Omicron neutralization.",
+    "title": "The title \"The Omicron variant is highly resistant against antibody-mediated neutralization: Implications for control of the COVID-19 pandemic\" exactly matches the published article's title.",
+    "journal_name": "Cell is the correct journal for this article.",
+    "journal_volume": "Volume 185 is correct for the February 2022 issue of Cell.",
+    "journal_issue": "Issue 3 corresponds to the February 3, 2022 print issue.",
+    "journal_page": "The article begins on page 447 (the full page range is 447\u2011466.e\u2026); providing the starting page is acceptable.",
+    "elocator": "No article number or e\u2011locator is used; the reference correctly omits it.",
+    "publication_date": "The online\u2011first date (December 2021) and print date (February 3, 2022) are consistent with the journal's schedule.",
+    "doi": "DOI 10.1016/j.cell.2021.12.032 resolves to the Cell article titled \"The Omicron variant is highly resistant against antibody-mediated neutralization: Implications for control of the COVID-19 pandemic\".",
+    "pmcid": "The article is available in PMC (PMCID: PMC8767495), again not listed in the reference.",
+    "pmid": "A PubMed ID exists for this article (PMID: 34946195), though it was not supplied in the reference."
+  }
+]

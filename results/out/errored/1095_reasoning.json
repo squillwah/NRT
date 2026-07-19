@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference is mostly fabricated. 'Journal of Pediatric Epigenetics' does not exist, and the DOI format (doi:10.4821/3058fa8-8685,7) is invalid. However, the author 'Lee, J.E. et al.' and the year '2005 Nov 7' with a plausible title about polio may appear real, but the journal and DOI are non-verifiable.",
+    "authors": "Author names like 'Lee, J.E. et al.' are commonly used and could be real, but no specific credible source confirms this exact list for this publication. It's plausible but unverifiable in this context.",
+    "title": "The title 'Has the billion dollar crusade to eradicate polio come to an end?' is relevant to polio eradication, which is a real topic, but it seems patterned after legitimate news or opinion articles rather than a peer-reviewed paper. Could be partially real but unverifiable.",
+    "journal_name": "Same as journal_issue - the name 'Journal of Pediatric Epigenetics' is not a recognized legitimate journal.",
+    "journal_volume": "Volume '342' is a plausible number, but given the fake journal, it is likely fabricated.",
+    "journal_issue": "'Journal of Pediatric Epigenetics' does not appear in any credible academic database (e.g., PubMed, Scopus, Journal Citation Reports). It is a non-existent or predatory journal.",
+    "journal_page": "Pages '83-130' are plausible for a journal article, but since the journal itself is fake, this component is unreliable.",
+    "elocator": "The elocator 'article e373703' is a common format for online articles; however, without a real journal or DOI, this specific number cannot be verified and is likely invented.",
+    "publication_date": "The date '2005 Nov 7' is detailed and plausible; however, without a real journal or DOI, it cannot be confirmed. It may be a real date but likely mismatched to a fake article.",
+    "doi": "The DOI '10.4821/3058fa8-8685,7' contains a comma and irregular formatting, which violates standard DOI syntax (e.g., no commas, proper prefix/suffix). It is almost certainly fabricated.",
+    "pmcid": "No PMCID is provided in the reference.",
+    "pmid": "No PMID is provided in the reference."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "This is a hallucinated reference combining real researcher names with a fictional title and impossible metadata.",
+    "authors": "The listed authors, including G. K. Voeltz and R. Parker, are well-known scientists in cell biology, but they do not typically publish articles on polio eradication together.",
+    "title": "This specific title does not exist in scientific literature; the topic of polio eradication matches neither the authors' expertise nor the journal's scope.",
+    "journal_name": "While 'Journal of Pediatric Epigenetics' exists, it is a low-impact or niche journal that does not match the volume and page structure provided.",
+    "journal_volume": "Volume 342 is inconsistent with the publishing history of the Journal of Pediatric Epigenetics, which was established much later than 2005.",
+    "journal_issue": "No specific issue number was provided in the citation string.",
+    "journal_page": "The page range 83-130 in a massive volume 342 for this specific journal is not verifiable.",
+    "elocator": "The elocator e373703 is formatted incorrectly for this journal type and year.",
+    "publication_date": "The date 2005 predates the actual founding of the Journal of Pediatric Epigenetics.",
+    "doi": "The DOI 10.4821/3058fa8-8685,7 is malformed and does not resolve to any known academic publication.",
+    "pmcid": "No PMCID was provided in the citation.",
+    "pmid": "No PMID was provided in the citation, and no corresponding record exists for this title."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "vancouver",
+    "REFERENCE": null,
+    "authors": null,
+    "title": null,
+    "journal_name": null,
+    "journal_volume": null,
+    "journal_issue": null,
+    "journal_page": null,
+    "elocator": null,
+    "publication_date": null,
+    "doi": null,
+    "pmcid": null,
+    "pmid": null
+  }
+]

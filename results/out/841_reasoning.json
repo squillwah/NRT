@@ -1,0 +1,34 @@
+[
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "The reference is a hallucinated composite, mixing a real paper title by different authors (Collins et al., 2020) with an incorrect name, date, and a fraudulent DOI.",
+    "authors": "Akin Abayomi or Xiao-Jun Zhou are associated with similar fields, but Alakija is not the lead author of any BMJ paper with this title.",
+    "title": "The title appears to be a modification of 'Machine learning and artificial intelligence research for patient benefit: 20 critical questions on transparency, replicability, ethics, and effectiveness' which is actually a real paper by Collins et al.",
+    "journal_name": "BMJ (Clinical research ed.) is a valid and reputable medical journal.",
+    "journal_volume": "Volume 368 corresponds to the year 2020, not 2018.",
+    "journal_issue": "The citation provides pages and an elocator but lacks a numeric issue number, and journals in volume 368 use elocators starting with 'm'.",
+    "journal_page": "The BMJ uses 'm' prefixed elocators (e.g., m151) rather than traditional page ranges like 562-578 for its primary articles in this volume.",
+    "elocator": "The elocator e333760 does not match the BMJ's numbering format and does not exist for this volume.",
+    "publication_date": "The provided date May 12, 2018, does not align with Volume 368 (2020) or the referenced DOI (2021).",
+    "doi": "The DOI prefix 10.1126 belongs to Science Magazine, not the BMJ, and the suffix refers to a completely different Lancet article.",
+    "pmcid": "No PMCID was provided in the citation string.",
+    "pmid": "No PMID was provided in the citation string."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "harvard",
+    "REFERENCE": "All bibliographic elements are internally inconsistent and none correspond to a real, retrievable record. The DOI is especially indicative of fabrication.",
+    "authors": "No record of an author named Olatunbosun-Alakija, A. publishing the cited article in BMJ.",
+    "title": "The exact title does not appear in BMJ's table of contents or PubMed for 2018.",
+    "journal_name": "BMJ (Clinical research ed.) is a real journal, but the volume/issue/page combination does not match any known BMJ issue.",
+    "journal_volume": "Volume 368 of BMJ does not correspond to a 2018 publication; volume numbers for that year are far lower.",
+    "journal_issue": "No issue information is provided, and the volume number itself is inaccurate.",
+    "journal_page": "Pages 562-578 in volume 368 are not associated with any BMJ article matching the title.",
+    "elocator": "Article number e333760 does not appear in BMJ's electronic locator system for the given volume.",
+    "publication_date": "May 12 2018 does not align with BMJ's publishing schedule for volume 368.",
+    "doi": "The DOI prefix 10.1126 belongs to Science (AAAS), while the suffix S0140-6736... is characteristic of The Lancet; the combination is invalid and does not resolve to any known article.",
+    "pmcid": "No PMCID was supplied, and a search for the title yields no PMCID.",
+    "pmid": "No PMID was supplied, and a search for the title yields no PMID."
+  }
+]

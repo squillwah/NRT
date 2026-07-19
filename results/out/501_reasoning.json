@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference appears fabricated. The authors 'Farrow, C.E. and Kang, J.' do not correspond to any known Nature article in the specified issue. Additionally, the formatting contains an error (double period after 'J.'), which is atypical for legitimate citations.",
+    "authors": "While the names are plausible, no known Nature paper from March 2020 (volume 579, issue 7797) lists these authors. The double period is a red flag suggesting a generated or copied error.",
+    "title": "No title provided.",
+    "journal_name": "Nature is a real and well-known journal.",
+    "journal_volume": "Volume 579 of Nature corresponds to 2020, which is correct for the stated year.",
+    "journal_issue": "The issue number 7797 is within the sequential numbering of Nature for volume 579 (2020), but the combination with the authors and pages does not match any verified article.",
+    "journal_page": "The page range 80-87 is plausible for a short article in Nature, but without a corresponding real article, it cannot be verified.",
+    "elocator": "No e-locator provided.",
+    "publication_date": "The date '2020 Mar' is a valid format and corresponds to the typical publication month for Nature issues, but the specific article does not exist.",
+    "doi": "No DOI provided.",
+    "pmcid": "No PMC ID provided.",
+    "pmid": "No PMID provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The reference is invalid as the authors Farrow and Kang did not write the article contained in the specified volume and pages of Nature.",
+    "authors": "There is no record of a publication in Nature by authors C. E. Farrow and J. Kang in 2020.",
+    "title": "The title is missing from the provided citation.",
+    "journal_name": "Nature is a valid and reputable journal.",
+    "journal_volume": "Volume 579 of Nature series was published in 2020.",
+    "journal_issue": "Issue 7797 is a valid issue number associated with Volume 579 of Nature.",
+    "journal_page": "Pages 80-87 in Volume 579, Issue 7797 of Nature contain the article 'The human body epigenome maps over 1,500 tissues' by different authors.",
+    "elocator": "No elocator was provided in the citation.",
+    "publication_date": "Volume 579 of Nature was indeed published in 2020.",
+    "doi": "A DOI was not provided in the citation.",
+    "pmcid": "A PMCID was not provided in the citation.",
+    "pmid": "A PMID was not provided in the citation."
+  },
+  {
+    "model": "minimax-m3",
+    "style": "harvard",
+    "REFERENCE": "The authors listed (Farrow and Kang) do not correspond to any known publication in Nature volume 579, issue 7797 (March 2020). Additionally, there is a typographical error in the author list (double period after Kang). Without a valid title, and with fabricated authors, this reference is likely not authentic.",
+    "authors": "Looking for real authors who published a paper with this title in Nature in March 2020. The authors given are 'C.E. Farrow' and 'J. Kang' (with a double period typo). These do not match the well-known authors who published a major paper in Nature in March 2020 (which was about cryo-EM structure of the SARS-CoV-2 spike protein by Wrapp et al., or other notable March 2020 Nature papers). No paper by authors named Farrow and Kang appears in Nature volume 579, issue 7797, March 2020.",
+    "title": "No title is provided in the citation, so it cannot be validated.",
+    "journal_name": "Nature is a well-known, legitimate scientific journal published by Springer Nature.",
+    "journal_volume": "Volume 579 of Nature corresponds to the March 2020 issues, which is plausible.",
+    "journal_issue": "Issue 7797 of Nature is the issue dated 12 March 2020, which is a valid issue number.",
+    "journal_page": "Pages 80-87 cannot be verified without a title and valid authors. Given that the authors do not match known publications in this range, these page numbers are likely fabricated.",
+    "elocator": "No DOI or article ID is provided.",
+    "publication_date": "March 2020 is consistent with volume 579, issue 7797 of Nature.",
+    "doi": "No DOI is provided in the citation.",
+    "pmcid": "No PMCID is provided in the citation.",
+    "pmid": "No PMID is provided in the citation."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The citation appears to be fabricated or erroneous. The journal 'Cell' typically publishes cell biology research, not epidemiology studies on plasma amyloid-beta and cognitive decline in community-dwelling cohorts. The page range (202-238) is excessively long for a research article in Cell, and the article number format 'e067873' is not used by Cell (which uses volume, issue, and page numbers). Additionally, the volume field is missing. These inconsistencies suggest the reference is not authentic.",
+    "authors": "No authors are provided in the citation.",
+    "title": "The title 'Association of plasma amyloid-beta levels with longitudinal cognitive decline in a symptom-free community-dwelling cohort' is plausible and matches the style of clinical neuroscience research, but it is not associated with the journal Cell.",
+    "journal_name": "The journal name 'Cell' is valid but highly unlikely for this topic. Cell does not typically publish population-based cohort studies.",
+    "journal_volume": "The volume is missing (empty field).",
+    "journal_issue": "No journal issue is provided.",
+    "journal_page": "The page range '202-238' is 37 pages, which is unusually long for a Cell research article. Most Cell articles are 10-20 pages.",
+    "elocator": "The article number 'e067873' is not a standard Cell elocator format. Cell uses page numbers, not 'e' numbers.",
+    "publication_date": "The date '(2016 Jun 20)' is a specific date. While plausible, without a valid article, it cannot be verified. The date format is acceptable.",
+    "doi": "No DOI is provided.",
+    "pmcid": "No PMC ID is provided.",
+    "pmid": "No PMID is provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "The reference is a hallucination blending a real title from JAMA Neurology with incorrect journal metadata (Cell) and incorrect pagination/elocator.",
+    "authors": "No authors are provided in the citation fragment.",
+    "title": "The title 'Association of plasma amyloid-beta levels with longitudinal cognitive decline in a symptom-free community-dwelling cohort' is a real study title, but it is published in JAMA Neurology, not Cell.",
+    "journal_name": "Cell is a valid journal, but the title provided does not belong to this journal.",
+    "journal_volume": "The volume number is missing from the citation.",
+    "journal_issue": "The issue number is missing from the citation.",
+    "journal_page": "The page range 202-238 does not correspond to the actual publication for this title.",
+    "elocator": "The elocator e067873 does not exist for this article or within Cell for that date.",
+    "publication_date": "The original article with this title was published in late 2016 (September), but this specific date 2016 Jun 20 does not match that or the journal Cell.",
+    "doi": "The DOI is missing from the citation.",
+    "pmcid": "The PMCID is missing from the citation.",
+    "pmid": "The PMID is missing from the citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "nlm",
+    "REFERENCE": "The overall citation is highly suspicious due to missing authors, malformed journal details, an atypical PMID, and inconsistent formatting. It is likely not a legitimate reference.",
+    "authors": "The citation is incomplete; it lacks author names. The title and journal are present but without authors, the reference cannot be verified as authentic.",
+    "title": "The title is provided as 'Association of plasma amyloid-beta levels with longitudinal cognitive decline in a symptom-free community-dwelling cohort.' This appears plausible for a study on amyloid-beta and cognitive decline, but without authors or journal verification, its authenticity cannot be confirmed.",
+    "journal_name": "The journal is listed as 'Cell,' a prestigious scientific journal. However, the citation format is irregular: the date and volume/page numbers appear incomplete or malformed (e.g., '2016 Jun 20;:202-238:e067873'). This suggests a possible error or fabrication.",
+    "journal_volume": "The citation includes '2016 Jun 20;:202-238:e067873,' which is not a standard volume/page format for Cell (which typically uses volume and issue numbers). This is likely invalid.",
+    "journal_issue": "No specific issue number is provided; the citation format is malformed, making it impossible to determine the issue.",
+    "journal_page": "The citation includes '202-238:e067873,' which is unusual. Cell articles are typically cited with page ranges or article IDs, but this format is inconsistent and likely invalid.",
+    "elocator": "The citation includes 'e067873,' which might be an electronic locator, but in the context of a malformed citation, its authenticity is uncertain.",
+    "publication_date": "The date is given as '2016 Jun 20,' which is plausible for a 2016 publication, but the rest of the citation is irregular, casting doubt on its accuracy.",
+    "doi": "No DOI is provided in the citation, which is typical for journal articles. The absence of a DOI makes verification more difficult.",
+    "pmcid": "The PMCID is 'PMC9455718,' which is a valid format for PubMed Central IDs. However, given other issues with the citation, it may be incorrectly associated or fabricated.",
+    "pmid": "The PMID is '591588846,' which is unusually long and does not match typical PubMed ID formats (which are usually 6-8 digits). This suggests it might be fabricated or incorrect."
+  }
+]

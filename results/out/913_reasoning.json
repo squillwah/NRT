@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "Overall, the citation contains multiple severe inconsistencies: incorrect volume, mismatched DOI from a different journal, non-standard author, and suspicious identifiers. Therefore, the entire reference is not authentic.",
+    "authors": "The author is listed as 'Cell editorial team,' which is non-standard. Cell journal articles typically have named authors or a consortium, not an editorial team as the author of a research article.",
+    "title": "The title 'Protection against Covid-19 by BNT162b2 Booster across Age Groups' is plausible and consistent with the topic, but no further verification is possible without external sources.",
+    "journal_name": "The journal is listed as 'Cell,' which is a real journal, but the remaining details (volume, year) are inconsistent with Cell's publication patterns.",
+    "journal_volume": "Volume 385 does not correspond to Cell in 2021; Cell volume 184 was in 2021, and 385 is far too high. This volume number is likely fabricated.",
+    "journal_issue": "No issue number is provided, so it cannot be evaluated, but the volume discrepancy already indicates fabrication.",
+    "journal_page": "The page range '2421-2430' is provided, but without a valid volume, it is meaningless. Even if the pages were correct, the volume is wrong.",
+    "elocator": "No elocator (article number) is given.",
+    "publication_date": "The date '2021 Dec 23' is specific but Volume 385 does not exist for Cell in 2021, so the date is inconsistent with the rest of the citation.",
+    "doi": "The DOI '10.1136/science.aay9959' belongs to Science, not Cell. This is a clear mismatch and indicates fabrication.",
+    "pmcid": "PMCID PMC14003494 has an unusually large number (8 digits). Typical PMC IDs are shorter. This is likely fabricated or invalid.",
+    "pmid": "PMID 34879188 might exist, but given the other falsified elements, it is likely either unrelated or incorrectly assigned. Without verification, it is suspicious."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "The reference is a 'hallucinated' hybrid that mixes a real title and date with the wrong authors, wrong journal, and a completely unrelated DOI.",
+    "authors": "The article with this title was actually written by Bar-On et al., not a 'Cell editorial team'.",
+    "title": "The title 'Protection against Covid-19 by BNT162b2 Booster across Age Groups' is a valid title for a study published in late 2021.",
+    "journal_name": "The journal provided is 'Cell', but the actual article was published in the New England Journal of Medicine (NEJM).",
+    "journal_volume": "Volume 385 is consistent with NEJM's numbering in 2021, not Cell's (which was around volume 184).",
+    "journal_issue": "No issue number was provided in the citation fragment; issue 25 corresponds to page 2421 in NEJM Vol 385.",
+    "journal_page": "Pages 2421-2430 are the correct pages for this specific study in the New England Journal of Medicine.",
+    "elocator": "No elocator was provided in the text.",
+    "publication_date": "The date December 23, 2021, is the correct publication date for this study in NEJM.",
+    "doi": "The DOI 10.1136/science.aay9959 is for a completely different paper in the journal Science; the correct DOI should be 10.1056/NEJMoa2115926.",
+    "pmcid": "No PMCID was provided in the citation.",
+    "pmid": "No PMID was provided in the citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "nlm",
+    "REFERENCE": "Citation",
+    "authors": "Author",
+    "title": "Title",
+    "journal_name": "Journal Name",
+    "journal_volume": "Volume",
+    "journal_issue": "Journal",
+    "journal_page": "Pages",
+    "elocator": "E-locator/Volume Pages",
+    "publication_date": "Date",
+    "doi": "DOI",
+    "pmcid": "PMCID",
+    "pmid": "PMID"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference contains multiple serious errors: misspelled title, incorrect volume number, and missing page information, making it invalid overall.",
+    "authors": "The author list 'Jayk Bernal, A. et al.' follows a common citation format for multi-author papers and corresponds to a known author for this study.",
+    "title": "The title contains multiple spelling errors: 'Molnupiravig' instead of 'Molnupiravir', 'Orsl' instead of 'Oral', 'Nohnospitalized' instead of 'Nonhospitalized', and 'Ptaients' instead of 'Patients'.",
+    "journal_name": "The journal name 'The New England journal of medicine' is recognizable and corresponds to the actual journal, despite minor capitalization inconsistencies.",
+    "journal_volume": "The volume number '568' is incorrect; the actual volume for this article (based on the DOI) is 386, not 568.",
+    "journal_issue": "The issue number '6' is a plausible value and matches the format for NEJM issues, though the volume is wrong; considered valid in isolation.",
+    "journal_page": "No page number is provided in the reference; it only includes volume and issue.",
+    "elocator": "No elocator (such as article number or e-location) is present in the reference.",
+    "publication_date": "The date '(2022 Feb 10)' is correctly formatted and corresponds to the known publication date of the article.",
+    "doi": "The DOI '10.1056/NEJMoa2116044' matches a real NEJM article on molnupiravir for COVID-19, confirming its validity.",
+    "pmcid": "No PMCID is provided in the reference.",
+    "pmid": "No PMID is provided in the reference."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "The reference points to a real, high-impact study but contains significant spelling errors in the title and an incorrect volume number.",
+    "authors": "The author name 'Jayk Bernal A' is a misspelling of 'Jayk Bernal, A.' and includes others from the actual study.",
+    "title": "The title contains multiple typos including 'Molnupiravig', 'Orsl', 'Nohnospitalized', and 'Ptaients'.",
+    "journal_name": "The New England Journal of Medicine (N Engl J Med) is a legitimate medical journal.",
+    "journal_volume": "The provided volume 568 is incorrect; the actual volume for this article in 2022 is 386.",
+    "journal_issue": "The issue number 6 matches the publication date, though the volume is incorrect.",
+    "journal_page": "Page numbers were not provided in the citation, but the article uses pages 509-520.",
+    "elocator": "No specific e-locator or article ID was provided outside of the DOI.",
+    "publication_date": "The date February 10, 2022, is the correct publication date for this study.",
+    "doi": "The DOI 10.1056/NEJMoa2116044 is the correct and valid identifier for this paper.",
+    "pmcid": "A PMCID was not provided in the input citation.",
+    "pmid": "A PMID was not provided in the input citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": "The citation contains the correct DOI (10.1056/NEJMoa2116044), which does correspond to a real NEJM paper about molnupiravir for COVID-19. However, the reference is riddled with errors that reduce its reliability.",
+    "authors": "The author is listed as 'Jayk Bernal, A.' which appears to be a garbled version of the correct author name. The actual first author of the NEJM paper is 'Jayk-Bernal, A.' (hyphenated). The naming is incorrectly split.",
+    "title": "The title contains multiple severe typographical errors: 'Molnupiravig' (should be 'Molnupiravir'), 'Orsl' (should be 'Oral'), 'Nohnospitaled' (should be 'Nonhospitalized'), and 'Ptaients' (should be 'Patients'). The correct title is 'Molnupiravir for the Treatment of Covid-19 in Nonhospitalized Patients'.",
+    "journal_name": "The journal name is 'The New England journal of medicine' \u2014 it should be 'The New England Journal of Medicine' with proper capitalization of 'Journal' and 'Medicine'.",
+    "journal_volume": "Volume '568' is incorrect. NEJM volumes for 2022 are in the 380s range. The correct volume for this paper is 386.",
+    "journal_issue": "Issue number 6 may be correct for the February 2022 issue of NEJM, but the corresponding volume number should be 386 (not 568). The journal name itself is formatted inconsistently (lowercase 'journal' and 'medicine'), and should be 'The New England Journal of Medicine'.",
+    "journal_page": "No page numbers are provided. While the page range for the original article is approximately 509\u2013520 (in volume 386, issue 6), the citation omits this information.",
+    "elocator": "The volume '568' is incorrect. NEJM volume numbering for 2022 is around 386, not 568. The issue number (6) combined with the February 10, 2022 date may be plausible, but the volume number is wrong.",
+    "publication_date": "The date '2022 Feb 10' could correspond to the print publication date. However, the paper was initially published online on December 16, 2021. The print issue date of February 10, 2022, is plausible for volume 386, issue 6, so this element could be partially correct.",
+    "doi": "The DOI '10.1056/NEJMoa2116044' is a real, valid DOI that resolves to the correct NEJM paper about molnupiravir for COVID-19 treatment. This is the most authentic element of the citation.",
+    "pmcid": "No PMCID is provided in the citation. The corresponding PMCID may exist but is not given here.",
+    "pmid": "No PMID is provided in the citation. A PMID would help verify the citation but is absent."
+  }
+]

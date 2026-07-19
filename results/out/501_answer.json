@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": false,
+    "authors": false,
+    "title": false,
+    "journal_name": true,
+    "journal_volume": true,
+    "journal_issue": true,
+    "journal_page": true,
+    "elocator": false,
+    "publication_date": true,
+    "doi": false,
+    "pmcid": false,
+    "pmid": false
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": false,
+    "authors": false,
+    "title": false,
+    "journal_name": true,
+    "journal_volume": true,
+    "journal_issue": true,
+    "journal_page": false,
+    "elocator": false,
+    "publication_date": true,
+    "doi": false,
+    "pmcid": false,
+    "pmid": false
+  },
+  {
+    "model": "minimax-m3",
+    "style": "harvard",
+    "REFERENCE": false,
+    "authors": false,
+    "title": false,
+    "journal_name": true,
+    "journal_volume": true,
+    "journal_issue": true,
+    "journal_page": false,
+    "elocator": false,
+    "publication_date": true,
+    "doi": false,
+    "pmcid": false,
+    "pmid": false
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The reference contains several spelling and typographical errors, including 'emergency departmnet ivsitsx' (should be 'emergency department visits'), 'theaUnited.States' (should be 'the United States'), 'stratifird' (should be 'stratified'), 'case crossover' (should be 'case-crossover'), '01.1136' (should be '10.1136'), and '06i653' (should be '065653'). Additionally, the journal name 'BMJ' is correct, and the DOI, PMID, and PMCID format are plausible but the DOI string is malformed. Despite these errors, the core components (journal, volume, article number, PMID, PMCID) correspond to a real published article, suggesting the reference is likely fabricated or heavily corrupted from a legitimate source.",
+    "authors": "No authors are listed in the provided text. Therefore, this component cannot be verified and is considered missing.",
+    "title": "The title is given as 'Ambient heat and risks of emergency departmnet ivsitsxamong adults on theaUnited.States: time stratifird case crossover study'. This contains multiple typographical errors ('departmnet' instead of 'department', 'ivsitsx' instead of 'visits', 'theaUnited.States' instead of 'the United States', 'stratifird' instead of 'stratified'). The correct title is 'Ambient heat and risks of emergency department visits among adults in the United States: time stratified case-crossover study'. The provided title is significantly corrupted.",
+    "journal_name": "The journal name is given as 'BMJ'. This is the correct abbreviated name for the British Medical Journal. The journal is legitimate and the name is correctly abbreviated.",
+    "journal_volume": "The volume is given as '375'. This is correct for the referenced article (BMJ 2021;375).",
+    "journal_issue": "The journal issue is not provided in the reference. The component is missing.",
+    "journal_page": "No page numbers are provided in the reference. The component is missing.",
+    "elocator": "The e-locator is given as '375:e065653'. This matches the standard format for BMJ articles (volume:elocator). The article in question (PMID 34344823) is indeed published with e-locator e065653 in volume 375 of BMJ. Therefore, this component is correctly specified.",
+    "publication_date": "No publication date (year, month, day) is explicitly provided in the reference text. The component is missing.",
+    "doi": "The DOI is given as '01.1136/bmj-2021-06i653'. The standard DOI prefix for BMJ articles is '10.1136', not '01.1136', and the suffix '06i653' appears to be a typo (likely intended '065653'). This is inconsistent with valid DOI formatting and the referenced article (which has DOI 10.1136/bmj-2021-065653).",
+    "pmcid": "The PMCID is given as 'PMC9397126'. This is a valid PMCID format. The article with PMID 34344823 does have PMCID PMC9397126. Therefore, this component is accurate.",
+    "pmid": "The PMID is given as '34344823'. This is a valid PubMed Identifier. The article 'Ambient heat and risks of emergency department visits among adults in the United States: time stratified case-crossover study' published in BMJ 2021 does correspond to PMID 34344823. Therefore, this component is correct."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "While the cited article exists, the citation contains significant typographical errors in the title and an incorrect DOI prefix.",
+    "authors": "No authors are provided in the input citation string.",
+    "title": "The title contains several typographical errors ('departmnet', 'ivsitsx', 'theaUnited') and does not match the formal title of the cited study.",
+    "journal_name": "BMJ (Clinical research ed.) is a valid medical journal title.",
+    "journal_volume": "Volume 375 is consistent with BMJ publications in late 2021.",
+    "journal_issue": "The input does not provide a specific issue number, which is common for BMJ articles using elocators.",
+    "journal_page": "No page numbers are provided; the citation uses an elocator instead.",
+    "elocator": "The elocator e065653 is correct for the intended BMJ study on ambient heat.",
+    "publication_date": "The year 2021 (inferred from volume 375 and elocator) is correct.",
+    "doi": "The DOI provided contains typos ('01' instead of '10' and 'i' instead of '5') making it an invalid identifier.",
+    "pmcid": "No PMCID was provided in the input string.",
+    "pmid": "No PMID was provided in the input string."
+  },
+  {
+    "model": "minimax-m3",
+    "style": "nlm",
+    "REFERENCE": "The reference is to a real BMJ article (2021) by Wei et al. about ambient heat and emergency department visits, but the input contains multiple typos and errors in the title and DOI. The PMID and PMCID are correct and point to a real publication.",
+    "authors": "The author list is missing from the input. Only the title and journal information is provided.",
+    "title": "The title contains several typos: 'departmnet' instead of 'department', 'ivsitsxamong' instead of 'visits among', 'theaUnited' instead of 'the United', 'stratifird' instead of 'stratified'. These are clearly OCR or transcription errors. The actual paper title is 'Ambient heat and risks of emergency department visits among adults in the United States: time stratified case-crossover study'.",
+    "journal_name": "BMJ is a well-known, legitimate medical journal. The reference appears to be to a real publication in BMJ.",
+    "journal_volume": "No journal volume number was provided in the input.",
+    "journal_issue": "No journal issue number was provided in the input.",
+    "journal_page": "No page number was provided in the input, though an article ID (e065653) is given instead.",
+    "elocator": "The elocator 'e065653' appears to be a valid BMJ article identifier format.",
+    "publication_date": "No publication date was provided in the input.",
+    "doi": "The DOI '10.1136/bmj-2021-06i653' contains an error - '06i653' should be '065653'. The correct DOI is 10.1136/bmj-2021-065653.",
+    "pmcid": "PMCID PMC9397126 appears to correspond to a real article in PubMed Central.",
+    "pmid": "PMID 34344823 corresponds to a real BMJ article on ambient heat and emergency department visits. This appears valid."
+  }
+]

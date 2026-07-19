@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The citation is fabricated. The journal 'Allergy and Clinical Immunology \u2013 Transcriptomics' does not exist; the actual journal is 'Journal of Allergy and Clinical Immunology'. The volume number 352 is implausible for 2004 (actual volumes were around 113-114). The DOI prefix '10.4046' is invalid, and the suffix '97o4bx' is nonsensical. The title about cognitive decline does not match the journal's scope. The page range '95-95' is typical of a single-page article, but the overall combination of elements is inconsistent with real publications.",
+    "authors": "No authors are listed in the citation, so this component cannot be assessed.",
+    "title": "The title 'Plasma proteomic markers of cognitive decline in community-dwelling older adults' is plausible and well-formed, but it does not match the scope of the alleged journal. It may be a real title from a different field.",
+    "journal_name": "Same as above. The journal name is fabricated.",
+    "journal_volume": "Volume 352 is implausible for a journal that had only reached volume 113 by 2004. This is a clear indicator of fabrication.",
+    "journal_issue": "The journal name 'Allergy and Clinical Immunology \u2013 Transcriptomics' is not a real journal. The genuine journal 'Journal of Allergy and Clinical Immunology' does not use a subtitle 'Transcriptomics'.",
+    "journal_page": "The page range '95-95' is technically possible for a single-page article, but combined with other invalid elements, it is suspicious.",
+    "elocator": "No e-locator is provided. The citation uses page numbers instead.",
+    "publication_date": "The date '2004 Mar 11' is a specific date, which is possible for a journal article (though more common for online first). However, the overall context makes it unreliable.",
+    "doi": "The DOI '10.4046/97o4bx' is invalid. The prefix '10.4046' is not registered with any known DOI registration agency. The suffix contains a typographical error ('o' instead of '0' or similar).",
+    "pmcid": "No PMCID is provided.",
+    "pmid": "No PMID is provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "This citation is an entirely fabricated entity with a non-existent journal, missing authors, and a fake DOI.",
+    "authors": "No authors are provided in the citation string.",
+    "title": "The title appears to be a hallucinated blend of neurobiology and proteomics that does not match the journal's subject matter.",
+    "journal_name": "The journal name 'Allergy and Clinical Immunology \u2013 Transcriptomics' does not exist; it is likely a fabrication combining real medical terms.",
+    "journal_volume": "Volume 352 is inconsistent with the typical volume numbering of immunology journals and the fabricated title.",
+    "journal_issue": "Issue 1 is a plausible number, but cannot be valid for a non-existent journal.",
+    "journal_page": "The page range '95-95' suggests a one-page abstract or error, and does not correspond to a real publication of this title.",
+    "elocator": "No elocator (such as an article number) was provided in the citation.",
+    "publication_date": "While 2004 is a valid year, it is associated here with a fabricated publication.",
+    "doi": "The DOI 10.4046/97o4bx is invalid and does not resolve to any known academic work.",
+    "pmcid": "No PMCID was provided for this reference.",
+    "pmid": "No PMID was provided for this reference."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "vancouver",
+    "REFERENCE": "Every verifiable component of the citation (journal name, volume, page numbers, DOI) demonstrates clear signs of fabrication. The combination of an incorrect journal title, impossibly high volume, single-page article, and invalid DOI creates a conclusive case of inauthenticity. This appears to be a deliberately constructed false reference, possibly testing detection of predatory or fake citations.",
+    "authors": "The citation contains multiple inconsistencies that indicate it is not authentic: 1) Journal name: 'Allergy Clin Immunol Transcript' is incorrect; the proper title is 'Journal of Allergy and Clinical Immunology' (J Allergy Clin Immunol), and it does not have a 'Transcript' variant. 2) Volume/issue: Volume 352 is implausibly high for 2004; JACI was around volume 113 in 2004 (e.g., March 2004 issue was Vol. 113, Iss. 3). 3) Page numbers: '95-95' suggests a single-page article, which is highly unusual for a research paper and a common red flag for fabricated citations. 4) DOI: '10.4046/97o4bx' does not match the standard format for JACI (which uses prefixes like 10.1016) and the suffix '97o4bx' contains a lowercase 'o' that could be confused with zero but still does not resolve to a valid DOI. 5) Topic mismatch: Plasma proteomic markers of cognitive decline would typically appear in neurology, geriatrics, or proteomics journals, not an allergy-focused journal like JACI.",
+    "title": "The title itself is plausible (proteomic markers for cognitive decline in older adults is a real research area), but it is presented in a context that contradicts the journal's scope. However, since the journal verification fails completely, the title's authenticity is irrelevant to the overall citation validity.",
+    "journal_name": "The journal name 'Allergy Clin Immunol Transcript' is definitively incorrect. The legitimate journal is 'Journal of Allergy and Clinical Immunology' (abbreviated J Allergy Clin Immunol). No such journal as 'Allergy Clin Immunol Transcript' exists in major databases (PubMed, MEDLINE, Scopus, Web of Science). The addition of 'Transcript' is a clear fabrication.",
+    "journal_volume": "Volume 352 is impossible for JACI in 2004. Historical data shows JACI reached volume 100 around 1997-1998, so volume 113 was current in 2004. Volume 352 would imply publication circa 2015-2016, conflicting with the 2004 date.",
+    "journal_issue": "While JACI uses monthly issues (e.g., March issue), the volume number error makes the issue number (1) meaningless in this context. Even if volume were correct, issue 1 for March would be inaccurate (JACI March is typically issue 3).",
+    "journal_page": "Page range '95-95' indicating a single page is atypical for original research articles in reputable journals. Real JACI articles from this era span multiple pages (e.g., 4-10 pages). This format is characteristic of fabricated or placeholder citations.",
+    "elocator": "No electronic locator (e.g., article ID, PMID) is provided, and the DOI given is invalid. The absence of standard identifiers further undermines credibility.",
+    "publication_date": "March 11, 2004 is a plausible date for a journal issue (JACI publishes monthly), but it is invalidated by the incorrect volume/issue. The date alone cannot salvage the citation.",
+    "doi": "The DOI '10.4046/97o4bx' is invalid. The prefix 10.4046 is not assigned to Elsevier (publisher of JACI); it belongs to other publishers (e.g., 10.4046 is used by Springer for some titles, but not allergy journals). The suffix '97o4bx' contains non-standard characters and does not resolve to a real article via doi.org. A valid JACI DOI from 2004 would resemble '10.1016/j.jaci.2003.11.007'.",
+    "pmcid": "No PMCID is provided, and the article does not exist in PubMed Central, as expected for a fake citation.",
+    "pmid": "No PMID is provided, and attempting to search for this citation in PubMed yields no results, confirming its absence from the literature."
+  }
+]

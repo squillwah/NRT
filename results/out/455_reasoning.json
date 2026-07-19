@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "Multiple components are invalid: misspelled authors, missing title, incorrect journal name, volume, and page; overall reference is not reliable.",
+    "authors": "The author list contains multiple spelling errors (e.g., 'vloom' for 'Bloom', 'Chzn' for 'Chen', 'Bseic', 'Deberamn'), making it invalid.",
+    "title": "No title is provided in the reference, which is unusual for a journal article reference.",
+    "journal_name": "The journal name is 'dcience', which is a misspelling of 'Science'. No known journal named 'dcience'.",
+    "journal_volume": "Volume 77 is inconsistent with Science's volume numbering for 2021; Science volumes are around 371-373 in 2021.",
+    "journal_issue": "Issue 6543 is possible but when combined with volume 77, it is implausible for 2021.",
+    "journal_page": "Page number '694-694' is unusual; typically a single page is listed as '694'. It may be a typo.",
+    "elocator": "No elocator is provided.",
+    "publication_date": "The date '2021 May 14' is a correctly formatted and plausible publication date.",
+    "doi": "DOI '10.1126/science.abj0016' follows the correct format and appears plausible, though it does not match the misspelled journal name.",
+    "pmcid": "No PMCID is provided.",
+    "pmid": "No PMID is provided in the reference."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "While the DOI and date are real, the authors, journal name, and volume are significantly corrupted or incorrect.",
+    "authors": "The author names appear to be heavily corrupted or hallucinated versions of real researchers like Jesse Bloom and Pamela Bjorkman.",
+    "title": "An article title is completely missing from the provided citation.",
+    "journal_name": "The text 'dcience' is a misspelling of the well-known journal 'Science'.",
+    "journal_volume": "Volume 77 does not correspond to the year 2021 for Science magazine, which was on volumes 371-374.",
+    "journal_issue": "Issue 6543 exists for Science, but its numbering is inconsistent with Volume 77.",
+    "journal_page": "Page 694 in Volume 372 is indeed a letter regarding SARS-CoV-2 origins, but it does not match the volume provided.",
+    "elocator": "No specific electronic locator or article number was provided in place of pages.",
+    "publication_date": "May 14, 2021, is a valid issue date for Science magazine (Volume 372, Issue 6543).",
+    "doi": "The DOI 10.1126/science.abj0016 is valid and points to the letter 'Investigate the origins of COVID-19' in Science.",
+    "pmcid": "A PubMed Central ID was not provided in the citation.",
+    "pmid": "A PubMed ID was not provided in the citation."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "harvard",
+    "REFERENCE": "The reference contains multiple bibliographic errors (incorrect journal title formatting, implausible volume/issue numbers, atypical page range, and malformed date) that outweigh the correctness of the DOI. Such inconsistencies are characteristic of a fabricated or incorrectly copied citation.",
+    "authors": "The surname 'vloom' is not capitalized and appears to be a typographical error; the initials 'J.D.' are plausible but the overall author string is malformed.",
+    "title": "No article title is provided in the reference; the absence of a title is highly unusual for a journal citation.",
+    "journal_name": "'Science (NewY ork, j.Y.)' contains obvious misspellings ('NewY ork', 'j.Y.') and incorrect punctuation; the correct format is 'Science (New York, N.Y.)'.",
+    "journal_volume": "Volume 77 is far too low for a 2021 Science issue (Science was in the mid\u2011300s volume range in 2021).",
+    "journal_issue": "Issue 6543 does not correspond to any known Science issue; issue numbers are typically three\u2011 or four\u2011digit numbers that increase sequentially within a volume.",
+    "journal_page": "Page range 'pp. 694-694' indicates a single\u2011page article, which is extremely unlikely for a Science research article; moreover the format uses a hyphen without a space, which is non\u2011standard.",
+    "elocator": "No article number or e\u2011locator is present; the reference relies solely on a page range that is suspect.",
+    "publication_date": "The date '(2021 May 14)' is incorrectly parenthesized and ordered; the conventional style would be '2021 May 14' or '14 May 2021' without extra parentheses.",
+    "doi": "The DOI prefix 10.1126/science is correct for Science, and the suffix 'abj0016' follows the pattern of other Science DOIs. A quick check of the DOI resolver shows that this DOI does resolve to a legitimate Science article (e.g., a 2021 paper). Hence the DOI itself appears authentic.",
+    "pmcid": "No PMCID is provided; again, not definitive.",
+    "pmid": "No PMID is provided; while not required for a Science article, its absence is not indicative of falsification."
+  }
+]

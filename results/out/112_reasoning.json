@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "All components of the reference are consistent with a genuine, high-profile publication in Cell from 2021. The authors, title, journal, volume, issue, pages, date, DOI, PMID, and PMCID are all authentic.",
+    "authors": "The author list matches a well-known paper published in Cell in 2021, featuring many researchers from the Shalek and Aguirre labs.",
+    "title": "The title 'Microenvironment drives cell state, plasticity, and drug response in pancreatic cancer' is the exact title of the referenced Cell paper.",
+    "journal_name": "Cell is a high-profile journal that published this paper in 2021.",
+    "journal_volume": "Cell volume 184 corresponds to 2021, and issue 25 is consistent with the publication date.",
+    "journal_issue": "Issue 25 is the correct issue for the publication date December 9, 2021.",
+    "journal_page": "Page 6119 is a typical page number for a Cell article of this length.",
+    "elocator": "No elocator is provided; only a page number is given.",
+    "publication_date": "The date '2021 Dec 9' is the correct publication date for this article.",
+    "doi": "The DOI 10.1016/j.cell.2021.11.017 is valid and points to the exact paper.",
+    "pmcid": "PMCID PMC8822455 is the correct PMCID for the open-access version of this paper.",
+    "pmid": "PMID 34890551 is correct for this Cell publication."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The full citation is authentic and all core identifiers (DOI, PMID, PMCID, and bibliographic data) align exactly with the record.",
+    "authors": "The author list correctly represents the extensive collaborative team led by Raghavan and others for this high-impact Cell paper.",
+    "title": "The title matches the official publication regarding the microenvironment's impact on pancreatic cancer cell states and drug response.",
+    "journal_name": "The journal 'Cell' is the correct high-impact publication venue for this specific research paper.",
+    "journal_volume": "Volume 184 is the correct volume number for the year 2021 in Cell.",
+    "journal_issue": "Issue number 25 accurately reflects the serial number for the Dec 9, 2021 release.",
+    "journal_page": "Page 6119 is the correct start page for the version of the article published in this issue.",
+    "elocator": "The paper uses standard pagination (6119-6137) rather than a standalone alphanumeric elocator.",
+    "publication_date": "December 9, 2021 is the official print publication date for this issue of Cell.",
+    "doi": "The DOI 10.1016/j.cell.2021.11.017 resolves correctly to the target article.",
+    "pmcid": "PMCID PMC8822455 correctly maps to the full-text archive of this article in PubMed Central.",
+    "pmid": "PMID 34890551 correctly identifies this specific paper in the PubMed database."
+  },
+  {
+    "model": "minimax-m3",
+    "style": "nlm",
+    "REFERENCE": "This is a well-known and highly cited paper in the pancreatic cancer field. It was published in Cell in December 2021 and represents a major study on the tumor microenvironment in pancreatic ductal adenocarcinoma. The authors include prominent researchers from Dana-Farber Cancer Institute, Broad Institute, and MIT. All elements of the citation (authors, title, journal, DOI, PMID, PMCID) appear authentic and internally consistent. The volume, issue, and page numbers align with Cell's publication schedule for late 2021.",
+    "authors": "This is a long author list which is typical for high-impact biomedical research papers, especially those from large consortia or institutions like the Broad Institute, Dana-Farber, or MIT. The names appear plausible and consistent with authorship patterns in the field of pancreatic cancer research. Many of these authors are known researchers in the field (e.g., Aguirre AJ, Shalek AK, Wolpin BM, Hahn WC).",
+    "title": "The title 'Microenvironment drives cell state, plasticity, and drug response in pancreatic cancer' is consistent with the research focus on tumor microenvironment and pancreatic ductal adenocarcinoma. The phrasing is academic and appropriate for a Cell journal paper.",
+    "journal_name": "Cell is a prestigious peer-reviewed journal published by Cell Press/Elsevier. It is a well-known and legitimate journal in biomedical research.",
+    "journal_volume": "Volume 184 corresponds to the year 2021 for Cell journal (which publishes weekly issues). Volume 184 covers late 2021, which aligns with the publication date.",
+    "journal_issue": "Issue 25 of Cell volume 184 is consistent with the December publication date and the journal's publication schedule.",
+    "journal_page": "Page 6119 is plausible for Cell journal articles, which often start on odd pages and can have page numbers in the 6000+ range for later issues in a volume.",
+    "elocator": "The DOI 10.1016/j.cell.2021.11.017 is in the proper format for Cell Press journals (Elsevier). The structure (10.1016/j.cell.YEAR.MONTH.DAY) is standard for Cell articles. The month (11) suggests November, but the publication date is December 9, which is reasonable given the online-first publication timeline.",
+    "publication_date": "December 9, 2021 aligns with Cell volume 184, issue 25. The PMID and PMCID values are consistent with PubMed indexing for a 2021 Cell paper.",
+    "doi": "Duplicate of elocator field assessment. The DOI 10.1016/j.cell.2021.11.017 is properly formatted for a Cell Press article and is verifiable through DOI.org.",
+    "pmcid": "PMCID PMC8822455 follows the correct format for PubMed Central IDs and is consistent with the publication timeline.",
+    "pmid": "PMID 34890551 is in the correct format for PubMed identifiers. The number is consistent with a late 2021 Cell publication."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The reference is missing essential components like journal name and page numbers, and the DOI is likely fake, making the overall reference invalid.",
+    "authors": "Authors are listed in standard format with initials and last names, which is typical for biomedical references.",
+    "title": "Title is a coherent question about generic insulin, which is plausible for a medical journal article.",
+    "journal_name": "No journal name is provided in the reference, making this component invalid.",
+    "journal_volume": "Volume number '372' is present and appears plausible for a journal.",
+    "journal_issue": "Issue number '12' is provided and is a reasonable issue number.",
+    "journal_page": "No page numbers are given in the reference, which is required for a standard citation.",
+    "elocator": "No elocator is listed; while elocators are used for online-only articles, their absence here suggests incomplete information.",
+    "publication_date": "The date '2015 Mar 19' follows a standard date format and is plausible.",
+    "doi": "The DOI '10.1885/m3g8d-28ks5ohn' uses a prefix (10.1885) that is not recognized, and the suffix format is atypical, indicating it is likely fabricated.",
+    "pmcid": "No PubMed Central ID is provided, so this component is absent.",
+    "pmid": "No PubMed ID is provided, so this component is absent."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "While the authors, title, and date are correct, the DOI is hallucinated and the journal name is entirely missing.",
+    "authors": "Jeremy A. Greene and Kevin R. Riggs are the correct authors for this established work.",
+    "title": "The title provided is the correct title for the article published by these authors.",
+    "journal_name": "The journal name is missing from the provided citation string; it should be the New England Journal of Medicine.",
+    "journal_volume": "Volume 372 is the correct volume for this 2015 publication.",
+    "journal_issue": "Issue 12 is the correct issue for the date March 19, 2015.",
+    "journal_page": "The page range (1171-1175) is missing from the provided citation.",
+    "elocator": "No elocator is used or applicable for this standard print and online journal article.",
+    "publication_date": "The date March 19, 2015, is the correct publication date for this perspective piece.",
+    "doi": "The provided DOI (10.1885/m3g8d-28ks5ohn) is fabricated; the real DOI is 10.1056/NEJMp1411398.",
+    "pmcid": "The PMCID is missing and not typically required for this specific non-PMC citation.",
+    "pmid": "The PubMed ID is missing from the provided string; it should be 25785967."
+  },
+  {
+    "model": "minimax-m3",
+    "style": "apa",
+    "REFERENCE": "The authors, title, year, and journal volume/issue are consistent with a real, published article in The New England Journal of Medicine. However, the DOI provided is not the correct DOI for this article \u2014 the actual DOI is 10.1056/NEJMhms1411317. The provided DOI '10.1885/m3g8d-28ks5ohn' appears to be fabricated or erroneous. Additionally, no page numbers are provided.",
+    "authors": "Greene, J. A. and Riggs, K. R. are both real, verifiable authors who have published together on pharmaceutical and insulin pricing topics. Jeremy A. Greene is a well-known medical historian at Johns Hopkins, and K. R. Riggs has co-authored work with him.",
+    "title": "The title 'Why is there no generic insulin? Historical origins of a modern problem' is a known and real article title. This exact title was published in The New England Journal of Medicine in 2015.",
+    "journal_name": "The journal is not explicitly stated in the reference text provided, but the volume number '372(12)' and the article identifier are consistent with The New England Journal of Medicine (NEJM), which uses volume 372 for 2015 publications.",
+    "journal_volume": "Volume 372 is consistent with The New England Journal of Medicine's 2015 publication year. Issue 12 corresponds to March 2015, which aligns with when this article was published.",
+    "journal_issue": "Issue 12 of NEJM volume 372 was published in March 2015, which matches the expected publication date of this article.",
+    "journal_page": "No page number is provided in the reference text, which is unusual for NEJM articles but not necessarily invalid.",
+    "elocator": "The eLocator 'm3g8d-28ks5ohn' appears to be a non-standard DOI suffix. The actual DOI for this article is 10.1056/NEJMhms1411317. The provided identifier '10.1885/m3g8d-28ks5ohn' does not match the known DOI for this article, suggesting this may be a fabricated or incorrect identifier.",
+    "publication_date": "The year 2015 is consistent with the volume number and the known publication date of this article in NEJM (published March 2015).",
+    "doi": "The DOI prefix '10.1885' is not a standard CrossRef-registered publisher prefix. The actual DOI for this NEJM article by Greene & Riggs (2015) is 10.1056/NEJMhms1411317. The provided DOI appears to be fabricated or incorrect.",
+    "pmcid": "No PMCID is provided in the reference.",
+    "pmid": "No PMID is provided in the reference."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "This is a 'hallucinated' or chimeric reference that combines authors from an Ebola study with a COVID-19 study title and a fake journal.",
+    "authors": "This author list belongs to a 2015 Nature paper on the Ebola virus outbreak, not a 2021 COVID-19 study.",
+    "title": "The title matches a study published in the BMJ by Sewell et al., not the authors or journal provided.",
+    "journal_name": "The journal 'Ann Adv Pulmonol' (Annals of Advances in Pulmonology) does not appear to exist in major medical databases.",
+    "journal_volume": "The volume information is absent or conflated with the page/article number '375'.",
+    "journal_issue": "The reference does not provide a standard issue number.",
+    "journal_page": "The page/article number 375 is associated with the BMJ study, not the journal listed here.",
+    "elocator": "The elocator e066952 is implied by the DOI but listed here only as 375, which is inconsistent.",
+    "publication_date": "The date November 24, 2021, is the correct publication date for the BMJ study this text attempts to mimic.",
+    "doi": "The DOI 10.1136/bmj-2021-066952 is a valid BMJ DOI, but it belongs to a different author (Sewell et al.).",
+    "pmcid": "PMC9083235 does not exist; the PMCID for the actual study is PMC8612140.",
+    "pmid": "PMID 428534232 is invalid as PubMed IDs currently have fewer digits and are not in that range."
+  },
+  {
+    "model": "minimax-m3",
+    "style": "apa",
+    "REFERENCE": "This reference is largely fabricated despite containing some authentic elements (title and DOI). The author list is copied from a completely different Ebola virus paper (Simon-Loriere et al.), the journal name is incorrect ('Annals of Advanced Pulmonology' instead of BMJ), and the volume/page information is nonsensical. The only authentic components are the title and DOI, which correspond to the real BMJ 2021 paper by Storgaard et al. This appears to be a deliberately corrupted citation.",
+    "authors": "The author list is mismatched. The first 15 authors (Simon-Loriere, E. through Sall, A. A.) are real researchers who authored a 2021 paper on Ebola virus sequencing, not on COVID-19 PEP flute self-care. The actual authors of the PEP flute/covid-19 study are different (e.g., Storgaard, H., Frost, L., Hansen, B. L., et al.). The given author list is clearly fabricated/pasted from a different paper.",
+    "title": "The title 'Effect of PEP flute self-care versus usual care in early covid-19: non-drug, open label, randomised controlled trial in a Danish community setting' matches a real BMJ study (published 2021) by Storgaard et al. on positive expiratory pressure (PEP) flute therapy. The title itself is authentic.",
+    "journal_name": "The study was published in BMJ (British Medical Journal), not in 'Annals of Advanced Pulmonology'. The journal name given is fabricated.",
+    "journal_volume": "The reference lists '375' as the journal identifier, which resembles a BMJ page number rather than a volume. The BMJ paper does not have a volume of 375 in this context \u2014 this appears to be a fabricated or confused field.",
+    "journal_issue": "No issue number is provided in the reference.",
+    "journal_page": "No page number is provided. The '375' appears in the journal name field and is not a legitimate page number.",
+    "elocator": "No elocator (article number) is provided. The BMJ paper has an elocator of 'bmj-2021-066952' which matches part of the DOI but is not presented as an elocator.",
+    "publication_date": "The year 2021 is consistent with the actual BMJ publication date. However, since other metadata is fabricated, the date's accuracy is uncertain in this constructed reference.",
+    "doi": "The DOI 'https://doi.org/10.1136/bmj-2021-066952' matches the real BMJ paper. The DOI suffix 'bmj-2021-066952' corresponds to the BMJ article identifier. This DOI is authentic and correctly resolves to the Storgaard et al. PEP flute study.",
+    "pmcid": "No PMCID is provided in the reference.",
+    "pmid": "No PMID is provided in the reference."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "nlm",
+    "REFERENCE": "Multiple critical components (journal name, volume/pages, DOI, PMID) are inconsistent with known bibliographic data. The reference appears to be fabricated or contains significant errors.",
+    "authors": "The author list appears plausible (many real researchers), but cannot be verified without the article. No obvious inconsistencies.",
+    "title": "The title mentions a \"PEP flute self-care\" intervention for early COVID\u201119, which does not match any known published trial in the literature. The phrasing is unusual and no such study is indexed in PubMed or other databases.",
+    "journal_name": "\"Ann Adv Pulmonol\" is not a recognized journal. The DOI prefix (10.1136/bmj-\u2026) indicates the article would belong to the BMJ family (e.g., BMJ, Thorax, Gut), not to a journal with this name.",
+    "journal_volume": "The volume is given as \"375\", which is not a valid volume number for any BMJ journal in 2021. BMJ journals use volume numbers that correspond to the year (e.g., BMJ 2021;375:\u2026) but they also include an issue and page range. Supplying only a number without issue or pages is insufficient and likely incorrect.",
+    "journal_issue": "No issue number is provided; the reference only lists a volume\u2011like number. This is atypical for a BMJ article.",
+    "journal_page": "The page field contains only \"375\", which is not a page range. Articles have inclusive page numbers (e.g., 1234\u20111242).",
+    "elocator": "No article identifier (e.g., e066952) is present; the reference lacks the expected BMJ article ID that would correspond to the DOI suffix.",
+    "publication_date": "The date \"2021 Nov 24\" is plausible for a BMJ\u2011published article in late 2021.",
+    "doi": "The DOI \"10.1136/bmj-2021-066952\" follows the BMJ pattern, but a lookup of this DOI (as of the knowledge cutoff) does not return a matching record. The suffix \"066952\" does not correspond to any known BMJ article.",
+    "pmcid": "PMCID \"PMC9083235\" is syntactically correct and could exist, but without a matching PMID or DOI it cannot be verified. Given the other fields are false, this PMCID is likely also incorrect or belongs to a different article.",
+    "pmid": "PMID values are currently below 40\u202fmillion (as of 2024). The given PMID \"428534232\" is far outside the possible range, indicating it is fabricated."
+  }
+]

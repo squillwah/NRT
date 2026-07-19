@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The reference contains a nonsensical title, implausible volume and issue numbers, and lacks essential identifiers, indicating it is fabricated.",
+    "authors": "The author list consists of plausible names, but the overall reference is clearly fabricated, making the authors suspect.",
+    "title": "The title contains numerous nonsensical terms such as 'SARS-CoV-2yvaccine' and 'deathsvanong US veterags', indicating it is fabricated.",
+    "journal_name": "BMJ is a well-known and valid journal abbreviation.",
+    "journal_volume": "Volume 111 is not a typical volume number for BMJ in 2021; standard volumes for that year are around 372-375.",
+    "journal_issue": "Issue number 1188 is implausibly high for any journal and does not match BMJ's typical numbering.",
+    "journal_page": "The page range 530-557 is plausible on its own, but given the fabricated volume and issue, it is likely invalid.",
+    "elocator": "No elocator is provided in the reference, indicating it is missing.",
+    "publication_date": "The date '2021 Jan 22' is correctly formatted and plausible.",
+    "doi": "No DOI is provided in the reference.",
+    "pmcid": "No PMCID is provided in the reference.",
+    "pmid": "No PMID is provided in the reference."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The citation is entirely hallucinated, combining real author names and a real journal with false metadata, a fake title, and incorrect IDs.",
+    "authors": "The listed authors are prominent global health researchers, but they did not co-author a study with this title or content.",
+    "title": "The title appears to be a hallucinated blend of terms from COVID-19 studies and US veterans research, containing typographical errors like 'yvaccine' and 'veterags'.",
+    "journal_name": "The BMJ is a real medical journal, but it is used here in a fabricated context for this specific citation.",
+    "journal_volume": "The BMJ uses year-based volume numbering or sequential numbering that does not match '111'.",
+    "journal_issue": "The issue number '1188' is inconsistent with the standard publication format and volume numbering of the BMJ.",
+    "journal_page": "The page range 530-557 does not exist for the provided volume and issue in the BMJ for 2021.",
+    "elocator": "No elocator was provided in the citation.",
+    "publication_date": "The BMJ does not have an issue 1188 dated January 22, 2021; the date is likely fabricated.",
+    "doi": "No DOI was provided in the citation string.",
+    "pmcid": "PMCID PMC29703192 is invalid as PMCID numbers have not reached that high a numerical range.",
+    "pmid": "PMID 34910928 actually refers to a completely different paper regarding pediatric multisystem inflammatory syndrome."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": "The reference contains multiple typos and inconsistencies: author name 'Tangcharoensathien' is plausible but the 'V.' initial may not match known experts; title has typos ('SARS-CoV-2vaccine', 'vanong', 'veterags'); journal name and volume/issue seem mismatched with BMJ standards; no DOI/PMID/PMCID. The content (SARS-CoV-2 vaccine protection in US veterans) is plausible for 2021, but the citation appears corrupted or fabricated. Overall, it is likely not an authentic reference in its current form.",
+    "authors": "The author name 'Tangcharoensathien' is a plausible Thai name (Virasakdi Tangcharoensathien is a known health policy expert), but the given initial 'V.' does not match the known expert 'Virasakdi' (which would be 'V.' if abbreviated as 'V.'). However, the string 'Tangcharoensathien' appears correct. The 'et al.' indicates multiple authors, which is common. The main concern is the presence of 'veterags' which is likely a misspelling of 'veterans', and 'yvaccine' which is a typo for 'vaccine'. The author field itself may be acceptable if the paper exists, but the overall context suggests potential OCR errors or data corruption.",
+    "title": "The title 'SARS-CoV-2vaccine protection and deaths vanong US veterags during 2021' contains obvious typos: 'SARS-CoV-2vaccine' should be 'SARS-CoV-2 vaccine', 'vanong' is likely 'among', and 'veterags' should be 'veterans'. The corrected title would be 'SARS-CoV-2 vaccine protection and deaths among US veterans during 2021'. This is a plausible topic for a 2021 BMJ article. The errors suggest possible data entry mistakes.",
+    "journal_name": "The journal is listed as 'BMJ (Clinical research ed.), 111(1188), pp. 530-557'. BMJ stands for British Medical Journal. The phrase 'Clinical research ed.' might refer to a specific section or edition, but BMJ is typically cited as 'BMJ' or 'British Medical Journal'. The volume 111 and issue 1188 appear unusual for BMJ (which typically uses year-based volume numbers, e.g., 2021). The page range 530-557 is plausible but needs verification. The year 2021 is correct for the topic.",
+    "journal_volume": "Volume 111 for BMJ in 2021 is not standard; BMJ volumes are usually tied to the year (e.g., 372, 373, etc. for 2021). The issue number 1188 also seems high for BMJ (which often has daily issues). This suggests the citation may be from a different journal or misattributed. Alternatively, it could be a different publication with similar initials.",
+    "journal_issue": "Issue 1188 is unusually high for BMJ, which typically uses year-based volume and issue numbering. BMJ issues are often numbered in the hundreds for a given year, but 1188 seems too high. This might indicate a different journal or a data entry error.",
+    "journal_page": "Pages 530-557 are within a reasonable range for a research article, but this depends on the journal. BMJ articles can be lengthy, but the page numbers themselves are not inherently invalid. However, combined with the other issues, this may be part of a fabricated or corrupted citation.",
+    "elocator": "No e-locator is provided in the citation. For modern articles, an e-locator or DOI is often included, but its absence does not invalidate the citation per se. However, given the other errors, it adds to the suspicion of inaccuracy.",
+    "publication_date": "The publication date is given as '2021 Jan 22'. This is plausible for a BMJ article, as BMJ publishes continuously. However, the specific date should match the actual article. The format '2021 Jan 22' is acceptable.",
+    "doi": "No DOI is provided. This is a significant omission for a modern academic citation, especially from a high-impact journal like BMJ. The absence of a DOI makes it harder to verify the citation.",
+    "pmcid": "No PMCID is provided. Similar to PMID, this is often available for BMJ articles, especially if open access or PubMed Central indexed. Its absence adds to the difficulty in verification.",
+    "pmid": "No PMID is provided. While not always required, its absence reduces verifiability. For a BMJ article, a PMID is often available, so this is a gap."
+  }
+]

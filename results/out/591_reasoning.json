@@ -1,0 +1,34 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The reference is partially fabricated. The journal 'Cell' does not match the DOI prefix '10.1038', which belongs to Nature journals. Furthermore, while the DOI '10.1038/bmj.n719' points to a BMJ article (BMJ 2021;373:n719), the authors and title listed ('Sandrone S... Active learning-based STEM education...') do not correspond to any published work in Cell. The article title suggests a paper on STEM education, which is highly atypical for Cell. Thus, the reference is created by combining a plausible but false citation with an unrelated DOI.",
+    "authors": "The authorship list 'Sandrone S, Scott G, Anderson WJ, Musunuru K' is not associated with the provided DOI (10.1038/bmj.n719) or journal (Cell). While these are real researchers in STEM education and genetics, their combination for this specific paper is unsupported.",
+    "title": "The title 'Active learning-based STEM education for in-person and online learning' is plausible for an education paper but is not found in Cell or linked to the provided DOI. No evidence supports its publication in Cell. It appears fabricated.",
+    "journal_name": "Cell is a legitimate journal. The issue is that the cited article is not published in Cell; the DOI belongs to BMJ. The journal name itself is valid, but misapplied here.",
+    "journal_volume": "Volume 184 for Cell is real and corresponds to 2021. However, the cited work does not match the actual article in that volume.",
+    "journal_issue": "The journal 'Cell' is a prominent, real journal, and the issue '184(6)' exists. However, the article described does not appear in that issue. The combination of Cell with the provided DOI and title is inauthentic.",
+    "journal_page": "The page range '1409-1414' is a real range in Cell 184(6), but it corresponds to a different article. Therefore, it is factually incorrect for this citation.",
+    "elocator": "The elocator '184(6):1409-1414' is plausible for a Cell issue, but no trace of this exact paper or pagination exists for Cell 2021. Cell Volume 184, Issue 6, published March 18, 2021, contains pages 1409-1414 for an article by M. Corces et al. (Lineage-specific and single-cell chromatin accessibility charts human hematopoiesis and leukemia evolution), not the one cited. Thus, the elocator does not match the referenced content.",
+    "publication_date": "The date '2021 Mar 18' corresponds exactly to Cell Volume 184, Issue 6's publication date. However, the actual article on those pages is different. The date is real but mismatched with the claimed content.",
+    "doi": "The DOI '10.1038/bmj.n719' is valid and resolves to a genuine article (BMJ 2021;373:n719), but it belongs to a BMJ paper, not a Cell article. Thus, while the DOI itself exists, it is mismatched with the journal and content of this reference.",
+    "pmcid": "No PMCID is provided in this reference. It cannot be verified or assessed.",
+    "pmid": "No PMID is provided in this reference. It cannot be verified or assessed."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The reference is a 'hallucinated' hybrid; it combines real volume/page data from a Cell 2021 issue with a mix of authors and a nonsensical DOI.",
+    "authors": "The authors listed are real academics, but they did not co-author a Cell paper with this specific title; for instance, Sandrone and Scott are associated with neuroscience and medical education.",
+    "title": "The title matches a specific 'Voices' or perspective style article, but it is not correctly attributed to these authors or this specific journal location.",
+    "journal_name": "Cell is a legitimate high-impact journal, but it did not publish this specific paper by these authors in this volume.",
+    "journal_volume": "Volume 184 of Cell was published in 2021, making the volume number chronologically plausible for the year.",
+    "journal_issue": "Issue 6 of Volume 184 was published in March 2021.",
+    "journal_page": "Pages 1409-1414 in Volume 184, Issue 6 of Cell contain a 'Voices' article titled 'Active Learning in the Lab and the Classroom' but with different authors.",
+    "elocator": "No specific elocator was provided beyond the page range.",
+    "publication_date": "2021 is the correct year for Volume 184 of Cell.",
+    "doi": "The DOI 10.1038/bmj.n719 is invalid because '10.1038' is the prefix for Nature Publishing Group, while 'bmj' refers to the British Medical Journal.",
+    "pmcid": "No PMCID was provided in the reference.",
+    "pmid": "No PMID was provided in the reference."
+  }
+]

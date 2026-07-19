@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The reference contains multiple invalid components: a misspelled journal name ('Scoence'), a clearly fabricated DOI, and missing identifiers (PMID, PMCID). These issues strongly suggest the reference is not authentic.",
+    "authors": "Author names appear plausible with standard formatting, including 'et al.' for additional authors. No obvious signs of fabrication.",
+    "title": "The title 'Of variants and vaccines' is generic but could be a real article title. It does not contain any obvious indicators of invalidity.",
+    "journal_name": "The journal name 'Scoence' is a misspelling of the well-known journal 'Science'. Such a spelling is not associated with any legitimate journal.",
+    "journal_volume": "Volume number '374' is a typical integer and consistent with journal numbering conventions.",
+    "journal_issue": "Issue number '6573' is a plausible multi-digit number for journal issues.",
+    "journal_page": "The entry 'e066129' appears to be an elocator (article number) rather than a page range. In strict page number terms, this is invalid.",
+    "elocator": "'e066129' follows the typical format for an elocator (e-locator) used by many journals, starting with 'e' followed by digits.",
+    "publication_date": "The date '2021 Dec 10' is properly formatted and follows standard date conventions.",
+    "doi": "The DOI '10.8813.4/iqi0' does not conform to standard DOI structure (e.g., '10.xxxx/xxxxx'). The presence of an extra dot and an arbitrary suffix indicates it is likely fabricated.",
+    "pmcid": "No PMCID is provided in the reference. Since this field is missing, it is considered invalid.",
+    "pmid": "No PMID is provided in the reference. Since this field is missing, it is considered invalid."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "The reference is a hallucination that mimics the metadata of Science magazine but contains misspelled names, fake authors, and a fake DOI.",
+    "authors": "D.J. O'Byrne is not a recognized author for an article with this title or DOI; the author list appears fabricated.",
+    "title": "While 'Of variants and vaccines' is a plausible title, it does not exist in any reputable scientific database for the year 2021 with these metadata.",
+    "journal_name": "'Sskence' is a misspelling of 'Science', and the parenthetical location format is typically not used for that journal in this manner.",
+    "journal_volume": "Volume 374 is correct for Science in late 2021, but it does not contain the cited article.",
+    "journal_issue": "Issue 6573 corresponds to December 10, 2021, for Science magazine, showing internal consistency but factual inaccuracy regarding the article.",
+    "journal_page": "The article number 'e066129' does not exist in Science vol 374; the actual articles in this issue use different numbering patterns.",
+    "elocator": "The elocator provided is formatted correctly but points to a non-existent scientific record.",
+    "publication_date": "December 10, 2021, was the correct publication date for Science Issue 6573, but the article itself is hallucinations.",
+    "doi": "The DOI prefix 10.8813 is not associated with Science (AAAS) and the suffix is invalid.",
+    "pmcid": "No PMCID was provided in the citation string; hence it cannot be validated.",
+    "pmid": "No PubMed ID was provided in the citation string; hence it cannot be validated."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "harvard",
+    "REFERENCE": "Multiple critical components are definitively false or impossible:  \n- Journal name misspelled ('Sskence' vs 'Science')  \n- DOI format violates all structural rules (invalid registrant, malformed suffix)  \n- Volume/issue combination is implausible for Science's numbering scheme  \n- Article ID 'e066129' deviates from Science's standard identifier patterns  \nThese errors collectively confirm the citation is fabricated. No legitimate Science article matches these details.",
+    "authors": "The author format 'O'Byrne, D.J. et al.' follows standard citation conventions, but 'et al.' usage requires verification against the actual source. No red flags here inherently.",
+    "title": "The title 'Of variants and vaccines' is plausible for a December 2021 paper discussing SARS-CoV-2 variants and vaccine responses (e.g., Omicron emergence). However, without matching to a known publication, this remains unverified.",
+    "journal_name": "'Sskence' is a clear misspelling of 'Science' (the prestigious journal published by AAAS). The correct spelling is S-C-I-E-N-C-E. This typographical error ('Sskence' instead of 'Science') indicates the citation is fabricated or corrupted.",
+    "journal_volume": "Science Journal volume 374 corresponds to 2021 (Volume 374 began January 2021). However, issue numbers in Science are sequential and do not reach 6573 for Volume 374. By late 2021, Science issue numbers were approximately in the 6500-6600 range *overall* (not per volume), but Volume 374 specifically would contain issues numbered much lower within its volume sequence. More critically, Science uses a continuous issue numbering system where Volume 374, Issue 1 would be ~issue 6400-something, making Issue 6573 implausibly high for this volume. Combined with other errors, this is invalid.",
+    "journal_issue": "As noted above, issue 6573 is inconsistent with Science's numbering for Volume 374 (2021). Actual Science issues in December 2021 were around #6560-6570 *total*, but Volume 374 would only span a subset of these (e.g., issues ~6500-6550 for Vol 374). Issue 6573 would likely belong to a later volume (e.g., Vol 375). This discrepancy confirms inaccuracy.",
+    "journal_page": "Science article identifiers typically follow formats like 'eabc1234' (e.g., eabf0000) or page ranges, not 'e066129'. The leading zero after 'e' (e066129) is non-standard; Science IDs usually avoid leading zeros in the numeric portion (e.g., eabc1234, not e0abc1234). Additionally, 'e066129' does not match any known Science article ID pattern for 2021.",
+    "elocator": "The 'article' label is sometimes used in modern citations, but Science typically specifies the article ID directly (e.g., 'article eabc1234') or uses page numbers. This element alone is not decisive but gains context from other failures.",
+    "publication_date": "December 10, 2021 is a plausible publication date for a Science paper (weekly journal). However, without a valid DOI or journal match, this cannot be confirmed. The date format '(2021 Dec 10)' is unconventional but not inherently invalid.",
+    "doi": "The DOI '10.8813.4/iqi0' is fundamentally invalid. Correct Science DOIs follow the pattern '10.1126/science.[identifier]' (e.g., 10.1126/science.abj0000). Here:  \n- The registrant code '8813.4' is invalid (must be an integer like 1126 for AAAS/Science).  \n- The suffix 'iqi0' is too short and non-standard (Science suffixes are typically alphanumeric, 6+ characters).  \n- DOIs cannot contain multiple dots in the registrant segment (e.g., '8813.4' is malformed).  \nThis DOI would not resolve to any legitimate resource.",
+    "pmcid": "No PMCID provided. While many Science articles are in PMC, absence doesn't indicate falsity (e.g., if not NIH-funded). Not a validity marker here.",
+    "pmid": "No PMID provided or expected in this citation format (Science articles often have PMIDs, but their absence doesn't invalidate the citation)."
+  }
+]

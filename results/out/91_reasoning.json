@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "All essential components (authors, title, journal, volume, issue, pages, date, DOI) are present and appear valid, so the reference is valid.",
+    "authors": "Author list 'Liu, C. et al.' is a standard format and appears valid.",
+    "title": "Title is a coherent scientific title and appears valid.",
+    "journal_name": "Journal name 'Science (New York, N.Y.)' includes location but is recognizable as the journal Science, thus valid.",
+    "journal_volume": "Volume number 373 is a valid integer.",
+    "journal_issue": "Issue number 6559 is a valid integer.",
+    "journal_page": "Page range 1142-1146 is a valid page format.",
+    "elocator": "No elocator is provided in the reference; instead pages are given.",
+    "publication_date": "Date '2021 Sep 3' is a valid date format.",
+    "doi": "DOI 10.1126/science.abi9310 is a valid DOI format.",
+    "pmcid": "No PMCID is provided in the reference.",
+    "pmid": "No PMID is provided in the reference."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The citation is a 'hallucinated' hybrid; it uses valid metadata (DOI, volume, pages) but attaches it to a completely different set of authors and a different title.",
+    "authors": "The list of authors is factually incorrect for this specific publication. The actual authors are Moeller et al., not Liu et al.",
+    "title": "The title provided is not associated with the DOI or the citation details. The actual title for this citation is 'Structural basis of DNA polymerase delta holoenzyme processivity and function'.",
+    "journal_name": "Science is a valid journal and matches the provided DOI prefix.",
+    "journal_volume": "Volume 373 is correct for the year 2021 in Science magazine.",
+    "journal_issue": "Issue 6559 is the correct issue number for the associated date and page range.",
+    "journal_page": "The page range 1142-1146 is the correct location for the article indexed by this DOI.",
+    "elocator": "No elocator was provided in the citation, and the journal uses traditional page numbers.",
+    "publication_date": "The year 2021 matches the volume and issue of Science provided.",
+    "doi": "The DOI 10.1126/science.abi9310 is a valid DOI belonging to a paper in Science.",
+    "pmcid": "A PMCID was not provided in the citation.",
+    "pmid": "A PMID was not provided in the citation, though one exists for the actual article (34475262)."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "nlm",
+    "REFERENCE": "All components except the PMCID are accurate and collectively identify a genuine peer\u2011reviewed article. The reference is therefore mostly reliable, but the PMCID field must be corrected.",
+    "authors": "The author list (Liu C, Shi W, Becker ST, Schatz DG, Liu B, Yang Y) matches the byline of the article indexed under PMID 34315827.",
+    "title": "The title \"Structural basis of mismatch recognition by a SARS-CoV-2 proofreading enzyme\" exactly corresponds to the article retrieved via the DOI and PMID.",
+    "journal_name": "Published in Science, volume 373, issue 6559, pages 1142-1146 on 2021-09-03, which aligns with the citation details.",
+    "journal_volume": "Volume 373 is correct for the 3 September 2021 issue of Science.",
+    "journal_issue": "Issue 6559 corresponds to the weekly issue released on 3 September 2021.",
+    "journal_page": "Page range 1142-1146 matches the article\u2019s pagination in that issue.",
+    "elocator": "No article number or e\u2011locator is used; the citation correctly relies on page numbers.",
+    "publication_date": "The date 2021-09-03 is the cover date of Science volume 373, issue 6559.",
+    "doi": "The DOI 10.1126/science.abi9310 resolves to the article described.",
+    "pmcid": "The supplied PMCID (PMC9836006) does not correspond to PMID 34315827. According to PubMed, the correct PMCID for this article is PMCID: PMC8315827 (the PMCID associated with PMID 34315827).",
+    "pmid": "PMID 34315827 is correctly assigned to this record in PubMed."
+  }
+]

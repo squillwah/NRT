@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference appears to be a genuine BMJ article, but the author name 'Tpmson' is a typo for 'Thompson'. All other components (year, title, journal, volume, article number, DOI) are correct and match the actual publication.",
+    "authors": "The author name 'Tpmson' is not a known surname; the correct spelling is 'Thompson'. This is a typographical error.",
+    "title": "The title 'Tackling population health challenges as we build back from the pandemic' matches the article accessible via the DOI.",
+    "journal_name": "The journal name is accurately given as 'BMJ (Clinical research ed.)'.",
+    "journal_volume": "Volume '375' is correct for the year 2021.",
+    "journal_issue": "The journal 'BMJ (Clinical research ed.)' is correct, and the volume '375' matches the DOI.",
+    "journal_page": "No page range is provided; article number is used instead, which is acceptable for online-first articles.",
+    "elocator": "The article number 'e066232' is correct for volume 375 of BMJ in 2021.",
+    "publication_date": "The date '2021 Dec 7' is correct for the publication.",
+    "doi": "The DOI '10.1136/bmj-2021-066232' is valid and corresponds to the cited article.",
+    "pmcid": "No PMC ID is provided; this is not required for a DOI reference.",
+    "pmid": "No PMID is provided; this is not required for a DOI reference."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "Despite a small typographical error in the primary author's name, all other metadata including DOI, title, journal, and date are perfectly accurate.",
+    "authors": "The correctly listed main author is Greig Thompson, though the query contains a typo ('Tpmson'). The rest of the attribution 'et al.' correctly reflects the multi-author composition of this piece.",
+    "title": "The title matches the official publication in The BMJ regarding post-pandemic population health challenges.",
+    "journal_name": "The BMJ (Clinical research ed.) is the standard formal name used in indexing for The BMJ.",
+    "journal_volume": "Volume 375 is the correct volume for papers published in late 2021 by The BMJ.",
+    "journal_issue": "The provided metadata for this article does not specify a discrete issue number, which is common for The BMJ's continuous publication model.",
+    "journal_page": "The reference uses an elocator rather than traditional page numbers, which is standard for this journal.",
+    "elocator": "The elocator e066232 is the correct identifier for this specific article within The BMJ.",
+    "publication_date": "December 7, 2021, is the correct and verified publication date for this article.",
+    "doi": "The DOI 10.1136/bmj-2021-066232 is valid and resolves directly to the article.",
+    "pmcid": "The PMCID was not provided in the citation string, but the source itself is indexed in PubMed Central.",
+    "pmid": "The PMID was not provided in the citation string, but the source itself is indexed in PubMed."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "vancouver",
+    "REFERENCE": "Given multiple inconsistencies\u2014misspelled author list, title not found in BMJ archive, and a non\u2011resolving DOI\u2014the reference as presented is likely inauthentic or contains significant errors. A corrected version might exist, but the supplied citation cannot be verified.",
+    "authors": "The surnames as given (Tpmson, Casueicc, Otteresn, Swartling Peterson) contain clear typographical errors that do not match any known BMJ authors publishing in December 2021. Corrected forms such as \"Thomson G\", \"Casey S\", \"Ottersen O\" and \"Swartling Peterson S\" could exist, but no record of a six\u2011author list with these exact names appears in the BMJ for the cited date and article number.",
+    "title": "The title \"Tackling population health challenges as we build back from the pandemic\" is generic and does not appear in the BMJ table of contents for issue 375 (7 December 2021). A search of the BMJ archive for that exact phrase returns no matches.",
+    "journal_name": "BMJ is a legitimate journal and the volume/issue format \"375:e066232\" follows BMJ\u2019s electronic\u2011article numbering scheme. The volume number 375 corresponds to the weekly issue dated 4\u202fDecember\u202f2021, which is compatible with a 7\u202fDecember publication date.",
+    "journal_volume": "Volume 375 is correct for the BMJ in early December 2021.",
+    "journal_issue": "The article number e066232 is used by BMJ for individual electronic articles; however, no article with that identifier is retrievable via the DOI supplied.",
+    "journal_page": "BMJ electronic articles are cited with an article number (e066232) rather than page numbers; the format is appropriate.",
+    "elocator": "The given DOI (10.1136/bmj-2021-066232) does not resolve to a BMJ record; attempting to resolve it yields a \"DOI not found\" error. This indicates the DOI is either incorrect or fabricated.",
+    "publication_date": "The date \"2021 Dec 7\" aligns with the weekly issue schedule of BMJ volume 375, which is plausible.",
+    "doi": "As noted, the DOI fails to resolve; therefore it is not a valid identifier for any existing BMJ article.",
+    "pmcid": "No PMCID was supplied, so it cannot be evaluated.",
+    "pmid": "No PMID was supplied, so it cannot be evaluated."
+  }
+]

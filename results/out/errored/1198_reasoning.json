@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The citation contains multiple inconsistencies: the volume number 260 does not correspond to the year 2018 for the journal Science (which had volumes around 360 in 2018); the DOI prefix '10.2003' is not valid for Science (standard prefix is 10.1126); the page range '626-653:e963055' mixes traditional page numbers with an electronic article identifier in an atypical format; and the overall structure does not match authentic Science citation patterns.",
+    "authors": "No authors are listed in the provided citation, which is a required component for a complete reference. Author names are missing.",
+    "title": "The title 'Association between sleep fragmentation and glycemic variability in type 2 diabetes' is plausible and not inherently invalid, but it cannot be verified as a real article due to the other fabricated components. The title itself is syntactically correct.",
+    "journal_name": "The journal name 'Science' is a legitimate and well-known journal, but the associated details (volume, year, DOI) are fabricated. The name itself is correct, but the context invalidates the reference.",
+    "journal_volume": "Volume 260 is inconsistent with the year 2018 for the journal Science. Science volumes in 2018 were in the 360s (e.g., 360, 361). This is a critical error.",
+    "journal_issue": "The issue number '34' is plausible for a Science volume, but the combination with volume 260 is inconsistent with the year 2018. Science's volume numbering in 2018 was around 360, so the volume-issue-year relationship is invalid.",
+    "journal_page": "The page range '626-653' is a plausible length for a research article, but the appended 'e963055' is non-standard. Additionally, the volume-year mismatch makes the entire reference suspect.",
+    "elocator": "The element 'e963055' appears after the page range, which is not a standard locator format for Science. While Science uses article numbers, they are typically incorporated into the DOI or page format, not appended with a colon.",
+    "publication_date": "The date '2018 Aug 27' is a specific date, but the combination with volume 260 is impossible for Science. The date is likely fabricated or misplaced.",
+    "doi": "The DOI '10.2003.5.31/9m37-vxpy' uses an invalid registry prefix ('10.2003') and an unusual suffix pattern. Authentic Science DOIs begin with '10.1126/science.'.",
+    "pmcid": "No PMCID (PubMed Central identifier) is provided in the citation. The field is absent.",
+    "pmid": "No PMID (PubMed identifier) is provided in the citation. The field is absent."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "This reference is fabricated; it combines a real journal name with incorrect dates, volumes, and mismatched IDs.",
+    "authors": "No authors are provided in the citation, which is highly unusual for a major research article.",
+    "title": "While the topic is plausible, it does not exist in Science Magazine for the specified date or volume.",
+    "journal_name": "Science is a valid high-impact journal, though it does not publish articles with this volume/paging format.",
+    "journal_volume": "Volume 260 of Science was published in 1993, not 2018.",
+    "journal_issue": "Issue 34 is not a standard issue numbering for Science, which typically uses much higher issue numbers (e.g., 6xxx).",
+    "journal_page": "The page range 626-653 exists in various volumes, but the elocator e963055 is not a format used by Science in 2018.",
+    "elocator": "The elocator e963055 is inconsistently formatted and does not exist in the Science database.",
+    "publication_date": "August 27, 2018, was a Monday; Science issues are typically dated on Fridays.",
+    "doi": "The DOI 10.2003.5.31/9m37-vxpy does not follow the standard DOI format and is not resolvable.",
+    "pmcid": "PMCID PMC72005346 is an invalid ID; PMC IDs currently have only 7 digits (e.g., PMC7200534).",
+    "pmid": "PMID 34942096 actually refers to a 2021 article about the omicron variant, not a 2018 article in Science."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "nlm",
+    "REFERENCE": null,
+    "authors": null,
+    "title": null,
+    "journal_name": null,
+    "journal_volume": null,
+    "journal_issue": null,
+    "journal_page": null,
+    "elocator": null,
+    "publication_date": null,
+    "doi": null,
+    "pmcid": null,
+    "pmid": null
+  }
+]

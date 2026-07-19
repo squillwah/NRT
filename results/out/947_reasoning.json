@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The authors' names are nonsensical and not real persons ('Marctetri', 'tollks', 'Haverfrod', 'Kendaln'). The journal title is missing. The date format (2004 Jan 11) is unusual. The volume/issue format '(23):5071-5072' is unlikely for a typical journal, and the article ID 'e065653' seems fabricated. The DOI '01.1136/scienec.abm0620' is malformed (missing standard DOI prefix '10.' and contains 'scienec' not 'science'). The PMID '34547224' does not correspond to any known record, and PMCID 'PMC46087898' has a digit count inconsistent with typical PMCID patterns (which are usually 7 digits after 'PMC'). Cumulative errors indicate fabrication.",
+    "authors": "All author names are nonsensical: 'Marctetri', 'tollks', 'Haverfrod', 'Kendaln' are not plausible real surnames. The initials 'BA', 'EA', 'EE', 'WC' appear fabricated.",
+    "title": "The title 'Building and supporting identity in peer review' is generic and could be real, but no evidence supports its existence. Given context, it is likely fabricated.",
+    "journal_name": "The journal name is missing from the citation. A citation must include a journal name to be valid.",
+    "journal_volume": "Volume '23' is generic. Combined with other fabricated elements, it is likely invalid.",
+    "journal_issue": "The issue '(23)' with pages '5071-5072' is suspicious for 2004. No journal is specified. The combination is generic and unverifiable.",
+    "journal_page": "Pages '5071-5072' may be part of a fabricated pattern. Without a real journal, these pages are unverifiable.",
+    "elocator": "The e-locator 'e065653' appears fabricated. No known journal uses this format for a 2004 article. The placement after page numbers is inconsistent with standard citation styles.",
+    "publication_date": "Date '2004 Jan 11' uses an unconventional format (year before month) with no day abbreviation. However, the structure is not impossible, but combined with other errors, it is suspect.",
+    "doi": "DOI '01.1136/scienec.abm0620' is malformed. Standard DOIs begin with '10.', and 'scienec' is a misspelling of 'science'. The prefix '01' does not exist.",
+    "pmcid": "PMCID 'PMC46087898' has 8 digits after 'PMC', while standard PMCID format is 7 digits (e.g., PMC1234567). This is incorrect.",
+    "pmid": "PMID '34547224' is a valid integer but does not correspond to any known article. It may be recycled or fabricated."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The reference is entirely fabricated, containing misspelled author names, a malformed DOI, and a typo-riddled URL component.",
+    "authors": "The listed names (Marctetri, tollks, Haverfrod, Kendaln) appear to be phonetic misspellings or hallucinations and do not match any known researcher group.",
+    "title": "There is no record of a publication with this exact title being published by these authors or in the year 2004.",
+    "journal_name": "The journal name is missing from the provided citation string.",
+    "journal_volume": "The volume (23) is present but cannot be verified against a non-existent journal/article combination.",
+    "journal_issue": "No specific issue number is provided in the parenthetical format provided.",
+    "journal_page": "Page numbers 5071-5072 are provided but do not align with any known article under this name.",
+    "elocator": "The e-locator e065653 does not correspond to a valid article from 2004.",
+    "publication_date": "While 2004 is a valid year, the specific article described did not exist in that year.",
+    "doi": "The DOI 01.1136/scienec.abm0620 is malformed (starts with 01 instead of 10) and contains a typo ('scienec').",
+    "pmcid": "No PMCID was provided in the citation.",
+    "pmid": "No PMID was provided in the citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "apa",
+    "REFERENCE": "This reference is almost certainly fabricated. Multiple red flags include: (1) misspelled/garbled author names, (2) no journal name, (3) a DOI with a misspelled word ('scienec'), (4) inconsistent formatting, and (5) page/article numbers that do not match a real publication. It appears to be an AI-generated hallucination or a deliberately constructed fake citation.",
+    "authors": "The author names appear to be garbled or misspelled versions of potentially real names (e.g., 'Marctetri', 'tollks', 'Haverfrod', 'Kendaln'). The lack of correct formatting and the suspicious letter substitutions suggest these are not legitimate author names.",
+    "title": "The title 'Building and supporting identity in peer review' sounds plausible as a general academic topic, but cannot be verified against a known publication. It may be fabricated or hallucinated.",
+    "journal_name": "No journal name is explicitly provided in the citation. The DOI contains 'scienec' (likely a misspelling of 'science') and 'abm0620', which do not correspond to any known journal DOI pattern. This is a significant red flag.",
+    "journal_volume": "The volume number '(23)' is presented in an unusual parenthetical format. While volume 23 could belong to a real journal, the surrounding formatting is inconsistent with standard citation styles.",
+    "journal_issue": "No issue number is provided in the citation.",
+    "journal_page": "The page numbers '5071-5072' combined with an electronic article number 'e065653' suggest a very short article (2 pages). While some journals publish such brief items, the combination with the problematic DOI is suspicious.",
+    "elocator": "The e-locator 'e065653' resembles the format used by some journals (e.g., Science) for electronic articles, but it does not match any verifiable publication in conjunction with the other citation components.",
+    "publication_date": "The year 2004 is provided, but without a verified journal or article, its accuracy cannot be confirmed.",
+    "doi": "The DOI 'https://doi.org/01.1136/scienec.abm0620' is highly suspicious. '01.1136' is close to the BMJ publisher prefix '1136', but 'scienec' is clearly a misspelling of 'science', and 'abm0620' does not match standard DOI patterns. This DOI does not resolve to any real publication.",
+    "pmcid": "No PMCID is provided in the citation.",
+    "pmid": "No PMID is provided in the citation."
+  }
+]

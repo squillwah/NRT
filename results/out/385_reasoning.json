@@ -1,0 +1,34 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The reference as a whole is fabricated. It combines a real DOI (from a Nature article on Zika virus) with a completely false title and corrupted author names. The journal name is misspelled, and the pages do not match the real paper.",
+    "authors": "Author names contain multiple typographical errors and unusual capitalizations (e.g., 'Simon-oLriere' instead of 'Simon-Loriere', 'aFye' instead of 'Faye'). These are likely corrupted versions of real authors from a different paper (Simon-Loriere et al., 2015, on Zika virus).",
+    "title": "The title 'Effect of a low-carbohydrate diet versus a low-fat diet on hepatic steatosis in patients with metabolic syndrome: a randomized controlled trial' does not match the real paper associated with the DOI (which is about Zika virus spread). It appears fabricated or incorrectly attributed.",
+    "journal_name": "The journal is listed as 'Nafure', which is a misspelling of 'Nature'. While the journal 'Nature' is legitimate, the typo indicates potential fabrication.",
+    "journal_volume": "Volume 524 is correct for the real Nature paper (Simon-Loriere et al., 2015), but the combination with the fabricated title makes it unreliable.",
+    "journal_issue": "Issue 7563 corresponds to the real Nature paper on Zika virus (ISSN 0028-0836). However, the issue number itself exists, but the context is mismatched.",
+    "journal_page": "Pages 102-104 do not match the real Nature paper (which is on pages 234-238 approximately for the Zika virus article). The page numbers seem fabricated for the given title.",
+    "elocator": "No elocator provided.",
+    "publication_date": "The year 2015 is correct for the real Nature paper by Simon-Loriere et al., but the date is not specified further.",
+    "doi": "The DOI 10.1038/nature14612 is valid and leads to a real Nature paper on Zika virus (Simon-Loriere et al., 2015). However, the authors, title, and journal pages are inconsistent with that paper, indicating the DOI is misused.",
+    "pmcid": "Not provided.",
+    "pmid": "Not provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "The reference is a hallucination or a mismatch; it combines the title of a clinical diet trial with the bibliographic metadata of a famous Ebola genomics paper.",
+    "authors": "The author names appear to contain numerous typos or transcription errors (e.g., 'Simon-oLriere' and 'Kejts') and do not match the authors of the referenced Nature paper.",
+    "title": "The title provided describes a nutritional study on hepatic steatosis, which does not match the actual Nature paper at these coordinates.",
+    "journal_name": "Nature is a valid scientific journal, despite the typo 'Nahure' in the citation.",
+    "journal_volume": "Volume 524 of Nature was published in 2015, which is consistent.",
+    "journal_issue": "Issue 7563 is a valid issue associated with Volume 524 of Nature.",
+    "journal_page": "Pages 102-104 exist in this issue, but they contain a paper about Ebola virus sequencing, not low-carbohydrate diets.",
+    "elocator": "An elocator was not explicitly provided in a standard electronic format, though page numbers were.",
+    "publication_date": "August 6, 2015, is the correct publication date for Nature issue 7563.",
+    "doi": "The DOI 10.1038/nature14612 is a valid DOI belonging to a paper in Nature, but it is for a genomic study of the Ebola outbreak, not the title provided.",
+    "pmcid": "No PMCID was provided in the input citation string.",
+    "pmid": "No PMID was provided in the input citation string."
+  }
+]

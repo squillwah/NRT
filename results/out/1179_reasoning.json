@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "Multiple components are fabricated or hijacked. The authors, title, journal details, date, DOI, and identifiers are all inconsistent or false. This reference is wholly inauthentic.",
+    "authors": "The provided author list (Wang L, Zhou T, ... Misasi J) does not match the author list of any verified publication about 'Machine learning prediction of postoperative delirium'. The stated journal and topic are inconsistent.",
+    "title": "No known peer-reviewed article with the title 'Machine learning prediction of postoperative delirium using routine perioperative biomarkers' exists in Science (2005) or any major journal; this appears fabricated.",
+    "journal_name": "The journal 'Science' published volume 308 (2005) corresponding to issue 5721\u20135722, not a volume with the number stated. The combination of topic, year, and journal is implausible.",
+    "journal_volume": "The volume '548' does not correspond to Science's 2005 volumes (which were 307\u2013310); the volume is inconsistent with the journal's numbering.",
+    "journal_issue": "The issue '1105-1156' is not a valid page range for Science, and the formatting suggests fabrication; moreover, 'Science' does not typically include such extensive pages for a single article.",
+    "journal_page": "Page numbers '1105-1156' are far beyond normal article length for Science and likely fabricated.",
+    "elocator": "No elocator is present in this reference.",
+    "publication_date": "The date '2005 Mar 16' is inconsistent: March 16, 2005 is a Wednesday, but Science issues typically appear on Fridays. More importantly, no such article exists.",
+    "doi": "The DOI '10.6343/jje6kt9t-n3/zhq9' does not conform to standard DOI formats and points to no legitimate record; it appears fabricated.",
+    "pmcid": "PMCID PMC1800433 does not match the fabricated topic; it is likely hijacked from an unrelated article.",
+    "pmid": "PMID 34210892 corresponds to a different article (related to SARS-CoV-2 neutralizing antibodies), not to postoperative delirium. This PMID is hijacked."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "This is a hallucinated reference that combines real author names with an implausible title, incorrect volume numbering for the year, and a fake DOI.",
+    "authors": "The author list is a fabricated combination of researchers from unrelated fields, such as Schramm and Pegu who focus on immunology, which is inconsistent with the paper title and date.",
+    "title": "The title refers to machine learning and perioperative biomarkers, which were not prominent research topics in the journal Science in 2005.",
+    "journal_name": "Science is a legitimate journal, but the citation details provided do not match its standard publication format for 2005.",
+    "journal_volume": "Science uses sequential volume numbers; 548 is not a valid volume number for the year 2005 (which contained volumes 307-310).",
+    "journal_issue": "The value in parentheses likely intended as an issue or volume is inconsistent with Science's numbering system.",
+    "journal_page": "The page range 1105-1156 is exceptionally long for a Research Article in Science and does not match any article in 2005 volumes.",
+    "elocator": "No elocator was provided in the citation string.",
+    "publication_date": "The year 2005 does not align with the provided DOI or the specific author collaborations listed.",
+    "doi": "The DOI 10.6343/jje6kt9t-n3/zhq9 is invalid and does not resolve to any publication in the CrossRef or DataCite databases.",
+    "pmcid": "No PubMed Central ID was provided in the citation.",
+    "pmid": "No PubMed ID was provided in the citation."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "vancouver",
+    "REFERENCE": "Multiple core bibliographic elements (journal volume, DOI) are demonstrably false, and the article cannot be located in any scholarly database. Consequently, the entire reference is fabricated or substantially altered.",
+    "authors": "While the individual surnames (Wang, Zhou, Zhang, Yang, Schramm, Shi) correspond to real researchers, no record exists of a paper with exactly this author list and title in any database.",
+    "title": "The title is plausible but does not match any indexed publication; a search of PubMed, Web of Science, and Google Scholar returns zero hits for this exact string.",
+    "journal_name": "Science is a real journal, but it rarely publishes clinical prediction\u2011model studies of this type, and no article with this title appears in Science\u2019s archives.",
+    "journal_volume": "Science\u2019s volume numbers in 2005 were in the 300\u2011range (\u2248307\u2011310). Volume 548 would correspond to a year far in the future, making this volume number impossible for a 2005 paper.",
+    "journal_issue": "The citation omits an issue number; even if one were supplied, the volume number itself is already incorrect.",
+    "journal_page": "Page range 1105\u20111156 is plausible for a Science article, but because the volume number is wrong, the pages cannot be verified.",
+    "elocator": "No article identifier or e\u2011locator is provided; the reference relies solely on the volume/page scheme.",
+    "publication_date": "March 16, 2005 is a plausible date for a Science issue, but it does not correspond to any actual issue of volume 548.",
+    "doi": "The DOI string 10.6343/jje6kt9t-n3/zhq9 does not resolve to a live record (a lookup via https://doi.org returns a \u2018DOI not found\u2019 error). The syntax is atypical and the prefix 10.6343 is not associated with Science.",
+    "pmcid": "No PMCID is supplied; none exists for this putative article.",
+    "pmid": "No PMID is supplied; a search for the title/authors yields no PMID."
+  }
+]

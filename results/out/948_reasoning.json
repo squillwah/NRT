@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "\u8be5\u5f15\u7528\u5b58\u5728\u591a\u5904\u4e0d\u4e00\u81f4\uff1a\u4f5c\u8005\u59d3\u540d\u62fc\u5199\u9519\u8bef\uff0cDOI\u4e0e\u671f\u520a\u540d\u79f0\u4e25\u91cd\u4e0d\u5339\u914d\uff08Cell\u671f\u520a\u4e0d\u5e94\u4f7f\u7528Science\u524d\u7f00\u7684DOI\uff09\uff0c\u4e14\u9875\u7801167-176\u5bf9\u4e8eCell\u671f\u520a\u7684\u5377226\u671f8\u6765\u8bf4\u8fc7\u957f\uff08Cell\u901a\u5e38\u9875\u7801\u8f83\u5c11\uff09\uff0c\u6574\u4f53\u771f\u5b9e\u6027\u5b58\u7591\u3002",
+    "authors": "\u4f5c\u8005\u59d3\u540d\u5b58\u5728\u660e\u663e\u7684\u62fc\u5199\u9519\u8bef\uff0c\u5982'Sandroen'\u5e94\u4e3a'Sanderson'\uff0c'Scktt'\u5e94\u4e3a'Scott'\uff0c'Anedrcon'\u5e94\u4e3a'Anderson'\uff0c\u8fd9\u8868\u660e\u4f5c\u8005\u5217\u8868\u65e0\u6548\u3002",
+    "title": "\u6807\u9898'Metabolic consequences of obesity and type 2 diabetes: Balancing genes and environment for personalized care'\u8bed\u6cd5\u6b63\u786e\uff0c\u5185\u5bb9\u5408\u7406\uff0c\u7b26\u5408\u5b66\u672f\u6807\u9898\u89c4\u8303\u3002",
+    "journal_name": "\u671f\u520a\u540d'Cell'\u662f\u4e00\u4e2a\u771f\u5b9e\u4e14\u8457\u540d\u7684\u5b66\u672f\u671f\u520a\uff0c\u62fc\u5199\u6b63\u786e\uff0c\u56e0\u6b64\u89c6\u4e3a\u6709\u6548\u3002",
+    "journal_volume": "\u5377\u53f7'226'\u662f\u4e00\u4e2a\u5408\u7406\u7684\u6570\u5b57\u683c\u5f0f\uff0c\u6ca1\u6709\u660e\u663e\u9519\u8bef\u3002",
+    "journal_issue": "\u671f\u53f7'8'\u662f\u4e00\u4e2a\u5408\u7406\u7684\u6570\u5b57\u683c\u5f0f\uff0c\u6ca1\u6709\u660e\u663e\u9519\u8bef\u3002",
+    "journal_page": "\u9875\u7801'167-176'\u683c\u5f0f\u6b63\u786e\uff0c\u7b26\u5408\u671f\u520a\u6587\u7ae0\u9875\u7801\u7684\u5e38\u89c1\u8868\u793a\u3002",
+    "elocator": "\u5f15\u7528\u4e2d\u672a\u63d0\u4f9belocator\uff08\u5982\u6587\u7ae0\u7f16\u53f7\uff09\uff0c\u56e0\u6b64\u8be5\u9879\u65e0\u6548\u3002",
+    "publication_date": "\u51fa\u7248\u65e5\u671f'2021 Mar 18'\u683c\u5f0f\u6b63\u786e\uff0c\u65e5\u671f\u5b58\u5728\u4e14\u5408\u7406\u3002",
+    "doi": "DOI'10.1126/bmj.n2806'\u4f7f\u7528\u4e86Science\u671f\u520a\u7684\u524d\u7f0010.1126\uff0c\u4f46\u540e\u7f00\u5305\u542b'bmj'\uff0c\u4e0e\u671f\u520a'Cell'\u4e0d\u5339\u914d\uff0c\u4e14\u5b9e\u9645BMJ\u7684DOI\u524d\u7f00\u5e94\u4e3a10.1136\uff0c\u56e0\u6b64DOI\u65e0\u6548\u3002",
+    "pmcid": "PMCID'PMC79223337'\u683c\u5f0f\u4e3aPMC\u52a08\u4f4d\u6570\u5b57\uff0c\u7b26\u5408PMCID\u7684\u5e38\u89c1\u683c\u5f0f\uff0c\u56e0\u6b64\u89c6\u4e3a\u6709\u6548\u3002",
+    "pmid": "PMID'34838160'\u662f\u75317\u4f4d\u6570\u5b57\u7ec4\u6210\u7684\u6709\u6548\u6807\u8bc6\u7b26\uff0c\u683c\u5f0f\u6b63\u786e\u3002"
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The reference is a hallucination that mixes mismatched authors, a non-existent title, an incorrect volume number, and a fake DOI.",
+    "authors": "Several author names appear to contain typographical errors or are misspelled versions of known researchers in this field (e.g., Anedrcon vs Anderson).",
+    "title": "The title discusses metabolic consequences, but no paper with this exact title exists by these authors in this journal.",
+    "journal_name": "Cell is a valid, high-impact biological journal.",
+    "journal_volume": "As of 2021, Cell had not reached volume 226; its volumes were in the 184 range.",
+    "journal_issue": "The issue number is logically possible but the data does not correspond to the actual volume/issue structure of Cell in 2021.",
+    "journal_page": "These page numbers are inconsistent with the typical length and pagination of contemporary Cell articles.",
+    "elocator": "No separate elocator was provided beyond the DOI link.",
+    "publication_date": "While 2021 is a real year, no such article exists for this date.",
+    "doi": "The DOI prefix 10.1126 belongs to Science/AAAS, not Cell (Elsevier), and n2806 is a BMJ-style identifier, making it a manufactured string.",
+    "pmcid": "No PMCID was provided in the citation.",
+    "pmid": "No PMID was provided in the citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "vancouver",
+    "REFERENCE": "The first three author names (Sandroen S, Scktt F, Anedrcon WJ) appear to be fabricated or garbled \u2014 they lack the structure of real surnames. While the fourth author (Musunuru K) is a real, known researcher in genetics and cardiology, the others are not recognizable. Additionally, and most critically, the DOI listed (10.1126/bmj.n2806) belongs to the **British Medical Journal (BMJ)**, not to **Cell** as claimed in the citation. The prefix 10.1126 is used by AAAS (Science family), whereas Cell Press uses 10.1016. This fundamental mismatch between the journal name and the DOI is a definitive indicator of fabrication. The citation is **not authentic**.",
+    "authors": "Three of the four authors (Sandroen S, Scktt F, Anedrcon WJ) appear to be fabricated or nonsensical names with no verifiable academic presence. Only Musunuru K (Kiran Musunuru) is a real, recognized researcher. However, his authorship on a paper with the other three authors in the journal Cell cannot be confirmed and appears to be misattributed as part of a fabricated citation.",
+    "title": "The title 'Metabolic consequences of obesity and type 2 diabetes: Balancing genes and environment for personalized care' is a plausible-sounding review title, but no such article exists in Cell with the given authors. It appears to be constructed to sound legitimate.",
+    "journal_name": "Cell is a real, prestigious scientific journal published by Cell Press (Elsevier). However, the DOI provided (10.1126/bmj.n2806) does not belong to Cell \u2014 it belongs to BMJ. This contradiction indicates the journal name in the citation is false or incorrectly cited alongside an unrelated DOI.",
+    "journal_volume": "Cell volume 226 exists (2021). However, the specific article described is not verifiable in that volume, and the overall citation is fabricated. The volume cannot be trusted in this context.",
+    "journal_issue": "Cell volume 226 does exist (2021), but there is no record of this specific article with the given authors and title in that volume. The issue number (8) and page range (167-176) cannot be confirmed. Moreover, the DOI mismatch with BMJ undermines the entire citation's validity.",
+    "journal_page": "The page range 167-176 is not verifiable as belonging to a legitimate Cell article with these authors and title. Given that the DOI and authors are clearly problematic, the page numbers are also unreliable.",
+    "elocator": "The format 2021 Mar 18;226(8):167-176 may appear superficially plausible for Cell (which does publish in high volumes), but given that the DOI points to a completely different journal and the authors are largely fabricated, the entire metadata block is unreliable. The page numbers and volume/issue details cannot be verified against a legitimate Cell record.",
+    "publication_date": "The date 2021 Mar 18 is presented. While plausible for a journal like Cell, the entire citation appears fabricated. The date cannot be verified against a real publication.",
+    "doi": "The DOI 10.1126/bmj.n2806 clearly references the British Medical Journal (BMJ), not Cell. The prefix 10.1126 is associated with AAAS publications (Science, Science Advances, etc.), and the journal code 'bmj' explicitly denotes BMJ. Cell uses the DOI prefix 10.1016 (Elsevier). This is a definitive mismatch, indicating the DOI is either fabricated or incorrectly assigned.",
+    "pmcid": "No PubMed Central ID is provided in the citation. However, given the DOI mismatch and fabricated authors, this article likely has no PubMed/PMC record.",
+    "pmid": "No PubMed ID is provided in the citation. Given the fabricated nature of the reference, no PMID exists."
+  }
+]

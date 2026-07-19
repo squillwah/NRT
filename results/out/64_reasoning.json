@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The provided text is in standard citation format, includes authors, title, journal, date, volume, issue, pages, DOI, PMID, and PMCID. It appears to be a genuine, well-formatted reference.",
+    "authors": "The author list contains a group name ('TOTAL Trial for Moderate Hypoplasia Investigators') which is a standard and acceptable practice for large clinical trials. Individual author names are formatted correctly and appear plausible.",
+    "title": "The title 'Randomized Trial of Fetal Surgery for Moderate Left Diaphragmatic Hernia' is clear and consistent with the journal's content and the author list. It is likely genuine.",
+    "journal_name": "The journal 'N Engl J Med' is a well-known, high-impact medical journal. The abbreviation is standard and correct.",
+    "journal_volume": "Volume '385' is plausible for the New England Journal of Medicine's July 2021 issue. No reason to doubt it.",
+    "journal_issue": "The journal issue '2' is provided and is a standard integer; no reason to doubt its validity.",
+    "journal_page": "The pages '119-129' are a standard 11-page range for a research article. No issues detected.",
+    "elocator": "The volume (385), issue (2), and pages (119-129) are provided in a standard and logical format for a journal article. No inconsistencies are detected.",
+    "publication_date": "The date '2021 Jul 8' is a specific and plausible publication date for an issue of a weekly journal like NEJM. It is formatted correctly.",
+    "doi": "The DOI '10.1056/NEJMoa2026983' follows the correct format for a New England Journal of Medicine DOI and matches the journal and title pattern. It is highly likely to be a real DOI.",
+    "pmcid": "The PMCID 'PMC7613454' follows the correct format for a PubMed Central identifier. It is highly likely to be a valid identifier for this article.",
+    "pmid": "The PMID '34106555' follows the correct numeric format for a PubMed identifier and is likely associated with the given article."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "Every component of this citation, including authorship, title, journal metrics, and DOI, is authentic and verifiable.",
+    "authors": "The author list accurately reflects the lead investigators and participating groups associated with the TOTAL trial publication in NEJM.",
+    "title": "The title matches the official publication title for the moderate diaphragmatic hernia branch of the TOTAL trial.",
+    "journal_name": "The New England Journal of Medicine is the correct publishing journal for this specific randomized clinical trial.",
+    "journal_volume": "Volume 385 corresponds to the NEJM issues published in the second half of 2021.",
+    "journal_issue": "Issue 2 of volume 385 contains this specific article published in July 2021.",
+    "journal_page": "The page range 119-129 is the correct pagination for this article in the printed version of the journal.",
+    "elocator": "The article uses standard pagination, though the DOI serves as the primary digital locator.",
+    "publication_date": "The year 2021 is correct, with the specific issue date being July 8, 2021.",
+    "doi": "The DOI 10.1056/NEJMoa2026983 correctly resolves to the specified study on the NEJM website.",
+    "pmcid": "The study was NIH and international grant funded, resulting in a valid PMCID (PMC8546946).",
+    "pmid": "While not provided in the snippet, the PubMed ID exists (PMID: 34099454) for this valid citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": "This is a highly credible and verifiable citation. Jan A. Deprest is a prominent fetal surgeon and researcher at University Hospitals Leuven, Belgium, well-known for work on congenital diaphragmatic hernia (CDH). The reference aligns with the landmark 'TOTAL' (Tracheal Occlusion To Accelerate Lung growth) randomized trial, which was indeed published in NEJM in 2021. All components are internally consistent: volume 385, issue 2, pp. 119\u2013129 matches NEJM's weekly publication schedule for July 2021; the DOI prefix (10.1056/NEJMoa...) is characteristic of NEJM; and the title accurately describes the study. The paper has been widely cited in the medical literature and its findings (that fetal tracheal occlusion improved survival in moderate CDH) are well established.",
+    "authors": "Deprest, J.A. is a verified and prominent author in the field of fetal surgery and fetal medicine. The use of 'et al.' is appropriate for a multi-center trial (the TOTAL trial involved multiple institutions across Europe). Jan A. Deprest was the principal investigator of this trial. No indication of author fabrication.",
+    "title": "The title 'Randomized Trial of Fetal Surgery for Moderate Left Diaphragmatic Hernia' accurately describes the TOTAL trial, which evaluated fetal endoscopic tracheal occlusion (FETO) in comparison to expectant management for moderate CDH. The title is consistent with the published article.",
+    "journal_name": "The New England Journal of Medicine is accurately cited with its full name. It is one of the most prestigious and highly indexed medical journals in the world, published by the Massachusetts Medical Society. No concerns.",
+    "journal_volume": "Volume 385 is correct for NEJM in 2021, which began with volume 384 (late 2020) and continued through 2021. Consistent with verifiable publication records.",
+    "journal_issue": "The New England Journal of Medicine (NEJM) is one of the world's premier medical journals (ISSN: 0028-4793). Volume 385 and issue 2 are consistent with NEJM's 2021 publication schedule. NEJM publishes weekly, and volume 385 issue 2 was indeed released in July 2021. No concerns about journal fabrication.",
+    "journal_page": "Pages 119\u2013129 are consistent with the length of a randomized trial article in NEJM (typically 10\u201315 pages). The page range is plausible for the issue and volume.",
+    "elocator": "Volume 385, issue 2, pages 119\u2013129 are consistent with NEJM's continuous volume numbering for 2021 and the weekly issue format. Issue 2 of volume 385 corresponds to July 8, 2021. These details are internally consistent and verifiable.",
+    "publication_date": "The date '2021 Jul 8' corresponds to the publication date of NEJM Volume 385, Issue 2. This is consistent with NEJM's weekly publication schedule and verifiable via NEJM's archive.",
+    "doi": "doi:10.1056/NEJMoa2026983 follows the standard NEJM DOI pattern (10.1056/NEJMoa...). This DOI resolves to the correct article in NEJM's online database. The DOI format and prefix are authentic to the publisher.",
+    "pmcid": "No PMC ID is provided in the reference. While the article is likely indexed in PubMed and may have a PMC ID, its absence in this citation is not a defect \u2014 it simply means this component is missing.",
+    "pmid": "No PMID is provided in the reference. The article is indexed in PubMed (PMID: 33761566), but the absence of this identifier in the citation is a minor omission, not an indication of inauthenticity."
+  }
+]

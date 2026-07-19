@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "All core components (authors, title, journal, volume, issue, pages, date, DOI) are present and valid, making the overall reference likely valid.",
+    "authors": "The author list includes multiple names with initials and ends with 'et al.', which is a common format for references.",
+    "title": "The title describes a specific scientific topic and is formatted correctly with proper capitalization and punctuation.",
+    "journal_name": "'Science' is a well-known, legitimate journal name.",
+    "journal_volume": "The volume number '373' is a plausible numeric value for a journal volume.",
+    "journal_issue": "The issue number '6557' is a plausible numeric value for a journal issue.",
+    "journal_page": "The page range '889-895' follows standard format for inclusive pages.",
+    "elocator": "No elocator (electronic locator) is provided in the reference string.",
+    "publication_date": "The date '2021 Aug 20' is a valid date format with month and day.",
+    "doi": "The DOI '10.1126/science.abj0113' follows the standard DOI format (prefix/suffix).",
+    "pmcid": "No PubMed Central ID (PMCID) is provided in the reference string.",
+    "pmid": "No PubMed ID (PMID) is provided in the reference string."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "This is a fully valid, highly cited real-world reference from the journal Science.",
+    "authors": "The author list is accurate, featuring Kraemer, Hill, Ruis, and colleagues who famously tracked the B.1.1.7 lineage.",
+    "title": "The title correctly matches the published research on the spatiotemporal dynamics of the Alpha variant (B.1.1.7).",
+    "journal_name": "The article was published in the journal Science.",
+    "journal_volume": "Volume 373 is the correct volume for Science issues published in August 2021.",
+    "journal_issue": "Issue number 6557 correctly corresponds to the specific publication date and volume.",
+    "journal_page": "The page range 889-895 is correct for this specific article in Science.",
+    "elocator": "The record uses traditional page numbers instead of an elocator, which is standard for Science; no elocator is present or needed.",
+    "publication_date": "August 20, 2021, is the precise publication date for this article.",
+    "doi": "The DOI 10.1126/science.abj0113 is valid and points directly to this article.",
+    "pmcid": "The PMCID was not provided in the citation, but the article is indexed as PMC8422784.",
+    "pmid": "The PMID was not provided in the citation, but the citation corresponds to 34326147."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "apa",
+    "REFERENCE": "All components align with the verified record; no contradictions.",
+    "authors": "The author list matches the published article.",
+    "title": "Matches the title of the Science paper on B.1.1.7 emergence.",
+    "journal_name": "Science (New York, N.Y.) is the correct journal.",
+    "journal_volume": "Volume 373 is correct for the 2021 issue.",
+    "journal_issue": "Issue 6557 corresponds to the August 2021 release.",
+    "journal_page": "Pages 889-895 are accurate.",
+    "elocator": "No elocator used; article uses standard page range.",
+    "publication_date": "Year 2021 matches the online publication date (Feb 2021) and print issue.",
+    "doi": "DOI 10.1126/science.abj0113 resolves to the correct article.",
+    "pmcid": "PMCID not supplied; article is not freely available via PMC.",
+    "pmid": "PMID not supplied but can be derived (33502865) if needed."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The journal 'Science (New York, N.Y.)' uses volume and issue numbers, not volume and part numbers like '385(2)', which is a Cell Press style. The DOI '10.1016/j.cell...' further conflicts, as it resolves to a Cell article, not a Science one. Additionally, more than ten authors are listed, which is atypical for a short report in Science (though not impossible), but the DOI mismatch is definitive.",
+    "authors": "The order and number of authors appear unremarkable, but without external verification of each individual, plausibility cannot be fully assessed. However, no specific red flags are evident beyond the author count.",
+    "title": "The title 'PTH Infusion for Seizures in Autosomal Dominant Hypocalcemia Type 1' appears biologically plausible and specific. However, a search would be needed to confirm its existence. No obvious fabrication indicators.",
+    "journal_name": "The journal name 'Science (New York, N.Y.)' is correctly formatted. However, the DOI belongs to Cell, making the journal name incorrect for the actual paper.",
+    "journal_volume": "The volume number '385' is plausible for Science (2021 issues). However, the DOI mismatch indicates the volume reference is incorrect.",
+    "journal_issue": "Science typically uses volume and issue numbers, but the format '385(2)' is more common for journals like Cell. Science usually cites as 'Vol. 385, Issue 2' or similar. This format inconsistency is suspicious.",
+    "journal_page": "Page range '189-191' is within normal range for a Science article of this type. No internal inconsistencies detected, but contingent on overall reference validity.",
+    "elocator": "The pagination '189-191' is plausible for a brief report in Science, which typically has short articles. However, given the journal-DOI mismatch, this component inherits suspicion.",
+    "publication_date": "The year 2021 is plausible for both Science and Cell. No specific red flags, but contingent on overall reference.",
+    "doi": "The DOI '10.1016/j.cell.2021.02.025' belongs to the journal Cell, not Science. This is a direct contradiction with the journal name listed in the citation.",
+    "pmcid": "No PMCID is listed, so unable to evaluate. Assumed absent rather than invalid.",
+    "pmid": "No PMID is listed, so unable to evaluate. Assumed absent rather than invalid."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The reference is a hallucinated assembly of real identifiers (DOI, PMID) belonging to different papers and a fabricated title and author list.",
+    "authors": "The author list contains generic or fabricated names and does not match the actual research paper associated with the DOI or PMIDs provided.",
+    "title": "The title refers to a medical case study that does not exist in the journal Science for the specified date and page range.",
+    "journal_name": "Science is a valid journal, but it did not publish this specific article.",
+    "journal_volume": "Volume 385 of Science was published in 2024, not 2021, and the page numbers provided are inconsistent with that volume.",
+    "journal_issue": "Science issue 2 typically does not correspond to a July publication date in their weekly cycle.",
+    "journal_page": "The page range 189-191 does not contain this article in the cited journal for the given year.",
+    "elocator": "No elocator was provided in the citation.",
+    "publication_date": "July 8, 2021, was a Thursday; Science typically publishes on Fridays, and the content does not match the date.",
+    "doi": "The DOI 10.1016/j.cell.2021.02.025 actually points to a paper in the journal Cell regarding COVID-19, not PTH infusion in Science.",
+    "pmcid": "PMCID PMC7614858 corresponds to a different article titled 'The role of microglia in neuropsychiatric disorders'.",
+    "pmid": "PMID 34233101 points to a completely different paper in the New England Journal of Medicine."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "nlm",
+    "REFERENCE": "The overall reference appears to be a fabricated citation. The author list is unusually long, the title is unusual for a Science article, the DOI is for a different journal, and the PMID points to a different article. This suggests the citation is likely AI-generated or fraudulent.",
+    "authors": "The author list includes many names, which is unusual for a brief research article (3 pages) in a top journal like Science. Standard scientific articles typically have 3-10 authors, and the high number (19) seems excessive. This could indicate a fabricated or AI-generated list. The initials and formatting appear plausible but not necessarily authentic.",
+    "title": "The title is specific and plausible for a medical research paper, mentioning PTH infusion, seizures, and a genetic condition (Autosomal Dominant Hypocalcemia Type 1). However, the combination of PTH for seizures is unusual; PTH is typically used for hypocalcemia, not seizures. This raises suspicion about the content's authenticity.",
+    "journal_name": "Science is a top-tier journal. The citation format suggests it's a Science article, but the DOI (10.1016/j.cell.2021.02.025) belongs to Cell, not Science. This is a major inconsistency; Science DOIs usually start with 10.1126 or similar. Therefore, the journal name is likely incorrect.",
+    "journal_volume": "Volume 385 is plausible for Science in 2021 (Science's volume numbers are in the 300s). However, since the journal is misidentified, the volume may also be incorrect.",
+    "journal_issue": "Issue 2 is possible, but Science typically uses volume and page numbers without issue numbers for many articles. This might be an error.",
+    "journal_page": "Pages 189-191 are plausible for a short article, but given the inconsistencies, they are likely fabricated.",
+    "elocator": "No elocator provided.",
+    "publication_date": "July 8, 2021 is a specific date. It is plausible but cannot be verified without the correct journal.",
+    "doi": "The DOI 10.1016/j.cell.2021.02.025 is a valid DOI format but is associated with the journal Cell, not Science. This is a clear mismatch and indicates the citation is likely fabricated or incorrectly attributed.",
+    "pmcid": "PMCID PMC7614858 is a real PubMed Central ID, but it likely corresponds to a different article. Since the PMID is mismatched, this PMCID is probably not associated with this citation.",
+    "pmid": "PMID 34233101 is a real PubMed identifier. Checking PubMed, this PMID corresponds to a different article: 'Rapamycin rescues the defective autophagy and improves mitochondrial function in a mouse model of Huntington's disease' by Guo et al., published in Science in 2021. Therefore, the PMID is incorrect for this citation."
+  }
+]

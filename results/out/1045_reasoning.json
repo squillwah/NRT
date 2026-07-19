@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The reference claims to be from BMJ but includes a doi that points to a Cell Press journal (j.cell). The volume and page numbers do not match BMJ format, and the title appears to be from a different study (about cross-reactive T cells) rather than a BMJ publication. The URL template suggests it is a fabricated or mismatched reference.",
+    "authors": "The author names appear plausible for scientific publications, but they are associated with an incorrect journal and DOI. The authors likely belong to a different study.",
+    "title": "The title 'Cross-reactive CD4(+) T cells enhance SARS-CoV-2 immune responses upon infection and vaccination' appears to be a real study, but it is not published in BMJ as claimed. The actual study may exist in another journal.",
+    "journal_name": "BMJ is a real journal, but the content (title, DOI) is inconsistent with it being the actual source for this paper.",
+    "journal_volume": "BMJ volume 374 exists, but the combination of volume, issue, and pages is unverifiable and likely fabricated.",
+    "journal_issue": "BMJ is a legitimate journal, but this specific issue and volume combination (374(3491)) does not match actual BMJ publications. The issue number 3491 is atypical for BMJ.",
+    "journal_page": "The page range 204-252 is unusually long for a BMJ article and does not match known real papers from BMJ.",
+    "elocator": "The volume and page numbers (374(3491):204-252) do not correspond to BMJ's standard citation format. BMJ uses sequential page numbers, not such large ranges. This suggests fabrication.",
+    "publication_date": "The date (2021 Nov 12) is plausible for a 2021 publication, but combined with other inconsistencies, it is likely fabricated.",
+    "doi": "The DOI belongs to a Cell publication (doi:10.1136/j.cell.2021.02.025 is malformed; the correct DOI likely would be 10.1016/j.cell.2021.02.025 for a Cell paper). It does not match the BMJ format.",
+    "pmcid": "No PMCID is provided; the reference does not include a valid PubMed Central ID.",
+    "pmid": "No PMID is provided; the reference does not include a valid PubMed ID."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "The reference is a 'hallucination' that mixes real economist names with an immunology paper title and attaches them to a BMJ citation with a fake DOI.",
+    "authors": "The authors Pol Campos-Mercade, Armando N. Meier, et al., are real behavioral economists, but they did not write a paper on CD4+ T cells; that is typically the work of immunologists.",
+    "title": "The title 'Cross-reactive CD4(+) T cells enhance SARS-CoV-2 immune responses upon infection and vaccination' is a real paper title, but it was published in Science, not the BMJ.",
+    "journal_name": "While BMJ is a valid medical journal, it did not publish the article described by the title or written by these authors.",
+    "journal_volume": "Volume 374 is a valid BMJ volume for 2021, but it does not contain the cited article.",
+    "journal_issue": "The issue number 3491 is not consistent with BMJ's numbering system for volume 374, which usually uses individual article IDs.",
+    "journal_page": "The page range 204-252 is likely fabricated as recent BMJ articles use elocators rather than sequential page numbering spanning large blocks.",
+    "elocator": "No valid elocator was provided in the citation outside of the incorrect DOI suffix.",
+    "publication_date": "November 12, 2021, is a valid date, but it does not match the actual publication date of the real 'Cross-reactive CD4+' paper in Science (September 2020).",
+    "doi": "The DOI 10.1136/j.cell.2021.02.025 is malformed and contradictory; 10.1136 is for BMJ, but 'j.cell' suggests the journal Cell.",
+    "pmcid": "No PMCID was provided in the source text to evaluate.",
+    "pmid": "No PMID was provided in the source text to evaluate."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "nlm",
+    "REFERENCE": "Multiple bibliographic elements (journal title, volume/issue/page format, DOI suffix, PMID/PMCID) are inconsistent with each other and with known BMJ publishing practices. While the authors and title reflect real research themes, the specific citation as presented does not correspond to an actual published article.",
+    "authors": "The author list (Campos\u2011Mercade\u202fP, Meier\u202fAN, Schneider\u202fFH, Meier\u202fS, Pope\u202fD, Wengstr\u00f6m\u202fE) corresponds to real researchers who have published on T\u2011cell immunity to SARS\u2011CoV\u20112, but no record shows they co\u2011authored a paper with this exact title in the BMJ.",
+    "title": "The title \"Cross\u2011reactive CD4(+) T cells enhance SARS\u2011CoV\u20112 immune responses upon infection and vaccination\" matches the theme of several genuine studies (e.g., articles in Nature Immunology, Cell Reports), but it does not appear as a BMJ article.",
+    "journal_name": "BMJ (British Medical Journal) does not publish basic immunology mechanistic papers of this type; its article format uses article numbers (e.g., BMJ. 2021;374:n1234) rather than volume\u2011issue\u2011page ranges like 374(3491):204-252.",
+    "journal_volume": "BMJ volume numbers for 2021 are in the 370\u2011372 range; issue numbers are not four\u2011digit numbers like 3491. The cited volume\u2011issue format is inconsistent with BMJ\u2019s citation style.",
+    "journal_issue": "See volume comment; BMJ does not use issue numbers in the 3000\u20114000 range.",
+    "journal_page": "BMJ articles are identified by article numbers, not by inclusive page ranges such as 204\u2011252. This page range is atypical for BMJ.",
+    "elocator": "No article locator (e.g., an article number) is provided; the reference relies on a page range that BMJ does not use.",
+    "publication_date": "A BMJ article published on 12\u202fNov\u202f2021 would carry a short\u2011form date like \"2021 Nov 12;374:n1234\" (or similar). The date format is plausible but the surrounding citation elements are not.",
+    "doi": "The DOI prefix 10.1136 belongs to BMJ, but the suffix \"j.cell.2021.02.025\" corresponds to a Cell Press journal (e.g., *Journal of Cell Biology* or *Cell*). A genuine BMJ article would have a suffix like \"bmj.n1234\" or similar. Hence the DOI is mismatched.",
+    "pmcid": "PMCID PMC7616807 exists, but it is linked to a different publication (not the BMJ article in question).",
+    "pmid": "PMID 34819275, when looked up, resolves to a different article (not the one cited here). It does not match the purported BMJ paper."
+  }
+]

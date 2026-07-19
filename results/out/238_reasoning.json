@@ -1,0 +1,34 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "The reference has a valid DOI and most metadata (journal, volume, issue, pages, year) match a real editorial in Cell. However, the title is incorrectly given with typos. Additionally, authors are missing. Because the title is a key identifier and it is wrong, the reference as a whole is considered inauthentic. A citation must accurately represent the work; title errors undermine authenticity.",
+    "authors": "No authors provided in the citation. The reference begins with (2021), missing author names. For an editorial, authors may be omitted, but typically they are included. However, the absence of authors does not automatically make the reference inauthentic if the work exists. Given the other matching details, the lack of authors is a minor omission.",
+    "title": "The given title 'O fvariants and vcacines' contains clear typos. The correct title is 'On variants and vaccines'. This is a significant inaccuracy, making the title component inauthentic.",
+    "journal_name": "The journal is 'Cell', which is correct. Cell published this editorial in volume 184, issue 26.",
+    "journal_volume": "The volume is 184, which matches the Cell volume for 2021 where this editorial appears.",
+    "journal_issue": "The issue is 26, which is correct for this editorial in Cell (December 2021 issue).",
+    "journal_page": "The pages are 6222-6223. This matches the editorial 'On variants and vaccines' in Cell, volume 184, issue 26.",
+    "elocator": "No elocator provided; not applicable for this reference.",
+    "publication_date": "Only year (2021) is given. The editorial was published in 2021. The year is correct.",
+    "doi": "The DOI 10.1016/j.cell.2021.11.013 resolves to the correct editorial 'On variants and vaccines' in Cell. It is authentic.",
+    "pmcid": "No PMC ID provided; not applicable.",
+    "pmid": "No PMID provided; not applicable."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "vancouver",
+    "REFERENCE": "The citation contains valid metadata (DOI, Journal, Volume, Issue) but has a severely misspelled title and is missing authors.",
+    "authors": "No authors are listed in the provided citation string.",
+    "title": "The title 'O fvariants and vcacines' appears to be a typo-ridden version of a possible title, but it does not match a known publication exactly in this journal.",
+    "journal_name": "Cell is a highly reputable, peer-reviewed scientific journal.",
+    "journal_volume": "Volume 184 is the correct volume for the journal Cell in the year 2021.",
+    "journal_issue": "Issue 26 of Volume 184 was published in December 2021.",
+    "journal_page": "The pages 6222-6223 exist in Cell Volume 184, Issue 26, but are associated with a different article title.",
+    "elocator": "No elocator was provided in the citation string.",
+    "publication_date": "December 22, 2021, matches the publication date for Cell Volume 184, Issue 26.",
+    "doi": "The DOI 10.1016/j.cell.2021.11.013 is a real DOI that points to an article in Cell, though the title provided in the prompt is misspelled.",
+    "pmcid": "No PMCID was provided in the citation string.",
+    "pmid": "No PMID was provided in the citation string."
+  }
+]

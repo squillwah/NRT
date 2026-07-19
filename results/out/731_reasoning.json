@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The citation contains multiple errors: the journal name 'Sciencs' is a misspelling, the DOI '10.6584.3/27ssk53a52r2' has an unusual format (extra dot and non-standard characters), the page number ':e966500' is oddly formatted, and the reference lacks a publication year. These issues strongly indicate the reference is fabricated or erroneous.",
+    "authors": "The author list appears plausible (names, initials, 'et al.') but cannot be independently verified. No obvious errors in the names themselves, but given the overall fabrication, the authors may be fabricated as well.",
+    "title": "The title 'How to attain gender equality in nursing\u2014an essay' is plausible and does not contain obvious errors, but it cannot be independently verified. Given the overall fabrication, the title may be fictional.",
+    "journal_name": "The journal name 'Sciencs' is a clear misspelling of 'Science' or another legitimate journal. This is a strong indicator of fabrication.",
+    "journal_volume": "No volume number is provided, so it cannot be evaluated. Its absence is not necessarily a sign of inauthenticity, but combined with other errors it is suspicious.",
+    "journal_issue": "No issue number is provided, so it cannot be evaluated. Its absence is not necessarily a sign of inauthenticity, but combined with other errors it is suspicious.",
+    "journal_page": "Same as elocator; the colon prefix is non-standard. Additionally, no page range is given, only an e-locator. This is suspicious.",
+    "elocator": "The page/elocator ':e966500' is unusual; a colon before the e-locator is not standard. While e-locators exist, this specific one is likely fabricated.",
+    "publication_date": "No publication year or date is provided, which is a critical omission for a valid reference. This alone makes the reference incomplete and suspect.",
+    "doi": "The DOI '10.6584.3/27ssk53a52r2' does not follow the standard DOI format (10.xxxx/yyyyy) and contains an extra dot and alphanumeric string that is unlikely to be a valid DOI.",
+    "pmcid": "No PMCID is provided, so it cannot be evaluated.",
+    "pmid": "No PMID is provided, so it cannot be evaluated."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "The entire citation is fabricated; the title, DOI, and elocator do not exist in the specified journal.",
+    "authors": "While N. Amara is a known researcher in some fields, there is no record of an article with this specific author list in Science.",
+    "title": "The title 'How to attain gender equality in nursing\u2014an essay' does not exist in the journal Science.",
+    "journal_name": "'Science (New oYrk, N.j.)' appears to be a misspelled attempt at 'Science (New York, N.Y.)', which is a valid journal name.",
+    "journal_volume": "No volume number was provided in the citation.",
+    "journal_issue": "No issue number was provided in the citation.",
+    "journal_page": "No page numbers are provided; an electronic locator was used instead.",
+    "elocator": "The e-locator 'e966500' does not correspond to any article in the journal Science.",
+    "publication_date": "No publication date was provided in the citation.",
+    "doi": "The DOI '10.6584.3/27ssk53a52r2' is syntactically malformed and does not resolve to any known publication.",
+    "pmcid": "No PMCID was provided in the citation.",
+    "pmid": "No PMID was provided in the citation."
+  },
+  {
+    "model": "minimax-m3",
+    "style": "vancouver",
+    "REFERENCE": "This reference appears to be entirely fabricated or AI-generated. Multiple components are invalid: the journal name 'Sciencs' is not a real journal, the DOI format is incorrect, the authors cannot be verified, and the page number format is unusual. All major identifying elements fail validation, strongly suggesting this is not a legitimate citation.",
+    "authors": "The authors listed do not match any known publication on gender equality in nursing. The combination of names is unusual and appears to be fabricated or AI-generated.",
+    "title": "The title 'How to attain gender equality in nursing\u2014an essay' is plausible but does not correspond to any known peer-reviewed publication. The phrasing 'an essay' is also unusual for a scientific journal article.",
+    "journal_name": "The journal name 'Sciencs' appears to be a misspelling or fabrication. There is no known journal with this name. It may be an attempt to mimic 'Science' or 'Sciences' but is not a legitimate journal name.",
+    "journal_volume": "No volume number is provided.",
+    "journal_issue": "No issue number is provided.",
+    "journal_page": "The page number 'e966500' is unusual. Legitimate page numbers typically follow standard numbering conventions and do not usually start with 'e' unless it's an article number in some journals, but the format here is atypical.",
+    "elocator": "No elocator is provided.",
+    "publication_date": "No publication date is provided in the reference.",
+    "doi": "The DOI '10.6584.3/27ssk53a52r2' does not follow the standard DOI format (which should be like 10.xxxx/yyyyy). Valid DOIs use a specific structure with a registered prefix and suffix. This DOI appears to be completely fabricated.",
+    "pmcid": "No PMCID is provided.",
+    "pmid": "No PMID is provided."
+  }
+]

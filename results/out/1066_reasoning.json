@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The citation appears fabricated due to multiple inconsistencies: the journal 'JAMA Transl Omics' does not exist; the DOI format is invalid (10.8601.11/w,m25sm6-g.g3hn,6-47zpqk); the PMID (317047450) is too long (9 digits vs. typical 8); and the PMCID (PMC80866310) is unusually long. The combination of a non-existent journal and nonsensical identifiers strongly suggests fabrication.",
+    "authors": "The author name 'Lane R.' is plausible but unsupported by the surrounding fake citation.",
+    "title": "The title 'Genomic landscape and clonal evolution of treatment-naive early-onset colorectal cancer: a multi-omic cohort analysis' sounds plausible, but no known article with this exact title exists.",
+    "journal_name": "Same as above: 'JAMA Transl Omics' is not a real journal.",
+    "journal_volume": "Volume '184' is plausible for a journal, but no supporting evidence.",
+    "journal_issue": "The journal name 'JAMA Transl Omics' is not a recognized publication. JAMA does not have a 'Transl Omics' subjournal.",
+    "journal_page": "The page range '1402-1406:e062379' is an unusual mix of page numbers and an e-locator, but not inherently impossible. However, in the context of a fake journal, it is likely fabricated.",
+    "elocator": "The e-locator 'e062379' is not a typical JAMA format and appears arbitrary, but could be plausible in some journals. However, given the overall fake context, it is likely false.",
+    "publication_date": "The date '2021 Mar 18' is a plausible date for a medical article, but without a real journal, it is likely fabricated.",
+    "doi": "The DOI string '10.8601.11/w,m25sm6-g.g3hn,6-47zpqk' contains commas, a missing slash, and an irregular pattern, clearly violating standard DOI format.",
+    "pmcid": "The PMCID 'PMC80866310' is 11 characters (including 'PMC'), with the numeric part '80866310' being 8 digits. While PMC IDs can be 8 digits, this specific ID is not found in any database and is likely made up.",
+    "pmid": "PMID '317047450' is 9 digits, which exceeds the standard 8-digit format. Valid PMIDs are 1-8 digits. This is clearly invalid."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "The citation is entirely fabricated, including a non-existent journal name, a fake DOI, and a title that does not exist in scientific literature.",
+    "authors": "I could not find a researcher named R. Lane who authored this specific study or matches this citation's profile.",
+    "title": "The title appears to be a hallucinated blend of common genomic research terminology; no such article exists in medical databases.",
+    "journal_name": "'JAMA Translational Omics' is not an existing journal in the JAMA Network or elsewhere.",
+    "journal_volume": "As the journal itself is non-existent, the volume number 184 cannot be verified as valid for this context.",
+    "journal_issue": "No issue number was provided in the citation, and the associated volume is invalid.",
+    "journal_page": "The page range 1402-1406 does not correspond to any known publication under this title or journal.",
+    "elocator": "The elocator e062379 does not resolve to any real article and follows a format not used by JAMA journals.",
+    "publication_date": "While 2021 is a plausible year for genomic research, it is attached to a fabricated reference.",
+    "doi": "The DOI provided (10.8601.11/w,m25sm6-g.g3hn,6-47zpqk) is syntactically incorrect and does not exist in the DOI system.",
+    "pmcid": "No PMCID was provided, and the study cannot be found in PubMed Central.",
+    "pmid": "No PMID was provided, and the study cannot be found on PubMed."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "vancouver",
+    "REFERENCE": "The citation appears to be **fabricated or unreliable**. Key red flags include: an invalid DOI format (contains commas and irregular characters, not following the standard 10.XXXX/ pattern); an unlikely journal name (\"JAMA Transl Omics\" does not correspond to a well-known journal, possibly a confusion with JAMA or another translational journal); and inconsistent page/volume numbering. The author and title are plausible but cannot be verified as authentic without further evidence. Overall, this reference is likely not genuine and should not be cited.",
+    "authors": "The author is listed as 'Lane R.' \u2014 a plausible surname (Lane) with an initial (R.), but this is a common name and there is insufficient detail to verify. It could be a real author, but in the context of other questionable elements, it might be part of a fabricated citation.",
+    "title": "The title 'Genomic landscape and clonal evolution of treatment-naive early-onset colorectal cancer: a multi-omic cohort analysis' is a plausible scientific title. It describes a study that could exist, but it cannot be verified as real without a valid journal and DOI. The title may be fabricated or copied from a similar real study.",
+    "journal_name": "'JAMA Transl Omics' is not a valid journal name. It may be a confused or fabricated title, possibly intended to mimic 'JAMA Oncology' or 'JAMA (Journal of the American Medical Association)' but with added words that do not exist. No such journal is indexed in PubMed or other major databases.",
+    "journal_volume": "Volume '184' is mentioned. For some journals like JAMA, volume numbers can be in the hundreds, but without a valid journal name, this cannot be verified. The volume alone is not a strong indicator of authenticity.",
+    "journal_issue": "The journal 'JAMA Transl Omics' is not a recognized publication. Likely intended to reference a JAMA journal or a translational omics journal, but the name is incorrect. There is no journal with this exact name in major databases.",
+    "journal_page": "The page range '1402-1406' is formatted as '184:1402-1406', which could be interpreted as volume 184, pages 1402-1406. This is a short article (5 pages), which is possible, but the volume number is unusually high for many journals unless it's a long-running journal. Given other issues, this might be fabricated.",
+    "elocator": "The page numbers '184:1402-1406' suggest volume 184, pages 1402-1406. While JAMA and similar journals have high volumes, the combination of volume 184 with these pages does not match known JAMA-related journals. This could be an error or part of a fabricated citation.",
+    "publication_date": "The date '2021 Mar 18' is plausible and in a standard format. However, it cannot be verified as accurate due to other invalid components. It could be real or fabricated.",
+    "doi": "The DOI 'doi:10.8601.11/w,m25sm6-g.g3hn,6-47zpqk' is invalid. DOIs are typically in the format 10.XXXX/... with alphanumeric characters and sometimes hyphens or underscores. This contains commas, a period in an unusual place, and characters that do not conform to DOI standards. It is likely randomly generated or fabricated.",
+    "pmcid": "No PMCID is provided in the citation. The absence of a PMCID is not necessarily a red flag, but combined with other issues, it adds to the lack of verifiability.",
+    "pmid": "No PMID is provided. The absence of a PMID is common in many citations, but with other invalid elements, it cannot be used to verify the reference."
+  }
+]

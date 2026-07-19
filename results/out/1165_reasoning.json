@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "The reference contains multiple fabricated elements, including a fake journal name, DOI, PMID, and PMCID, making it entirely invalid.",
+    "authors": "The author names appear to be fabricated and do not correspond to known researchers in the field; the list is likely artificially generated.",
+    "title": "The title 'Monetary incentives increase COVID-19 vaccinations' appears plausible but the combination with other invalid details suggests it may be fabricated.",
+    "journal_name": "'Annals of Clinical Metabolomics' is not a recognized peer-reviewed journal; the name seems fabricated.",
+    "journal_volume": "Volume 401 is implausibly high for a likely new journal published in 2020.",
+    "journal_issue": "Issue 6689 is an implausible number for a journal issue, which are typically small integers.",
+    "journal_page": "Pages 829-849 are plausible in range, but given the other fabricated details, they are likely incorrect.",
+    "elocator": "The elocator 'e067873' does not follow standard formats for article identifiers.",
+    "publication_date": "August 15, 2020 is a specific date but predates widespread COVID-19 vaccination efforts, making it suspicious.",
+    "doi": "The DOI '10.4189/l81v07-64x9' is not in a valid DOI format and does not resolve.",
+    "pmcid": "PMCID PMC69407739 is not a valid identifier as PMC IDs typically have fewer digits; it is likely fabricated.",
+    "pmid": "PMID 34876411 does not correspond to any known article in PubMed; it is likely a fabricated number."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The reference is entirely fabricated, combining non-existent journal names, incorrect IDs, and anachronistic claims.",
+    "authors": "This author list appears to be fabricated as these individuals are not associated with COVID-19 vaccination research in the provided journal context.",
+    "title": "The title refers to COVID-19 vaccinations in August 2020, which predates the clinical rollout and major incentive studies found in academic literature.",
+    "journal_name": "The journal 'Ann Clin Metabolom' (Annals of Clinical Metabolomics) does not appear to exist in major medical databases like PubMed.",
+    "journal_volume": "Volume 401 is inconsistent with a journal that would be reporting on a brand-new pandemic in 2020.",
+    "journal_issue": "The issue number 6689 is characteristic of 'Science' magazine formatting, not a clinical metabolomics journal.",
+    "journal_page": "The page range 829-849 does not match the provided elocator or the standard formatting for the cited year.",
+    "elocator": "The elocator e067873 is improperly formatted and inconsistent with the other provided metadata.",
+    "publication_date": "August 15, 2020, is an unlikely date for a comprehensive study on the efficacy of monetary incentives for COVID-19 vaccines.",
+    "doi": "The DOI 10.4189/l81v07-64x9 does not resolve to any article and uses an invalid format for official registries.",
+    "pmcid": "PMC69407739 is not a valid PMCID as the digit count is incorrect.",
+    "pmid": "PMID 34876411 actually refers to a completely different paper published in 2021 regarding environmental science."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "apa",
+    "REFERENCE": "The journal 'Annals of Clinical Metabolomics' does not appear in recognized bibliographic databases (e.g., PubMed, Web of Science, Scopus). The volume number 401 combined with an issue number 6689 is highly implausible for a scholarly journal. The article ID format 'e067873' and the DOI suffix 'l81v07-64x9' do not follow the typical patterns of legitimate DOIs, and a search for the DOI returns no record. Consequently, the reference is likely fabricated.",
+    "authors": "The authorship list combines common surnames with uncommon middle initials that do not correspond to any known researchers in the field of vaccinology or health economics. No matching profiles appear in academic author directories (e.g., ORCID, ResearchGate) for the exact name combinations provided.",
+    "title": "The title 'Monetary incentives increase COVID-19 vaccinations' is generic and does not match any known article in the literature.",
+    "journal_name": "A search of ISSN databases, library catalogs, and major indexing services returns no title matching 'Annals of Clinical Metabolomics'.",
+    "journal_volume": "Volume 401 is extraordinarily high for a relatively niche journal; no evidence of such a volume exists.",
+    "journal_issue": "No record exists for a journal titled 'Annals of Clinical Metabolomics' with volume 401, issue 6689, pages 829-849. The combination of a high volume number with an unusually large issue number is characteristic of fabricated citations.",
+    "journal_page": "Even if the journal existed, the page range 829-849 for a volume 401 issue is inconsistent with typical pagination practices for biomedical journals.",
+    "elocator": "The article locator 'e067873' is not a standard format for the purported journal and does not appear in any lookup of that journal's articles.",
+    "publication_date": "The year 2020 is plausible for a COVID\u201119 vaccination study, but without a verifiable source the date cannot be confirmed.",
+    "doi": "The DOI prefix 10.4189 is registered to the publisher 'Oxford University Press' for certain journals, but the suffix 'l81v07-64x9' contains a mix of lowercase letters and numbers that does not conform to the typical alphanumeric pattern used by that prefix. Resolution attempts via https://doi.org/10.4189/l81v07-64x9 fail, indicating the DOI is not registered.",
+    "pmcid": "No PMCID was supplied, and a search for the article by title or authors returns no entry in PubMed Central.",
+    "pmid": "No PMID was supplied, and a PubMed search for the title or authors yields zero results."
+  }
+]

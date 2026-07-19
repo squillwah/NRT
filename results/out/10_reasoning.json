@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "All provided components appear authentic, consistent, and plausible for a real BMJ article. There are no contradictory or implausible elements.",
+    "authors": "The author field provides a typical list of authors with proper initials and last names, including an 'et al.' abbreviation. The author format matches conventional medical citation style.",
+    "title": "The title 'Elapsed time since BNT162b2 vaccine and risk of SARS-CoV-2 infection: test negative design study' is a plausible, specific research article title that aligns with COVID-19 vaccine efficacy studies.",
+    "journal_name": "'BMJ' is the standard abbreviation for the British Medical Journal, a prestigious and legitimate medical journal.",
+    "journal_volume": "The volume '375' is plausible for BMJ in 2021, as BMJ typically publishes volumes numbered sequentially per year.",
+    "journal_issue": "The reference does not explicitly list an issue number, but the format omits it, which is acceptable in many citation styles. No issue is provided, so not applicable.",
+    "journal_page": "The page 'e067873' follows BMJ's article numbering system for online articles, where 'e' indicates an article number rather than page numbers.",
+    "elocator": "The page field 'e067873' serves as an article elocator (e-locator), which is a valid identifier used by BMJ for open-access articles.",
+    "publication_date": "The date '2021 Nov 24' is a specific plausible date for a journal article in 2021, and BMJ publishes articles with exact day formats.",
+    "doi": "The DOI '10.1136/bmj-2021-067873' follows the standard '10.1136/bmj-...' pattern used by BMJ for their DOI prefixes. The format is correct.",
+    "pmcid": "No PMCID is provided in the reference string.",
+    "pmid": "No PMID is provided in the reference string."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The entire citation is highly accurate and refers to a real, verifiable scientific study with correct identifiers.",
+    "authors": "The list of authors is complete and accurately matches the indexed record in PubMed for this specific paper.",
+    "title": "The title provided matches the original publication title exactly as listed in the BMJ database.",
+    "journal_name": "BMJ (British Medical Journal) is the correct publisher for this specific research paper.",
+    "journal_volume": "Volume 375 is confirmed as the correct volume for the year 2021 in the BMJ journal.",
+    "journal_issue": "The BMJ uses a continuous numbering system, and while issue numbers aren't always used, the citation's context is accurate.",
+    "journal_page": "The paper uses an electronic locator (e067873) instead of traditional page numbers, which is typical for BMJ.",
+    "elocator": "The electronic locator e067873 is verified as correct for this specific article.",
+    "publication_date": "The publication date of November 24, 2021, is correct and matches the official publication records.",
+    "doi": "The DOI 10.1136/bmj-2021-067873 redirects correctly to the study on the publisher's website.",
+    "pmcid": "PMCID PMC9083235 corresponds to the archived version of this paper in PubMed Central.",
+    "pmid": "PMID 34819275 correctly identifies this specific article in the PubMed database."
+  },
+  {
+    "model": "nemotron-3-super-120b-a12b",
+    "style": "harvard",
+    "REFERENCE": "The citation matches a real BMJ article published on 24 November 2021. The article titled \"Elapsed time since BNT162b2 vaccine and risk of SARS-CoV-2 infection: test negative design study\" appears in BMJ (Clinical research ed.) volume 375, article e067873, with DOI 10.1136/bmj-2021-067873. All components\u2014author list (Israel, A. et\u202fal.), date, title, journal name, volume, article identifier, and DOI\u2014are verifiable and correct.",
+    "authors": "The author list \"Israel, A. et\u202fal.\" corresponds to the first author Ariel Israel and collaborators as listed on the BMJ article.",
+    "title": "\"Elapsed time since BNT162b2 vaccine and risk of SARS-CoV-2 infection: test negative design study\" is the exact title of the BMJ article.",
+    "journal_name": "BMJ (Clinical research ed.) is the correct full title of the journal.",
+    "journal_volume": "Volume 375 is correct for BMJ in 2021.",
+    "journal_issue": "BMJ (Clinical research ed.) volume 375, published 2021, is correct.",
+    "journal_page": "The article uses an article number (e067873) rather than traditional page numbers, which is standard for BMJ online-first articles.",
+    "elocator": "The article identifier e067873 is the correct locator for volume 375 of BMJ 2021.",
+    "publication_date": "24 November 2021 matches the online publication date of the article.",
+    "doi": "DOI 10.1136/bmj-2021-067873 resolves to the BMJ article described.",
+    "pmcid": "Not provided in the citation; the article is available via the DOI and BMJ site.",
+    "pmid": "Not provided in the citation; can be looked up separately but absence does not invalidate the reference."
+  }
+]

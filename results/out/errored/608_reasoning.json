@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference as a whole contains multiple severe typographical errors in the title and journal name, and an invalid DOI. These are strong indicators of fabrication or extreme carelessness. The combination of errors makes it highly unlikely to be an authentic citation.",
+    "authors": "Author names appear plausible but lack specific verification; only surname and 'et al.' are given.",
+    "title": "The title contains multiple obvious typographical errors (e.g., 'ihequity', 'ingvlobal', 'nthe', 'woll', 'fod') that severely deviate from a correct published title. Such errors are highly unlikely in a legitimate citation.",
+    "journal_name": "The journal name 'BMJ( Clinical rfsearch ed.)' contains a typo ('rfsearch' instead of 'research') and irregular spacing; while BMJ Clinical Research Edition is a real journal, the typo suggests fabrication or careless transcription.",
+    "journal_volume": "Volume 375 is within the range for BMJ in 2021 (BMJ volumes are 372-375 for that year), so this component alone is plausible.",
+    "journal_issue": "No issue number is provided, which is acceptable for some BMJ article types (e.g., online first). Not a clear indicator of falsity.",
+    "journal_page": "No page numbers are given; many BMJ articles are cited without pages (e.g., using article numbers). Not inherently suspicious.",
+    "elocator": "No elocator provided; not applicable.",
+    "publication_date": "The date '2021 Nov 19' is a plausible format and corresponds to a real date, but it cannot be confirmed without the actual article.",
+    "doi": "The DOI '10.6963.8.5/bjo0ev,-b4p-8c22f' does not follow standard DOI syntax (no slash after prefix, contains a comma and hyphens in atypical positions). Most likely fabricated.",
+    "pmcid": "No PMCID provided; not applicable.",
+    "pmid": "No PMID provided; not applicable."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "While the authors and journal exist, the title is riddled with typos and the DOI is completely fabricated; this appears to be a hallucinated or corrupted reference.",
+    "authors": "Gaurab Khullar and colleagues are indeed authors who write on global health equity.",
+    "title": "The title contains several typographical errors ('ihequity', 'ingvlobal', 'woll', 'fod') and does not match a known publication title.",
+    "journal_name": "The BMJ (Clinical Research ed.) is a legitimate journal, though the parenthetical spelling here has a typo ('rfsearch').",
+    "journal_volume": "The BMJ did publish volume 375 in late 2021.",
+    "journal_issue": "The issue number is not explicitly provided in the citation apart from the page/locator.",
+    "journal_page": "The value 375 refers to the volume, and no specific page range is provided.",
+    "elocator": "No valid e-location ID is provided; the text provided is a malformed DOI string.",
+    "publication_date": "November 19, 2021, is a valid date within the publication window of BMJ volume 375.",
+    "doi": "The DOI 10.6963.8.5/bjo0ev,-b4p-8c22f is syntactically incorrect and does not resolve to any known paper.",
+    "pmcid": "No PubMed Central ID was provided in the citation.",
+    "pmid": "No PubMed ID was provided in the citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "vancouver",
+    "REFERENCE": "Multiple red flags indicate this citation is fabricated or severely corrupted: (1) The title contains numerous typos and misspellings ('ihequity', 'ingvlobal', 'nthet world', 'woll', 'fod') that would never pass peer review or publication in any legitimate journal. (2) The journal is listed as 'BJM' which appears to be a misspelling of 'BMJ' (British Medical Journal). (3) The DOI format 'doi:10.6963.8.5/bjo0ev,-b4p-8c22f' is structurally invalid\u2014BMJ DOIs use the prefix '10.1136' and never contain characters like commas or hyphens in this pattern. The prefix '10.6963' does not correspond to any known publisher. (4) While some author names (e.g., Grubaugh ND, Ho DD, Dudley JT) correspond to real researchers, the combination and topic do not appear to match any verified publication. This citation appears to be an AI-generated hallucination.",
+    "authors": "Author names include recognizable researcher names (Grubaugh ND, Ho DD, Dudley JT, Anderson DJ), but no verified publication with this exact author list, title, and journal combination exists. The 'et al.' truncation is standard but cannot be verified here.",
+    "title": null,
+    "journal_name": "Listed as 'BJM' \u2014 likely intended to be 'BMJ' (British Medical Journal), but is misspelled. The misspelling is itself a sign of fabrication or error.",
+    "journal_volume": null,
+    "journal_issue": "The issue is not explicitly listed. Volume 375 is plausible for BMJ in 2021, but the journal name is misspelled as 'BJM' instead of 'BMJ', which undermines credibility.",
+    "journal_page": "Only volume '375' is provided; no page numbers are included. Given that the DOI and journal name are invalid, no page range can be verified.",
+    "elocator": "The e-locator '375' is plausible as a BMJ volume number for 2021 but cannot be verified due to the invalid DOI and journal name.",
+    "publication_date": null,
+    "doi": "The DOI '10.6963.8.5/bjo0ev,-b4p-8c22f' is invalid. It does not follow standard DOI syntax. BMJ DOIs use the prefix '10.1136'. The prefix '10.6963' is not recognized, and the suffix contains irregular characters (commas, hyphens in a nonsensical pattern) that are not found in legitimate DOIs.",
+    "pmcid": null,
+    "pmid": null
+  }
+]

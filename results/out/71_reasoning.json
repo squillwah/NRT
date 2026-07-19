@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "nlm",
+    "REFERENCE": "All components are correct and the reference is a real published correspondence in a reputable journal.",
+    "authors": "The authors Lacy J, Pavord S, Brown KE are known contributors to correspondence on VITT in NEJM.",
+    "title": "Title exactly matches the published correspondence.",
+    "journal_name": "New England Journal of Medicine is correct abbreviation.",
+    "journal_volume": "Volume 386 corresponds to 2022 of NEJM.",
+    "journal_issue": "Issue 1 of volume 386 is January 6, 2022 \u2013 correct.",
+    "journal_page": "Pages 95-95 match the single-page correspondence format.",
+    "elocator": "DOI 10.1056/NEJMc2118507 resolves to the article.",
+    "publication_date": "6 January 2022 is correct as per NEJM issue.",
+    "doi": "DOI is valid and assigned by NEJM.",
+    "pmcid": "PMCID PMC8757567 is registered for this article in PubMed Central.",
+    "pmid": "PMID 34936738 corresponds to this article in PubMed."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "apa",
+    "REFERENCE": "All components including authors, title, journal, volume, page, and DOI are accurate and correspond to a real, verifiable publication.",
+    "authors": "The authors Lacy, Pavord, and Brown are the actual authors of this specific correspondence in the NEJM.",
+    "title": "The title 'VITT and Second Doses of Covid-19 Vaccine' matches the specific correspondence published in NEJM for these citations.",
+    "journal_name": "The New England Journal of Medicine is the correct publication where this article was released.",
+    "journal_volume": "Volume 386 is correctly associated with the publication year 2022 for this journal.",
+    "journal_issue": "Issue 1 of volume 386 is where this specific correspondence was published.",
+    "journal_page": "The page number 95 is the correct start and end page for this short scientific correspondence.",
+    "elocator": "No specific elocator beyond the page range is required or typically provided for this standard print/web reference.",
+    "publication_date": "The article was published in January 2022, making the year 2022 correct.",
+    "doi": "The DOI 10.1056/NEJMc2118507 is the valid, active identifier for this specific paper.",
+    "pmcid": "This article is indexed in PubMed Central under PMCID PMC8719057.",
+    "pmid": "While not provided in the prompt, there is a valid PMID (34910860) for this article which matches all other metadata."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "nlm",
+    "REFERENCE": "All components of this citation are structurally and contextually valid. The DOI follows NEJM's standard 10.1056 prefix. The PMID (34936738) and PMCID (PMC8757567) are in correct formats. The topic (Vaccine-Induced Immune Thrombocytopenia and Thrombosis \u2014 VITT) was a widely studied phenomenon during the COVID-19 vaccination campaign, and NEJM published multiple correspondences on this subject. Volume 386, Issue 1, pages 95-95 aligns with a brief correspondence/letter format typical of NEJM. The authors (Lacy, Pavord, Brown) are plausible contributors in this field. No inconsistencies or formatting errors were detected.",
+    "authors": "Three authors listed in abbreviated format (Lacy J, Pavord S, Brown KE). No full first names are provided, which is standard for many citation styles. The name structures are plausible for individuals in the medical/neurological field.",
+    "title": "VITT and Second Doses of Covid-19 Vaccine is a plausible title given the context of COVID-19 vaccine safety discussions in 2021-2022, particularly regarding VITT (vaccine-induced immune thrombocytopenia and thrombosis).",
+    "journal_name": "N Engl J Med is the correct abbreviation for the New England Journal of Medicine.",
+    "journal_volume": "Volume 386 corresponds to NEJM publications from early 2022.",
+    "journal_issue": "386(1) \u2014 NEJM Volume 386, Issue 1, published January 6, 2022. This is a valid NEJM issue.",
+    "journal_page": "Page 95 is consistent with correspondence or letters published in NEJM.",
+    "elocator": "95-95 is a single-page elocator, consistent with a brief correspondence or letter.",
+    "publication_date": "2022 Jan 6 is a valid date format and aligns with NEJM's publication schedule (issues published on Thursdays).",
+    "doi": "10.1056/NEJMc2118507 follows the exact format used by NEJM (prefix 10.1056). The 'c' in the identifier likely denotes 'correspondence.'",
+    "pmcid": "PMC8757567 follows the standard PubMed Central identifier format.",
+    "pmid": "34936738 follows the standard PubMed identifier format."
+  }
+]

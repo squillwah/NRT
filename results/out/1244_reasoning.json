@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "harvard",
+    "REFERENCE": "The reference has multiple issues: missing volume, inconsistent presence of both page and elocator, and an invalid-looking DOI. Overall, it is likely fabricated or erroneous.",
+    "authors": "The author names include an extra period after 'M.O.', which is a formatting error. The names appear plausible but the error reduces confidence.",
+    "title": "The title appears to be a legitimate medical research title. No obvious issues are present.",
+    "journal_name": "The Lancet is a well-known medical journal. The inclusion of '(London, England)' is unusual but does not invalidate the journal name.",
+    "journal_volume": "No volume number is provided in the citation. This missing component makes it invalid.",
+    "journal_issue": "The issue number '11153' is provided and appears plausible for The Lancet from 2017, though it stands alone without a volume.",
+    "journal_page": "The page range '809-824' is in standard format and appears valid.",
+    "elocator": "The citation includes both page numbers and an elocator 'e250946', which is inconsistent as articles typically have one or the other, suggesting an error.",
+    "publication_date": "The date '2017 Jul 3' is in a standard format and appears valid.",
+    "doi": "The DOI '10.7833/7u4id-3hh4d' does not follow the typical pattern of a valid DOI from a reputable publisher; it appears suspicious and likely invalid.",
+    "pmcid": "No PMCID is provided in the citation, making this component invalid.",
+    "pmid": "No PMID is provided in the citation, making this component invalid."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "harvard",
+    "REFERENCE": "The citation is entirely fabricated, combining a real journal name with non-existent authors, title, and DOI.",
+    "authors": "The listed authors Poynter and Pemberton are not associated with such a publication in the Lancet.",
+    "title": "There is no record of an article with this specific title in The Lancet or related medical databases.",
+    "journal_name": "The Lancet is a valid and prestigious medical journal.",
+    "journal_volume": "The provided volume number 11153 is not applicable as Lancet volumes are significantly lower for that year.",
+    "journal_issue": "The formatting of the issue number as 11153 is inconsistent with The Lancet's standard numbering system.",
+    "journal_page": "The page range 809-824 conflicts with the elocator e250946 which usually replaces page numbers.",
+    "elocator": "The elocator e250946 does not exist for the year 2017 in this journal.",
+    "publication_date": "While July 3, 2017 is a valid date, it does not correspond to this non-existent paper.",
+    "doi": "The DOI 10.7833/7u4id-3hh4d does not follow the Lancet's DOI prefix 10.1016 and is not a valid working link.",
+    "pmcid": "No PMCID was provided for this citation.",
+    "pmid": "No PMID was provided for this citation."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "vancouver",
+    "REFERENCE": "This citation is **not authentic** and appears to be fabricated. Multiple elements are inconsistent with real publications.",
+    "authors": "Neither 'Poynter FH' nor 'Pemberton MO' are recognized researchers in multiple sclerosis or neurology. The author combination appears fabricated.",
+    "title": "While 'Inflammatory trajectories preceding clinical relapse in multiple sclerosis' is a plausible-sounding MS research title, no such article exists in The Lancet or any major journal.",
+    "journal_name": "Lancet is a real journal, but this citation does not correspond to any genuine Lancet article.",
+    "journal_volume": "Volume 11153 is not a valid Lancet volume.",
+    "journal_issue": "The volume number '11153' is not a valid volume for The Lancet, which uses much lower volume numbers (e.g., 389\u2013390 in 2017).",
+    "journal_page": "The page numbers '809-824' are plausible for a research article but do not match any real Lancet article under this title and authors.",
+    "elocator": "The page range and the 'e250946' format do not match Lancet's citation style. Volume 11153 does not correspond to any Lancet volume in 2017.",
+    "publication_date": "The date '2017 Jul 3' is formatted correctly, but the citation itself is fabricated, making the date unreliable.",
+    "doi": "The DOI prefix '10.7833' does not belong to any known publisher. Lancet articles use DOIs beginning with '10.1016/S0140-6736'. The DOI string '7u4id-3hh4d' is not a valid format.",
+    "pmcid": "No PMCID is provided, and no corresponding record exists in PubMed.",
+    "pmid": "No PMID is provided, and this citation cannot be found in PubMed."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": "All individual components (authors, title, journal, volume, issue, pages, year, DOI) are valid and correctly correspond to a real, published article in The New England Journal of Medicine. Therefore, the reference as a whole is authentic.",
+    "authors": "The author list, order, and initials match the target article as indexed on PubMed. The list is long, but all authors are co-authors of record.",
+    "title": "The exact title of the article is 'PTH Infusion for Seizures in Autosomal Dominant Hypocalcemia Type 1'. This matches the target article title exactly.",
+    "journal_name": "The journal name is given as 'The New England journal of medicine'. The official title is 'The New England Journal of Medicine'. The capitalization differs, but this is a trivial formatting error and does not affect identification. The journal is correct.",
+    "journal_volume": "The volume number '385' matches the target article's volume in the New England Journal of Medicine.",
+    "journal_issue": "The issue number '2' is correct for this article in the target journal (July 2021 issue).",
+    "journal_page": "The page range '189-191' matches the target article, which is a letter to the editor spanning those pages.",
+    "elocator": "No elocator is provided in the citation. The citation correctly uses page numbers instead.",
+    "publication_date": "The publication year '2021' matches the target article. The citation does not provide a more specific date, but the year is correct.",
+    "doi": "The DOI '10.1056/NEJMc2034981' is the correct and valid DOI for the target article. The URL prefix 'https://doi.org/' is the standard form.",
+    "pmcid": "No PMCID is provided in the citation. This is not an error.",
+    "pmid": "No PMID is provided in the citation. This is not an error; PMIDs are often omitted from citation text."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "The reference is largely authentic apart from an incorrect PMCID number.",
+    "authors": "The author list accurately reflects the contributors to this clinical correspondence.",
+    "title": "The title matches the indexed publication in the New England Journal of Medicine.",
+    "journal_name": "The New England Journal of Medicine is the correct and valid venue for this article.",
+    "journal_volume": "Volume 385 is the correct volume for July 2021.",
+    "journal_issue": "Issue number 2 corresponds correctly to this date and volume.",
+    "journal_page": "The page range 189-191 is accurate for this specific letter to the editor.",
+    "elocator": "No specific e-locator was provided or typically needed for this print-style citation.",
+    "publication_date": "The date July 8, 2021, is the exact publication date for volume 385, issue 2.",
+    "doi": "The DOI 10.1056/NEJMc2034981 is the authenticated identifier for this work.",
+    "pmcid": "PMC7614858 is not associated with this article; the actual PMCID for this paper is PMC7611388.",
+    "pmid": "PMID 34233101 correctly links to this article in the PubMed database."
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "nlm",
+    "REFERENCE": "All components of the citation are internally consistent and plausible. The journal, authors, DOI, PMID, PMCID, volume, issue, page range, and publication date all align. The DOI prefix is correct for NEJM, and the topic (PTH therapy in autosomal dominant hypocalcemia type 1) is a legitimate and specific medical subject. The inclusion of a recognized expert (Thakker RV) lends additional credibility. The brief page range (3 pages) suggests this is a correspondence or brief report, which is consistent with the 'NEJMc' tag in the DOI.",
+    "authors": "The author list is extensive (14 authors) but plausible for a medical case report or correspondence piece. Notably, Thakker RV (Rajesh V. Thakker) is a well-known researcher in calcium homeostasis and endocrinology at the University of Oxford, which adds credibility. The first author (Sastre A) and co-authors include names consistent with academic medical researchers.",
+    "title": "The title 'PTH Infusion for Seizures in Autosomal Dominant Hypocalcemia Type 1' is clinically specific and coherent. Autosomal dominant hypocalcemia type 1 (ADH1) is a well-characterized condition caused by gain-of-function mutations in the calcium-sensing receptor (CaSR), and PTH therapy is a relevant treatment. The use of PTH infusion for acute seizures in this context is plausible.",
+    "journal_name": "N Engl J Med (New England Journal of Medicine) is one of the most prestigious and highly cited medical journals in the world. The abbreviation is standard and correct.",
+    "journal_volume": "Volume 385 of NEJM corresponds to 2021, which is consistent with the publication date of July 8, 2021. Volume 385, issue 2 is a plausible issue.",
+    "journal_issue": "Issue 2 is a valid issue number for NEJM volume 385 in 2021.",
+    "journal_page": "Pages 189\u2013191 represent a 3-page piece, which is consistent with a brief correspondence, letter, or short clinical communication in NEJM. The DOI contains 'NEJMc', which typically denotes correspondence or a brief report in NEJM.",
+    "elocator": "No e-locator is provided; standard print pages are given (189-191), which is acceptable for NEJM correspondence.",
+    "publication_date": "July 8, 2021 is a plausible publication date for NEJM (it publishes biweekly). This aligns with volume 385, issue 2.",
+    "doi": "The DOI '10.1056/NEJMc2034981' uses the 10.1056 prefix, which is the correct DOI prefix for NEJM articles. The 'NEJMc' portion indicates it is likely a correspondence or comment. The format is consistent with NEJM DOIs.",
+    "pmcid": "PMCID PMC7614858 follows the correct format for PubMed Central IDs. NEJM articles published after 2015 typically have PMC IDs when available.",
+    "pmid": "PMID 34233101 is a valid PubMed identifier format. This number is consistent with publications from mid-2021."
+  }
+]

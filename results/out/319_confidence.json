@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "apa",
+    "REFERENCE": 0.95,
+    "authors": 0.85,
+    "title": 1.0,
+    "journal_name": 1.0,
+    "journal_volume": 1.0,
+    "journal_issue": 1.0,
+    "journal_page": 0.6,
+    "elocator": 1.0,
+    "publication_date": 0.7,
+    "doi": 1.0,
+    "pmcid": 1.0,
+    "pmid": 1.0
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": 0.9,
+    "authors": 0.9,
+    "title": 0.5,
+    "journal_name": 1.0,
+    "journal_volume": 0.5,
+    "journal_issue": 0.5,
+    "journal_page": 0.8,
+    "elocator": 0.3,
+    "publication_date": 1.0,
+    "doi": 0.99,
+    "pmcid": 0.95,
+    "pmid": 1.0
+  },
+  {
+    "model": "mimo-v2.5",
+    "style": "harvard",
+    "REFERENCE": 0.95,
+    "authors": 0.9,
+    "title": 0.3,
+    "journal_name": 0.9,
+    "journal_volume": 0.3,
+    "journal_issue": 0.85,
+    "journal_page": 0.5,
+    "elocator": 0.5,
+    "publication_date": 0.7,
+    "doi": 0.95,
+    "pmcid": 0.3,
+    "pmid": 0.3
+  }
+]

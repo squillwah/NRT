@@ -1,0 +1,34 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "style": "vancouver",
+    "REFERENCE": "The reference as a whole is inauthentic because the journal name, volume, and issue are fabricated. The authors, title, date, page, and DOI are real but are misattributed to a non-existent journal.",
+    "authors": "The authors (Georg P, et al.) are listed correctly for the real NEJM publication. No evidence of fabrication.",
+    "title": "The title matches a known NEJM article on complement activation and T cell cytotoxicity in severe COVID-19.",
+    "journal_name": "The journal 'J Extracell Vesicle Biol' does not exist (likely confused with 'Journal of Extracellular Vesicles' or the real journal 'New England Journal of Medicine'). The provided DOI (10.1056/NEJMc2119358) is assigned to NEJM, not to the named journal.",
+    "journal_volume": "Volume 163 is not a valid NEJM volume for a publication in 2022; NEJM volumes in early 2022 are in the 380s. This volume number is fabricated.",
+    "journal_issue": "Issue number 2 is inconsistent with the real NEJM article published in Issue 5 of Volume 386. Fabricated.",
+    "journal_page": "Page 493 matches the starting page of the real NEJM article (N Engl J Med 2022;386:493-504). Coincidentally correct.",
+    "elocator": "Not applicable; the reference uses page numbers.",
+    "publication_date": "The date '2022 Feb 3' is accurate for the original NEJM article.",
+    "doi": "DOI 10.1056/NEJMc2119358 is a valid NEJM DOI and corresponds to a letter/correspondence with similar title. Likely correct despite mismatch with journal name.",
+    "pmcid": "Not provided.",
+    "pmid": "Not provided."
+  },
+  {
+    "model": "gemini-3-flash-preview",
+    "style": "nlm",
+    "REFERENCE": "This is a 'hallucinated' reference that combines real author names and a real title with a fake journal and identifiers belonging to a completely different paper.",
+    "authors": "The authors list accurately reflects the researchers associated with a specific study on complement activation and COVID-19, though they are usually associated with a paper in 'Science'.",
+    "title": "The title matches a highly cited paper published in 'Science' in 2022, not the journal listed in the reference.",
+    "journal_name": "The journal 'J Extracell Vesicle Biol' does not exist in standard indices; the actual article was published in 'Science'.",
+    "journal_volume": "The volume 163 and issue (2) provided do not correspond to the actual publication in 'Science' (Vol 375, Issue 6578).",
+    "journal_issue": "Issue (2) is incorrect for the cited work which appeared in Science issue 6578.",
+    "journal_page": "Page 493 does not match the page range or e-location of the actual publication.",
+    "elocator": "No valid e-locator is provided in the string, and the numbers present are associated with invalid metadata.",
+    "publication_date": "The paper was published in early 2022 (January-February), making this date component seasonally plausible but specific metadata is linked to a different journal.",
+    "doi": "The DOI 10.1056/NEJMc2119358 actually resolves to a letter in the New England Journal of Medicine, not the 'Science' paper or the fake journal listed.",
+    "pmcid": "The PMCID PMC69102128 is too long and does not match the standard format or the source document.",
+    "pmid": "PMID 34879188 also points to the NEJM article 'Protection against SARS-CoV-2 after Vaccination and Previous Infection', not the T-cell study."
+  }
+]
