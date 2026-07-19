@@ -4,7 +4,7 @@
     "style": "vancouver",
     "REFERENCE": true,
     "authors": true,
-    "title": false,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,

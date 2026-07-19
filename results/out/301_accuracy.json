@@ -24,7 +24,7 @@
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": true,
-    "journal_page": false,
+    "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,

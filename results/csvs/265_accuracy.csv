@@ -3,4 +3,4 @@ deepseek-v4-flash,nlm,True,False,True,True,True,True,True,,True,True,False,True
 gemini-3-flash-preview,vancouver,False,False,True,True,True,True,True,,True,True,False,False
 mimo-v2.5,vancouver,False,False,True,True,True,True,True,,True,True,False,False
 minimax-m3,nlm,False,False,True,True,True,True,True,,True,True,True,True
-nemotron-3-super-120b-a12b,nlm,True,False,False,True,True,True,True,,True,False,False,False
+nemotron-3-super-120b-a12b,nlm,True,True,False,True,True,True,True,,True,False,False,False

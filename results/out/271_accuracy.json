@@ -12,7 +12,7 @@
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
+    "pmcid": true,
     "pmid": false
   },
   {

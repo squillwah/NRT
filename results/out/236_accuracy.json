@@ -19,7 +19,7 @@
     "model": "gemini-3-flash-preview",
     "style": "nlm",
     "REFERENCE": false,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,

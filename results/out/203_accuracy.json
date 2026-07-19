@@ -4,7 +4,7 @@
     "style": "apa",
     "REFERENCE": true,
     "authors": false,
-    "title": false,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": true,
@@ -20,7 +20,7 @@
     "style": "harvard",
     "REFERENCE": false,
     "authors": true,
-    "title": false,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": true,
@@ -28,7 +28,7 @@
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
+    "pmcid": true,
     "pmid": false
   },
   {
@@ -36,7 +36,7 @@
     "style": "apa",
     "REFERENCE": true,
     "authors": true,
-    "title": false,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": true,
@@ -44,7 +44,7 @@
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
+    "pmcid": true,
     "pmid": false
   },
   {
@@ -52,7 +52,7 @@
     "style": "harvard",
     "REFERENCE": false,
     "authors": true,
-    "title": false,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": true,

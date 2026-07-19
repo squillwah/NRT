@@ -29,7 +29,7 @@
     "publication_date": true,
     "doi": false,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
@@ -45,7 +45,7 @@
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "minimax-m3",

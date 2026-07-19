@@ -11,9 +11,9 @@
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
@@ -27,9 +27,9 @@
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
@@ -43,9 +43,9 @@
     "journal_page": null,
     "elocator": null,
     "publication_date": false,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "minimax-m3",
@@ -59,9 +59,9 @@
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "nemotron-3-super-120b-a12b",
@@ -75,8 +75,8 @@
     "journal_page": null,
     "elocator": null,
     "publication_date": false,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   }
 ]

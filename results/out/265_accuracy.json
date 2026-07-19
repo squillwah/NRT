@@ -67,7 +67,7 @@
     "model": "nemotron-3-super-120b-a12b",
     "style": "nlm",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": false,
     "journal_name": true,
     "journal_volume": true,

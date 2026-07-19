@@ -5,15 +5,15 @@
     "REFERENCE": true,
     "authors": true,
     "title": true,
-    "journal_name": false,
-    "journal_volume": false,
+    "journal_name": true,
+    "journal_volume": true,
     "journal_issue": true,
     "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
@@ -21,15 +21,15 @@
     "REFERENCE": false,
     "authors": true,
     "title": true,
-    "journal_name": false,
-    "journal_volume": false,
+    "journal_name": true,
+    "journal_volume": true,
     "journal_issue": true,
     "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
@@ -37,15 +37,15 @@
     "REFERENCE": true,
     "authors": false,
     "title": false,
-    "journal_name": false,
-    "journal_volume": false,
+    "journal_name": true,
+    "journal_volume": true,
     "journal_issue": false,
     "journal_page": false,
     "elocator": null,
     "publication_date": false,
     "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "minimax-m3",
@@ -53,15 +53,15 @@
     "REFERENCE": false,
     "authors": true,
     "title": true,
-    "journal_name": false,
-    "journal_volume": false,
+    "journal_name": true,
+    "journal_volume": true,
     "journal_issue": true,
     "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "nemotron-3-super-120b-a12b",
@@ -69,14 +69,14 @@
     "REFERENCE": true,
     "authors": true,
     "title": true,
-    "journal_name": false,
-    "journal_volume": false,
+    "journal_name": true,
+    "journal_volume": true,
     "journal_issue": false,
     "journal_page": false,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   }
 ]

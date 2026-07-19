@@ -5,7 +5,7 @@
     "REFERENCE": false,
     "authors": true,
     "title": true,
-    "journal_name": false,
+    "journal_name": true,
     "journal_volume": false,
     "journal_issue": true,
     "journal_page": true,
@@ -21,15 +21,15 @@
     "REFERENCE": false,
     "authors": true,
     "title": true,
-    "journal_name": false,
-    "journal_volume": false,
+    "journal_name": true,
+    "journal_volume": true,
     "journal_issue": true,
     "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
@@ -38,7 +38,7 @@
     "authors": true,
     "title": true,
     "journal_name": false,
-    "journal_volume": false,
+    "journal_volume": true,
     "journal_issue": false,
     "journal_page": true,
     "elocator": null,
@@ -61,7 +61,7 @@
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "nemotron-3-super-120b-a12b",
@@ -69,8 +69,8 @@
     "REFERENCE": true,
     "authors": true,
     "title": true,
-    "journal_name": false,
-    "journal_volume": false,
+    "journal_name": true,
+    "journal_volume": true,
     "journal_issue": true,
     "journal_page": true,
     "elocator": null,

@@ -3,7 +3,7 @@
     "model": "deepseek-v4-flash",
     "style": "apa",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,
@@ -11,15 +11,15 @@
     "journal_page": null,
     "elocator": true,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
     "style": "vancouver",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,
@@ -27,15 +27,15 @@
     "journal_page": null,
     "elocator": true,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "minimax-m3",
     "style": "apa",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,
@@ -43,8 +43,8 @@
     "journal_page": null,
     "elocator": true,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   }
 ]

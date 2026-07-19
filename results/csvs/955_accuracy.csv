@@ -1,3 +1,3 @@
 model,style,REFERENCE,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid
-deepseek-v4-flash,vancouver,True,True,True,False,False,False,True,,True,False,False,False
-gemini-3-flash-preview,nlm,True,True,True,False,False,False,False,,True,False,False,False
+deepseek-v4-flash,vancouver,True,True,True,True,True,True,True,,True,False,False,False
+gemini-3-flash-preview,nlm,True,True,True,True,True,True,False,,True,True,True,True

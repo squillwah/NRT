@@ -11,7 +11,7 @@
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
+    "doi": true,
     "pmcid": true,
     "pmid": false
   },
@@ -27,9 +27,9 @@
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
+    "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
@@ -43,9 +43,9 @@
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
+    "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "minimax-m3",

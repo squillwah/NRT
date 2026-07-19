@@ -7,12 +7,12 @@
     "title": true,
     "journal_name": true,
     "journal_volume": true,
-    "journal_issue": false,
+    "journal_issue": true,
     "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
+    "pmcid": true,
     "pmid": false
   },
   {
@@ -23,12 +23,12 @@
     "title": true,
     "journal_name": true,
     "journal_volume": true,
-    "journal_issue": false,
+    "journal_issue": true,
     "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
+    "pmcid": true,
     "pmid": false
   },
   {
@@ -44,7 +44,7 @@
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
+    "pmcid": true,
     "pmid": true
   },
   {

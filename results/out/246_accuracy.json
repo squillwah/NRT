@@ -45,7 +45,7 @@
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "minimax-m3",
@@ -70,7 +70,7 @@
     "authors": true,
     "title": true,
     "journal_name": true,
-    "journal_volume": false,
+    "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": true,

@@ -4,56 +4,56 @@
     "style": "apa",
     "REFERENCE": true,
     "authors": true,
-    "title": false,
-    "journal_name": false,
+    "title": true,
+    "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
     "style": "nlm",
     "REFERENCE": true,
     "authors": true,
-    "title": false,
-    "journal_name": false,
+    "title": true,
+    "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
     "style": "apa",
     "REFERENCE": true,
     "authors": false,
-    "title": false,
-    "journal_name": false,
+    "title": true,
+    "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
     "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "minimax-m3",
     "style": "nlm",
     "REFERENCE": true,
     "authors": false,
-    "title": false,
-    "journal_name": false,
+    "title": true,
+    "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
@@ -61,6 +61,6 @@
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   }
 ]

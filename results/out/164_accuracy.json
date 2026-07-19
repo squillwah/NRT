@@ -3,7 +3,7 @@
     "model": "deepseek-v4-flash",
     "style": "vancouver",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,
@@ -19,7 +19,7 @@
     "model": "gemini-3-flash-preview",
     "style": "apa",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,
@@ -35,7 +35,7 @@
     "model": "mimo-v2.5",
     "style": "vancouver",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,
@@ -44,14 +44,14 @@
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "minimax-m3",
     "style": "apa",
     "REFERENCE": false,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,
@@ -67,7 +67,7 @@
     "model": "nemotron-3-super-120b-a12b",
     "style": "vancouver",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,
@@ -76,7 +76,7 @@
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   }
 ]

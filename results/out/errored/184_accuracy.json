@@ -8,18 +8,18 @@
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": true,
-    "journal_page": false,
+    "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
     "style": "harvard",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,
@@ -29,7 +29,7 @@
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",

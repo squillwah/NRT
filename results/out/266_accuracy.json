@@ -11,9 +11,9 @@
     "journal_page": true,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
@@ -28,7 +28,7 @@
     "elocator": null,
     "publication_date": true,
     "doi": false,
-    "pmcid": false,
+    "pmcid": true,
     "pmid": false
   },
   {
@@ -43,7 +43,7 @@
     "journal_page": true,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
+    "doi": true,
     "pmcid": false,
     "pmid": false
   },
@@ -60,7 +60,7 @@
     "elocator": null,
     "publication_date": true,
     "doi": false,
-    "pmcid": false,
+    "pmcid": true,
     "pmid": false
   }
 ]

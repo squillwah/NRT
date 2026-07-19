@@ -5,15 +5,15 @@
     "REFERENCE": true,
     "authors": true,
     "title": true,
-    "journal_name": false,
+    "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
+    "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
@@ -21,15 +21,15 @@
     "REFERENCE": true,
     "authors": true,
     "title": true,
-    "journal_name": false,
+    "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
@@ -37,13 +37,13 @@
     "REFERENCE": true,
     "authors": true,
     "title": true,
-    "journal_name": false,
+    "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
     "publication_date": false,
-    "doi": false,
+    "doi": true,
     "pmcid": false,
     "pmid": false
   },
@@ -53,15 +53,15 @@
     "REFERENCE": true,
     "authors": false,
     "title": true,
-    "journal_name": false,
+    "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
     "publication_date": false,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "nemotron-3-super-120b-a12b",
@@ -69,14 +69,14 @@
     "REFERENCE": true,
     "authors": true,
     "title": true,
-    "journal_name": false,
+    "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   }
 ]

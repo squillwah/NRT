@@ -3,8 +3,8 @@
     "model": "deepseek-v4-flash",
     "style": "harvard",
     "REFERENCE": true,
-    "authors": false,
-    "title": false,
+    "authors": true,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": true,
@@ -19,8 +19,8 @@
     "model": "gemini-3-flash-preview",
     "style": "vancouver",
     "REFERENCE": true,
-    "authors": false,
-    "title": false,
+    "authors": true,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": true,
@@ -42,9 +42,9 @@
     "journal_issue": true,
     "journal_page": true,
     "elocator": null,
-    "publication_date": false,
+    "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   }
 ]

@@ -11,9 +11,9 @@
     "journal_page": null,
     "elocator": false,
     "publication_date": true,
-    "doi": false,
+    "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
@@ -25,11 +25,11 @@
     "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
-    "elocator": false,
+    "elocator": true,
     "publication_date": true,
-    "doi": false,
+    "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
@@ -43,7 +43,7 @@
     "journal_page": null,
     "elocator": false,
     "publication_date": true,
-    "doi": false,
+    "doi": true,
     "pmcid": true,
     "pmid": false
   },
@@ -57,10 +57,10 @@
     "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
-    "elocator": false,
+    "elocator": true,
     "publication_date": true,
-    "doi": false,
+    "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   }
 ]

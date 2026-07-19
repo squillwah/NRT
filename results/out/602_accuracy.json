@@ -3,8 +3,8 @@
     "model": "deepseek-v4-flash",
     "style": "apa",
     "REFERENCE": true,
-    "authors": false,
-    "title": false,
+    "authors": true,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
@@ -12,15 +12,15 @@
     "elocator": false,
     "publication_date": false,
     "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
     "style": "apa",
     "REFERENCE": true,
-    "authors": false,
-    "title": false,
+    "authors": true,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
@@ -28,15 +28,15 @@
     "elocator": false,
     "publication_date": true,
     "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
     "style": "harvard",
     "REFERENCE": true,
-    "authors": false,
-    "title": false,
+    "authors": true,
+    "title": true,
     "journal_name": false,
     "journal_volume": true,
     "journal_issue": null,
@@ -51,8 +51,8 @@
     "model": "minimax-m3",
     "style": "harvard",
     "REFERENCE": true,
-    "authors": false,
-    "title": false,
+    "authors": true,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
@@ -60,7 +60,7 @@
     "elocator": true,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   }
 ]

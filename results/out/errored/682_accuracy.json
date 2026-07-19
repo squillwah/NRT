@@ -12,14 +12,14 @@
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
+    "pmcid": true,
     "pmid": false
   },
   {
     "model": "gemini-3-flash-preview",
     "style": "nlm",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,
@@ -28,7 +28,7 @@
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
+    "pmcid": true,
     "pmid": true
   },
   {
@@ -51,7 +51,7 @@
     "model": "minimax-m3",
     "style": "apa",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": false,
     "journal_name": true,
     "journal_volume": false,
@@ -60,14 +60,14 @@
     "elocator": null,
     "publication_date": false,
     "doi": false,
-    "pmcid": false,
+    "pmcid": true,
     "pmid": false
   },
   {
     "model": "nemotron-3-super-120b-a12b",
     "style": "nlm",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": false,
     "journal_name": false,
     "journal_volume": true,
@@ -76,7 +76,7 @@
     "elocator": null,
     "publication_date": false,
     "doi": false,
-    "pmcid": false,
+    "pmcid": true,
     "pmid": false
   }
 ]

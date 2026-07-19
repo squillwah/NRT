@@ -4,32 +4,32 @@
     "style": "apa",
     "REFERENCE": true,
     "authors": true,
-    "title": false,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
-    "elocator": false,
+    "elocator": true,
     "publication_date": false,
-    "doi": false,
+    "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
     "style": "vancouver",
     "REFERENCE": true,
     "authors": false,
-    "title": false,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
-    "elocator": false,
+    "elocator": true,
     "publication_date": false,
-    "doi": false,
+    "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "minimax-m3",
@@ -43,7 +43,7 @@
     "journal_page": null,
     "elocator": false,
     "publication_date": false,
-    "doi": false,
+    "doi": true,
     "pmcid": true,
     "pmid": false
   }

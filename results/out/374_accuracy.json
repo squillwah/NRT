@@ -3,7 +3,7 @@
     "model": "deepseek-v4-flash",
     "style": "harvard",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,
@@ -11,7 +11,7 @@
     "journal_page": null,
     "elocator": false,
     "publication_date": false,
-    "doi": false,
+    "doi": true,
     "pmcid": true,
     "pmid": false
   },
@@ -19,7 +19,7 @@
     "model": "gemini-3-flash-preview",
     "style": "harvard",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,
@@ -27,7 +27,7 @@
     "journal_page": null,
     "elocator": true,
     "publication_date": true,
-    "doi": false,
+    "doi": true,
     "pmcid": true,
     "pmid": false
   },
@@ -35,7 +35,7 @@
     "model": "mimo-v2.5",
     "style": "vancouver",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,
@@ -43,15 +43,15 @@
     "journal_page": null,
     "elocator": true,
     "publication_date": true,
-    "doi": false,
+    "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "minimax-m3",
     "style": "nlm",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": false,
@@ -59,15 +59,15 @@
     "journal_page": null,
     "elocator": true,
     "publication_date": true,
-    "doi": false,
+    "doi": true,
     "pmcid": true,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "nemotron-3-super-120b-a12b",
     "style": "vancouver",
     "REFERENCE": true,
-    "authors": false,
+    "authors": true,
     "title": true,
     "journal_name": true,
     "journal_volume": true,
@@ -75,7 +75,7 @@
     "journal_page": null,
     "elocator": true,
     "publication_date": true,
-    "doi": false,
+    "doi": true,
     "pmcid": true,
     "pmid": false
   }

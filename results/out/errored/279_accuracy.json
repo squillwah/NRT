@@ -4,32 +4,32 @@
     "style": "harvard",
     "REFERENCE": true,
     "authors": true,
-    "title": false,
-    "journal_name": false,
-    "journal_volume": false,
-    "journal_issue": false,
-    "journal_page": false,
+    "title": true,
+    "journal_name": true,
+    "journal_volume": true,
+    "journal_issue": true,
+    "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
     "style": "nlm",
     "REFERENCE": false,
     "authors": true,
-    "title": false,
-    "journal_name": false,
-    "journal_volume": false,
-    "journal_issue": false,
-    "journal_page": false,
+    "title": true,
+    "journal_name": true,
+    "journal_volume": true,
+    "journal_issue": true,
+    "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
     "pmcid": true,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
@@ -54,13 +54,13 @@
     "authors": true,
     "title": false,
     "journal_name": false,
-    "journal_volume": false,
-    "journal_issue": false,
-    "journal_page": false,
+    "journal_volume": true,
+    "journal_issue": true,
+    "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   }
 ]

@@ -4,7 +4,7 @@
     "style": "vancouver",
     "REFERENCE": true,
     "authors": false,
-    "title": false,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": false,
@@ -20,7 +20,7 @@
     "style": "vancouver",
     "REFERENCE": true,
     "authors": false,
-    "title": false,
+    "title": true,
     "journal_name": false,
     "journal_volume": true,
     "journal_issue": true,
@@ -28,7 +28,7 @@
     "elocator": null,
     "publication_date": true,
     "doi": false,
-    "pmcid": false,
+    "pmcid": true,
     "pmid": false
   },
   {

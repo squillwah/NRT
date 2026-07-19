@@ -1,4 +1,4 @@
 model,style,REFERENCE,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid
-deepseek-v4-flash,nlm,True,False,False,False,False,False,False,False,False,False,False,False
-gemini-3-flash-preview,apa,True,False,False,False,False,False,False,False,False,False,False,False
-nemotron-3-super-120b-a12b,vancouver,True,False,False,False,False,False,False,False,False,False,False,False
+deepseek-v4-flash,nlm,True,True,False,True,True,True,False,True,True,True,True,True
+gemini-3-flash-preview,apa,True,True,True,True,True,True,True,True,True,True,True,True
+nemotron-3-super-120b-a12b,vancouver,True,True,True,True,True,True,True,True,True,True,True,True

@@ -6,14 +6,14 @@
     "authors": true,
     "title": false,
     "journal_name": true,
-    "journal_volume": false,
-    "journal_issue": false,
+    "journal_volume": true,
+    "journal_issue": true,
     "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
@@ -22,14 +22,14 @@
     "authors": true,
     "title": false,
     "journal_name": true,
-    "journal_volume": false,
-    "journal_issue": false,
+    "journal_volume": true,
+    "journal_issue": true,
     "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
@@ -38,14 +38,14 @@
     "authors": true,
     "title": false,
     "journal_name": true,
-    "journal_volume": false,
-    "journal_issue": false,
+    "journal_volume": true,
+    "journal_issue": true,
     "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "minimax-m3",
@@ -54,14 +54,14 @@
     "authors": true,
     "title": false,
     "journal_name": true,
-    "journal_volume": false,
-    "journal_issue": false,
+    "journal_volume": true,
+    "journal_issue": true,
     "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "nemotron-3-super-120b-a12b",

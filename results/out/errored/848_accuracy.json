@@ -5,22 +5,22 @@
     "REFERENCE": true,
     "authors": true,
     "title": false,
-    "journal_name": false,
+    "journal_name": true,
     "journal_volume": false,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
     "style": "apa",
     "REFERENCE": true,
     "authors": false,
-    "title": false,
+    "title": true,
     "journal_name": false,
     "journal_volume": false,
     "journal_issue": null,
@@ -28,8 +28,8 @@
     "elocator": null,
     "publication_date": false,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
@@ -53,14 +53,14 @@
     "REFERENCE": true,
     "authors": true,
     "title": false,
-    "journal_name": false,
+    "journal_name": true,
     "journal_volume": false,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   }
 ]

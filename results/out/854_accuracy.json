@@ -4,16 +4,16 @@
     "style": "apa",
     "REFERENCE": false,
     "authors": false,
-    "title": false,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": false,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
@@ -44,7 +44,7 @@
     "elocator": false,
     "publication_date": true,
     "doi": false,
-    "pmcid": false,
+    "pmcid": true,
     "pmid": false
   },
   {

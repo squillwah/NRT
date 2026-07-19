@@ -5,15 +5,15 @@
     "REFERENCE": true,
     "authors": true,
     "title": true,
-    "journal_name": false,
+    "journal_name": true,
     "journal_volume": true,
     "journal_issue": true,
     "journal_page": true,
     "elocator": false,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
@@ -25,7 +25,7 @@
     "journal_volume": true,
     "journal_issue": true,
     "journal_page": true,
-    "elocator": false,
+    "elocator": true,
     "publication_date": true,
     "doi": true,
     "pmcid": false,
@@ -57,11 +57,11 @@
     "journal_volume": true,
     "journal_issue": true,
     "journal_page": true,
-    "elocator": false,
+    "elocator": true,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "nemotron-3-super-120b-a12b",

@@ -1,5 +1,5 @@
 model,style,REFERENCE,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid
-deepseek-v4-flash,apa,True,True,False,True,True,True,True,,True,False,False,True
-gemini-3-flash-preview,vancouver,True,True,False,True,True,True,True,,True,False,False,False
-mimo-v2.5,harvard,True,True,False,True,True,True,True,,True,False,False,True
-minimax-m3,apa,True,True,False,True,True,True,True,,True,False,False,True
+deepseek-v4-flash,apa,True,True,False,True,True,True,True,,True,True,False,True
+gemini-3-flash-preview,vancouver,True,True,True,True,True,True,True,,True,True,True,False
+mimo-v2.5,harvard,True,True,True,True,True,True,True,,True,True,False,True
+minimax-m3,apa,True,True,True,True,True,True,True,,True,True,False,True

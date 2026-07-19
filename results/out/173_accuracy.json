@@ -22,14 +22,14 @@
     "authors": true,
     "title": true,
     "journal_name": true,
-    "journal_volume": false,
+    "journal_volume": true,
     "journal_issue": true,
     "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "minimax-m3",
@@ -38,7 +38,7 @@
     "authors": true,
     "title": true,
     "journal_name": true,
-    "journal_volume": false,
+    "journal_volume": true,
     "journal_issue": true,
     "journal_page": true,
     "elocator": null,

@@ -7,13 +7,13 @@
     "title": true,
     "journal_name": true,
     "journal_volume": true,
-    "journal_issue": false,
-    "journal_page": false,
+    "journal_issue": true,
+    "journal_page": true,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
@@ -23,13 +23,13 @@
     "title": true,
     "journal_name": true,
     "journal_volume": true,
-    "journal_issue": false,
-    "journal_page": false,
+    "journal_issue": true,
+    "journal_page": true,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
@@ -39,13 +39,13 @@
     "title": true,
     "journal_name": true,
     "journal_volume": true,
-    "journal_issue": false,
-    "journal_page": false,
+    "journal_issue": true,
+    "journal_page": true,
     "elocator": null,
     "publication_date": false,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "minimax-m3",
@@ -55,12 +55,12 @@
     "title": true,
     "journal_name": true,
     "journal_volume": true,
-    "journal_issue": false,
-    "journal_page": false,
+    "journal_issue": true,
+    "journal_page": true,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   }
 ]

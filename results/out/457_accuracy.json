@@ -4,7 +4,7 @@
     "style": "nlm",
     "REFERENCE": true,
     "authors": true,
-    "title": false,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": true,
@@ -13,14 +13,14 @@
     "publication_date": true,
     "doi": true,
     "pmcid": true,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
     "style": "harvard",
     "REFERENCE": false,
     "authors": true,
-    "title": false,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": true,
@@ -45,7 +45,7 @@
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "minimax-m3",
@@ -61,14 +61,14 @@
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "nemotron-3-super-120b-a12b",
     "style": "nlm",
     "REFERENCE": true,
     "authors": false,
-    "title": false,
+    "title": true,
     "journal_name": true,
     "journal_volume": true,
     "journal_issue": true,
@@ -77,6 +77,6 @@
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   }
 ]

@@ -9,9 +9,9 @@
     "journal_volume": true,
     "journal_issue": true,
     "journal_page": false,
-    "elocator": false,
+    "elocator": true,
     "publication_date": true,
-    "doi": false,
+    "doi": true,
     "pmcid": false,
     "pmid": false
   },
@@ -25,11 +25,11 @@
     "journal_volume": true,
     "journal_issue": true,
     "journal_page": true,
-    "elocator": false,
+    "elocator": true,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
@@ -41,11 +41,11 @@
     "journal_volume": false,
     "journal_issue": false,
     "journal_page": false,
-    "elocator": false,
+    "elocator": true,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "minimax-m3",
@@ -57,10 +57,10 @@
     "journal_volume": true,
     "journal_issue": true,
     "journal_page": false,
-    "elocator": false,
+    "elocator": true,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
-    "pmid": false
+    "doi": true,
+    "pmcid": true,
+    "pmid": true
   }
 ]

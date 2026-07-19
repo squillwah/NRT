@@ -22,14 +22,14 @@
     "authors": true,
     "title": true,
     "journal_name": true,
-    "journal_volume": false,
+    "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",

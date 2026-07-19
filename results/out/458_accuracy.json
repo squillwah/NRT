@@ -20,23 +20,23 @@
     "style": "apa",
     "REFERENCE": true,
     "authors": false,
-    "title": false,
-    "journal_name": false,
+    "title": true,
+    "journal_name": true,
     "journal_volume": true,
     "journal_issue": true,
-    "journal_page": false,
+    "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   },
   {
     "model": "mimo-v2.5",
     "style": "apa",
     "REFERENCE": false,
     "authors": false,
-    "title": false,
+    "title": true,
     "journal_name": false,
     "journal_volume": true,
     "journal_issue": true,
@@ -56,11 +56,11 @@
     "journal_name": false,
     "journal_volume": true,
     "journal_issue": true,
-    "journal_page": false,
+    "journal_page": true,
     "elocator": null,
     "publication_date": true,
     "doi": true,
-    "pmcid": false,
-    "pmid": false
+    "pmcid": true,
+    "pmid": true
   }
 ]

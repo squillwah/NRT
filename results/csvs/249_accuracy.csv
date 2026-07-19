@@ -1,4 +1,4 @@
 model,style,REFERENCE,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid
-deepseek-v4-flash,harvard,True,True,False,True,True,,,,True,True,False,False
-gemini-3-flash-preview,harvard,False,True,False,True,True,,,,True,True,False,True
-minimax-m3,apa,False,True,False,True,True,,,,True,True,False,False
+deepseek-v4-flash,harvard,True,True,True,True,True,,,,True,True,True,False
+gemini-3-flash-preview,harvard,False,True,True,True,True,,,,True,True,False,True
+minimax-m3,apa,False,True,False,True,True,,,,True,True,True,False

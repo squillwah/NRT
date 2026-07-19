@@ -1,5 +1,5 @@
 model,style,REFERENCE,authors,title,journal_name,journal_volume,journal_issue,journal_page,elocator,publication_date,doi,pmcid,pmid
-deepseek-v4-flash,nlm,True,False,True,True,False,True,True,,True,False,False,True
-gemini-3-flash-preview,nlm,True,False,True,True,False,True,True,,True,False,False,True
-minimax-m3,nlm,True,False,True,True,False,False,True,,True,False,False,True
-nemotron-3-super-120b-a12b,harvard,True,False,True,True,False,False,True,,True,False,False,False
+deepseek-v4-flash,nlm,True,True,True,True,True,True,True,,True,True,True,True
+gemini-3-flash-preview,nlm,True,True,True,True,True,True,True,,True,True,True,True
+minimax-m3,nlm,True,True,True,True,True,False,True,,True,True,True,True
+nemotron-3-super-120b-a12b,harvard,True,True,True,True,True,False,True,,True,True,False,False

@@ -11,8 +11,8 @@
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
+    "doi": true,
+    "pmcid": true,
     "pmid": false
   },
   {
@@ -43,8 +43,8 @@
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
-    "doi": false,
-    "pmcid": false,
+    "doi": true,
+    "pmcid": true,
     "pmid": false
   },
   {

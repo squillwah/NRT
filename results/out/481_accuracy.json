@@ -4,16 +4,16 @@
     "style": "apa",
     "REFERENCE": true,
     "authors": false,
-    "title": false,
+    "title": true,
     "journal_name": true,
-    "journal_volume": false,
+    "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "gemini-3-flash-preview",
@@ -22,7 +22,7 @@
     "authors": true,
     "title": false,
     "journal_name": true,
-    "journal_volume": false,
+    "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
@@ -36,31 +36,31 @@
     "style": "harvard",
     "REFERENCE": true,
     "authors": true,
-    "title": false,
+    "title": true,
     "journal_name": true,
-    "journal_volume": false,
+    "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   },
   {
     "model": "nemotron-3-super-120b-a12b",
     "style": "apa",
     "REFERENCE": false,
     "authors": true,
-    "title": false,
+    "title": true,
     "journal_name": true,
-    "journal_volume": false,
+    "journal_volume": true,
     "journal_issue": null,
     "journal_page": null,
     "elocator": null,
     "publication_date": true,
     "doi": true,
     "pmcid": false,
-    "pmid": false
+    "pmid": true
   }
 ]
