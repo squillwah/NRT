@@ -281,6 +281,62 @@ def write_xlsx():
     wb.save(filename="full_results.xlsx")
 
 
+def write_xlsx_without_avg():
+
+    wb = openpyxl.Workbook()
+
+    # Remove the default sheet created by openpyxl so it doesn't leave an empty sheet
+    default_sheet = wb.active
+    wb.remove(default_sheet)
+
+    inputted_csv = input("Please enter the csv file path: ")
+
+    while inputted_csv != "end":
+
+
+
+        with open(inputted_csv, 'r', encoding='utf-8') as file:
+            reader = csv.reader(file)
+            csv_id = re.sub(r'[^a-zA-Z0-9]', '', inputted_csv)
+            csv_id = csv_id.replace("CUsersmastePycharmProjectsNRTresults", '')
+            csv_id = csv_id.replace("csv", '')
+            csv_lines = [row for row in reader]
+
+            xlsx_header = csv_lines[0]
+
+            ws = wb.create_sheet(title=csv_id)
+
+            ws.append(xlsx_header)
+
+            header_font = Font(name="Calibri", size=11, bold=True, color="000000")
+            header_fill = PatternFill(start_color="1F4E78", end_color="1F4E78", fill_type="solid")  # Dark Blue
+            header_align = Alignment(horizontal="center", vertical="center")
+
+            for cell in ws[1]:
+                cell.font = header_font
+                cell.fill = header_fill
+                cell.alignment = header_align
+
+            for row in csv_lines[1:]:
+                ws.append(row)
+
+
+            for col in ws.columns:
+                max_len = 0
+                column = col[0].column
+                for cell in col:
+                    if cell.value:
+                        max_len = max(max_len, len(str(cell.value)))
+
+                # Set width with buffer, min width 10
+                adjusted_width = (max_len + 3)
+                ws.column_dimensions[get_column_letter(column)].width = adjusted_width
+
+        inputted_csv = input("Enter another csv file path or enter 'end': ")
+
+    wb.save(filename="full_results.xlsx")
+
+
 def create_avg_list(value_list, headers_list, divisor_factor, models):
     for i, element in enumerate(value_list):
         for k, cell in enumerate(element):
@@ -352,5 +408,5 @@ pmids = ["65sd4f3654f", "4d441dsf44"]
 
 if __name__ == "__main__":
     # create_avg_list(test_data, test_avg_accuracy, 1, test_models)
-    write_xlsx()
+    write_xlsx_without_avg()
     # write_all_csv("all.json")
