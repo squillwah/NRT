@@ -16,6 +16,7 @@ class MutationProbability:
     def __init__(self, subset_size, curves):
         # Distribute the normalized points along an X axis fitting the subset_size
         self.curves = dict.fromkeys(curves)
+        self.subset_size = subset_size
         for curve, points in curves.items():
             self.curves[curve] = [None]*len(points)
             for point, (x, y) in enumerate(points):
@@ -23,7 +24,7 @@ class MutationProbability:
                 self.curves[curve][point] = (x, y)
 
     def plot(self, plt):
-        fig, axs = plt.subplots(nrows=6, ncols=6, sharey=True, sharex=True, layout="constrained")
+        fig, axs = plt.subplots(nrows=6, ncols=6, sharey=False, sharex=False, layout="constrained")
         fig.suptitle("Mutation Probabilties Across Dataset", fontweight="bold", fontsize=14)
         order = list(self.curves.keys())
         order.sort(key=lambda c: str(c[1]))
@@ -31,6 +32,8 @@ class MutationProbability:
         for curve in order:
             x, y = zip(*self.curves[curve])
             ax = axs[axx, axy]
+            ax.set_ylim(0, 1) 
+            ax.set_xlim(0, self.subset_size) 
             ax.set_title(f"{str(curve[1]).capitalize()}: {str(curve[0])}", fontsize=10, fontweight="bold")
             ax.plot(x, y, color="blue")
             axx += 1
@@ -54,7 +57,7 @@ def test():
 #    print(*[m for m in MutationCurves], sep="\n")
 #    print(check_curves(MutationCurves, EntryMutator.mutations(flat=True)))
 
-    MP = MutationProbability(1000, MutationCurves)
+    MP = MutationProbability(1200, MutationCurves)
     MP.plot(plt)
 
     for i in range(0, 1001, 25):
@@ -62,6 +65,8 @@ def test():
         print(random.random() < p)
     
     plt.show()
+    #plt.tight_layout() 
+    #plt.savefig('high_res_plot.png', dpi=1200)
 
 #test()
 
